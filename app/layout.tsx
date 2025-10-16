@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -25,6 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
+        {/* Datafast Analytics */}
+        <Script
+          defer
+          data-website-id="dfid_BHHwZB7yxowtTplDDzaCG"
+          data-domain="www.anthroly.com"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
+        
         <Header />
         <main>{children}</main>
         <Footer />
