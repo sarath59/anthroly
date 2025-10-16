@@ -12,9 +12,16 @@ export const metadata: Metadata = {
   description: "Beat the AI slop with premium, human-written blog posts and social content. Dominate search rankings and AI-powered results.",
   keywords: ["content writing", "SEO", "blog posts", "human-written content", "AI SEO", "content marketing"],
   icons: {
-    icon: '/logo.png',
+    icon: [
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+    ],
     shortcut: '/logo.png',
     apple: '/logo.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/logo.png',
+    },
   },
 };
 
