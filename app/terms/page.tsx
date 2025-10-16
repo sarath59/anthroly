@@ -22,7 +22,7 @@ export default function TermsPage() {
             {/* Introduction */}
             <section className="mb-10">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Welcome to Anthroly. These Terms of Service ("Terms") govern your use of our website and services. 
+                Welcome to Anthroly. These Terms of Service (&quot;Terms&quot;) govern your use of our website and services. 
                 By accessing or using our services, you agree to be bound by these Terms. If you do not agree to 
                 these Terms, please do not use our services.
               </p>
@@ -190,7 +190,7 @@ export default function TermsPage() {
 
               <h3 className="text-2xl font-semibold mb-4 mt-6">8.2 Disclaimer</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                EXCEPT AS EXPRESSLY PROVIDED, OUR SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, 
+                EXCEPT AS EXPRESSLY PROVIDED, OUR SERVICES ARE PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND, 
                 EITHER EXPRESS OR IMPLIED. WE DO NOT GUARANTEE SPECIFIC RESULTS, RANKINGS, OR TRAFFIC INCREASES.
               </p>
             </section>
@@ -274,7 +274,7 @@ export default function TermsPage() {
               <div className="bg-black text-white p-6 rounded-xl">
                 <p className="text-lg font-semibold mb-2">Acceptance of Terms</p>
                 <p className="text-gray-200">
-                  By using Anthroly's services, you acknowledge that you have read, understood, and agree to be 
+                  By using Anthroly&apos;s services, you acknowledge that you have read, understood, and agree to be 
                   bound by these Terms of Service.
                 </p>
               </div>

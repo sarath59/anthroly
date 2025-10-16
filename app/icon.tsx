@@ -19,17 +19,17 @@ export default async function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          background: '#000',
         }}
       >
-        {/* This will use your logo.png as favicon */}
-        <img 
-          src="/logo.png" 
-          alt="Anthroly" 
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
-        />
+        {/* Favicon placeholder - will use logo.png from public folder */}
+        <div style={{ 
+          fontSize: 24, 
+          color: '#fff',
+          fontWeight: 'bold'
+        }}>
+          A
+        </div>
       </div>
     ),
     {

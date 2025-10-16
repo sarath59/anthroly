@@ -24,7 +24,7 @@ export default function BlogPage() {
             </div>
             <h2 className="text-3xl font-bold mb-4">Coming Soon</h2>
             <p className="text-gray-600 text-center max-w-md mb-8">
-              We're crafting amazing, human-written content for our blog. 
+              We&apos;re crafting amazing, human-written content for our blog. 
               Check back soon for insights on SEO, content strategy, and more.
             </p>
             
