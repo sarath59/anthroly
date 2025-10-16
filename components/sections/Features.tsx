@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
-import { FileText, Search, Zap, Link2, MessageSquare, BarChart3 } from 'lucide-react';
+import { FileText, Search, Zap, Link2, MessageSquare, Target } from 'lucide-react';
 
 const features = [
   {
@@ -11,9 +11,14 @@ const features = [
     description: 'Professional writers create engaging, SEO-optimized blog content that resonates with your audience and ranks on search engines.',
   },
   {
+    icon: Target,
+    title: 'Aggressive Parasite SEO',
+    description: 'Dominate search results by leveraging high-authority platforms. We publish strategic content on Medium, LinkedIn, Quora, and Reddit to rank instantly and drive traffic to your brand.',
+  },
+  {
     icon: Search,
-    title: 'Strategic Keyword Research',
-    description: 'Deep-dive analysis to identify high-impact keywords and search queries that drive qualified traffic to your content.',
+    title: 'Deep SEO Analysis',
+    description: 'Comprehensive competitor analysis, keyword gap research, and content opportunity identification to outrank your competition.',
   },
   {
     icon: Zap,
@@ -22,18 +27,13 @@ const features = [
   },
   {
     icon: Link2,
-    title: 'Premium Backlink Support',
-    description: 'Build domain authority with high-quality backlinks from reputable sources in your industry.',
+    title: 'Premium Backlink Strategy',
+    description: 'Build domain authority with high-quality backlinks from reputable sources and strategic parasite SEO placements.',
   },
   {
     icon: MessageSquare,
-    title: 'Social Media Excellence',
-    description: 'Compelling LinkedIn articles, X threads, and Reddit posts that spark conversations and build your community.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Performance Tracking',
-    description: 'Monitor your content\'s impact with detailed analytics on rankings, traffic, and AI visibility.',
+    title: 'Multi-Platform Content',
+    description: 'Compelling LinkedIn articles, X threads, Medium stories, Quora answers, and Reddit posts that spark conversations and drive traffic.',
   },
 ];
 

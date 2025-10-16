@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { AlertCircle, CheckCircle2, TrendingUp, Zap, Target, Shield } from 'lucide-react';
+import { AlertCircle, CheckCircle2, TrendingUp, Zap, Target, Shield, Link2 } from 'lucide-react';
 
 export const ProblemSolution = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,16 +82,20 @@ export const ProblemSolution = () => {
                         desc: "The internet is drowning in low-quality, AI-generated content that doesn't engage, convert, or provide real value."
                       },
                       {
+                        title: "Missing Out on Authority Platforms",
+                        desc: "Your competitors are dominating Medium, LinkedIn, and Reddit with parasite SEO while you're stuck trying to rank your own site."
+                      },
+                      {
+                        title: "Weak Backlink Profile",
+                        desc: "Without high-quality backlinks from reputable sources, your domain authority stays low and you can't compete for top rankings."
+                      },
+                      {
                         title: "Search Engines Are Evolving",
                         desc: "Google and AI-powered search are actively penalizing generic, machine-generated content. Quality matters more than ever."
                       },
                       {
-                        title: "Your Brand Gets Lost",
-                        desc: "Without authentic, human-crafted content, your brand disappears into the noise of countless competitors."
-                      },
-                      {
-                        title: "AI Tools Ignore You",
-                        desc: "ChatGPT, Perplexity, and other AI assistants won't recommend brands without authoritative, quality content."
+                        title: "AI Tools Ignore Your Brand",
+                        desc: "ChatGPT, Perplexity, and other AI assistants won't recommend brands without authoritative, quality content and strong online presence."
                       }
                     ].map((item, idx) => (
                       <div 
@@ -136,24 +140,29 @@ export const ProblemSolution = () => {
                   <div className="space-y-6">
                     {[
                       {
-                        title: "100% Human-Written Excellence",
-                        desc: "Every piece is crafted by expert writers who understand your brand, audience, and industry.",
+                        title: "30 Blogs Per Month, 100% Human-Written",
+                        desc: "Consistent, high-quality blog posts every single month. No AI shortcuts, no generic content—just expert writers creating authentic content for your brand.",
                         icon: Shield
                       },
                       {
-                        title: "Dominate Search & AI Results",
-                        desc: "Content optimized to rank #1 on Google and be featured in ChatGPT, Perplexity, and other AI tools.",
+                        title: "Aggressive Parasite SEO Strategy",
+                        desc: "Dominate search results by publishing high-quality content on authority platforms like Medium, LinkedIn, and Reddit for instant rankings.",
                         icon: Target
                       },
                       {
-                        title: "Strategic Research & Insights",
-                        desc: "Deep keyword and AI prompt research to target exactly what your audience is searching for.",
+                        title: "Rank #1 on Google & AI Tools",
+                        desc: "Content optimized to dominate traditional search engines and be featured in ChatGPT, Perplexity, and other AI assistants.",
                         icon: TrendingUp
                       },
                       {
-                        title: "Guaranteed AI Visibility",
-                        desc: "Your brand becomes the go-to recommendation when AI tools answer questions in your space.",
+                        title: "Deep SEO Analysis & Research",
+                        desc: "Comprehensive keyword research, competitor analysis, and AI prompt optimization to capture every opportunity.",
                         icon: Zap
+                      },
+                      {
+                        title: "Premium Backlink Acquisition",
+                        desc: "Build powerful domain authority with high-quality backlinks from reputable websites and strategic parasite SEO placements that boost your rankings.",
+                        icon: Link2
                       }
                     ].map((item, idx) => {
                       const Icon = item.icon;
