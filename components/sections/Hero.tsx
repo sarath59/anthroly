@@ -5,6 +5,61 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import { ArrowRight, Sparkles, Bot, PenTool } from 'lucide-react';
 
+const TerminalText = () => {
+  const [text, setText] = useState('');
+  const [stepIndex, setStepIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  const steps = [
+    "Searching for new backlink possibilities...",
+    "Entering your SaaS details...",
+    "Submitting your SaaS...",
+    "Success! New backlink acquired (DR 90)"
+  ];
+
+  useEffect(() => {
+    let currentText = '';
+    let charIndex = 0;
+    let timeoutId: NodeJS.Timeout;
+
+    const typeStep = () => {
+      const targetText = steps[stepIndex];
+      
+      if (charIndex < targetText.length) {
+        currentText += targetText[charIndex];
+        setText(currentText);
+        charIndex++;
+        timeoutId = setTimeout(typeStep, 50); // Typing speed
+      } else {
+        setIsTyping(false);
+        timeoutId = setTimeout(() => {
+          setIsTyping(true);
+          charIndex = 0;
+          currentText = '';
+          setText('');
+          setStepIndex((prev) => (prev + 1) % steps.length);
+        }, 2000); // Pause before next step
+      }
+    };
+
+    typeStep();
+
+    return () => clearTimeout(timeoutId);
+  }, [stepIndex]);
+
+  return (
+    <div className="flex items-center gap-3">
+      <div className="text-cyan-400 animate-pulse">
+        <span className="mr-2">➜</span>
+      </div>
+      <span className="text-gray-300">
+        {text}
+        <span className="animate-pulse inline-block w-2 h-4 bg-cyan-400 ml-1 align-middle"></span>
+      </span>
+    </div>
+  );
+};
+
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);
 
@@ -37,7 +92,7 @@ export const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-tight md:leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight md:leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <span className="block text-white drop-shadow-2xl mb-2 md:mb-0">
               Human-Written Articles +
             </span>
@@ -46,10 +101,23 @@ export const Hero = () => {
             </span>
           </h1>
 
-          {/* Subheading */}
-          <p className="text-lg md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in-up font-light px-4" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            The hybrid growth engine. Expert human writers + autonomous SEO agents. One flat monthly price.
-          </p>
+          {/* AI Terminal Simulation */}
+          <div className="max-w-2xl mx-auto mb-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="bg-black/50 border border-white/10 rounded-xl overflow-hidden backdrop-blur-md shadow-2xl">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border-b border-white/5">
+                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                <div className="ml-auto flex items-center gap-2 text-[10px] text-gray-500 font-mono">
+                  <Bot size={12} />
+                  <span>ANTHROLY_AGENT_V2.1</span>
+                </div>
+              </div>
+              <div className="p-6 font-mono text-sm md:text-base text-left min-h-[100px] flex items-center">
+                <TerminalText />
+              </div>
+            </div>
+          </div>
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 md:mb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
