@@ -16,10 +16,11 @@ export const Footer = () => {
             <div className="mb-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/logo-white.svg"
+                  src="/logo.png"
                   alt="Anthroly Logo"
                   width={48}
                   height={48}
+                  className="brightness-0 invert object-contain"
                 />
                 <span className="text-2xl font-bold tracking-tight text-white">Anthroly</span>
               </div>

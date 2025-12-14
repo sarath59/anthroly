@@ -9,7 +9,7 @@ export const Logo = ({ className = "" }: { className?: string }) => {
         alt="Anthroly Logo"
         width={48}
         height={48}
-        className="transition-transform duration-300 hover:scale-110"
+        className="transition-transform duration-300 hover:scale-110 object-contain"
         priority
       />
       
