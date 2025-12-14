@@ -56,38 +56,38 @@ export default function BlogPage() {
               </div>
               
               <CardTitle className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">
-                Why "Good Enough" SEO Content Is Killing Your Rankings (And Why Human Nuance is the Antidote)
+                Why &quot;Good Enough&quot; SEO Content Is Killing Your Rankings (And Why Human Nuance is the Antidote)
               </CardTitle>
             </CardHeader>
 
             <CardContent className="p-8 md:p-10 pt-4">
               <div className="prose prose-invert prose-lg max-w-none">
                 <p className="text-xl text-gray-300 leading-relaxed mb-8 font-light border-l-4 border-cyan-500 pl-6 italic">
-                  "In an ocean of AI-generated noise, the most valuable signal is a distinctly human voice."
+                  &quot;In an ocean of AI-generated noise, the most valuable signal is a distinctly human voice.&quot;
                 </p>
 
                 <p className="text-gray-400 mb-6">
-                  Let's be honest. The internet is currently drowning in sludge. You know exactly what I'm talking about. You search for an answer, click a link, and are immediately greeted by five paragraphs of robotic fluff that starts with <em>"In the fast-paced world of digital landscape today..."</em> and ends without actually saying anything of substance.
+                  Let&apos;s be honest. The internet is currently drowning in sludge. You know exactly what I&apos;m talking about. You search for an answer, click a link, and are immediately greeted by five paragraphs of robotic fluff that starts with <em>&quot;In the fast-paced world of digital landscape today...&quot;</em> and ends without actually saying anything of substance.
                 </p>
 
                 <p className="text-gray-400 mb-6">
                   That is the sound of the internet eating itself. And it represents the single biggest opportunity for your business in 2025.
                 </p>
 
-                <h3 className="text-2xl font-bold text-white mt-10 mb-4">The "Uncanny Valley" of Text</h3>
+                <h3 className="text-2xl font-bold text-white mt-10 mb-4">The &quot;Uncanny Valley&quot; of Text</h3>
                 <p className="text-gray-400 mb-6">
-                  We've all developed a new sense. Call it "AI Radar." We can smell ChatGPT-generated content from a mile away. It's not that the grammar is wrong—in fact, the grammar is usually <em>too</em> perfect. It's that the rhythm is flat. The metaphors are clichéd. There is a distinct lack of lived experience.
+                  We&apos;ve all developed a new sense. Call it &quot;AI Radar.&quot; We can smell ChatGPT-generated content from a mile away. It&apos;s not that the grammar is wrong—in fact, the grammar is usually <em>too</em> perfect. It&apos;s that the rhythm is flat. The metaphors are clichéd. There is a distinct lack of lived experience.
                 </p>
                 <p className="text-gray-400 mb-6">
-                  When a reader encounters this, they bounce. Immediately. And Google's latest algorithm updates (specifically the evolution of E-E-A-T) are tracking those bounce rates with ruthless precision. If users don't find your content helpful, engaging, and "human," your rankings will tank. Period.
+                  When a reader encounters this, they bounce. Immediately. And Google&apos;s latest algorithm updates (specifically the evolution of E-E-A-T) are tracking those bounce rates with ruthless precision. If users don&apos;t find your content helpful, engaging, and &quot;human,&quot; your rankings will tank. Period.
                 </p>
 
                 <h3 className="text-2xl font-bold text-white mt-10 mb-4">Why Human Writing Wins (Mathematically)</h3>
                 <p className="text-gray-400 mb-6">
-                  It might seem counterintuitive. If AI can generate 100 articles in the time it takes a human to write one, shouldn't AI win on volume?
+                  It might seem counterintuitive. If AI can generate 100 articles in the time it takes a human to write one, shouldn&apos;t AI win on volume?
                 </p>
                 <p className="text-gray-400 mb-6">
-                  In 2023, maybe. In 2025? No. Here's why:
+                  In 2023, maybe. In 2025? No. Here&apos;s why:
                 </p>
                 <ul className="list-disc list-inside space-y-3 text-gray-400 mb-8 ml-4">
                   <li><strong>Nuance & Context:</strong> A human writer understands <em>why</em> a user is searching, not just <em>what</em> they are searching for. We anticipate the frustration, the confusion, and the specific pain points that an LLM simply hallucinates past.</li>
@@ -100,16 +100,16 @@ export default function BlogPage() {
                   This is why we built Anthroly the way we did. We realized that while <strong>backlinks</strong> (the authority signal) could be automated through smart AI agents that work 24/7, the <strong>content</strong> (the trust signal) had to remain sacrosanct.
                 </p>
                 <p className="text-gray-400 mb-6">
-                  Our articles are written by vetted human experts. Real people with pulses, opinions, and caffeine addictions. They write content that passes every AI detector with a 0% AI score—not because we "bypass" detectors, but because the content is genuinely 100% human.
+                  Our articles are written by vetted human experts. Real people with pulses, opinions, and caffeine addictions. They write content that passes every AI detector with a 0% AI score—not because we &quot;bypass&quot; detectors, but because the content is genuinely 100% human.
                 </p>
                 <p className="text-gray-400 mb-8">
-                  The result? Content that holds attention. Backlinks that build authority. And a growth engine that doesn't just trick the algorithm, but actually serves the user.
+                  The result? Content that holds attention. Backlinks that build authority. And a growth engine that doesn&apos;t just trick the algorithm, but actually serves the user.
                 </p>
 
                 <div className="bg-blue-900/20 border border-blue-800 rounded-xl p-8 mt-12">
                   <h4 className="text-xl font-bold text-white mb-2">Ready to publish content that actually ranks?</h4>
                   <p className="text-gray-400 mb-6">
-                    Stop settling for "good enough" AI slop. Get 30 human-written articles and automated backlinks for one flat monthly price.
+                    Stop settling for &quot;good enough&quot; AI slop. Get 30 human-written articles and automated backlinks for one flat monthly price.
                   </p>
                   <div className="flex items-center gap-4">
                     <a href="/#pricing" className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors">
