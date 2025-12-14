@@ -36,8 +36,8 @@ export default function RootLayout({
         {/* Datafast Analytics */}
         <Script
           defer
-          data-website-id="dfid_BHHwZB7yxowtTplDDzaCG"
-          data-domain="www.anthroly.com"
+          data-website-id="dfid_64UKkRm4SuynXLuxGKg4u"
+          data-domain="anthroly.com"
           src="https://datafa.st/js/script.js"
           strategy="afterInteractive"
         />
