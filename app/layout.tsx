@@ -8,9 +8,9 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anthroly - Human-Written Content That Ranks",
-  description: "Beat the AI slop with premium, human-written blog posts and social content. Dominate search rankings and AI-powered results.",
-  keywords: ["content writing", "SEO", "blog posts", "human-written content", "AI SEO", "content marketing"],
+  title: "Anthroly - Human Content + AI Backlinks",
+  description: "The world's first hybrid content engine. Get 30 human-written blog posts and 24/7 AI-powered backlink building for just $99/mo.",
+  keywords: ["content writing", "SEO", "blog posts", "human-written content", "AI SEO", "backlinks", "link building", "agency"],
   icons: {
     icon: [
       { url: '/logo.png', sizes: '32x32', type: 'image/png' },
@@ -49,4 +49,3 @@ export default function RootLayout({
     </html>
   );
 }
-

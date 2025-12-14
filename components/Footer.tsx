@@ -8,7 +8,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-black border-t border-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
@@ -16,23 +16,23 @@ export const Footer = () => {
             <div className="mb-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/logo.png"
+                  src="/logo-white.svg"
                   alt="Anthroly Logo"
                   width={48}
                   height={48}
                 />
-                <span className="text-2xl font-bold tracking-tight text-black">Anthroly</span>
+                <span className="text-2xl font-bold tracking-tight text-white">Anthroly</span>
               </div>
             </div>
-            <p className="text-gray-600 max-w-md mb-4">
-              Premium human-written content that ranks. Say goodbye to AI slop and hello to authentic content that drives results.
+            <p className="text-gray-400 max-w-md mb-4">
+              The world's first hybrid content engine. We combine elite human writers with autonomous AI agents to dominate search rankings.
             </p>
             <div className="flex space-x-4">
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -41,14 +41,14 @@ export const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="mailto:hello@anthroly.com"
-                className="text-gray-600 hover:text-black transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
                 <Mail size={20} />
@@ -58,25 +58,25 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-black">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#services" className="text-gray-600 hover:text-black transition-colors duration-200">
-                  Services
+                <Link href="/#features" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Features
                 </Link>
               </li>
               <li>
-                <Link href="/#pricing" className="text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/#pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Blog
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@anthroly.com" className="text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="mailto:hello@anthroly.com" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </a>
               </li>
@@ -85,15 +85,15 @@ export const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-black">Legal</h3>
+            <h3 className="font-semibold text-lg mb-4 text-white">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy" className="text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Terms of Service
                 </Link>
               </li>
@@ -101,13 +101,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-8 bg-gray-800" />
 
-        <div className="text-center text-gray-600 text-sm">
+        <div className="text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} Anthroly. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
-

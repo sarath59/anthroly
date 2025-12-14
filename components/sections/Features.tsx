@@ -1,55 +1,56 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
-import { FileText, Search, Zap, Link2, MessageSquare, Target } from 'lucide-react';
+import { PenTool, Bot, Search, BarChart3, Globe, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const features = [
   {
-    icon: FileText,
-    title: 'Human-Crafted Blog Posts',
-    description: 'Professional writers create engaging, SEO-optimized blog content that resonates with your audience and ranks on search engines.',
+    icon: PenTool,
+    title: 'Human Writers, Not Bots',
+    description: 'Our vetted team of expert copywriters crafts 30 high-quality, engaging blog posts every month. No hallucinations, no robotic tone—just real content that connects.',
+    color: 'blue'
   },
   {
-    icon: Target,
-    title: 'Aggressive Parasite SEO',
-    description: 'Dominate search results by leveraging high-authority platforms. We publish strategic content on Medium, LinkedIn, Quora, and Reddit to rank instantly and drive traffic to your brand.',
+    icon: Bot,
+    title: '24/7 AI Backlink Agent',
+    description: 'While you sleep, our autonomous AI agent scours the web, identifies link-building opportunities, and secures backlinks to boost your domain authority.',
+    color: 'purple'
   },
   {
     icon: Search,
-    title: 'Deep SEO Analysis',
-    description: 'Comprehensive competitor analysis, keyword gap research, and content opportunity identification to outrank your competition.',
+    title: 'Strategic SEO Research',
+    description: 'We don\'t just write; we target. Every article is based on deep keyword research to find low-competition, high-traffic opportunities in your niche.',
+    color: 'pink'
+  },
+  {
+    icon: Globe,
+    title: 'Multi-Platform Distribution',
+    description: 'Your content doesn\'t just sit on your blog. We optimize it for sharing across social channels to maximize reach and engagement.',
+    color: 'orange'
+  },
+  {
+    icon: BarChart3,
+    title: 'Performance Analytics',
+    description: 'Track your growth with transparent reporting. See your rankings climb and your traffic grow with detailed monthly insights.',
+    color: 'green'
   },
   {
     icon: Zap,
-    title: 'AI Prompt Research',
-    description: 'Understand how your audience uses ChatGPT and AI tools to discover the exact prompts that should feature your brand.',
-  },
-  {
-    icon: Link2,
-    title: 'Premium Backlink Strategy',
-    description: 'Build domain authority with high-quality backlinks from reputable sources and strategic parasite SEO placements.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Multi-Platform Content',
-    description: 'Compelling LinkedIn articles, X threads, Medium stories, Quora answers, and Reddit posts that spark conversations and drive traffic.',
-  },
+    title: 'Instant Authority',
+    description: 'By combining volume (30 posts/mo) with authority (backlinks), you signal to Google that you are a serious player in your industry.',
+    color: 'yellow'
+  }
 ];
 
 export const Features = () => {
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          features.forEach((_, index) => {
-            setTimeout(() => {
-              setVisibleCards(prev => [...prev, index]);
-            }, index * 150);
-          });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
         }
       },
       { threshold: 0.1 }
@@ -63,69 +64,74 @@ export const Features = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-40 left-20 w-80 h-80 bg-gray-50 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float-delayed"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Everything You Need to Dominate
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive content services designed to establish your brand as the go-to authority in your industry.
-            </p>
-          </div>
+    <section id="features" ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
+            The Hybrid Advantage
+          </h2>
+          <p className="text-xl text-gray-600">
+            Why choose between quality and scale? We give you both.
+          </p>
+        </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className={`transform transition-all duration-700 ease-out ${
-                    visibleCards.includes(index)
-                      ? 'translate-y-0 opacity-100'
-                      : 'translate-y-10 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <Card className="h-full card-3d border-2 hover:border-black group relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gray-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
-                    <CardHeader className="relative z-10">
-                      <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                        <Icon className="text-white" size={26} />
-                      </div>
-                      <CardTitle className="text-xl mb-2 group-hover:translate-x-1 transition-transform duration-300">{feature.title}</CardTitle>
-                      <CardDescription className="text-base leading-relaxed">
-                        {feature.description}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="mt-16 text-center">
-            <div className="inline-block p-8 bg-gray-50 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-2">Ready to Get Started?</h3>
-              <p className="text-gray-600 mb-4">
-                Choose a plan that fits your content needs and start dominating search results.
-              </p>
-              <a
-                href="/#pricing"
-                className="inline-block px-8 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200"
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className={`group p-8 rounded-3xl bg-gray-50 hover:bg-black hover:text-white transition-all duration-500 transform ${
+                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                View Pricing
-              </a>
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-white shadow-sm group-hover:bg-white/10 group-hover:text-white transition-colors`}>
+                  <Icon className={`text-${feature.color}-500 group-hover:text-white`} size={28} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-gray-600 group-hover:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Deep Dive Section */}
+        <div className="mt-32 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} transition-all duration-1000 delay-300`}>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>
+              <div className="relative bg-black text-white p-10 rounded-3xl overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-20">
+                  <Bot size={120} />
+                </div>
+                <h3 className="text-3xl font-bold mb-6">Meet Your New AI Agent</h3>
+                <ul className="space-y-4">
+                  {[
+                    'Scans 10,000+ pages daily for opportunities',
+                    'Analyzes competitor backlink profiles',
+                    'Automates outreach and relationship building',
+                    'Monitors brand mentions 24/7'
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-purple-400 flex-shrink-0" size={20} />
+                      <span className="text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'} transition-all duration-1000 delay-500`}>
+              <h3 className="text-3xl font-bold mb-6">While Humans Do What Humans Do Best.</h3>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                AI is great for data, but terrible at nuance. That's why we never let AI write your blogs. Our team of professional copywriters crafts stories that engage your audience, build trust, and convert visitors into customers.
+              </p>
+              <div className="flex items-center gap-2 text-black font-semibold cursor-pointer hover:gap-4 transition-all">
+                See content examples <ArrowRight size={20} />
+              </div>
             </div>
           </div>
         </div>
@@ -133,4 +139,3 @@ export const Features = () => {
     </section>
   );
 };
-
