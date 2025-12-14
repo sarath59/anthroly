@@ -14,7 +14,7 @@ const features = [
     icon: Bot,
     title: '24/7 AI Agents for Backlinks',
     description: 'While you sleep, our autonomous AI agent scours the web, identifies link-building opportunities, and secures backlinks to boost your domain authority.',
-    color: 'purple'
+    color: 'cyan'
   },
   {
     icon: Search,
@@ -102,7 +102,7 @@ export const Features = () => {
         <div className="mt-32 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} transition-all duration-1000 delay-300`}>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>
               <div className="relative bg-black text-white p-10 rounded-3xl overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-20">
                   <Bot size={120} />
@@ -116,7 +116,7 @@ export const Features = () => {
                     'Monitors brand mentions 24/7'
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="text-purple-400 flex-shrink-0" size={20} />
+                      <CheckCircle2 className="text-cyan-400 flex-shrink-0" size={20} />
                       <span className="text-gray-300">{item}</span>
                     </li>
                   ))}

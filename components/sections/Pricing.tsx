@@ -40,7 +40,7 @@ export const Pricing = () => {
 
         <div className={`max-w-lg mx-auto transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
               
               <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-white text-black text-sm font-bold px-4 py-2 rounded-full transform rotate-12 shadow-lg flex items-center gap-1">
