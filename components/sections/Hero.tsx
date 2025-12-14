@@ -76,6 +76,14 @@ export const Hero = () => {
               <div className="text-gray-500 uppercase tracking-widest text-xs font-semibold">Flat Rate</div>
             </div>
           </div>
+
+          {/* Guarantee Text */}
+          <div className="mt-8 md:mt-12 text-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+            <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto border border-white/10 bg-white/5 rounded-xl p-4 md:p-6 backdrop-blur-sm">
+              <span className="text-cyan-400 font-bold block mb-2">OUR GUARANTEE</span>
+              If we cannot get you 20-30 backlinks per month with an average DR 70-90, we will refund you and give you one month of free service.
+            </p>
+          </div>
         </div>
       </div>
     </section>
