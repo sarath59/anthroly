@@ -100,6 +100,17 @@ export const Features = () => {
 
         {/* Deep Dive Section */}
         <div className="mt-32 max-w-7xl mx-auto">
+          {/* Guarantee Banner */}
+          <div className="mb-20 bg-black text-white p-8 rounded-2xl relative overflow-hidden text-center">
+             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-cyan-900/40 opacity-50"></div>
+             <div className="relative z-10 max-w-3xl mx-auto">
+                <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs font-bold mb-3 tracking-wide">OUR PROMISE</span>
+                <p className="text-lg md:text-xl font-medium text-gray-200">
+                  If we cannot get you 20-30 backlinks per month with an average DR 70-90, we will refund you and give you one month of free service.
+                </p>
+             </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} transition-all duration-1000 delay-300`}>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>

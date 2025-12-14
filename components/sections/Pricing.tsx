@@ -87,6 +87,14 @@ export const Pricing = () => {
               <p className="text-center text-xs text-gray-500 mt-6">
                 Limited spots available at this pricing tier.
               </p>
+
+              {/* Guarantee Mini-Badge */}
+              <div className="mt-8 pt-6 border-t border-gray-800">
+                <p className="text-xs text-center text-gray-400 leading-relaxed">
+                  <span className="text-cyan-400 font-bold block mb-1">GUARANTEE</span>
+                  Free month if we miss our backlink targets.
+                </p>
+              </div>
             </div>
           </div>
         </div>

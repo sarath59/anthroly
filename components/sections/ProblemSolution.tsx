@@ -93,7 +93,7 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-green-400 flex-shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-semibold text-lg">Guaranteed Growth</p>
-                  <p className="text-sm text-gray-400">The perfect mix of quality content and authority building.</p>
+                  <p className="text-sm text-gray-400">Refund + free month if we miss backlink targets.</p>
                 </div>
               </li>
             </ul>
