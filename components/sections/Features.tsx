@@ -12,7 +12,7 @@ const features = [
   },
   {
     icon: Bot,
-    title: '24/7 AI Backlink Agent',
+    title: '24/7 AI Agents for Backlinks',
     description: 'While you sleep, our autonomous AI agent scours the web, identifies link-building opportunities, and secures backlinks to boost your domain authority.',
     color: 'purple'
   },

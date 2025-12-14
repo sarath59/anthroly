@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anthroly - Human Content + AI Backlinks",
-  description: "The world's first hybrid content engine. Get 30 human-written blog posts and 24/7 AI-powered backlink building for just $99/mo.",
+  description: "The world's first hybrid content engine. Get 30 human-written blog posts and 24/7 AI agents for backlinks for just $99/mo.",
   keywords: ["content writing", "SEO", "blog posts", "human-written content", "AI SEO", "backlinks", "link building", "agency"],
   icons: {
     icon: [

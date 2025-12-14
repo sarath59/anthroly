@@ -39,10 +39,10 @@ export const Hero = () => {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-tight opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
-              30 Human Articles.
+              30 Human-Written Articles.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-              24/7 AI Backlinks.
+              24/7 AI Agents for Backlinks.
             </span>
           </h1>
 

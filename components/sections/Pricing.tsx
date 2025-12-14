@@ -60,7 +60,7 @@ export const Pricing = () => {
               <ul className="space-y-4 mb-10">
                 {[
                   '30 Human-Written Blog Posts (1000+ words)',
-                  '24/7 AI Backlink Agent Access',
+                  '24/7 AI Agents for Backlinks',
                   'Keyword Research & Strategy',
                   'SEO Optimization',
                   'Royalty-Free Images Included',

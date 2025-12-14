@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 export const LogoWithImage = ({ className = "", variant = 'black' }: LogoProps) => {
-  const logoSrc = '/logo.png';
+  const logoSrc = '/logo.png?v=2';
   
   return (
     <div className={`flex items-center gap-3 ${className}`}>

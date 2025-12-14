@@ -16,7 +16,7 @@ export const Footer = () => {
             <div className="mb-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/logo.png"
+                  src="/logo.png?v=2"
                   alt="Anthroly Logo"
                   width={48}
                   height={48}

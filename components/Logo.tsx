@@ -5,7 +5,7 @@ export const Logo = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <Image
-        src="/logo.png"
+        src="/logo.png?v=2"
         alt="Anthroly Logo"
         width={48}
         height={48}
