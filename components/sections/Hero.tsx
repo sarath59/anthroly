@@ -37,18 +37,18 @@ export const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <span className="block text-white drop-shadow-2xl">
-              30 Human-Written Articles.
+              Human-Written Articles +
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-white">
-              24/7 AI Agents for Backlinks.
+              AI-Driven Backlinks on Autopilot Every Month.
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in-up font-light" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            The world&apos;s first hybrid growth engine. We give you an entire content team and an automated SEO agent for one flat monthly price.
+            The hybrid growth engine. Expert human writers + autonomous SEO agents. One flat monthly price.
           </p>
 
           {/* CTA Button */}

@@ -20,7 +20,7 @@ export const Footer = () => {
                   alt="Anthroly Logo"
                   width={48}
                   height={48}
-                  className="brightness-0 invert object-contain"
+                  className="invert object-contain"
                 />
                 <span className="text-2xl font-bold tracking-tight text-white">Anthroly</span>
               </div>

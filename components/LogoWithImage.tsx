@@ -17,7 +17,7 @@ export const LogoWithImage = ({ className = "", variant = 'black' }: LogoProps) 
         width={48}
         height={48}
         className={`transition-transform duration-300 hover:scale-110 object-contain ${
-          variant === 'white' ? 'brightness-0 invert' : ''
+          variant === 'white' ? 'invert' : ''
         }`}
         priority
       />
