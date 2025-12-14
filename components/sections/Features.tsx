@@ -81,7 +81,7 @@ export const Features = () => {
             return (
               <div
                 key={index}
-                className={`group p-8 rounded-3xl bg-gray-50 hover:bg-black hover:text-white transition-all duration-500 transform ${
+                className={`group p-6 md:p-8 rounded-3xl bg-gray-50 hover:bg-black hover:text-white transition-all duration-500 transform ${
                   isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -100,14 +100,14 @@ export const Features = () => {
 
         {/* Deep Dive Section */}
         <div className="mt-32 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'} transition-all duration-1000 delay-300`}>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>
-              <div className="relative bg-black text-white p-10 rounded-3xl overflow-hidden">
+              <div className="relative bg-black text-white p-6 md:p-10 rounded-3xl overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-20">
-                  <Bot size={120} />
+                  <Bot size={80} className="md:w-[120px] md:h-[120px]" />
                 </div>
-                <h3 className="text-3xl font-bold mb-6">Meet Your New AI Agent</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">Meet Your New AI Agent</h3>
                 <ul className="space-y-4">
                   {[
                     'Scans 10,000+ pages daily for opportunities',

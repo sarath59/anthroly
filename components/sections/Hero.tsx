@@ -25,20 +25,20 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           
           {/* Dual Badge System */}
-          <div className="flex justify-center gap-3 mb-12 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
-              <PenTool size={16} className="text-blue-400" />
+          <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+            <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-xs md:text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
+              <PenTool size={14} className="text-blue-400" />
               <span className="text-gray-200">Human Quality</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
-              <Bot size={16} className="text-cyan-400" />
+            <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-xs md:text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
+              <Bot size={14} className="text-cyan-400" />
               <span className="text-gray-200">AI Scale</span>
             </div>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <span className="block text-white drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 leading-tight md:leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <span className="block text-white drop-shadow-2xl mb-2 md:mb-0">
               Human-Written Articles +
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-white">
@@ -47,16 +47,16 @@ export const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in-up font-light" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+          <p className="text-lg md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in-up font-light px-4" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             The hybrid growth engine. Expert human writers + autonomous SEO agents. One flat monthly price.
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            <Link href="/#pricing">
-              <Button size="xl" className="bg-white text-black hover:bg-gray-200 h-16 px-10 text-xl rounded-full font-bold shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all transform hover:-translate-y-1">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 md:mb-24 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+            <Link href="/#pricing" className="w-full sm:w-auto">
+              <Button size="xl" className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 h-14 md:h-16 px-8 md:px-10 text-lg md:text-xl rounded-full font-bold shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transition-all transform hover:-translate-y-1">
                 Start Growing for $99/mo
-                <ArrowRight className="ml-2" size={24} />
+                <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>
           </div>

@@ -16,9 +16,9 @@ export const ProblemSolution = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* The Old Way */}
-          <div className="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group">
+          <div className="bg-white p-6 md:p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
@@ -59,7 +59,7 @@ export const ProblemSolution = () => {
           </div>
 
           {/* The Anthroly Way */}
-          <div className="bg-black text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden transform md:-translate-y-4">
+          <div className="bg-black text-white p-6 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden transform md:-translate-y-4">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
             <div className="mb-8">
               <h3 className="text-2xl font-bold flex items-center gap-3">
