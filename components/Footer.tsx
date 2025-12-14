@@ -25,7 +25,7 @@ export const Footer = () => {
               </div>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              The world's first hybrid content engine. We combine elite human writers with autonomous AI agents to dominate search rankings.
+              The world&apos;s first hybrid content engine. We combine elite human writers with autonomous AI agents to dominate search rankings.
             </p>
             <div className="flex space-x-4">
               <a
@@ -47,7 +47,7 @@ export const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:hello@anthroly.com"
+                href="mailto:sarath.k@neuralnetwrk.com"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
@@ -76,7 +76,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@anthroly.com" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:sarath.k@neuralnetwrk.com" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </a>
               </li>

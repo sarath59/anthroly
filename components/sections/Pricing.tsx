@@ -77,7 +77,7 @@ export const Pricing = () => {
                 ))}
               </ul>
 
-              <a href="mailto:hello@anthroly.com?subject=Get Started with Anthroly ($99/mo)" className="block w-full">
+              <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button className="w-full h-14 text-lg bg-white text-black hover:bg-gray-200 rounded-xl font-bold shadow-lg shadow-white/10 transition-all hover:scale-[1.02]">
                   Get Started Now
                   <Zap className="ml-2 fill-black" size={20} />

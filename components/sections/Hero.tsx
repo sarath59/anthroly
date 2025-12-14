@@ -48,7 +48,7 @@ export const Hero = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            The world's first hybrid growth engine. We give you an entire content team and an automated SEO agent for one flat monthly price.
+            The world&apos;s first hybrid growth engine. We give you an entire content team and an automated SEO agent for one flat monthly price.
           </p>
 
           {/* CTA Buttons */}

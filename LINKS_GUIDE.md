@@ -18,7 +18,7 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 - **Services** → `/#services`
 - **Pricing** → `/#pricing`
 - **Blog** → `/blog`
-- **Contact** → `mailto:hello@anthroly.com` (opens email)
+- **Contact** → `mailto:sarath.k@neuralnetwrk.com` (opens email)
 - **Privacy Policy** → `/privacy`
 - **Terms of Service** → `/terms`
 
@@ -32,9 +32,8 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 - **View Pricing CTA** → `/#pricing`
 
 ### Pricing Section
-- **Get Started with Growth Button** → `mailto:hello@anthroly.com?subject=Subscribe to Anthroly - Growth Plan`
-- **Get Started with Premium Button** → `mailto:hello@anthroly.com?subject=Subscribe to Anthroly - Premium Plan`
-- **Contact Us for Custom Solutions** → `mailto:hello@anthroly.com`
+- **Get Started Button** → `https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a` (Stripe Checkout)
+- **Contact Us** → `mailto:sarath.k@neuralnetwrk.com`
 
 ## 🔄 Dynamic Routes
 
@@ -48,41 +47,25 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 - `#services` - Features/Services section
 - `#pricing` - Pricing section
 
-## 💳 Adding Stripe Payment Links
+## 💳 Payment Links
 
-When you're ready to integrate Stripe payments, update the pricing buttons:
+The site currently uses **Stripe** for payments.
 
-### Location: `components/sections/Pricing.tsx` (lines ~143-157)
+### Location: `components/sections/Pricing.tsx` (lines ~80)
 
-Replace the `mailto:` links with your Stripe payment links:
-
+Current link:
 ```tsx
-// Current (temporary):
-<a href={`mailto:hello@anthroly.com?subject=Subscribe to Anthroly - ${plan.name} Plan`}>
-
-// Replace with Stripe links:
-// For Growth plan ($350/month):
-<a href="https://buy.stripe.com/YOUR_GROWTH_PLAN_LINK">
-
-// For Premium plan ($499/month):
-<a href="https://buy.stripe.com/YOUR_PREMIUM_PLAN_LINK">
+<a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a">
 ```
 
-### How to Get Stripe Payment Links
-
-1. Log in to your Stripe Dashboard
-2. Go to **Products** → **Add Product**
-3. Create two products:
-   - Growth Plan: $350/month (recurring)
-   - Premium Plan: $499/month (recurring)
-4. Click on each product → **Create payment link**
-5. Copy the payment link URL
-6. Replace the mailto links in the code
+To update the payment link:
+1. Create a new payment link in your Stripe dashboard
+2. Replace the href in `components/sections/Pricing.tsx`
 
 ## 📧 Email Links
 
 All contact links currently open an email client:
-- **General Contact**: hello@anthroly.com
+- **General Contact**: sarath.k@neuralnetwrk.com
 - **Twitter**: Update with your Twitter URL
 - **LinkedIn**: Update with your LinkedIn URL
 
@@ -95,39 +78,3 @@ Location: `components/Footer.tsx` (lines ~37-55)
 <a href="https://twitter.com/YOUR_HANDLE" ...>
 <a href="https://linkedin.com/company/YOUR_COMPANY" ...>
 ```
-
-## 🎯 Link Testing Checklist
-
-Test all links from different pages:
-
-### From Homepage (`/`)
-- ✅ All hash links (#services, #pricing) - scroll to sections
-- ✅ Blog link - goes to `/blog`
-- ✅ Get Started buttons - scroll to pricing
-
-### From Blog (`/blog`)
-- ✅ Services link - goes to `/#services` (home + scroll)
-- ✅ Pricing link - goes to `/#pricing` (home + scroll)
-- ✅ Logo click - goes to `/`
-
-### From Privacy/Terms Pages
-- ✅ All navigation links work
-- ✅ Logo returns to homepage
-- ✅ Footer links work
-
-### Mobile Menu
-- ✅ All links work
-- ✅ Menu closes after clicking link
-
-## 🚀 Future Enhancements
-
-Consider adding:
-- Contact page at `/contact`
-- About page at `/about`
-- Case studies/portfolio at `/work`
-- FAQ page at `/faq`
-
----
-
-**Last Updated**: October 16, 2024
-

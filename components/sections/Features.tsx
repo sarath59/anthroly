@@ -127,7 +127,7 @@ export const Features = () => {
             <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'} transition-all duration-1000 delay-500`}>
               <h3 className="text-3xl font-bold mb-6">While Humans Do What Humans Do Best.</h3>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                AI is great for data, but terrible at nuance. That's why we never let AI write your blogs. Our team of professional copywriters crafts stories that engage your audience, build trust, and convert visitors into customers.
+                AI is great for data, but terrible at nuance. That&apos;s why we never let AI write your blogs. Our team of professional copywriters crafts stories that engage your audience, build trust, and convert visitors into customers.
               </p>
               <div className="flex items-center gap-2 text-black font-semibold cursor-pointer hover:gap-4 transition-all">
                 See content examples <ArrowRight size={20} />
