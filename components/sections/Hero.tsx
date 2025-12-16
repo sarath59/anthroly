@@ -82,10 +82,6 @@ export const Hero = () => {
           {/* Dual Badge System */}
           <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
             <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-xs md:text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
-              <PenTool size={14} className="text-blue-400" />
-              <span className="text-gray-200">Human Quality</span>
-            </div>
-            <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-xs md:text-sm font-medium hover:bg-white/10 transition-colors cursor-default">
               <Bot size={14} className="text-cyan-400" />
               <span className="text-gray-200">AI Scale</span>
             </div>
@@ -93,9 +89,6 @@ export const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight md:leading-[1.1] opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <span className="block text-white drop-shadow-2xl mb-2 md:mb-0">
-              Human-Written Articles +
-            </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-white">
               AI-Driven Backlinks on Autopilot Every Month.
             </span>
@@ -132,8 +125,8 @@ export const Hero = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-px border-t border-b border-white/10 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 animate-fade-in-up backdrop-blur-sm" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
             <div className="py-10 px-4 group hover:bg-white/5 transition-colors duration-500">
-              <div className="text-5xl font-bold text-white mb-2 tracking-tighter group-hover:scale-110 transition-transform duration-500">30</div>
-              <div className="text-gray-500 uppercase tracking-widest text-xs font-semibold">Monthly Articles</div>
+              <div className="text-5xl font-bold text-white mb-2 tracking-tighter group-hover:scale-110 transition-transform duration-500">100%</div>
+              <div className="text-gray-500 uppercase tracking-widest text-xs font-semibold">Automated</div>
             </div>
             <div className="py-10 px-4 group hover:bg-white/5 transition-colors duration-500 border-l-0 md:border-l border-r-0 md:border-r border-white/10">
               <div className="text-5xl font-bold text-white mb-2 tracking-tighter group-hover:scale-110 transition-transform duration-500">24/7</div>

@@ -31,14 +31,14 @@ export const ProblemSolution = () => {
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-semibold">Expensive Agencies</p>
-                  <p className="text-sm text-gray-600">Charging $2,000+ for just 4 blogs a month.</p>
+                  <p className="text-sm text-gray-600">Charging $2,000+ for just a few backlinks a month.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-70">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-semibold">Pure AI Tools</p>
-                  <p className="text-sm text-gray-600">Generic, robotic content that Google penalizes.</p>
+                  <p className="font-semibold">Spammy Backlinks</p>
+                  <p className="text-sm text-gray-600">Low quality links that Google penalizes.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-70">
@@ -71,8 +71,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-green-400 flex-shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-semibold text-lg">High-Volume Human Content</p>
-                  <p className="text-sm text-gray-400">30 professionally written articles every month.</p>
+                  <p className="font-semibold text-lg">Automated Outreach at Scale</p>
+                  <p className="text-sm text-gray-400">Reaching thousands of prospects daily.</p>
                 </div>
               </li>
               <li className="flex gap-4">

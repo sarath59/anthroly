@@ -26,7 +26,7 @@ export const Footer = () => {
               </div>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              The world&apos;s first hybrid content engine. We combine elite human writers with autonomous AI agents to dominate search rankings.
+              Autonomous AI agents that bring backlinks for businesses on autopilot.
             </p>
             <div className="flex space-x-4">
               <a

@@ -5,27 +5,27 @@ import { PenTool, Bot, Search, BarChart3, Globe, Zap, CheckCircle2, ArrowRight }
 
 const features = [
   {
-    icon: PenTool,
-    title: 'Human Writers, Not Bots',
-    description: 'Our vetted team of expert copywriters crafts 30 high-quality, engaging blog posts every month. No hallucinations, no robotic tone—just real content that connects.',
+    icon: Bot,
+    title: 'Automated Outreach',
+    description: 'Our AI agents handle the tedious process of finding and contacting backlink opportunities, running 24/7 to scale your outreach.',
     color: 'blue'
   },
   {
-    icon: Bot,
-    title: '24/7 AI Agents for Backlinks',
+    icon: Zap,
+    title: '24/7 AI Agents',
     description: 'While you sleep, our autonomous AI agent scours the web, identifies link-building opportunities, and secures backlinks to boost your domain authority.',
     color: 'cyan'
   },
   {
     icon: Search,
     title: 'Strategic SEO Research',
-    description: 'We don\'t just write; we target. Every article is based on deep keyword research to find low-competition, high-traffic opportunities in your niche.',
+    description: 'We target high-value keywords and identify backlink opportunities that will actually move the needle for your search rankings.',
     color: 'pink'
   },
   {
     icon: Globe,
-    title: 'Multi-Platform Distribution',
-    description: 'Your content doesn\'t just sit on your blog. We optimize it for sharing across social channels to maximize reach and engagement.',
+    title: 'Competitor Analysis',
+    description: 'We analyze your competitors\' backlink profiles to find the best opportunities for you to replicate and outrank them.',
     color: 'orange'
   },
   {
@@ -37,7 +37,7 @@ const features = [
   {
     icon: Zap,
     title: 'Instant Authority',
-    description: 'By combining volume (30 posts/mo) with authority (backlinks), you signal to Google that you are a serious player in your industry.',
+    description: 'By consistently acquiring high-quality backlinks, you signal to Google that you are a serious player in your industry.',
     color: 'yellow'
   }
 ];
@@ -136,12 +136,12 @@ export const Features = () => {
             </div>
 
             <div className={`relative ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'} transition-all duration-1000 delay-500`}>
-              <h3 className="text-3xl font-bold mb-6">While Humans Do What Humans Do Best.</h3>
+              <h3 className="text-3xl font-bold mb-6">Focus on Your Product. We Handle the Rest.</h3>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                AI is great for data, but terrible at nuance. That&apos;s why we never let AI write your blogs. Our team of professional copywriters crafts stories that engage your audience, build trust, and convert visitors into customers.
+                Building backlinks is time-consuming and tedious. Let our AI agents handle the heavy lifting while you focus on building a great product. We automate the entire process from discovery to outreach.
               </p>
               <div className="flex items-center gap-2 text-black font-semibold cursor-pointer hover:gap-4 transition-all">
-                See content examples <ArrowRight size={20} />
+                See how it works <ArrowRight size={20} />
               </div>
             </div>
           </div>

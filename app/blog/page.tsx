@@ -97,19 +97,19 @@ export default function BlogPage() {
 
                 <h3 className="text-2xl font-bold text-white mt-10 mb-4">The Anthroly Approach</h3>
                 <p className="text-gray-400 mb-6">
-                  This is why we built Anthroly the way we did. We realized that while <strong>backlinks</strong> (the authority signal) could be automated through smart AI agents that work 24/7, the <strong>content</strong> (the trust signal) had to remain sacrosanct.
+                  This is why we built Anthroly the way we did. We realized that even the best content needs authority to rank. And building authority (backlinks) is tedious and time-consuming. That&apos;s why we built smart AI agents that work 24/7 to secure high-quality backlinks for your business.
                 </p>
                 <p className="text-gray-400 mb-6">
-                  Our articles are written by vetted human experts. Real people with pulses, opinions, and caffeine addictions. They write content that passes every AI detector with a 0% AI score—not because we &quot;bypass&quot; detectors, but because the content is genuinely 100% human.
+                  Our AI agents scan thousands of opportunities daily, identifying the most relevant sites to link to your content. This allows you to focus on creating great content while we handle the distribution and authority building.
                 </p>
                 <p className="text-gray-400 mb-8">
-                  The result? Content that holds attention. Backlinks that build authority. And a growth engine that doesn&apos;t just trick the algorithm, but actually serves the user.
+                  The result? Backlinks that build authority. And a growth engine that doesn&apos;t just trick the algorithm, but actually serves the user by connecting them with your valuable content.
                 </p>
 
                 <div className="bg-blue-900/20 border border-blue-800 rounded-xl p-8 mt-12">
-                  <h4 className="text-xl font-bold text-white mb-2">Ready to publish content that actually ranks?</h4>
+                  <h4 className="text-xl font-bold text-white mb-2">Ready to boost your domain authority?</h4>
                   <p className="text-gray-400 mb-6">
-                    Stop settling for &quot;good enough&quot; AI slop. Get 30 human-written articles and automated backlinks for one flat monthly price.
+                    Stop struggling with manual outreach. Get automated backlinks for one flat monthly price.
                   </p>
                   <div className="flex items-center gap-4">
                     <a href="/#pricing" className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors">
