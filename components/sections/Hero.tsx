@@ -11,10 +11,22 @@ const TerminalText = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   const steps = [
-    "Searching for new backlink possibilities...",
-    "Entering your SaaS details...",
-    "Submitting your SaaS...",
-    "Success! New backlink acquired (DR 90)"
+    "Initializing Anthroly Agent v2.1...",
+    "Scanning high-DR directory database...",
+    "Found 150+ relevant directories and tool lists...",
+    "Analyzing 'ProductHunt' submission requirements...",
+    "Generating optimized SaaS description...",
+    "Auto-filling submission fields...",
+    "Uploading assets and screenshots...",
+    "Verifying submission with email agent...",
+    "Success! Submitted to ProductHunt.",
+    "Targeting 'BetaList' for next submission...",
+    "Checking domain authority (DR 85)...",
+    "Submitting to 10startups...",
+    "Submitting to Dang.ai...",
+    "Submitting to Toolify...",
+    "Processing batch submission #42...",
+    "Success! 5 new high-quality backlinks acquired."
   ];
 
   useEffect(() => {
