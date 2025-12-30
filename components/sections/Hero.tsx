@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { ArrowRight, Sparkles, Bot, PenTool } from 'lucide-react';
+import { ArrowRight, Sparkles, Bot, PenTool, Check } from 'lucide-react';
 
 const TerminalText = () => {
   const [text, setText] = useState('');
@@ -105,6 +105,25 @@ export const Hero = () => {
               AI-Driven Backlinks on Autopilot Every Month.
             </span>
           </h1>
+
+          {/* Services Sublines */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-left max-w-4xl mx-auto mb-12 opacity-0 animate-fade-in-up px-4" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+            {[
+              "24/7 AI agents to get legit non-spammy backlinks",
+              "24/7 AI agents to build your product's brand",
+              "Collaborate with influencers on LinkedIn to market your SaaS",
+              "Build free pSEO tools for your SaaS to list more and get more traffic on Google",
+              "Keyword research",
+              "30 blogs per month using AI with human supervision for high quality content",
+              "Weekly SEO analysis",
+              "Weekly reports"
+            ].map((service, index) => (
+              <div key={index} className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
+                <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                <span>{service}</span>
+              </div>
+            ))}
+          </div>
 
           {/* AI Terminal Simulation */}
           <div className="max-w-2xl mx-auto mb-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
