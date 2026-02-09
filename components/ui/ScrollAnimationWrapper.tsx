@@ -5,7 +5,6 @@ import { ScrollAnimationProvider } from './ScrollAnimations';
 
 /**
  * Client-side wrapper for scroll animations
- * This separates the client component from the server layout
  */
 
 interface ScrollAnimationWrapperProps {
@@ -16,9 +15,7 @@ export const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({ 
   return (
     <ScrollAnimationProvider
       enableGradient={true}
-      enableParticles={false}
       enableProgress={true}
-      enableCursor={false}
     >
       {children}
     </ScrollAnimationProvider>
