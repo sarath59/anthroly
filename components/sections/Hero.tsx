@@ -86,8 +86,8 @@ export const Hero = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#222_1px,_transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
+        <div className="max-w-7xl mx-auto text-center">
           
           {/* Badges - Social Proof + Urgency */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -101,7 +101,7 @@ export const Hero = () => {
           </div>
 
           {/* Main Heading - Future-Pacing Fear + Direct Question */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
             <span className="block text-white mb-2">In 6 Months, 90% of Buying Decisions</span>
             <span className="block text-white mb-2">Will Start with AI.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
@@ -110,12 +110,12 @@ export const Hero = () => {
           </h1>
 
           {/* Subheadline - Data-Driven Urgency */}
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto mb-10 leading-relaxed">
-            <span className="text-white font-semibold">ChatGPT has 200M+ weekly users.</span> Perplexity processes 100M+ queries daily. Google SGE is rolling out to 1B+ users. <span className="text-emerald-400 font-semibold">The businesses AI recommends will capture 73% of market share.</span> The rest will fight for scraps.
+          <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-400 max-w-5xl mx-auto mb-12 leading-relaxed">
+            <span className="text-white font-semibold">ChatGPT has 800M weekly users.</span> Perplexity processes 100M+ queries daily. Google SGE is rolling out to 1B+ users. <span className="text-emerald-400 font-semibold">The businesses AI recommends will capture 73% of market share.</span> The rest will fight for scraps.
           </p>
 
           {/* AI Terminal Simulation - Demonstration of Power */}
-          <div className="max-w-2xl mx-auto mb-10">
+          <div className="max-w-3xl mx-auto mb-12">
             <div className="bg-gray-950 border border-gray-800 rounded-xl overflow-hidden shadow-2xl">
               <div className="flex items-center gap-2 px-4 py-3 bg-gray-900 border-b border-gray-800">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -135,13 +135,13 @@ export const Hero = () => {
           </div>
 
           {/* Services Preview - Build Curiosity */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-14">
             {services.map((service, index) => (
-              <div key={index} className="flex items-center gap-3 text-left p-3 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-emerald-500/30 transition-all">
-                <div className="flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                  <Check className="w-3 h-3 text-emerald-400" />
+              <div key={index} className="flex items-center gap-3 text-left p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-emerald-500/30 transition-all">
+                <div className="flex-shrink-0 w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                  <Check className="w-4 h-4 text-emerald-400" />
                 </div>
-                <span className="text-gray-300 text-sm">{service}</span>
+                <span className="text-gray-300 text-sm md:text-base">{service}</span>
               </div>
             ))}
           </div>
@@ -160,27 +160,27 @@ export const Hero = () => {
           </div>
 
           {/* Trust Indicators - Credibility */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-5xl mx-auto mb-14">
             <div className="text-center p-4">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">100%</div>
-              <div className="text-gray-500 text-xs md:text-sm uppercase tracking-wider">Automated</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">100%</div>
+              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Automated</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
-              <div className="text-gray-500 text-xs md:text-sm uppercase tracking-wider">AI Working</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">24/7</div>
+              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">AI Working</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">DR 70+</div>
-              <div className="text-gray-500 text-xs md:text-sm uppercase tracking-wider">Backlinks</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">DR 70+</div>
+              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Backlinks</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">30+</div>
-              <div className="text-gray-500 text-xs md:text-sm uppercase tracking-wider">Blogs/Month</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">30+</div>
+              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Blogs/Month</div>
             </div>
           </div>
 
           {/* Guarantee Banner - Risk Reversal (Subtle, Not About Price) */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="relative p-6 md:p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20 rounded-2xl">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <span className="px-4 py-1 bg-emerald-500 text-black text-xs font-bold rounded-full uppercase tracking-wider">
