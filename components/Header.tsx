@@ -52,12 +52,12 @@ export const Header = () => {
               Pricing
             </Link>
             <Link
-              href="/blog"
+              href="/resources"
               className={`text-sm font-medium transition-colors duration-200 ${
                 isScrolled ? 'text-gray-700 hover:text-black' : 'text-gray-300 hover:text-white'
               }`}
             >
-              Blog
+              Resources
             </Link>
             <Link href="/#pricing">
               <Button 
@@ -101,11 +101,11 @@ export const Header = () => {
               Pricing
             </Link>
             <Link
-              href="/blog"
+              href="/resources"
               className="block text-sm font-medium text-gray-700 hover:text-black transition-colors duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              Resources
             </Link>
             <Link href="/#pricing" onClick={() => setIsMobileMenuOpen(false)}>
               <Button size="lg" className="w-full">

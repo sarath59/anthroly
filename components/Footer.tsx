@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black border-t border-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="mb-4">
@@ -72,14 +72,46 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Blog
+                <Link href="/resources" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Resources
                 </Link>
               </li>
               <li>
                 <a href="mailto:sarath.k@neuralnetwrk.com" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-white">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/glossary" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  SEO Glossary
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/use-cases" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Use Cases
+                </Link>
+              </li>
+              <li>
+                <Link href="/for" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  For Teams
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-seo-agency" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Locations
+                </Link>
               </li>
             </ul>
           </div>
