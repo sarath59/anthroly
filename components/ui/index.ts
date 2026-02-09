@@ -6,10 +6,6 @@ export { Separator } from './separator';
 export { 
   FlowingGradientBackground,
   ScrollProgressBar,
-  RevealOnScroll,
-  ParallaxSection,
-  FloatingParticles,
-  GlowCursor,
   ScrollAnimationProvider,
 } from './ScrollAnimations';
 
