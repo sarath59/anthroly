@@ -32,22 +32,22 @@ export const PSEOImplementation = () => {
   ];
 
   return (
-    <section id="pseo" ref={sectionRef} className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="pseo" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,_#faf5ff_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,_rgba(139,92,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 text-violet-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 text-violet-300 rounded-full text-sm font-semibold mb-6 border border-violet-500/30">
             <Layers size={16} />
             <span>Service 05</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             pSEO Implementation
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            Programmatic SEO is the secret weapon of the fastest-growing companies. We create <span className="text-black font-semibold">thousands of targeted landing pages</span> automatically — each one optimized for specific keywords and user intent.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            Programmatic SEO is the secret weapon of the fastest-growing companies. We create <span className="text-white font-semibold">thousands of targeted landing pages</span> automatically — each one optimized for specific keywords and user intent.
           </p>
         </div>
 
@@ -56,38 +56,38 @@ export const PSEOImplementation = () => {
           {/* Left: Explanation */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 What is Programmatic SEO?
               </h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg text-gray-400 leading-relaxed mb-6">
                 Instead of creating pages one-by-one, pSEO uses templates and data to generate hundreds or thousands of unique, valuable pages. Think of how Yelp has a page for every restaurant, or Zillow has a page for every property.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                <span className="font-semibold text-black">The result?</span> You capture long-tail traffic at scale — the kind of searches with high intent and low competition.
+              <p className="text-lg text-gray-400 leading-relaxed">
+                <span className="font-semibold text-white">The result?</span> You capture long-tail traffic at scale — the kind of searches with high intent and low competition.
               </p>
             </div>
 
             {/* Process Steps */}
             <div className="space-y-4">
-              <div className="flex items-start gap-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+              <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h4 className="font-bold text-black">Identify Patterns</h4>
-                  <p className="text-gray-600 text-sm">We analyze your industry to find scalable keyword patterns</p>
+                  <h4 className="font-bold text-white">Identify Patterns</h4>
+                  <p className="text-gray-400 text-sm">We analyze your industry to find scalable keyword patterns</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+              <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h4 className="font-bold text-black">Build Templates</h4>
-                  <p className="text-gray-600 text-sm">Create dynamic templates that generate unique, valuable content</p>
+                  <h4 className="font-bold text-white">Build Templates</h4>
+                  <p className="text-gray-400 text-sm">Create dynamic templates that generate unique, valuable content</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
+              <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h4 className="font-bold text-black">Deploy & Monitor</h4>
-                  <p className="text-gray-600 text-sm">Pages go live automatically and we track their performance</p>
+                  <h4 className="font-bold text-white">Deploy & Monitor</h4>
+                  <p className="text-gray-400 text-sm">Pages go live automatically and we track their performance</p>
                 </div>
               </div>
             </div>
@@ -126,28 +126,28 @@ export const PSEOImplementation = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mt-6">
-              <div className="p-5 bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-100 text-center">
-                <div className="text-3xl font-bold text-black mb-1">10x</div>
-                <div className="text-sm text-gray-600">More keywords covered</div>
+              <div className="p-5 bg-violet-500/10 rounded-2xl border border-violet-500/20 text-center">
+                <div className="text-3xl font-bold text-white mb-1">10x</div>
+                <div className="text-sm text-gray-400">More keywords covered</div>
               </div>
-              <div className="p-5 bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-100 text-center">
-                <div className="text-3xl font-bold text-black mb-1">$0.02</div>
-                <div className="text-sm text-gray-600">Cost per page created</div>
+              <div className="p-5 bg-violet-500/10 rounded-2xl border border-violet-500/20 text-center">
+                <div className="text-3xl font-bold text-white mb-1">$0.02</div>
+                <div className="text-sm text-gray-400">Cost per page created</div>
               </div>
             </div>
 
             {/* Benefits */}
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-violet-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-violet-400 flex-shrink-0" size={18} />
                 <span>Capture long-tail searches competitors miss</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-violet-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-violet-400 flex-shrink-0" size={18} />
                 <span>Each page is unique — no duplicate content issues</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-violet-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-violet-400 flex-shrink-0" size={18} />
                 <span>Scales infinitely as you add more data</span>
               </div>
             </div>

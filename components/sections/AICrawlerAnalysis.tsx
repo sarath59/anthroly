@@ -48,22 +48,22 @@ export const AICrawlerAnalysis = () => {
   ];
 
   return (
-    <section id="ai-crawler" ref={sectionRef} className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="ai-crawler" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
       {/* Subtle Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_#f0fdf4_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
             <span>Service 01</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             AI Crawler Analysis
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            <span className="text-black font-semibold">Google is just the beginning.</span> The future of search is AI — and most websites are completely invisible to it. Our proprietary AI crawler shows you exactly where you stand and what to fix.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            <span className="text-white font-semibold">Google is just the beginning.</span> The future of search is AI — and most websites are completely invisible to it. Our proprietary AI crawler shows you exactly where you stand and what to fix.
           </p>
         </div>
 
@@ -109,13 +109,13 @@ export const AICrawlerAnalysis = () => {
             </div>
             
             {/* Floating Elements */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 animate-float">
+            <div className="absolute -bottom-6 -left-6 bg-gray-900 p-4 rounded-2xl shadow-xl border border-gray-800 animate-float">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                  <CheckCircle2 className="text-emerald-600" size={20} />
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                  <CheckCircle2 className="text-emerald-400" size={20} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-black">+340%</div>
+                  <div className="text-sm font-bold text-white">+340%</div>
                   <div className="text-xs text-gray-500">AI Traffic Potential</div>
                 </div>
               </div>
@@ -125,11 +125,11 @@ export const AICrawlerAnalysis = () => {
           {/* Right: Features */}
           <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 See What AI Sees (Or Doesn&apos;t See)
               </h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                ChatGPT and Perplexity don&apos;t read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-black">If you&apos;re optimizing only for Google, you&apos;re already behind.</span>
+              <p className="text-lg text-gray-400 leading-relaxed mb-8">
+                ChatGPT and Perplexity don&apos;t read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-white">If you&apos;re optimizing only for Google, you&apos;re already behind.</span>
               </p>
             </div>
 
@@ -139,14 +139,14 @@ export const AICrawlerAnalysis = () => {
                 return (
                   <div
                     key={index}
-                    className="flex gap-4 p-5 bg-gray-50 hover:bg-emerald-50 rounded-2xl transition-all duration-300 group cursor-default"
+                    className="flex gap-4 p-5 bg-gray-900/80 hover:bg-gray-800 border border-gray-800 hover:border-emerald-500/30 rounded-2xl transition-all duration-300 group cursor-default"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-white shadow-sm rounded-xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                      <Icon size={22} className="text-emerald-600 group-hover:text-white" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 transition-colors">
+                      <Icon size={22} className="text-emerald-400 group-hover:text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-black mb-1">{feature.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                      <h4 className="font-bold text-white mb-1">{feature.title}</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 );
@@ -154,8 +154,8 @@ export const AICrawlerAnalysis = () => {
             </div>
 
             <div className="pt-4">
-              <p className="text-sm text-gray-500 bg-gray-100 p-4 rounded-xl">
-                <span className="font-semibold text-black">Reality check:</span> By 2025, 40% of search queries will go through AI interfaces. Companies that adapt now will dominate. Those that wait will scramble.
+              <p className="text-sm text-gray-400 bg-gray-900/80 border border-gray-800 p-4 rounded-xl">
+                <span className="font-semibold text-white">Reality check:</span> By 2025, 40% of search queries will go through AI interfaces. Companies that adapt now will dominate. Those that wait will scramble.
               </p>
             </div>
           </div>

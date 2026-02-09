@@ -49,21 +49,21 @@ export const SocialArticles = () => {
   ];
 
   return (
-    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_#dbeafe_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(59,130,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Share2 size={16} />
             <span>Service 07</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             SEO/GEO Social Articles
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
             AI doesn&apos;t just read your website — it reads LinkedIn, X, and Medium too. We publish optimized content across all platforms to maximize your visibility everywhere.
           </p>
         </div>
@@ -75,14 +75,14 @@ export const SocialArticles = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+                className="bg-gray-900/80 rounded-2xl p-6 border border-gray-800 hover:border-blue-500/30 transition-all duration-300 group"
               >
                 <div className={`w-14 h-14 ${platform.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <Icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-black mb-2">{platform.name}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{platform.description}</p>
-                <div className="flex items-center gap-2 text-sm text-emerald-600 font-semibold">
+                <h3 className="text-xl font-bold text-white mb-2">{platform.name}</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{platform.description}</p>
+                <div className="flex items-center gap-2 text-sm text-emerald-400 font-semibold">
                   <Eye size={16} />
                   <span>{platform.stats}</span>
                 </div>
@@ -95,43 +95,43 @@ export const SocialArticles = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Why It Matters */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-2xl md:text-3xl font-bold text-black mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Why Social Content Matters for SEO & GEO
             </h3>
             
             <div className="space-y-6 mb-8">
-              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+              <div className="p-5 bg-gray-900/80 rounded-xl border border-gray-800">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="text-blue-600" size={20} />
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="text-blue-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black mb-1">AI Reads Everything</h4>
-                    <p className="text-gray-600 text-sm">ChatGPT and Claude pull information from LinkedIn articles, X threads, and Medium posts. Being visible there means being recommended more often.</p>
+                    <h4 className="font-bold text-white mb-1">AI Reads Everything</h4>
+                    <p className="text-gray-400 text-sm">ChatGPT and Claude pull information from LinkedIn articles, X threads, and Medium posts. Being visible there means being recommended more often.</p>
                   </div>
                 </div>
               </div>
               
-              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+              <div className="p-5 bg-gray-900/80 rounded-xl border border-gray-800">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Users className="text-purple-600" size={20} />
+                  <div className="flex-shrink-0 w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Users className="text-purple-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black mb-1">Build Authority Signals</h4>
-                    <p className="text-gray-600 text-sm">When your content appears across multiple high-authority platforms, search engines trust you more. It&apos;s called E-E-A-T (Experience, Expertise, Authoritativeness, Trust).</p>
+                    <h4 className="font-bold text-white mb-1">Build Authority Signals</h4>
+                    <p className="text-gray-400 text-sm">When your content appears across multiple high-authority platforms, search engines trust you more. It&apos;s called E-E-A-T (Experience, Expertise, Authoritativeness, Trust).</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+              <div className="p-5 bg-gray-900/80 rounded-xl border border-gray-800">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <MessageSquare className="text-emerald-600" size={20} />
+                  <div className="flex-shrink-0 w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                    <MessageSquare className="text-emerald-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-black mb-1">Engagement Drives Rankings</h4>
-                    <p className="text-gray-600 text-sm">High engagement on social platforms sends positive signals to search engines. More likes, comments, and shares = higher rankings.</p>
+                    <h4 className="font-bold text-white mb-1">Engagement Drives Rankings</h4>
+                    <p className="text-gray-400 text-sm">High engagement on social platforms sends positive signals to search engines. More likes, comments, and shares = higher rankings.</p>
                   </div>
                 </div>
               </div>
@@ -204,16 +204,16 @@ export const SocialArticles = () => {
 
             {/* Benefits */}
             <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
                 <span>All content written in your brand voice</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
                 <span>Scheduled and published automatically</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-700">
-                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
                 <span>Repurposed from your blog content for efficiency</span>
               </div>
             </div>

@@ -48,22 +48,22 @@ export const AutomatedBlogs = () => {
   ];
 
   return (
-    <section id="blogs" ref={sectionRef} className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="blogs" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_#f0f9ff_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(139,92,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <PenTool size={16} />
             <span>Service 03</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             30 Blogs Per Month
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            Content is king, but creating it is exhausting. Our AI writes <span className="text-black font-semibold">30 SEO-optimized blog posts every month</span> — reviewed by humans for quality, published automatically, ranked on Google.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            Content is king, but creating it is exhausting. Our AI writes <span className="text-white font-semibold">30 SEO-optimized blog posts every month</span> — reviewed by humans for quality, published automatically, ranked on Google.
           </p>
         </div>
 
@@ -75,14 +75,14 @@ export const AutomatedBlogs = () => {
               {blogFeatures.map((feature, index) => (
                 <div 
                   key={index}
-                  className="flex gap-5 p-5 bg-white rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 transition-all duration-300 group"
+                  className="flex gap-5 p-5 bg-gray-900/80 rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-all duration-300 group"
                 >
                   <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
                     {feature.number}
                   </div>
                   <div>
-                    <h4 className="font-bold text-black text-lg mb-1">{feature.title}</h4>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    <h4 className="font-bold text-white text-lg mb-1">{feature.title}</h4>
+                    <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -113,35 +113,35 @@ export const AutomatedBlogs = () => {
 
             {/* Benefits */}
             <div className="space-y-4">
-              <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-100">
-                <CheckCircle2 className="text-purple-600 flex-shrink-0 mt-0.5" size={20} />
+              <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-black">Keyword-targeted:</span>
-                  <span className="text-gray-600"> Each article targets specific keywords with proven search volume</span>
+                  <span className="font-semibold text-white">Keyword-targeted:</span>
+                  <span className="text-gray-400"> Each article targets specific keywords with proven search volume</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-100">
-                <CheckCircle2 className="text-purple-600 flex-shrink-0 mt-0.5" size={20} />
+              <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-black">Brand voice aligned:</span>
-                  <span className="text-gray-600"> We learn your tone and style to maintain consistency</span>
+                  <span className="font-semibold text-white">Brand voice aligned:</span>
+                  <span className="text-gray-400"> We learn your tone and style to maintain consistency</span>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-100">
-                <CheckCircle2 className="text-purple-600 flex-shrink-0 mt-0.5" size={20} />
+              <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-black">Internally linked:</span>
-                  <span className="text-gray-600"> Strategic internal links boost your entire site&apos;s SEO</span>
+                  <span className="font-semibold text-white">Internally linked:</span>
+                  <span className="text-gray-400"> Strategic internal links boost your entire site&apos;s SEO</span>
                 </div>
               </div>
             </div>
 
             {/* Bottom Note */}
-            <div className="mt-8 p-5 bg-yellow-50 border border-yellow-200 rounded-xl">
+            <div className="mt-8 p-5 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
               <div className="flex items-start gap-3">
-                <Sparkles className="text-yellow-600 flex-shrink-0" size={20} />
-                <p className="text-sm text-yellow-800">
-                  <span className="font-bold">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don&apos;t. But who has time to write 30 articles a month? Now you do.
+                <Sparkles className="text-yellow-400 flex-shrink-0" size={20} />
+                <p className="text-sm text-gray-300">
+                  <span className="font-bold text-yellow-400">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don&apos;t. But who has time to write 30 articles a month? Now you do.
                 </p>
               </div>
             </div>

@@ -47,35 +47,42 @@ export const FlowingGradientBackground = () => {
     };
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
-    // Gradient orbs configuration
+    // Gradient orbs configuration - Light grey tones for black background
     const orbs = [
       { 
         x: 0.2, y: 0.3, 
-        baseRadius: 400, 
-        color: 'rgba(16, 185, 129, 0.08)', // Emerald
+        baseRadius: 500, 
+        color: 'rgba(255, 255, 255, 0.03)', // Light grey
         speedX: 0.0003, speedY: 0.0002,
         scrollInfluence: 0.15
       },
       { 
         x: 0.8, y: 0.5, 
-        baseRadius: 350, 
-        color: 'rgba(6, 182, 212, 0.06)', // Cyan
+        baseRadius: 450, 
+        color: 'rgba(255, 255, 255, 0.025)', // Slightly lighter
         speedX: -0.0002, speedY: 0.0003,
         scrollInfluence: 0.1
       },
       { 
         x: 0.5, y: 0.7, 
-        baseRadius: 450, 
-        color: 'rgba(139, 92, 246, 0.05)', // Purple
+        baseRadius: 550, 
+        color: 'rgba(255, 255, 255, 0.02)', // Very subtle
         speedX: 0.0002, speedY: -0.0002,
         scrollInfluence: 0.2
       },
       { 
         x: 0.1, y: 0.8, 
-        baseRadius: 300, 
-        color: 'rgba(59, 130, 246, 0.06)', // Blue
+        baseRadius: 400, 
+        color: 'rgba(255, 255, 255, 0.035)', // Slightly more visible
         speedX: 0.0003, speedY: 0.0001,
         scrollInfluence: 0.12
+      },
+      { 
+        x: 0.9, y: 0.2, 
+        baseRadius: 350, 
+        color: 'rgba(255, 255, 255, 0.02)', // Very subtle top right
+        speedX: -0.0001, speedY: 0.0002,
+        scrollInfluence: 0.08
       },
     ];
 
@@ -142,7 +149,7 @@ export const FlowingGradientBackground = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.8 }}
+      style={{ opacity: 1 }}
     />
   );
 };

@@ -69,21 +69,21 @@ export const FAQ = () => {
   }, []);
 
   return (
-    <section id="faq" ref={sectionRef} className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="faq" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,_#f0fdf4_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-semibold mb-6 border border-gray-700">
             <HelpCircle size={16} />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-400">
             Everything you need to know before getting started.
           </p>
         </div>
@@ -94,15 +94,15 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 transition-colors"
+                className="bg-gray-900/80 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-colors"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className="font-bold text-black text-lg pr-4">{faq.question}</span>
+                  <span className="font-bold text-white text-lg pr-4">{faq.question}</span>
                   <ChevronDown 
-                    className={`flex-shrink-0 text-gray-400 transition-transform duration-300 ${
+                    className={`flex-shrink-0 text-gray-500 transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`} 
                     size={24} 
@@ -113,7 +113,7 @@ export const FAQ = () => {
                     openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="px-6 text-gray-600 leading-relaxed">
+                  <p className="px-6 text-gray-400 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -124,8 +124,8 @@ export const FAQ = () => {
 
         {/* Still Have Questions */}
         <div className={`mt-16 max-w-2xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-gray-600">
-            Still have questions? <a href="mailto:hello@anthroly.com" className="text-black font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
+          <p className="text-gray-400">
+            Still have questions? <a href="mailto:hello@anthroly.com" className="text-emerald-400 font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
           </p>
         </div>
       </div>
