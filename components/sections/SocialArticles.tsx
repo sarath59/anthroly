@@ -49,7 +49,7 @@ export const SocialArticles = () => {
   ];
 
   return (
-    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
+    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(59,130,246,0.05)_0%,_transparent_50%)]"></div>
       

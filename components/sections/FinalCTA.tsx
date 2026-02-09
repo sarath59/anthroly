@@ -27,7 +27,7 @@ export const FinalCTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-600/20 rounded-full blur-[200px] animate-pulse"></div>

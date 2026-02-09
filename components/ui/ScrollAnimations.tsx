@@ -48,41 +48,49 @@ export const FlowingGradientBackground = () => {
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     // Gradient orbs configuration - Light grey tones for black background
+    // More visible for better effect on landing page
     const orbs = [
       { 
-        x: 0.2, y: 0.3, 
-        baseRadius: 500, 
-        color: 'rgba(255, 255, 255, 0.03)', // Light grey
+        x: 0.15, y: 0.25, 
+        baseRadius: 600, 
+        color: 'rgba(180, 180, 180, 0.06)', // Visible light grey
         speedX: 0.0003, speedY: 0.0002,
         scrollInfluence: 0.15
       },
       { 
-        x: 0.8, y: 0.5, 
-        baseRadius: 450, 
-        color: 'rgba(255, 255, 255, 0.025)', // Slightly lighter
+        x: 0.85, y: 0.45, 
+        baseRadius: 550, 
+        color: 'rgba(200, 200, 200, 0.05)', // Slightly lighter
         speedX: -0.0002, speedY: 0.0003,
         scrollInfluence: 0.1
       },
       { 
-        x: 0.5, y: 0.7, 
-        baseRadius: 550, 
-        color: 'rgba(255, 255, 255, 0.02)', // Very subtle
+        x: 0.5, y: 0.65, 
+        baseRadius: 650, 
+        color: 'rgba(160, 160, 160, 0.055)', // Medium grey
         speedX: 0.0002, speedY: -0.0002,
         scrollInfluence: 0.2
       },
       { 
-        x: 0.1, y: 0.8, 
-        baseRadius: 400, 
-        color: 'rgba(255, 255, 255, 0.035)', // Slightly more visible
+        x: 0.08, y: 0.75, 
+        baseRadius: 500, 
+        color: 'rgba(190, 190, 190, 0.065)', // More visible
         speedX: 0.0003, speedY: 0.0001,
         scrollInfluence: 0.12
       },
       { 
-        x: 0.9, y: 0.2, 
-        baseRadius: 350, 
-        color: 'rgba(255, 255, 255, 0.02)', // Very subtle top right
+        x: 0.92, y: 0.15, 
+        baseRadius: 450, 
+        color: 'rgba(170, 170, 170, 0.05)', // Top right
         speedX: -0.0001, speedY: 0.0002,
         scrollInfluence: 0.08
+      },
+      { 
+        x: 0.35, y: 0.9, 
+        baseRadius: 400, 
+        color: 'rgba(210, 210, 210, 0.045)', // Bottom area
+        speedX: 0.00025, speedY: -0.00015,
+        scrollInfluence: 0.18
       },
     ];
 
@@ -148,8 +156,8 @@ export const FlowingGradientBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 1 }}
+      className="fixed inset-0 pointer-events-none"
+      style={{ opacity: 1, zIndex: 1 }}
     />
   );
 };
@@ -463,15 +471,15 @@ export const ScrollAnimationProvider: React.FC<ScrollAnimationProviderProps> = (
   enableCursor = false, // Disabled by default
 }) => {
   return (
-    <>
+    <div className="relative min-h-screen bg-black">
       {enableGradient && <FlowingGradientBackground />}
       {enableParticles && <FloatingParticles />}
       {enableProgress && <ScrollProgressBar />}
       {enableCursor && <GlowCursor />}
-      <div className="relative z-10">
+      <div className="relative" style={{ zIndex: 2 }}>
         {children}
       </div>
-    </>
+    </div>
   );
 };
 

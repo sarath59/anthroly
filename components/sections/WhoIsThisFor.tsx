@@ -70,7 +70,7 @@ export const WhoIsThisFor = () => {
   ];
 
   return (
-    <section id="who" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="who" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[180px]"></div>

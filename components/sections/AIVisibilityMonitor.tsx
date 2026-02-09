@@ -25,7 +25,7 @@ export const AIVisibilityMonitor = () => {
   }, []);
 
   return (
-    <section id="ai-monitor" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="ai-monitor" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px]"></div>

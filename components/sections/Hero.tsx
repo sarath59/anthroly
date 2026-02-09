@@ -80,13 +80,10 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden pt-24 pb-16">
-      {/* Premium Background Effects */}
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden pt-24 pb-16">
+      {/* Subtle dot grid pattern - allows global animation to show through */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#111_1px,_transparent_1px)] bg-[size:32px_32px] opacity-40"></div>
-        <div className="absolute -top-40 -left-40 w-[700px] h-[700px] bg-emerald-600/15 rounded-full blur-[150px] animate-pulse"></div>
-        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[140px]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#222_1px,_transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

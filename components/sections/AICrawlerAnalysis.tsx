@@ -48,7 +48,7 @@ export const AICrawlerAnalysis = () => {
   ];
 
   return (
-    <section id="ai-crawler" ref={sectionRef} className="py-24 md:py-32 bg-black relative overflow-hidden">
+    <section id="ai-crawler" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
       

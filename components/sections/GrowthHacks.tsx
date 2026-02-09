@@ -64,7 +64,7 @@ export const GrowthHacks = () => {
   ];
 
   return (
-    <section id="growth-hacks" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="growth-hacks" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px]"></div>

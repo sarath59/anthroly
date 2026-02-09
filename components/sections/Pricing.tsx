@@ -41,7 +41,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] animate-pulse"></div>
