@@ -1,9 +1,8 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 
-// Logo.dev publishable key for img.logo.dev
+// Logo.dev publishable key
 const LOGO_DEV_KEY = 'pk_FajouHbYTb2g0kE67Vlytw';
 
 export const PoweredBy = () => {
@@ -28,27 +27,27 @@ export const PoweredBy = () => {
   }, []);
 
   const tools = [
-    { name: "OpenAI", domain: "openai.com", description: "AI Content Generation" },
-    { name: "Anthropic", domain: "anthropic.com", description: "AI Research & Analysis" },
-    { name: "Ahrefs", domain: "ahrefs.com", description: "SEO & Backlink Tools" },
-    { name: "SEMrush", domain: "semrush.com", description: "Marketing Intelligence" },
-    { name: "Vercel", domain: "vercel.com", description: "Cloud Platform" },
-    { name: "Stripe", domain: "stripe.com", description: "Payment Processing" },
+    { name: "OpenAI", domain: "openai.com" },
+    { name: "Anthropic", domain: "anthropic.com" },
+    { name: "Ahrefs", domain: "ahrefs.com" },
+    { name: "SEMrush", domain: "semrush.com" },
+    { name: "Vercel", domain: "vercel.com" },
+    { name: "Stripe", domain: "stripe.com" },
   ];
 
   const integrations = [
-    { name: "Google Search Console", domain: "search.google.com" },
-    { name: "Google Analytics", domain: "analytics.google.com" },
+    { name: "Google", domain: "google.com" },
     { name: "WordPress", domain: "wordpress.com" },
     { name: "Webflow", domain: "webflow.com" },
     { name: "Shopify", domain: "shopify.com" },
     { name: "Next.js", domain: "nextjs.org" },
     { name: "Notion", domain: "notion.so" },
     { name: "Slack", domain: "slack.com" },
+    { name: "HubSpot", domain: "hubspot.com" },
   ];
 
   const getLogoUrl = (domain: string) => {
-    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_KEY}&size=120&format=png`;
+    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_KEY}`;
   };
 
   return (
@@ -71,18 +70,15 @@ export const PoweredBy = () => {
                 key={index}
                 className="group flex flex-col items-center justify-center p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-gray-600 hover:bg-gray-800/50 transition-all duration-300"
               >
-                <div className="h-12 w-12 flex items-center justify-center mb-3 rounded-xl bg-white/10 p-2">
-                  <Image
+                <div className="h-12 w-full flex items-center justify-center mb-3">
+                  <img
                     src={getLogoUrl(tool.domain)}
                     alt={`${tool.name} logo`}
-                    width={40}
-                    height={40}
-                    className="w-8 h-8 object-contain"
-                    unoptimized
+                    className="h-10 w-auto max-w-[100px] object-contain"
+                    loading="lazy"
                   />
                 </div>
-                <div className="text-sm font-medium text-white mb-1">{tool.name}</div>
-                <div className="text-xs text-gray-500">{tool.description}</div>
+                <div className="text-sm font-medium text-white">{tool.name}</div>
               </div>
             ))}
           </div>
@@ -90,24 +86,22 @@ export const PoweredBy = () => {
           {/* Integrations - Logo Strip */}
           <div className="text-center">
             <p className="text-gray-500 text-sm mb-8">Integrates seamlessly with</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-12 max-w-4xl mx-auto">
               {integrations.map((integration, index) => (
                 <div 
                   key={index}
-                  className="group flex flex-col items-center gap-2"
+                  className="group flex flex-col items-center gap-3"
                   title={integration.name}
                 >
-                  <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-white/5 p-1.5 group-hover:bg-white/10 transition-colors">
-                    <Image
+                  <div className="h-10 flex items-center justify-center">
+                    <img
                       src={getLogoUrl(integration.domain)}
                       alt={`${integration.name} logo`}
-                      width={32}
-                      height={32}
-                      className="w-7 h-7 object-contain"
-                      unoptimized
+                      className="h-8 w-auto max-w-[80px] object-contain"
+                      loading="lazy"
                     />
                   </div>
-                  <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">{integration.name}</span>
+                  <span className="text-xs text-gray-500">{integration.name}</span>
                 </div>
               ))}
             </div>
