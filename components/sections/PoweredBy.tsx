@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 
 export const PoweredBy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,71 +23,128 @@ export const PoweredBy = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Using inline SVGs for reliability - no external dependencies
   const tools = [
     { 
       name: "OpenAI", 
-      logo: "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
-      description: "GPT-4 Content" 
+      description: "AI Content Generation",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.6 8.3829l2.02-1.1638a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997z"/>
+        </svg>
+      )
     },
     { 
       name: "Anthropic", 
-      logo: "https://cdn.brandfetch.io/idxCvVB0Wu/theme/dark/symbol.svg",
-      description: "Claude Analysis" 
+      description: "AI Research & Analysis",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M17.304 3.541h-3.672l6.696 16.918h3.672zm-10.608 0L0 20.459h3.744l1.37-3.553h7.005l1.369 3.553h3.744L10.536 3.541zm-.371 10.654 2.547-6.601 2.546 6.601z"/>
+        </svg>
+      )
     },
     { 
       name: "Ahrefs", 
-      logo: "https://cdn.worldvectorlogo.com/logos/ahrefs.svg",
-      description: "Backlink Data" 
+      description: "SEO & Backlink Tools",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M17.97 20.77a.74.74 0 01-.46.57l-4.66 1.92a2.47 2.47 0 01-1.88 0l-8.8-3.62a.75.75 0 01-.46-.57L.35 7.95a.73.73 0 01.28-.72l2.14-1.6a.73.73 0 011 .15L7.54 10.6a.74.74 0 00.58.28h7.17a.74.74 0 00.5-.2l5.26-4.8a.74.74 0 011.06.05l1.52 1.77a.74.74 0 01.15.6zM12 0a2.47 2.47 0 00-.94.18L2.26 3.8a.75.75 0 00-.18 1.25l2.14 1.6a.73.73 0 00.9 0l6.7-5.01a.37.37 0 01.44 0l6.71 5a.73.73 0 00.9 0l2.14-1.6a.75.75 0 00-.18-1.25L12.94.19A2.47 2.47 0 0012 0z"/>
+        </svg>
+      )
     },
     { 
       name: "SEMrush", 
-      logo: "https://cdn.worldvectorlogo.com/logos/semrush.svg",
-      description: "Keyword Intel" 
+      description: "Marketing Intelligence",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 17.785c-.076.076-.163.114-.252.114H6.358c-.088 0-.176-.038-.252-.114a.342.342 0 01-.106-.252V6.467c0-.098.035-.183.106-.252a.35.35 0 01.252-.114h2.284c.098 0 .183.038.252.114a.342.342 0 01.106.252v8.782h2.787V9.733c0-.098.038-.183.114-.252a.35.35 0 01.252-.114h2.284c.098 0 .183.038.252.114a.342.342 0 01.106.252v5.516h2.787V6.467c0-.098.038-.183.114-.252a.35.35 0 01.252-.114h2.284c.098 0 .183.038.252.114a.342.342 0 01.106.252v11.066c0 .098-.035.176-.106.252z"/>
+        </svg>
+      )
     },
     { 
       name: "Vercel", 
-      logo: "https://cdn.worldvectorlogo.com/logos/vercel.svg",
-      description: "Infrastructure" 
+      description: "Cloud Platform",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+        </svg>
+      )
     },
     { 
       name: "Stripe", 
-      logo: "https://cdn.worldvectorlogo.com/logos/stripe-4.svg",
-      description: "Payments" 
+      description: "Payment Processing",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+          <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
+        </svg>
+      )
     },
   ];
 
   const integrations = [
     { 
-      name: "Google Search Console", 
-      logo: "https://cdn.worldvectorlogo.com/logos/google-search-console.svg"
+      name: "Google Search Console",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M12 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-9L4 6v12l8 4.5 8-4.5V6l-8-4.5zM18 16.88l-6 3.38-6-3.38V7.12l6-3.38 6 3.38v9.76z"/>
+        </svg>
+      )
     },
     { 
-      name: "Google Analytics", 
-      logo: "https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg"
+      name: "Google Analytics",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M22.84 2.998v17.964c.003 1.675-1.354 3.034-3.029 3.038-1.675.003-3.034-1.354-3.038-3.029V2.998c.009-1.674 1.371-3.027 3.046-3.018 1.674.01 3.026 1.37 3.021 3.046v-.028zm-8.79 9.018v8.946c.002 1.673-1.352 3.031-3.025 3.037h-.014c-1.675 0-3.033-1.358-3.033-3.033v-8.95c0-1.675 1.358-3.033 3.033-3.033h.014c1.673.006 3.027 1.364 3.025 3.037v-.004zm-8.803 4.491v4.455c0 1.675-1.358 3.034-3.033 3.038C.537 24 .003 23.463 0 21.788v-4.455h.003c.183-1.574 1.502-2.779 3.087-2.779 1.586 0 2.905 1.205 3.087 2.779l-.037.174z"/>
+        </svg>
+      )
     },
     { 
-      name: "WordPress", 
-      logo: "https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg"
+      name: "WordPress",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.051-.18 2.986-.51a.471.471 0 01-.039-.077l-2.789-7.618zm-7.51-2.77a8.817 8.817 0 00-.428 2.72c0 3.187 1.634 5.992 4.108 7.626l-3.68-10.346zm13.784-.386c0-.996-.358-1.686-.666-2.222-.408-.666-.793-1.228-.793-1.895 0-.742.563-1.432 1.357-1.432.036 0 .07.004.104.007A8.928 8.928 0 0012 2.4c-3.28 0-6.167 1.638-7.9 4.14.222.007.431.011.612.011.995 0 2.538-.12 2.538-.12.512-.03.573.722.06.782 0 0-.517.06-1.09.09l3.468 10.32 2.084-6.252-1.483-4.068c-.513-.03-1-.09-1-.09-.514-.03-.454-.811.058-.782 0 0 1.574.12 2.51.12.994 0 2.537-.12 2.537-.12.513-.03.574.722.061.782 0 0-.518.06-1.09.09l3.44 10.238 1.02-3.197c.439-1.142.665-2.08.665-2.829zM2.4 12c0 5.302 4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6S2.4 6.698 2.4 12zM0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/>
+        </svg>
+      )
     },
     { 
-      name: "Webflow", 
-      logo: "https://cdn.worldvectorlogo.com/logos/webflow-1.svg"
+      name: "Webflow",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M17.802 8.56s-1.946 6.008-2.125 6.545c-.047-.476-1.078-6.546-1.078-6.546-1.748 0-2.675.856-3.196 1.979 0 0-1.304 3.133-1.497 3.6-.011-.394-.227-3.6-.227-3.6-.125-1.203-.898-1.98-2.44-1.98H4.5l1.033 6.751c.113.738.096 1.245-.053 1.52-.148.276-.49.706-1.03 1.291H7.5c1.124 0 2.125-.913 2.568-1.98l1.298-3.12c.047.393 1.078 5.1 1.078 5.1 1.748 0 2.675-.856 3.196-1.98l3.36-8.08H17.8z"/>
+        </svg>
+      )
     },
     { 
-      name: "Shopify", 
-      logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg"
+      name: "Shopify",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.745a.375.375 0 00-.331-.3c-.137-.012-2.801-.205-2.801-.205s-1.857-1.83-2.063-2.033a.392.392 0 00-.254-.106l-1.142 23.95zM11.414 11.27c0 .001-1.02-.532-2.277-.532-1.846 0-1.938 1.158-1.938 1.451 0 1.592 4.142 2.203 4.142 5.935 0 2.937-1.86 4.828-4.374 4.828-3.015 0-4.556-1.875-4.556-1.875l.807-2.668s1.584 1.36 2.921 1.36c.873 0 1.227-.687 1.227-1.189 0-2.078-3.397-2.173-3.397-5.59 0-2.876 2.065-5.662 6.23-5.662 1.604 0 2.394.46 2.394.46l-1.179 3.482zM13.074 6.762l-1.243-.042s-.553-.041-.93.15c-.373.19-.622.478-.622.478s-.436-.96-1.228-.96c-.747 0-1.315.922-1.529 1.858l-1.537 4.755c.56-.294 1.282-.591 2.18-.591 1.252 0 1.478.789 1.478.789-.03-.003-.631 1.913-.631 1.913-.431 1.349-.946 2.542-.946 2.542-.183.406-.406.632-.406.632-.186.18-.402.262-.689.262-.384 0-.673-.274-.673-.274l-.802 2.668s.886.62 2.124.62c1.173 0 1.994-.589 2.62-1.775.78-1.479 1.53-3.763 1.53-3.763s.655-2.042.93-3.024c.274-.982.456-1.623.456-1.623.16-.626.52-1.177 1.164-1.177.414 0 .754.283.754.283l.668-2.785s-.622-.296-1.385-.296c-.896 0-1.632.5-2.023 1.249.056-.365.06-.69.06-.69z"/>
+        </svg>
+      )
     },
     { 
-      name: "Next.js", 
-      logo: "https://cdn.worldvectorlogo.com/logos/next-js.svg"
+      name: "Next.js",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 01-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 00-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 00-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 01-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 01-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 01.174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 004.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 002.466-2.163 11.944 11.944 0 002.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 00-2.499-.523A33.119 33.119 0 0011.572 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 01.237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 01.233-.296c.096-.05.13-.054.5-.054z"/>
+        </svg>
+      )
     },
     { 
-      name: "Notion", 
-      logo: "https://cdn.worldvectorlogo.com/logos/notion-2.svg"
+      name: "Notion",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.84-.046.933-.56.933-1.167V6.354c0-.606-.233-.933-.746-.886l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.746 0-.933-.234-1.495-.933l-4.577-7.186v6.952l1.448.327s0 .84-1.168.84l-3.22.186c-.094-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.933.653.933 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.448-1.632z"/>
+        </svg>
+      )
     },
     { 
-      name: "Slack", 
-      logo: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg"
+      name: "Slack",
+      svg: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+          <path d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 012.521 2.521 2.528 2.528 0 01-2.521 2.521H2.522A2.528 2.528 0 010 8.834a2.528 2.528 0 012.522-2.521h6.312zm10.124 2.521a2.528 2.528 0 012.522-2.521A2.528 2.528 0 0124 8.834a2.528 2.528 0 01-2.52 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 01-2.523 2.521 2.527 2.527 0 01-2.52-2.521V2.522A2.527 2.527 0 0115.165 0a2.528 2.528 0 012.523 2.522v6.312zm-2.523 10.124a2.528 2.528 0 012.523 2.52A2.528 2.528 0 0115.165 24a2.527 2.527 0 01-2.52-2.52v-2.521h2.52zm0-1.268a2.527 2.527 0 01-2.52-2.523 2.526 2.526 0 012.52-2.52h6.313A2.527 2.527 0 0124 15.165a2.528 2.528 0 01-2.522 2.523h-6.313z"/>
+        </svg>
+      )
     },
   ];
 
@@ -110,41 +166,31 @@ export const PoweredBy = () => {
             {tools.map((tool, index) => (
               <div 
                 key={index}
-                className="group flex flex-col items-center justify-center p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-gray-600 hover:bg-gray-900/80 transition-all duration-300"
+                className="group flex flex-col items-center justify-center p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-gray-600 hover:bg-gray-800/50 transition-all duration-300"
               >
-                <div className="h-12 w-full flex items-center justify-center mb-3">
-                  <Image
-                    src={tool.logo}
-                    alt={`${tool.name} logo`}
-                    width={120}
-                    height={48}
-                    className="h-8 w-auto object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
-                    unoptimized
-                  />
+                <div className="h-12 w-full flex items-center justify-center mb-3 text-white">
+                  {tool.svg}
                 </div>
-                <div className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">{tool.description}</div>
+                <div className="text-sm font-medium text-white mb-1">{tool.name}</div>
+                <div className="text-xs text-gray-500">{tool.description}</div>
               </div>
             ))}
           </div>
 
           {/* Integrations - Logo Strip */}
           <div className="text-center">
-            <p className="text-gray-500 text-sm mb-6">Integrates seamlessly with</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-5xl mx-auto">
+            <p className="text-gray-500 text-sm mb-8">Integrates seamlessly with</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 max-w-4xl mx-auto">
               {integrations.map((integration, index) => (
                 <div 
                   key={index}
-                  className="group flex items-center justify-center"
+                  className="group flex flex-col items-center gap-2"
                   title={integration.name}
                 >
-                  <Image
-                    src={integration.logo}
-                    alt={`${integration.name} logo`}
-                    width={100}
-                    height={32}
-                    className="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-50 group-hover:opacity-80 transition-opacity"
-                    unoptimized
-                  />
+                  <div className="text-gray-400 group-hover:text-white transition-colors">
+                    {integration.svg}
+                  </div>
+                  <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">{integration.name}</span>
                 </div>
               ))}
             </div>
