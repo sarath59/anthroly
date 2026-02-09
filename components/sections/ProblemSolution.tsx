@@ -31,11 +31,11 @@ export const ProblemSolution = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
             Why Most SEO Efforts Fail
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              (And How We're Different)
+              (And How We&apos;re Different)
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-            You've probably tried SEO before. Maybe you hired an agency, bought some tools, or attempted to do it yourself. Let us guess how it went...
+            You&apos;ve probably tried SEO before. Maybe you hired an agency, bought some tools, or attempted to do it yourself. Let us guess how it went...
           </p>
         </div>
 
@@ -48,42 +48,42 @@ export const ProblemSolution = () => {
                 <XCircle className="text-red-500" />
                 The Old Way
               </h3>
-              <p className="text-gray-500 mt-2">What you've been dealing with</p>
+              <p className="text-gray-500 mt-2">What you&apos;ve been dealing with</p>
             </div>
             <ul className="space-y-6">
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg text-gray-800">Expensive Agencies</p>
-                  <p className="text-gray-600">$2,000-$10,000/month for a few blog posts and "strategy calls" that go nowhere. Where does the money even go?</p>
+                  <p className="text-gray-600">$2,000-$10,000/month for a few blog posts and &quot;strategy calls&quot; that go nowhere. Where does the money even go?</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg text-gray-800">Black Box Results</p>
-                  <p className="text-gray-600">"Trust us, it's working." Months pass. Rankings don't move. No clear explanation of what they're actually doing.</p>
+                  <p className="text-gray-600">&quot;Trust us, it&apos;s working.&quot; Months pass. Rankings don&apos;t move. No clear explanation of what they&apos;re actually doing.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg text-gray-800">Spammy Backlinks</p>
-                  <p className="text-gray-600">Cheap agencies buy links from shady sites. Google catches on. Your rankings tank. You're worse off than before.</p>
+                  <p className="text-gray-600">Cheap agencies buy links from shady sites. Google catches on. Your rankings tank. You&apos;re worse off than before.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg text-gray-800">DIY Time Sink</p>
-                  <p className="text-gray-600">Tried doing it yourself? That's 20+ hours/week you don't have, with a steep learning curve and slow results.</p>
+                  <p className="text-gray-600">Tried doing it yourself? That&apos;s 20+ hours/week you don&apos;t have, with a steep learning curve and slow results.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg text-gray-800">AI Tools Without Strategy</p>
-                  <p className="text-gray-600">ChatGPT can write content, but without SEO expertise it's just words on a page that no one will ever find.</p>
+                  <p className="text-gray-600">ChatGPT can write content, but without SEO expertise it&apos;s just words on a page that no one will ever find.</p>
                 </div>
               </li>
             </ul>
@@ -104,14 +104,14 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg">$99/Month. Everything Included.</p>
-                  <p className="text-gray-400">No hidden fees, no scope creep, no "that's an add-on." One price, maximum value. The math just works.</p>
+                  <p className="text-gray-400">No hidden fees, no scope creep, no &quot;that&apos;s an add-on.&quot; One price, maximum value. The math just works.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg">Weekly Transparent Reports</p>
-                  <p className="text-gray-400">See exactly what we did, what changed, and what's coming. Every backlink. Every ranking. Every action item.</p>
+                  <p className="text-gray-400">See exactly what we did, what changed, and what&apos;s coming. Every backlink. Every ranking. Every action item.</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -132,7 +132,7 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg">Results-Backed Guarantee</p>
-                  <p className="text-gray-400">20-30 backlinks/month or your money back plus a free month. We've never had to honor this. But it's there.</p>
+                  <p className="text-gray-400">20-30 backlinks/month or your money back plus a free month. We&apos;ve never had to honor this. But it&apos;s there.</p>
                 </div>
               </li>
             </ul>

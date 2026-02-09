@@ -28,14 +28,14 @@ export const WhoIsThisFor = () => {
     {
       icon: Rocket,
       title: "Indie Hackers & Solo Founders",
-      description: "You're building something amazing, but SEO keeps falling to the bottom of your todo list. Get enterprise-level growth without hiring a team.",
+      description: "You&apos;re building something amazing, but SEO keeps falling to the bottom of your todo list. Get enterprise-level growth without hiring a team.",
       benefits: ["Focus on product, not marketing", "Punch above your weight", "Compete with funded startups"],
       color: "emerald"
     },
     {
       icon: Building2,
       title: "Startups & Scale-ups",
-      description: "You've found product-market fit. Now you need predictable, scalable growth. We're the growth engine you don't have to manage.",
+      description: "You&apos;ve found product-market fit. Now you need predictable, scalable growth. We&apos;re the growth engine you don&apos;t have to manage.",
       benefits: ["Reduce CAC dramatically", "Build sustainable traffic", "Scale without scaling team"],
       color: "blue"
     },
@@ -83,11 +83,11 @@ export const WhoIsThisFor = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Built for Builders Who
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              Don't Have Time for SEO
+              Don&apos;t Have Time for SEO
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Whether you're a solo founder or a Fortune 500, the problem is the same: <span className="text-white font-semibold">SEO takes too long, costs too much, and feels like a black box.</span> We fix all three.
+            Whether you&apos;re a solo founder or a Fortune 500, the problem is the same: <span className="text-white font-semibold">SEO takes too long, costs too much, and feels like a black box.</span> We fix all three.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export const WhoIsThisFor = () => {
               The Perfect Place to Grow Your Business
             </h3>
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-              You've found it. A growth partner that works 24/7, costs less than a junior hire, and delivers measurable results every single week. The only question is: how much longer will you wait?
+              You&apos;ve found it. A growth partner that works 24/7, costs less than a junior hire, and delivers measurable results every single week. The only question is: how much longer will you wait?
             </p>
             <div className="flex items-center justify-center gap-2 text-emerald-400 font-semibold hover:gap-4 transition-all cursor-pointer">
               <span>See pricing below</span>

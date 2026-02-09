@@ -182,7 +182,7 @@ export const AIBacklinkAgents = () => {
               GUARANTEE
             </div>
             <p className="text-lg text-gray-300">
-              <span className="text-white font-bold">20-30 high-quality backlinks per month</span> with an average DR of 70-90, or we'll refund your payment and give you a free month. That's how confident we are.
+              <span className="text-white font-bold">20-30 high-quality backlinks per month</span> with an average DR of 70-90, or we&apos;ll refund your payment and give you a free month. That&apos;s how confident we are.
             </p>
           </div>
         </div>

@@ -54,7 +54,7 @@ export const FinalCTA = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Every day you wait is another day they're building authority, capturing keywords, and getting recommended by AI. The best time to start SEO was a year ago. The second best time is <span className="text-white font-semibold">right now.</span>
+            Every day you wait is another day they&apos;re building authority, capturing keywords, and getting recommended by AI. The best time to start SEO was a year ago. The second best time is <span className="text-white font-semibold">right now.</span>
           </p>
 
           {/* What You Get Summary */}
@@ -100,7 +100,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">This is your moment.</span> You've read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. 60 days from now, you'll either have a flood of new traffic and backlinks, or you'll still be where you are today. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
+              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. 60 days from now, you&apos;ll either have a flood of new traffic and backlinks, or you&apos;ll still be where you are today. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
             </p>
           </div>
         </div>

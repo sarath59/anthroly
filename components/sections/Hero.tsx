@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { ArrowRight, Sparkles, Bot, Check, Zap, TrendingUp, Shield, Clock } from 'lucide-react';
@@ -8,7 +8,6 @@ import { ArrowRight, Sparkles, Bot, Check, Zap, TrendingUp, Shield, Clock } from
 const TerminalText = () => {
   const [text, setText] = useState('');
   const [stepIndex, setStepIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
 
   const steps = [
     "Initializing AI Crawler Analysis...",
@@ -28,23 +27,21 @@ const TerminalText = () => {
     "Growth metrics: +340% organic traffic this month."
   ];
 
-  useEffect(() => {
+  const typeStep = useCallback(() => {
     let currentText = '';
     let charIndex = 0;
     let timeoutId: NodeJS.Timeout;
 
-    const typeStep = () => {
+    const type = () => {
       const targetText = steps[stepIndex];
       
       if (charIndex < targetText.length) {
         currentText += targetText[charIndex];
         setText(currentText);
         charIndex++;
-        timeoutId = setTimeout(typeStep, 40);
+        timeoutId = setTimeout(type, 40);
       } else {
-        setIsTyping(false);
         timeoutId = setTimeout(() => {
-          setIsTyping(true);
           charIndex = 0;
           currentText = '';
           setText('');
@@ -53,10 +50,15 @@ const TerminalText = () => {
       }
     };
 
-    typeStep();
+    type();
 
     return () => clearTimeout(timeoutId);
-  }, [stepIndex]);
+  }, [stepIndex, steps]);
+
+  useEffect(() => {
+    const cleanup = typeStep();
+    return cleanup;
+  }, [typeStep]);
 
   return (
     <div className="flex items-center gap-3">
@@ -120,7 +122,7 @@ export const Hero = () => {
 
           {/* Subheadline - Pain Point + Solution */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}>
-            ChatGPT, Perplexity, and Claude are replacing Google. If AI can't find you, <span className="text-white font-semibold">you don't exist.</span> We make sure you dominate both SEO and the new AI-powered search — automatically, every single month.
+            ChatGPT, Perplexity, and Claude are replacing Google. If AI can&apos;t find you, <span className="text-white font-semibold">you don&apos;t exist.</span> We make sure you dominate both SEO and the new AI-powered search — automatically, every single month.
           </p>
 
           {/* Urgency Banner */}

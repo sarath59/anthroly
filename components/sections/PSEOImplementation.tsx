@@ -61,7 +61,7 @@ export const PSEOImplementation = () => {
                   The Secret Weapon of Fast-Growing SaaS Companies
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Zapier has 25,000+ landing pages. Canva has 15,000+. HubSpot has millions. They didn't write them manually — they used programmatic SEO. Now you can too.
+                  Zapier has 25,000+ landing pages. Canva has 15,000+. HubSpot has millions. They didn&apos;t write them manually — they used programmatic SEO. Now you can too.
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ export const PSEOImplementation = () => {
                   <div className="w-10 h-10 bg-pink-500 text-white rounded-xl flex items-center justify-center font-bold flex-shrink-0">3</div>
                   <div>
                     <h4 className="font-bold text-black mb-1">You Rank Everywhere</h4>
-                    <p className="text-gray-600 text-sm">Each page targets specific long-tail queries, capturing traffic your competitors don't even know exists.</p>
+                    <p className="text-gray-600 text-sm">Each page targets specific long-tail queries, capturing traffic your competitors don&apos;t even know exists.</p>
                   </div>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export const PSEOImplementation = () => {
               <div className="flex items-start gap-3">
                 <Sparkles className="text-pink-600 flex-shrink-0" size={20} />
                 <p className="text-sm text-gray-700">
-                  <span className="font-bold text-black">Example:</span> A SaaS company targeting "best [tool] for [industry]" created 500 pages in one month. Result? 12,000 new organic visitors within 90 days.
+                  <span className="font-bold text-black">Example:</span> A SaaS company targeting &quot;best [tool] for [industry]&quot; created 500 pages in one month. Result? 12,000 new organic visitors within 90 days.
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export const PSEOImplementation = () => {
                 <div key={index} className="p-5 bg-gray-50 rounded-xl text-center hover:bg-pink-50 transition-colors">
                   <Icon className="text-pink-600 mx-auto mb-3" size={28} />
                   <h4 className="font-bold text-black mb-1">{item.label}</h4>
-                  <p className="text-xs text-gray-500 font-mono">"{item.example}"</p>
+                  <p className="text-xs text-gray-500 font-mono">&quot;{item.example}&quot;</p>
                 </div>
               );
             })}

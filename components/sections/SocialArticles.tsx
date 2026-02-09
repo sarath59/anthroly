@@ -43,7 +43,7 @@ export const SocialArticles = () => {
       name: "Medium",
       icon: BookOpen,
       color: "green",
-      description: "SEO-optimized articles that rank on Google and Medium's internal search",
+      description: "SEO-optimized articles that rank on Google and Medium&apos;s internal search",
       stats: { reach: "950K", engagement: "15%" }
     }
   ];
@@ -67,7 +67,7 @@ export const SocialArticles = () => {
             SEO/GEO Optimized Social Articles
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Google isn't the only place people discover brands. <span className="text-white font-semibold">LinkedIn, X, and Medium</span> are search engines too. We create content that ranks on all of them — expanding your reach exponentially.
+            Google isn&apos;t the only place people discover brands. <span className="text-white font-semibold">LinkedIn, X, and Medium</span> are search engines too. We create content that ranks on all of them — expanding your reach exponentially.
           </p>
         </div>
 
@@ -120,13 +120,13 @@ export const SocialArticles = () => {
               <p className="text-gray-800 leading-relaxed">
                 <span className="font-bold">I spent 3 years building the wrong product.</span>
                 <br /><br />
-                Here's what I wish someone told me earlier about product-market fit...
+                Here&apos;s what I wish someone told me earlier about product-market fit...
                 <br /><br />
                 <span className="text-blue-600">1. Talk to 100 customers before writing a single line of code</span>
                 <br />
                 Not 10. Not 50. One hundred.
                 <br /><br />
-                The insights compound. By customer #80, you'll see patterns you never noticed at #20.
+                The insights compound. By customer #80, you&apos;ll see patterns you never noticed at #20.
                 <br /><br />
                 <span className="text-gray-500">... see more</span>
               </p>
@@ -178,7 +178,7 @@ export const SocialArticles = () => {
               <TrendingUp className="text-emerald-400 mb-4" size={28} />
               <h3 className="text-xl font-bold mb-2">Multi-Channel Growth</h3>
               <p className="text-gray-400">
-                One piece of content gets repurposed across platforms. Maximum impact, minimum effort. That's leverage.
+                One piece of content gets repurposed across platforms. Maximum impact, minimum effort. That&apos;s leverage.
               </p>
             </div>
           </div>
@@ -187,7 +187,7 @@ export const SocialArticles = () => {
         {/* Bottom Insight */}
         <div className={`mt-12 text-center max-w-2xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-400">
-            <span className="text-white font-semibold">GEO (Generative Engine Optimization)</span> is the new frontier. AI assistants pull from these platforms when answering questions. If you're not there, you're invisible to the next generation of search.
+            <span className="text-white font-semibold">GEO (Generative Engine Optimization)</span> is the new frontier. AI assistants pull from these platforms when answering questions. If you&apos;re not there, you&apos;re invisible to the next generation of search.
           </p>
         </div>
       </div>

@@ -97,7 +97,7 @@ export const AutomatedBlogs = () => {
                 <span className="text-7xl md:text-8xl font-bold">30</span>
                 <span className="text-2xl text-gray-400">blogs/month</span>
               </div>
-              <p className="text-gray-400 text-lg mb-6">That's 360 pieces of content per year, building your authority and driving organic traffic while you focus on your business.</p>
+              <p className="text-gray-400 text-lg mb-6">That&apos;s 360 pieces of content per year, building your authority and driving organic traffic while you focus on your business.</p>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">
@@ -131,7 +131,7 @@ export const AutomatedBlogs = () => {
                 <CheckCircle2 className="text-purple-600 flex-shrink-0 mt-0.5" size={20} />
                 <div>
                   <span className="font-semibold text-black">Internally linked:</span>
-                  <span className="text-gray-600"> Strategic internal links boost your entire site's SEO</span>
+                  <span className="text-gray-600"> Strategic internal links boost your entire site&apos;s SEO</span>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ export const AutomatedBlogs = () => {
               <div className="flex items-start gap-3">
                 <Sparkles className="text-yellow-600 flex-shrink-0" size={20} />
                 <p className="text-sm text-yellow-800">
-                  <span className="font-bold">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don't. But who has time to write 30 articles a month? Now you do.
+                  <span className="font-bold">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don&apos;t. But who has time to write 30 articles a month? Now you do.
                 </p>
               </div>
             </div>

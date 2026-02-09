@@ -6,43 +6,43 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     question: "How is this different from other SEO agencies?",
-    answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We've built proprietary AI systems that automate 90% of SEO work while maintaining quality. This lets us deliver more at a fraction of the cost. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
+    answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We have built proprietary AI systems that automate 90% of SEO work while maintaining quality. This lets us deliver more at a fraction of the cost. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
   },
   {
     question: "What kind of results can I expect in 60 days?",
-    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, and increased organic traffic. By day 60, you'll typically have 40-60 new backlinks, 60 published blog posts, 20 free tools, and a significant boost in domain authority. SEO compounds over time, so month 3-6 is when you'll see dramatic growth."
+    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, and increased organic traffic. By day 60, you will typically have 40-60 new backlinks, 60 published blog posts, 20 free tools, and a significant boost in domain authority. SEO compounds over time, so month 3-6 is when you will see dramatic growth."
   },
   {
     question: "Do you work with any industry?",
-    answer: "Yes! We've worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our AI systems adapt to your specific industry, competitors, and target keywords. Whether you're B2B or B2C, selling software or services, we tailor our approach to your market."
+    answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our AI systems adapt to your specific industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
   },
   {
     question: "What happens after the 60-day trial?",
-    answer: "After 60 days, we move to results-based pricing. This means your monthly cost scales with the results we deliver — more traffic, more backlinks, better rankings = fair pricing that reflects value. We discuss specific metrics and pricing with you at the end of your trial based on what we've achieved."
+    answer: "After 60 days, we move to results-based pricing. This means your monthly cost scales with the results we deliver — more traffic, more backlinks, better rankings = fair pricing that reflects value. We discuss specific metrics and pricing with you at the end of your trial based on what we have achieved."
   },
   {
     question: "Will these backlinks hurt my site? Are they safe?",
-    answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 70-90 average). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our guarantee backs this up — if anything we do hurts your rankings, we'll fix it immediately."
+    answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 70-90 average). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our guarantee backs this up — if anything we do hurts your rankings, we will fix it immediately."
   },
   {
     question: "How much of my time does this require?",
-    answer: "Almost none. Our system is designed to run autonomously. We'll need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you'll receive weekly reports and can check in anytime, but zero hands-on work is required from you."
+    answer: "Almost none. Our system is designed to run autonomously. We will need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you will receive weekly reports and can check in anytime, but zero hands-on work is required from you."
   },
   {
     question: "Can I see examples of your work?",
-    answer: "Yes! When you book a call with us, we'll walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We're happy to show real backlinks, real traffic numbers, and real ranking improvements."
+    answer: "Yes! When you book a call with us, we will walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We are happy to show real backlinks, real traffic numbers, and real ranking improvements."
   },
   {
-    question: "What if it doesn't work for me?",
-    answer: "That's what the guarantee is for. If we can't deliver 20-30 high-quality backlinks per month with an average DR of 70-90, we'll refund your payment and give you a free month of service. We've never had to honor this guarantee — but it's there so you have zero risk."
+    question: "What if it does not work for me?",
+    answer: "That is what the guarantee is for. If we cannot deliver 20-30 high-quality backlinks per month with an average DR of 70-90, we will refund your payment and give you a free month of service. We have never had to honor this guarantee — but it is there so you have zero risk."
   },
   {
     question: "Do you offer white-label services for agencies?",
-    answer: "Yes! If you're an agency looking to offer SEO services to your clients, we can white-label everything we do. Your clients see your brand, you maintain the relationship, and we do all the work behind the scenes. This is perfect for agencies looking to scale their service offerings."
+    answer: "Yes! If you are an agency looking to offer SEO services to your clients, we can white-label everything we do. Your clients see your brand, you maintain the relationship, and we do all the work behind the scenes. This is perfect for agencies looking to scale their service offerings."
   },
   {
     question: "How do I get started?",
-    answer: "Just click the 'Start 60-Day Trial' button and complete your payment. You'll immediately get access to our onboarding flow, and we'll schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
+    answer: "Just click the Start 60-Day Trial button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
   }
 ];
 
@@ -125,7 +125,7 @@ export const FAQ = () => {
         {/* Still Have Questions */}
         <div className={`mt-16 max-w-2xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-600">
-            Still have questions? <a href="mailto:hello@anthroly.com" className="text-black font-semibold underline hover:no-underline">Email us directly</a> and we'll get back to you within 24 hours.
+            Still have questions? <a href="mailto:hello@anthroly.com" className="text-black font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
           </p>
         </div>
       </div>

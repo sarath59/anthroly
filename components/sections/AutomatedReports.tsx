@@ -129,7 +129,7 @@ export const AutomatedReports = () => {
               <div className="p-5 bg-blue-50 rounded-xl border border-blue-100">
                 <h4 className="font-bold text-black mb-3 flex items-center gap-2">
                   <Calendar className="text-blue-500" size={20} />
-                  Next Week's Focus
+                  Next Week&apos;s Focus
                 </h4>
                 <p className="text-gray-600 text-sm">
                   Targeting 5 new high-volume keywords, launching competitor comparison pages, and initiating outreach to 50+ potential backlink sources in the tech industry.
@@ -173,7 +173,7 @@ export const AutomatedReports = () => {
         {/* Bottom Note */}
         <div className={`mt-12 max-w-2xl mx-auto text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-500 text-sm">
-            <span className="font-semibold text-black">Transparency is everything.</span> You'll always know exactly what we're doing, why we're doing it, and the results we're getting. No black boxes.
+            <span className="font-semibold text-black">Transparency is everything.</span> You&apos;ll always know exactly what we&apos;re doing, why we&apos;re doing it, and the results we&apos;re getting. No black boxes.
           </p>
         </div>
       </div>

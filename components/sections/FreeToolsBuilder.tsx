@@ -110,7 +110,7 @@ export const FreeToolsBuilder = () => {
                 Why Free Tools Are a Growth Hack
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                HubSpot's Website Grader, Ahrefs' Backlink Checker, Neil Patel's SEO Analyzer — these tools drive millions of visits and thousands of backlinks. The same strategy works for any business. We just automate it.
+                HubSpot&apos;s Website Grader, Ahrefs&apos; Backlink Checker, Neil Patel&apos;s SEO Analyzer — these tools drive millions of visits and thousands of backlinks. The same strategy works for any business. We just automate it.
               </p>
             </div>
 
@@ -118,8 +118,8 @@ export const FreeToolsBuilder = () => {
               <div className="flex items-start gap-4 p-5 bg-amber-50 rounded-xl border border-amber-200">
                 <TrendingUp className="text-amber-600 flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h4 className="font-bold text-black mb-1">Rank for "Tool" Keywords</h4>
-                  <p className="text-gray-600 text-sm">Keywords like "free [X] calculator" have massive search volume and high conversion intent.</p>
+                  <h4 className="font-bold text-black mb-1">Rank for &quot;Tool&quot; Keywords</h4>
+                  <p className="text-gray-600 text-sm">Keywords like &quot;free [X] calculator&quot; have massive search volume and high conversion intent.</p>
                 </div>
               </div>
               
@@ -127,7 +127,7 @@ export const FreeToolsBuilder = () => {
                 <Users className="text-amber-600 flex-shrink-0 mt-1" size={24} />
                 <div>
                   <h4 className="font-bold text-black mb-1">Natural Link Magnets</h4>
-                  <p className="text-gray-600 text-sm">People link to useful tools without being asked. It's the most organic backlink strategy that exists.</p>
+                  <p className="text-gray-600 text-sm">People link to useful tools without being asked. It&apos;s the most organic backlink strategy that exists.</p>
                 </div>
               </div>
 
@@ -170,7 +170,7 @@ export const FreeToolsBuilder = () => {
               120 Free Tools Per Year. Zero Developer Time.
             </h4>
             <p className="text-gray-600 mb-4">
-              That's an entire content engine driving traffic, earning backlinks, and converting visitors — built automatically, month after month.
+              That&apos;s an entire content engine driving traffic, earning backlinks, and converting visitors — built automatically, month after month.
             </p>
             <div className="flex items-center justify-center gap-2 text-amber-700 font-semibold">
               <CheckCircle2 size={18} />

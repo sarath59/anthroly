@@ -58,7 +58,7 @@ export const Pricing = () => {
             Start Your 60-Day Trial
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Everything you've seen above. <span className="text-white font-semibold">$99/month for 60 days.</span> No contracts. No hidden fees. Cancel anytime. After 60 days, pricing is based on results — we only win when you win.
+            Everything you&apos;ve seen above. <span className="text-white font-semibold">$99/month for 60 days.</span> No contracts. No hidden fees. Cancel anytime. After 60 days, pricing is based on results — we only win when you win.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export const Pricing = () => {
                   <span className="text-lg font-bold">Risk-Free Guarantee</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-md mx-auto">
-                  If we can't deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 70-90) per month, we'll <span className="text-white font-semibold">refund your payment AND give you a free month.</span> Zero risk.
+                  If we can&apos;t deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 70-90) per month, we&apos;ll <span className="text-white font-semibold">refund your payment AND give you a free month.</span> Zero risk.
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export const Pricing = () => {
         <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold mb-4">After 60 Days: Results-Based Pricing</h3>
           <p className="text-gray-400 leading-relaxed mb-6">
-            We believe in earning our keep. After your trial, pricing is based on the actual results we deliver — traffic growth, backlinks acquired, and rankings improved. If we don't perform, you don't pay premium rates. Simple as that.
+            We believe in earning our keep. After your trial, pricing is based on the actual results we deliver — traffic growth, backlinks acquired, and rankings improved. If we don&apos;t perform, you don&apos;t pay premium rates. Simple as that.
           </p>
           <div className="grid grid-cols-3 gap-4">
             <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
@@ -167,7 +167,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We're delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $99.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $99.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">

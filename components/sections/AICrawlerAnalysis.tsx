@@ -87,7 +87,7 @@ export const AICrawlerAnalysis = () => {
                 <div className="text-center py-6">
                   <div className="text-6xl font-bold text-white mb-2">47<span className="text-3xl text-gray-500">/100</span></div>
                   <div className="text-orange-400 font-semibold">AI Visibility Score</div>
-                  <p className="text-gray-500 text-sm mt-2">You're losing 53% of potential AI traffic</p>
+                  <p className="text-gray-500 text-sm mt-2">You&apos;re losing 53% of potential AI traffic</p>
                 </div>
                 
                 {/* Issues Found */}
@@ -126,10 +126,10 @@ export const AICrawlerAnalysis = () => {
           <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                See What AI Sees (Or Doesn't See)
+                See What AI Sees (Or Doesn&apos;t See)
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                ChatGPT and Perplexity don't read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-black">If you're optimizing only for Google, you're already behind.</span>
+                ChatGPT and Perplexity don&apos;t read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-black">If you&apos;re optimizing only for Google, you&apos;re already behind.</span>
               </p>
             </div>
 

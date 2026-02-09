@@ -43,7 +43,7 @@ export const AIVisibilityMonitor = () => {
             AI Visibility Monitors
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Your search rankings change every hour. AI citations appear and disappear overnight. <span className="text-white font-semibold">Without constant monitoring, you're flying blind.</span> We watch everything — so you don't have to.
+            Your search rankings change every hour. AI citations appear and disappear overnight. <span className="text-white font-semibold">Without constant monitoring, you&apos;re flying blind.</span> We watch everything — so you don&apos;t have to.
           </p>
         </div>
 
@@ -109,14 +109,14 @@ export const AIVisibilityMonitor = () => {
               <div className="flex items-start gap-3 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                 <CheckIcon className="text-emerald-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">New AI citation detected on Perplexity for "best project management tools"</p>
+                  <p className="text-sm text-white">New AI citation detected on Perplexity for &quot;best project management tools&quot;</p>
                   <p className="text-xs text-gray-500 mt-1">2 hours ago</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl">
                 <TrendingUp size={18} className="text-blue-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Ranking improved: Page 3 → Page 1 for "SaaS analytics"</p>
+                  <p className="text-sm text-white">Ranking improved: Page 3 → Page 1 for &quot;SaaS analytics&quot;</p>
                   <p className="text-xs text-gray-500 mt-1">5 hours ago</p>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export const AIVisibilityMonitor = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">Proactive Defense</h3>
             <p className="text-gray-400 leading-relaxed">
-              We don't just report problems — we flag them before they hurt you and recommend immediate actions to take.
+              We don&apos;t just report problems — we flag them before they hurt you and recommend immediate actions to take.
             </p>
           </div>
         </div>
@@ -165,7 +165,7 @@ export const AIVisibilityMonitor = () => {
         {/* Bottom CTA */}
         <div className={`mt-16 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            <span className="text-white font-semibold">The businesses that win</span> aren't the ones with the best product — they're the ones who see changes first and respond fastest. That's what this gives you.
+            <span className="text-white font-semibold">The businesses that win</span> aren&apos;t the ones with the best product — they&apos;re the ones who see changes first and respond fastest. That&apos;s what this gives you.
           </p>
         </div>
       </div>
