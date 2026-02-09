@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { PenTool, Sparkles, CheckCircle2 } from 'lucide-react';
+import { LogoStrip, CMS_PLATFORMS } from '../ui/CompanyLogos';
 
 export const AutomatedBlogs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -144,6 +145,15 @@ export const AutomatedBlogs = () => {
                   <span className="font-bold text-yellow-400">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don&apos;t. But who has time to write 30 articles a month? Now you do.
                 </p>
               </div>
+            </div>
+
+            {/* CMS Integrations */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={CMS_PLATFORMS} 
+                label="Publishes to"
+                size="sm"
+              />
             </div>
           </div>
         </div>

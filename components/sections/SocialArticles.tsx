@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Share2, Linkedin, Twitter, BookOpen, TrendingUp, Users, CheckCircle2, Eye, MessageSquare } from 'lucide-react';
+import { LogoStrip, SOCIAL_PLATFORMS } from '../ui/CompanyLogos';
 
 export const SocialArticles = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -216,6 +217,15 @@ export const SocialArticles = () => {
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
                 <span>Repurposed from your blog content for efficiency</span>
               </div>
+            </div>
+
+            {/* Social Platforms */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={SOCIAL_PLATFORMS} 
+                label="Published across"
+                size="sm"
+              />
             </div>
           </div>
         </div>

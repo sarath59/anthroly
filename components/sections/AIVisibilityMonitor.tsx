@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Activity, Bell, TrendingUp, Shield, Eye, Clock, BarChart3, AlertCircle } from 'lucide-react';
+import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 
 export const AIVisibilityMonitor = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -160,6 +161,15 @@ export const AIVisibilityMonitor = () => {
               We don&apos;t just report problems — we flag them before they hurt you and recommend immediate actions to take.
             </p>
           </div>
+        </div>
+
+        {/* Monitoring These Platforms */}
+        <div className={`mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <LogoStrip 
+            companies={AI_COMPANIES} 
+            label="24/7 monitoring across"
+            size="sm"
+          />
         </div>
 
         {/* Bottom CTA */}

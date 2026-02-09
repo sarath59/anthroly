@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Link2, Bot, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
+import { LogoStrip, PUBLISHING_PLATFORMS } from '../ui/CompanyLogos';
 
 export const AIBacklinkAgents = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -179,6 +180,15 @@ export const AIBacklinkAgents = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
                 <span>White-hat methods Google loves</span>
               </div>
+            </div>
+
+            {/* Publications We Get Links From */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={PUBLISHING_PLATFORMS} 
+                label="Links from publications like"
+                size="sm"
+              />
             </div>
           </div>
         </div>

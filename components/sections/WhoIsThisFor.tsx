@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Rocket, Building2, Users, Code2, Store, Briefcase, CheckCircle2, ArrowRight } from 'lucide-react';
+import { LogoStrip, SAAS_LEADERS, ECOMMERCE } from '../ui/CompanyLogos';
 
 export const WhoIsThisFor = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -119,6 +120,22 @@ export const WhoIsThisFor = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Trusted By Leaders */}
+        <div className={`mt-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
+            <LogoStrip 
+              companies={SAAS_LEADERS} 
+              label="Used by SaaS leaders like"
+              size="sm"
+            />
+            <LogoStrip 
+              companies={ECOMMERCE} 
+              label="Trusted by e-commerce brands"
+              size="sm"
+            />
+          </div>
         </div>
 
         {/* Bottom CTA */}

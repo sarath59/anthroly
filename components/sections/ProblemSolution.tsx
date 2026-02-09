@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { XCircle, CheckCircle2, TrendingUp, Zap, DollarSign, Clock } from 'lucide-react';
+import { LogoStrip, AI_COMPANIES, SEO_TOOLS } from '../ui/CompanyLogos';
 
 export const ProblemSolution = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -166,6 +167,20 @@ export const ProblemSolution = () => {
               <div className="text-sm text-gray-500">Flat Monthly Rate</div>
             </div>
           </div>
+        </div>
+
+        {/* Powered By */}
+        <div className={`mt-12 flex flex-col md:flex-row justify-center gap-8 md:gap-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <LogoStrip 
+            companies={AI_COMPANIES.slice(0, 3)} 
+            label="Powered by AI from"
+            size="sm"
+          />
+          <LogoStrip 
+            companies={SEO_TOOLS.slice(0, 3)} 
+            label="Data from industry leaders"
+            size="sm"
+          />
         </div>
       </div>
     </section>

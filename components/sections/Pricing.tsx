@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
+import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 
 export const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -207,6 +208,15 @@ export const Pricing = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Powered by trusted infrastructure */}
+        <div className={`mt-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <LogoStrip 
+            companies={TECH_COMPANIES} 
+            label="Secure payments & enterprise infrastructure"
+            size="sm"
+          />
         </div>
       </div>
     </section>

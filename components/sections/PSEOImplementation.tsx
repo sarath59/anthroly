@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Layers, Code, Zap, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { LogoStrip, PSEO_SUCCESS } from '../ui/CompanyLogos';
 
 export const PSEOImplementation = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -150,6 +151,15 @@ export const PSEOImplementation = () => {
                 <CheckCircle2 className="text-violet-400 flex-shrink-0" size={18} />
                 <span>Scales infinitely as you add more data</span>
               </div>
+            </div>
+
+            {/* pSEO Success Stories */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={PSEO_SUCCESS} 
+                label="Companies crushing it with pSEO"
+                size="sm"
+              />
             </div>
           </div>
         </div>

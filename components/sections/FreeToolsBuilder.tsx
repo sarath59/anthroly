@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Wrench, Calculator, FileText, Search, Zap, TrendingUp, CheckCircle2, ArrowRight, Gift } from 'lucide-react';
+import { LogoStrip, SEO_TOOLS } from '../ui/CompanyLogos';
 
 export const FreeToolsBuilder = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -178,6 +179,15 @@ export const FreeToolsBuilder = () => {
                   <span className="block text-2xl font-bold text-emerald-400">50K+ visits/year</span>
                 </div>
               </div>
+            </div>
+
+            {/* Inspired by industry leaders */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={SEO_TOOLS} 
+                label="Inspired by tools from"
+                size="sm"
+              />
             </div>
           </div>
         </div>

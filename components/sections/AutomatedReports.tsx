@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Clock, Target } from 'lucide-react';
+import { LogoStrip, ANALYTICS_TOOLS, SEO_TOOLS } from '../ui/CompanyLogos';
 
 export const AutomatedReports = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -167,6 +168,15 @@ export const AutomatedReports = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
                 <span>Compare progress to goals and benchmarks</span>
               </div>
+            </div>
+
+            {/* Data Sources */}
+            <div className="mt-8">
+              <LogoStrip 
+                companies={[...ANALYTICS_TOOLS, ...SEO_TOOLS.slice(0, 2)]} 
+                label="Data pulled from"
+                size="sm"
+              />
             </div>
           </div>
         </div>

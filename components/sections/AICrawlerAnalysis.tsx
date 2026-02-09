@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Search, Eye, AlertTriangle, CheckCircle2, Bot, Zap } from 'lucide-react';
+import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 
 export const AICrawlerAnalysis = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -119,6 +120,15 @@ export const AICrawlerAnalysis = () => {
                   <div className="text-xs text-gray-500">AI Traffic Potential</div>
                 </div>
               </div>
+            </div>
+
+            {/* AI Platforms Logos */}
+            <div className="mt-10">
+              <LogoStrip 
+                companies={AI_COMPANIES} 
+                label="We analyze visibility on"
+                size="sm"
+              />
             </div>
           </div>
 

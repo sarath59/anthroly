@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { ArrowRight, Sparkles, Bot, Check, Shield, TrendingUp } from 'lucide-react';
+import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 
 const TerminalText = () => {
   const [text, setText] = useState('');
@@ -157,6 +158,16 @@ export const Hero = () => {
                 <ArrowRight className="ml-2" size={22} />
               </Button>
             </Link>
+          </div>
+
+          {/* AI Platforms We Optimize For */}
+          <div className="mb-14">
+            <LogoStrip 
+              companies={AI_COMPANIES} 
+              label="Optimize your visibility on"
+              size="md"
+              showNames={true}
+            />
           </div>
 
           {/* Trust Indicators - Credibility */}
