@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Linkedin, Twitter, BookOpen, Share2, Users, TrendingUp, MessageCircle, Heart, Repeat2 } from 'lucide-react';
+import { Share2, Linkedin, Twitter, BookOpen, TrendingUp, Users, CheckCircle2, Eye, MessageSquare } from 'lucide-react';
 
 export const SocialArticles = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,169 +26,198 @@ export const SocialArticles = () => {
 
   const platforms = [
     {
-      name: "LinkedIn",
       icon: Linkedin,
-      color: "blue",
-      description: "Long-form articles that establish you as a thought leader and drive B2B traffic",
-      stats: { reach: "2.3M", engagement: "12%" }
+      name: "LinkedIn",
+      color: "bg-blue-600",
+      description: "Thought leadership articles that position you as an industry expert",
+      stats: "4.2K avg views"
     },
     {
-      name: "X (Twitter)",
       icon: Twitter,
-      color: "gray",
-      description: "Threads and posts optimized for virality and engagement in your niche",
-      stats: { reach: "1.8M", engagement: "8%" }
+      name: "X (Twitter)",
+      color: "bg-black",
+      description: "Engaging threads that spark conversations and build your following",
+      stats: "8.5K avg impressions"
     },
     {
-      name: "Medium",
       icon: BookOpen,
-      color: "green",
-      description: "SEO-optimized articles that rank on Google and Medium&apos;s internal search",
-      stats: { reach: "950K", engagement: "15%" }
+      name: "Medium",
+      color: "bg-green-600",
+      description: "In-depth articles that rank on Google and establish domain authority",
+      stats: "2.1K avg reads"
     }
   ];
 
   return (
-    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px]"></div>
-      </div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_#dbeafe_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
             <Share2 size={16} />
-            <span>Feature #7</span>
+            <span>Service 07</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            SEO/GEO Optimized Social Articles
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+            SEO/GEO Social Articles
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Google isn&apos;t the only place people discover brands. <span className="text-white font-semibold">LinkedIn, X, and Medium</span> are search engines too. We create content that ranks on all of them — expanding your reach exponentially.
+          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            AI doesn&apos;t just read your website — it reads LinkedIn, X, and Medium too. We publish optimized content across all platforms to maximize your visibility everywhere.
           </p>
         </div>
 
-        {/* Platforms Grid */}
-        <div className={`grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Platform Cards */}
+        <div className={`grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {platforms.map((platform, index) => {
             const Icon = platform.icon;
             return (
               <div 
                 key={index}
-                className="p-6 md:p-8 bg-gray-900/80 border border-gray-800 rounded-3xl hover:border-blue-500/30 transition-all"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
               >
-                <div className={`w-14 h-14 bg-${platform.color}-500/20 rounded-2xl flex items-center justify-center mb-6`}>
-                  <Icon className={`text-${platform.color}-400`} size={28} />
+                <div className={`w-14 h-14 ${platform.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{platform.name}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{platform.description}</p>
-                <div className="flex items-center gap-4 pt-4 border-t border-gray-800">
-                  <div>
-                    <div className="text-xl font-bold text-white">{platform.stats.reach}</div>
-                    <div className="text-xs text-gray-500">Potential Reach</div>
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-emerald-400">{platform.stats.engagement}</div>
-                    <div className="text-xs text-gray-500">Avg. Engagement</div>
-                  </div>
+                <h3 className="text-xl font-bold text-black mb-2">{platform.name}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">{platform.description}</p>
+                <div className="flex items-center gap-2 text-sm text-emerald-600 font-semibold">
+                  <Eye size={16} />
+                  <span>{platform.stats}</span>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Example Post Mock */}
-        <div className={`max-w-2xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-white text-black rounded-2xl p-6 shadow-xl">
-            {/* Post Header */}
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full"></div>
-              <div>
-                <div className="font-bold">Your Brand</div>
-                <div className="text-sm text-gray-500">CEO & Founder • 2nd</div>
-              </div>
-              <div className="ml-auto">
-                <Linkedin className="text-blue-600" size={20} />
-              </div>
-            </div>
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+          {/* Left: Why It Matters */}
+          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <h3 className="text-2xl md:text-3xl font-bold text-black mb-6">
+              Why Social Content Matters for SEO & GEO
+            </h3>
             
-            {/* Post Content */}
-            <div className="mb-4">
-              <p className="text-gray-800 leading-relaxed">
-                <span className="font-bold">I spent 3 years building the wrong product.</span>
-                <br /><br />
-                Here&apos;s what I wish someone told me earlier about product-market fit...
-                <br /><br />
-                <span className="text-blue-600">1. Talk to 100 customers before writing a single line of code</span>
-                <br />
-                Not 10. Not 50. One hundred.
-                <br /><br />
-                The insights compound. By customer #80, you&apos;ll see patterns you never noticed at #20.
-                <br /><br />
-                <span className="text-gray-500">... see more</span>
-              </p>
-            </div>
-
-            {/* Engagement Stats */}
-            <div className="flex items-center gap-2 text-sm text-gray-500 pb-3 border-b">
-              <div className="flex -space-x-1">
-                <div className="w-5 h-5 bg-blue-500 rounded-full border-2 border-white"></div>
-                <div className="w-5 h-5 bg-emerald-500 rounded-full border-2 border-white"></div>
-                <div className="w-5 h-5 bg-orange-500 rounded-full border-2 border-white"></div>
+            <div className="space-y-6 mb-8">
+              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="text-blue-600" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-black mb-1">AI Reads Everything</h4>
+                    <p className="text-gray-600 text-sm">ChatGPT and Claude pull information from LinkedIn articles, X threads, and Medium posts. Being visible there means being recommended more often.</p>
+                  </div>
+                </div>
               </div>
-              <span>2,847 reactions • 234 comments • 89 reposts</span>
-            </div>
+              
+              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <Users className="text-purple-600" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-black mb-1">Build Authority Signals</h4>
+                    <p className="text-gray-600 text-sm">When your content appears across multiple high-authority platforms, search engines trust you more. It&apos;s called E-E-A-T (Experience, Expertise, Authoritativeness, Trust).</p>
+                  </div>
+                </div>
+              </div>
 
-            {/* Action Buttons */}
-            <div className="flex items-center justify-around pt-3">
-              <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-                <Heart size={18} />
-                <span className="text-sm">Like</span>
-              </button>
-              <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-                <MessageCircle size={18} />
-                <span className="text-sm">Comment</span>
-              </button>
-              <button className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-                <Repeat2 size={18} />
-                <span className="text-sm">Repost</span>
-              </button>
+              <div className="p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                    <MessageSquare className="text-emerald-600" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-black mb-1">Engagement Drives Rankings</h4>
+                    <p className="text-gray-600 text-sm">High engagement on social platforms sends positive signals to search engines. More likes, comments, and shares = higher rankings.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <p className="text-center text-gray-500 text-sm mt-4">
-            Example of content we create for your LinkedIn profile
-          </p>
-        </div>
 
-        {/* Benefits */}
-        <div className={`mt-16 max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl">
-              <Users className="text-blue-400 mb-4" size={28} />
-              <h3 className="text-xl font-bold mb-2">Build Authority</h3>
-              <p className="text-gray-400">
-                Consistent, valuable content positions you as the go-to expert in your space. When people think of your category, they think of you.
-              </p>
+          {/* Right: Sample Content */}
+          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <div className="bg-black text-white rounded-3xl p-6 md:p-8">
+              <h3 className="text-xl font-bold mb-6">What We Create For You</h3>
+              
+              <div className="space-y-4">
+                {/* LinkedIn */}
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Linkedin className="text-blue-400" size={18} />
+                    <span className="text-sm text-gray-400">LinkedIn Article</span>
+                  </div>
+                  <p className="text-white font-medium mb-2">&quot;Why 80% of SaaS Companies Fail at SEO (And How to Be in the 20%)&quot;</p>
+                  <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <span>2,400 words</span>
+                    <span>•</span>
+                    <span>SEO-optimized</span>
+                    <span>•</span>
+                    <span>Includes CTA</span>
+                  </div>
+                </div>
+
+                {/* X Thread */}
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Twitter className="text-white" size={18} />
+                    <span className="text-sm text-gray-400">X Thread</span>
+                  </div>
+                  <p className="text-white font-medium mb-2">&quot;I analyzed 500 top-ranking pages. Here&apos;s what they all have in common (Thread) 🧵&quot;</p>
+                  <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <span>12 tweets</span>
+                    <span>•</span>
+                    <span>Engagement hooks</span>
+                    <span>•</span>
+                    <span>Data-driven</span>
+                  </div>
+                </div>
+
+                {/* Medium */}
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="text-green-400" size={18} />
+                    <span className="text-sm text-gray-400">Medium Post</span>
+                  </div>
+                  <p className="text-white font-medium mb-2">&quot;The Complete Guide to AI-Powered SEO in 2026&quot;</p>
+                  <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <span>3,500 words</span>
+                    <span>•</span>
+                    <span>Top publication</span>
+                    <span>•</span>
+                    <span>Backlinks included</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Output */}
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400">Monthly output:</span>
+                  <span className="text-emerald-400 font-bold">20+ articles across all platforms</span>
+                </div>
+              </div>
             </div>
-            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl">
-              <TrendingUp className="text-emerald-400 mb-4" size={28} />
-              <h3 className="text-xl font-bold mb-2">Multi-Channel Growth</h3>
-              <p className="text-gray-400">
-                One piece of content gets repurposed across platforms. Maximum impact, minimum effort. That&apos;s leverage.
-              </p>
+
+            {/* Benefits */}
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center gap-3 text-gray-700">
+                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+                <span>All content written in your brand voice</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-700">
+                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+                <span>Scheduled and published automatically</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-700">
+                <CheckCircle2 className="text-blue-600 flex-shrink-0" size={18} />
+                <span>Repurposed from your blog content for efficiency</span>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Insight */}
-        <div className={`mt-12 text-center max-w-2xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-gray-400">
-            <span className="text-white font-semibold">GEO (Generative Engine Optimization)</span> is the new frontier. AI assistants pull from these platforms when answering questions. If you&apos;re not there, you&apos;re invisible to the next generation of search.
-          </p>
         </div>
       </div>
     </section>

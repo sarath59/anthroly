@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Bot, Link2, Target, Shield, TrendingUp, CheckCircle2, Zap, Globe } from 'lucide-react';
+import { Link2, Bot, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
 
 export const AIBacklinkAgents = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,166 +24,162 @@ export const AIBacklinkAgents = () => {
     return () => observer.disconnect();
   }, []);
 
-  const backlinkStats = [
-    { number: "20-30", label: "Backlinks/month", sublabel: "Guaranteed minimum" },
-    { number: "DR 70-90", label: "Average Domain Rating", sublabel: "High-authority only" },
-    { number: "24/7", label: "AI Agents Active", sublabel: "Never stops working" },
-    { number: "0%", label: "Spam Links", sublabel: "Quality guaranteed" },
+  const backlinkProcess = [
+    {
+      icon: Target,
+      title: "Target Identification",
+      description: "AI scans millions of sites to find high-authority domains relevant to your industry"
+    },
+    {
+      icon: Bot,
+      title: "Automated Outreach",
+      description: "Personalized outreach at scale — AI crafts unique pitches for each target"
+    },
+    {
+      icon: Link2,
+      title: "Link Acquisition",
+      description: "Secure placements on DR 70-90 sites through genuine value exchange"
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "Every link is vetted for spam, relevance, and long-term ranking impact"
+    }
+  ];
+
+  const recentBacklinks = [
+    { domain: "techcrunch.com", dr: 94, type: "Guest Post" },
+    { domain: "forbes.com", dr: 95, type: "Feature" },
+    { domain: "entrepreneur.com", dr: 91, type: "Interview" },
+    { domain: "inc.com", dr: 92, type: "Resource Link" }
   ];
 
   return (
     <section id="backlinks" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
-      {/* Animated Background */}
+      {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] animate-pulse"></div>
-        {/* Connection Lines Animation */}
-        <div className="absolute inset-0 opacity-20">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                <circle cx="30" cy="30" r="1" fill="#10b981" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[150px] -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-red-600/10 rounded-full blur-[120px]"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
-            <Bot size={16} />
-            <span>Feature #4</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
+            <Link2 size={16} />
+            <span>Service 04</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            AI Agents for Backlinks
+            AI Backlink Agents
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Backlinks are the currency of SEO. But getting quality ones takes months of manual outreach. <span className="text-white font-semibold">Our AI agents do it automatically</span> — finding opportunities, crafting personalized pitches, and securing high-authority links while you sleep.
+            Backlinks are the #1 ranking factor Google uses. But getting them manually takes months and costs thousands. Our AI agents acquire <span className="text-white font-semibold">20-30 high-DR backlinks monthly</span> — automatically.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {backlinkStats.map((stat, index) => (
-            <div key={index} className="p-6 bg-gray-900/80 border border-gray-800 rounded-2xl text-center hover:border-emerald-500/50 transition-colors">
-              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">{stat.number}</div>
-              <div className="text-white font-medium mb-1">{stat.label}</div>
-              <div className="text-xs text-gray-500">{stat.sublabel}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* How It Works */}
-        <div className={`max-w-6xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left: Agent Visualization */}
-            <div className="relative">
-              <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 relative overflow-hidden">
-                <div className="absolute top-4 right-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="text-xs text-emerald-400 font-mono">AGENTS ACTIVE</span>
-                </div>
-
-                {/* Agent Activity Feed */}
-                <div className="space-y-4 mt-8">
-                  <div className="text-sm text-gray-500 mb-6">Live Agent Activity</div>
-                  
-                  <div className="flex items-center gap-3 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl animate-fade-in">
-                    <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                      <Bot size={18} className="text-emerald-400" />
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+          {/* Left: Process */}
+          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">How Our AI Gets You Links</h3>
+            
+            <div className="space-y-6">
+              {backlinkProcess.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <div key={index} className="flex gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-orange-500/30 transition-all">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                      <Icon size={24} className="text-white" />
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-white">Agent secured backlink from TechCrunch</p>
-                      <p className="text-xs text-gray-500">DR 94 • Just now</p>
-                    </div>
-                    <CheckCircle2 size={18} className="text-emerald-400" />
-                  </div>
-
-                  <div className="flex items-center gap-3 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl">
-                    <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
-                      <Target size={18} className="text-blue-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-white">Identified 12 new link opportunities</p>
-                      <p className="text-xs text-gray-500">ProductHunt, HackerNoon, Dev.to</p>
+                    <div>
+                      <h4 className="font-bold text-white mb-1">{step.title}</h4>
+                      <p className="text-gray-400 leading-relaxed">{step.description}</p>
                     </div>
                   </div>
-
-                  <div className="flex items-center gap-3 p-4 bg-purple-500/10 border border-purple-500/20 rounded-xl">
-                    <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
-                      <Globe size={18} className="text-purple-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-white">Submitted to 8 high-DR directories</p>
-                      <p className="text-xs text-gray-500">Avg DR 78 • Auto-filling forms</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 p-4 bg-gray-800/50 border border-gray-700 rounded-xl">
-                    <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-                      <Zap size={18} className="text-gray-400" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-white">Outreach email sent to 47 prospects</p>
-                      <p className="text-xs text-gray-500">Personalized • High open rate</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
 
-            {/* Right: Benefits */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  What Would Take You 100+ Hours Takes Us Minutes
-                </h3>
-                <p className="text-lg text-gray-400 leading-relaxed">
-                  Traditional link building means cold emailing thousands of websites, hoping for a 1% response rate. Our AI agents have been trained on millions of successful outreach campaigns. They know what works — and they never get tired.
-                </p>
+            {/* Guarantee Box */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl">
+              <div className="flex items-center gap-3 mb-3">
+                <Award className="text-orange-400" size={24} />
+                <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 p-5 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 transition-colors">
-                  <Shield className="text-emerald-400 flex-shrink-0" size={24} />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Only Quality Links</h4>
-                    <p className="text-gray-400 text-sm">No PBNs, no spam, no link farms. Every backlink is from a real, authoritative website that Google trusts.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4 p-5 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 transition-colors">
-                  <Target className="text-emerald-400 flex-shrink-0" size={24} />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Niche-Relevant</h4>
-                    <p className="text-gray-400 text-sm">Links from sites in your industry carry more weight. We target opportunities that actually matter for your specific business.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-5 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 transition-colors">
-                  <TrendingUp className="text-emerald-400 flex-shrink-0" size={24} />
-                  <div>
-                    <h4 className="font-bold text-white mb-1">Compound Growth</h4>
-                    <p className="text-gray-400 text-sm">Each new backlink makes the next one easier to get. Within 6 months, your domain authority can double.</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-gray-300">
+                We guarantee <span className="text-orange-400 font-semibold">20-30 backlinks per month</span> with an average DR of 70-90. If we don&apos;t hit the target, you don&apos;t pay. It&apos;s that simple.
+              </p>
             </div>
           </div>
-        </div>
 
-        {/* Guarantee */}
-        <div className={`mt-16 max-w-3xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="p-6 md:p-8 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-blue-500/20 border border-emerald-500/30 rounded-2xl text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1 bg-emerald-500 text-black text-sm font-bold rounded-full mb-4">
-              <Shield size={14} />
-              GUARANTEE
+          {/* Right: Live Feed + Stats */}
+          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
+                <div className="text-4xl font-bold text-white mb-1">70-90</div>
+                <div className="text-sm text-gray-500">Average DR Score</div>
+              </div>
+              <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
+                <div className="text-4xl font-bold text-white mb-1">20-30</div>
+                <div className="text-sm text-gray-500">Links Per Month</div>
+              </div>
             </div>
-            <p className="text-lg text-gray-300">
-              <span className="text-white font-bold">20-30 high-quality backlinks per month</span> with an average DR of 70-90, or we&apos;ll refund your payment and give you a free month. That&apos;s how confident we are.
-            </p>
+
+            {/* Recent Backlinks Feed */}
+            <div className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+              <div className="px-6 py-4 border-b border-gray-800 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                  <span className="text-sm font-semibold text-white">Recent Acquisitions</span>
+                </div>
+                <span className="text-xs text-gray-500">Sample Results</span>
+              </div>
+              
+              <div className="divide-y divide-gray-800">
+                {recentBacklinks.map((link, index) => (
+                  <div key={index} className="px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <ExternalLink size={16} className="text-gray-500" />
+                      <span className="text-white font-medium">{link.domain}</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-xs text-gray-500">{link.type}</span>
+                      <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded">
+                        DR {link.dr}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Why This Matters */}
+            <div className="mt-8 p-5 bg-white/5 border border-white/10 rounded-xl">
+              <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                <TrendingUp className="text-emerald-400" size={18} />
+                Why Backlinks Matter
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                A single backlink from a DR 90 site can boost your rankings more than 100 low-quality links. That&apos;s why we focus exclusively on premium placements that actually move the needle.
+              </p>
+            </div>
+
+            {/* Checkmarks */}
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>No spammy link farms or PBNs</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>Only relevant, high-authority domains</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>White-hat methods Google loves</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Lightbulb, Target, Rocket, BarChart3, Globe, Megaphone, RefreshCw, Trophy, CheckCircle2 } from 'lucide-react';
+import { Rocket, ShoppingCart, Code, Building2, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const GrowthHacks = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,102 +24,123 @@ export const GrowthHacks = () => {
     return () => observer.disconnect();
   }, []);
 
-  const growthHacks = [
+  const industries = [
     {
-      icon: Target,
-      title: "Competitor Gap Analysis",
-      description: "We reverse-engineer your competitors&apos; entire SEO strategy — their backlinks, their keywords, their content. Then we do it better."
+      icon: Code,
+      title: "SaaS Companies",
+      color: "from-blue-500 to-cyan-500",
+      hacks: [
+        "Product-led SEO landing pages",
+        "Integration pages for every tool you connect with",
+        "Alternative pages (vs competitors)",
+        "Feature comparison matrices",
+        "Use case templates library"
+      ]
     },
     {
-      icon: RefreshCw,
-      title: "Content Repurposing Engine",
-      description: "One blog post becomes a LinkedIn article, a Twitter thread, a Medium post, and 5 social snippets. Maximum reach, minimum effort."
+      icon: ShoppingCart,
+      title: "E-Commerce",
+      color: "from-orange-500 to-red-500",
+      hacks: [
+        "Category page optimization at scale",
+        "Product schema for rich snippets",
+        "Review aggregation for UGC SEO",
+        "Seasonal landing pages automated",
+        "Local inventory pages"
+      ]
     },
     {
-      icon: Globe,
-      title: "International SEO Expansion",
-      description: "Ready to go global? We create localized content and build backlinks in new markets automatically."
-    },
-    {
-      icon: Megaphone,
-      title: "Digital PR & Brand Mentions",
-      description: "Get featured in industry publications, podcasts, and news sites. Build authority through earned media."
-    },
-    {
-      icon: BarChart3,
-      title: "Technical SEO Audits",
-      description: "Site speed, Core Web Vitals, schema markup, crawlability — we optimize the technical foundation that makes everything else work."
-    },
-    {
-      icon: Trophy,
-      title: "Featured Snippet Targeting",
-      description: "Position zero is the new page one. We specifically optimize content to capture Google&apos;s featured snippets."
+      icon: Building2,
+      title: "Agencies & Services",
+      color: "from-purple-500 to-pink-500",
+      hacks: [
+        "Case study optimization",
+        "Service area pages at scale",
+        "Industry-specific landing pages",
+        "Client results showcases",
+        "Thought leadership syndication"
+      ]
     }
   ];
 
   return (
-    <section id="growth-hacks" ref={sectionRef} className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="growth-hacks" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,_#eff6ff_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold mb-6">
-            <Lightbulb size={16} />
-            <span>And That&apos;s Not All</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
+            <Rocket size={16} />
+            <span>Bonus Strategies</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
-            More Growth Hacks Included
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Industry-Specific Growth Hacks
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            We don&apos;t just do the basics. We deploy <span className="text-black font-semibold">every proven growth strategy</span> that works for SEO and GEO. Here&apos;s what else you get.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            Every industry has unique opportunities. We don&apos;t just apply generic tactics — we deploy <span className="text-white font-semibold">proven growth strategies tailored to your specific business type</span>.
           </p>
         </div>
 
-        {/* Growth Hacks Grid */}
-        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {growthHacks.map((hack, index) => {
-            const Icon = hack.icon;
+        {/* Industry Cards */}
+        <div className={`grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {industries.map((industry, index) => {
+            const Icon = industry.icon;
             return (
-              <div 
-                key={index}
-                className="p-6 md:p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                  <Icon className="text-indigo-600 group-hover:text-white" size={24} />
+              <div key={index} className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-white/20 transition-all group">
+                <div className={`w-14 h-14 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-black mb-3">{hack.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{hack.description}</p>
+                <h3 className="text-xl font-bold mb-4">{industry.title}</h3>
+                <ul className="space-y-3">
+                  {industry.hacks.map((hack, hackIndex) => (
+                    <li key={hackIndex} className="flex items-start gap-2 text-gray-400 text-sm">
+                      <ArrowRight size={14} className="text-emerald-400 mt-1 flex-shrink-0" />
+                      <span>{hack}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           })}
         </div>
 
-        {/* Summary Box */}
-        <div className={`mt-16 max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="p-8 bg-black text-white rounded-3xl">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Everything You Need. Nothing You Don&apos;t.</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Traditional agencies charge you for strategy, then charge again for execution, then charge for reports. We do it all for one flat fee. No surprises, no scope creep, no BS.
-                </p>
+        {/* Additional Strategies */}
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 border border-white/10 rounded-3xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Sparkles className="text-yellow-400" size={24} />
+              <h3 className="text-2xl font-bold">Plus These Universal Strategies</h3>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">Competitor backlink gap analysis</span>
               </div>
-              <div className="space-y-3">
-                {[
-                  "Keyword research & strategy",
-                  "On-page optimization",
-                  "Technical SEO fixes",
-                  "Link building at scale",
-                  "Content creation & publishing",
-                  "Performance reporting"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-emerald-400" size={18} />
-                    <span className="text-gray-300">{item}</span>
-                  </div>
-                ))}
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">Featured snippet optimization</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">HARO and journalist outreach</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">Podcast guesting for backlinks</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">Reddit and Quora SEO</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span className="text-gray-300">YouTube SEO for video content</span>
               </div>
             </div>
           </div>

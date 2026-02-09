@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { PenTool, FileText, Users, Target, Sparkles, CheckCircle2, Clock, Zap } from 'lucide-react';
+import { PenTool, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const AutomatedBlogs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -57,7 +57,7 @@ export const AutomatedBlogs = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
             <PenTool size={16} />
-            <span>Feature #3</span>
+            <span>Service 03</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
             30 Blogs Per Month

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { BarChart3, FileText, TrendingUp, Calendar, Mail, Eye, CheckCircle2, ArrowUp, ArrowDown } from 'lucide-react';
+import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Clock, Target } from 'lucide-react';
 
 export const AutomatedReports = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -24,157 +24,151 @@ export const AutomatedReports = () => {
     return () => observer.disconnect();
   }, []);
 
+  const reportSections = [
+    { icon: TrendingUp, title: "Traffic Growth", description: "Week-over-week and month-over-month comparisons" },
+    { icon: BarChart3, title: "Keyword Rankings", description: "Position changes for all tracked keywords" },
+    { icon: Target, title: "Backlink Progress", description: "New links acquired and their impact" },
+    { icon: FileText, title: "Content Performance", description: "Which blogs are driving the most traffic" }
+  ];
+
   return (
-    <section id="reports" ref={sectionRef} className="py-24 md:py-32 bg-gray-50 relative overflow-hidden">
+    <section id="reports" ref={sectionRef} className="py-24 md:py-32 bg-gray-950 text-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_#f0fdf4_0%,_transparent_50%)]"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[150px] -translate-x-1/2"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold mb-6">
-            <BarChart3 size={16} />
-            <span>Feature #6</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
+            <FileText size={16} />
+            <span>Service 06</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Weekly Automated Reports
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
-            No more guessing if SEO is working. Every week, you get a <span className="text-black font-semibold">clear, actionable report</span> showing exactly what changed, what we did, and what comes next.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            No more guessing if things are working. Every week, you get a comprehensive report showing exactly what we did, what&apos;s improving, and what&apos;s coming next.
           </p>
         </div>
 
-        {/* Report Preview */}
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-            {/* Report Header */}
-            <div className="bg-black text-white p-6 md:p-8">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+          {/* Left: Report Preview */}
+          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div className="bg-white text-black rounded-3xl p-6 md:p-8 shadow-2xl">
+              {/* Report Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
                 <div>
-                  <div className="text-sm text-gray-400 mb-1">Weekly Performance Report</div>
-                  <div className="text-2xl font-bold">Feb 3 - Feb 9, 2025</div>
+                  <h3 className="font-bold text-lg">Weekly Performance Report</h3>
+                  <p className="text-sm text-gray-500">Week of Feb 3 - Feb 9, 2026</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold">
-                    +18% Growth
-                  </div>
-                  <div className="px-4 py-2 bg-white/10 rounded-full text-sm">
-                    Delivered every Monday
-                  </div>
+                <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
+                  <BarChart3 className="text-white" size={24} />
                 </div>
               </div>
-            </div>
 
-            {/* Report Content */}
-            <div className="p-6 md:p-8">
               {/* Key Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div className="p-4 bg-gray-50 rounded-xl">
-                  <div className="flex items-center gap-2 text-emerald-600 text-sm mb-1">
-                    <ArrowUp size={14} />
-                    <span>+24%</span>
-                  </div>
-                  <div className="text-2xl font-bold text-black">12,847</div>
-                  <div className="text-sm text-gray-500">Organic Visitors</div>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="p-4 bg-emerald-50 rounded-xl">
+                  <div className="text-2xl font-bold text-emerald-600">+23%</div>
+                  <div className="text-sm text-gray-600">Organic Traffic</div>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-xl">
-                  <div className="flex items-center gap-2 text-emerald-600 text-sm mb-1">
-                    <ArrowUp size={14} />
-                    <span>+8</span>
-                  </div>
-                  <div className="text-2xl font-bold text-black">23</div>
-                  <div className="text-sm text-gray-500">New Backlinks</div>
+                <div className="p-4 bg-blue-50 rounded-xl">
+                  <div className="text-2xl font-bold text-blue-600">+12</div>
+                  <div className="text-sm text-gray-600">Keyword Rankings Up</div>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-xl">
-                  <div className="flex items-center gap-2 text-emerald-600 text-sm mb-1">
-                    <ArrowUp size={14} />
-                    <span>+12</span>
-                  </div>
-                  <div className="text-2xl font-bold text-black">47</div>
-                  <div className="text-sm text-gray-500">Keywords Page 1</div>
+                <div className="p-4 bg-purple-50 rounded-xl">
+                  <div className="text-2xl font-bold text-purple-600">7</div>
+                  <div className="text-sm text-gray-600">New Backlinks</div>
                 </div>
-                <div className="p-4 bg-gray-50 rounded-xl">
-                  <div className="flex items-center gap-2 text-emerald-600 text-sm mb-1">
-                    <ArrowUp size={14} />
-                    <span>+3</span>
-                  </div>
-                  <div className="text-2xl font-bold text-black">58</div>
-                  <div className="text-sm text-gray-500">Domain Authority</div>
+                <div className="p-4 bg-orange-50 rounded-xl">
+                  <div className="text-2xl font-bold text-orange-600">8</div>
+                  <div className="text-sm text-gray-600">Blogs Published</div>
                 </div>
               </div>
 
-              {/* What We Did */}
-              <div className="mb-8">
-                <h4 className="font-bold text-black mb-4 flex items-center gap-2">
-                  <CheckCircle2 className="text-emerald-500" size={20} />
-                  Completed This Week
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    "Published 7 new blog posts targeting long-tail keywords",
-                    "Acquired 23 backlinks (avg DR 78)",
-                    "Optimized 12 existing pages for AI visibility",
-                    "Submitted to 15 high-authority directories",
-                    "Created 3 new pSEO template pages"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-emerald-50 rounded-lg text-sm text-gray-700">
-                      <CheckCircle2 className="text-emerald-500 flex-shrink-0" size={16} />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Upcoming */}
-              <div className="p-5 bg-blue-50 rounded-xl border border-blue-100">
-                <h4 className="font-bold text-black mb-3 flex items-center gap-2">
-                  <Calendar className="text-blue-500" size={20} />
-                  Next Week&apos;s Focus
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  Targeting 5 new high-volume keywords, launching competitor comparison pages, and initiating outreach to 50+ potential backlink sources in the tech industry.
+              {/* Summary */}
+              <div className="p-4 bg-gray-50 rounded-xl mb-4">
+                <h4 className="font-semibold mb-2">Executive Summary</h4>
+                <p className="text-sm text-gray-600">
+                  Strong week with organic traffic up 23% from last week. 3 articles reached page 1 for target keywords. 2 high-DR backlinks secured from industry publications.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Benefits */}
-        <div className={`mt-16 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center p-6">
-            <div className="w-14 h-14 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Mail className="text-cyan-600" size={24} />
+              {/* Next Steps */}
+              <div className="p-4 bg-emerald-500 text-white rounded-xl">
+                <h4 className="font-semibold mb-2">Next Week&apos;s Focus</h4>
+                <ul className="text-sm space-y-1">
+                  <li>• Publishing 8 new blog posts targeting competitor keywords</li>
+                  <li>• Outreach to 50 new backlink prospects</li>
+                  <li>• Launching 100 new pSEO pages</li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-lg font-bold text-black mb-2">Delivered to Your Inbox</h3>
-            <p className="text-gray-600 text-sm">
-              Every Monday morning, wake up to a comprehensive report. No logging into dashboards.
-            </p>
           </div>
-          <div className="text-center p-6">
-            <div className="w-14 h-14 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Eye className="text-cyan-600" size={24} />
-            </div>
-            <h3 className="text-lg font-bold text-black mb-2">Crystal Clear Insights</h3>
-            <p className="text-gray-600 text-sm">
-              No jargon, no confusion. Plain English explaining what matters and why.
-            </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="w-14 h-14 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="text-cyan-600" size={24} />
-            </div>
-            <h3 className="text-lg font-bold text-black mb-2">Track Progress Over Time</h3>
-            <p className="text-gray-600 text-sm">
-              See your growth trajectory. Watch rankings climb and traffic compound month after month.
-            </p>
-          </div>
-        </div>
 
-        {/* Bottom Note */}
-        <div className={`mt-12 max-w-2xl mx-auto text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-gray-500 text-sm">
-            <span className="font-semibold text-black">Transparency is everything.</span> You&apos;ll always know exactly what we&apos;re doing, why we&apos;re doing it, and the results we&apos;re getting. No black boxes.
-          </p>
+          {/* Right: Features */}
+          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">
+              Everything You Need to Know, Every Week
+            </h3>
+
+            <div className="space-y-6 mb-8">
+              {reportSections.map((section, index) => {
+                const Icon = section.icon;
+                return (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                      <Icon size={22} className="text-emerald-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white mb-1">{section.title}</h4>
+                      <p className="text-gray-400">{section.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Delivery Info */}
+            <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Mail className="text-emerald-400" size={20} />
+                <h4 className="font-bold">Delivered Every Monday Morning</h4>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Start your week knowing exactly where you stand. Reports arrive in your inbox at 8 AM with a full breakdown of the previous week&apos;s performance.
+              </p>
+              <div className="flex items-center gap-4 text-sm">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Clock size={16} className="text-emerald-400" />
+                  <span>Every Monday, 8 AM</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Calendar size={16} className="text-emerald-400" />
+                  <span>Monthly summaries too</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Benefits */}
+            <div className="mt-8 space-y-3">
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>No jargon — plain English anyone can understand</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>Actionable insights, not just data dumps</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
+                <span>Compare progress to goals and benchmarks</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

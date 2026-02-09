@@ -37,7 +37,7 @@ export const AIVisibilityMonitor = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Activity size={16} />
-            <span>Feature #2</span>
+            <span>Service 02</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             AI Visibility Monitors
