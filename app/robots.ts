@@ -74,8 +74,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    // IMPORTANT: Point to sitemap INDEX, not individual sitemap
-    // This is what you submit to Google Search Console
-    sitemap: 'https://anthroly.com/sitemap-index.xml',
+    // Single sitemap - all ~40K pages are statically generated
+    // This ensures instant response to Google crawler (no timeout risk)
+    sitemap: 'https://anthroly.com/sitemap.xml',
   };
 }

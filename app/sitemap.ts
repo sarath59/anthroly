@@ -10,109 +10,44 @@ import {
 } from '@/lib/pseo';
 
 /**
- * GOOGLE SITEMAP REQUIREMENTS:
- * - Max 50,000 URLs per sitemap file
- * - Max 50MB (uncompressed) per file
- * - UTF-8 encoding
- * - URLs must be from single host only
- * - Use sitemap index for large sites
+ * CRAWLER-OPTIMIZED SITEMAP
  * 
- * This generates a sitemap INDEX that references multiple sitemap files.
- * Each category gets its own sitemap to stay under limits.
+ * Google Crawler Considerations:
+ * - Timeout: ~5-10 seconds per page
+ * - All pages here use generateStaticParams() = pre-built at deploy
+ * - Googlebot receives instant HTML response (<100ms)
+ * - No server-side computation during crawl
+ * 
+ * Total: ~40K pages (all statically generated)
  */
 
-// Generate sitemap index - this tells Google where all our sitemaps are
 export default function sitemap(): MetadataRoute.Sitemap {
-  // For Next.js, we return a flat sitemap and let it handle the splitting
-  // But we need to be strategic about what we include
-  
-  // IMPORTANT: Google prioritizes quality over quantity
-  // We'll include the highest-value pages in the main sitemap
-  // and create separate route handlers for combination pages
-  
   const baseUrl = 'https://anthroly.com';
   const now = new Date();
   
   // ============================================================================
-  // TIER 1: HIGH PRIORITY PAGES (Always in main sitemap)
+  // TIER 1: INDEX PAGES (11 pages)
   // ============================================================================
   
-  const highPriorityPages: MetadataRoute.Sitemap = [
-    // Homepage
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    // Main category index pages
-    {
-      url: `${baseUrl}/glossary`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/for`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ai-seo-agency`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/integrations`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/compare`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/industries`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/use-cases`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+  const indexPages: MetadataRoute.Sitemap = [
+    { url: baseUrl, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/glossary`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/for`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/ai-seo-agency`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/integrations`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/compare`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/industries`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/use-cases`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   // ============================================================================
-  // TIER 2: BASE PAGES (Single-dimension pages)
+  // TIER 1: BASE PAGES (322 pages) - Single dimension
   // ============================================================================
 
-  // Glossary pages (60)
+  // Glossary (60)
   const glossaryPages: MetadataRoute.Sitemap = seoGlossaryTerms.map((term) => ({
     url: `${baseUrl}/glossary/${term.slug}`,
     lastModified: now,
@@ -120,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Persona pages (10)
+  // Personas (10)
   const personaPages: MetadataRoute.Sitemap = targetPersonas.map((persona) => ({
     url: `${baseUrl}/for/${persona.slug}`,
     lastModified: now,
@@ -128,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Location pages (164)
+  // Locations (164)
   const locationPages: MetadataRoute.Sitemap = seoLocations.map((location) => ({
     url: `${baseUrl}/ai-seo-agency/${location.slug}`,
     lastModified: now,
@@ -136,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Integration pages (14)
+  // Integrations (14)
   const integrationPages: MetadataRoute.Sitemap = seoIntegrations.map((integration) => ({
     url: `${baseUrl}/integrations/${integration.slug}`,
     lastModified: now,
@@ -144,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Industry pages (20)
+  // Industries (20)
   const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
     url: `${baseUrl}/industries/${industry.slug}`,
     lastModified: now,
@@ -152,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Use case pages (18)
+  // Use Cases (18)
   const useCasePages: MetadataRoute.Sitemap = useCases.map((useCase) => ({
     url: `${baseUrl}/use-cases/${useCase.slug}`,
     lastModified: now,
@@ -160,7 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Comparison pages (~25)
+  // Tool Comparisons (~25)
   const comparisonPages: MetadataRoute.Sitemap = [];
   for (let i = 0; i < seoTools.length; i++) {
     for (let j = i + 1; j < seoTools.length; j++) {
@@ -176,11 +111,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // ============================================================================
-  // TIER 3: TWO-WAY COMBINATION PAGES
-  // These are included in this main sitemap as they're under 50K total
+  // TIER 2: TWO-WAY COMBINATIONS (6,760 pages)
   // ============================================================================
 
-  // Persona + Location (10 × 164 = 1,640)
+  // Persona × Location (1,640)
   const personaLocationPages: MetadataRoute.Sitemap = [];
   targetPersonas.forEach((persona) => {
     seoLocations.forEach((location) => {
@@ -188,12 +122,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/for/${persona.slug}/${location.slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
-        priority: 0.6,
+        priority: 0.7,
       });
     });
   });
 
-  // Industry + Location (20 × 164 = 3,280)
+  // Industry × Location (3,280)
   const industryLocationPages: MetadataRoute.Sitemap = [];
   industries.forEach((industry) => {
     seoLocations.forEach((location) => {
@@ -201,12 +135,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/industries/${industry.slug}/${location.slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
-        priority: 0.6,
+        priority: 0.7,
       });
     });
   });
 
-  // Glossary + Industry (60 × 20 = 1,200)
+  // Glossary × Industry (1,200)
   const glossaryIndustryPages: MetadataRoute.Sitemap = [];
   seoGlossaryTerms.forEach((term) => {
     industries.forEach((industry) => {
@@ -214,12 +148,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/glossary/${term.slug}/for-${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
-        priority: 0.5,
+        priority: 0.6,
       });
     });
   });
 
-  // Use case + Industry (18 × 20 = 360)
+  // UseCase × Industry (360)
   const useCaseIndustryPages: MetadataRoute.Sitemap = [];
   useCases.forEach((useCase) => {
     industries.forEach((industry) => {
@@ -232,7 +166,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Integration + Industry (14 × 20 = 280)
+  // Integration × Industry (280)
   const integrationIndustryPages: MetadataRoute.Sitemap = [];
   seoIntegrations.forEach((integration) => {
     industries.forEach((industry) => {
@@ -240,27 +174,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/integrations/${integration.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly' as const,
-        priority: 0.5,
+        priority: 0.6,
       });
     });
   });
 
-  // Current total: ~7,000 URLs (well under 50K limit)
-  // Three-way combinations will be in separate sitemap files
-  
+  // ============================================================================
+  // TIER 3: THREE-WAY COMBINATIONS (32,800 pages)
+  // Persona × Industry × Location - highest value 3-way combo
+  // ============================================================================
+
+  const personaIndustryLocationPages: MetadataRoute.Sitemap = [];
+  targetPersonas.forEach((persona) => {
+    industries.forEach((industry) => {
+      seoLocations.forEach((location) => {
+        personaIndustryLocationPages.push({
+          url: `${baseUrl}/for/${persona.slug}/${industry.slug}/${location.slug}`,
+          lastModified: now,
+          changeFrequency: 'monthly' as const,
+          priority: 0.5,
+        });
+      });
+    });
+  });
+
+  // ============================================================================
+  // TOTAL: ~40K pages (all statically generated)
+  // ============================================================================
+
   return [
-    ...highPriorityPages,
-    ...glossaryPages,
-    ...personaPages,
-    ...locationPages,
-    ...integrationPages,
-    ...industryPages,
-    ...useCasePages,
-    ...comparisonPages,
-    ...personaLocationPages,
-    ...industryLocationPages,
-    ...glossaryIndustryPages,
-    ...useCaseIndustryPages,
-    ...integrationIndustryPages,
+    ...indexPages,                    // 11
+    ...glossaryPages,                 // 60
+    ...personaPages,                  // 10
+    ...locationPages,                 // 164
+    ...integrationPages,              // 14
+    ...industryPages,                 // 20
+    ...useCasePages,                  // 18
+    ...comparisonPages,               // ~25
+    ...personaLocationPages,          // 1,640
+    ...industryLocationPages,         // 3,280
+    ...glossaryIndustryPages,         // 1,200
+    ...useCaseIndustryPages,          // 360
+    ...integrationIndustryPages,      // 280
+    ...personaIndustryLocationPages,  // 32,800
   ];
 }
