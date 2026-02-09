@@ -105,15 +105,15 @@ export const LogoStrip: React.FC<LogoStripProps> = ({
   className = ''
 }) => {
   const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12'
+    sm: 'h-10 w-10',
+    md: 'h-12 w-12',
+    lg: 'h-14 w-14'
   };
 
   const imgSizeClasses = {
-    sm: 'w-5 h-5',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8'
+    sm: 'w-6 h-6',
+    md: 'w-7 h-7',
+    lg: 'w-9 h-9'
   };
 
   return (
@@ -121,7 +121,7 @@ export const LogoStrip: React.FC<LogoStripProps> = ({
       {label && (
         <p className="text-gray-500 text-xs uppercase tracking-wider mb-3 text-center">{label}</p>
       )}
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap items-center justify-center gap-5">
         {companies.map((company, index) => (
           <div 
             key={index}
