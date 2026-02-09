@@ -46,8 +46,9 @@ export const PoweredBy = () => {
     { name: "HubSpot", domain: "hubspot.com" },
   ];
 
+  // Using domain lookup with size and format parameters
   const getLogoUrl = (domain: string) => {
-    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_KEY}`;
+    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_KEY}&size=128&format=png`;
   };
 
   return (
@@ -70,12 +71,12 @@ export const PoweredBy = () => {
                 key={index}
                 className="group flex flex-col items-center justify-center p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-gray-600 hover:bg-gray-800/50 transition-all duration-300"
               >
-                <div className="h-12 w-full flex items-center justify-center mb-3">
+                <div className="h-16 w-16 flex items-center justify-center mb-3 bg-white rounded-xl p-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={getLogoUrl(tool.domain)}
                     alt={`${tool.name} logo`}
-                    className="h-10 w-auto max-w-[100px] object-contain"
-                    loading="lazy"
+                    className="w-10 h-10 object-contain"
                   />
                 </div>
                 <div className="text-sm font-medium text-white">{tool.name}</div>
@@ -86,22 +87,22 @@ export const PoweredBy = () => {
           {/* Integrations - Logo Strip */}
           <div className="text-center">
             <p className="text-gray-500 text-sm mb-8">Integrates seamlessly with</p>
-            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-12 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 max-w-4xl mx-auto">
               {integrations.map((integration, index) => (
                 <div 
                   key={index}
-                  className="group flex flex-col items-center gap-3"
+                  className="group flex flex-col items-center gap-2"
                   title={integration.name}
                 >
-                  <div className="h-10 flex items-center justify-center">
+                  <div className="h-14 w-14 flex items-center justify-center bg-white rounded-xl p-2.5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={getLogoUrl(integration.domain)}
                       alt={`${integration.name} logo`}
-                      className="h-8 w-auto max-w-[80px] object-contain"
-                      loading="lazy"
+                      className="w-9 h-9 object-contain"
                     />
                   </div>
-                  <span className="text-xs text-gray-500">{integration.name}</span>
+                  <span className="text-xs text-gray-400">{integration.name}</span>
                 </div>
               ))}
             </div>
