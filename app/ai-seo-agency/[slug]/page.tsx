@@ -7,12 +7,16 @@ interface PageProps {
   params: { slug: string };
 }
 
-// Generate static paths at build time
+// Pre-generate top 20 locations, rest use ISR
 export async function generateStaticParams() {
-  return seoLocations.map((location) => ({
+  // Only pre-build the top 20 most important locations
+  return seoLocations.slice(0, 20).map((location) => ({
     slug: location.slug,
   }));
 }
+
+// Enable ISR - pages regenerate every 24 hours  
+export const revalidate = 86400;
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

@@ -8,13 +8,13 @@ interface PageProps {
   params: { slug: string; industry: string };
 }
 
+// Don't pre-generate all combinations - use ISR instead
 export async function generateStaticParams() {
-  const slugs = getAllUseCaseIndustrySlugs();
-  return slugs.map(slug => {
-    const [useCase, industry] = slug.split('/');
-    return { slug: useCase, industry };
-  });
+  return [];
 }
+
+// Enable ISR - pages regenerate every 24 hours
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const page = generateUseCaseIndustryPage(params.slug, params.industry);

@@ -14,11 +14,12 @@ import {
  * 
  * Google Crawler Considerations:
  * - Timeout: ~5-10 seconds per page
- * - All pages here use generateStaticParams() = pre-built at deploy
- * - Googlebot receives instant HTML response (<100ms)
- * - No server-side computation during crawl
+ * - Core pages pre-built at deploy time
+ * - Combination pages use ISR (generated on first request, cached for 24h)
+ * - Googlebot receives fast response (instant for cached, ~2s for first visit)
  * 
- * Total: ~40K pages (all statically generated)
+ * Strategy: All URLs in sitemap, but ISR handles on-demand generation
+ * This keeps build time under 2 minutes while maintaining full SEO coverage
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {

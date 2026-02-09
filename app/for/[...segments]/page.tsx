@@ -23,32 +23,24 @@ interface PageProps {
  * - /for/[persona]/[industry]/[location] - persona + industry + location combo
  */
 
+// Only pre-generate the most important pages at build time
+// Other pages will be generated on-demand with ISR
 export async function generateStaticParams() {
   const params: { segments: string[] }[] = [];
   
-  // Single persona pages: /for/[persona]
+  // Single persona pages: /for/[persona] - Always pre-build (10 pages)
   targetPersonas.forEach((persona) => {
     params.push({ segments: [persona.slug] });
   });
   
-  // Persona + Location pages: /for/[persona]/[location]
-  targetPersonas.forEach((persona) => {
-    seoLocations.forEach((location) => {
-      params.push({ segments: [persona.slug, location.slug] });
-    });
-  });
-  
-  // Persona + Industry + Location pages: /for/[persona]/[industry]/[location]
-  targetPersonas.forEach((persona) => {
-    industries.forEach((industry) => {
-      seoLocations.forEach((location) => {
-        params.push({ segments: [persona.slug, industry.slug, location.slug] });
-      });
-    });
-  });
+  // Skip pre-generating combinations - they'll be generated on-demand
+  // This reduces build from ~40K pages to ~300 pages
   
   return params;
 }
+
+// Enable ISR - pages regenerate every 24 hours
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { segments } = params;

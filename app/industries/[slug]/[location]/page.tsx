@@ -8,13 +8,15 @@ interface PageProps {
   params: { slug: string; location: string };
 }
 
+// Don't pre-generate all combinations - use ISR instead
+// Pages will be generated on first request and cached
 export async function generateStaticParams() {
-  const slugs = getAllIndustryLocationSlugs();
-  return slugs.map(slug => {
-    const [industry, location] = slug.split('/');
-    return { slug: industry, location };
-  });
+  // Return empty array - all pages generated on-demand
+  return [];
 }
+
+// Enable ISR - pages regenerate every 24 hours
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const page = generateIndustryLocationPage(params.slug, params.location);
