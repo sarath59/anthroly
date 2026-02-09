@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Check, Star, Zap } from 'lucide-react';
+import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 
 export const Pricing = () => {
@@ -25,74 +25,163 @@ export const Pricing = () => {
     return () => observer.disconnect();
   }, []);
 
+  const includedFeatures = [
+    "AI Crawler Analysis & Optimization",
+    "AI Visibility Monitoring 24/7",
+    "30 SEO-Optimized Blogs/Month",
+    "20-30 High-DR Backlinks/Month",
+    "Programmatic SEO Implementation",
+    "10 Free Tools Built for Your Site",
+    "LinkedIn, X, Medium Articles",
+    "Weekly Performance Reports",
+    "Competitor Analysis & Intel",
+    "Technical SEO Audits & Fixes",
+    "Keyword Research & Strategy",
+    "Priority Email Support"
+  ];
+
   return (
-    <section id="pricing" ref={sectionRef} className="py-20 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-black text-white relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] animate-pulse"></div>
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">One Simple Price.</h2>
-          <p className="text-xl text-gray-400">
-            No confusing tiers. No hidden fees. Just massive growth.
+        {/* Section Header */}
+        <div className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
+            <Sparkles size={16} />
+            <span>Limited Time Offer</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Start Your 60-Day Trial
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
+            Everything you've seen above. <span className="text-white font-semibold">$99/month for 60 days.</span> No contracts. No hidden fees. Cancel anytime. After 60 days, pricing is based on results — we only win when you win.
           </p>
         </div>
 
-        <div className={`max-w-lg mx-auto transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        {/* Pricing Card */}
+        <div className={`max-w-xl mx-auto transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-            <div className="relative bg-gray-900 rounded-3xl p-6 md:p-12 border border-gray-800">
+            {/* Glow Effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            
+            <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
               
-              <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-white text-black text-sm font-bold px-4 py-2 rounded-full transform rotate-12 shadow-lg flex items-center gap-1">
-                <Star size={14} fill="black" />
-                BEST VALUE
-              </div>
-
-              <div className="text-center mb-10">
-                <h3 className="text-2xl font-medium text-gray-300 mb-2">The Growth Engine</h3>
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-7xl font-bold text-white">$99</span>
-                  <span className="text-gray-400 text-xl">/month</span>
+              {/* Best Value Badge */}
+              <div className="absolute top-0 right-0 -mt-4 -mr-4">
+                <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-4 py-2 rounded-full transform rotate-12 shadow-lg flex items-center gap-1">
+                  <Star size={14} fill="black" />
+                  60-DAY TRIAL
                 </div>
-                <p className="text-gray-400 mt-4">Pause or cancel anytime.</p>
               </div>
 
-              <ul className="space-y-4 mb-10">
-                {[
-                  '24/7 AI Agents for Backlinks',
-                  'Keyword Research & Strategy',
-                  'SEO Optimization',
-                  'Automated Outreach',
-                  'Competitor Analysis',
-                  'Monthly Performance Report',
-                  'Priority Email Support'
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <div className="mt-1 flex-shrink-0 w-5 h-5 bg-green-500/20 rounded-full flex items-center justify-center">
-                      <Check size={12} className="text-green-500" />
-                    </div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              {/* Header */}
+              <div className="text-center mb-10">
+                <h3 className="text-xl text-gray-400 mb-4">The Complete AI Growth Engine</h3>
+                
+                {/* Price Display */}
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <div className="flex items-baseline">
+                    <span className="text-7xl md:text-8xl font-bold text-white">$99</span>
+                    <span className="text-gray-400 text-xl ml-2">/month</span>
+                  </div>
+                </div>
+                
+                {/* Trial Info */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400 text-sm mb-4">
+                  <Clock size={16} />
+                  <span>For first 60 days — then results-based pricing</span>
+                </div>
+                
+                <p className="text-gray-500">
+                  Cancel anytime. No questions asked.
+                </p>
+              </div>
 
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+                {includedFeatures.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3 text-gray-300">
+                    <div className="mt-1 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                      <Check size={12} className="text-emerald-500" />
+                    </div>
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
               <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer" className="block w-full">
-                <Button className="w-full h-14 text-lg bg-white text-black hover:bg-gray-200 rounded-xl font-bold shadow-lg shadow-white/10 transition-all hover:scale-[1.02]">
-                  Get Started Now
-                  <Zap className="ml-2 fill-black" size={20} />
+                <Button className="w-full h-16 text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
+                  Start 60-Day Trial — $99/mo
+                  <ArrowRight className="ml-2" size={22} />
                 </Button>
               </a>
               
               <p className="text-center text-xs text-gray-500 mt-6">
-                Limited spots available at this pricing tier.
+                Limited spots available. Pricing increases after trial period.
               </p>
 
-              {/* Guarantee Mini-Badge */}
-              <div className="mt-8 pt-6 border-t border-gray-800">
-                <p className="text-xs text-center text-gray-400 leading-relaxed">
-                  <span className="text-cyan-400 font-bold block mb-1">GUARANTEE</span>
-                  Free month if we miss our backlink targets.
+              {/* Guarantee */}
+              <div className="mt-8 pt-8 border-t border-gray-800">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <Shield className="text-emerald-400" size={24} />
+                  <span className="text-lg font-bold">Risk-Free Guarantee</span>
+                </div>
+                <p className="text-sm text-center text-gray-400 leading-relaxed max-w-md mx-auto">
+                  If we can't deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 70-90) per month, we'll <span className="text-white font-semibold">refund your payment AND give you a free month.</span> Zero risk.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Post-Trial Pricing Info */}
+        <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-2xl font-bold mb-4">After 60 Days: Results-Based Pricing</h3>
+          <p className="text-gray-400 leading-relaxed mb-6">
+            We believe in earning our keep. After your trial, pricing is based on the actual results we deliver — traffic growth, backlinks acquired, and rankings improved. If we don't perform, you don't pay premium rates. Simple as that.
+          </p>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
+              <div className="text-2xl font-bold text-emerald-400 mb-1">Fair</div>
+              <div className="text-xs text-gray-500">Pay for results, not promises</div>
+            </div>
+            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
+              <div className="text-2xl font-bold text-emerald-400 mb-1">Aligned</div>
+              <div className="text-xs text-gray-500">We win when you win</div>
+            </div>
+            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
+              <div className="text-2xl font-bold text-emerald-400 mb-1">Flexible</div>
+              <div className="text-xs text-gray-500">Scales with your growth</div>
+            </div>
+          </div>
+        </div>
+
+        {/* ROI Calculator Callout */}
+        <div className={`mt-16 max-w-4xl mx-auto transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20 rounded-3xl">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
+              <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We're delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $99.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-5 bg-black/50 rounded-xl">
+                  <div className="text-3xl font-bold text-white mb-1">$2,000+</div>
+                  <div className="text-sm text-gray-500">What agencies charge for this</div>
+                </div>
+                <div className="p-5 bg-black/50 rounded-xl">
+                  <div className="text-3xl font-bold text-white mb-1">100+ hrs</div>
+                  <div className="text-sm text-gray-500">Time saved per month</div>
+                </div>
+                <div className="p-5 bg-black/50 rounded-xl">
+                  <div className="text-3xl font-bold text-emerald-400 mb-1">95%</div>
+                  <div className="text-sm text-gray-500">Cost savings with us</div>
+                </div>
               </div>
             </div>
           </div>
