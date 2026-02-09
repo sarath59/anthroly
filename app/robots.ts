@@ -76,6 +76,6 @@ export default function robots(): MetadataRoute.Robots {
     ],
     // Single sitemap - all ~40K pages are statically generated
     // This ensures instant response to Google crawler (no timeout risk)
-    sitemap: 'https://anthroly.com/sitemap.xml',
+    sitemap: 'https://www.anthroly.com/sitemap.xml',
   };
 }

@@ -22,7 +22,7 @@ import {
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://anthroly.com';
+  const baseUrl = 'https://www.anthroly.com';
   const now = new Date();
   
   // ============================================================================
