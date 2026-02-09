@@ -173,7 +173,7 @@ export default function GlossaryIndexPage() {
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Start for $99/month
+                Start for $350/month
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>

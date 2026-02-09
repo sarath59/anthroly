@@ -76,7 +76,7 @@ export const FinalCTA = () => {
           <div className="flex flex-col items-center gap-6 mb-12">
             <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
-                Start 60-Day Trial — $99/mo
+                Start 60-Day Trial — $350/mo
                 <ArrowRight className="ml-3" size={24} />
               </Button>
             </a>

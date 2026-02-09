@@ -55,10 +55,10 @@ export const Pricing = () => {
             <span>💰 This would cost $8,500/mo at a traditional agency</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            $99 to Change Everything
+            $350 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 25 backlinks + 10 tools = $12,000+ value.</span> Get it all for less than your Netflix and Spotify combined. 60 days to prove it works. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">30 blogs + 25 backlinks + 10 tools = $12,000+ value.</span> Get it all for 73% less than agencies. 60 days to prove it works. No contracts. Cancel anytime.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const Pricing = () => {
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <div className="flex items-baseline">
-                    <span className="text-7xl md:text-8xl font-bold text-white">$99</span>
+                    <span className="text-7xl md:text-8xl font-bold text-white">$350</span>
                     <span className="text-gray-400 text-xl ml-2">/month</span>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export const Pricing = () => {
               {/* CTA Button */}
               <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button className="w-full h-16 text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
-                  Start 60-Day Trial — $99/mo
+                  Start 60-Day Trial — $350/mo
                   <ArrowRight className="ml-2" size={22} />
                 </Button>
               </a>
@@ -179,7 +179,7 @@ export const Pricing = () => {
             </div>
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            <span className="text-emerald-400 font-medium">Founding members:</span> Lock in your $99/mo rate permanently, regardless of tier.
+            <span className="text-emerald-400 font-medium">Founding members:</span> Lock in your $350/mo rate permanently, regardless of tier.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $99.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $350.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">

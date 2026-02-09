@@ -28,7 +28,7 @@ export const FoundingMembers = () => {
     {
       icon: Sparkles,
       title: "Locked-In Pricing",
-      description: "Founding members keep their $99/mo rate even after we raise prices"
+      description: "Founding members keep their $350/mo rate even after we raise prices"
     },
     {
       icon: TrendingUp,
