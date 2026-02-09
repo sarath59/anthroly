@@ -140,25 +140,47 @@ export const Pricing = () => {
         </div>
 
         {/* Post-Trial Pricing Info */}
-        <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h3 className="text-2xl font-bold mb-4">After 60 Days: Results-Based Pricing</h3>
-          <p className="text-gray-400 leading-relaxed mb-6">
-            We believe in earning our keep. After your trial, pricing is based on the actual results we deliver — traffic growth, backlinks acquired, and rankings improved. If we don&apos;t perform, you don&apos;t pay premium rates. Simple as that.
+        <div className={`mt-16 max-w-4xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-2xl font-bold mb-4">After 60 Days: Transparent Pricing Tiers</h3>
+          <p className="text-gray-400 leading-relaxed mb-8">
+            No surprises. Based on your results and growth needs, we&apos;ll recommend one of these tiers:
           </p>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
-              <div className="text-2xl font-bold text-emerald-400 mb-1">Fair</div>
-              <div className="text-xs text-gray-500">Pay for results, not promises</div>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-left">
+              <div className="text-emerald-400 text-sm font-semibold mb-2">GROWTH</div>
+              <div className="text-3xl font-bold text-white mb-2">$199<span className="text-lg text-gray-500">/mo</span></div>
+              <p className="text-sm text-gray-500 mb-4">For early-stage startups</p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• 15 blogs/month</li>
+                <li>• 10-15 backlinks</li>
+                <li>• Core AI features</li>
+              </ul>
             </div>
-            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
-              <div className="text-2xl font-bold text-emerald-400 mb-1">Aligned</div>
-              <div className="text-xs text-gray-500">We win when you win</div>
+            <div className="p-6 bg-gray-900/80 border border-emerald-500/30 rounded-xl text-left relative">
+              <div className="absolute -top-3 right-4 px-3 py-1 bg-emerald-500 text-black text-xs font-bold rounded-full">POPULAR</div>
+              <div className="text-emerald-400 text-sm font-semibold mb-2">SCALE</div>
+              <div className="text-3xl font-bold text-white mb-2">$349<span className="text-lg text-gray-500">/mo</span></div>
+              <p className="text-sm text-gray-500 mb-4">For growing companies</p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• 30 blogs/month</li>
+                <li>• 20-30 backlinks</li>
+                <li>• Full AI suite + tools</li>
+              </ul>
             </div>
-            <div className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl">
-              <div className="text-2xl font-bold text-emerald-400 mb-1">Flexible</div>
-              <div className="text-xs text-gray-500">Scales with your growth</div>
+            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-left">
+              <div className="text-emerald-400 text-sm font-semibold mb-2">ENTERPRISE</div>
+              <div className="text-3xl font-bold text-white mb-2">$499<span className="text-lg text-gray-500">/mo</span></div>
+              <p className="text-sm text-gray-500 mb-4">For serious scale</p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Unlimited content</li>
+                <li>• 40+ backlinks</li>
+                <li>• White-label option</li>
+              </ul>
             </div>
           </div>
+          <p className="text-sm text-gray-500 mt-6">
+            <span className="text-emerald-400 font-medium">Founding members:</span> Lock in your $99/mo rate permanently, regardless of tier.
+          </p>
         </div>
 
         {/* ROI Calculator Callout */}

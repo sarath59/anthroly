@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { PoweredBy } from "@/components/sections/PoweredBy";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { AICrawlerAnalysis } from "@/components/sections/AICrawlerAnalysis";
 import { AIVisibilityMonitor } from "@/components/sections/AIVisibilityMonitor";
@@ -10,6 +11,8 @@ import { SocialArticles } from "@/components/sections/SocialArticles";
 import { FreeToolsBuilder } from "@/components/sections/FreeToolsBuilder";
 import { GrowthHacks } from "@/components/sections/GrowthHacks";
 import { WhoIsThisFor } from "@/components/sections/WhoIsThisFor";
+import { FounderStory } from "@/components/sections/FounderStory";
+import { FoundingMembers } from "@/components/sections/FoundingMembers";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -18,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <PoweredBy />
       <ProblemSolution />
       <AICrawlerAnalysis />
       <AIVisibilityMonitor />
@@ -29,6 +33,8 @@ export default function Home() {
       <FreeToolsBuilder />
       <GrowthHacks />
       <WhoIsThisFor />
+      <FounderStory />
+      <FoundingMembers />
       <Pricing />
       <FAQ />
       <FinalCTA />

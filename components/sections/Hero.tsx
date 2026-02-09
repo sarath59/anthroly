@@ -89,11 +89,14 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           
-          {/* VC-Style Badge - Social Proof */}
+          {/* Badges - Social Proof + Urgency */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl border border-emerald-500/30 rounded-full text-sm font-semibold">
               <Sparkles size={16} className="text-emerald-400" />
               <span className="text-emerald-300">The First AI-Native SEO/GEO Agency</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-xl border border-amber-500/30 rounded-full text-sm font-semibold animate-pulse">
+              <span className="text-amber-300">🔥 Founding Member Pricing: 12 spots left</span>
             </div>
           </div>
 
