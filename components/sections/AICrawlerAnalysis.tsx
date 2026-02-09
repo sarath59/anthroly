@@ -57,13 +57,13 @@ export const AICrawlerAnalysis = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
-            <span>Service 01</span>
+            <span>📈 Websites optimized for AI see 312% more referral traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            AI Crawler Analysis
+            Your Site is Invisible to 1.8 Billion AI Users
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Google is just the beginning.</span> The future of search is AI — and most websites are completely invisible to it. Our proprietary AI crawler shows you exactly where you stand and what to fix.
+            <span className="text-white font-semibold">97% of websites fail AI visibility tests.</span> Our proprietary crawler analyzes how ChatGPT, Perplexity, and Claude see your site — and reveals the exact fixes to get recommended.
           </p>
         </div>
 

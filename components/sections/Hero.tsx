@@ -100,17 +100,18 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Main Heading - Pattern Interrupt + Curiosity */}
+          {/* Main Heading - Future-Pacing Fear + Direct Question */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            <span className="block text-white mb-2">Your Competitors Are Already</span>
+            <span className="block text-white mb-2">In 6 Months, 90% of Buying Decisions</span>
+            <span className="block text-white mb-2">Will Start with AI.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              Invisible to AI Search.
+              Will It Recommend You?
             </span>
           </h1>
 
-          {/* Subheadline - Amplify the Problem + Hint at Solution */}
+          {/* Subheadline - Data-Driven Urgency */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto mb-10 leading-relaxed">
-            ChatGPT, Perplexity, and Claude are replacing Google. <span className="text-white font-semibold">40% of searches now happen through AI.</span> If these systems can&apos;t find you, millions of potential customers will never know you exist.
+            <span className="text-white font-semibold">ChatGPT has 200M+ weekly users.</span> Perplexity processes 100M+ queries daily. Google SGE is rolling out to 1B+ users. <span className="text-emerald-400 font-semibold">The businesses AI recommends will capture 73% of market share.</span> The rest will fight for scraps.
           </p>
 
           {/* AI Terminal Simulation - Demonstration of Power */}

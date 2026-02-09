@@ -67,13 +67,13 @@ export const AIBacklinkAgents = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
             <Link2 size={16} />
-            <span>Service 04</span>
+            <span>🔗 #1 Google ranking factor — backlinks drive 58% of ranking power</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            AI Backlink Agents
+            Backlinks That Cost Others $500 Each. Free for You.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Backlinks are the #1 ranking factor Google uses. But getting them manually takes months and costs thousands. Our AI agents acquire <span className="text-white font-semibold">20-30 high-DR backlinks monthly</span> — automatically.
+            <span className="text-white font-semibold">One DR 80+ backlink costs $350-$1,000.</span> We deliver 20-30 monthly. That&apos;s $7,000-$30,000 in value — included in your $99. Our AI agents do the outreach humans can&apos;t scale.
           </p>
         </div>
 

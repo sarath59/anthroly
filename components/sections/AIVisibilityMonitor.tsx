@@ -37,13 +37,13 @@ export const AIVisibilityMonitor = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Activity size={16} />
-            <span>Service 02</span>
+            <span>⚡ Rankings fluctuate 23% weekly — most businesses never notice</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            AI Visibility Monitors
+            Know The Moment AI Stops Recommending You
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Your search rankings change every hour. AI citations appear and disappear overnight. <span className="text-white font-semibold">Without constant monitoring, you&apos;re flying blind.</span> We watch everything — so you don&apos;t have to.
+            <span className="text-white font-semibold">AI algorithms update 500+ times per year.</span> One change can erase your visibility overnight. Our 24/7 monitors alert you within minutes — before your competitors even notice.
           </p>
         </div>
 

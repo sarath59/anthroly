@@ -43,13 +43,13 @@ export const AutomatedReports = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <FileText size={16} />
-            <span>Service 06</span>
+            <span>📊 72% of marketers can&apos;t prove SEO ROI — you will</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Weekly Automated Reports
+            Every Dollar Tracked. Every Result Proven.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            No more guessing if things are working. Every week, you get a comprehensive report showing exactly what we did, what&apos;s improving, and what&apos;s coming next.
+            <span className="text-white font-semibold">&quot;What did we get for our money?&quot;</span> — the question that kills agency relationships. Our weekly reports show every action, every metric, every win. No black boxes. No BS.
           </p>
         </div>
 

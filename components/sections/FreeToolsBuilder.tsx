@@ -41,13 +41,13 @@ export const FreeToolsBuilder = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-semibold mb-6 border border-teal-500/30">
             <Wrench size={16} />
-            <span>Service 08</span>
+            <span>🛠️ Free tools generate 4x more backlinks than blog posts</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            10 Free Tools Every Month
+            10 Lead Magnets Built Monthly. Zero Dev Time.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Free tools are traffic magnets. They get shared, bookmarked, and linked to. We build <span className="text-white font-semibold">10 custom tools for your website every month</span> — calculators, generators, analyzers — whatever your audience needs.
+            <span className="text-white font-semibold">Ahrefs&apos; free tools drive 2.5M visits/month.</span> Calculators convert 47% better than content. We build custom tools that capture emails, earn backlinks, and make AI recommend you as a resource.
           </p>
         </div>
 

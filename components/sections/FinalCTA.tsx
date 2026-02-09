@@ -41,20 +41,20 @@ export const FinalCTA = () => {
           {/* Urgency Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full text-sm font-semibold mb-8 animate-pulse">
             <Clock size={16} className="text-orange-400" />
-            <span className="text-orange-300">Limited spots at $99/month — Price increases soon</span>
+            <span className="text-orange-300">⏰ Founding member pricing ends when we hit 20 clients</span>
           </div>
 
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-            Your Competitors Are <br className="hidden md:block" />
+            6 Months From Now, <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              Already Ranking.
+              You&apos;ll Wish You Started Today.
             </span>
           </h2>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Every day you wait is another day they&apos;re building authority, capturing keywords, and getting recommended by AI. The best time to start SEO was a year ago. The second best time is <span className="text-white font-semibold">right now.</span>
+            <span className="text-white font-semibold">SEO compounds at 10-20% monthly.</span> Starting now vs. 6 months later means 2-3x more traffic by year end. While you&apos;re reading this, your competitors are ranking. The math is simple. The decision is yours.
           </p>
 
           {/* What You Get Summary */}

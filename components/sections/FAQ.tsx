@@ -78,13 +78,13 @@ export const FAQ = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-semibold mb-6 border border-gray-700">
             <HelpCircle size={16} />
-            <span>Got Questions?</span>
+            <span>🤔 87% of buyers have questions before purchasing</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Frequently Asked Questions
+            Your Questions. Straight Answers.
           </h2>
           <p className="text-xl text-gray-400">
-            Everything you need to know before getting started.
+            No fluff, no jargon. Just the truth about what we do and how it works.
           </p>
         </div>
 

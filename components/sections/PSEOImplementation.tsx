@@ -41,13 +41,13 @@ export const PSEOImplementation = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 text-violet-300 rounded-full text-sm font-semibold mb-6 border border-violet-500/30">
             <Layers size={16} />
-            <span>Service 05</span>
+            <span>🚀 Zapier used pSEO to capture 4.5M monthly visits</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            pSEO Implementation
+            1,000+ Pages. 1 Click. Infinite Keywords.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Programmatic SEO is the secret weapon of the fastest-growing companies. We create <span className="text-white font-semibold">thousands of targeted landing pages</span> automatically — each one optimized for specific keywords and user intent.
+            <span className="text-white font-semibold">Canva ranks for 9M keywords with pSEO.</span> Tripadvisor owns 280M pages. Now this enterprise strategy is available to you. We build templated, SEO-optimized pages at scale.
           </p>
         </div>
 

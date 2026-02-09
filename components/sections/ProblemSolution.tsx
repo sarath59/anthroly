@@ -28,14 +28,17 @@ export const ProblemSolution = () => {
     <section ref={sectionRef} className="py-24 md:py-32 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
+            <span>📊 91% of SEO campaigns fail to deliver ROI within 12 months</span>
+          </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Why Most SEO Efforts Fail
+            Why $4.7B is Wasted on SEO Every Year
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              (And How We&apos;re Different)
+              (And How to Be the Exception)
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-            You&apos;ve probably tried SEO before. Maybe you hired an agency, bought some tools, or attempted to do it yourself. Let us guess how it went...
+            <span className="text-white font-semibold">68% of online experiences start with search.</span> Yet most businesses burn money on agencies that deliver reports instead of results. Here&apos;s what they don&apos;t tell you...
           </p>
         </div>
 

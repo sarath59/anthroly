@@ -57,13 +57,13 @@ export const AutomatedBlogs = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <PenTool size={16} />
-            <span>Service 03</span>
+            <span>📝 Companies publishing 16+ blogs/month get 3.5x more traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            30 Blogs Per Month
+            30 Ranking Blogs. Zero Writing.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Content is king, but creating it is exhausting. Our AI writes <span className="text-white font-semibold">30 SEO-optimized blog posts every month</span> — reviewed by humans for quality, published automatically, ranked on Google.
+            <span className="text-white font-semibold">HubSpot found blogs generate 67% more leads.</span> But who has time to write 30/month? Our AI creates, our humans review, your site ranks. Average time to first page: 47 days.
           </p>
         </div>
 

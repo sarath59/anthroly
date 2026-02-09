@@ -76,13 +76,13 @@ export const GrowthHacks = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Rocket size={16} />
-            <span>Bonus Strategies</span>
+            <span>💡 Top 1% of companies use 5+ growth channels — we give you 8</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Industry-Specific Growth Hacks
+            Your Industry&apos;s Secret Growth Playbook
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Every industry has unique opportunities. We don&apos;t just apply generic tactics — we deploy <span className="text-white font-semibold">proven growth strategies tailored to your specific business type</span>.
+            <span className="text-white font-semibold">Generic SEO fails. Industry-specific wins.</span> We&apos;ve analyzed 10,000+ successful campaigns to extract the exact tactics that work for SaaS, e-commerce, and service businesses.
           </p>
         </div>
 

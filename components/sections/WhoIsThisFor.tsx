@@ -80,14 +80,17 @@ export const WhoIsThisFor = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 mb-6">
+            <span>👥 82% of founders say SEO is important — only 12% actually do it</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Built for Builders Who
+            You Know SEO Matters.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              Don&apos;t Have Time for SEO
+              You Just Don&apos;t Have 20 Hours/Week.
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            Whether you&apos;re a solo founder or a Fortune 500, the problem is the same: <span className="text-white font-semibold">SEO takes too long, costs too much, and feels like a black box.</span> We fix all three.
+            <span className="text-white font-semibold">The average SEO campaign needs 15-20 hours weekly.</span> You have a business to run. We built Anthroly for ambitious teams who want enterprise results without enterprise resources.
           </p>
         </div>
 
