@@ -58,13 +58,13 @@ export const AICrawlerAnalysis = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
-            <span>📈 Websites optimized for AI see 312% more referral traffic</span>
+            <span>📈 Sites optimized for AI can see 3x more referral traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Your Site is Invisible to 1.8 Billion AI Users
+            Most Sites Are Invisible to AI Search (For Now)
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">97% of websites fail AI visibility tests.</span> Our proprietary crawler analyzes how ChatGPT, Perplexity, and Claude see your site — and reveals the exact fixes to get recommended.
+            <span className="text-white font-semibold">Most websites fail basic AI visibility checks.</span> Our crawler analyzes how ChatGPT, Perplexity, and Claude interpret your site — and reveals the exact fixes to get discovered and recommended.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export const AICrawlerAnalysis = () => {
                 <div className="text-center py-6">
                   <div className="text-6xl font-bold text-white mb-2">47<span className="text-3xl text-gray-500">/100</span></div>
                   <div className="text-orange-400 font-semibold">AI Visibility Score</div>
-                  <p className="text-gray-500 text-sm mt-2">You&apos;re losing 53% of potential AI traffic</p>
+                  <p className="text-gray-500 text-sm mt-2">You&apos;re leaving AI discovery traffic on the table</p>
                 </div>
                 
                 {/* Issues Found */}
@@ -165,7 +165,7 @@ export const AICrawlerAnalysis = () => {
 
             <div className="pt-4">
               <p className="text-sm text-gray-400 bg-gray-900/80 border border-gray-800 p-4 rounded-xl">
-                <span className="font-semibold text-white">Reality check:</span> By 2025, 40% of search queries will go through AI interfaces. Companies that adapt now will dominate. Those that wait will scramble.
+                <span className="font-semibold text-white">What the score measures:</span> indexability, structured data, entity clarity, answer coverage, and citation-readiness — the signals AI engines rely on to recommend a brand.
               </p>
             </div>
           </div>

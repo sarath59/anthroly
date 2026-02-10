@@ -21,12 +21,16 @@ const faqs = [
     answer: "AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. You get 15 of these pages per month, and they contribute to your 50+ AI brand mentions guarantee."
   },
   {
+    question: "What counts as an \"AI brand mention\" and how do you measure it?",
+    answer: "We count a mention when an AI engine recommends your brand (name, domain, product, or clearly attributable reference) in response to relevant queries we track. We monitor across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overview using a consistent prompt set and log the outputs over time so you can verify the mentions week-by-week."
+  },
+  {
     question: "What happens after the 30-day trial?",
     answer: "After 30 days, if you're happy with the results, we'll discuss new pricing. Your monthly cost will reflect the value we're delivering — more traffic, more backlinks, better rankings. We'll go through specific metrics and pricing with you at the end of your trial based on what we've achieved together."
   },
   {
     question: "Will these backlinks hurt my site? Are they safe?",
-    answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 70-90 average). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our guarantee backs this up — if anything we do hurts your rankings, we will fix it immediately."
+    answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 50-90, avg DR 70+). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our promise backs this up — if anything we do hurts your rankings, we will fix it immediately."
   },
   {
     question: "How much of my time does this require?",
@@ -38,7 +42,7 @@ const faqs = [
   },
   {
     question: "What if it does not work for me?",
-    answer: "That is what the guarantee is for. If we cannot deliver 20-30 high-quality backlinks per month with an average DR of 70-90, we will refund your payment and give you a free month of service. We have never had to honor this guarantee — but it is there so you have zero risk."
+    answer: "That is what the promise is for. If we cannot deliver 20-30 high-quality backlinks per month (DR 50-90, avg DR 70+), we will give you one free month of service. We have never had to honor this — but it is there so you have zero risk."
   },
   {
     question: "Do you offer white-label services for agencies?",

@@ -45,7 +45,7 @@ export const FreeToolsBuilder = () => {
             <span>🛠️ Free tools generate 4x more backlinks than blog posts</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            10 Lead Magnets Built Monthly. Zero Dev Time.
+            20 Lead Magnets Built Monthly. Zero Dev Time.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
             <span className="text-white font-semibold">Ahrefs&apos; free tools drive 2.5M visits/month.</span> Calculators convert 47% better than content. We build custom tools that capture emails, earn backlinks, and make AI recommend you as a resource.
@@ -172,7 +172,7 @@ export const FreeToolsBuilder = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-gray-400">Monthly output:</span>
-                  <span className="block text-2xl font-bold text-white">10 Custom Tools</span>
+                  <span className="block text-2xl font-bold text-white">20 Custom Tools</span>
                 </div>
                 <div className="text-right">
                   <span className="text-gray-400">Estimated traffic:</span>

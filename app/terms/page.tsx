@@ -90,16 +90,16 @@ export default function TermsPage() {
                 payment information and authorize us to charge the applicable fees.
               </p>
 
-              <h3 className="text-2xl font-semibold mb-4 mt-6 text-white">3.3 Refund Policy</h3>
+              <h3 className="text-2xl font-semibold mb-4 mt-6 text-white">3.3 Satisfaction Policy</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                We offer a satisfaction guarantee. If you are not satisfied with our services within the first 30 days, 
-                please contact us for a full refund. After 30 days, refunds will be evaluated on a case-by-case basis.
+                We offer a satisfaction promise. If we miss any core commitment during your first 30 days, we will provide
+                one free month of service. Reach out to our support team if you believe a commitment was missed.
               </p>
 
               <h3 className="text-2xl font-semibold mb-4 mt-6 text-white">3.4 Cancellation</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 You may cancel your subscription at any time. Cancellations will take effect at the end of your current 
-                billing period. No refunds will be provided for partial months.
+                billing period.
               </p>
             </section>
 

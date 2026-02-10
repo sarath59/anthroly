@@ -146,7 +146,7 @@ export const AutomatedBlogs = () => {
               <div className="flex items-start gap-3">
                 <Sparkles className="text-yellow-400 flex-shrink-0" size={20} />
                 <p className="text-sm text-gray-300">
-                  <span className="font-bold text-yellow-400">Why this matters:</span> Businesses that blog consistently get 67% more leads than those that don&apos;t. But who has time to write 30 articles a month? Now you do.
+                  <span className="font-bold text-yellow-400">Why this matters:</span> Businesses that publish consistently get dramatically more leads. But who has time to create 45 high-quality pages a month (blogs + AI Q&A)? Now you do.
                 </p>
               </div>
             </div>

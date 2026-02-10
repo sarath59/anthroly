@@ -84,7 +84,7 @@ export const FinalCTA = () => {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Shield size={16} className="text-emerald-400" />
-                <span>Results guaranteed</span>
+                <span>Results backed (1 free month if we miss)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap size={16} className="text-emerald-400" />

@@ -99,7 +99,7 @@ export const GuaranteedResults = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Shield size={16} />
-            <span>🛡️ Iron-Clad 30-Day Guarantee</span>
+            <span>🛡️ Iron-Clad 30-Day Commitments</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Results You Get in Your First 30 Days
@@ -272,7 +272,7 @@ export const GuaranteedResults = () => {
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-black/50 rounded-2xl">
                 <div className="text-center">
-                  <div className="text-sm text-gray-500 mb-1">Agency Cost</div>
+                  <div className="text-sm text-gray-500 mb-1">Replacement Cost</div>
                   <div className="text-3xl font-bold text-red-400 line-through">$28,500+</div>
                 </div>
                 <div className="text-4xl text-gray-600">→</div>
@@ -295,7 +295,7 @@ export const GuaranteedResults = () => {
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
             <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Promise</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, or <span className="text-white font-semibold">20 functional tools</span> in your first 30 days:
+              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
               <span>🎁 One Free Month of Service</span>

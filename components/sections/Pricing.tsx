@@ -59,7 +59,10 @@ export const Pricing = () => {
             $350 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 25 backlinks + 50+ AI mentions + 20 tools = $28,500+ value.</span> Get it all for 98% less than agencies. 30 days to prove it works. After 30 days, if you&apos;re happy with results, we&apos;ll discuss new pricing. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 20-30 backlinks + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $350. 30 days to prove it works. After 30 days, if you&apos;re happy with results, we&apos;ll discuss new pricing. No contracts. Cancel anytime.
+          </p>
+          <p className="text-sm md:text-base text-gray-500 mt-4">
+            <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
           </p>
         </div>
 
@@ -133,7 +136,7 @@ export const Pricing = () => {
                   <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-md mx-auto">
-                  If we can&apos;t deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 50-90) per month, we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span> Zero risk.
+                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (20-30 backlinks, 30 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
                 </p>
               </div>
             </div>

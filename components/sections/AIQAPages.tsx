@@ -152,7 +152,7 @@ export const AIQAPages = () => {
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">50+</div>
-                <div className="text-xs text-gray-500">AI Citations</div>
+                <div className="text-xs text-gray-500">AI Mentions</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">5</div>

@@ -30,10 +30,10 @@ export const ProblemSolution = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
-            <span>📊 91% of SEO campaigns fail to deliver ROI within 12 months</span>
+            <span>📊 Most SEO campaigns fail to show ROI fast enough</span>
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Why $4.7B is Wasted on SEO Every Year
+            Why Billions Are Wasted on SEO Every Year
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
               (And How to Be the Exception)
             </span>
@@ -121,7 +121,7 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Only DR 70-90 Backlinks</p>
+                  <p className="font-bold text-lg">Only High-Quality Backlinks</p>
                   <p className="text-gray-400">No spam. No PBNs. No risk. Only high-authority editorial links from real, trusted websites that Google loves.</p>
                 </div>
               </li>
@@ -136,7 +136,7 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg">Results-Backed Guarantee</p>
-                  <p className="text-gray-400">20-30 backlinks/month or your money back plus a free month. We&apos;ve never had to honor this. But it&apos;s there.</p>
+                  <p className="text-gray-400">20-30 backlinks/month or we give you one free month of service. We&apos;ve never had to honor this. But it&apos;s there.</p>
                 </div>
               </li>
             </ul>

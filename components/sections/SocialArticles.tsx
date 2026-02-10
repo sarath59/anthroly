@@ -59,13 +59,13 @@ export const SocialArticles = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Share2 size={16} />
-            <span>🌐 AI trains on social content — LinkedIn posts appear in 34% of AI answers</span>
+            <span>🌐 AI pulls from social content — be where it looks</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Be Everywhere AI Looks
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">ChatGPT cites LinkedIn 47M times monthly.</span> Medium articles rank in 67% of AI knowledge bases. We publish across all platforms so AI finds you no matter where it searches.
+            <span className="text-white font-semibold">AI engines cite social + publisher content millions of times.</span> We publish across high-authority platforms so your brand becomes the “default answer” — not your competitor.
           </p>
         </div>
 
@@ -198,7 +198,7 @@ export const SocialArticles = () => {
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="flex items-center justify-between">
                   <span className="text-gray-400">Monthly output:</span>
-                  <span className="text-emerald-400 font-bold">20+ articles across all platforms</span>
+                  <span className="text-emerald-400 font-bold">15 social articles across all platforms</span>
                 </div>
               </div>
             </div>

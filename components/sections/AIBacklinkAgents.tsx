@@ -39,7 +39,7 @@ export const AIBacklinkAgents = () => {
     {
       icon: Link2,
       title: "Link Acquisition",
-      description: "Secure placements on DR 70-90 sites through genuine value exchange"
+      description: "Secure placements on DR 50-90 sites through genuine value exchange"
     },
     {
       icon: Shield,
@@ -49,10 +49,10 @@ export const AIBacklinkAgents = () => {
   ];
 
   const recentBacklinks = [
-    { domain: "techcrunch.com", dr: 94, type: "Guest Post" },
-    { domain: "forbes.com", dr: 95, type: "Feature" },
-    { domain: "entrepreneur.com", dr: 91, type: "Interview" },
-    { domain: "inc.com", dr: 92, type: "Resource Link" }
+    { domain: "top-tech-publication.com", dr: 94, type: "Guest Post" },
+    { domain: "industry-news-site.com", dr: 90, type: "Feature" },
+    { domain: "founder-community.com", dr: 88, type: "Interview" },
+    { domain: "marketplace-directory.com", dr: 86, type: "Resource Link" }
   ];
 
   return (
@@ -68,10 +68,10 @@ export const AIBacklinkAgents = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
             <Link2 size={16} />
-            <span>🔗 #1 Google ranking factor — backlinks drive 58% of ranking power</span>
+            <span>🔗 One of Google&apos;s strongest ranking signals: authority links</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Backlinks That Cost Others $500 Each. Free for You.
+            Backlinks That Cost Others $500 Each. Included for You.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
             <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 20-30 monthly. That&apos;s $8,000-$30,000 in value — included in your $350. Our AI agents do the outreach humans can&apos;t scale.
@@ -108,7 +108,7 @@ export const AIBacklinkAgents = () => {
                 <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
               <p className="text-gray-300">
-                We guarantee <span className="text-orange-400 font-semibold">20-30 backlinks per month</span> with an average DR of 70-90. If we don&apos;t hit the target, you don&apos;t pay. It&apos;s that simple.
+                We commit to <span className="text-orange-400 font-semibold">20-30 backlinks per month</span> (DR 50-90, <span className="text-white font-semibold">avg DR 70+</span>). If we miss the target, you get <span className="text-white font-semibold">one free month of service</span>.
               </p>
             </div>
           </div>
@@ -118,8 +118,8 @@ export const AIBacklinkAgents = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
-                <div className="text-4xl font-bold text-white mb-1">70-90</div>
-                <div className="text-sm text-gray-500">Average DR Score</div>
+                <div className="text-4xl font-bold text-white mb-1">70+</div>
+                <div className="text-sm text-gray-500">Average DR</div>
               </div>
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
                 <div className="text-4xl font-bold text-white mb-1">20-30</div>

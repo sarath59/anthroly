@@ -74,7 +74,7 @@ export const Hero = () => {
     "AI Visibility Monitoring 24/7",
     "30 SEO Blogs/Month (AI + Human QA)",
     "15 AI Q&A Pages/Month (Rank on AI)",
-    "AI Backlink Agents (DR 70-90)",
+    "AI Backlink Agents (Avg DR 70+)",
     "pSEO Tool Pages Built Automatically",
     "20 Free Tools/Month for Your Site",
     "LinkedIn, X, Medium Articles",
@@ -112,7 +112,11 @@ export const Hero = () => {
 
           {/* Subheadline - Data-Driven Urgency */}
           <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-400 max-w-5xl mx-auto mb-12 leading-relaxed">
-            <span className="text-white font-semibold">ChatGPT has 800M weekly users.</span> Perplexity processes 100M+ queries daily. Google SGE is rolling out to 1B+ users. <span className="text-emerald-400 font-semibold">The businesses AI recommends will capture 73% of market share.</span> The rest will fight for scraps.
+            <span className="text-white font-semibold">Hundreds of millions now ask AI before they buy.</span> ChatGPT, Perplexity, and Google AI are shaping what people trust — and what they click. <span className="text-emerald-400 font-semibold">If AI can&apos;t understand you, it can&apos;t recommend you.</span>
+          </p>
+
+          <p className="text-base md:text-lg text-gray-500 max-w-4xl mx-auto mb-10">
+            Anthroly builds an AI + SEO growth engine that gets you <span className="text-white font-semibold">indexed, cited, and ranked</span> in 30 days — while you focus on your business.
           </p>
 
           {/* AI Terminal Simulation - Demonstration of Power */}
@@ -147,15 +151,30 @@ export const Hero = () => {
             ))}
           </div>
 
-          {/* CTA - Curiosity-Driven, Not Sales-Driven */}
+          {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link href="/#ai-crawler" className="w-full sm:w-auto">
-              <Button 
-                size="xl" 
+            <a
+              href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                size="xl"
                 className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_70px_-15px_rgba(16,185,129,0.7)] transition-all"
               >
-                See How It Works
+                Start 30-Day Trial — $350/mo
                 <ArrowRight className="ml-2" size={22} />
+              </Button>
+            </a>
+
+            <Link href="/#ai-crawler" className="w-full sm:w-auto">
+              <Button
+                size="xl"
+                variant="outline"
+                className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold"
+              >
+                See How It Works
               </Button>
             </Link>
           </div>
@@ -185,8 +204,8 @@ export const Hero = () => {
               <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Backlinks</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-1">30+</div>
-              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Blogs/Month</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-1">45+</div>
+              <div className="text-gray-500 text-sm md:text-base uppercase tracking-wider">Pages/Month</div>
             </div>
           </div>
 
@@ -203,7 +222,7 @@ export const Hero = () => {
                 <span className="text-lg md:text-xl font-bold text-white">Results You Can Measure</span>
               </div>
               <p className="text-gray-300 text-center leading-relaxed">
-                We guarantee <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> per month with an average <span className="text-emerald-400 font-semibold">DR 70-90</span>. If we don&apos;t deliver, you don&apos;t pay. It&apos;s that simple.
+                We commit to <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> per month (DR 50-90, <span className="text-emerald-400 font-semibold">avg DR 70+</span>). If we miss it, you get <span className="text-white font-semibold">one free month of service</span>. Simple.
               </p>
             </div>
           </div>
