@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { GuaranteedResults } from "@/components/sections/GuaranteedResults";
 import { PoweredBy } from "@/components/sections/PoweredBy";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { AICrawlerAnalysis } from "@/components/sections/AICrawlerAnalysis";
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <GuaranteedResults />
       <PoweredBy />
       <ProblemSolution />
       <AICrawlerAnalysis />

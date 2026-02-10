@@ -59,7 +59,7 @@ export const Pricing = () => {
             $350 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 25 backlinks + 10 tools = $12,000+ value.</span> Get it all for 73% less than agencies. 60 days to prove it works. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">30 blogs + 25 backlinks + 10 tools = $12,000+ value.</span> Get it all for 73% less than agencies. 30 days to prove it works. After 30 days, if you&apos;re happy with results, we&apos;ll discuss new pricing. No contracts. Cancel anytime.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export const Pricing = () => {
               <div className="absolute top-0 right-0 -mt-4 -mr-4">
                 <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-4 py-2 rounded-full transform rotate-12 shadow-lg flex items-center gap-1">
                   <Star size={14} fill="black" />
-                  60-DAY TRIAL
+                  30-DAY TRIAL
                 </div>
               </div>
 
@@ -94,7 +94,7 @@ export const Pricing = () => {
                 {/* Trial Info */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400 text-sm mb-4">
                   <Clock size={16} />
-                  <span>For first 60 days — then results-based pricing</span>
+                  <span>For first 30 days — then new pricing if you&apos;re happy with results</span>
                 </div>
                 
                 <p className="text-gray-500">
@@ -115,9 +115,9 @@ export const Pricing = () => {
               </div>
 
               {/* CTA Button */}
-              <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer" className="block w-full">
+              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button className="w-full h-16 text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
-                  Start 60-Day Trial — $350/mo
+                  Start 30-Day Trial — $350/mo
                   <ArrowRight className="ml-2" size={22} />
                 </Button>
               </a>
@@ -142,9 +142,9 @@ export const Pricing = () => {
 
         {/* Post-Trial Pricing Info */}
         <div className={`mt-16 max-w-4xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h3 className="text-2xl font-bold mb-4">After 60 Days: Transparent Pricing Tiers</h3>
+          <h3 className="text-2xl font-bold mb-4">After 30 Days: New Pricing If You&apos;re Happy</h3>
           <p className="text-gray-400 leading-relaxed mb-8">
-            No surprises. Based on your results and growth needs, we&apos;ll recommend one of these tiers:
+            After your 30-day trial, if you&apos;re happy with the results, we&apos;ll discuss new pricing. Based on your results and growth needs, we may recommend one of these tiers:
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-left">

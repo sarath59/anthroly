@@ -9,16 +9,16 @@ const faqs = [
     answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We have built proprietary AI systems that automate 90% of SEO work while maintaining quality. This lets us deliver more at a fraction of the cost. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
   },
   {
-    question: "What kind of results can I expect in 60 days?",
-    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, and increased organic traffic. By day 60, you will typically have 40-60 new backlinks, 60 published blog posts, 20 free tools, and a significant boost in domain authority. SEO compounds over time, so month 3-6 is when you will see dramatic growth."
+    question: "What kind of results can I expect in 30 days?",
+    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, and increased organic traffic. By day 30, you will typically have 20-30 new backlinks, 30 published blog posts, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
   },
   {
     question: "Do you work with any industry?",
     answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our AI systems adapt to your specific industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
   },
   {
-    question: "What happens after the 60-day trial?",
-    answer: "After 60 days, we move to results-based pricing. This means your monthly cost scales with the results we deliver — more traffic, more backlinks, better rankings = fair pricing that reflects value. We discuss specific metrics and pricing with you at the end of your trial based on what we have achieved."
+    question: "What happens after the 30-day trial?",
+    answer: "After 30 days, if you're happy with the results, we'll discuss new pricing. Your monthly cost will reflect the value we're delivering — more traffic, more backlinks, better rankings. We'll go through specific metrics and pricing with you at the end of your trial based on what we've achieved together."
   },
   {
     question: "Will these backlinks hurt my site? Are they safe?",
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: "Just click the Start 60-Day Trial button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
+    answer: "Just click the Start 30-Day Trial button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
   }
 ];
 

@@ -1,0 +1,275 @@
+"use client"
+
+import React, { useEffect, useRef, useState } from 'react';
+import { 
+  CheckCircle2, 
+  Link2, 
+  FileText, 
+  Wrench, 
+  Search, 
+  Bug, 
+  Users, 
+  Clock, 
+  Shield,
+  Zap,
+  TrendingUp,
+  Bot,
+  Target,
+  BarChart3,
+  Globe
+} from 'lucide-react';
+
+export const GuaranteedResults = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const hardDeliverables = [
+    { icon: FileText, metric: "30", label: "SEO-Optimized Articles", detail: "Live on your blog" },
+    { icon: Link2, metric: "20+", label: "High-Authority Backlinks", detail: "DR 50-90 verified in Ahrefs" },
+    { icon: Globe, metric: "15+", label: "Unique Referring Domains", detail: "Real sites, not link farms" },
+    { icon: Wrench, metric: "10", label: "Free Tools Deployed", detail: "Built & live on your domain" },
+    { icon: TrendingUp, metric: "5", label: "Social Articles", detail: "LinkedIn, X, Medium" },
+    { icon: BarChart3, metric: "4", label: "Weekly Reports", detail: "Delivered every Monday 8 AM" },
+  ];
+
+  const seoOutcomes = [
+    { icon: Search, metric: "30+", label: "New Pages Indexed", detail: "In Google Search Console" },
+    { icon: Target, metric: "500+", label: "Keywords Mapped", detail: "100K+ monthly search volume" },
+    { icon: Bug, metric: "25", label: "Technical Issues Fixed", detail: "Core Web Vitals, crawl errors, schema" },
+    { icon: Users, metric: "10", label: "Competitors Analyzed", detail: "Backlinks, content gaps, keywords" },
+  ];
+
+  const aiVisibility = [
+    { name: "ChatGPT", tracked: true },
+    { name: "Claude", tracked: true },
+    { name: "Perplexity", tracked: true },
+    { name: "Gemini", tracked: true },
+    { name: "Google AI Overview", tracked: true },
+  ];
+
+  const speedGuarantees = [
+    { milestone: "Kickoff call scheduled", time: "24 hours" },
+    { milestone: "First article live", time: "48 hours" },
+    { milestone: "Full system operational", time: "72 hours" },
+    { milestone: "First backlink acquired", time: "7 days" },
+    { milestone: "First tool deployed", time: "14 days" },
+  ];
+
+  return (
+    <section 
+      id="guarantees" 
+      ref={sectionRef} 
+      className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden"
+    >
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[200px]"></div>
+        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[180px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
+            <Shield size={16} />
+            <span>🛡️ Iron-Clad 30-Day Guarantee</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Results We <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Guarantee</span> in Your First 30 Days
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Not promises. Not &quot;best efforts.&quot; These are <span className="text-white font-semibold">contractual guarantees</span> backed by a full refund + free month if we miss ANY of them.
+          </p>
+        </div>
+
+        {/* Hard Deliverables */}
+        <div className={`mb-16 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-2xl font-bold text-center mb-8">
+            <span className="text-emerald-400">📦</span> Hard Deliverables <span className="text-gray-500 text-lg font-normal">(Count Them Yourself)</span>
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {hardDeliverables.map((item, index) => (
+              <div 
+                key={index}
+                className="relative group p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 text-center"
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                <div className="relative z-10">
+                  <item.icon className="mx-auto text-emerald-400 mb-3" size={28} />
+                  <div className="text-4xl font-bold text-white mb-1">{item.metric}</div>
+                  <div className="text-sm font-semibold text-gray-300 mb-1">{item.label}</div>
+                  <div className="text-xs text-gray-500">{item.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* SEO Outcomes */}
+        <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-2xl font-bold text-center mb-8">
+            <span className="text-cyan-400">📊</span> SEO Outcomes <span className="text-gray-500 text-lg font-normal">(Measurable in Tools)</span>
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {seoOutcomes.map((item, index) => (
+              <div 
+                key={index}
+                className="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 text-center"
+              >
+                <item.icon className="mx-auto text-cyan-400 mb-3" size={28} />
+                <div className="text-3xl font-bold text-white mb-1">{item.metric}</div>
+                <div className="text-sm font-semibold text-gray-300 mb-1">{item.label}</div>
+                <div className="text-xs text-gray-500">{item.detail}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* AI Visibility + Speed Guarantees Row */}
+        <div className={`grid md:grid-cols-2 gap-8 mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* AI Visibility */}
+          <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <Bot className="text-purple-400" size={28} />
+              <h3 className="text-xl font-bold">AI Visibility Tracking</h3>
+              <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">The Future</span>
+            </div>
+            <p className="text-gray-400 text-sm mb-6">
+              We track your brand&apos;s visibility across the 5 major AI engines. Know exactly when AI recommends you (or your competitors).
+            </p>
+            <div className="space-y-3">
+              {aiVisibility.map((ai, index) => (
+                <div key={index} className="flex items-center justify-between p-3 bg-black/30 rounded-xl">
+                  <span className="text-gray-300">{ai.name}</span>
+                  <div className="flex items-center gap-2 text-emerald-400 text-sm">
+                    <CheckCircle2 size={16} />
+                    <span>Tracked</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-purple-500/10 border border-purple-500/20 rounded-xl">
+              <p className="text-sm text-purple-300">
+                <span className="font-semibold">Included:</span> Baseline AI citation report showing where you appear (or don&apos;t) in AI answers
+              </p>
+            </div>
+          </div>
+
+          {/* Speed Guarantees */}
+          <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <Zap className="text-yellow-400" size={28} />
+              <h3 className="text-xl font-bold">Speed Guarantees</h3>
+              <span className="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">We Move Fast</span>
+            </div>
+            <p className="text-gray-400 text-sm mb-6">
+              No &quot;we&apos;ll get back to you.&quot; No endless onboarding. These are our speed commitments:
+            </p>
+            <div className="space-y-3">
+              {speedGuarantees.map((item, index) => (
+                <div key={index} className="flex items-center justify-between p-3 bg-black/30 rounded-xl">
+                  <span className="text-gray-300">{item.milestone}</span>
+                  <div className="flex items-center gap-2">
+                    <Clock size={14} className="text-yellow-400" />
+                    <span className="text-yellow-400 font-semibold text-sm">{item.time}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-xl">
+              <p className="text-sm text-yellow-300">
+                <span className="font-semibold">Miss a deadline?</span> $100 credit per missed milestone. No questions asked.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Total Value Box */}
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500 rounded-3xl blur opacity-30"></div>
+            <div className="relative p-8 md:p-10 bg-gray-900 rounded-3xl border border-gray-800">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                  Total Value Delivered in 30 Days
+                </h3>
+                <p className="text-gray-400">What agencies charge vs. what you pay</p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">30 Blog Posts</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$6,000</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">20+ Backlinks</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$4,000</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">10 Free Tools</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$5,000</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">SEO + Analysis</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$6,000</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-black/50 rounded-2xl">
+                <div className="text-center">
+                  <div className="text-sm text-gray-500 mb-1">Agency Cost</div>
+                  <div className="text-3xl font-bold text-red-400 line-through">$21,000+</div>
+                </div>
+                <div className="text-4xl text-gray-600">→</div>
+                <div className="text-center">
+                  <div className="text-sm text-emerald-400 mb-1">Your Cost</div>
+                  <div className="text-5xl font-bold text-emerald-400">$350</div>
+                </div>
+                <div className="text-center px-4 py-2 bg-emerald-500/20 rounded-xl">
+                  <div className="text-2xl font-bold text-emerald-400">98%</div>
+                  <div className="text-xs text-emerald-300">Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Risk Reversal */}
+        <div className={`max-w-3xl mx-auto mt-12 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-emerald-500/10 border border-emerald-500/20 rounded-3xl">
+            <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
+            <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Guarantee</h3>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, or <span className="text-white font-semibold">10 functional tools</span> in your first 30 days:
+            </p>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
+              <span>💰 Full Refund</span>
+              <span className="text-gray-500">+</span>
+              <span>🎁 One Free Month</span>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Zero risk. Zero excuses. Zero BS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

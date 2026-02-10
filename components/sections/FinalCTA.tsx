@@ -74,9 +74,9 @@ export const FinalCTA = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-6 mb-12">
-            <a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a" target="_blank" rel="noopener noreferrer">
+            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
-                Start 60-Day Trial — $350/mo
+                Start 30-Day Trial — $350/mo
                 <ArrowRight className="ml-3" size={24} />
               </Button>
             </a>
@@ -100,7 +100,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. 60 days from now, you&apos;ll either have a flood of new traffic and backlinks, or you&apos;ll still be where you are today. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
+              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. 30 days from now, you&apos;ll either have a flood of new traffic and backlinks, or you&apos;ll still be where you are today. If you&apos;re happy with results, we&apos;ll discuss new pricing. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
             </p>
           </div>
         </div>
