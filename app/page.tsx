@@ -13,8 +13,9 @@ import { SocialArticles } from "@/components/sections/SocialArticles";
 import { FreeToolsBuilder } from "@/components/sections/FreeToolsBuilder";
 import { GrowthHacks } from "@/components/sections/GrowthHacks";
 import { WhoIsThisFor } from "@/components/sections/WhoIsThisFor";
-import { FounderStory } from "@/components/sections/FounderStory";
+import { FounderStory } from "../components/sections/FounderStory";
 import { FoundingMembers } from "@/components/sections/FoundingMembers";
+import { ProofOfWork } from "@/components/sections/ProofOfWork";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -39,6 +40,7 @@ export default function Home() {
       <WhoIsThisFor />
       <FounderStory />
       <FoundingMembers />
+      <ProofOfWork />
       <Pricing />
       <FAQ />
       <FinalCTA />
