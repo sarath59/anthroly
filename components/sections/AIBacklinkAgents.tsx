@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link2, Bot, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
 import { LogoStrip, PUBLISHING_PLATFORMS } from '../ui/CompanyLogos';
+import { NetworkGraph } from '../ui/animated-elements';
 
 export const AIBacklinkAgents = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -57,6 +58,9 @@ export const AIBacklinkAgents = () => {
 
   return (
     <section id="backlinks" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+      {/* Network graph animation */}
+      <NetworkGraph className="opacity-40" />
+      
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[150px] -translate-y-1/2"></div>

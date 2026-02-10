@@ -2,9 +2,11 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
-import { ArrowRight, Sparkles, Bot, Check, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, Sparkles, Bot, Check, Shield, TrendingUp, Search, Zap, Globe, FileText, Link2 } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
+import { FloatingParticles, NeuralNetwork } from '../ui/animated-elements';
 
 const TerminalText = () => {
   const [text, setText] = useState('');
@@ -82,10 +84,20 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden pt-24 pb-16">
+      {/* Neural network background animation */}
+      <NeuralNetwork className="opacity-40" nodeCount={20} />
+      
+      {/* Floating particles */}
+      <FloatingParticles count={25} colors={['#10b981', '#06b6d4', '#3b82f6', '#8b5cf6']} />
+      
       {/* Subtle dot grid pattern - allows global animation to show through */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#222_1px,_transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
       </div>
+      
+      {/* Ambient glow orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] morph-blob" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] morph-blob" style={{ animationDelay: '-6s' }} />
 
       <div className="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
@@ -120,8 +132,60 @@ export const Hero = () => {
           </p>
 
           {/* AI Terminal Simulation - Demonstration of Power */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="bg-gray-950 border border-gray-800 rounded-xl overflow-hidden shadow-2xl">
+          <div className="max-w-3xl mx-auto mb-12 relative">
+            {/* Orbiting service icons */}
+            <div className="absolute inset-0 pointer-events-none hidden lg:block">
+              {/* Outer orbit ring */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] border border-gray-800/30 rounded-full" style={{ transform: 'translate(-50%, -50%) rotateX(60deg)' }} />
+              
+              {/* Orbiting icons */}
+              {[
+                { icon: Search, color: '#10b981', delay: 0 },
+                { icon: FileText, color: '#06b6d4', delay: 3 },
+                { icon: Link2, color: '#3b82f6', delay: 6 },
+                { icon: Globe, color: '#8b5cf6', delay: 9 },
+                { icon: Zap, color: '#f59e0b', delay: 12 },
+                { icon: Bot, color: '#ec4899', delay: 15 },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute top-1/2 left-1/2 w-10 h-10"
+                  style={{ marginTop: -20, marginLeft: -20 }}
+                  animate={{
+                    rotateY: [0, 360],
+                  }}
+                  transition={{
+                    duration: 18,
+                    repeat: Infinity,
+                    ease: "linear",
+                    delay: item.delay,
+                  }}
+                >
+                  <motion.div
+                    className="w-10 h-10 bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl flex items-center justify-center shadow-lg"
+                    style={{ 
+                      transform: `translateX(280px) translateY(${Math.sin(i) * 30}px)`,
+                    }}
+                    animate={{
+                      rotateY: [0, -360],
+                    }}
+                    transition={{
+                      duration: 18,
+                      repeat: Infinity,
+                      ease: "linear",
+                      delay: item.delay,
+                    }}
+                  >
+                    <item.icon size={18} style={{ color: item.color }} />
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Glow effect behind terminal */}
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-blue-500/20 rounded-xl blur-xl scale-105 glow-breathe" />
+            
+            <div className="relative bg-gray-950 border border-gray-800 rounded-xl overflow-hidden shadow-2xl">
               <div className="flex items-center gap-2 px-4 py-3 bg-gray-900 border-b border-gray-800">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>

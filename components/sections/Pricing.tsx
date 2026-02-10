@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles, TrendingUp, Bot, Search } from 'lucide-react';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
+import { MorphingBlob, FloatingParticles } from '../ui/animated-elements';
 
 export const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,9 +51,19 @@ export const Pricing = () => {
 
   return (
     <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+      {/* Floating particles */}
+      <FloatingParticles count={20} colors={['#10b981', '#06b6d4', '#22c55e']} className="opacity-40" />
+      
       {/* Background Glow */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] breathe-glow"></div>
+        {/* Morphing blobs */}
+        <div className="absolute top-1/4 left-1/4">
+          <MorphingBlob size={400} colors={['#10b981', '#06b6d4']} />
+        </div>
+        <div className="absolute bottom-1/4 right-1/4">
+          <MorphingBlob size={350} colors={['#06b6d4', '#3b82f6']} className="opacity-20" />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Search, Eye, AlertTriangle, CheckCircle2, Bot, Zap } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
+import { ScanningRadar } from '../ui/animated-elements';
 
 export const AICrawlerAnalysis = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -72,21 +73,38 @@ export const AICrawlerAnalysis = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Visual Demo */}
           <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            {/* Scanning radar decoration - hidden on mobile */}
+            <div className="absolute -top-10 -left-10 opacity-50 hidden lg:block">
+              <ScanningRadar size={180} />
+            </div>
+            
             <div className="relative bg-black rounded-3xl p-8 shadow-2xl">
               <div className="absolute -top-4 -right-4 bg-emerald-500 text-black px-4 py-2 rounded-full text-sm font-bold">
                 Live Analysis
               </div>
               
+              {/* Scanning beam overlay */}
+              <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+                <div className="absolute inset-x-0 h-20 bg-gradient-to-b from-emerald-500/10 via-emerald-500/5 to-transparent scan-beam" />
+              </div>
+              
               {/* Mock Analysis UI */}
-              <div className="space-y-6">
+              <div className="space-y-6 relative">
                 <div className="flex items-center justify-between pb-4 border-b border-gray-800">
                   <span className="text-gray-400 text-sm">yourwebsite.com</span>
-                  <span className="text-emerald-400 text-sm font-mono">Scanning...</span>
+                  <span className="text-emerald-400 text-sm font-mono flex items-center gap-2">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                    Scanning...
+                  </span>
                 </div>
                 
-                {/* Score Display */}
-                <div className="text-center py-6">
-                  <div className="text-6xl font-bold text-white mb-2">47<span className="text-3xl text-gray-500">/100</span></div>
+                {/* Score Display with animated ring */}
+                <div className="text-center py-6 relative">
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-32 h-32 border-2 border-orange-500/20 rounded-full pulse-ring" />
+                    <div className="absolute w-32 h-32 border-2 border-orange-500/20 rounded-full pulse-ring-delayed" />
+                  </div>
+                  <div className="text-6xl font-bold text-white mb-2 relative z-10">47<span className="text-3xl text-gray-500">/100</span></div>
                   <div className="text-orange-400 font-semibold">AI Visibility Score</div>
                   <p className="text-gray-500 text-sm mt-2">You&apos;re leaving AI discovery traffic on the table</p>
                 </div>
