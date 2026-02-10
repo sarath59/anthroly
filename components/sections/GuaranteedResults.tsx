@@ -16,7 +16,10 @@ import {
   Bot,
   Target,
   BarChart3,
-  Globe
+  Globe,
+  MessageCircleQuestion,
+  Eye,
+  MousePointerClick
 } from 'lucide-react';
 
 export const GuaranteedResults = () => {
@@ -42,17 +45,24 @@ export const GuaranteedResults = () => {
 
   const hardDeliverables = [
     { icon: FileText, metric: "30", label: "SEO-Optimized Articles", detail: "Live on your blog" },
+    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Rank on AI search results" },
     { icon: Link2, metric: "20+", label: "High-Authority Backlinks", detail: "DR 50-90 verified in Ahrefs" },
     { icon: Globe, metric: "15+", label: "Unique Referring Domains", detail: "Real sites, not link farms" },
-    { icon: Wrench, metric: "10", label: "Free Tools Deployed", detail: "Built & live on your domain" },
-    { icon: TrendingUp, metric: "5", label: "Social Articles", detail: "LinkedIn, X, Medium" },
-    { icon: BarChart3, metric: "4", label: "Weekly Reports", detail: "Delivered every Monday 8 AM" },
+    { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain" },
+    { icon: TrendingUp, metric: "15", label: "Social Articles", detail: "LinkedIn, X, Medium" },
   ];
 
   const seoOutcomes = [
-    { icon: Search, metric: "30+", label: "New Pages Indexed", detail: "In Google Search Console" },
+    { icon: Search, metric: "50+", label: "New Pages Indexed", detail: "In Google Search Console" },
+    { icon: Target, metric: "100+", label: "Keywords Ranking", detail: "In Google (any position)" },
+    { icon: Eye, metric: "10K+", label: "Impressions", detail: "On new content" },
+    { icon: MousePointerClick, metric: "500+", label: "Organic Clicks", detail: "From new content" },
+  ];
+
+  const aiOutcomes = [
+    { icon: Bot, metric: "50+", label: "AI Brand Mentions", detail: "Across 5 AI engines" },
+    { icon: MessageCircleQuestion, metric: "15", label: "Q&A Pages Live", detail: "Optimized for AI results" },
     { icon: Target, metric: "500+", label: "Keywords Mapped", detail: "100K+ monthly search volume" },
-    { icon: Bug, metric: "25", label: "Technical Issues Fixed", detail: "Core Web Vitals, crawl errors, schema" },
     { icon: Users, metric: "10", label: "Competitors Analyzed", detail: "Backlinks, content gaps, keywords" },
   ];
 
@@ -92,10 +102,10 @@ export const GuaranteedResults = () => {
             <span>🛡️ Iron-Clad 30-Day Guarantee</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Results We <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Guarantee</span> in Your First 30 Days
+            Results You Get in Your First 30 Days
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Not promises. Not &quot;best efforts.&quot; These are <span className="text-white font-semibold">contractual guarantees</span> backed by a full refund + free month if we miss ANY of them.
+            Not promises. Not &quot;best efforts.&quot; These are <span className="text-white font-semibold">contractual commitments</span> backed by one free month of service if we miss ANY of them.
           </p>
         </div>
 
@@ -125,7 +135,7 @@ export const GuaranteedResults = () => {
         {/* SEO Outcomes */}
         <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-cyan-400">📊</span> SEO Outcomes <span className="text-gray-500 text-lg font-normal">(Measurable in Tools)</span>
+            <span className="text-cyan-400">📊</span> Google Traffic Results <span className="text-gray-500 text-lg font-normal">(Measurable in Search Console)</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {seoOutcomes.map((item, index) => (
@@ -134,6 +144,26 @@ export const GuaranteedResults = () => {
                 className="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 text-center"
               >
                 <item.icon className="mx-auto text-cyan-400 mb-3" size={28} />
+                <div className="text-3xl font-bold text-white mb-1">{item.metric}</div>
+                <div className="text-sm font-semibold text-gray-300 mb-1">{item.label}</div>
+                <div className="text-xs text-gray-500">{item.detail}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* AI Outcomes */}
+        <div className={`mb-16 transition-all duration-1000 delay-250 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-2xl font-bold text-center mb-8">
+            <span className="text-purple-400">🤖</span> AI Search Results <span className="text-gray-500 text-lg font-normal">(The Future of Search)</span>
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {aiOutcomes.map((item, index) => (
+              <div 
+                key={index}
+                className="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-purple-500/50 transition-all duration-300 text-center"
+              >
+                <item.icon className="mx-auto text-purple-400 mb-3" size={28} />
                 <div className="text-3xl font-bold text-white mb-1">{item.metric}</div>
                 <div className="text-sm font-semibold text-gray-300 mb-1">{item.label}</div>
                 <div className="text-xs text-gray-500">{item.detail}</div>
@@ -213,29 +243,37 @@ export const GuaranteedResults = () => {
                 <p className="text-gray-400">What agencies charge vs. what you pay</p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
                 <div className="text-center p-4">
                   <div className="text-sm text-gray-500 mb-1">30 Blog Posts</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$6,000</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">15 AI Q&A Pages</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
                 </div>
                 <div className="text-center p-4">
                   <div className="text-sm text-gray-500 mb-1">20+ Backlinks</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$4,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">10 Free Tools</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$5,000</div>
+                  <div className="text-sm text-gray-500 mb-1">20 Free Tools</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$10,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">SEO + Analysis</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$6,000</div>
+                  <div className="text-sm text-gray-500 mb-1">15 Social Articles</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">50+ AI Mentions</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$2,500</div>
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-black/50 rounded-2xl">
                 <div className="text-center">
                   <div className="text-sm text-gray-500 mb-1">Agency Cost</div>
-                  <div className="text-3xl font-bold text-red-400 line-through">$21,000+</div>
+                  <div className="text-3xl font-bold text-red-400 line-through">$28,500+</div>
                 </div>
                 <div className="text-4xl text-gray-600">→</div>
                 <div className="text-center">
@@ -255,14 +293,12 @@ export const GuaranteedResults = () => {
         <div className={`max-w-3xl mx-auto mt-12 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-emerald-500/10 border border-emerald-500/20 rounded-3xl">
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
-            <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Guarantee</h3>
+            <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Promise</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, or <span className="text-white font-semibold">10 functional tools</span> in your first 30 days:
+              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, or <span className="text-white font-semibold">20 functional tools</span> in your first 30 days:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
-              <span>💰 Full Refund</span>
-              <span className="text-gray-500">+</span>
-              <span>🎁 One Free Month</span>
+              <span>🎁 One Free Month of Service</span>
             </div>
             <p className="text-sm text-gray-500 mt-4">
               Zero risk. Zero excuses. Zero BS.

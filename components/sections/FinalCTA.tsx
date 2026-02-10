@@ -60,10 +60,10 @@ export const FinalCTA = () => {
           {/* What You Get Summary */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "30 Blogs/Month",
+              "30 Blogs + 15 Q&A Pages",
+              "50+ AI Mentions",
               "20-30 Backlinks",
-              "10 Free Tools",
-              "24/7 AI Agents"
+              "20 Free Tools"
             ].map((item, index) => (
               <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white/5 border border-white/10 rounded-xl">
                 <CheckCircle2 className="text-emerald-400" size={18} />

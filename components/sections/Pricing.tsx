@@ -30,15 +30,15 @@ export const Pricing = () => {
     "AI Crawler Analysis & Optimization",
     "AI Visibility Monitoring 24/7",
     "30 SEO-Optimized Blogs/Month",
+    "15 AI Q&A Pages/Month (Rank on AI)",
     "20-30 High-DR Backlinks/Month",
+    "50+ AI Brand Mentions/Month",
     "Programmatic SEO Implementation",
-    "10 Free Tools Built for Your Site",
+    "20 Free Tools Built for Your Site",
     "LinkedIn, X, Medium Articles",
     "Weekly Performance Reports",
     "Competitor Analysis & Intel",
     "Technical SEO Audits & Fixes",
-    "Keyword Research & Strategy",
-    "Priority Email Support"
   ];
 
   return (
@@ -59,7 +59,7 @@ export const Pricing = () => {
             $350 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 25 backlinks + 10 tools = $12,000+ value.</span> Get it all for 73% less than agencies. 30 days to prove it works. After 30 days, if you&apos;re happy with results, we&apos;ll discuss new pricing. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 25 backlinks + 50+ AI mentions + 20 tools = $28,500+ value.</span> Get it all for 98% less than agencies. 30 days to prove it works. After 30 days, if you&apos;re happy with results, we&apos;ll discuss new pricing. No contracts. Cancel anytime.
           </p>
         </div>
 
@@ -130,10 +130,10 @@ export const Pricing = () => {
               <div className="mt-8 pt-8 border-t border-gray-800">
                 <div className="flex items-center justify-center gap-3 mb-3">
                   <Shield className="text-emerald-400" size={24} />
-                  <span className="text-lg font-bold">Risk-Free Guarantee</span>
+                  <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-md mx-auto">
-                  If we can&apos;t deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 70-90) per month, we&apos;ll <span className="text-white font-semibold">refund your payment AND give you a free month.</span> Zero risk.
+                  If we can&apos;t deliver <span className="text-emerald-400 font-semibold">20-30 high-quality backlinks</span> (DR 50-90) per month, we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span> Zero risk.
                 </p>
               </div>
             </div>
@@ -190,7 +190,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 20-30 backlinks, 10 tools, and multi-platform content distribution every single month. For $350.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 15 AI Q&A pages, 20-30 backlinks, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $350.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">

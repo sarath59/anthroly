@@ -5,6 +5,7 @@ import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { AICrawlerAnalysis } from "@/components/sections/AICrawlerAnalysis";
 import { AIVisibilityMonitor } from "@/components/sections/AIVisibilityMonitor";
 import { AutomatedBlogs } from "@/components/sections/AutomatedBlogs";
+import { AIQAPages } from "@/components/sections/AIQAPages";
 import { AIBacklinkAgents } from "@/components/sections/AIBacklinkAgents";
 import { PSEOImplementation } from "@/components/sections/PSEOImplementation";
 import { AutomatedReports } from "@/components/sections/AutomatedReports";
@@ -28,6 +29,7 @@ export default function Home() {
       <AICrawlerAnalysis />
       <AIVisibilityMonitor />
       <AutomatedBlogs />
+      <AIQAPages />
       <AIBacklinkAgents />
       <PSEOImplementation />
       <AutomatedReports />

@@ -73,11 +73,11 @@ export const Hero = () => {
     "AI Crawler Analysis & Optimization",
     "AI Visibility Monitoring 24/7",
     "30 SEO Blogs/Month (AI + Human QA)",
+    "15 AI Q&A Pages/Month (Rank on AI)",
     "AI Backlink Agents (DR 70-90)",
     "pSEO Tool Pages Built Automatically",
-    "10 Free Tools/Month for Your Site",
+    "20 Free Tools/Month for Your Site",
     "LinkedIn, X, Medium Articles",
-    "Weekly Automated Reports",
   ];
 
   return (

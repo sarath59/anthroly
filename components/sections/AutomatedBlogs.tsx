@@ -61,10 +61,10 @@ export const AutomatedBlogs = () => {
             <span>📝 Companies publishing 16+ blogs/month get 3.5x more traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            30 Ranking Blogs. Zero Writing.
+            30 Blogs + 15 AI Q&A Pages. Zero Writing.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">HubSpot found blogs generate 67% more leads.</span> But who has time to write 30/month? Our AI creates, our humans review, your site ranks. Average time to first page: 47 days.
+            <span className="text-white font-semibold">HubSpot found blogs generate 67% more leads.</span> But who has time to write 45 pieces of content a month? Our AI creates, our humans review, your site ranks on both Google AND AI search results.
           </p>
         </div>
 
@@ -95,15 +95,19 @@ export const AutomatedBlogs = () => {
             {/* Big Number */}
             <div className="bg-black text-white p-8 md:p-10 rounded-3xl mb-8">
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-7xl md:text-8xl font-bold">30</span>
-                <span className="text-2xl text-gray-400">blogs/month</span>
+                <span className="text-7xl md:text-8xl font-bold">45</span>
+                <span className="text-2xl text-gray-400">pages/month</span>
               </div>
-              <p className="text-gray-400 text-lg mb-6">That&apos;s 360 pieces of content per year, building your authority and driving organic traffic while you focus on your business.</p>
+              <p className="text-gray-400 text-lg mb-6">30 SEO blogs + 15 AI Q&A pages = 540 pieces of content per year, building your authority on Google AND AI search results.</p>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">
-                  <div className="text-2xl font-bold text-white">1,500+</div>
-                  <div className="text-sm text-gray-500">Words per article</div>
+                  <div className="text-2xl font-bold text-white">30</div>
+                  <div className="text-sm text-gray-500">SEO Blogs</div>
+                </div>
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <div className="text-2xl font-bold text-purple-400">15</div>
+                  <div className="text-sm text-gray-500">AI Q&A Pages</div>
                 </div>
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">
                   <div className="text-2xl font-bold text-white">100%</div>

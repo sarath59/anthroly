@@ -10,11 +10,15 @@ const faqs = [
   },
   {
     question: "What kind of results can I expect in 30 days?",
-    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, and increased organic traffic. By day 30, you will typically have 20-30 new backlinks, 30 published blog posts, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
+    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, AI Q&A pages getting cited by AI engines, and increased organic traffic. By day 30, you will typically have 20-30 new backlinks, 30 published blog posts, 15 AI Q&A pages, 50+ AI brand mentions, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
   },
   {
     question: "Do you work with any industry?",
     answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our AI systems adapt to your specific industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
+  },
+  {
+    question: "What are AI Q&A Pages and how do they rank on AI search?",
+    answer: "AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. You get 15 of these pages per month, and they contribute to your 50+ AI brand mentions guarantee."
   },
   {
     question: "What happens after the 30-day trial?",

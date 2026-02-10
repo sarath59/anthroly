@@ -79,11 +79,11 @@ export const AIVisibilityMonitor = () => {
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">47</div>
-                <div className="text-sm text-gray-500">AI Citations</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">50+</div>
+                <div className="text-sm text-gray-500">AI Brand Mentions</div>
                 <div className="flex items-center gap-1 mt-2 text-emerald-400 text-xs">
                   <TrendingUp size={12} />
-                  <span>+8 new</span>
+                  <span>Guaranteed/month</span>
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
