@@ -65,11 +65,11 @@ export const ScrollElephant = () => {
     [1, 1, 1.15, 1.15, 0.95, 1.0, 1.0, 1.05]
   );
 
-  // ── OPACITY: visible but not distracting, brighter during dancing ──
+  // ── OPACITY: clearly visible watermark, not distracting ──
   const elephantOpacity = useTransform(
     smoothProgress,
     [0, 0.05, 0.3, 0.5, 0.7, 0.85, 1.0],
-    [0.06, 0.08, 0.07, 0.09, 0.08, 0.10, 0.08]
+    [0.14, 0.16, 0.15, 0.17, 0.16, 0.18, 0.16]
   );
 
   // ── SKEW: adds a lean for walking and dancing poses ──
@@ -87,7 +87,7 @@ export const ScrollElephant = () => {
       style={{ zIndex: 0 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2, delay: 0.5 }}
+      transition={{ duration: 1, delay: 0.3 }}
     >
       <motion.div
         style={{
@@ -101,14 +101,14 @@ export const ScrollElephant = () => {
         }}
         className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px]"
       >
-        {/* Using img tag to avoid Next.js Image optimization issues with fixed positioning */}
+        {/* Logo is black on white; invert = white elephant on black; subtle green tint */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/logo.png"
           alt=""
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain select-none"
           style={{
-            filter: 'invert(1) brightness(0.7) sepia(0.2) hue-rotate(110deg) saturate(1.2)',
+            filter: 'invert(1) brightness(0.85) sepia(0.15) hue-rotate(100deg) saturate(1.1)',
           }}
           aria-hidden="true"
         />

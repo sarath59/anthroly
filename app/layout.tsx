@@ -5,7 +5,6 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollAnimationWrapper } from "@/components/ui/ScrollAnimationWrapper";
-import { ScrollElephant } from "@/components/ui/ScrollElephant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,9 +42,6 @@ export default function RootLayout({
           src="https://datafa.st/js/script.js"
           strategy="afterInteractive"
         />
-        
-        {/* Background elephant mascot that animates with scroll */}
-        <ScrollElephant />
         
         <ScrollAnimationWrapper>
           <Header />

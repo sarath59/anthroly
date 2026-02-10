@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { ScrollElephant } from './ScrollElephant';
 
 /**
  * Elite Scroll Animation System
@@ -132,6 +133,7 @@ export const ScrollAnimationProvider: React.FC<ScrollAnimationProviderProps> = (
   return (
     <div className="relative min-h-screen bg-black">
       {enableGradient && <FlowingGradientBackground />}
+      <ScrollElephant />
       {enableProgress && <ScrollProgressBar />}
       <div className="relative" style={{ zIndex: 1 }}>
         {children}
