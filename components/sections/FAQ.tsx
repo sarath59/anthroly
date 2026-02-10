@@ -6,7 +6,11 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     question: "How is this different from other SEO agencies?",
-    answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We have built proprietary AI systems that automate 90% of SEO work while maintaining quality. This lets us deliver more at a fraction of the cost. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
+    answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We use AI to automate the repetitive work (research, drafting, internal linking, monitoring) so we can ship faster — but the final output is still human-quality. Our content is overseen by humans and reviewed before publishing. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
+  },
+  {
+    question: "Is your content AI-generated spam? Who actually writes it?",
+    answer: "No. We use a human-led, AI-assisted workflow. AI helps with research, outlines, and first drafts — then humans edit for accuracy, clarity, brand voice, and usefulness. We fact-check, add structure/schema where needed, and only publish content that meets a human quality bar (not “AI fluff”)."
   },
   {
     question: "What kind of results can I expect in 30 days?",

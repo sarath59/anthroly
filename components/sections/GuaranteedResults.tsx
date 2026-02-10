@@ -44,8 +44,8 @@ export const GuaranteedResults = () => {
   }, []);
 
   const hardDeliverables = [
-    { icon: FileText, metric: "30", label: "SEO-Optimized Articles", detail: "Live on your blog" },
-    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Rank on AI search results" },
+    { icon: FileText, metric: "30", label: "SEO-Optimized Articles", detail: "Human-reviewed (AI-assisted)" },
+    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Human-reviewed (AI-assisted)" },
     { icon: Link2, metric: "20+", label: "High-Authority Backlinks", detail: "DR 50-90 verified in Ahrefs" },
     { icon: Globe, metric: "15+", label: "Unique Referring Domains", detail: "Real sites, not link farms" },
     { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain" },

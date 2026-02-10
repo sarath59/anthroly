@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import {
   ArrowRight,
-  BarChart3,
   Bot,
   CheckCircle2,
   Clock,
@@ -51,17 +50,17 @@ export const ProofOfWork = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Sparkles size={16} />
-            <span>Proof of Work (Not Promises)</span>
+            <span>AI Traffic Proof (Last 30 Days)</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Real Momentum. Real Screenshots.
+            AI Referrals You Can Check.
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Here’s what happens when you ship the right pages, fix the right
-            technical gaps, and structure content so both Google and AI engines
-            can confidently recommend you.
+            This section is only about <span className="text-white font-semibold">AI traffic</span>.
+            For these brands, we focused on AI discovery: making the site easy for AI engines to understand,
+            cite, and send referrals from.
           </p>
         </div>
 
@@ -82,112 +81,68 @@ export const ProofOfWork = () => {
                     llmoutrank
                   </h3>
                   <p className="text-gray-400 mt-2">
-                    1 month in. Here are the last 7 days.
+                    30 days of AI traffic momentum.
                   </p>
                 </div>
 
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 text-xs text-gray-300">
                   <Clock size={14} className="text-emerald-400" />
-                  <span>Last 7 days</span>
+                  <span>Last 30 days</span>
                 </div>
               </div>
 
               {/* Punchy “belief bridge” */}
               <div className="p-5 rounded-2xl bg-black/40 border border-white/10 mb-6">
                 <p className="text-gray-300 leading-relaxed">
-                  Most agencies sell “strategy.” We ship pages that{" "}
-                  <span className="text-white font-semibold">
-                    create entry points
-                  </span>{" "}
-                  and then we monitor what search engines and AI engines are
-                  actually sending. That’s how momentum starts.
+                  We didn&apos;t work on “overall traffic” here — we worked on{" "}
+                  <span className="text-white font-semibold">AI referrals</span>. The goal was simple:
+                  when someone asks an AI engine a relevant question, the engine can confidently recommend (and link to) llmoutrank.
                 </p>
               </div>
 
-              {/* Metrics */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="p-5 rounded-2xl bg-black/30 border border-gray-800">
-                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
-                    <BarChart3 size={16} className="text-cyan-400" />
-                    <span>Total visitors</span>
-                  </div>
-                  <div className="text-3xl font-bold text-white">261</div>
-                  <div className="text-xs text-gray-500 mt-1">
-                    (snapshot: last 7 days)
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-black/30 border border-gray-800">
-                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
-                    <Bot size={16} className="text-purple-400" />
-                    <span>AI traffic starting</span>
-                  </div>
-                  <div className="text-3xl font-bold text-white">24</div>
-                  <div className="text-xs text-gray-500 mt-1">
-                    visits from ChatGPT
-                  </div>
-                </div>
-              </div>
-
+              {/* AI-only callouts */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl bg-gray-950/40 border border-gray-800">
-                  <div className="text-sm font-semibold text-white mb-3">
-                    Referrers (last 7 days)
+                  <div className="flex items-center gap-2 text-white font-semibold mb-3">
+                    <Bot size={18} className="text-purple-400" />
+                    AI referrers (snapshot)
                   </div>
                   <div className="space-y-2 text-sm text-gray-300">
-                    <div className="flex items-center justify-between">
-                      <span>Direct / None</span>
-                      <span className="font-semibold text-white">125</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>Bing</span>
-                      <span className="font-semibold text-white">44</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>DuckDuckGo</span>
-                      <span className="font-semibold text-white">24</span>
-                    </div>
                     <div className="flex items-center justify-between">
                       <span>ChatGPT</span>
                       <span className="font-semibold text-white">24</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span>Google</span>
-                      <span className="font-semibold text-white">17</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>Yahoo</span>
-                      <span className="font-semibold text-white">13</span>
+                      <span>Perplexity</span>
+                      <span className="font-semibold text-white">2</span>
                     </div>
                   </div>
+                  <p className="text-xs text-gray-500 mt-3">
+                    The point isn&apos;t the number — it&apos;s the signal: AI engines are now sending real users.
+                  </p>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-gray-950/40 border border-gray-800">
-                  <div className="text-sm font-semibold text-white mb-3">
-                    Top pages (last 7 days)
+                  <div className="flex items-center gap-2 text-white font-semibold mb-3">
+                    <TrendingUp size={18} className="text-emerald-400" />
+                    Check it live
                   </div>
-                  <div className="space-y-2 text-sm text-gray-300">
-                    <div className="flex items-center justify-between">
-                      <span>/</span>
-                      <span className="font-semibold text-white">81</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>/tools/search-volume-estimator</span>
-                      <span className="font-semibold text-white">60</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>/blog/mangapark</span>
-                      <span className="font-semibold text-white">41</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>/tools/local-seo-citation-checker</span>
-                      <span className="font-semibold text-white">13</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>/blog/blog-examples-for-students</span>
-                      <span className="font-semibold text-white">10</span>
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-300 leading-relaxed mb-4">
+                    Want to verify the AI traffic yourself? Open the live dashboard below.
+                  </p>
+                  <a
+                    href="https://datafa.st/share/682b1fc309a39da9358cd37a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="w-full h-12 bg-white text-black hover:bg-gray-100 rounded-xl font-bold">
+                      Open AI traffic dashboard
+                      <ArrowRight className="ml-2" size={18} />
+                    </Button>
+                  </a>
+                  <p className="text-xs text-gray-500 mt-3">
+                    (Shows AI referrers like ChatGPT + Perplexity)
+                  </p>
                 </div>
               </div>
             </div>
@@ -195,9 +150,23 @@ export const ProofOfWork = () => {
             {/* Screenshot */}
             <div className="border-t border-gray-800 bg-black/30 p-6">
               <div className="text-xs text-gray-400 mb-3">
-                Screenshot: analytics snapshot for llmoutrank (last 7 days)
+                Analytics snapshot for llmoutrank (AI referrers)
               </div>
-              <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-black">
+              <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-gray-950 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.85)]">
+                {/* Browser chrome */}
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-black/50">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-red-500/90" />
+                    <span className="w-3 h-3 rounded-full bg-yellow-500/90" />
+                    <span className="w-3 h-3 rounded-full bg-green-500/90" />
+                  </div>
+                  <div className="ml-3 flex-1">
+                    <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] text-gray-300 truncate">
+                      datafa.st/share/682b1fc309a39da9358cd37a
+                    </div>
+                  </div>
+                </div>
+
                 <Image
                   src="/testimonial.png"
                   alt="llmoutrank results snapshot"
@@ -220,16 +189,15 @@ export const ProofOfWork = () => {
                 isthisaiorno.com
               </h3>
               <p className="text-gray-400 mt-3 leading-relaxed">
-                We’re early — and that’s the advantage. The fastest wins come
-                from shipping the right “answer pages” before your competitors
-                even realize AI search is taking their clicks.
+                We’re starting with a single goal: <span className="text-white font-semibold">AI referral traffic</span>.
+                The fastest wins come from publishing the right answer pages and making them “quotable” for AI engines.
               </p>
 
               <div className="mt-8 space-y-4">
                 <div className="p-5 rounded-2xl bg-black/30 border border-gray-800">
                   <div className="flex items-center gap-2 text-white font-semibold mb-2">
                     <TrendingUp size={18} className="text-emerald-400" />
-                    Week 1: foundation + momentum
+                    Week 1: AI traffic foundation
                   </div>
                   <div className="space-y-2 text-sm text-gray-300">
                     <div className="flex items-start gap-2">
@@ -238,8 +206,7 @@ export const ProofOfWork = () => {
                         className="text-emerald-400 mt-0.5 flex-shrink-0"
                       />
                       <span>
-                        Baseline AI visibility + competitor gap map (what AI
-                        recommends today and why)
+                        Baseline AI visibility + competitor gap map (what AI recommends today and why)
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
@@ -248,8 +215,7 @@ export const ProofOfWork = () => {
                         className="text-emerald-400 mt-0.5 flex-shrink-0"
                       />
                       <span>
-                        Launch the Q&amp;A page pipeline (the pages AI can quote
-                        directly)
+                        Launch the Q&amp;A page pipeline (the pages AI can quote directly)
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
@@ -258,8 +224,7 @@ export const ProofOfWork = () => {
                         className="text-emerald-400 mt-0.5 flex-shrink-0"
                       />
                       <span>
-                        Technical clean-up (crawlability, schema, indexation
-                        signals)
+                        Technical clean-up (crawlability, schema, indexation signals)
                       </span>
                     </div>
                   </div>
@@ -271,11 +236,9 @@ export const ProofOfWork = () => {
                     What “doing great” looks like early
                   </div>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    You don&apos;t need viral traffic to know it&apos;s working.
-                    Early success looks like: pages getting indexed quickly,
-                    long-tail impressions rising, and the first AI engines
-                    starting to echo your definitions and recommend your pages.
-                    That’s what we’re building right now.
+                    You don&apos;t need viral traffic to know it&apos;s working. Early AI-traffic success looks like:
+                    pages getting indexed quickly, “answer coverage” improving, and AI engines starting to echo your
+                    definitions and recommend your pages. That’s what we’re building right now.
                   </p>
                 </div>
 

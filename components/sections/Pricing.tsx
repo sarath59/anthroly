@@ -29,8 +29,8 @@ export const Pricing = () => {
   const includedFeatures = [
     "AI Crawler Analysis & Optimization",
     "AI Visibility Monitoring 24/7",
-    "30 SEO-Optimized Blogs/Month",
-    "15 AI Q&A Pages/Month (Rank on AI)",
+    "30 Human-reviewed SEO Blogs/Month (AI-assisted)",
+    "15 Human-reviewed AI Q&A Pages/Month (AI-assisted)",
     "20-30 High-DR Backlinks/Month",
     "50+ AI Brand Mentions/Month",
     "Programmatic SEO Implementation",
@@ -141,50 +141,6 @@ export const Pricing = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Post-Trial Pricing Info */}
-        <div className={`mt-16 max-w-4xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h3 className="text-2xl font-bold mb-4">After 30 Days: New Pricing If You&apos;re Happy</h3>
-          <p className="text-gray-400 leading-relaxed mb-8">
-            After your 30-day trial, if you&apos;re happy with the results, we&apos;ll discuss new pricing. Based on your results and growth needs, we may recommend one of these tiers:
-          </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-left">
-              <div className="text-emerald-400 text-sm font-semibold mb-2">GROWTH</div>
-              <div className="text-3xl font-bold text-white mb-2">$199<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-sm text-gray-500 mb-4">For early-stage startups</p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• 15 blogs/month</li>
-                <li>• 10-15 backlinks</li>
-                <li>• Core AI features</li>
-              </ul>
-            </div>
-            <div className="p-6 bg-gray-900/80 border border-emerald-500/30 rounded-xl text-left relative">
-              <div className="absolute -top-3 right-4 px-3 py-1 bg-emerald-500 text-black text-xs font-bold rounded-full">POPULAR</div>
-              <div className="text-emerald-400 text-sm font-semibold mb-2">SCALE</div>
-              <div className="text-3xl font-bold text-white mb-2">$349<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-sm text-gray-500 mb-4">For growing companies</p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• 30 blogs/month</li>
-                <li>• 20-30 backlinks</li>
-                <li>• Full AI suite + tools</li>
-              </ul>
-            </div>
-            <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl text-left">
-              <div className="text-emerald-400 text-sm font-semibold mb-2">ENTERPRISE</div>
-              <div className="text-3xl font-bold text-white mb-2">$499<span className="text-lg text-gray-500">/mo</span></div>
-              <p className="text-sm text-gray-500 mb-4">For serious scale</p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Unlimited content</li>
-                <li>• 40+ backlinks</li>
-                <li>• White-label option</li>
-              </ul>
-            </div>
-          </div>
-          <p className="text-sm text-gray-500 mt-6">
-            <span className="text-emerald-400 font-medium">Founding members:</span> Lock in your $350/mo rate permanently, regardless of tier.
-          </p>
         </div>
 
         {/* ROI Calculator Callout */}
