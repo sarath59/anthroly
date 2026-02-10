@@ -320,7 +320,7 @@ export function generateGlossaryIndustryPage(termSlug: string, industrySlug: str
   
   if (!term || !industry) return null;
   
-  const slug = `glossary/${term.slug}/for-${industry.slug}`;
+  const slug = `glossary/${term.slug}/${industry.slug}`;
   const url = `/${slug}`;
   
   const sections: ContentSection[] = [
@@ -1024,7 +1024,7 @@ export function generateGlossaryIndustryLocationPage(
   
   const internalLinks: InternalLink[] = [
     { url: `/glossary/${term.slug}`, anchorText: term.term, context: 'Main glossary term' },
-    { url: `/glossary/${term.slug}/for-${industry.slug}`, anchorText: `${term.term} for ${industry.name}`, context: 'Industry glossary' },
+    { url: `/glossary/${term.slug}/${industry.slug}`, anchorText: `${term.term} for ${industry.name}`, context: 'Industry glossary' },
     { url: `/industries/${industry.slug}/${location.slug}`, anchorText: `${industry.name} SEO in ${location.city}`, context: 'Industry location page' },
     { url: '/#ai-crawler', anchorText: 'Free Analysis', context: 'Lead magnet' },
   ];
@@ -1323,7 +1323,7 @@ export function getAllGlossaryIndustrySlugs(): string[] {
   const slugs: string[] = [];
   seoGlossaryTerms.forEach(term => {
     industries.forEach(industry => {
-      slugs.push(`${term.slug}/for-${industry.slug}`);
+      slugs.push(`${term.slug}/${industry.slug}`);
     });
   });
   return slugs;

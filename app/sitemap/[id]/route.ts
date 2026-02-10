@@ -182,10 +182,11 @@ function generateTwoWayPart2Sitemap(): SitemapEntry[] {
   const entries: SitemapEntry[] = [];
 
   // Glossary × Industry (60 × 20 = 1,200)
+  // Note: Using pattern /glossary/[slug]/[industry] to match route structure
   seoGlossaryTerms.forEach(term => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/glossary/${term.slug}/for-${industry.slug}`,
+        url: `${BASE_URL}/glossary/${term.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,

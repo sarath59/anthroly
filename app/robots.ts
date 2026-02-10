@@ -44,17 +44,27 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Bingbot',
         allow: '/',
       },
-      // OpenAI's GPTBot (for ChatGPT)
+      // =========================================
+      // OpenAI Bots (for ChatGPT, SearchGPT)
+      // =========================================
+      // GPTBot - Main OpenAI crawler for training & ChatGPT
       {
         userAgent: 'GPTBot',
         allow: '/',
       },
-      // ChatGPT user agent
+      // ChatGPT-User - When users browse with ChatGPT
       {
         userAgent: 'ChatGPT-User',
         allow: '/',
       },
-      // Anthropic's Claude
+      // OAI-SearchBot - OpenAI's search/browsing feature
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      // =========================================
+      // Anthropic Bots (for Claude)
+      // =========================================
       {
         userAgent: 'Claude-Web',
         allow: '/',
@@ -63,6 +73,13 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'anthropic-ai',
         allow: '/',
       },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      // =========================================
+      // Other AI Bots
+      // =========================================
       // Perplexity AI
       {
         userAgent: 'PerplexityBot',
@@ -73,8 +90,32 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Google-Extended',
         allow: '/',
       },
+      // Cohere AI
+      {
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      // Meta AI
+      {
+        userAgent: 'FacebookBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
+      },
+      // Apple's Applebot (for Siri, Spotlight)
+      {
+        userAgent: 'Applebot',
+        allow: '/',
+      },
+      // You.com AI
+      {
+        userAgent: 'YouBot',
+        allow: '/',
+      },
     ],
-    // Sitemap index pointing to 6 individual sitemaps
+    // Sitemap index pointing to 10 individual sitemaps
     // Split to stay under Google's 50K URL / 50MB limits
     sitemap: 'https://www.anthroly.com/sitemap.xml',
   };
