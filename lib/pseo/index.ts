@@ -40,6 +40,8 @@ export {
   generateToolComparisonIndustryPage,
   generateIntegrationIndustryPage,
   generatePersonaIndustryLocationPage,
+  generateGlossaryIndustryLocationPage,
+  generateUseCaseIndustryLocationPage,
   getCombinationCounts,
   getAllPersonaLocationSlugs,
   getAllIndustryLocationSlugs,

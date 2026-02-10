@@ -74,8 +74,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    // Single sitemap - all ~40K pages are statically generated
-    // This ensures instant response to Google crawler (no timeout risk)
+    // Sitemap index pointing to 6 individual sitemaps
+    // Split to stay under Google's 50K URL / 50MB limits
     sitemap: 'https://www.anthroly.com/sitemap.xml',
   };
 }

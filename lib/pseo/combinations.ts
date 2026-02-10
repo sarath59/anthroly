@@ -947,6 +947,293 @@ export function getAllPersonaIndustryLocationSlugs(): string[] {
 }
 
 // ============================================================================
+// GLOSSARY + INDUSTRY + LOCATION THREE-WAY COMBINATIONS
+// Example: "AI SEO for E-commerce in San Francisco: Complete Guide"
+// Total: 60 terms × 20 industries × 149 locations = 178,800 pages
+// ============================================================================
+
+export function generateGlossaryIndustryLocationPage(
+  termSlug: string, 
+  industrySlug: string, 
+  locationSlug: string
+): PSEOPage | null {
+  const term = seoGlossaryTerms.find(t => t.slug === termSlug);
+  const industry = industries.find(i => i.slug === industrySlug);
+  const location = seoLocations.find(l => l.slug === locationSlug);
+  
+  if (!term || !industry || !location) return null;
+  
+  const locationName = location.state 
+    ? `${location.city}, ${location.state}` 
+    : `${location.city}, ${location.country}`;
+  
+  const slug = `glossary/${term.slug}/${industry.slug}/${location.slug}`;
+  const url = `/${slug}`;
+  
+  const sections: ContentSection[] = [
+    {
+      heading: `What is ${term.term}?`,
+      body: term.definition,
+    },
+    {
+      heading: `Why ${term.term} Matters for ${industry.name} Businesses in ${location.city}`,
+      body: `For ${industry.name.toLowerCase()} companies in ${locationName}, ${term.term.toLowerCase()} is critically important. The local market dynamics—${location.localInsights[0]}—combined with industry-specific challenges like ${industry.painPoints[0].toLowerCase()} create a unique environment where mastering ${term.term.toLowerCase()} can be the difference between market leadership and invisibility.`,
+    },
+    {
+      heading: `${location.city}-Specific ${term.term} for ${industry.name}`,
+      body: `When implementing ${term.term.toLowerCase()} for ${industry.name.toLowerCase()} in ${locationName}, consider these local factors:`,
+      listItems: [
+        `**Local Competition**: ${location.city}'s ${industry.name.toLowerCase()} market has unique competitive dynamics`,
+        `**Regional Search Behavior**: Users in ${location.city} search differently than national averages`,
+        `**Local Keywords**: Include "${location.city} ${industry.keywords[0]}" in your ${term.term.toLowerCase()} strategy`,
+        `**Market Trends**: ${location.localInsights[1] || location.localInsights[0]}`,
+      ],
+    },
+    {
+      heading: `${term.term} Best Practices for ${industry.name} in ${location.city}`,
+      body: `Here's how ${industry.name.toLowerCase()} companies in ${location.city} should approach ${term.term.toLowerCase()}:
+
+**Industry Focus**: Target keywords like ${industry.keywords.slice(0, 2).join(', ')}.
+
+**Local Optimization**: Optimize for "${location.city} ${industry.name.toLowerCase()}" variations.
+
+**Content Strategy**: Create content addressing ${industry.seoNeeds.slice(0, 2).join(' and ').toLowerCase()}.
+
+**Competitive Edge**: Use ${term.term.toLowerCase()} to differentiate from other ${industry.name.toLowerCase()} businesses in ${location.city}.`,
+    },
+    {
+      heading: `How Anthroly Automates ${term.term} for ${location.city} ${industry.name} Companies`,
+      body: `Our AI platform handles ${term.term.toLowerCase()} automatically for ${industry.name.toLowerCase()} businesses in ${locationName}. We combine local market intelligence with industry-specific optimization to deliver results without the overhead of manual SEO work.`,
+    },
+  ];
+  
+  const faq: FAQ[] = [
+    {
+      question: `How important is ${term.term} for ${industry.name} in ${location.city}?`,
+      answer: `Very important. ${location.city}'s competitive ${industry.name.toLowerCase()} market means that proper ${term.term.toLowerCase()} implementation can significantly impact your visibility. Local searchers looking for ${industry.keywords[0]} need to find your business, and ${term.term.toLowerCase()} is key to making that happen.`,
+    },
+    {
+      question: `What makes ${term.term} different for ${industry.name} in ${location.city}?`,
+      answer: `${location.city} has specific market conditions (${location.localInsights[0]}) that interact with ${industry.name.toLowerCase()} industry dynamics. Generic ${term.term.toLowerCase()} guides miss these nuances. You need strategies that account for both local and industry factors.`,
+    },
+    {
+      question: `How can Anthroly help with ${term.term} for my ${location.city} ${industry.name} business?`,
+      answer: `Anthroly's AI platform automatically implements ${term.term.toLowerCase()} best practices tailored to ${industry.name.toLowerCase()} businesses in ${location.city}. We handle the complexity so you can focus on growing your business.`,
+    },
+  ];
+  
+  const internalLinks: InternalLink[] = [
+    { url: `/glossary/${term.slug}`, anchorText: term.term, context: 'Main glossary term' },
+    { url: `/glossary/${term.slug}/for-${industry.slug}`, anchorText: `${term.term} for ${industry.name}`, context: 'Industry glossary' },
+    { url: `/industries/${industry.slug}/${location.slug}`, anchorText: `${industry.name} SEO in ${location.city}`, context: 'Industry location page' },
+    { url: '/#ai-crawler', anchorText: 'Free Analysis', context: 'Lead magnet' },
+  ];
+  
+  const relatedPages: RelatedPage[] = [
+    { url: `/glossary/${term.slug}`, title: `${term.term} Guide`, playbook: 'glossary', relevanceScore: 90 },
+    { url: `/industries/${industry.slug}`, title: `${industry.name} SEO`, playbook: 'personas', relevanceScore: 85 },
+    { url: `/ai-seo-agency/${location.slug}`, title: `AI SEO in ${location.city}`, playbook: 'locations', relevanceScore: 85 },
+  ];
+  
+  const schema: SchemaData = {
+    type: 'Article',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: `${term.term} for ${industry.name} in ${location.city}`,
+      description: `Learn how to apply ${term.term.toLowerCase()} for ${industry.name.toLowerCase()} businesses in ${locationName}.`,
+      author: { '@type': 'Organization', name: 'Anthroly' },
+    },
+  };
+  
+  const page: PSEOPage = {
+    url,
+    slug,
+    playbookType: 'glossary',
+    seo: {
+      title: `${term.term} for ${industry.name} in ${location.city} | Anthroly`,
+      metaDescription: `Learn ${term.term.toLowerCase()} strategies for ${industry.name.toLowerCase()} companies in ${locationName}. Local market insights and implementation guide.`,
+      primaryKeyword: `${term.term.toLowerCase()} ${industry.name.toLowerCase()} ${location.city}`,
+      secondaryKeywords: [
+        `${location.city} ${industry.name.toLowerCase()} ${term.term.toLowerCase()}`,
+        `${industry.name.toLowerCase()} seo ${location.city}`,
+        ...industry.keywords.slice(0, 2).map(k => `${location.city} ${k}`),
+      ],
+      searchIntent: 'informational',
+    },
+    content: {
+      h1: `${term.term} for ${industry.name} in ${location.city}`,
+      introduction: `If you're running a ${industry.name.toLowerCase()} business in ${locationName}, understanding ${term.term.toLowerCase()} is essential for organic growth. This guide explains exactly how to implement ${term.term.toLowerCase()} strategies tailored to ${industry.name.toLowerCase()} companies in the ${location.city} market.`,
+      sections,
+      faq,
+      callToAction: {
+        headline: `Get ${term.term} Help for Your ${location.city} ${industry.name} Business`,
+        description: `Let Anthroly's AI optimize your ${industry.name.toLowerCase()} site for ${location.city} searchers.`,
+        buttonText: 'Get Free Analysis',
+        buttonUrl: '/#ai-crawler',
+      },
+    },
+    schema,
+    internalLinks,
+    relatedPages,
+    dataRequirementsUsed: ['glossaryTerm', 'industry', 'location'],
+    generatedAt: new Date().toISOString(),
+    wordCount: 0,
+    qualityScore: 0,
+  };
+  
+  const validation = validatePage(page);
+  page.wordCount = validation.metrics.wordCount;
+  page.qualityScore = validation.metrics.uniquenessScore;
+  
+  return page;
+}
+
+// ============================================================================
+// USE CASE + INDUSTRY + LOCATION THREE-WAY COMBINATIONS
+// Example: "Lead Generation for SaaS in New York: Complete Guide"
+// Total: 18 use cases × 20 industries × 149 locations = 53,640 pages
+// ============================================================================
+
+export function generateUseCaseIndustryLocationPage(
+  useCaseSlug: string, 
+  industrySlug: string, 
+  locationSlug: string
+): PSEOPage | null {
+  const useCase = useCases.find(u => u.slug === useCaseSlug);
+  const industry = industries.find(i => i.slug === industrySlug);
+  const location = seoLocations.find(l => l.slug === locationSlug);
+  
+  if (!useCase || !industry || !location) return null;
+  
+  const locationName = location.state 
+    ? `${location.city}, ${location.state}` 
+    : `${location.city}, ${location.country}`;
+  
+  const slug = `use-cases/${useCase.slug}/${industry.slug}/${location.slug}`;
+  const url = `/${slug}`;
+  
+  const sections: ContentSection[] = [
+    {
+      heading: `${useCase.name} for ${industry.name} in ${location.city}`,
+      body: `${useCase.description} For ${industry.name.toLowerCase()} companies in ${locationName}, this use case is particularly valuable given the local market dynamics: ${location.localInsights[0]}`,
+    },
+    {
+      heading: `Why ${location.city} ${industry.name} Companies Need ${useCase.name}`,
+      body: `The ${location.city} market presents unique challenges for ${industry.name.toLowerCase()} businesses:`,
+      listItems: [
+        `**Local Competition**: Intense rivalry among ${industry.name.toLowerCase()} businesses in ${location.city}`,
+        `**Market Dynamics**: ${location.localInsights[1] || location.localInsights[0]}`,
+        `**Industry Challenges**: ${industry.painPoints.slice(0, 2).join(', ')}`,
+        `**${useCase.name} Opportunity**: Address these with targeted organic strategies`,
+      ],
+    },
+    {
+      heading: `Implementation Guide: ${useCase.name} for ${location.city} ${industry.name}`,
+      body: `Here's how to implement ${useCase.name.toLowerCase()} for your ${industry.name.toLowerCase()} business in ${location.city}:`,
+      listItems: useCase.benefits.map(benefit => `**${benefit}**: Tailored for ${location.city}'s ${industry.name.toLowerCase()} market`),
+    },
+    {
+      heading: `Expected Results for ${industry.name} in ${location.city}`,
+      body: `When properly implemented, ${useCase.name.toLowerCase()} for ${industry.name.toLowerCase()} businesses in ${location.city} typically delivers:
+
+**Organic Traffic Growth**: Increased visibility for "${location.city} ${industry.keywords[0]}" searches.
+
+**Lead Quality**: Better qualified leads from local ${industry.name.toLowerCase()} searches.
+
+**Market Position**: Stronger competitive positioning in ${location.city}'s ${industry.name.toLowerCase()} market.
+
+**ROI**: Sustainable organic growth without ongoing ad spend.`,
+    },
+    {
+      heading: `How Anthroly Automates ${useCase.name} for ${location.city} ${industry.name}`,
+      body: `Anthroly's AI platform handles ${useCase.name.toLowerCase()} automatically for ${industry.name.toLowerCase()} businesses in ${locationName}. Our system combines local market intelligence with industry expertise to deliver results at scale.`,
+    },
+  ];
+  
+  const faq: FAQ[] = [
+    {
+      question: `How effective is ${useCase.name} for ${industry.name} in ${location.city}?`,
+      answer: `Very effective when properly implemented. ${location.city}'s ${industry.name.toLowerCase()} market is competitive, and ${useCase.name.toLowerCase()} provides a sustainable path to organic visibility. Companies that master this typically see significant improvements in local search performance.`,
+    },
+    {
+      question: `How long does ${useCase.name} take to work for ${industry.name} in ${location.city}?`,
+      answer: `Results typically begin appearing within 3-6 months for ${industry.name.toLowerCase()} businesses. ${location.city}'s market dynamics can accelerate or slow results depending on local competition levels.`,
+    },
+    {
+      question: `Is ${useCase.name} worth the investment for ${location.city} ${industry.name} companies?`,
+      answer: `Yes, especially given ${location.city}'s competitive ${industry.name.toLowerCase()} market. The long-term ROI of organic visibility typically exceeds paid alternatives, and Anthroly's automation makes it accessible without building an internal team.`,
+    },
+  ];
+  
+  const internalLinks: InternalLink[] = [
+    { url: `/use-cases/${useCase.slug}`, anchorText: useCase.name, context: 'Main use case page' },
+    { url: `/use-cases/${useCase.slug}/${industry.slug}`, anchorText: `${useCase.name} for ${industry.name}`, context: 'Industry use case' },
+    { url: `/industries/${industry.slug}/${location.slug}`, anchorText: `${industry.name} in ${location.city}`, context: 'Industry location page' },
+    { url: '/#ai-crawler', anchorText: 'Free Analysis', context: 'Lead magnet' },
+  ];
+  
+  const relatedPages: RelatedPage[] = [
+    { url: `/use-cases/${useCase.slug}`, title: useCase.name, playbook: 'curation', relevanceScore: 90 },
+    { url: `/industries/${industry.slug}`, title: `${industry.name} SEO`, playbook: 'personas', relevanceScore: 85 },
+    { url: `/ai-seo-agency/${location.slug}`, title: `AI SEO in ${location.city}`, playbook: 'locations', relevanceScore: 85 },
+  ];
+  
+  const schema: SchemaData = {
+    type: 'Article',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: `${useCase.name} for ${industry.name} in ${location.city}`,
+      description: `Complete guide to ${useCase.name.toLowerCase()} for ${industry.name.toLowerCase()} companies in ${locationName}.`,
+      author: { '@type': 'Organization', name: 'Anthroly' },
+    },
+  };
+  
+  const page: PSEOPage = {
+    url,
+    slug,
+    playbookType: 'curation',
+    seo: {
+      title: `${useCase.name} for ${industry.name} in ${location.city} | Anthroly`,
+      metaDescription: `${useCase.name} strategies for ${industry.name.toLowerCase()} companies in ${locationName}. Local market guide and implementation.`,
+      primaryKeyword: `${useCase.slug.replace(/-/g, ' ')} ${industry.name.toLowerCase()} ${location.city}`,
+      secondaryKeywords: [
+        `${location.city} ${industry.name.toLowerCase()} ${useCase.slug.replace(/-/g, ' ')}`,
+        `${industry.name.toLowerCase()} marketing ${location.city}`,
+        ...industry.keywords.slice(0, 2).map(k => `${location.city} ${k}`),
+      ],
+      searchIntent: 'informational',
+    },
+    content: {
+      h1: `${useCase.name} for ${industry.name} in ${location.city}`,
+      introduction: `Looking to grow your ${industry.name.toLowerCase()} business in ${locationName} through ${useCase.name.toLowerCase()}? This guide covers everything you need to know about implementing this strategy in ${location.city}'s competitive market.`,
+      sections,
+      faq,
+      callToAction: {
+        headline: `Start ${useCase.name} for Your ${location.city} ${industry.name} Business`,
+        description: `Let Anthroly's AI handle ${useCase.name.toLowerCase()} for your ${industry.name.toLowerCase()} company.`,
+        buttonText: 'Get Free Analysis',
+        buttonUrl: '/#ai-crawler',
+      },
+    },
+    schema,
+    internalLinks,
+    relatedPages,
+    dataRequirementsUsed: ['useCase', 'industry', 'location'],
+    generatedAt: new Date().toISOString(),
+    wordCount: 0,
+    qualityScore: 0,
+  };
+  
+  const validation = validatePage(page);
+  page.wordCount = validation.metrics.wordCount;
+  page.qualityScore = validation.metrics.uniquenessScore;
+  
+  return page;
+}
+
+// ============================================================================
 // GET ALL COMBINATION COUNTS
 // ============================================================================
 
