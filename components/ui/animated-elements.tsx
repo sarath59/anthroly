@@ -172,12 +172,12 @@ interface GradientBeamProps {
 
 export const GradientBeam = ({ className = '', color = 'emerald' }: GradientBeamProps) => {
   const colorMap: Record<string, string> = {
-    emerald: 'from-transparent via-emerald-500/20 to-transparent',
-    cyan: 'from-transparent via-cyan-500/20 to-transparent',
-    purple: 'from-transparent via-purple-500/20 to-transparent',
-    blue: 'from-transparent via-blue-500/20 to-transparent',
-    orange: 'from-transparent via-orange-500/20 to-transparent',
-    amber: 'from-transparent via-amber-500/20 to-transparent',
+    emerald: 'from-transparent via-emerald-400/40 to-transparent',
+    cyan: 'from-transparent via-cyan-400/40 to-transparent',
+    purple: 'from-transparent via-purple-400/40 to-transparent',
+    blue: 'from-transparent via-blue-400/40 to-transparent',
+    orange: 'from-transparent via-orange-400/40 to-transparent',
+    amber: 'from-transparent via-amber-400/40 to-transparent',
   };
 
   return (
@@ -185,7 +185,7 @@ export const GradientBeam = ({ className = '', color = 'emerald' }: GradientBeam
       <motion.div
         className={`absolute -inset-x-full h-full bg-gradient-to-r ${colorMap[color] || colorMap.emerald}`}
         animate={{ x: ['-100%', '200%'] }}
-        transition={{ duration: 5, repeat: Infinity, repeatDelay: 3, ease: 'linear' }}
+        transition={{ duration: 3, repeat: Infinity, repeatDelay: 2, ease: 'linear' }}
       />
     </div>
   );
@@ -371,7 +371,7 @@ interface SpotlightCardProps {
 export const SpotlightCard = ({
   children,
   className = '',
-  spotlightColor = 'rgba(16,185,129,0.15)',
+  spotlightColor = 'rgba(16,185,129,0.35)',
 }: SpotlightCardProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -396,15 +396,15 @@ export const SpotlightCard = ({
         className="absolute pointer-events-none z-0"
         animate={{
           opacity: isHovered ? 1 : 0,
-          x: position.x - 150,
-          y: position.y - 150,
+          x: position.x - 200,
+          y: position.y - 200,
         }}
-        transition={{ type: 'spring', stiffness: 200, damping: 30, opacity: { duration: 0.2 } }}
+        transition={{ type: 'spring', stiffness: 200, damping: 30, opacity: { duration: 0.3 } }}
         style={{
-          width: 300,
-          height: 300,
+          width: 400,
+          height: 400,
           borderRadius: '50%',
-          background: `radial-gradient(circle, ${spotlightColor} 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${spotlightColor} 0%, transparent 65%)`,
         }}
       />
       <div className="relative z-10">{children}</div>
@@ -454,20 +454,20 @@ interface GlowPulseProps {
 
 export const GlowPulse = ({ className = '', color = 'emerald', size = 400 }: GlowPulseProps) => {
   const colorMap: Record<string, string> = {
-    emerald: 'bg-emerald-500/15',
-    cyan: 'bg-cyan-500/15',
-    purple: 'bg-purple-500/15',
-    blue: 'bg-blue-500/15',
-    orange: 'bg-orange-500/15',
-    amber: 'bg-amber-500/15',
+    emerald: 'bg-emerald-500/40',
+    cyan: 'bg-cyan-500/40',
+    purple: 'bg-purple-500/40',
+    blue: 'bg-blue-500/40',
+    orange: 'bg-orange-500/40',
+    amber: 'bg-amber-500/40',
   };
 
   return (
     <motion.div
-      className={`absolute rounded-full blur-[120px] pointer-events-none ${colorMap[color] || colorMap.emerald} ${className}`}
+      className={`absolute rounded-full blur-[100px] pointer-events-none ${colorMap[color] || colorMap.emerald} ${className}`}
       style={{ width: size, height: size }}
-      animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-      transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+      animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+      transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
     />
   );
 };
@@ -525,15 +525,15 @@ interface ScaleOnScrollProps {
 
 export const ScaleOnScroll = ({ children, className = '' }: ScaleOnScrollProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, scale: 0.92, filter: 'blur(8px)' }}
-      animate={isInView ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : {}}
-      transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+      initial={{ opacity: 0, scale: 0.85, y: 30 }}
+      animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
       {children}
     </motion.div>
