@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles, TrendingUp, Bot, Search } from 'lucide-react';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
-import { MorphingBlob, FloatingParticles } from '../ui/animated-elements';
+import { GlowPulse, GradientBeam, SpotlightCard, ScaleOnScroll, HoverTilt } from '../ui/animated-elements';
 
 export const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,19 +51,9 @@ export const Pricing = () => {
 
   return (
     <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
-      {/* Floating particles */}
-      <FloatingParticles count={20} colors={['#10b981', '#06b6d4', '#22c55e']} className="opacity-40" />
-      
       {/* Background Glow */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[200px] breathe-glow"></div>
-        {/* Morphing blobs */}
-        <div className="absolute top-1/4 left-1/4">
-          <MorphingBlob size={400} colors={['#10b981', '#06b6d4']} />
-        </div>
-        <div className="absolute bottom-1/4 right-1/4">
-          <MorphingBlob size={350} colors={['#06b6d4', '#3b82f6']} className="opacity-20" />
-        </div>
+        <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="emerald" size={800} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -86,11 +76,12 @@ export const Pricing = () => {
 
         {/* Pricing Card */}
         <div className={`max-w-xl mx-auto transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          <div className="relative group">
+          <HoverTilt className="relative group" intensity={4}>
             {/* Glow Effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             
-            <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
+            <SpotlightCard className="rounded-3xl">
+              <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
               
               {/* Best Value Badge */}
               <div className="absolute top-0 right-0 -mt-4 -mr-4">
@@ -199,7 +190,8 @@ export const Pricing = () => {
                 </p>
               </div>
             </div>
-          </div>
+            </SpotlightCard>
+          </HoverTilt>
         </div>
 
         {/* ROI Calculator Callout */}

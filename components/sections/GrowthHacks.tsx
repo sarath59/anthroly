@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Rocket, ShoppingCart, Code, Building2, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const GrowthHacks = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -67,8 +68,8 @@ export const GrowthHacks = () => {
     <section id="growth-hacks" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+        <GlowPulse className="top-0 left-0" color="purple" size={500} />
+        <GlowPulse className="bottom-0 right-0" color="blue" size={400} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

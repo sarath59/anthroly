@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const FounderStory = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ export const FounderStory = () => {
     <section ref={sectionRef} className="py-20 md:py-28 bg-transparent relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-emerald-600/5 rounded-full blur-[150px]"></div>
+        <GlowPulse className="top-1/2 left-0" color="emerald" size={400} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

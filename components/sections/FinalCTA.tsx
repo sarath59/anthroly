@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/button';
-import { FloatingParticles, Sparkles } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const FinalCTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -29,17 +29,11 @@ export const FinalCTA = () => {
 
   return (
     <section ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
-      {/* Sparkles effect */}
-      <Sparkles count={8} className="opacity-70" />
-      
-      {/* Floating particles */}
-      <FloatingParticles count={30} colors={['#10b981', '#06b6d4', '#3b82f6', '#f59e0b']} className="opacity-50" />
-      
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-600/20 rounded-full blur-[200px] breathe-glow"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/15 rounded-full blur-[180px] morph-blob"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[250px] breathe-glow" style={{ animationDelay: '-2s' }}></div>
+        <GlowPulse className="top-0 left-1/4" color="emerald" size={600} />
+        <GlowPulse className="bottom-0 right-1/4" color="cyan" size={500} />
+        <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="blue" size={800} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

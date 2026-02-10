@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Share2, Linkedin, Twitter, BookOpen, TrendingUp, Users, CheckCircle2, Eye, MessageSquare } from 'lucide-react';
 import { LogoStrip, SOCIAL_PLATFORMS } from '../ui/CompanyLogos';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const SocialArticles = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -52,6 +53,7 @@ export const SocialArticles = () => {
   return (
     <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Background */}
+      <GlowPulse className="bottom-1/3 left-0" color="blue" size={500} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(59,130,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">

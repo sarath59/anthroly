@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { XCircle, CheckCircle2, TrendingUp, Zap, DollarSign, Clock } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES, SEO_TOOLS } from '../ui/CompanyLogos';
+import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
 
 export const ProblemSolution = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,6 +28,7 @@ export const ProblemSolution = () => {
 
   return (
     <section ref={sectionRef} className="py-24 md:py-32 bg-transparent overflow-hidden">
+      <GlowPulse className="top-1/3 left-0" color="emerald" size={500} />
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
@@ -45,6 +47,7 @@ export const ProblemSolution = () => {
 
         <div className={`grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* The Old Way */}
+          <SpotlightCard className="rounded-3xl" spotlightColor="rgba(239,68,68,0.1)">
           <div className="bg-gray-900/80 p-6 md:p-10 rounded-3xl border border-gray-800 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 to-orange-500"></div>
             <div className="mb-8">
@@ -92,8 +95,10 @@ export const ProblemSolution = () => {
               </li>
             </ul>
           </div>
+          </SpotlightCard>
 
           {/* The Anthroly Way */}
+          <SpotlightCard className="rounded-3xl" spotlightColor="rgba(16,185,129,0.15)">
           <div className="bg-gray-900 text-white p-6 md:p-10 rounded-3xl border border-emerald-500/30 shadow-2xl relative overflow-hidden transform md:-translate-y-4">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500"></div>
             <div className="mb-8">
@@ -141,6 +146,7 @@ export const ProblemSolution = () => {
               </li>
             </ul>
           </div>
+          </SpotlightCard>
         </div>
 
         {/* Bottom Stats */}

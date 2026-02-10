@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Users, Sparkles, TrendingUp, Shield, Clock } from 'lucide-react';
+import { GlowPulse, GradientBeam, SpotlightCard } from '../ui/animated-elements';
 
 export const FoundingMembers = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -49,6 +50,7 @@ export const FoundingMembers = () => {
 
   return (
     <section ref={sectionRef} className="py-16 md:py-20 bg-transparent relative overflow-hidden">
+      <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="amber" size={600} />
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
@@ -58,7 +60,7 @@ export const FoundingMembers = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/30 via-orange-500/30 to-red-500/30 rounded-3xl blur-xl opacity-50"></div>
             
             <div className="relative bg-gray-900/90 border border-amber-500/30 rounded-3xl p-8 md:p-12">
-              
+              <GradientBeam color="amber" />
               {/* Badge */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <div className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-full text-sm font-bold shadow-lg">

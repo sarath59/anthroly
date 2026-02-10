@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Clock, Target } from 'lucide-react';
 import { LogoStrip, ANALYTICS_TOOLS, SEO_TOOLS } from '../ui/CompanyLogos';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const AutomatedReports = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -36,7 +37,7 @@ export const AutomatedReports = () => {
     <section id="reports" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[150px] -translate-x-1/2"></div>
+        <GlowPulse className="top-0 left-1/2 -translate-x-1/2" color="emerald" size={600} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

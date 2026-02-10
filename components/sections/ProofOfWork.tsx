@@ -12,6 +12,7 @@ import {
   Sparkles,
   TrendingUp,
 } from "lucide-react";
+import { GlowPulse, SpotlightCard, ScaleOnScroll } from "../ui/animated-elements";
 
 export const ProofOfWork = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -37,8 +38,8 @@ export const ProofOfWork = () => {
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-0 w-[650px] h-[650px] bg-emerald-600/10 rounded-full blur-[200px]"></div>
-        <div className="absolute bottom-1/3 right-0 w-[520px] h-[520px] bg-cyan-600/10 rounded-full blur-[180px]"></div>
+        <GlowPulse className="top-1/3 left-0" color="emerald" size={650} />
+        <GlowPulse className="bottom-1/3 right-0" color="cyan" size={520} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -70,7 +71,7 @@ export const ProofOfWork = () => {
           }`}
         >
           {/* Case Study: llmoutrank */}
-          <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-gray-900/50">
+          <SpotlightCard className="overflow-hidden rounded-3xl border border-gray-800 bg-gray-900/50">
             <div className="p-8">
               <div className="flex items-start justify-between gap-4 mb-6">
                 <div>
@@ -148,39 +149,27 @@ export const ProofOfWork = () => {
             </div>
 
             {/* Screenshot */}
-            <div className="border-t border-gray-800 bg-black/30 p-6">
-              <div className="text-xs text-gray-400 mb-3">
-                Analytics snapshot for llmoutrank (AI referrers)
-              </div>
-              <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-gray-950 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.85)]">
-                {/* Browser chrome */}
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-black/50">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-red-500/90" />
-                    <span className="w-3 h-3 rounded-full bg-yellow-500/90" />
-                    <span className="w-3 h-3 rounded-full bg-green-500/90" />
-                  </div>
-                  <div className="ml-3 flex-1">
-                    <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] text-gray-300 truncate">
-                      datafa.st/share/682b1fc309a39da9358cd37a
-                    </div>
+            <div className="border-t border-gray-800 p-6 bg-gradient-to-b from-gray-800/40 to-gray-700/20">
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
+                {/* Light border frame to separate from dark background */}
+                <div className="p-[2px] rounded-2xl bg-gradient-to-b from-white/20 via-white/10 to-white/5">
+                  <div className="rounded-[14px] overflow-hidden bg-[#1a1f2e]">
+                    <Image
+                      src="/testimonial.png"
+                      alt="llmoutrank AI traffic results"
+                      width={1600}
+                      height={900}
+                      className="w-full h-auto object-contain"
+                      priority={false}
+                    />
                   </div>
                 </div>
-
-                <Image
-                  src="/testimonial.png"
-                  alt="llmoutrank results snapshot"
-                  width={1600}
-                  height={900}
-                  className="w-full h-auto object-contain"
-                  priority={false}
-                />
               </div>
             </div>
-          </div>
+          </SpotlightCard>
 
           {/* Case Study: isthisaiorno.com */}
-          <div className="relative overflow-hidden rounded-3xl border border-gray-800 bg-gray-900/50">
+          <SpotlightCard className="overflow-hidden rounded-3xl border border-gray-800 bg-gray-900/50">
             <div className="p-8">
               <div className="text-sm font-semibold text-cyan-300">
                 Starting Now
@@ -267,7 +256,7 @@ export const ProofOfWork = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </SpotlightCard>
         </div>
       </div>
     </section>

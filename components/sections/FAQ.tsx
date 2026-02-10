@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import { GlowPulse, ScaleOnScroll } from '../ui/animated-elements';
 
 const faqs = [
   {
@@ -82,6 +83,7 @@ export const FAQ = () => {
 
   return (
     <section id="faq" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      <GlowPulse className="top-1/2 right-0" color="emerald" size={400} />
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
       

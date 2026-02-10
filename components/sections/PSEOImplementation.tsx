@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Layers, Code, Zap, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import { LogoStrip, PSEO_SUCCESS } from '../ui/CompanyLogos';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const PSEOImplementation = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -34,6 +35,7 @@ export const PSEOImplementation = () => {
 
   return (
     <section id="pseo" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      <GlowPulse className="bottom-1/4 left-0" color="purple" size={500} />
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,_rgba(139,92,246,0.05)_0%,_transparent_50%)]"></div>
       

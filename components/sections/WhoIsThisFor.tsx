@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Rocket, Building2, Users, Code2, Store, Briefcase, CheckCircle2, ArrowRight } from 'lucide-react';
 import { LogoStrip, SAAS_LEADERS, ECOMMERCE } from '../ui/CompanyLogos';
+import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
 
 export const WhoIsThisFor = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -74,8 +75,8 @@ export const WhoIsThisFor = () => {
     <section id="who" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[180px]"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px]"></div>
+        <GlowPulse className="top-1/3 left-0" color="emerald" size={600} />
+        <GlowPulse className="bottom-0 right-0" color="blue" size={500} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -100,24 +101,26 @@ export const WhoIsThisFor = () => {
           {audiences.map((audience, index) => {
             const Icon = audience.icon;
             return (
-              <div 
+              <SpotlightCard
                 key={index}
-                className="group p-6 md:p-8 bg-gray-900/80 border border-gray-800 rounded-3xl hover:border-emerald-500/30 transition-all duration-300"
+                className="bg-gray-900/80 border border-gray-800 rounded-3xl hover:border-emerald-500/30 transition-all duration-300"
               >
-                <div className={`w-14 h-14 bg-${audience.color}-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <Icon className={`text-${audience.color}-400`} size={28} />
+                <div className="group p-6 md:p-8">
+                  <div className={`w-14 h-14 bg-${audience.color}-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className={`text-${audience.color}-400`} size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">{audience.title}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">{audience.description}</p>
+                  <div className="space-y-2">
+                    {audience.benefits.map((benefit, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="text-emerald-400" size={16} />
+                        <span className="text-gray-300">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">{audience.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{audience.description}</p>
-                <div className="space-y-2">
-                  {audience.benefits.map((benefit, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="text-emerald-400" size={16} />
-                      <span className="text-gray-300">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              </SpotlightCard>
             );
           })}
         </div>

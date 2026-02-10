@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Wrench, Calculator, FileText, Search, Zap, TrendingUp, CheckCircle2, ArrowRight, Gift } from 'lucide-react';
 import { LogoStrip, SEO_TOOLS } from '../ui/CompanyLogos';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const FreeToolsBuilder = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -35,6 +36,7 @@ export const FreeToolsBuilder = () => {
   return (
     <section id="tools" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Background */}
+      <GlowPulse className="top-1/3 right-0" color="cyan" size={500} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(20,184,166,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">

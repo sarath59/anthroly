@@ -1,318 +1,121 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState, useRef, ReactNode } from 'react';
+import { motion, useScroll, useTransform, useInView, useSpring } from 'framer-motion';
 
 // ============================================================================
-// ORBITING ICONS - Perfect for AI/Tech sections
+// SCROLL REVEAL - Smooth reveal as elements enter viewport (Linear-style)
 // ============================================================================
-interface OrbitingIconsProps {
-  icons: React.ReactNode[];
-  radius?: number;
+interface ScrollRevealProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   duration?: number;
-  className?: string;
-  centerContent?: React.ReactNode;
+  once?: boolean;
 }
 
-export const OrbitingIcons = ({ 
-  icons, 
-  radius = 100, 
-  duration = 20,
+export const ScrollReveal = ({
+  children,
   className = '',
-  centerContent
-}: OrbitingIconsProps) => {
-  return (
-    <div className={`relative ${className}`} style={{ width: radius * 2 + 40, height: radius * 2 + 40 }}>
-      {/* Center glow */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-24 h-24 bg-emerald-500/20 rounded-full blur-xl breathe-glow" />
-      </div>
-      
-      {/* Center content */}
-      {centerContent && (
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          {centerContent}
-        </div>
-      )}
-      
-      {/* Orbit ring */}
-      <div 
-        className="absolute border border-gray-800/50 rounded-full"
-        style={{ 
-          width: radius * 2, 
-          height: radius * 2,
-          top: 20,
-          left: 20
-        }}
-      />
-      
-      {/* Orbiting icons */}
-      {icons.map((icon, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center shadow-lg"
-          style={{
-            top: '50%',
-            left: '50%',
-            marginTop: -20,
-            marginLeft: -20,
-          }}
-          animate={{
-            rotate: [0 + (i * (360 / icons.length)), 360 + (i * (360 / icons.length))],
-          }}
-          transition={{
-            duration,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        >
-          <motion.div
-            animate={{ rotate: [0 - (i * (360 / icons.length)), -360 - (i * (360 / icons.length))] }}
-            transition={{ duration, repeat: Infinity, ease: "linear" }}
-            style={{ 
-              transform: `translateX(${radius}px)`,
-            }}
-          >
-            <div className="w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center">
-              {icon}
-            </div>
-          </motion.div>
-        </motion.div>
-      ))}
-    </div>
-  );
-};
+  delay = 0,
+  direction = 'up',
+  duration = 0.7,
+  once = true,
+}: ScrollRevealProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once, margin: '-80px' });
 
-// ============================================================================
-// NEURAL NETWORK ANIMATION - For AI-related sections
-// ============================================================================
-interface NeuralNetworkProps {
-  className?: string;
-  nodeCount?: number;
-}
-
-export const NeuralNetwork = ({ className = '', nodeCount = 12 }: NeuralNetworkProps) => {
-  const [nodes, setNodes] = useState<Array<{ x: number; y: number; delay: number }>>([]);
-  
-  useEffect(() => {
-    const generated = Array.from({ length: nodeCount }, () => ({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      delay: Math.random() * 2
-    }));
-    setNodes(generated);
-  }, [nodeCount]);
+  const directionMap = {
+    up: { y: 40 },
+    down: { y: -40 },
+    left: { x: 60 },
+    right: { x: -60 },
+    none: {},
+  };
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        {/* Connection lines */}
-        {nodes.map((node, i) => 
-          nodes.slice(i + 1).filter((_, j) => j < 3).map((target, j) => (
-            <line
-              key={`${i}-${j}`}
-              x1={node.x}
-              y1={node.y}
-              x2={target.x}
-              y2={target.y}
-              stroke="url(#lineGradient)"
-              strokeWidth="0.2"
-              className="network-link"
-              style={{ animationDelay: `${node.delay}s` }}
-            />
-          ))
-        )}
-        
-        {/* Gradient definition */}
-        <defs>
-          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.3" />
-          </linearGradient>
-        </defs>
-        
-        {/* Nodes */}
-        {nodes.map((node, i) => (
-          <circle
-            key={i}
-            cx={node.x}
-            cy={node.y}
-            r="0.8"
-            fill="#10b981"
-            className={i % 2 === 0 ? 'node-pulse' : 'node-pulse-delayed'}
-            style={{ animationDelay: `${node.delay}s` }}
-          />
-        ))}
-      </svg>
-    </div>
-  );
-};
-
-// ============================================================================
-// DATA STREAM - For content/data flow sections
-// ============================================================================
-interface DataStreamProps {
-  className?: string;
-  streamCount?: number;
-  colors?: string[];
-}
-
-export const DataStream = ({ 
-  className = '', 
-  streamCount = 5,
-  colors = ['#10b981', '#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899']
-}: DataStreamProps) => {
-  return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {Array.from({ length: streamCount }).map((_, i) => (
-        <div
-          key={i}
-          className="absolute h-20 w-0.5 rounded-full data-stream"
-          style={{
-            left: `${15 + (i * 18)}%`,
-            top: '-20%',
-            background: `linear-gradient(180deg, transparent, ${colors[i % colors.length]}, transparent)`,
-            animationDelay: `${i * 0.8}s`,
-            opacity: 0.6
-          }}
-        />
-      ))}
-    </div>
-  );
-};
-
-// ============================================================================
-// SCANNING RADAR - For analysis/monitoring sections
-// ============================================================================
-interface ScanningRadarProps {
-  size?: number;
-  className?: string;
-}
-
-export const ScanningRadar = ({ size = 200, className = '' }: ScanningRadarProps) => {
-  return (
-    <div 
-      className={`relative ${className}`}
-      style={{ width: size, height: size }}
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, ...directionMap[direction] }}
+      animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+      transition={{
+        duration,
+        delay,
+        ease: [0.21, 0.47, 0.32, 0.98],
+      }}
     >
-      {/* Concentric rings */}
-      {[0.3, 0.5, 0.7, 0.9].map((scale, i) => (
-        <div
-          key={i}
-          className="absolute border border-emerald-500/20 rounded-full"
-          style={{
-            width: size * scale,
-            height: size * scale,
-            top: (size - size * scale) / 2,
-            left: (size - size * scale) / 2,
-          }}
-        />
-      ))}
-      
-      {/* Radar sweep */}
-      <div 
-        className="absolute inset-0 radar-sweep"
-        style={{ transformOrigin: '50% 50%' }}
-      >
-        <div
-          className="absolute top-1/2 left-1/2 w-1/2 h-0.5"
-          style={{
-            background: 'linear-gradient(90deg, #10b981, transparent)',
-            transformOrigin: 'left center',
-          }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2"
-          style={{
-            width: size / 2,
-            height: size / 2,
-            background: 'conic-gradient(from 0deg, rgba(16, 185, 129, 0.2), transparent 60deg)',
-            transformOrigin: 'left top',
-            clipPath: 'polygon(0 0, 100% 0, 0 100%)',
-          }}
-        />
-      </div>
-      
-      {/* Center dot */}
-      <div className="absolute top-1/2 left-1/2 w-2 h-2 -mt-1 -ml-1 bg-emerald-500 rounded-full node-pulse" />
-      
-      {/* Random blips */}
-      {[
-        { x: 30, y: 40 },
-        { x: 60, y: 25 },
-        { x: 70, y: 65 },
-        { x: 45, y: 70 },
-      ].map((pos, i) => (
-        <div
-          key={i}
-          className="absolute w-1.5 h-1.5 bg-cyan-400 rounded-full node-pulse"
-          style={{
-            left: `${pos.x}%`,
-            top: `${pos.y}%`,
-            animationDelay: `${i * 0.5}s`
-          }}
-        />
-      ))}
-    </div>
+      {children}
+    </motion.div>
   );
 };
 
 // ============================================================================
-// FLOATING PARTICLES - Ambient background effect
+// STAGGER CONTAINER - Stagger children reveal (Stripe-style)
 // ============================================================================
-interface FloatingParticlesProps {
-  count?: number;
+interface StaggerContainerProps {
+  children: ReactNode;
   className?: string;
-  colors?: string[];
+  staggerDelay?: number;
+  delayStart?: number;
 }
 
-export const FloatingParticles = ({ 
-  count = 15, 
+export const StaggerContainer = ({
+  children,
   className = '',
-  colors = ['#10b981', '#06b6d4', '#3b82f6']
-}: FloatingParticlesProps) => {
-  const [particles, setParticles] = useState<Array<{
-    x: number;
-    y: number;
-    size: number;
-    color: string;
-    delay: number;
-  }>>([]);
-  
-  useEffect(() => {
-    const generated = Array.from({ length: count }, () => ({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: 2 + Math.random() * 4,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      delay: Math.random() * 5
-    }));
-    setParticles(generated);
-  }, [count, colors]);
+  staggerDelay = 0.08,
+  delayStart = 0,
+}: StaggerContainerProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {particles.map((p, i) => (
-        <div
-          key={i}
-          className="absolute rounded-full particle-float"
-          style={{
-            left: `${p.x}%`,
-            top: `${p.y}%`,
-            width: p.size,
-            height: p.size,
-            backgroundColor: p.color,
-            animationDelay: `${p.delay}s`,
-            filter: 'blur(0.5px)',
-          }}
-        />
-      ))}
-    </div>
+    <motion.div
+      ref={ref}
+      className={className}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: staggerDelay,
+            delayChildren: delayStart,
+          },
+        },
+      }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
+export const StaggerItem = ({
+  children,
+  className = '',
+}: {
+  children: ReactNode;
+  className?: string;
+}) => (
+  <motion.div
+    className={className}
+    variants={{
+      hidden: { opacity: 0, y: 24, filter: 'blur(4px)' },
+      visible: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] },
+      },
+    }}
+  >
+    {children}
+  </motion.div>
+);
+
 // ============================================================================
-// ANIMATED COUNTER - For stats/numbers
+// ANIMATED COUNTER - Numbers count up when visible
 // ============================================================================
 interface AnimatedCounterProps {
   value: number;
@@ -322,323 +125,450 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-export const AnimatedCounter = ({ 
-  value, 
-  prefix = '', 
-  suffix = '', 
+export const AnimatedCounter = ({
+  value,
+  prefix = '',
+  suffix = '',
   duration = 2,
-  className = ''
+  className = '',
 }: AnimatedCounterProps) => {
-  const [displayValue, setDisplayValue] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
-  useEffect(() => {
-    if (!isVisible) return;
-    
+    if (!isInView) return;
     let startTime: number;
-    let animationFrame: number;
-    
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setDisplayValue(Math.floor(easeOutQuart * value));
-      
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
+    let frame: number;
+
+    const animate = (ts: number) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / (duration * 1000), 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      setDisplayValue(Math.floor(eased * value));
+      if (progress < 1) frame = requestAnimationFrame(animate);
     };
-    
-    animationFrame = requestAnimationFrame(animate);
-    
-    return () => cancelAnimationFrame(animationFrame);
-  }, [isVisible, value, duration]);
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, [isInView, value, duration]);
 
   return (
     <span ref={ref} className={className}>
-      {prefix}{displayValue.toLocaleString()}{suffix}
+      {prefix}
+      {displayValue.toLocaleString()}
+      {suffix}
     </span>
   );
 };
 
 // ============================================================================
-// PULSING RINGS - For emphasis/attention
+// GRADIENT LIGHT BEAM - Stripe/Linear style moving light across card
 // ============================================================================
-interface PulsingRingsProps {
-  size?: number;
-  color?: string;
+interface GradientBeamProps {
   className?: string;
+  color?: string;
 }
 
-export const PulsingRings = ({ size = 100, color = '#10b981', className = '' }: PulsingRingsProps) => {
+export const GradientBeam = ({ className = '', color = 'emerald' }: GradientBeamProps) => {
+  const colorMap: Record<string, string> = {
+    emerald: 'from-transparent via-emerald-500/20 to-transparent',
+    cyan: 'from-transparent via-cyan-500/20 to-transparent',
+    purple: 'from-transparent via-purple-500/20 to-transparent',
+    blue: 'from-transparent via-blue-500/20 to-transparent',
+    orange: 'from-transparent via-orange-500/20 to-transparent',
+    amber: 'from-transparent via-amber-500/20 to-transparent',
+  };
+
   return (
-    <div className={`relative ${className}`} style={{ width: size, height: size }}>
-      <div
-        className="absolute inset-0 rounded-full pulse-ring"
-        style={{ borderColor: color, borderWidth: 2 }}
-      />
-      <div
-        className="absolute inset-0 rounded-full pulse-ring-delayed"
-        style={{ borderColor: color, borderWidth: 2 }}
-      />
-      <div
-        className="absolute inset-[30%] rounded-full"
-        style={{ backgroundColor: `${color}20` }}
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none rounded-[inherit] ${className}`}>
+      <motion.div
+        className={`absolute -inset-x-full h-full bg-gradient-to-r ${colorMap[color] || colorMap.emerald}`}
+        animate={{ x: ['-100%', '200%'] }}
+        transition={{ duration: 5, repeat: Infinity, repeatDelay: 3, ease: 'linear' }}
       />
     </div>
   );
 };
 
 // ============================================================================
-// MORPHING BLOB - Background decoration
+// ANIMATED GRADIENT BORDER - Rotating gradient border (Vercel-style)
 // ============================================================================
-interface MorphingBlobProps {
-  size?: number;
-  colors?: [string, string];
+interface GradientBorderProps {
+  children: ReactNode;
   className?: string;
+  borderClassName?: string;
+  animated?: boolean;
 }
 
-export const MorphingBlob = ({ 
-  size = 300, 
-  colors = ['#10b981', '#06b6d4'],
-  className = ''
-}: MorphingBlobProps) => {
+export const GradientBorder = ({
+  children,
+  className = '',
+  borderClassName = '',
+  animated = true,
+}: GradientBorderProps) => (
+  <div className={`relative group ${className}`}>
+    <motion.div
+      className={`absolute -inset-[1px] rounded-[inherit] bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 opacity-40 blur-sm ${borderClassName}`}
+      animate={animated ? { rotate: [0, 360] } : undefined}
+      transition={animated ? { duration: 8, repeat: Infinity, ease: 'linear' } : undefined}
+      style={{ backgroundSize: '200% 200%' }}
+    />
+    <div className="relative bg-gray-900 rounded-[inherit]">{children}</div>
+  </div>
+);
+
+// ============================================================================
+// HIGHLIGHT TEXT - Animated underline/highlight on scroll (Linear-style)
+// ============================================================================
+interface HighlightTextProps {
+  children: ReactNode;
+  className?: string;
+  color?: string;
+}
+
+export const HighlightText = ({ children, className = '', color = '#10b981' }: HighlightTextProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
+
   return (
-    <div 
-      className={`morph-blob blur-3xl opacity-30 ${className}`}
-      style={{
-        width: size,
-        height: size,
-        background: `linear-gradient(135deg, ${colors[0]}, ${colors[1]})`,
-      }}
+    <span ref={ref} className={`relative inline ${className}`}>
+      {children}
+      <motion.span
+        className="absolute left-0 bottom-0 h-[3px] rounded-full"
+        style={{ backgroundColor: color }}
+        initial={{ width: '0%' }}
+        animate={isInView ? { width: '100%' } : { width: '0%' }}
+        transition={{ duration: 0.8, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
+      />
+    </span>
+  );
+};
+
+// ============================================================================
+// PARALLAX SECTION - Subtle depth effect on scroll
+// ============================================================================
+interface ParallaxProps {
+  children: ReactNode;
+  className?: string;
+  speed?: number;
+}
+
+export const Parallax = ({ children, className = '', speed = 0.3 }: ParallaxProps) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [speed * 100, -speed * 100]);
+  const smoothY = useSpring(y, { stiffness: 100, damping: 30 });
+
+  return (
+    <motion.div ref={ref} className={className} style={{ y: smoothY }}>
+      {children}
+    </motion.div>
+  );
+};
+
+// ============================================================================
+// DRAW LINE - SVG line that draws itself on scroll
+// ============================================================================
+interface DrawLineProps {
+  className?: string;
+  direction?: 'vertical' | 'horizontal';
+  color?: string;
+  height?: number;
+}
+
+export const DrawLine = ({
+  className = '',
+  direction = 'vertical',
+  color = '#10b981',
+  height = 200,
+}: DrawLineProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-60px' });
+
+  const isVertical = direction === 'vertical';
+
+  return (
+    <svg
+      ref={ref}
+      className={className}
+      width={isVertical ? 2 : height}
+      height={isVertical ? height : 2}
+      viewBox={`0 0 ${isVertical ? 2 : height} ${isVertical ? height : 2}`}
+    >
+      <motion.line
+        x1={0}
+        y1={0}
+        x2={isVertical ? 0 : height}
+        y2={isVertical ? height : 0}
+        stroke={color}
+        strokeWidth={2}
+        strokeLinecap="round"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={isInView ? { pathLength: 1, opacity: 0.5 } : {}}
+        transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+      />
+    </svg>
+  );
+};
+
+// ============================================================================
+// HOVER TILT - 3D tilt on hover (Stripe-style card effect)
+// ============================================================================
+interface HoverTiltProps {
+  children: ReactNode;
+  className?: string;
+  intensity?: number;
+}
+
+export const HoverTilt = ({ children, className = '', intensity = 8 }: HoverTiltProps) => {
+  const [rotateX, setRotateX] = useState(0);
+  const [rotateY, setRotateY] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setRotateX(-y * intensity);
+    setRotateY(x * intensity);
+  };
+
+  const handleMouseLeave = () => {
+    setRotateX(0);
+    setRotateY(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      animate={{ rotateX, rotateY }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      style={{ transformPerspective: 1000, transformStyle: 'preserve-3d' }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+// ============================================================================
+// SPOTLIGHT - Cursor-following spotlight glow on hover
+// ============================================================================
+interface SpotlightCardProps {
+  children: ReactNode;
+  className?: string;
+  spotlightColor?: string;
+}
+
+export const SpotlightCard = ({
+  children,
+  className = '',
+  spotlightColor = 'rgba(16,185,129,0.15)',
+}: SpotlightCardProps) => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
+  return (
+    <div
+      ref={ref}
+      className={`relative overflow-hidden ${className}`}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Spotlight gradient */}
+      <motion.div
+        className="absolute pointer-events-none z-0"
+        animate={{
+          opacity: isHovered ? 1 : 0,
+          x: position.x - 150,
+          y: position.y - 150,
+        }}
+        transition={{ type: 'spring', stiffness: 200, damping: 30, opacity: { duration: 0.2 } }}
+        style={{
+          width: 300,
+          height: 300,
+          borderRadius: '50%',
+          background: `radial-gradient(circle, ${spotlightColor} 0%, transparent 70%)`,
+        }}
+      />
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+};
+
+// ============================================================================
+// ANIMATED PROGRESS BAR - Fills to target width on scroll
+// ============================================================================
+interface ProgressBarProps {
+  progress: number; // 0-100
+  className?: string;
+  color?: string;
+  height?: number;
+}
+
+export const ProgressBar = ({
+  progress,
+  className = '',
+  color = 'from-emerald-500 to-cyan-500',
+  height = 4,
+}: ProgressBarProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
+
+  return (
+    <div ref={ref} className={`w-full bg-gray-800 rounded-full overflow-hidden ${className}`} style={{ height }}>
+      <motion.div
+        className={`h-full bg-gradient-to-r ${color} rounded-full`}
+        initial={{ width: '0%' }}
+        animate={isInView ? { width: `${progress}%` } : { width: '0%' }}
+        transition={{ duration: 1.5, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+      />
+    </div>
+  );
+};
+
+// ============================================================================
+// GLOW PULSE - Soft pulsing glow behind elements
+// ============================================================================
+interface GlowPulseProps {
+  className?: string;
+  color?: string;
+  size?: number;
+}
+
+export const GlowPulse = ({ className = '', color = 'emerald', size = 400 }: GlowPulseProps) => {
+  const colorMap: Record<string, string> = {
+    emerald: 'bg-emerald-500/15',
+    cyan: 'bg-cyan-500/15',
+    purple: 'bg-purple-500/15',
+    blue: 'bg-blue-500/15',
+    orange: 'bg-orange-500/15',
+    amber: 'bg-amber-500/15',
+  };
+
+  return (
+    <motion.div
+      className={`absolute rounded-full blur-[120px] pointer-events-none ${colorMap[color] || colorMap.emerald} ${className}`}
+      style={{ width: size, height: size }}
+      animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
+      transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
     />
   );
 };
 
 // ============================================================================
-// SPARKLES - For premium/highlight areas
+// ANIMATED LINE CONNECTOR - Lines between process steps
 // ============================================================================
-interface SparklesProps {
-  count?: number;
+interface LineConnectorProps {
   className?: string;
-}
-
-export const Sparkles = ({ count = 4, className = '' }: SparklesProps) => {
-  return (
-    <div className={`absolute inset-0 pointer-events-none ${className}`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <div
-          key={i}
-          className={`absolute sparkle sparkle-${(i % 4) + 1}`}
-          style={{
-            left: `${20 + (i * 20)}%`,
-            top: `${15 + (i * 15) % 70}%`,
-          }}
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path
-              d="M6 0L7.5 4.5L12 6L7.5 7.5L6 12L4.5 7.5L0 6L4.5 4.5L6 0Z"
-              fill="url(#sparkleGradient)"
-            />
-            <defs>
-              <linearGradient id="sparkleGradient" x1="0" y1="0" x2="12" y2="12">
-                <stop stopColor="#10b981" />
-                <stop offset="1" stopColor="#06b6d4" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-// ============================================================================
-// NETWORK GRAPH - For backlinks/connections
-// ============================================================================
-interface NetworkNode {
-  id: string;
-  x: number;
-  y: number;
-  size?: number;
   color?: string;
 }
 
-interface NetworkGraphProps {
-  className?: string;
-}
-
-export const NetworkGraph = ({ className = '' }: NetworkGraphProps) => {
-  const nodes: NetworkNode[] = [
-    { id: 'center', x: 50, y: 50, size: 8, color: '#10b981' },
-    { id: 'n1', x: 20, y: 30, size: 5, color: '#06b6d4' },
-    { id: 'n2', x: 80, y: 25, size: 5, color: '#3b82f6' },
-    { id: 'n3', x: 75, y: 70, size: 5, color: '#8b5cf6' },
-    { id: 'n4', x: 25, y: 75, size: 5, color: '#ec4899' },
-    { id: 'n5', x: 50, y: 15, size: 4, color: '#f59e0b' },
-    { id: 'n6', x: 90, y: 50, size: 4, color: '#ef4444' },
-    { id: 'n7', x: 10, y: 55, size: 4, color: '#14b8a6' },
-  ];
-
-  const connections = [
-    ['center', 'n1'], ['center', 'n2'], ['center', 'n3'], ['center', 'n4'],
-    ['center', 'n5'], ['center', 'n6'], ['center', 'n7'],
-    ['n1', 'n5'], ['n2', 'n5'], ['n2', 'n6'], ['n3', 'n6'],
-    ['n3', 'n4'], ['n4', 'n7'], ['n1', 'n7']
-  ];
-
-  const getNode = (id: string) => nodes.find(n => n.id === id)!;
+export const LineConnector = ({ className = '', color = '#10b981' }: LineConnectorProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-40px' });
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-        {/* Connections */}
-        {connections.map(([from, to], i) => {
-          const fromNode = getNode(from);
-          const toNode = getNode(to);
-          return (
-            <line
-              key={i}
-              x1={fromNode.x}
-              y1={fromNode.y}
-              x2={toNode.x}
-              y2={toNode.y}
-              stroke="url(#networkGradient)"
-              strokeWidth="0.3"
-              className="network-link"
-              style={{ animationDelay: `${i * 0.15}s` }}
-            />
-          );
-        })}
-
-        {/* Gradient definition */}
-        <defs>
-          <linearGradient id="networkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.5" />
-          </linearGradient>
-        </defs>
-
-        {/* Nodes */}
-        {nodes.map((node, i) => (
-          <g key={node.id}>
-            {/* Glow */}
-            <circle
-              cx={node.x}
-              cy={node.y}
-              r={(node.size || 4) * 1.5}
-              fill={node.color}
-              opacity={0.2}
-              className="node-pulse"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            />
-            {/* Core */}
-            <circle
-              cx={node.x}
-              cy={node.y}
-              r={node.size || 4}
-              fill={node.color}
-              className={i % 2 === 0 ? 'node-pulse' : 'node-pulse-delayed'}
-            />
-          </g>
-        ))}
-      </svg>
+    <div ref={ref} className={`flex justify-center ${className}`}>
+      <motion.div
+        className="w-0.5 rounded-full"
+        style={{ backgroundColor: color }}
+        initial={{ height: 0, opacity: 0 }}
+        animate={isInView ? { height: 32, opacity: 0.3 } : {}}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      />
     </div>
   );
 };
 
 // ============================================================================
-// RISING METRICS - For growth/progress sections
+// FLOATING BADGE - Badge that gently floats
 // ============================================================================
-interface RisingMetricsProps {
+interface FloatingBadgeProps {
+  children: ReactNode;
   className?: string;
 }
 
-export const RisingMetrics = ({ className = '' }: RisingMetricsProps) => {
+export const FloatingBadge = ({ children, className = '' }: FloatingBadgeProps) => (
+  <motion.div
+    className={className}
+    animate={{ y: [-4, 4, -4] }}
+    transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+  >
+    {children}
+  </motion.div>
+);
+
+// ============================================================================
+// SCALE ON SCROLL - Element scales up as it enters
+// ============================================================================
+interface ScaleOnScrollProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export const ScaleOnScroll = ({ children, className = '' }: ScaleOnScrollProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-60px' });
+
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {[
-        { left: '10%', color: '#10b981', delay: '0s' },
-        { left: '25%', color: '#06b6d4', delay: '1.2s' },
-        { left: '40%', color: '#3b82f6', delay: '0.6s' },
-        { left: '55%', color: '#8b5cf6', delay: '1.8s' },
-        { left: '70%', color: '#ec4899', delay: '0.3s' },
-        { left: '85%', color: '#f59e0b', delay: '1.5s' },
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="absolute bottom-0 rise-dot"
-          style={{
-            left: item.left,
-            animationDelay: item.delay,
-          }}
-        >
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: item.color }}
-          />
-        </div>
-      ))}
-    </div>
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, scale: 0.92, filter: 'blur(8px)' }}
+      animate={isInView ? { opacity: 1, scale: 1, filter: 'blur(0px)' } : {}}
+      transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
 // ============================================================================
-// CONTENT FLOW - For blog/content generation sections
+// TYPING EFFECT - Modern typewriter for headlines
 // ============================================================================
-interface ContentFlowProps {
+interface TypingTextProps {
+  text: string;
   className?: string;
+  speed?: number;
 }
 
-export const ContentFlow = ({ className = '' }: ContentFlowProps) => {
+export const TypingText = ({ text, className = '', speed = 40 }: TypingTextProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [displayText, setDisplayText] = useState('');
+
+  useEffect(() => {
+    if (!isInView) return;
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayText(text.slice(0, i + 1));
+      i++;
+      if (i >= text.length) clearInterval(interval);
+    }, speed);
+    return () => clearInterval(interval);
+  }, [isInView, text, speed]);
+
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {/* Document icons flowing */}
-      {[0, 1, 2, 3, 4].map((i) => (
-        <motion.div
-          key={i}
-          className="absolute left-1/2 -translate-x-1/2"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ 
-            y: ['-10%', '110%'],
-            opacity: [0, 1, 1, 0]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            delay: i * 1.2,
-            ease: "linear"
-          }}
-        >
-          <div className="w-8 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center">
-            <div className="space-y-1">
-              <div className="w-4 h-0.5 bg-emerald-500/50 rounded" />
-              <div className="w-3 h-0.5 bg-cyan-500/50 rounded" />
-              <div className="w-4 h-0.5 bg-blue-500/50 rounded" />
-            </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+    <span ref={ref} className={className}>
+      {displayText}
+      <span className="inline-block w-[2px] h-[1em] bg-emerald-400 ml-0.5 animate-pulse align-middle" />
+    </span>
   );
 };

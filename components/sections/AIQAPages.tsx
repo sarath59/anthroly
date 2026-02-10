@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const AIQAPages = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -82,6 +83,7 @@ export const AIQAPages = () => {
       ref={sectionRef} 
       className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden"
     >
+      <GlowPulse className="top-1/4 right-0" color="purple" size={500} />
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[200px]"></div>

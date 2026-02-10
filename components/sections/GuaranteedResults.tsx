@@ -21,7 +21,7 @@ import {
   Eye,
   MousePointerClick
 } from 'lucide-react';
-import { AnimatedCounter, RisingMetrics, Sparkles } from '../ui/animated-elements';
+import { GlowPulse, AnimatedCounter } from '../ui/animated-elements';
 
 export const GuaranteedResults = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -89,16 +89,10 @@ export const GuaranteedResults = () => {
       ref={sectionRef} 
       className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden"
     >
-      {/* Rising metrics animation */}
-      <RisingMetrics className="opacity-30" />
-      
-      {/* Sparkles effect */}
-      <Sparkles count={6} className="opacity-60" />
-      
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[200px] morph-blob"></div>
-        <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[180px] morph-blob" style={{ animationDelay: '-6s' }}></div>
+        <GlowPulse className="top-1/4 left-0" color="emerald" size={600} />
+        <GlowPulse className="bottom-1/4 right-0" color="cyan" size={500} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

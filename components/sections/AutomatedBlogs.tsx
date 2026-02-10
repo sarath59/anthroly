@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PenTool, Sparkles, CheckCircle2 } from 'lucide-react';
 import { LogoStrip, CMS_PLATFORMS } from '../ui/CompanyLogos';
-import { ContentFlow, DataStream } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const AutomatedBlogs = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,13 +51,8 @@ export const AutomatedBlogs = () => {
 
   return (
     <section id="blogs" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
-      {/* Content flow animation */}
-      <ContentFlow className="opacity-30" />
-      
-      {/* Data streams on sides */}
-      <DataStream className="opacity-20" streamCount={4} colors={['#8b5cf6', '#a855f7', '#c084fc', '#d8b4fe']} />
-      
-      {/* Background Pattern */}
+      {/* Background */}
+      <GlowPulse className="bottom-1/4 right-0" color="purple" size={500} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,_rgba(139,92,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">

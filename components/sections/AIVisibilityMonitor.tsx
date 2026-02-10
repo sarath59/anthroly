@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Activity, Bell, TrendingUp, Shield, Eye, Clock, BarChart3, AlertCircle } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
-import { PulsingRings, DataStream } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/animated-elements';
 
 export const AIVisibilityMonitor = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -28,18 +28,10 @@ export const AIVisibilityMonitor = () => {
 
   return (
     <section id="ai-monitor" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
-      {/* Pulsing rings animation - top right */}
-      <div className="absolute top-20 right-20 hidden lg:block">
-        <PulsingRings size={150} color="#3b82f6" className="opacity-30" />
-      </div>
-      
-      {/* Data streams */}
-      <DataStream className="opacity-15" streamCount={6} colors={['#3b82f6', '#8b5cf6', '#06b6d4', '#6366f1', '#a855f7', '#0ea5e9']} />
-      
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] breathe-glow"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] breathe-glow" style={{ animationDelay: '-2s' }}></div>
+        <GlowPulse className="top-0 right-0" color="blue" size={600} />
+        <GlowPulse className="bottom-0 left-0" color="purple" size={400} />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
