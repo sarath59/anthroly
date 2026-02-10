@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles } from 'lucide-react';
+import { Check, Star, Zap, Shield, ArrowRight, Clock, Sparkles, TrendingUp, Bot, Search } from 'lucide-react';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 
@@ -39,6 +39,13 @@ export const Pricing = () => {
     "Weekly Performance Reports",
     "Competitor Analysis & Intel",
     "Technical SEO Audits & Fixes",
+  ];
+
+  const expectedResults = [
+    { icon: Bot, title: "50+ AI brand mentions", detail: "ChatGPT + Perplexity + Claude + Gemini + AI Overview" },
+    { icon: Search, title: "50+ pages indexed", detail: "Measured in Google Search Console" },
+    { icon: TrendingUp, title: "Early rankings + impressions", detail: "Momentum that compounds in months 2–3" },
+    { icon: Zap, title: "System live fast", detail: "First deliverables shipped in days, not weeks" },
   ];
 
   return (
@@ -105,16 +112,57 @@ export const Pricing = () => {
                 </p>
               </div>
 
-              {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-                {includedFeatures.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3 text-gray-300">
-                    <div className="mt-1 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                      <Check size={12} className="text-emerald-500" />
+              {/* Services + Results */}
+              <div className="mb-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div>
+                    <div className="text-sm font-bold text-white mb-3">
+                      What we do for you
+                      <span className="text-gray-500 font-normal"> (services)</span>
                     </div>
-                    <span className="text-sm">{feature}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {includedFeatures.map((feature, i) => (
+                        <div key={i} className="flex items-start gap-3 text-gray-300">
+                          <div className="mt-1 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                            <Check size={12} className="text-emerald-500" />
+                          </div>
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
+
+                  <div>
+                    <div className="text-sm font-bold text-white mb-3">
+                      What you get out of it
+                      <span className="text-gray-500 font-normal"> (results)</span>
+                    </div>
+                    <div className="space-y-3">
+                      {expectedResults.map((r, idx) => {
+                        const Icon = r.icon;
+                        return (
+                          <div
+                            key={idx}
+                            className="p-4 bg-black/40 border border-gray-800 rounded-2xl hover:border-emerald-500/30 transition-colors"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                <Icon size={18} className="text-emerald-400" />
+                              </div>
+                              <div>
+                                <div className="text-white font-semibold">{r.title}</div>
+                                <div className="text-xs text-gray-500 mt-1">{r.detail}</div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-xs text-gray-500 mt-3">
+                      Results depend on niche + existing site baseline, but the system and deliverables are committed in your first 30 days.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* CTA Button */}
