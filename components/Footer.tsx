@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { LogoWithImage } from './LogoWithImage';
 import { Separator } from './ui/separator';
 import { Twitter, Linkedin, Mail } from 'lucide-react';
 
@@ -14,16 +14,9 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/logo.png?v=2"
-                  alt="Anthroly Logo"
-                  width={48}
-                  height={48}
-                  className="invert object-contain"
-                />
-                <span className="text-2xl font-bold tracking-tight text-white">Anthroly</span>
-              </div>
+              <Link href="/" className="inline-block">
+                <LogoWithImage variant="white" className="text-white" />
+              </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
               Autonomous AI agents that bring backlinks for businesses on autopilot.
