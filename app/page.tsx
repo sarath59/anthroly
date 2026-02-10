@@ -19,12 +19,9 @@ import { ProofOfWork } from "@/components/sections/ProofOfWork";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { ScrollElephant } from "@/components/ui/ScrollElephant";
-
 export default function Home() {
   return (
     <>
-      <ScrollElephant />
       <Hero />
       <GuaranteedResults />
       <PoweredBy />
