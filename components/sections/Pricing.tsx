@@ -75,30 +75,30 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing Card */}
-        <div className={`max-w-xl mx-auto transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`max-w-4xl mx-auto transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <HoverTilt className="relative group" intensity={4}>
             {/* Glow Effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             
             <SpotlightCard className="rounded-3xl">
-              <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
+              <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800 overflow-visible">
               
-              {/* Best Value Badge */}
-              <div className="absolute top-0 right-0 -mt-4 -mr-4">
-                <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-4 py-2 rounded-full transform rotate-12 shadow-lg flex items-center gap-1">
+              {/* Best Value Badge - properly positioned */}
+              <div className="absolute -top-5 -right-3 md:-right-5 z-20">
+                <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-5 py-2.5 rounded-full transform rotate-12 shadow-[0_4px_20px_rgba(16,185,129,0.4)] flex items-center gap-1.5">
                   <Star size={14} fill="black" />
                   30-DAY TRIAL
                 </div>
               </div>
 
               {/* Header */}
-              <div className="text-center mb-10">
+              <div className="text-center mb-10 pt-2">
                 <h3 className="text-xl text-gray-400 mb-4">The Complete AI Growth Engine</h3>
                 
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <div className="flex items-baseline">
-                    <span className="text-7xl md:text-8xl font-bold text-white">$350</span>
+                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">$350</span>
                     <span className="text-gray-400 text-xl ml-2">/month</span>
                   </div>
                 </div>
@@ -114,30 +114,38 @@ export const Pricing = () => {
                 </p>
               </div>
 
-              {/* Services + Results */}
+              {/* Services + Results - Side by Side on larger screens */}
               <div className="mb-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Services Column */}
                   <div>
-                    <div className="text-sm font-bold text-white mb-3">
+                    <div className="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                        <Zap size={14} className="text-emerald-400" />
+                      </div>
                       What we do for you
-                      <span className="text-gray-500 font-normal"> (services)</span>
+                      <span className="text-gray-500 font-normal">(services)</span>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="space-y-2.5">
                       {includedFeatures.map((feature, i) => (
                         <div key={i} className="flex items-start gap-3 text-gray-300">
-                          <div className="mt-1 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                          <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
                             <Check size={12} className="text-emerald-500" />
                           </div>
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm leading-tight">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
+                  {/* Results Column */}
                   <div>
-                    <div className="text-sm font-bold text-white mb-3">
+                    <div className="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                        <TrendingUp size={14} className="text-cyan-400" />
+                      </div>
                       What you get out of it
-                      <span className="text-gray-500 font-normal"> (results)</span>
+                      <span className="text-gray-500 font-normal">(results)</span>
                     </div>
                     <div className="space-y-3">
                       {expectedResults.map((r, idx) => {
@@ -145,22 +153,22 @@ export const Pricing = () => {
                         return (
                           <div
                             key={idx}
-                            className="p-4 bg-black/40 border border-gray-800 rounded-2xl hover:border-emerald-500/30 transition-colors"
+                            className="p-4 bg-black/40 border border-gray-800 rounded-xl hover:border-emerald-500/30 transition-colors"
                           >
                             <div className="flex items-start gap-3">
-                              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                                 <Icon size={18} className="text-emerald-400" />
                               </div>
-                              <div>
-                                <div className="text-white font-semibold">{r.title}</div>
-                                <div className="text-xs text-gray-500 mt-1">{r.detail}</div>
+                              <div className="min-w-0">
+                                <div className="text-white font-semibold text-sm">{r.title}</div>
+                                <div className="text-xs text-gray-500 mt-0.5">{r.detail}</div>
                               </div>
                             </div>
                           </div>
                         );
                       })}
                     </div>
-                    <p className="text-xs text-gray-500 mt-3">
+                    <p className="text-xs text-gray-500 mt-3 leading-relaxed">
                       Results depend on niche + existing site baseline, but the system and deliverables are committed in your first 30 days.
                     </p>
                   </div>
@@ -169,7 +177,7 @@ export const Pricing = () => {
 
               {/* CTA Button */}
               <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" className="block w-full">
-                <Button className="w-full h-16 text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
+                <Button className="w-full h-14 md:h-16 text-lg md:text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
                   Start 30-Day Trial — $350/mo
                   <ArrowRight className="ml-2" size={22} />
                 </Button>
@@ -185,7 +193,7 @@ export const Pricing = () => {
                   <Shield className="text-emerald-400" size={24} />
                   <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
-                <p className="text-sm text-center text-gray-400 leading-relaxed max-w-md mx-auto">
+                <p className="text-sm text-center text-gray-400 leading-relaxed max-w-lg mx-auto">
                   If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (20-30 backlinks, 30 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
                 </p>
               </div>
