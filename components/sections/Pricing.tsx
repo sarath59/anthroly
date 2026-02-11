@@ -75,21 +75,22 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing Card */}
-        <div className={`max-w-4xl mx-auto transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`max-w-4xl mx-auto transform transition-all duration-1000 delay-200 relative ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+          
+          {/* 30-DAY TRIAL Badge - positioned outside all overflow containers */}
+          <div className="absolute -top-3 right-2 md:right-4 z-50">
+            <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-5 py-2.5 rounded-full transform rotate-12 shadow-[0_4px_20px_rgba(16,185,129,0.5)] flex items-center gap-1.5 animate-pulse">
+              <Star size={14} fill="black" />
+              30-DAY TRIAL
+            </div>
+          </div>
+          
           <HoverTilt className="relative group" intensity={4}>
             {/* Glow Effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             
             <SpotlightCard className="rounded-3xl">
-              <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800 overflow-visible">
-              
-              {/* Best Value Badge - properly positioned */}
-              <div className="absolute -top-5 -right-3 md:-right-5 z-20">
-                <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black text-sm font-bold px-5 py-2.5 rounded-full transform rotate-12 shadow-[0_4px_20px_rgba(16,185,129,0.4)] flex items-center gap-1.5">
-                  <Star size={14} fill="black" />
-                  30-DAY TRIAL
-                </div>
-              </div>
+              <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
 
               {/* Header */}
               <div className="text-center mb-10 pt-2">

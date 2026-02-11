@@ -64,6 +64,12 @@ export const Header = () => {
               Pricing
             </Link>
             <Link
+              href="/#proof"
+              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+            >
+              Testimonials
+            </Link>
+            <Link
               href="/resources"
               className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
             >
@@ -109,6 +115,13 @@ export const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
+            </Link>
+            <Link
+              href="/#proof"
+              className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Testimonials
             </Link>
             <Link
               href="/resources"

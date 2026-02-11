@@ -386,27 +386,29 @@ export const SpotlightCard = ({
   return (
     <div
       ref={ref}
-      className={`relative overflow-hidden ${className}`}
+      className={`relative ${className}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Spotlight gradient */}
-      <motion.div
-        className="absolute pointer-events-none z-0"
-        animate={{
-          opacity: isHovered ? 1 : 0,
-          x: position.x - 200,
-          y: position.y - 200,
-        }}
-        transition={{ type: 'spring', stiffness: 200, damping: 30, opacity: { duration: 0.3 } }}
-        style={{
-          width: 400,
-          height: 400,
-          borderRadius: '50%',
-          background: `radial-gradient(circle, ${spotlightColor} 0%, transparent 65%)`,
-        }}
-      />
+      {/* Spotlight gradient - contained within card bounds */}
+      <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none">
+        <motion.div
+          className="absolute pointer-events-none z-0"
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            x: position.x - 200,
+            y: position.y - 200,
+          }}
+          transition={{ type: 'spring', stiffness: 200, damping: 30, opacity: { duration: 0.3 } }}
+          style={{
+            width: 400,
+            height: 400,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, ${spotlightColor} 0%, transparent 65%)`,
+          }}
+        />
+      </div>
       <div className="relative z-10">{children}</div>
     </div>
   );
