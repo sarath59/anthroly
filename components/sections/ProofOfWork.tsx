@@ -2,12 +2,15 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import {
   ArrowRight,
   Bot,
   Clock,
   Sparkles,
+  Target,
+  Zap,
   TrendingUp,
 } from "lucide-react";
 import { GlowPulse, SpotlightCard } from "../ui/animated-elements";
@@ -40,22 +43,23 @@ export const ProofOfWork = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Hero — Profound-style headline + one-line summary */}
         <div
-          className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${
+          className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Sparkles size={16} />
-            <span>Case Study — AI Traffic (Last 30 Days)</span>
+            <span>Case Study — AI Traffic</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            How We Got llmoutrank in Front of AI Answers
+            How llmoutrank Grew AI Referral Traffic in 2 Months
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            One brand. Two months. Hundreds of signals from AI results — and real users landing on the site because AI recommended them.
+            Anthroly focused exclusively on AI discovery for llmoutrank. In two months, the site earned hundreds of signals from AI results and real users are now being driven to the site by AI answers.
           </p>
         </div>
 
@@ -66,60 +70,128 @@ export const ProofOfWork = () => {
         >
           <SpotlightCard className="overflow-hidden rounded-3xl border border-gray-800 bg-gray-900/50">
             <div className="p-8 md:p-10">
-              <div className="flex items-start justify-between gap-4 mb-8">
+              {/* About llmoutrank — Profound-style */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 pb-8 border-b border-gray-800">
                 <div>
-                  <div className="text-sm font-semibold text-emerald-300">
-                    Case Study
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">
-                    llmoutrank
-                  </h3>
-                  <p className="text-gray-400 mt-1">
-                    Last 2 months — AI referral traffic only.
+                  <h3 className="text-lg font-semibold text-white mb-1">About llmoutrank</h3>
+                  <p className="text-gray-400 text-sm max-w-xl">
+                    A brand we work with to dominate AI-driven search in its space. We didn&apos;t work on overall traffic here — only AI referral traffic.
                   </p>
                 </div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 text-xs text-gray-300">
-                  <Clock size={14} className="text-emerald-400" />
-                  <span>Last 30 days snapshot</span>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://datafa.st/share/682b1fc309a39da9358cd37a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                      Check live dashboard
+                    </Button>
+                  </a>
+                  <Link href="/#pricing">
+                    <Button size="sm" className="bg-emerald-500 text-black hover:bg-emerald-400">
+                      Get a demo
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
-              <div className="space-y-6 text-gray-300 leading-relaxed mb-8">
-                <p>
-                  Over the last two months we focused on one thing for llmoutrank: making the site the kind of place AI engines actually recommend. We didn&apos;t chase generic SEO — we built for AI discovery. The result is hundreds of signals from AI results, and real users reaching the site because ChatGPT, Perplexity, and others are pointing them there. That&apos;s the shift we care about: your brand showing up in the answer, and people clicking through.
-                </p>
-                <p>
-                  Here&apos;s how we crafted it. We started with an AI crawler pass: how do these engines see the site today, and where are the gaps? Then we built content that directly answers the questions people (and AI) are already asking. We added Q&amp;A-style pages that are easy for models to quote and cite. We made the site structurally clear — clear headings, clear definitions, clear intent — so AI could confidently say &quot;this is the source&quot; and send traffic. Human oversight on every piece; the goal was quotable, trustworthy answers, not volume for its own sake.
-                </p>
-                <p>
-                  What led up to this wasn&apos;t a single tactic. It was a sequence: baseline AI visibility so we knew where we stood, then a content plan aligned to real search and AI behavior, then technical signals so crawlers could find and index everything fast. Once the foundation was in place, we kept publishing and refining. The compounding part is real — the more AI sees you as a reliable answer, the more it recommends you. llmoutrank is now in that loop.
-                </p>
-                <p>
-                  The snapshot below shows the last 30 days: hundreds of visits from AI referrers. Not vanity metrics — these are people who landed on llmoutrank because an AI answer sent them. You can verify it yourself: we&apos;ve linked to the live dashboard so you can see exactly how AI traffic is flowing in. No fluff, no screenshots we could fake. Just the numbers, updated in real time.
-                </p>
+              {/* Key Results — 3 stat cards like Profound */}
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Key Results</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+                <div className="p-5 rounded-2xl bg-black/40 border border-gray-800 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">100&apos;s</div>
+                  <div className="text-sm text-gray-400">of visits from AI referrers (last 30 days)</div>
+                </div>
+                <div className="p-5 rounded-2xl bg-black/40 border border-gray-800 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">2 months</div>
+                  <div className="text-sm text-gray-400">AI referral focus only</div>
+                </div>
+                <div className="p-5 rounded-2xl bg-black/40 border border-gray-800 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">100&apos;s</div>
+                  <div className="text-sm text-gray-400">of signals from AI results</div>
+                </div>
               </div>
 
+              {/* Quote — Profound-style blockquote */}
+              <blockquote className="pl-4 border-l-4 border-emerald-500/50 py-4 mb-10">
+                <p className="text-gray-300 italic leading-relaxed mb-4">
+                  &quot;We didn&apos;t chase generic SEO for llmoutrank — we built for AI discovery. The goal was simple: when someone asks an AI engine a relevant question, the engine can recommend and link to the site. Hundreds of signals and real users from ChatGPT and Perplexity show it&apos;s working.&quot;
+                </p>
+                <footer className="text-sm text-gray-500">
+                  Anthroly team — AI visibility &amp; referral traffic
+                </footer>
+              </blockquote>
+
+              {/* The Opportunity */}
+              <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <Target size={20} className="text-emerald-400" />
+                The Opportunity
+              </h3>
+              <p className="text-gray-300 leading-relaxed mb-8">
+                More people than ever ask AI before they search. We focused on one thing for llmoutrank: making the site the kind of place AI engines actually recommend and cite. The opportunity was clear — own AI referral traffic in their space instead of chasing traditional SEO alone.
+              </p>
+
+              {/* The Solution — sub-sections like Profound */}
+              <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <Zap size={20} className="text-cyan-400" />
+                The Solution
+              </h3>
+
+              <div className="space-y-6 mb-8">
+                <div>
+                  <h4 className="text-base font-semibold text-white mb-2">Citation-ready content strategy</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    We ran an AI crawler pass to see how engines view the site and where the gaps were. Then we built content that directly answers the questions people — and AI — are already asking. We added Q&amp;A-style pages that are easy for models to quote and cite. Every piece had human oversight; the goal was quotable, trustworthy answers.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-base font-semibold text-white mb-2">Solve for the full query</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    We made the site structurally clear: clear headings, clear definitions, clear intent. So AI could confidently treat it as the source and send traffic. Baseline AI visibility first, then a content plan aligned to real search and AI behavior, then technical signals so crawlers could find and index everything fast. Once that foundation was in place, we kept publishing and refining.
+                  </p>
+                </div>
+              </div>
+
+              {/* The Results — bullet list like Profound */}
+              <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                <TrendingUp size={20} className="text-emerald-400" />
+                The Results
+              </h3>
+              <ul className="space-y-3 mb-8 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-400 mt-1">•</span>
+                  <span><strong className="text-white">100&apos;s of visits</strong> from AI referrers in the last 30 days — real users landing on llmoutrank because an AI answer sent them.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-400 mt-1">•</span>
+                  <span><strong className="text-white">100&apos;s of signals</strong> from AI results — ChatGPT, Perplexity, and others are now pointing users to the site.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-400 mt-1">•</span>
+                  <span><strong className="text-white">Verifiable proof</strong> — we link to the live dashboard so you can see last 30 days AI traffic yourself. No fluff; numbers in real time.</span>
+                </li>
+              </ul>
+
+              {/* Snapshot + Dashboard CTA */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="p-6 rounded-2xl bg-gray-950/50 border border-gray-800">
                   <div className="flex items-center gap-2 text-white font-semibold mb-3">
                     <Bot size={18} className="text-purple-400" />
                     Snapshot (last 30 days)
                   </div>
-                  <p className="text-2xl font-bold text-white mb-1">
-                    100&apos;s of visits
-                  </p>
+                  <p className="text-2xl font-bold text-white mb-1">100&apos;s of visits</p>
                   <p className="text-sm text-gray-400">
-                    from AI referrers (ChatGPT, Perplexity, and others). Real users driven to the site by AI answers.
+                    from AI referrers. Real users driven to the site by AI answers.
                   </p>
                 </div>
-
                 <div className="p-6 rounded-2xl bg-gray-950/50 border border-gray-800">
                   <div className="flex items-center gap-2 text-white font-semibold mb-3">
                     <TrendingUp size={18} className="text-emerald-400" />
                     Check the live dashboard
                   </div>
                   <p className="text-sm text-gray-300 leading-relaxed mb-4">
-                    See last 30 days AI traffic for llmoutrank. No login required — open and verify.
+                    See last 30 days AI traffic for llmoutrank. No login required.
                   </p>
                   <a
                     href="https://datafa.st/share/682b1fc309a39da9358cd37a"
@@ -133,8 +205,15 @@ export const ProofOfWork = () => {
                   </a>
                 </div>
               </div>
+
+              {/* The Outcome — Profound-style closing */}
+              <h3 className="text-lg font-bold text-white mb-3">The Outcome</h3>
+              <p className="text-gray-300 leading-relaxed">
+                llmoutrank is now in the loop: the more AI sees the site as a reliable answer, the more it recommends it. The snapshot below shows the last 30 days. We&apos;ve linked to the live dashboard so you can verify the numbers yourself — no vanity metrics, just real AI referral traffic.
+              </p>
             </div>
 
+            {/* Screenshot */}
             <div className="border-t border-gray-800 p-6 bg-gradient-to-b from-gray-800/40 to-gray-700/20">
               <div className="relative w-full overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
                 <div className="p-[2px] rounded-2xl bg-gradient-to-b from-white/20 via-white/10 to-white/5">
