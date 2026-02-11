@@ -102,7 +102,7 @@ export const Hero = () => {
               <span className="text-emerald-300">The First AI-Native SEO/GEO Agency</span>
             </div>
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-xl border border-amber-500/30 rounded-full text-sm font-semibold animate-pulse">
-              <span className="text-amber-300">🔥 Founding Member Pricing: 12 spots left</span>
+              <span className="text-amber-300">🔥 Founding Member Pricing</span>
             </div>
           </div>
 
