@@ -63,10 +63,10 @@ export const AutomatedBlogs = () => {
             <span>📝 Companies publishing 16+ blogs/month get 3.5x more traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            30 Blogs + 15 AI Q&A Pages. Zero Writing.
+            AI Creates. Humans Perfect. You Rank.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">HubSpot found blogs generate 67% more leads.</span> But who has time to write 45 pieces of content a month? Our AI creates, our humans review, your site ranks on both Google AND AI search results.
+            <span className="text-white font-semibold">45 pages of content every month</span> — written by AI, reviewed and perfected by real humans before it goes live. Rank on Google AND get cited by ChatGPT, Perplexity, and Claude.
           </p>
         </div>
 

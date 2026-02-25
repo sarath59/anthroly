@@ -27,22 +27,22 @@ export const FoundingMembers = () => {
 
   const benefits = [
     {
-      icon: Sparkles,
-      title: "Simple Pricing",
-      description: "One price, forever. $99/month — no hidden fees, no surprises"
+      icon: Users,
+      title: "Dedicated Human Support",
+      description: "A real person onboards you, monitors your project, and talks to you weekly"
     },
     {
       icon: TrendingUp,
-      title: "Priority Results",
-      description: "First access to new features, faster turnaround, dedicated support"
+      title: "AI + Human Combo",
+      description: "AI handles the scale, humans ensure quality — best of both worlds"
     },
     {
       icon: Shield,
-      title: "Shape the Product",
-      description: "Direct input on features and services — we build what you need"
+      title: "Simple $99/mo Pricing",
+      description: "One price, forever. No hidden fees, no surprises, no contracts"
     },
     {
-      icon: Users,
+      icon: Sparkles,
       title: "Exclusive Community",
       description: "Private Slack with other founders for networking and growth tips"
     }
@@ -72,11 +72,11 @@ export const FoundingMembers = () => {
               {/* Header */}
               <div className="text-center mb-10 pt-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Become a Founding Member
+                  AI Power. Human Touch.
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  We&apos;re onboarding our first 20 clients at a special rate. In exchange for your early trust, 
-                  you get exclusive benefits that will never be offered again.
+                  We&apos;re not just software — we&apos;re a team. Real humans onboard you, review your content, 
+                  monitor your progress, and talk to you every week. AI does the heavy lifting in between.
                 </p>
               </div>
 
@@ -104,8 +104,8 @@ export const FoundingMembers = () => {
               {/* Trust Note */}
               <div className="text-center p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
                 <p className="text-gray-300 text-sm">
-                  <span className="text-amber-400 font-semibold">Why founding pricing?</span> We&apos;re building case studies and testimonials. 
-                  You get incredible value. We get proof that this works. <span className="text-white font-medium">Everyone wins.</span>
+                  <span className="text-amber-400 font-semibold">Why we&apos;re different:</span> Most &quot;AI SEO tools&quot; leave you alone with software. 
+                  We pair AI automation with real human strategy. <span className="text-white font-medium">You&apos;re never on your own.</span>
                 </p>
               </div>
             </div>

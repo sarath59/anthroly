@@ -55,10 +55,10 @@ export const FinalCTA = () => {
           {/* What You Get Summary */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "30 Blogs + 15 Q&A Pages",
-              "50+ AI Mentions",
-              "20-30 Backlinks",
-              "20 Free Tools"
+              "Weekly human strategy calls",
+              "Google + AI SEO combined",
+              "45 pages of content/month",
+              "20-30 backlinks/month"
             ].map((item, index) => (
               <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white/5 border border-white/10 rounded-xl">
                 <CheckCircle2 className="text-emerald-400" size={18} />
@@ -95,7 +95,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. Same pricing, always — $99/month. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
+              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> We combine AI automation with human expertise to grow your visibility on Google and AI platforms. Weekly calls, clear reports, no mysteries. <span className="text-emerald-400 font-semibold">$99/month. Cancel anytime.</span>
             </p>
           </div>
         </div>

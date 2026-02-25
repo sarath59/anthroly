@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Check, Zap, Shield, ArrowRight, Sparkles, TrendingUp, Bot, Search } from 'lucide-react';
+import { Check, Zap, Shield, ArrowRight, Sparkles, TrendingUp, Bot, Search, Users } from 'lucide-react';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse, GradientBeam, SpotlightCard, ScaleOnScroll, HoverTilt } from '../ui/animated-elements';
@@ -28,13 +28,13 @@ export const Pricing = () => {
   }, []);
 
   const includedFeatures = [
-    "AI Crawler Analysis & Optimization",
-    "AI Visibility Monitoring 24/7",
-    "30 Human-reviewed SEO Blogs/Month (AI-assisted)",
-    "15 Human-reviewed AI Q&A Pages/Month (AI-assisted)",
+    "Dedicated human account manager",
+    "Weekly strategy calls with your team",
+    "30 Human-reviewed SEO Blogs/Month",
+    "15 Human-reviewed AI Q&A Pages/Month",
     "20-30 High-DR Backlinks/Month",
     "50+ AI Brand Mentions/Month",
-    "Programmatic SEO Implementation",
+    "AI Crawler Analysis & Monitoring 24/7",
     "20 Free Tools Built for Your Site",
     "LinkedIn, X, Medium Articles",
     "Weekly Performance Reports",
@@ -43,10 +43,10 @@ export const Pricing = () => {
   ];
 
   const expectedResults = [
-    { icon: Bot, title: "50+ AI brand mentions", detail: "ChatGPT + Perplexity + Claude + Gemini + AI Overview" },
-    { icon: Search, title: "50+ pages indexed", detail: "Measured in Google Search Console" },
-    { icon: TrendingUp, title: "Early rankings + impressions", detail: "Momentum that compounds in months 2–3" },
-    { icon: Zap, title: "System live fast", detail: "First deliverables shipped in days, not weeks" },
+    { icon: Users, title: "Weekly human check-ins", detail: "Real strategy calls, not just reports" },
+    { icon: Bot, title: "50+ AI brand mentions", detail: "ChatGPT + Perplexity + Claude + Gemini" },
+    { icon: Search, title: "Rank on Google + AI", detail: "Traditional SEO + AI visibility combined" },
+    { icon: TrendingUp, title: "Results that compound", detail: "Growth accelerates month over month" },
   ];
 
   return (
@@ -86,7 +86,7 @@ export const Pricing = () => {
 
               {/* Header */}
               <div className="text-center mb-10 pt-2">
-                <h3 className="text-xl text-gray-400 mb-4">The Complete AI Growth Engine</h3>
+                <h3 className="text-xl text-gray-400 mb-4">AI Power + Human Support</h3>
                 
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">

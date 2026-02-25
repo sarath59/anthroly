@@ -106,42 +106,42 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-500" />
                 The Anthroly Way
               </h3>
-              <p className="text-gray-400 mt-2">AI-native, results-driven, transparent</p>
+              <p className="text-gray-400 mt-2">Human-led, AI-powered, results-driven</p>
             </div>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">$99/Month. Everything Included.</p>
-                  <p className="text-gray-400">No hidden fees, no scope creep, no &quot;that&apos;s an add-on.&quot; One price, maximum value. The math just works.</p>
+                  <p className="font-bold text-lg">Real Humans Work With You</p>
+                  <p className="text-gray-400">Dedicated team members onboard you, monitor your project, and talk to you every single week. Never left alone with software.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Weekly Transparent Reports</p>
-                  <p className="text-gray-400">See exactly what we did, what changed, and what&apos;s coming. Every backlink. Every ranking. Every action item.</p>
+                  <p className="font-bold text-lg">Google + AI Search Combined</p>
+                  <p className="text-gray-400">We optimize for traditional Google AND AI platforms like ChatGPT, Perplexity, and Claude. Get visible everywhere that matters.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Only High-Quality Backlinks</p>
-                  <p className="text-gray-400">No spam. No PBNs. No risk. Only high-authority editorial links from real, trusted websites that Google loves.</p>
+                  <p className="font-bold text-lg">Weekly Strategy Calls + Reports</p>
+                  <p className="text-gray-400">Not just automated reports — real conversations about progress, strategy, and next steps. You always know what&apos;s happening.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">AI Automation, Human Quality</p>
-                  <p className="text-gray-400">Our AI handles the scale. Humans ensure the quality. You get the best of both worlds without lifting a finger.</p>
+                  <p className="font-bold text-lg">AI Creates, Humans Perfect</p>
+                  <p className="text-gray-400">AI handles the scale and heavy lifting. Human experts review everything for quality. Best of both worlds.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Results-Backed Guarantee</p>
-                  <p className="text-gray-400">20-30 backlinks/month or we give you one free month of service. We&apos;ve never had to honor this. But it&apos;s there.</p>
+                  <p className="font-bold text-lg">$99/Month. Results Guaranteed.</p>
+                  <p className="text-gray-400">If we miss commitments, you get a free month. Simple pricing, no contracts, cancel anytime.</p>
                 </div>
               </li>
             </ul>

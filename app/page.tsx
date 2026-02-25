@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GuaranteedResults } from "@/components/sections/GuaranteedResults";
 import { PoweredBy } from "@/components/sections/PoweredBy";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
@@ -19,27 +20,46 @@ import { ProofOfWork } from "@/components/sections/ProofOfWork";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+
 export default function Home() {
   return (
     <>
+      {/* 1. Hook - Clear value prop */}
       <Hero />
-      <GuaranteedResults />
-      <PoweredBy />
+      
+      {/* 2. How It Works - Human + AI combo explained */}
+      <HowItWorks />
+      
+      {/* 3. Problem/Solution - Why you need this */}
       <ProblemSolution />
+      
+      {/* 4. What You Get - Deliverables */}
+      <GuaranteedResults />
+      
+      {/* 5. How We Do It - Features Deep Dive */}
       <AICrawlerAnalysis />
       <AIVisibilityMonitor />
       <AutomatedBlogs />
       <AIQAPages />
       <AIBacklinkAgents />
       <PSEOImplementation />
-      <AutomatedReports />
-      <SocialArticles />
       <FreeToolsBuilder />
-      <GrowthHacks />
+      <SocialArticles />
+      
+      {/* 6. Human Touch - Weekly calls + reports */}
+      <AutomatedReports />
+      
+      {/* 7. Social Proof */}
+      <PoweredBy />
+      <ProofOfWork />
       <WhoIsThisFor />
+      
+      {/* 8. Trust Building */}
       <FounderStory />
       <FoundingMembers />
-      <ProofOfWork />
+      <GrowthHacks />
+      
+      {/* 9. Pricing - Make decision easy */}
       <Pricing />
       <FAQ />
       <FinalCTA />
