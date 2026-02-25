@@ -53,7 +53,7 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
-              <Link href="/#pricing">
+              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -61,7 +61,7 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
                 >
                   View Pricing
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

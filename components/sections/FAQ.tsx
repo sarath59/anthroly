@@ -30,10 +30,6 @@ const faqs = [
     answer: "We count a mention when an AI engine recommends your brand (name, domain, product, or clearly attributable reference) in response to relevant queries we track. We monitor across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overview using a consistent prompt set and log the outputs over time so you can verify the mentions week-by-week."
   },
   {
-    question: "What happens after the 30-day trial?",
-    answer: "After 30 days, if you're happy with the results, we'll discuss new pricing. Your monthly cost will reflect the value we're delivering — more traffic, more backlinks, better rankings. We'll go through specific metrics and pricing with you at the end of your trial based on what we've achieved together."
-  },
-  {
     question: "Will these backlinks hurt my site? Are they safe?",
     answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 50-90, avg DR 70+). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our promise backs this up — if anything we do hurts your rankings, we will fix it immediately."
   },
@@ -55,7 +51,7 @@ const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: "Just click the Start 30-Day Trial button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
+    answer: "Just click the Get Started button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
   }
 ];
 

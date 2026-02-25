@@ -75,7 +75,7 @@ export const AIBacklinkAgents = () => {
             Backlinks That Cost Others $500 Each. Included for You.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 20-30 monthly. That&apos;s $8,000-$30,000 in value — included in your $350. Our AI agents do the outreach humans can&apos;t scale.
+            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 20-30 monthly. That&apos;s $8,000-$30,000 in value — included in your $99. Our AI agents do the outreach humans can&apos;t scale.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 - **Services** → `/#services` (scrolls to Services section on homepage)
 - **Pricing** → `/#pricing` (scrolls to Pricing section on homepage)
 - **Blog** → `/blog` (Blog listing page)
-- **Get Started Button** → `/#pricing` (scrolls to Pricing section)
+- **Get Started Button** → `https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN` (Polar Checkout)
 
 ### Footer Navigation
 - **Services** → `/#services`
@@ -25,14 +25,13 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 ## 🏠 Homepage Sections
 
 ### Hero Section
-- **Start Your Journey Button** → `/#pricing`
-- **View Pricing Button** → `/#pricing`
+- **Get Started Button** → `https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN` (Polar Checkout)
 
 ### Features Section
 - **View Pricing CTA** → `/#pricing`
 
 ### Pricing Section
-- **Get Started Button** → `https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a` (Stripe Checkout)
+- **Get Started Button** → `https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN` (Polar Checkout)
 - **Contact Us** → `mailto:sarath.k@neuralnetwrk.com`
 
 ## 🔄 Dynamic Routes
@@ -49,18 +48,21 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 
 ## 💳 Payment Links
 
-The site currently uses **Stripe** for payments.
+The site currently uses **Polar** for payments.
 
-### Location: `components/sections/Pricing.tsx` (lines ~80)
+### Checkout URL
+`https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN`
 
-Current link:
-```tsx
-<a href="https://buy.stripe.com/4gM6oHaCL1gLd23b2nb3q0a">
-```
+### Locations
+- `components/sections/Pricing.tsx` - Main pricing CTA
+- `components/sections/Hero.tsx` - Hero CTA
+- `components/sections/FinalCTA.tsx` - Final CTA
+- `components/Header.tsx` - Get Started buttons
+- Various page CTAs (glossary, resources, customers, integrations, etc.)
 
 To update the payment link:
-1. Create a new payment link in your Stripe dashboard
-2. Replace the href in `components/sections/Pricing.tsx`
+1. Create a new checkout link in your Polar dashboard
+2. Replace the href in all locations listed above
 
 ## 📧 Email Links
 

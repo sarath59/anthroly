@@ -28,8 +28,8 @@ export const FoundingMembers = () => {
   const benefits = [
     {
       icon: Sparkles,
-      title: "Locked-In Pricing",
-      description: "Founding members keep their $350/mo rate even after we raise prices"
+      title: "Simple Pricing",
+      description: "One price, forever. $99/month — no hidden fees, no surprises"
     },
     {
       icon: TrendingUp,

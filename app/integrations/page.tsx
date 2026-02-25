@@ -142,7 +142,7 @@ export default function IntegrationsIndexPage() {
               for your specific tech stack or get a custom integration built.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#ai-crawler">
+              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="xl" 
                   className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
@@ -150,16 +150,7 @@ export default function IntegrationsIndexPage() {
                   Get Started
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
-              </Link>
-              <Link href="/#pricing">
-                <Button 
-                  size="xl" 
-                  variant="outline"
-                  className="border-gray-700 text-white hover:bg-white/10 rounded-full"
-                >
-                  Contact Sales
-                </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -101,9 +101,6 @@ export const Hero = () => {
               <Sparkles size={16} className="text-emerald-400" />
               <span className="text-emerald-300">The First AI-Native SEO/GEO Agency</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-xl border border-amber-500/30 rounded-full text-sm font-semibold animate-pulse">
-              <span className="text-amber-300">🔥 Founding Member Pricing</span>
-            </div>
           </div>
 
           {/* Main Heading - Future-Pacing Fear + Direct Question */}
@@ -171,7 +168,7 @@ export const Hero = () => {
                 size="xl"
                 className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_70px_-15px_rgba(16,185,129,0.7)] transition-all"
               >
-                Start 30-Day Trial — $350/mo
+                Get Started — $99/mo
                 <ArrowRight className="ml-2" size={22} />
               </Button>
             </a>

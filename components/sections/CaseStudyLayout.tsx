@@ -95,11 +95,11 @@ export function CaseStudyLayout({
                   </Button>
                 </a>
               )}
-              <Link href="/#pricing">
+              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-emerald-500 text-black hover:bg-emerald-400">
-                  Get a demo
+                  Get Started
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 

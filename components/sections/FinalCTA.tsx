@@ -39,12 +39,6 @@ export const FinalCTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
-          {/* Urgency Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full text-sm font-semibold mb-8 animate-pulse">
-            <Clock size={16} className="text-orange-400" />
-            <span className="text-orange-300">⏰ Founding member pricing ends when we hit 20 clients</span>
-          </div>
-
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight">
             6 Months From Now, <br className="hidden md:block" />
@@ -77,7 +71,7 @@ export const FinalCTA = () => {
           <div className="flex flex-col items-center gap-6 mb-12">
             <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
-                Start 30-Day Trial — $350/mo
+                Get Started — $99/mo
                 <ArrowRight className="ml-3" size={24} />
               </Button>
             </a>
@@ -101,7 +95,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. 30 days from now, you&apos;ll either have a flood of new traffic and backlinks, or you&apos;ll still be where you are today. If you&apos;re happy with results, we&apos;ll discuss new pricing. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
+              <span className="text-white font-bold">This is your moment.</span> You&apos;ve read everything. You know what we do and how we do it. The only thing between you and explosive organic growth is clicking that button. Same pricing, always — $99/month. <span className="text-emerald-400 font-semibold">The choice is yours.</span>
             </p>
           </div>
         </div>

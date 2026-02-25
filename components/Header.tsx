@@ -78,7 +78,7 @@ export const Header = () => {
             
             <div className="w-px h-6 bg-white/10 mx-2"></div>
             
-            <Link href="/#pricing">
+            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="sm"
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold hover:from-emerald-400 hover:to-cyan-400 rounded-lg px-5 shadow-[0_0_20px_-5px_rgba(16,185,129,0.5)] hover:shadow-[0_0_25px_-5px_rgba(16,185,129,0.7)] transition-all duration-300"
@@ -86,7 +86,7 @@ export const Header = () => {
                 Get Started
                 <ArrowRight size={16} className="ml-1" />
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -131,7 +131,7 @@ export const Header = () => {
               Resources
             </Link>
             <div className="pt-2">
-              <Link href="/#pricing" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold hover:from-emerald-400 hover:to-cyan-400 rounded-xl"
@@ -139,7 +139,7 @@ export const Header = () => {
                   Get Started
                   <ArrowRight size={18} className="ml-2" />
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         )}

@@ -99,12 +99,12 @@ export default function CustomersPage() {
               <span className="text-2xl font-bold text-cyan-400">AI-first</span>
               <span className="text-gray-500">strategy</span>
             </div>
-            <Link href="/#pricing">
+            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-500 text-black hover:bg-emerald-400 font-semibold">
-                Get a demo
+                Get Started
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

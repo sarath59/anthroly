@@ -227,7 +227,7 @@ export const AIQAPages = () => {
           <p className="text-gray-400 mb-6">
             <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days, or we give you an extra month free.
           </p>
-          <Link href="/#pricing">
+          <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-400 hover:to-indigo-400 rounded-full font-bold shadow-lg shadow-purple-500/20"
@@ -235,7 +235,7 @@ export const AIQAPages = () => {
               Get 15 AI Q&A Pages/Month
               <ArrowRight className="ml-2" size={20} />
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@ Then visit `http://localhost:3000` to see your website!
 - ✅ **Hero Section**: Typing animation with "Human-Written Content That Ranks"
 - ✅ **Problem/Solution**: Explains AI slop issue and your solution
 - ✅ **Features**: 6 key service offerings
-- ✅ **Pricing**: Two plans at $350/month and $499/month
+- ✅ **Pricing**: $99/month
 - ✅ **Blog**: Ready for content (currently showing "Coming Soon")
 
 ### 3. Add Stripe Payment Links
@@ -30,19 +30,10 @@ When ready to accept payments:
 3. Update the buttons in `components/sections/Pricing.tsx`:
 
 ```tsx
-// For the Growth plan ($350/month)
-<Button size="lg" asChild>
-  <a href="YOUR_STRIPE_LINK_FOR_350">
-    Get Started with Growth
-  </a>
-</Button>
-
-// For the Premium plan ($499/month)
-<Button size="lg" asChild>
-  <a href="YOUR_STRIPE_LINK_FOR_499">
-    Get Started with Premium
-  </a>
-</Button>
+// Single plan at $99/month - uses Polar checkout
+<a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+  <Button size="lg">Get Started</Button>
+</a>
 ```
 
 ### 4. Deploy to Vercel

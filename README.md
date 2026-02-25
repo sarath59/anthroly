@@ -76,7 +76,7 @@ vercel
 1. **Hero** - Eye-catching hero with typing animation effect
 2. **Problem/Solution** - Explains the AI content problem and Anthroly's solution
 3. **Features** - Service offerings with scroll animations
-4. **Pricing** - Two pricing tiers ($350/month and $499/month)
+4. **Pricing** - $99/month
 
 ## 💳 Adding Stripe Integration
 
