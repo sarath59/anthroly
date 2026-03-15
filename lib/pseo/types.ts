@@ -19,7 +19,8 @@ export type PlaybookType =
   | 'glossary'
   | 'translations'
   | 'directory'
-  | 'profiles';
+  | 'profiles'
+  | 'blog';
 
 // ============================================================================
 // SEO METADATA
@@ -263,6 +264,75 @@ export interface Profile {
   facts: Record<string, string>;
   milestones: { date: string; event: string }[];
   insights: string[];
+}
+
+// ============================================================================
+// BLOG POST TYPES
+// ============================================================================
+
+export type BlogCategory =
+  | 'ai-seo'
+  | 'local-seo'
+  | 'industry-seo'
+  | 'saas-seo'
+  | 'technical-seo'
+  | 'content-strategy'
+  | 'link-building'
+  | 'competitor-analysis'
+  | 'conversion-optimization'
+  | 'healthcare-seo'
+  | 'ecommerce-seo'
+  | 'hospitality-seo'
+  | 'insurance-seo'
+  | 'real-estate-seo'
+  | 'legal-seo'
+  | 'nonprofit-seo'
+  | 'food-beverage-seo'
+  | 'automotive-seo'
+  | 'manufacturing-seo'
+  | 'professional-services-seo';
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  metaDescription: string;
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+  category: BlogCategory;
+  subcategory?: string;
+  location?: string;
+  industry?: string;
+  searchIntent: 'informational' | 'commercial' | 'transactional';
+  publishedAt: string;
+  updatedAt?: string;
+  author: string;
+  readingTime: number;
+  excerpt: string;
+  introduction: string;
+  sections: BlogSection[];
+  keyTakeaways: string[];
+  faq: FAQ[];
+  relatedPosts: string[];
+  tags: string[];
+}
+
+export interface BlogSection {
+  heading: string;
+  content: string;
+  subsections?: {
+    subheading: string;
+    content: string;
+  }[];
+  listItems?: string[];
+  quote?: {
+    text: string;
+    author?: string;
+  };
+  callout?: {
+    type: 'tip' | 'warning' | 'info' | 'success';
+    content: string;
+  };
 }
 
 // ============================================================================

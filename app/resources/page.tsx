@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText } from 'lucide-react';
-import { seoGlossaryTerms, targetPersonas, seoLocations } from '@/lib/pseo';
+import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper } from 'lucide-react';
+import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
 import { industries } from '@/lib/pseo/data/industries';
 import { useCases } from '@/lib/pseo/data/use-cases';
 
@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 };
 
 const resourceCategories = [
+  {
+    title: 'Blog',
+    description: 'Expert insights on AI SEO, local search, and industry strategies',
+    href: '/blog',
+    icon: Newspaper,
+    count: blogPosts.length,
+    countLabel: 'articles',
+    gradient: 'from-cyan-500 to-emerald-500',
+    bgGlow: 'bg-cyan-600/10',
+  },
   {
     title: 'SEO Glossary',
     description: 'Master 100+ SEO terms with clear definitions and practical examples',

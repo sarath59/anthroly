@@ -14,6 +14,15 @@ export { seoLocations, locationRegions } from './data/locations';
 export { seoIntegrations, integrationCategories } from './data/integrations';
 export { industries, industryCategories } from './data/industries';
 export { useCases } from './data/use-cases';
+export { 
+  blogPosts, 
+  blogCategories, 
+  getBlogPostBySlug, 
+  getBlogPostsByCategory, 
+  getBlogPostsByLocation,
+  getRelatedBlogPosts,
+  getAllBlogTags 
+} from './data/blog-posts';
 
 // Generator
 export {
