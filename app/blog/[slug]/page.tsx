@@ -272,7 +272,7 @@ export default function BlogPostPage({ params }: PageProps) {
                   {/* Quote */}
                   {section.quote && (
                     <blockquote className="mt-8 border-l-4 border-emerald-500 pl-6 py-4 bg-emerald-500/5 rounded-r-xl">
-                      <p className="text-lg text-gray-200 italic mb-2">"{section.quote.text}"</p>
+                      <p className="text-lg text-gray-200 italic mb-2">&ldquo;{section.quote.text}&rdquo;</p>
                       {section.quote.author && (
                         <cite className="text-sm text-gray-400">— {section.quote.author}</cite>
                       )}
