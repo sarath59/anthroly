@@ -23,7 +23,7 @@ import {
   ClipboardList,
   TrendingUp,
   ArrowRight,
-  Redirect,
+  ExternalLink,
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
@@ -49,7 +49,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: 
   Lightbulb,
   ClipboardList,
   TrendingUp,
-  Redirect,
+  Redirect: ExternalLink,
 };
 
 export const metadata: Metadata = {
