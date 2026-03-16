@@ -1,9 +1,35 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Wrench, Calculator, FileText, Search, Zap, TrendingUp, CheckCircle2, ArrowRight, Gift } from 'lucide-react';
 import { LogoStrip, SEO_TOOLS } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
+import { FREE_TOOLS } from '@/lib/data/free-tools';
+
+const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+  Tag: FileText,
+  Search,
+  FileText,
+  Type: FileText,
+  BarChart3: TrendingUp,
+  Clock: Zap,
+  Hash: Calculator,
+  Heading: FileText,
+  Link: Zap,
+  Link2: Zap,
+  Bot: Zap,
+  Code: Zap,
+  Share2: Zap,
+  HelpCircle: Zap,
+  Braces: Zap,
+  PenLine: FileText,
+  MousePointerClick: Zap,
+  Lightbulb: Zap,
+  ClipboardList: FileText,
+  TrendingUp,
+  Redirect: Zap,
+};
 
 export const FreeToolsBuilder = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,13 +52,6 @@ export const FreeToolsBuilder = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toolExamples = [
-    { icon: Calculator, name: "ROI Calculator", category: "SaaS", traffic: "12K/mo" },
-    { icon: FileText, name: "Invoice Generator", category: "Finance", traffic: "8K/mo" },
-    { icon: Search, name: "Keyword Analyzer", category: "Marketing", traffic: "15K/mo" },
-    { icon: Zap, name: "Speed Tester", category: "Tech", traffic: "22K/mo" }
-  ];
-
   return (
     <section id="tools" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Background */}
@@ -47,23 +66,66 @@ export const FreeToolsBuilder = () => {
             <span>🛠️ Free tools generate 4x more backlinks than blog posts</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            20 Lead Magnets Built Monthly. Zero Dev Time.
+            20+ Free SEO Tools. Use Them Now.
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Ahrefs&apos; free tools drive 2.5M visits/month.</span> Calculators convert 47% better than content. We build custom tools that capture emails, earn backlinks, and make AI recommend you as a resource.
+          <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-8">
+            <span className="text-white font-semibold">Meta tag generator, word counter, SERP preview, schema generators, and more.</span> No signup. Then get 20 custom tools built for your site every month.
           </p>
+          <Link
+            href="/tools"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-teal-500 text-black font-semibold hover:bg-teal-400 transition-colors"
+          >
+            Browse {FREE_TOOLS.length} free tools
+            <ArrowRight size={18} />
+          </Link>
         </div>
 
-        {/* Main Content */}
+        {/* Free tools grid - beautiful list */}
+        <div className={`max-w-6xl mx-auto mb-20 transition-all duration-1000 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h3 className="text-xl font-semibold text-gray-300 mb-6 text-center">
+            Free tools you can use right now
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {FREE_TOOLS.map((tool) => {
+              const Icon = ICON_MAP[tool.icon] || Wrench;
+              return (
+                <Link
+                  key={tool.id}
+                  href={`/tools/${tool.slug}`}
+                  className="group flex flex-col p-4 rounded-xl bg-gray-900/80 border border-gray-800 hover:border-teal-500/40 hover:bg-gray-900 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center mb-2 group-hover:bg-teal-500/30 transition-colors">
+                    <Icon size={20} className="text-teal-400 group-hover:text-teal-300" />
+                  </div>
+                  <span className="font-medium text-white text-sm group-hover:text-teal-300 truncate" title={tool.name}>
+                    {tool.name}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/tools" className="text-teal-400 hover:text-teal-300 text-sm font-medium">
+              View all tools →
+            </Link>
+          </div>
+        </div>
+
+        {/* Main Content - What we build for subscribers */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Left: Tool Examples */}
+          {/* Left: Types of tools we build */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
-              Types of Tools We Build
+              Types of Tools We Build for You
             </h3>
             
             <div className="grid grid-cols-2 gap-4 mb-8">
-              {toolExamples.map((tool, index) => {
+              {[
+                { icon: Calculator, name: "ROI Calculator", category: "SaaS", traffic: "12K/mo" },
+                { icon: FileText, name: "Invoice Generator", category: "Finance", traffic: "8K/mo" },
+                { icon: Search, name: "Keyword Analyzer", category: "Marketing", traffic: "15K/mo" },
+                { icon: Zap, name: "Speed Tester", category: "Tech", traffic: "22K/mo" },
+              ].map((tool, index) => {
                 const Icon = tool.icon;
                 return (
                   <div key={index} className="p-5 bg-gray-900/80 border border-gray-800 rounded-2xl hover:border-teal-500/30 transition-all group">
@@ -81,34 +143,15 @@ export const FreeToolsBuilder = () => {
               })}
             </div>
 
-            {/* More Examples */}
             <div className="bg-gray-900/80 rounded-2xl p-6 border border-gray-800">
               <h4 className="font-bold text-white mb-4">More Tools We Can Build:</h4>
               <div className="grid grid-cols-2 gap-2 text-sm text-gray-400">
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Pricing Calculators</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Comparison Tools</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Quiz Generators</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Template Libraries</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Checklist Builders</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight size={14} className="text-teal-400" />
-                  <span>Data Converters</span>
-                </div>
+                {['Pricing Calculators', 'Comparison Tools', 'Quiz Generators', 'Template Libraries', 'Checklist Builders', 'Data Converters'].map((label) => (
+                  <div key={label} className="flex items-center gap-2">
+                    <ArrowRight size={14} className="text-teal-400" />
+                    <span>{label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

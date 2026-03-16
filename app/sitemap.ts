@@ -8,6 +8,7 @@ import {
   industries,
   useCases,
 } from '@/lib/pseo';
+import { FREE_TOOLS } from '@/lib/data/free-tools';
 
 const BASE_URL = 'https://www.anthroly.com';
 
@@ -43,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/compare', priority: 0.9 as const },
     { path: '/industries', priority: 0.9 as const },
     { path: '/use-cases', priority: 0.9 as const },
+    { path: '/tools', priority: 0.9 as const },
     { path: '/privacy', priority: 0.3 as const },
     { path: '/terms', priority: 0.3 as const },
   ];
@@ -117,6 +119,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
+    });
+  });
+
+  // Free tools (22)
+  FREE_TOOLS.forEach(tool => {
+    entries.push({
+      url: `${BASE_URL}/tools/${tool.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     });
   });
 

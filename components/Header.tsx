@@ -75,6 +75,12 @@ export const Header = () => {
             >
               Resources
             </Link>
+            <Link
+              href="/tools"
+              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+            >
+              Free Tools
+            </Link>
             
             <div className="w-px h-6 bg-white/10 mx-2"></div>
             
@@ -129,6 +135,13 @@ export const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Resources
+            </Link>
+            <Link
+              href="/tools"
+              className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Free Tools
             </Link>
             <div className="pt-2">
               <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>

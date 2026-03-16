@@ -40,6 +40,20 @@ export const Pricing = () => {
     "Weekly Performance Reports",
     "Competitor Analysis & Intel",
     "Technical SEO Audits & Fixes",
+    "LLM SEO (optimize for AI answers & citations)",
+    "Entity building & knowledge graph signals",
+    "Reddit distribution & community visibility",
+    "Organic attribution & search-to-revenue tracking",
+    "Programmatic SEO & scalable page systems",
+    "AI prompt discovery (what users ask AI)",
+    "Buyer decision mapping & intent content",
+    "AI-first keyword research",
+    "Growth loops from search (traffic → signups → content)",
+    "Comparison page systems",
+    "Decision page frameworks",
+    "Topical authority architecture",
+    "Structured content for LLM citation",
+    "AI search discovery (ChatGPT, Perplexity, Claude, Gemini)",
   ];
 
   const expectedResults = [
