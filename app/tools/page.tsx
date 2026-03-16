@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import {
+  type LucideIcon,
   Wrench,
   Tag,
   Search,
@@ -23,12 +24,12 @@ import {
   ClipboardList,
   TrendingUp,
   ArrowRight,
-  ExternalLink, 
+  ExternalLink,
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
 
-const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const ICON_MAP: Record<string, LucideIcon> = {
   Tag,
   Search,
   FileText,
