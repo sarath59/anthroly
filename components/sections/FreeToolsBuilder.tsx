@@ -2,12 +2,12 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Wrench, Calculator, FileText, Search, Zap, TrendingUp, CheckCircle2, ArrowRight, Gift } from 'lucide-react';
+import { type LucideIcon, Wrench, Calculator, FileText, Search, Zap, TrendingUp, CheckCircle2, ArrowRight, Gift } from 'lucide-react';
 import { LogoStrip, SEO_TOOLS } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 
-const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const ICON_MAP: Record<string, LucideIcon> = {
   Tag: FileText,
   Search,
   FileText,
