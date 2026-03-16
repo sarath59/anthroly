@@ -28,10 +28,10 @@ export function TitleTagOptimizer() {
           <li className={len <= 60 ? 'text-teal-400' : 'text-amber-400'}>
             Length: {len} / 60 chars {len <= 60 ? '✓' : len <= 70 ? '(slightly long)' : '(too long)'}
           </li>
-          <li className="wordCount >= 3 && wordCount <= 10 ? 'text-teal-400' : 'text-gray-500'">
+          <li className={wordCount >= 3 && wordCount <= 10 ? 'text-teal-400' : 'text-gray-500'}>
             Words: {wordCount} (typically 3–10 works well)
           </li>
-          <li className="hasKeyword ? 'text-teal-400' : 'text-gray-500'}>
+          <li className={hasKeyword ? 'text-teal-400' : 'text-gray-500'}>
             Include primary keyword near the start
           </li>
         </ul>
