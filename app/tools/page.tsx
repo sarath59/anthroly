@@ -23,7 +23,7 @@ import {
   ClipboardList,
   TrendingUp,
   ArrowRight,
-  ExternalLink,
+  ExternalLink, 
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
@@ -50,7 +50,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: 
   ClipboardList,
   TrendingUp,
   Redirect: ExternalLink,
-};
+}; 
 
 export const metadata: Metadata = {
   title: 'Free SEO Tools | 20+ Free Marketing & SEO Utilities | Anthroly',
