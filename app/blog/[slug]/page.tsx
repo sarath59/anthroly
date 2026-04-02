@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Calendar, Clock, Tag, User, Share2, BookOpen } from 'lucide-react';
 import { blogPosts, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/pseo/data/blog-posts';
@@ -428,12 +429,12 @@ export default function BlogPostPage({ params }: PageProps) {
                 30 blogs/month. 20-30 high-DR backlinks. Continuous AI optimization. 
                 All for less than the cost of a single freelance article.
               </p>
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="xl" 
                   className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
                 >
-                  Start for $99/month
+                  Book a call
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </a>

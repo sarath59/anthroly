@@ -279,7 +279,7 @@ export const GuaranteedResults = () => {
                 <div className="text-4xl text-gray-600">→</div>
                 <div className="text-center">
                   <div className="text-sm text-emerald-400 mb-1">Your Cost</div>
-                  <div className="text-5xl font-bold text-emerald-400">$99</div>
+                  <div className="text-5xl font-bold text-emerald-400">$535</div>
                 </div>
                 <div className="text-center px-4 py-2 bg-emerald-500/20 rounded-xl">
                   <div className="text-2xl font-bold text-emerald-400">98%</div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { Target, Zap, TrendingUp } from 'lucide-react';
 
@@ -95,9 +96,9 @@ export function CaseStudyLayout({
                   </Button>
                 </a>
               )}
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-emerald-500 text-black hover:bg-emerald-400">
-                  Get Started
+                  Book a call
                 </Button>
               </a>
             </div>

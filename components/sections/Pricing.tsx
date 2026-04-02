@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Check, Zap, Shield, ArrowRight, Sparkles, TrendingUp, Bot, Search, Users } from 'lucide-react';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse, GradientBeam, SpotlightCard, ScaleOnScroll, HoverTilt } from '../ui/animated-elements';
@@ -78,10 +79,10 @@ export const Pricing = () => {
             <span>💰 This would cost $8,500/mo at a traditional agency</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            $99 to Change Everything
+            $535 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 20-30 backlinks + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $99/month. Same pricing, always. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 20-30 backlinks + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $535/month. Same pricing, always. No contracts. Cancel anytime.
           </p>
           <p className="text-sm md:text-base text-gray-500 mt-4">
             <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
@@ -105,7 +106,7 @@ export const Pricing = () => {
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <div className="flex items-baseline">
-                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">$99</span>
+                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">$535</span>
                     <span className="text-gray-400 text-xl ml-2">/month</span>
                   </div>
                 </div>
@@ -177,9 +178,9 @@ export const Pricing = () => {
               </div>
 
               {/* CTA Button */}
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" className="block w-full">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button className="w-full h-14 md:h-16 text-lg md:text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
-                  Get Started — $99/mo
+                  Book a call
                   <ArrowRight className="ml-2" size={22} />
                 </Button>
               </a>
@@ -206,7 +207,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 15 AI Q&A pages, 20-30 backlinks, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $99.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 15 AI Q&A pages, 20-30 backlinks, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $535.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">

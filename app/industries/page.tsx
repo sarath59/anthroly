@@ -103,7 +103,7 @@ export default function IndustriesPage() {
               <div className="text-zinc-400">Avg Traffic Growth</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">$99</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">$535</div>
               <div className="text-zinc-400">Starting Price</div>
             </div>
           </div>

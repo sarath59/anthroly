@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from './ui/button';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
@@ -84,12 +85,12 @@ export const Header = () => {
             
             <div className="w-px h-6 bg-white/10 mx-2"></div>
             
-            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="sm"
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold hover:from-emerald-400 hover:to-cyan-400 rounded-lg px-5 shadow-[0_0_20px_-5px_rgba(16,185,129,0.5)] hover:shadow-[0_0_25px_-5px_rgba(16,185,129,0.7)] transition-all duration-300"
               >
-                Get Started
+                Book a call
                 <ArrowRight size={16} className="ml-1" />
               </Button>
             </a>
@@ -144,12 +145,12 @@ export const Header = () => {
               Free Tools
             </Link>
             <div className="pt-2">
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold hover:from-emerald-400 hover:to-cyan-400 rounded-xl"
                 >
-                  Get Started
+                  Book a call
                   <ArrowRight size={18} className="ml-2" />
                 </Button>
               </a>

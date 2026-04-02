@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: "Just click the Get Started button and complete your payment. You will immediately get access to our onboarding flow, and we will schedule your kickoff call within 24 hours. Most clients are fully operational within 48 hours of signing up."
+    answer: "Click Book a call to pick a time. We will walk you through fit and next steps on the call, then send onboarding details. Most clients are fully operational within 48 hours after we kick off."
   }
 ];
 

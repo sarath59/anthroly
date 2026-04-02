@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { seoGlossaryTerms, glossaryCategories } from '@/lib/pseo';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Book, Search } from 'lucide-react';
 
@@ -168,12 +169,12 @@ export default function GlossaryIndexPage() {
               Let Anthroly&apos;s AI handle the execution. Get 30 blogs/month, 20-30 high-DR backlinks, 
               and continuous optimization—without becoming an SEO expert yourself.
             </p>
-            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Start for $99/month
+                Book a call
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </a>

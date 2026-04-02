@@ -12,6 +12,7 @@ import {
   Zap,
   ArrowRight
 } from 'lucide-react';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { GlowPulse } from '../ui/animated-elements';
@@ -227,12 +228,12 @@ export const AIQAPages = () => {
           <p className="text-gray-400 mb-6">
             <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days, or we give you an extra month free.
           </p>
-          <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+          <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-400 hover:to-indigo-400 rounded-full font-bold shadow-lg shadow-purple-500/20"
             >
-              Get 15 AI Q&A Pages/Month
+              Book a call
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </a>

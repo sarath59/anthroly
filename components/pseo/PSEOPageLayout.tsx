@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { ArrowRight, ChevronRight, ExternalLink } from 'lucide-react';
 import type { PSEOPage, ContentSection, FAQ, InternalLink, RelatedPage } from '@/lib/pseo/types';
@@ -53,13 +54,13 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="lg" 
                   variant="outline" 
                   className="border-gray-700 text-white hover:bg-white/10 rounded-full"
                 >
-                  View Pricing
+                  Book a call
                 </Button>
               </a>
             </div>

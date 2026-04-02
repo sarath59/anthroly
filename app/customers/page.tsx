@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
@@ -99,9 +100,9 @@ export default function CustomersPage() {
               <span className="text-2xl font-bold text-cyan-400">AI-first</span>
               <span className="text-gray-500">strategy</span>
             </div>
-            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-500 text-black hover:bg-emerald-400 font-semibold">
-                Get Started
+                Book a call
                 <ArrowRight className="ml-2" size={18} />
               </Button>
             </a>

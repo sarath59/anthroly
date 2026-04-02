@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -69,9 +70,9 @@ export const FinalCTA = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-6 mb-12">
-            <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
-                Get Started — $99/mo
+                Book a call
                 <ArrowRight className="ml-3" size={24} />
               </Button>
             </a>
@@ -95,7 +96,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> We combine AI automation with human expertise to grow your visibility on Google and AI platforms. Weekly calls, clear reports, no mysteries. <span className="text-emerald-400 font-semibold">$99/month. Cancel anytime.</span>
+              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> We combine AI automation with human expertise to grow your visibility on Google and AI platforms. Weekly calls, clear reports, no mysteries. <span className="text-emerald-400 font-semibold">$535/month. Cancel anytime.</span>
             </p>
           </div>
         </div>

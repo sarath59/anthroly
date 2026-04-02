@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { seoIntegrations, integrationCategories } from '@/lib/pseo';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Puzzle, Zap, Link as LinkIcon } from 'lucide-react';
 
@@ -142,12 +143,12 @@ export default function IntegrationsIndexPage() {
               for your specific tech stack or get a custom integration built.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN" target="_blank" rel="noopener noreferrer">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="xl" 
                   className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
                 >
-                  Get Started
+                  Book a call
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </a>

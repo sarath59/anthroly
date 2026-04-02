@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { ArrowRight, Users, Bot, MessageSquare } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
@@ -56,7 +57,7 @@ export const Hero = () => {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
-              href="https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN"
+              href={BOOK_CALL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
@@ -65,7 +66,7 @@ export const Hero = () => {
                 size="xl"
                 className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_70px_-15px_rgba(16,185,129,0.7)] transition-all"
               >
-                Get Started — $99/mo
+                Book a call
                 <ArrowRight className="ml-2" size={22} />
               </Button>
             </a>
@@ -96,7 +97,7 @@ export const Hero = () => {
               <div className="text-gray-500 text-sm">Human Check-ins</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">$99</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">$535</div>
               <div className="text-gray-500 text-sm">Per Month</div>
             </div>
           </div>

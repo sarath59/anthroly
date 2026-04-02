@@ -237,7 +237,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
     },
     {
       url: '/#pricing',
-      anchorText: 'Get Started with AI SEO',
+      anchorText: 'Book a call',
       context: 'Conversion opportunity',
     },
     ...term.relatedTerms.slice(0, 3).map(relatedSlug => ({
