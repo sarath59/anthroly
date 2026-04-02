@@ -45,12 +45,12 @@ export const GuaranteedResults = () => {
   }, []);
 
   const hardDeliverables = [
-    { icon: FileText, metric: "30", label: "SEO-Optimized Articles", detail: "Human-reviewed (AI-assisted)" },
-    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Human-reviewed (AI-assisted)" },
-    { icon: Link2, metric: "20+", label: "High-Authority Backlinks", detail: "DR 50-90 verified in Ahrefs" },
-    { icon: Globe, metric: "15+", label: "Unique Referring Domains", detail: "Real sites, not link farms" },
-    { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain" },
-    { icon: TrendingUp, metric: "15", label: "Social Articles", detail: "LinkedIn, X, Medium" },
+    { icon: Link2, metric: "10", label: "High-DR Backlinks", detail: "Authoritative placements every month", highlight: true },
+    { icon: FileText, metric: "15", label: "Human-Written SEO Blogs", detail: "Conversation-style, built to rank on Google & in AI answers", highlight: true },
+    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Human-reviewed (AI-assisted)", highlight: false },
+    { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain", highlight: false },
+    { icon: TrendingUp, metric: "15", label: "Social Articles", detail: "LinkedIn, X, Medium", highlight: false },
+    { icon: Globe, metric: "10+", label: "Referring Domains", detail: "From real outreach—not link farms", highlight: false },
   ];
 
   const seoOutcomes = [
@@ -85,7 +85,7 @@ export const GuaranteedResults = () => {
 
   return (
     <section 
-      id="guarantees" 
+      id="features" 
       ref={sectionRef} 
       className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden"
     >
@@ -115,19 +115,34 @@ export const GuaranteedResults = () => {
           <h3 className="text-2xl font-bold text-center mb-8">
             <span className="text-emerald-400">📦</span> Hard Deliverables <span className="text-gray-500 text-lg font-normal">(Count Them Yourself)</span>
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {hardDeliverables.map((item, index) => (
-              <div 
-                key={index}
-                className="relative group p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 text-center"
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            {hardDeliverables.filter((d) => d.highlight).map((item, index) => (
+              <div
+                key={`hi-${index}`}
+                className="relative group p-6 bg-gradient-to-br from-emerald-500/[0.12] to-cyan-500/[0.06] border border-emerald-500/40 rounded-2xl ring-1 ring-emerald-500/25 shadow-[0_0_32px_-14px_rgba(16,185,129,0.4)] text-center hover:border-emerald-400/60 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                <div className="relative z-10">
-                  <item.icon className="mx-auto text-emerald-400 mb-3" size={28} />
-                  <div className="text-4xl font-bold text-white mb-1">{item.metric}</div>
-                  <div className="text-sm font-semibold text-gray-300 mb-1">{item.label}</div>
-                  <div className="text-xs text-gray-500">{item.detail}</div>
+                <div className="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider text-emerald-300/90 bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                  Flagship
                 </div>
+                <div className="relative z-10 pt-2">
+                  <item.icon className="mx-auto text-emerald-300 mb-3" size={28} />
+                  <div className="text-4xl font-bold text-white mb-1">{item.metric}</div>
+                  <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
+                  <div className="text-xs text-emerald-100/75">{item.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {hardDeliverables.filter((d) => !d.highlight).map((item, index) => (
+              <div
+                key={index}
+                className="relative p-5 bg-gray-900/35 border border-gray-800/80 rounded-2xl text-center opacity-[0.72] hover:opacity-90 transition-opacity duration-300"
+              >
+                <item.icon className="mx-auto text-gray-500 mb-2" size={24} />
+                <div className="text-2xl md:text-3xl font-bold text-gray-400 mb-1">{item.metric}</div>
+                <div className="text-xs font-medium text-gray-500 mb-1">{item.label}</div>
+                <div className="text-[11px] text-gray-600 leading-snug">{item.detail}</div>
               </div>
             ))}
           </div>
@@ -246,16 +261,16 @@ export const GuaranteedResults = () => {
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">30 Blog Posts</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$6,000</div>
+                  <div className="text-sm text-gray-500 mb-1">15 SEO Blog Posts</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$4,500</div>
                 </div>
                 <div className="text-center p-4">
                   <div className="text-sm text-gray-500 mb-1">15 AI Q&A Pages</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">20+ Backlinks</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$4,000</div>
+                  <div className="text-sm text-gray-500 mb-1">10 High-DR Backlinks</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$3,500</div>
                 </div>
                 <div className="text-center p-4">
                   <div className="text-sm text-gray-500 mb-1">20 Free Tools</div>
@@ -296,7 +311,7 @@ export const GuaranteedResults = () => {
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
             <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Promise</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we fail to deliver <span className="text-white font-semibold">20+ backlinks (DR 50+)</span>, <span className="text-white font-semibold">30 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
+              If we fail to deliver <span className="text-white font-semibold">10 high-DR backlinks</span>, <span className="text-white font-semibold">15 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
               <span>🎁 One Free Month of Service</span>

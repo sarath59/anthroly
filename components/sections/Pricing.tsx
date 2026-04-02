@@ -28,12 +28,21 @@ export const Pricing = () => {
     return () => observer.disconnect();
   }, []);
 
+  const highlightedServices = [
+    {
+      title: '10 high-DR backlinks every month',
+      body: 'Editorial links from authoritative sites—built for trust, rankings, and long-term authority.',
+    },
+    {
+      title: '15 human-written, conversation-style SEO blogs / month',
+      body: 'Natural, high-quality pieces optimized for Google and AI discovery—not generic AI fluff.',
+    },
+  ];
+
   const includedFeatures = [
     "Dedicated human account manager",
     "Weekly strategy calls with your team",
-    "30 Human-reviewed SEO Blogs/Month",
     "15 Human-reviewed AI Q&A Pages/Month",
-    "20-30 High-DR Backlinks/Month",
     "50+ AI Brand Mentions/Month",
     "AI Crawler Analysis & Monitoring 24/7",
     "20 Free Tools Built for Your Site",
@@ -82,7 +91,7 @@ export const Pricing = () => {
             $535 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30 blogs + 15 AI Q&A pages + 20-30 backlinks + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $535/month. Same pricing, always. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">15 human-written blogs + 10 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $535/month. Same pricing, always. No contracts. Cancel anytime.
           </p>
           <p className="text-sm md:text-base text-gray-500 mt-4">
             <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
@@ -128,11 +137,30 @@ export const Pricing = () => {
                       What we do for you
                       <span className="text-gray-500 font-normal">(services)</span>
                     </div>
-                    <div className="space-y-2.5">
+                    <div className="space-y-3">
+                      {highlightedServices.map((item, i) => (
+                        <div
+                          key={`hi-${i}`}
+                          className="rounded-xl border border-emerald-500/40 bg-gradient-to-br from-emerald-500/[0.12] to-cyan-500/[0.06] p-4 shadow-[0_0_24px_-12px_rgba(16,185,129,0.35)]"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-emerald-500/30 rounded-full flex items-center justify-center ring-1 ring-emerald-400/40">
+                              <Check size={12} className="text-emerald-300" />
+                            </div>
+                            <div>
+                              <span className="text-sm font-semibold text-white leading-tight block">{item.title}</span>
+                              <span className="text-xs text-emerald-100/80 leading-snug mt-1 block">{item.body}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 pt-1 pb-0.5">
+                        Also included
+                      </p>
                       {includedFeatures.map((feature, i) => (
-                        <div key={i} className="flex items-start gap-3 text-gray-300">
-                          <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                            <Check size={12} className="text-emerald-500" />
+                        <div key={i} className="flex items-start gap-3 text-gray-500">
+                          <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-gray-800 rounded-full flex items-center justify-center">
+                            <Check size={12} className="text-gray-600" />
                           </div>
                           <span className="text-sm leading-tight">{feature}</span>
                         </div>
@@ -193,7 +221,7 @@ export const Pricing = () => {
                   <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-lg mx-auto">
-                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (20-30 backlinks, 30 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
+                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (10 high-DR backlinks, 15 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
                 </p>
               </div>
             </div>
@@ -207,7 +235,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 30 blogs, 15 AI Q&A pages, 20-30 backlinks, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $535.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 10 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $535.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">
