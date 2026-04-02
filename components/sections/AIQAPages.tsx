@@ -105,7 +105,7 @@ export const AIQAPages = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            When someone asks ChatGPT or Perplexity about your industry, <span className="text-white font-semibold">you want to be the answer they cite</span>. Our AI Q&A pages are structured to appear in AI-generated responses — and each page is <span className="text-white font-semibold">human-reviewed</span> before it goes live.
+            When someone asks ChatGPT or Perplexity about your industry, <span className="text-white font-semibold">you want to be the answer they cite</span>. We build Q&amp;A-style pages structured for AI-generated responses — and each page is <span className="text-white font-semibold">human-written and edited</span> before it goes live.
           </p>
         </div>
 

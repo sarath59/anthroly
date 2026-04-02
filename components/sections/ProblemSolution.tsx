@@ -106,7 +106,7 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-500" />
                 The Anthroly Way
               </h3>
-              <p className="text-gray-400 mt-2">Human-led, AI-powered, results-driven</p>
+              <p className="text-gray-400 mt-2">Human-led, results-driven</p>
             </div>
             <ul className="space-y-6">
               <li className="flex gap-4">
@@ -133,8 +133,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">AI Creates, Humans Perfect</p>
-                  <p className="text-gray-400">AI handles the scale and heavy lifting. Human experts review everything for quality. Best of both worlds.</p>
+                  <p className="font-bold text-lg">Writers & Editors, Not Bots</p>
+                  <p className="text-gray-400">People research, draft, and edit your content. We use tools where they help, but humans own quality and accuracy.</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -164,8 +164,8 @@ export const ProblemSolution = () => {
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Zap className="text-purple-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">24/7</div>
-              <div className="text-sm text-gray-500">AI Agents Working</div>
+              <div className="text-2xl font-bold text-white mb-1">Always</div>
+              <div className="text-sm text-gray-500">On your roadmap</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
@@ -179,7 +179,7 @@ export const ProblemSolution = () => {
         <div className={`mt-12 flex flex-col md:flex-row justify-center gap-8 md:gap-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <LogoStrip 
             companies={AI_COMPANIES.slice(0, 3)} 
-            label="Powered by AI from"
+            label="Stack we work with"
             size="sm"
           />
           <LogoStrip 

@@ -37,7 +37,7 @@ export default function IndustriesPage() {
               </span>
             </h1>
             <p className="text-xl text-zinc-400 mb-8">
-              Every industry has unique SEO challenges. Our AI-powered platform delivers 
+              Every industry has unique SEO challenges. Our managed service delivers 
               industry-specific strategies, content, and optimization tailored to your vertical.
             </p>
           </div>

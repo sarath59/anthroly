@@ -166,7 +166,7 @@ export default function GlossaryIndexPage() {
               Ready to Apply These Concepts?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Let Anthroly&apos;s AI handle the execution. Get 30 blogs/month, 20-30 high-DR backlinks, 
+              Let our team run execution. Get 15 blogs/month, 15–25 high-DR backlinks, 
               and continuous optimization—without becoming an SEO expert yourself.
             </p>
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">

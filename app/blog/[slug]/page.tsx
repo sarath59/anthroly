@@ -423,10 +423,10 @@ export default function BlogPostPage({ params }: PageProps) {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Let AI Handle Your SEO
+                Let Our Team Run Your SEO
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                30 blogs/month. 20-30 high-DR backlinks. Continuous AI optimization. 
+                15 blogs/month. 15–25 high-DR backlinks. Continuous AI optimization. 
                 All for less than the cost of a single freelance article.
               </p>
               <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">

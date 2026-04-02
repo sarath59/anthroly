@@ -107,7 +107,7 @@ export default function UseCasePage({ params }: PageProps) {
                 </div>
                 <h3 className="font-semibold text-zinc-100 mb-2">{challenge}</h3>
                 <p className="text-zinc-400 text-sm">
-                  Anthroly&apos;s AI automation addresses this through consistent execution and intelligent optimization.
+                  Anthroly&apos;s managed program addresses this through consistent execution and clear reporting.
                 </p>
               </div>
             ))}

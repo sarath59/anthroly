@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     question: "What kind of results can I expect in 30 days?",
-    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, AI Q&A pages getting cited by AI engines, and increased organic traffic. By day 30, you will typically have 20-30 new backlinks, 30 published blog posts, 15 AI Q&A pages, 50+ AI brand mentions, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
+    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, AI Q&A pages getting cited by AI engines, and increased organic traffic. By day 30, you will typically have 15–25 new backlinks, 15 published blog posts, 15 AI Q&A pages, 50+ AI brand mentions, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
   },
   {
     question: "Do you work with any industry?",
-    answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our AI systems adapt to your specific industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
+    answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our strategists and writers adapt to your industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
   },
   {
     question: "What are AI Q&A Pages and how do they rank on AI search?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: "How much of my time does this require?",
-    answer: "Almost none. Our system is designed to run autonomously. We will need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you will receive weekly reports and can check in anytime, but zero hands-on work is required from you."
+    answer: "Almost none. We run the program for you. We will need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you will receive weekly reports and can check in anytime, but zero hands-on SEO work is required from you."
   },
   {
     question: "Can I see examples of your work?",
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     question: "What if it does not work for me?",
-    answer: "That is what the promise is for. If we cannot deliver 20-30 high-quality backlinks per month (DR 50-90, avg DR 70+), we will give you one free month of service. We have never had to honor this — but it is there so you have zero risk."
+    answer: "That is what the promise is for. If we cannot deliver 15–25 high-quality backlinks per month (DR 50-90, avg DR 70+), we will give you one free month of service. We have never had to honor this — but it is there so you have zero risk."
   },
   {
     question: "Do you offer white-label services for agencies?",

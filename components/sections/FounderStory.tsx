@@ -108,7 +108,7 @@ export const FounderStory = () => {
                 </p>
 
                 <p>
-                  <span className="text-white font-medium">So I built Anthroly.</span> An AI-native growth engine that does 
+                  <span className="text-white font-medium">So I built Anthroly.</span> A human-led SEO service that does 
                   what a $10,000/month agency does — but faster, cheaper, and with complete transparency. 
                   Every backlink tracked. Every blog published. Every ranking monitored. All for less than 
                   what you&apos;d pay for a single strategy call elsewhere.

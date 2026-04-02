@@ -67,7 +67,7 @@ export function generateOrganizationSchema(): object {
     offers: {
       '@type': 'Offer',
       name: 'AI SEO Services',
-      description: '24/7 AI-powered SEO including 30 blogs/month, 20-30 high-DR backlinks, and automated optimization',
+      description: 'Managed SEO including 15 blogs/month, 15–25 high-DR backlinks, and ongoing technical optimization',
       price: '535',
       priceCurrency: 'USD',
       priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],

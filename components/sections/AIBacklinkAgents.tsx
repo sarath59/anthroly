@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Link2, Bot, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Link2, Mail, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
 import { LogoStrip, PUBLISHING_PLATFORMS } from '../ui/CompanyLogos';
 import { GlowPulse, SpotlightCard, StaggerContainer, StaggerItem, GradientBeam } from '../ui/animated-elements';
 
@@ -29,13 +29,13 @@ export const AIBacklinkAgents = () => {
   const backlinkProcess = [
     {
       icon: Target,
-      title: "Target Identification",
-      description: "AI scans millions of sites to find high-authority domains relevant to your industry"
+      title: "Prospect research",
+      description: "We map high-authority sites and angles that fit your niche—not mass lists or spam."
     },
     {
-      icon: Bot,
-      title: "Automated Outreach",
-      description: "Personalized outreach at scale — AI crafts unique pitches for each target"
+      icon: Mail,
+      title: "Human-led outreach",
+      description: "Real pitches and follow-ups from our team to earn editorial placements."
     },
     {
       icon: Link2,
@@ -75,7 +75,7 @@ export const AIBacklinkAgents = () => {
             Backlinks That Cost Others $500 Each. Included for You.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 20-30 monthly. That&apos;s $8,000-$30,000 in value — included in your $535. Our AI agents do the outreach humans can&apos;t scale.
+            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 15–25 monthly. That&apos;s $6,000-$25,000+ in value — included in your $535. Our team runs outreach and negotiation—you stay focused on the business.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export const AIBacklinkAgents = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left: Process */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-2xl md:text-3xl font-bold mb-8">How Our AI Gets You Links</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">How We Earn Your Links</h3>
             
             <div className="space-y-6">
               {backlinkProcess.map((step, index) => {
@@ -109,7 +109,7 @@ export const AIBacklinkAgents = () => {
                 <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
               <p className="text-gray-300">
-                We commit to <span className="text-orange-400 font-semibold">20-30 backlinks per month</span> (DR 50-90, <span className="text-white font-semibold">avg DR 70+</span>). If we miss the target, you get <span className="text-white font-semibold">one free month of service</span>.
+                We commit to <span className="text-orange-400 font-semibold">15–25 backlinks per month</span> (DR 50-90, <span className="text-white font-semibold">avg DR 70+</span>). If we miss the target, you get <span className="text-white font-semibold">one free month of service</span>.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export const AIBacklinkAgents = () => {
                 <div className="text-sm text-gray-500">Average DR</div>
               </div>
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
-                <div className="text-4xl font-bold text-white mb-1">20-30</div>
+                <div className="text-4xl font-bold text-white mb-1">15–25</div>
                 <div className="text-sm text-gray-500">Links Per Month</div>
               </div>
             </div>

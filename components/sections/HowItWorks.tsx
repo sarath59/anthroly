@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Users, Bot, MessageSquare, TrendingUp, ArrowRight, Check } from 'lucide-react';
+import { Users, Zap, MessageSquare, TrendingUp, ArrowRight, Check } from 'lucide-react';
 import { GlowPulse } from '../ui/animated-elements';
 
 export const HowItWorks = () => {
@@ -34,9 +34,9 @@ export const HowItWorks = () => {
       humanElement: true
     },
     {
-      icon: Bot,
-      title: "AI Works 24/7",
-      description: "Our AI creates content, builds backlinks, and optimizes for both Google and AI search engines.",
+      icon: Zap,
+      title: "We Execute Every Month",
+      description: "Our team produces your blogs, secures backlinks, and keeps your site optimized for Google and AI-driven search.",
       color: "cyan",
       humanElement: false
     },
@@ -65,11 +65,10 @@ export const HowItWorks = () => {
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            AI Power. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Human Touch.</span>
+            Human-Led. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Full-Service.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            We&apos;re not just software. Real humans guide your strategy while AI handles the heavy lifting. 
-            You get the best of both worlds.
+            We&apos;re not a DIY tool. Real strategists and writers run your program—weekly calls, clear reporting, and consistent delivery.
           </p>
         </div>
 

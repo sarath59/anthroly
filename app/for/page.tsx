@@ -56,8 +56,8 @@ export default function ForIndexPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-3xl mx-auto">
-              Whether you&apos;re a SaaS founder, marketing director, or agency owner, our AI-powered 
-              platform adapts to your specific challenges and goals. Explore solutions designed for your role.
+              Whether you&apos;re a SaaS founder, marketing director, or agency owner, our managed SEO program
+              adapts to your specific challenges and goals. Explore solutions designed for your role.
             </p>
 
             <Link href="/#ai-crawler">
@@ -123,7 +123,7 @@ export default function ForIndexPage() {
             </h2>
             <p className="text-gray-400">
               Generic SEO strategies don&apos;t account for your unique challenges, competitors, and goals. 
-              Our AI adapts to your specific context.
+              Our playbooks adapt to your specific context.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function ForIndexPage() {
               Don&apos;t See Your Role?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Our AI adapts to any industry and role. Get a free analysis to see exactly 
+              Our team adapts to any industry and role. Get a free analysis to see exactly 
               how we can help your specific situation.
             </p>
             <Link href="/#ai-crawler">

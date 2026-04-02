@@ -197,7 +197,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
     },
     {
       heading: `How Anthroly Helps with ${term.term}`,
-      body: `At Anthroly, we've built AI systems that automatically optimize your presence for concepts like ${term.term}. Our AI Crawler Analysis identifies gaps in your ${term.term.toLowerCase()} strategy, while our 24/7 AI agents continuously work to improve your visibility. Whether it's generating optimized content, building high-quality backlinks, or monitoring your competitive position, our AI-powered approach ensures you stay ahead in both traditional SEO and the emerging AI search landscape.`,
+      body: `At Anthroly, a dedicated team optimizes your presence for concepts like ${term.term}. Crawler analysis identifies gaps in your ${term.term.toLowerCase()} strategy, while writers and link builders ship content and backlinks each month. Whether it's publishing optimized pages, earning high-quality backlinks, or monitoring your competitive position, our managed approach keeps you visible in both traditional Google SEO and AI-driven search.`,
     },
   ];
   
@@ -300,7 +300,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       faq,
       callToAction: {
         headline: `Ready to Master ${term.term}?`,
-        description: `Let our AI-powered platform automatically optimize your site for ${term.term.toLowerCase()} and hundreds of other ranking factors. Start with a free AI Crawler Analysis.`,
+        description: `Let Anthroly optimize your site for ${term.term.toLowerCase()} and hundreds of other ranking factors—with a human-led team behind the work. Start with a free AI Crawler Analysis.`,
         buttonText: 'Get Your Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -348,20 +348,20 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
     },
     {
       heading: `How AI-Powered SEO Solves These Problems`,
-      body: `This is where Anthroly's AI-native approach changes everything. Instead of throwing more human hours at the problem, we've built AI systems that work 24/7 to grow your organic presence. Here's how we address each challenge:`,
+      body: `This is where Anthroly's service model changes the math. Instead of hiring a full in-house SEO bench, you get a team that ships every month—content, links, and fixes—while you stay focused on the business. Here's how we address each challenge:`,
       listItems: persona.solutions,
     },
     {
       heading: `The Anthroly Advantage for ${persona.name}s`,
       body: `Our platform was built specifically for busy professionals like you who need results without the overhead. Here's what you get:
 
-**AI Crawler Analysis**: Our AI audits your site and identifies exactly where you're invisible to AI search engines, with prioritized recommendations.
+**AI Crawler Analysis**: We audit your site and identify exactly where you're invisible to AI search engines, with prioritized recommendations.
 
-**24/7 AI Visibility Monitoring**: Continuous monitoring of how ChatGPT, Claude, and Perplexity reference your brand and competitors.
+**AI visibility monitoring**: Ongoing tracking of how ChatGPT, Claude, and Perplexity reference your brand and competitors.
 
 **30 SEO Blogs/Month**: AI-generated, human-refined content that builds topical authority and captures search traffic.
 
-**AI Backlink Agents**: Our AI agents acquire 20-30 high-quality backlinks monthly (DR 70-90 average) while you focus on your business.
+**Backlink program**: Our outreach team earns 15–25 high-quality backlinks monthly (DR 70-90 average) while you focus on your business.
 
 **Programmatic SEO**: Automated generation of conversion-focused landing pages that capture long-tail search traffic.
 
@@ -371,30 +371,30 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
       heading: `Real Results for ${persona.industry} Professionals`,
       body: `${persona.name}s using Anthroly typically see significant improvements within the first 90 days. Domain authority increases averaging 12 points, 340%+ organic traffic growth, and consistent high-quality backlink acquisition. But perhaps most importantly, they achieve this without adding headcount or spending hours on SEO execution.
 
-Our AI-first approach means you get enterprise-level SEO execution at a fraction of the cost and time investment of traditional agencies or in-house teams. The future of search is AI—your SEO strategy should be too.`,
+Our managed service means you get consistent SEO execution at a fraction of the cost and time investment of traditional agencies or in-house teams. The future of search includes AI answers—your SEO program should cover both.`,
     },
   ];
   
   const faq: FAQ[] = [
     {
       question: `Is Anthroly right for ${persona.name}s?`,
-      answer: `Yes, Anthroly is specifically designed for ${persona.name}s who need powerful SEO results without the time investment of traditional approaches. Our AI handles the execution while you maintain strategic oversight through automated reports and a dedicated account manager.`,
+      answer: `Yes, Anthroly is specifically designed for ${persona.name}s who need powerful SEO results without the time investment of traditional approaches. Our team handles the execution while you maintain strategic oversight through automated reports and a dedicated account manager.`,
     },
     {
       question: `How quickly will I see results?`,
-      answer: `Most ${persona.name}s see initial improvements within 30 days, with significant results by 90 days. This includes backlink acquisition (20-30 high-DR links monthly), content publication (30 blogs/month), and improved rankings for target keywords. SEO compounds over time, so results accelerate the longer you work with us.`,
+      answer: `Most ${persona.name}s see initial improvements within 30 days, with significant results by 90 days. This includes backlink acquisition (15–25 high-DR links monthly), content publication (15 blogs/month), and improved rankings for target keywords. SEO compounds over time, so results accelerate the longer you work with us.`,
     },
     {
       question: `Do I need technical knowledge to use Anthroly?`,
-      answer: `No technical expertise required. Our platform handles all technical SEO, content optimization, and implementation automatically. You receive clear, jargon-free reports showing your progress and ROI. For ${persona.name}s who want deeper involvement, we provide strategic consultation calls as needed.`,
+      answer: `No technical expertise required. Our team handles technical SEO, content, and implementation for you. You receive clear, jargon-free reports showing your progress and ROI. For ${persona.name}s who want deeper involvement, we provide strategic consultation calls as needed.`,
     },
     {
       question: `How does Anthroly compare to hiring an in-house SEO or agency?`,
-      answer: `Traditional SEO teams cost $8,000-$25,000+ monthly when you factor in salaries, tools, and overhead. Agencies often charge similar rates with inconsistent results. Anthroly delivers more output (30 blogs, 20-30 backlinks, continuous optimization) at a fraction of the cost because our AI automates what humans do manually.`,
+      answer: `Traditional SEO teams cost $8,000-$25,000+ monthly when you factor in salaries, tools, and overhead. Agencies often charge similar rates with inconsistent results. Anthroly delivers more output (15 blogs, 15–25 backlinks, continuous optimization) at a fraction of the cost because we run a tight, specialized team instead of bloated overhead.`,
     },
     {
       question: `What makes AI SEO different from traditional SEO?`,
-      answer: `AI SEO addresses a new reality: 40% of searches now happen through AI assistants like ChatGPT and Claude. Traditional SEO only optimizes for Google. Anthroly optimizes for both—ensuring you're visible whether customers search through Google, ask ChatGPT, or query Perplexity. Plus, our AI agents work 24/7, executing at a pace and scale impossible for human teams.`,
+      answer: `AI SEO addresses a new reality: 40% of searches now happen through AI assistants like ChatGPT and Claude. Traditional SEO only optimizes for Google. Anthroly optimizes for both—ensuring you're visible whether customers search through Google, ask ChatGPT, or query Perplexity. Our team ships month after month so execution doesn't stall when you're busy.`,
     },
   ];
   
@@ -472,7 +472,7 @@ Our AI-first approach means you get enterprise-level SEO execution at a fraction
     playbookType: 'personas',
     seo: {
       title: `AI SEO for ${persona.name}s | ${persona.industry} SEO Solutions | Anthroly`,
-      metaDescription: `AI-powered SEO built for ${persona.name}s. Get 30 blogs/month, 20-30 high-DR backlinks, and 24/7 AI optimization—without the overhead. See how it works.`,
+      metaDescription: `Managed SEO built for ${persona.name}s. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization—without building an in-house team. See how it works.`,
       primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')}`,
       secondaryKeywords: [
         `${persona.industry.toLowerCase()} seo`,
@@ -533,27 +533,27 @@ export function generateLocationPage(location: Location): PSEOPage {
     },
     {
       heading: `What Anthroly Delivers for ${location.city} Businesses`,
-      body: `Our AI-native SEO platform provides everything ${location.city} businesses need to dominate both traditional and AI-powered search:
+      body: `Anthroly's managed SEO program provides everything ${location.city} businesses need to grow in both traditional and AI-powered search:
 
 **Local + Global Visibility**: We optimize for "${location.city} [your service]" searches while building authority that drives traffic from anywhere.
 
 **AI Search Optimization**: 40% of searches now happen through ChatGPT, Claude, and Perplexity. We ensure ${location.city} customers find you there too.
 
-**High-Quality Content**: 30 SEO blogs monthly, written by AI and refined by humans, establishing your ${location.city} business as an industry authority.
+**High-Quality Content**: 15 SEO blogs monthly, written and edited by humans, establishing your ${location.city} business as an industry authority.
 
-**Premium Backlinks**: 20-30 high-DR (70-90) backlinks monthly. We acquire links from publications your ${location.city} competitors can't reach.
+**Premium Backlinks**: 15–25 high-DR (70-90) backlinks monthly. We earn links from publications your ${location.city} competitors can't reach.
 
-**Automated Everything**: From technical SEO to content publishing to reporting—our AI handles execution while you run your business.`,
+**Full execution**: From technical SEO to publishing to reporting—our team handles delivery while you run your business.`,
     },
     {
       heading: `Local SEO + AI SEO: The Winning Combination`,
-      body: `${location.city} businesses often choose between local SEO (Google Maps, local pack) and broader content SEO. With Anthroly, you get both. Our AI optimizes your Google Business Profile, builds local citations, and creates location-specific content—while simultaneously building the domain authority and AI visibility that drives traffic from anywhere.
+      body: `${location.city} businesses often choose between local SEO (Google Maps, local pack) and broader content SEO. With Anthroly, you get both. Our team optimizes your Google Business Profile, builds local citations, and creates location-specific content—while simultaneously building the domain authority and AI visibility that drives traffic from anywhere.
 
 This hybrid approach is especially powerful in ${location.city}, where ${location.localInsights[2] || 'businesses face increasing competition from both local and national players'}.`,
     },
     {
       heading: `Serving ${location.city} and Beyond`,
-      body: `While we specialize in helping ${location.city} businesses succeed, Anthroly works with companies worldwide. Our AI-powered approach isn't limited by geography—we can optimize for any market, any language, and any search engine. Whether you're a local ${location.city} business or a company looking to expand into ${location.state || location.country}, our platform scales with your ambitions.`,
+      body: `While we specialize in helping ${location.city} businesses succeed, Anthroly works with companies worldwide. Our playbooks aren't limited by geography—we can optimize for any market, any language, and any search engine. Whether you're a local ${location.city} business or a company looking to expand into ${location.state || location.country}, we scale with your ambitions.`,
     },
   ];
   
@@ -564,15 +564,15 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
     },
     {
       question: `How is Anthroly different from other ${location.city} SEO agencies?`,
-      answer: `Traditional ${location.city} SEO agencies rely on human teams—which means limited output and high costs. Anthroly uses AI to execute at scale: 30 blogs/month, 20-30 high-DR backlinks, and continuous optimization. You get more output at a fraction of the cost, plus optimization for AI search engines that most agencies don't even understand yet.`,
+      answer: `Traditional ${location.city} SEO agencies often bill like senior consultants but move slowly. Anthroly ships every month: 15 blogs, 15–25 high-DR backlinks, and continuous optimization—with a dedicated team and clear reporting. You get reliable output plus optimization for AI search engines many agencies still ignore.`,
     },
     {
       question: `Can you help with local SEO for my ${location.city} business?`,
-      answer: `Absolutely. Our platform handles Google Business Profile optimization, local citation building, review management, and location-specific content creation. We combine this with broader SEO to build both local visibility and domain authority.`,
+      answer: `Absolutely. Our team handles Google Business Profile optimization, local citation building, review management, and location-specific content creation. We combine this with broader SEO to build both local visibility and domain authority.`,
     },
     {
       question: `What industries do you serve in ${location.city}?`,
-      answer: `We work with businesses across industries in ${location.city}—from SaaS and tech to professional services, e-commerce, and beyond. Our AI adapts to your specific industry, competitors, and target keywords for customized optimization.`,
+      answer: `We work with businesses across industries in ${location.city}—from SaaS and tech to professional services, e-commerce, and beyond. Our strategists adapt to your industry, competitors, and target keywords for customized optimization.`,
     },
     {
       question: `How long until I see results in ${location.city} search?`,
@@ -634,7 +634,7 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
       name: `Anthroly - AI SEO Agency ${location.city}`,
-      description: `AI-powered SEO services for ${location.city} businesses. 30 blogs/month, 20-30 high-DR backlinks, 24/7 AI optimization.`,
+      description: `Managed SEO services for ${location.city} businesses. 15 blogs/month, 15–25 high-DR backlinks, ongoing optimization.`,
       url: `https://anthroly.com${url}`,
       areaServed: {
         '@type': 'City',
@@ -654,7 +654,7 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
     playbookType: 'locations',
     seo: {
       title: `AI SEO Agency in ${location.city} | Local + AI Search Optimization | Anthroly`,
-      metaDescription: `${location.city}'s AI-powered SEO agency. Get 30 blogs/month, 20-30 high-DR backlinks, and 24/7 AI optimization for local and AI search visibility.`,
+      metaDescription: `${location.city}'s managed SEO team. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization for local and AI search visibility.`,
       primaryKeyword: `ai seo agency ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `seo agency ${location.city.toLowerCase()}`,
@@ -666,7 +666,7 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
     },
     content: {
       h1: `AI SEO Agency in ${location.city}`,
-      introduction: `Looking for an SEO agency in ${location.city} that actually delivers? Anthroly brings AI-powered SEO to ${locationName} businesses—combining local search optimization with cutting-edge AI visibility. While traditional ${location.city} agencies promise results, our AI works 24/7 to execute at a scale and speed human teams can't match. 30 optimized blogs monthly. 20-30 high-DR backlinks. Continuous technical optimization. And optimization for AI search engines that your competitors aren't even thinking about yet.`,
+      introduction: `Looking for an SEO agency in ${location.city} that actually delivers? Anthroly brings managed SEO to ${locationName} businesses—combining local search optimization with visibility in AI answers. While traditional ${location.city} agencies promise results, our team ships every month: 15 optimized blogs, 15–25 high-DR backlinks, continuous technical fixes, and structured content for AI search engines your competitors may still be ignoring.`,
       sections,
       faq,
       callToAction: {
@@ -703,7 +703,7 @@ export function generateIntegrationPage(integration: Integration): PSEOPage {
   const sections: ContentSection[] = [
     {
       heading: `Why Integrate AI SEO with ${integration.name}?`,
-      body: integration.description + ` When combined with Anthroly's AI-powered SEO platform, ${integration.name} becomes even more powerful—enabling automated optimization workflows that drive organic growth while you focus on your core business.`,
+      body: integration.description + ` When combined with Anthroly's managed SEO program, ${integration.name} becomes even more powerful—enabling consistent optimization workflows that drive organic growth while you focus on your core business.`,
     },
     {
       heading: `Setting Up ${integration.name} for SEO Success`,
@@ -722,21 +722,21 @@ export function generateIntegrationPage(integration: Integration): PSEOPage {
     },
     {
       heading: `How Anthroly Enhances ${integration.name}`,
-      body: `Anthroly's AI-powered platform extends ${integration.name}'s capabilities with automated optimization, content generation, and intelligent workflows. Our AI agents can:
+      body: `Anthroly's managed SEO service extends ${integration.name}'s capabilities with hands-on optimization, content workflows, and reporting. Our team can:
 
-- **Automate content publishing** directly to ${integration.name} with SEO optimization built-in
-- **Monitor performance** and trigger optimization workflows based on ranking changes
-- **Generate reports** combining ${integration.name} data with broader SEO metrics
-- **Scale execution** beyond what manual processes allow
+- **Publish optimized content** directly to ${integration.name} with on-page SEO built in
+- **Monitor performance** and adjust priorities based on ranking and traffic changes
+- **Deliver reports** combining ${integration.name} data with broader SEO metrics
+- **Keep execution consistent** month over month without adding headcount
 
-This integration creates a flywheel effect: ${integration.name} handles your core workflow while Anthroly's AI continuously optimizes for search visibility.`,
+This integration creates a flywheel effect: ${integration.name} handles your core workflow while Anthroly keeps search execution moving forward.`,
     },
   ];
   
   const faq: FAQ[] = [
     {
       question: `Does Anthroly integrate with ${integration.name}?`,
-      answer: `Yes, Anthroly works seamlessly with ${integration.name}. Our platform can push optimized content, sync data, and automate SEO workflows through ${integration.name}'s API and native integrations.`,
+      answer: `Yes, Anthroly works seamlessly with ${integration.name}. Our team can push optimized content, sync data, and run SEO workflows through ${integration.name}'s API and native integrations.`,
     },
     {
       question: `Do I need technical skills to set up the ${integration.name} integration?`,
@@ -744,11 +744,11 @@ This integration creates a flywheel effect: ${integration.name} handles your cor
     },
     {
       question: `What SEO improvements can I expect with ${integration.name} integration?`,
-      answer: `Typical improvements include streamlined content workflows, consistent on-page optimization, automated technical SEO maintenance, and better tracking of SEO performance. Results compound over time as the integration automates more of your SEO execution.`,
+      answer: `Typical improvements include streamlined content workflows, consistent on-page optimization, automated technical SEO maintenance, and better tracking of SEO performance. Results compound over time as the integration runs more of your SEO execution.`,
     },
     {
-      question: `Can I use ${integration.name} with Anthroly's AI content generation?`,
-      answer: `Absolutely. Our AI can generate SEO-optimized content and publish it directly to ${integration.name}, complete with meta tags, schema markup, and internal linking—all without manual intervention.`,
+      question: `Can I use ${integration.name} with Anthroly's content production?`,
+      answer: `Absolutely. Our writers and editors produce SEO-ready content and we publish it to ${integration.name} with meta tags, schema markup, and internal linking—so you're not stuck doing it yourself.`,
     },
     {
       question: `How does the integration help with AI search optimization?`,
@@ -810,7 +810,7 @@ This integration creates a flywheel effect: ${integration.name} handles your cor
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       name: `How to Integrate ${integration.name} with AI SEO`,
-      description: `Step-by-step guide to setting up ${integration.name} for SEO success with Anthroly's AI platform.`,
+      description: `Step-by-step guide to setting up ${integration.name} for SEO success with Anthroly.`,
       step: integration.setupSteps.map((step, index) => ({
         '@type': 'HowToStep',
         position: index + 1,
@@ -842,7 +842,7 @@ This integration creates a flywheel effect: ${integration.name} handles your cor
       faq,
       callToAction: {
         headline: `Supercharge Your ${integration.name} with AI SEO`,
-        description: `See how Anthroly's AI platform can automate your ${integration.name} SEO workflows. Get a free analysis showing your current gaps and opportunities.`,
+        description: `See how Anthroly can automate your ${integration.name} SEO workflows. Get a free analysis showing your current gaps and opportunities.`,
         buttonText: 'Get Your Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -930,7 +930,7 @@ ${toolA.pros.slice(0, 3).map(p => `- You prioritize ${p.toLowerCase()}`).join('\
 **Choose ${toolB.name} if:**
 ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
 
-**Or consider Anthroly:** If your main goal is growing organic traffic without becoming an SEO tool expert, Anthroly's AI-powered platform handles execution automatically. We use the best tools internally so you don't have to choose—or manage—them yourself.`,
+**Or consider Anthroly:** If your main goal is growing organic traffic without becoming an SEO tool expert, Anthroly's managed SEO service handles execution automatically. We use the best tools internally so you don't have to choose—or manage—them yourself.`,
     },
   ];
   
@@ -949,11 +949,11 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
     },
     {
       question: `Do I need ${toolA.name} or ${toolB.name} if I use Anthroly?`,
-      answer: `Not necessarily. Anthroly's AI platform handles SEO execution automatically, using enterprise-grade tools and data sources internally. You get the benefits without managing subscriptions, learning interfaces, or interpreting data yourself. Our automated reports give you the insights you need without the tool overhead.`,
+      answer: `Not necessarily. Anthroly handles SEO execution automatically, using enterprise-grade tools and data sources internally. You get the benefits without managing subscriptions, learning interfaces, or interpreting data yourself. Our automated reports give you the insights you need without the tool overhead.`,
     },
     {
       question: `What's the best alternative to ${toolA.name} and ${toolB.name}?`,
-      answer: `Alternatives depend on your primary use case. For comprehensive SEO, consider Moz Pro or SE Ranking. For a completely different approach, Anthroly uses AI to execute SEO automatically—so instead of analyzing what to do, you get 30 blogs/month, 20-30 backlinks, and continuous optimization done for you.`,
+      answer: `Alternatives depend on your primary use case. For comprehensive SEO, consider Moz Pro or SE Ranking. For a completely different approach, Anthroly uses AI to execute SEO automatically—so instead of analyzing what to do, you get 15 blogs/month, 15–25 backlinks, and continuous optimization done for you.`,
     },
   ];
   
@@ -1047,7 +1047,7 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
       faq,
       callToAction: {
         headline: 'Skip the Tool Overwhelm',
-        description: `Instead of managing SEO tools yourself, let Anthroly's AI handle execution. We use the best tools internally so you get results without the complexity.`,
+        description: `Instead of managing SEO tools yourself, let Anthroly's team handle execution. We use the best tools internally so you get results without the complexity.`,
         buttonText: 'See How It Works',
         buttonUrl: '/#ai-crawler',
       },

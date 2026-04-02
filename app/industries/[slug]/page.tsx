@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   return {
     title: `${industry.name} SEO | AI-Powered ${industry.name} Marketing | Anthroly`,
-    description: `AI SEO for ${industry.name.toLowerCase()} companies. Get 30 blogs/month, 20-30 high-DR backlinks, and ${industry.name.toLowerCase()}-specific optimization.`,
+    description: `AI SEO for ${industry.name.toLowerCase()} companies. Get 15 blogs/month, 15–25 high-DR backlinks, and ${industry.name.toLowerCase()}-specific optimization.`,
     keywords: industry.keywords.join(', '),
     openGraph: {
       title: `${industry.name} SEO | Anthroly`,
@@ -89,7 +89,7 @@ export default function IndustryPage({ params }: PageProps) {
                   <div>
                     <h3 className="font-semibold text-zinc-100 mb-2">{painPoint}</h3>
                     <p className="text-zinc-400 text-sm">
-                      A common challenge for {industry.name.toLowerCase()} companies that our AI addresses through automated optimization.
+                      A common challenge for {industry.name.toLowerCase()} companies that our team addresses with hands-on SEO and content.
                     </p>
                   </div>
                 </div>

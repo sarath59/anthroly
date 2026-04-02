@@ -19,7 +19,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              Autonomous AI agents that bring backlinks for businesses on autopilot.
+              Managed SEO and content: backlinks, blogs, and visibility on Google and AI search—delivered by real people on your behalf.
             </p>
             <div className="flex space-x-4">
               <a

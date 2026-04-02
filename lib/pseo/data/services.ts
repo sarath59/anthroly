@@ -112,7 +112,7 @@ export const seoServices: SEOService[] = [
     fullDescription: 'AI SEO leverages artificial intelligence to automate, scale, and optimize SEO activities. This includes AI-driven content creation, automated technical optimization, predictive analytics, and optimization for AI-powered search engines like ChatGPT and Perplexity.',
     benefits: ['Scale content production', 'Faster optimization', 'Data-driven decisions', 'AI search visibility', 'Cost efficiency'],
     deliverables: ['AI content', 'Automated optimization', 'Predictive insights', 'GEO optimization', 'AI bot visibility'],
-    idealFor: ['Scale-focused companies', 'Tech-forward businesses', 'Content-heavy sites', 'AI-native brands'],
+    idealFor: ['Scale-focused companies', 'Tech-forward businesses', 'Content-heavy sites', 'Innovation-focused brands'],
     relatedServices: ['content-seo', 'technical-seo', 'geo-optimization'],
   },
   {

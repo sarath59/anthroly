@@ -29,23 +29,23 @@ export const AutomatedBlogs = () => {
   const blogFeatures = [
     {
       number: "01",
-      title: "AI Research & Outline",
-      description: "Our AI analyzes top-ranking content, identifies gaps, and creates comprehensive outlines targeting your keywords."
+      title: "Brief & keyword plan",
+      description: "We research SERPs and intent, then agree on topics and outlines that match your positioning."
     },
     {
       number: "02",
-      title: "AI Writing Engine",
-      description: "Advanced language models craft engaging, SEO-optimized content that reads naturally and converts visitors."
+      title: "Human-written drafts",
+      description: "Writers produce conversation-style, SEO-solid articles—structured for Google and AI-overviews."
     },
     {
       number: "03",
-      title: "Human Quality Review",
-      description: "Every piece is reviewed by human editors for accuracy, brand voice alignment, and factual correctness."
+      title: "Editorial QA",
+      description: "Editors check facts, tone, and on-page SEO before anything ships."
     },
     {
       number: "04",
-      title: "Auto-Publish & Track",
-      description: "Content is scheduled, published, and tracked automatically. You just watch the traffic grow."
+      title: "Publish & reporting",
+      description: "We publish on your schedule and report what went live, indexed, and how it performs."
     }
   ];
 
@@ -63,10 +63,10 @@ export const AutomatedBlogs = () => {
             <span>📝 Companies publishing 16+ blogs/month get 3.5x more traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            AI Creates. Humans Perfect. You Rank.
+            Blogs Humans Write. Quality You Can Stand Behind.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">45 pages of content every month</span> — written by AI, reviewed and perfected by real humans before it goes live. Rank on Google AND get cited by ChatGPT, Perplexity, and Claude.
+            <span className="text-white font-semibold">30+ pages of content every month</span> — drafted and edited by our team so it reads like a person, ranks like SEO, and holds up in AI answers.
           </p>
         </div>
 
@@ -100,11 +100,11 @@ export const AutomatedBlogs = () => {
                 <span className="text-7xl md:text-8xl font-bold">45</span>
                 <span className="text-2xl text-gray-400">pages/month</span>
               </div>
-              <p className="text-gray-400 text-lg mb-6">30 SEO blogs + 15 AI Q&A pages = 540 pieces of content per year, building your authority on Google AND AI search results.</p>
+              <p className="text-gray-400 text-lg mb-6">15 SEO blogs + 15 AI Q&A pages = 360 pieces of content per year, building your authority on Google AND AI search results.</p>
               
               <div className="grid grid-cols-3 gap-4">
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">
-                  <div className="text-2xl font-bold text-white">30</div>
+                  <div className="text-2xl font-bold text-white">15</div>
                   <div className="text-sm text-gray-500">SEO Blogs</div>
                 </div>
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">

@@ -65,7 +65,7 @@ export const WhoIsThisFor = () => {
     {
       icon: Users,
       title: "Enterprise Marketing Teams",
-      description: "Move faster than your bureaucracy allows. Get AI-powered execution while your team focuses on strategy.",
+      description: "Move faster than your bureaucracy allows. Get full-service SEO execution while your team focuses on strategy.",
       benefits: ["Augment your team", "Rapid execution", "Measurable ROI"],
       color: "cyan"
     }

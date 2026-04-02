@@ -33,8 +33,8 @@ export const FoundingMembers = () => {
     },
     {
       icon: TrendingUp,
-      title: "AI + Human Combo",
-      description: "AI handles the scale, humans ensure quality — best of both worlds"
+      title: "Done-for-you delivery",
+      description: "Writers, link builders, and strategists ship every month—you approve direction, not spreadsheets."
     },
     {
       icon: Shield,
@@ -72,11 +72,11 @@ export const FoundingMembers = () => {
               {/* Header */}
               <div className="text-center mb-10 pt-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  AI Power. Human Touch.
+                  People Run Your Program.
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  We&apos;re not just software — we&apos;re a team. Real humans onboard you, review your content, 
-                  monitor your progress, and talk to you every week. AI does the heavy lifting in between.
+                  We&apos;re not a DIY dashboard—we&apos;re a service. Strategists and writers onboard you, ship your deliverables,
+                  and meet with you every week while we execute the plan.
                 </p>
               </div>
 
@@ -104,8 +104,8 @@ export const FoundingMembers = () => {
               {/* Trust Note */}
               <div className="text-center p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
                 <p className="text-gray-300 text-sm">
-                  <span className="text-amber-400 font-semibold">Why we&apos;re different:</span> Most &quot;AI SEO tools&quot; leave you alone with software. 
-                  We pair AI automation with real human strategy. <span className="text-white font-medium">You&apos;re never on your own.</span>
+                  <span className="text-amber-400 font-semibold">Why we&apos;re different:</span> Most tools leave you to figure it out alone. 
+                  We&apos;re a human team that does the work with you in the loop. <span className="text-white font-medium">You&apos;re never on your own.</span>
                 </p>
               </div>
             </div>

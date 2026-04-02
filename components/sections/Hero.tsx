@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { BOOK_CALL_URL } from '@/lib/site';
 import { Button } from '../ui/button';
-import { ArrowRight, Users, Bot, MessageSquare } from 'lucide-react';
+import { ArrowRight, Users, Zap, MessageSquare } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -35,7 +35,7 @@ export const Hero = () => {
           {/* Subheadline - Problem + Solution */}
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
             ChatGPT, Perplexity, and Google AI are deciding who gets recommended. 
-            Our team combines <span className="text-white font-semibold">AI automation</span> with <span className="text-white font-semibold">human expertise</span> to get you visible everywhere that matters.
+            Our team handles <span className="text-white font-semibold">execution end to end</span>—strategy, content, and links—so you show up everywhere that matters, including Google and AI answers.
           </p>
 
           {/* Human Touch Highlight - Builds Trust */}
@@ -49,8 +49,8 @@ export const Hero = () => {
               <span className="text-gray-300">Weekly strategy calls</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              <Bot size={16} className="text-purple-400" />
-              <span className="text-gray-300">AI works 24/7 in between</span>
+              <Zap size={16} className="text-purple-400" />
+              <span className="text-gray-300">We ship the work between calls</span>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export const Hero = () => {
           {/* Quick Stats - Social Proof */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">45+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">30+</div>
               <div className="text-gray-500 text-sm">Pages/Month</div>
             </div>
             <div className="text-center">

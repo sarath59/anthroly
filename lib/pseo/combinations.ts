@@ -49,22 +49,22 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
     },
     {
       heading: `How Anthroly Serves ${persona.name}s in ${location.city}`,
-      body: `Our AI-native platform was built for ${persona.name}s who need results without the complexity. For ${location.city} specifically, we provide:
+      body: `Our managed SEO service was built for ${persona.name}s who need results without the complexity. For ${location.city} specifically, we provide:
 
 **Local + National Visibility**: We optimize for "${location.city} [your service]" searches while building the domain authority that drives traffic from anywhere.
 
 **AI Search Optimization**: With 40% of searches now happening through ChatGPT, Claude, and Perplexity, we ensure ${location.city} customers find you across all search platforms.
 
-**Automated Execution**: 30 SEO blogs monthly, 20-30 high-DR backlinks, continuous technical optimization—all running while you focus on your ${location.city} operations.
+**Automated Execution**: 15 SEO blogs monthly, 15–25 high-DR backlinks, continuous technical optimization—all running while you focus on your ${location.city} operations.
 
-**Market-Specific Intelligence**: Our AI understands the ${location.city} competitive landscape and tailors strategies accordingly.`,
+**Market-Specific Intelligence**: Our team understands the ${location.city} competitive landscape and tailors strategies accordingly.`,
     },
     {
       heading: `Success Metrics for ${location.city} ${persona.name}s`,
       body: `${persona.name}s using Anthroly in markets like ${location.city} typically see:
 
-• **20-30 high-quality backlinks monthly** with average DR 70-90
-• **30 SEO-optimized blog posts** published every month
+• **15–25 high-quality backlinks monthly** with average DR 70-90
+• **15 SEO-optimized blog posts** published every month
 • **Domain Authority increases** averaging 12 points in the first year
 • **340%+ organic traffic growth** within 12 months
 • **Reduction in CAC** as organic channels mature
@@ -76,7 +76,7 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
   const faq: FAQ[] = [
     {
       question: `Is Anthroly available for ${persona.name}s in ${location.city}?`,
-      answer: `Yes, we serve ${persona.name}s in ${location.city} and worldwide. Our AI-powered platform works across all markets, with specific optimization for local search when relevant to your business.`,
+      answer: `Yes, we serve ${persona.name}s in ${location.city} and worldwide. Our managed SEO service works across all markets, with specific optimization for local search when relevant to your business.`,
     },
     {
       question: `How does Anthroly handle ${location.city}-specific SEO?`,
@@ -84,7 +84,7 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
     },
     {
       question: `What makes ${location.city} different for ${persona.name}s?`,
-      answer: `${location.city}'s market has unique characteristics: ${location.localInsights[0]} This creates both challenges and opportunities that our AI-powered approach is specifically designed to address.`,
+      answer: `${location.city}'s market has unique characteristics: ${location.localInsights[0]} This creates both challenges and opportunities that our managed SEO approach is specifically designed to address.`,
     },
     {
       question: `How quickly will I see results in ${location.city}?`,
@@ -130,7 +130,7 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
     playbookType: 'personas',
     seo: {
       title: `AI SEO for ${persona.name}s in ${location.city} | ${persona.industry} SEO | Anthroly`,
-      metaDescription: `AI-powered SEO for ${persona.name}s in ${location.city}. Get 30 blogs/month, 20-30 high-DR backlinks, and 24/7 AI optimization tailored to the ${location.city} market.`,
+      metaDescription: `Managed SEO for ${persona.name}s in ${location.city}. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization tailored to the ${location.city} market.`,
       primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')} ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `${location.city.toLowerCase()} ${persona.industry.toLowerCase()} seo`,
@@ -141,7 +141,7 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
     },
     content: {
       h1: `AI SEO for ${persona.name}s in ${location.city}`,
-      introduction: `You're a ${persona.title} in ${location.city}—one of the most dynamic markets in ${location.country}. ${location.localInsights[0]} In this environment, organic visibility isn't optional—it's essential. But building and managing SEO in-house? That's a distraction from what you do best. Anthroly's AI-powered platform delivers enterprise-grade SEO results specifically optimized for ${persona.name}s in the ${location.city} market.`,
+      introduction: `You're a ${persona.title} in ${location.city}—one of the most dynamic markets in ${location.country}. ${location.localInsights[0]} In this environment, organic visibility isn't optional—it's essential. But building and managing SEO in-house? That's a distraction from what you do best. Anthroly's managed SEO service delivers enterprise-grade SEO results specifically optimized for ${persona.name}s in the ${location.city} market.`,
       sections,
       faq,
       callToAction: {
@@ -203,13 +203,13 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     },
     {
       heading: `How Anthroly Serves ${industry.name} in ${location.city}`,
-      body: `Our AI-native platform is built to handle the specific needs of ${industry.name.toLowerCase()} companies:
+      body: `Our managed SEO service is built to handle the specific needs of ${industry.name.toLowerCase()} companies:
 
 **Industry-Specific Content**: AI-generated content that understands ${industry.name.toLowerCase()} terminology, pain points, and buyer journeys.
 
 **${location.city} Market Optimization**: Local SEO combined with authority building tailored to the ${location.city} competitive landscape.
 
-**Scalable Execution**: 30 blog posts monthly, 20-30 high-DR backlinks, and continuous optimization—all automated.
+**Scalable Execution**: 15 blog posts monthly, 15–25 high-DR backlinks, and continuous optimization—all automated.
 
 **AI Search Visibility**: Optimization for ChatGPT, Claude, and Perplexity where ${industry.name.toLowerCase()} buyers increasingly research solutions.`,
     },
@@ -228,11 +228,11 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
   const faq: FAQ[] = [
     {
       question: `Does Anthroly specialize in ${industry.name} SEO?`,
-      answer: `Yes, our AI platform is trained to understand ${industry.name.toLowerCase()} terminology, buyer journeys, and competitive dynamics. We create industry-specific content strategies while handling execution automatically.`,
+      answer: `Yes, our team is trained to understand ${industry.name.toLowerCase()} terminology, buyer journeys, and competitive dynamics. We create industry-specific content strategies while we handle execution for you.`,
     },
     {
       question: `How does ${industry.name} SEO differ in ${location.city}?`,
-      answer: `${location.city}'s market has unique characteristics—${location.localInsights[0]} For ${industry.name.toLowerCase()} companies, this creates specific opportunities around local keywords, regional competitors, and market positioning that our AI optimizes for.`,
+      answer: `${location.city}'s market has unique characteristics—${location.localInsights[0]} For ${industry.name.toLowerCase()} companies, this creates specific opportunities around local keywords, regional competitors, and market positioning that our team optimizes for.`,
     },
     {
       question: `What results can ${industry.name} companies expect?`,
@@ -240,7 +240,7 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     },
     {
       question: `How much does ${industry.name} SEO cost?`,
-      answer: `Anthroly starts at $535/month, including 30 blog posts, 20-30 high-DR backlinks, and continuous optimization. This is a fraction of what traditional agencies charge for ${industry.name.toLowerCase()} SEO, with more consistent execution through AI automation.`,
+      answer: `Anthroly starts at $535/month, including 15 blog posts, 15–25 high-DR backlinks, and continuous optimization. This is a fraction of what traditional agencies charge for ${industry.name.toLowerCase()} SEO, with more consistent execution through managed delivery.`,
     },
   ];
   
@@ -275,14 +275,14 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     playbookType: 'locations',
     seo: {
       title: `${industry.name} SEO in ${location.city} | AI-Powered ${industry.name} Marketing | Anthroly`,
-      metaDescription: `AI SEO for ${industry.name.toLowerCase()} companies in ${location.city}. Get 30 blogs/month, 20-30 high-DR backlinks, and industry-specific optimization.`,
+      metaDescription: `AI SEO for ${industry.name.toLowerCase()} companies in ${location.city}. Get 15 blogs/month, 15–25 high-DR backlinks, and industry-specific optimization.`,
       primaryKeyword: `${industry.name.toLowerCase()} seo ${location.city.toLowerCase()}`,
       secondaryKeywords: industry.keywords.map(k => `${k} ${location.city.toLowerCase()}`).slice(0, 3),
       searchIntent: 'commercial',
     },
     content: {
       h1: `${industry.name} SEO in ${location.city}`,
-      introduction: `${industry.name} companies in ${location.city} face a unique competitive landscape. ${location.localInsights[0]} In this environment, organic search visibility can be the difference between growth and stagnation. Anthroly's AI-powered platform delivers enterprise-grade SEO specifically optimized for the ${industry.name.toLowerCase()} industry in the ${location.city} market.`,
+      introduction: `${industry.name} companies in ${location.city} face a unique competitive landscape. ${location.localInsights[0]} In this environment, organic search visibility can be the difference between growth and stagnation. Anthroly's managed SEO service delivers enterprise-grade SEO specifically optimized for the ${industry.name.toLowerCase()} industry in the ${location.city} market.`,
       sections,
       faq,
       callToAction: {
@@ -351,7 +351,7 @@ export function generateGlossaryIndustryPage(termSlug: string, industrySlug: str
     },
     {
       heading: `How Anthroly Handles ${term.term} for ${industry.name}`,
-      body: `Our AI-powered platform automatically implements ${term.term.toLowerCase()} best practices for ${industry.name.toLowerCase()} companies. This includes industry-specific content optimization, automated execution of ${term.term.toLowerCase()} strategies, and continuous improvement based on ${industry.name.toLowerCase()} market data.`,
+      body: `Our managed SEO service implements ${term.term.toLowerCase()} best practices for ${industry.name.toLowerCase()} companies. This includes industry-specific content optimization, automated execution of ${term.term.toLowerCase()} strategies, and continuous improvement based on ${industry.name.toLowerCase()} market data.`,
     },
   ];
   
@@ -366,7 +366,7 @@ export function generateGlossaryIndustryPage(termSlug: string, industrySlug: str
     },
     {
       question: `How can I implement ${term.term} for my ${industry.name} business?`,
-      answer: `Start by understanding how ${term.term.toLowerCase()} applies to your specific ${industry.name.toLowerCase()} niche. Then implement through content optimization, technical improvements, and ongoing monitoring. Or use Anthroly's AI platform to automate ${term.term.toLowerCase()} implementation.`,
+      answer: `Start by understanding how ${term.term.toLowerCase()} applies to your specific ${industry.name.toLowerCase()} niche. Then implement through content optimization, technical improvements, and ongoing monitoring. Or use Anthroly to automate ${term.term.toLowerCase()} implementation.`,
     },
   ];
   
@@ -416,7 +416,7 @@ export function generateGlossaryIndustryPage(termSlug: string, industrySlug: str
       faq,
       callToAction: {
         headline: `Get ${term.term} Help for Your ${industry.name} Business`,
-        description: `Let Anthroly's AI automatically optimize your ${industry.name.toLowerCase()} site for ${term.term.toLowerCase()} and more.`,
+        description: `Anthroly can optimize your ${industry.name.toLowerCase()} site for ${term.term.toLowerCase()} and more.`,
         buttonText: 'Get Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -470,15 +470,15 @@ export function generateUseCaseIndustryPage(useCaseSlug: string, industrySlug: s
     {
       heading: `Challenges and Solutions`,
       body: `${industry.name} companies face specific challenges with ${useCase.name.toLowerCase()}:`,
-      listItems: useCase.challenges.map(c => `**${c}**: Addressed through AI automation and industry expertise`),
+      listItems: useCase.challenges.map(c => `**${c}**: Addressed through managed delivery and industry expertise`),
     },
     {
       heading: `How Anthroly Drives ${useCase.name} for ${industry.name}`,
-      body: `Our AI-powered platform automates ${useCase.name.toLowerCase()} for ${industry.name.toLowerCase()} companies through:
+      body: `Our managed SEO service runs ${useCase.name.toLowerCase()} for ${industry.name.toLowerCase()} companies through:
 
 **Industry-Specific Content**: AI-generated content optimized for ${industry.name.toLowerCase()} ${useCase.name.toLowerCase()} keywords.
 
-**Automated Execution**: 30 blog posts and 20-30 backlinks monthly targeting ${useCase.name.toLowerCase()} goals.
+**Automated Execution**: 15 blog posts and 15–25 backlinks monthly targeting ${useCase.name.toLowerCase()} goals.
 
 **Continuous Optimization**: AI constantly improves based on ${industry.name.toLowerCase()} market data.
 
@@ -541,7 +541,7 @@ export function generateUseCaseIndustryPage(useCaseSlug: string, industrySlug: s
       faq,
       callToAction: {
         headline: `Start ${useCase.name} for Your ${industry.name} Business`,
-        description: `Let Anthroly's AI drive ${useCase.name.toLowerCase()} through automated SEO execution.`,
+        description: `Anthroly helps you drive ${useCase.name.toLowerCase()} through automated SEO execution.`,
         buttonText: 'Get Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -598,7 +598,7 @@ export function generateToolComparisonIndustryPage(toolASlug: string, toolBSlug:
     },
     {
       heading: `Our Recommendation for ${industry.name}`,
-      body: `For ${industry.name.toLowerCase()} companies specifically:\n\n**Choose ${toolA.name} if** you prioritize ${toolA.pros[0].toLowerCase()}.\n\n**Choose ${toolB.name} if** you need ${toolB.pros[0].toLowerCase()}.\n\n**Or consider Anthroly**: Instead of managing SEO tools yourself, let our AI handle execution—30 blogs/month, 20-30 backlinks, continuous optimization—while you focus on your ${industry.name.toLowerCase()} business.`,
+      body: `For ${industry.name.toLowerCase()} companies specifically:\n\n**Choose ${toolA.name} if** you prioritize ${toolA.pros[0].toLowerCase()}.\n\n**Choose ${toolB.name} if** you need ${toolB.pros[0].toLowerCase()}.\n\n**Or consider Anthroly**: Instead of managing SEO tools yourself, let our team run execution—15 blogs/month, 15–25 backlinks, continuous optimization—while you focus on your ${industry.name.toLowerCase()} business.`,
     },
   ];
   
@@ -613,7 +613,7 @@ export function generateToolComparisonIndustryPage(toolASlug: string, toolBSlug:
     },
     {
       question: `What's the best SEO tool for ${industry.name}?`,
-      answer: `The best tool depends on your needs and resources. ${toolA.name} and ${toolB.name} are both excellent for ${industry.name.toLowerCase()}, but the real question is whether you have time to use them effectively. AI-powered platforms can be more practical for busy ${industry.name.toLowerCase()} teams.`,
+      answer: `The best tool depends on your needs and resources. ${toolA.name} and ${toolB.name} are both excellent for ${industry.name.toLowerCase()}, but the real question is whether you have time to use them effectively. Managed services can be more practical for busy ${industry.name.toLowerCase()} teams.`,
     },
   ];
   
@@ -655,7 +655,7 @@ export function generateToolComparisonIndustryPage(toolASlug: string, toolBSlug:
       faq,
       callToAction: {
         headline: 'Skip the Tool Complexity',
-        description: `Instead of managing SEO tools, let Anthroly's AI execute ${industry.name.toLowerCase()} SEO automatically.`,
+        description: `Instead of managing SEO tools, let Anthroly's team execute ${industry.name.toLowerCase()} SEO for you.`,
         buttonText: 'See How It Works',
         buttonUrl: '/#ai-crawler',
       },
@@ -713,7 +713,7 @@ export function generateIntegrationIndustryPage(integrationSlug: string, industr
     },
     {
       heading: `Anthroly + ${integration.name} for ${industry.name}`,
-      body: `Anthroly integrates with ${integration.name} to automate SEO for ${industry.name.toLowerCase()} companies. Our AI handles content publishing, optimization, and execution—so you get results without becoming an SEO expert.`,
+      body: `Anthroly integrates with ${integration.name} to run SEO for ${industry.name.toLowerCase()} companies. Our team handles content publishing, optimization, and execution—so you get results without becoming an SEO expert.`,
     },
   ];
   
@@ -757,7 +757,7 @@ export function generateIntegrationIndustryPage(integrationSlug: string, industr
       faq,
       callToAction: {
         headline: `Automate ${integration.name} SEO for ${industry.name}`,
-        description: `Let Anthroly handle ${integration.name} SEO automatically for your ${industry.name.toLowerCase()} business.`,
+        description: `Let Anthroly handle ${integration.name} SEO for your ${industry.name.toLowerCase()} business.`,
         buttonText: 'Get Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -823,7 +823,7 @@ export function generatePersonaIndustryLocationPage(
     },
     {
       heading: `How Anthroly Solves This Triple Challenge`,
-      body: `Our AI-powered platform is uniquely positioned to address the intersection of persona, industry, and location:
+      body: `Our managed SEO service is uniquely positioned to address the intersection of persona, industry, and location:
 
 **${industry.name}-Specific Content**: AI-generated content that speaks to ${industry.name.toLowerCase()} buyers and their journey.
 
@@ -831,7 +831,7 @@ export function generatePersonaIndustryLocationPage(
 
 **${location.city} Optimization**: Local SEO for "${location.city} ${industry.name.toLowerCase()}" searches while building national authority.
 
-**24/7 AI Execution**: 30 blog posts, 20-30 high-DR backlinks, and continuous optimization monthly.`,
+**Monthly execution**: 15 blog posts, 15–25 high-DR backlinks, and continuous optimization.`,
     },
     {
       heading: `Results You Can Expect`,
@@ -839,7 +839,7 @@ export function generatePersonaIndustryLocationPage(
 
 • **Targeted traffic growth** from ${industry.name.toLowerCase()}-specific keywords
 • **Local visibility** for ${location.city} searches
-• **Reduced time investment** through AI automation
+• **Reduced time investment** through managed delivery
 • **Domain authority growth** averaging 12 points annually
 • **AI search presence** in ChatGPT, Perplexity, and Google SGE`,
     },
@@ -848,11 +848,11 @@ export function generatePersonaIndustryLocationPage(
   const faq: FAQ[] = [
     {
       question: `Does Anthroly specialize in ${industry.name} SEO for ${persona.name}s?`,
-      answer: `Yes, our AI platform creates ${industry.name.toLowerCase()}-specific strategies tailored for ${persona.name}s. We understand both the industry dynamics and the unique priorities of ${persona.title}s.`,
+      answer: `Yes, our team creates ${industry.name.toLowerCase()}-specific strategies tailored for ${persona.name}s. We understand both the industry dynamics and the unique priorities of ${persona.title}s.`,
     },
     {
       question: `How does the ${location.city} market affect my ${industry.name} SEO?`,
-      answer: `${location.city}'s market has specific characteristics—${location.localInsights[0]} Our AI optimizes for both local "${location.city} ${industry.name.toLowerCase()}" searches and broader national/international visibility.`,
+      answer: `${location.city}'s market has specific characteristics—${location.localInsights[0]} Our team optimizes for both local "${location.city} ${industry.name.toLowerCase()}" searches and broader national/international visibility.`,
     },
     {
       question: `What results can ${persona.name}s in ${industry.name} expect?`,
@@ -894,7 +894,7 @@ export function generatePersonaIndustryLocationPage(
     playbookType: 'personas',
     seo: {
       title: `${industry.name} SEO for ${persona.name}s in ${location.city} | AI-Powered | Anthroly`,
-      metaDescription: `AI SEO for ${persona.name.toLowerCase()}s in ${location.city} ${industry.name.toLowerCase()}. Get 30 blogs/month, 20-30 backlinks, and industry-specific optimization.`,
+      metaDescription: `AI SEO for ${persona.name.toLowerCase()}s in ${location.city} ${industry.name.toLowerCase()}. Get 15 blogs/month, 15–25 backlinks, and industry-specific optimization.`,
       primaryKeyword: `${industry.name.toLowerCase()} seo ${persona.slug.replace(/-/g, ' ')} ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `${persona.name.toLowerCase()} seo ${location.city.toLowerCase()}`,
@@ -904,7 +904,7 @@ export function generatePersonaIndustryLocationPage(
     },
     content: {
       h1: `${industry.name} SEO for ${persona.name}s in ${location.city}`,
-      introduction: `You're a ${persona.title} in ${location.city}'s ${industry.name.toLowerCase()} sector. ${location.localInsights[0]} This intersection of role, industry, and location creates specific SEO challenges—and opportunities. Anthroly's AI-powered platform delivers precisely targeted organic growth for ${persona.name}s like you.`,
+      introduction: `You're a ${persona.title} in ${location.city}'s ${industry.name.toLowerCase()} sector. ${location.localInsights[0]} This intersection of role, industry, and location creates specific SEO challenges—and opportunities. Anthroly's managed SEO service delivers precisely targeted organic growth for ${persona.name}s like you.`,
       sections,
       faq,
       callToAction: {
@@ -1003,7 +1003,7 @@ export function generateGlossaryIndustryLocationPage(
     },
     {
       heading: `How Anthroly Automates ${term.term} for ${location.city} ${industry.name} Companies`,
-      body: `Our AI platform handles ${term.term.toLowerCase()} automatically for ${industry.name.toLowerCase()} businesses in ${locationName}. We combine local market intelligence with industry-specific optimization to deliver results without the overhead of manual SEO work.`,
+      body: `Our team handles ${term.term.toLowerCase()} for ${industry.name.toLowerCase()} businesses in ${locationName}. We combine local market intelligence with industry-specific optimization to deliver results without the overhead of manual SEO work.`,
     },
   ];
   
@@ -1018,7 +1018,7 @@ export function generateGlossaryIndustryLocationPage(
     },
     {
       question: `How can Anthroly help with ${term.term} for my ${location.city} ${industry.name} business?`,
-      answer: `Anthroly's AI platform automatically implements ${term.term.toLowerCase()} best practices tailored to ${industry.name.toLowerCase()} businesses in ${location.city}. We handle the complexity so you can focus on growing your business.`,
+      answer: `Anthroly implements ${term.term.toLowerCase()} best practices tailored to ${industry.name.toLowerCase()} businesses in ${location.city}. We handle the complexity so you can focus on growing your business.`,
     },
   ];
   
@@ -1068,7 +1068,7 @@ export function generateGlossaryIndustryLocationPage(
       faq,
       callToAction: {
         headline: `Get ${term.term} Help for Your ${location.city} ${industry.name} Business`,
-        description: `Let Anthroly's AI optimize your ${industry.name.toLowerCase()} site for ${location.city} searchers.`,
+        description: `Let Anthroly optimize your ${industry.name.toLowerCase()} site for ${location.city} searchers.`,
         buttonText: 'Get Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -1147,7 +1147,7 @@ export function generateUseCaseIndustryLocationPage(
     },
     {
       heading: `How Anthroly Automates ${useCase.name} for ${location.city} ${industry.name}`,
-      body: `Anthroly's AI platform handles ${useCase.name.toLowerCase()} automatically for ${industry.name.toLowerCase()} businesses in ${locationName}. Our system combines local market intelligence with industry expertise to deliver results at scale.`,
+      body: `Anthroly handles ${useCase.name.toLowerCase()} for ${industry.name.toLowerCase()} businesses in ${locationName}. Our system combines local market intelligence with industry expertise to deliver results at scale.`,
     },
   ];
   
@@ -1212,7 +1212,7 @@ export function generateUseCaseIndustryLocationPage(
       faq,
       callToAction: {
         headline: `Start ${useCase.name} for Your ${location.city} ${industry.name} Business`,
-        description: `Let Anthroly's AI handle ${useCase.name.toLowerCase()} for your ${industry.name.toLowerCase()} company.`,
+        description: `Let Anthroly handle ${useCase.name.toLowerCase()} for your ${industry.name.toLowerCase()} company.`,
         buttonText: 'Get Free Analysis',
         buttonUrl: '/#ai-crawler',
       },

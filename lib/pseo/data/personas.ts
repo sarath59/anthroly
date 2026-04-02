@@ -37,11 +37,11 @@ export const targetPersonas: Persona[] = [
       'Keeping up with algorithm changes'
     ],
     solutions: [
-      'AI-powered content generation with human quality assurance',
+      'Human-written content with editorial quality assurance',
       'Automated technical SEO monitoring and fixes',
       'Programmatic landing pages for feature keywords',
       'GEO optimization to appear in AI responses',
-      'High-DR backlink acquisition through AI agents',
+      'High-DR backlink acquisition through outreach and editorial placements',
       'Comprehensive keyword gap analysis against competitors'
     ]
   },
@@ -137,7 +137,7 @@ export const targetPersonas: Persona[] = [
     ],
     goals: [
       'Deliver better results with leaner teams',
-      'Differentiate with AI-powered services',
+      'Differentiate with high-quality organic and AI-search visibility',
       'Increase client retention through results',
       'Scale service delivery profitably',
       'Build recurring revenue from SEO services',
@@ -155,7 +155,7 @@ export const targetPersonas: Persona[] = [
       'Automated client reporting dashboards',
       'Scalable content production for all clients',
       'Standardized playbooks for consistent delivery',
-      'AI-powered link building at scale',
+      'Consistent high-DR link building at scale',
       'Competitive edge with GEO services'
     ]
   },
@@ -303,7 +303,7 @@ export const targetPersonas: Persona[] = [
       'Adapting to AI-driven search changes'
     ],
     solutions: [
-      'AI automation for content and link building',
+      'Managed content production and link building',
       'Consolidated reporting across all metrics',
       'GEO training and implementation',
       'Time-saving workflow automations',

@@ -30,7 +30,7 @@ export const Pricing = () => {
 
   const highlightedServices = [
     {
-      title: '10 high-DR backlinks every month',
+      title: '15–25 high-DR backlinks every month',
       body: 'Editorial links from authoritative sites—built for trust, rankings, and long-term authority.',
     },
     {
@@ -91,7 +91,7 @@ export const Pricing = () => {
             $535 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">15 human-written blogs + 10 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $535/month. Same pricing, always. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">15 human-written blogs + 15–25 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $535/month. Same pricing, always. No contracts. Cancel anytime.
           </p>
           <p className="text-sm md:text-base text-gray-500 mt-4">
             <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
@@ -110,7 +110,7 @@ export const Pricing = () => {
 
               {/* Header */}
               <div className="text-center mb-10 pt-2">
-                <h3 className="text-xl text-gray-400 mb-4">AI Power + Human Support</h3>
+                <h3 className="text-xl text-gray-400 mb-4">Managed SEO + human support</h3>
                 
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
@@ -221,7 +221,7 @@ export const Pricing = () => {
                   <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-lg mx-auto">
-                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (10 high-DR backlinks, 15 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
+                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (15–25 high-DR backlinks, 15 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
                 </p>
               </div>
             </div>
@@ -235,7 +235,7 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 10 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $535.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 15–25 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $535.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">

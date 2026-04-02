@@ -181,7 +181,7 @@ export default function CompareIndexPage() {
             </h2>
             <p className="text-lg text-gray-400 mb-8">
               Anthroly uses AI to execute SEO automatically. Instead of analyzing what to do, 
-              you get 30 blogs/month, 20-30 high-DR backlinks, and continuous optimization—done for you.
+              you get 15 blogs/month, 15–25 high-DR backlinks, and continuous optimization—done for you.
             </p>
             <Link href="/#ai-crawler">
               <Button 

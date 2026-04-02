@@ -135,11 +135,10 @@ export default function LocationsIndexPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Local Expertise, AI Execution
+              Local Expertise, Hands-On Execution
             </h2>
             <p className="text-gray-400">
-              Our AI understands local markets, from search behavior to competitor landscapes. 
-              Combined with automated execution, you get the best of both worlds.
+              Our strategists map local markets—from search behavior to competitor landscapes—then your team ships the work with clear reporting.
             </p>
           </div>
 

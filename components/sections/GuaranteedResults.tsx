@@ -45,12 +45,12 @@ export const GuaranteedResults = () => {
   }, []);
 
   const hardDeliverables = [
-    { icon: Link2, metric: "10", label: "High-DR Backlinks", detail: "Authoritative placements every month", highlight: true },
+    { icon: Link2, metric: "15–25", label: "High-DR Backlinks", detail: "Authoritative placements every month", highlight: true },
     { icon: FileText, metric: "15", label: "Human-Written SEO Blogs", detail: "Conversation-style, built to rank on Google & in AI answers", highlight: true },
     { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Human-reviewed (AI-assisted)", highlight: false },
     { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain", highlight: false },
     { icon: TrendingUp, metric: "15", label: "Social Articles", detail: "LinkedIn, X, Medium", highlight: false },
-    { icon: Globe, metric: "10+", label: "Referring Domains", detail: "From real outreach—not link farms", highlight: false },
+    { icon: Globe, metric: "15–25", label: "Referring Domains", detail: "From real outreach—not link farms", highlight: false },
   ];
 
   const seoOutcomes = [
@@ -269,8 +269,8 @@ export const GuaranteedResults = () => {
                   <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">10 High-DR Backlinks</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$3,500</div>
+                  <div className="text-sm text-gray-500 mb-1">15–25 High-DR Backlinks</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$4,000</div>
                 </div>
                 <div className="text-center p-4">
                   <div className="text-sm text-gray-500 mb-1">20 Free Tools</div>
@@ -311,7 +311,7 @@ export const GuaranteedResults = () => {
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
             <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Promise</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we fail to deliver <span className="text-white font-semibold">10 high-DR backlinks</span>, <span className="text-white font-semibold">15 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
+              If we fail to deliver <span className="text-white font-semibold">15–25 high-DR backlinks</span>, <span className="text-white font-semibold">15 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
               <span>🎁 One Free Month of Service</span>
