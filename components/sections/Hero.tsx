@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
-import { ArrowRight, Users, Zap, MessageSquare } from 'lucide-react';
+import { ArrowRight, Users, UserCheck, MessageSquare } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -25,32 +25,33 @@ export const Hero = () => {
           
           {/* Main Heading - Clear Value Prop */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="block text-white mb-2">Rank on Google.</span>
-            <span className="block text-white mb-2">Get Cited by AI.</span>
+            <span className="block text-white mb-2">Real SEO experts.</span>
+            <span className="block text-white mb-2">Working on your business.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              We Handle Both.
+              Not software. Not bots.
             </span>
           </h1>
 
           {/* Subheadline - Problem + Solution */}
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-            ChatGPT, Perplexity, and Google AI are deciding who gets recommended. 
-            Our team handles <span className="text-white font-semibold">execution end to end</span>—strategy, content, and links—so you show up everywhere that matters, including Google and AI answers.
+            Strategists, writers, and link builders run your SEO <span className="text-white font-semibold">end to end</span>
+            —so you rank on Google and stay visible wherever people search today, including AI-style answers.{' '}
+            <span className="text-white font-semibold">People do the work;</span> you get weekly calls and clear reporting.
           </p>
 
           {/* Human Touch Highlight - Builds Trust */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <Users size={16} className="text-emerald-400" />
-              <span className="text-gray-300">Real humans onboard you</span>
+              <span className="text-gray-300">Senior SEO experts on your account</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <MessageSquare size={16} className="text-cyan-400" />
               <span className="text-gray-300">Weekly strategy calls</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              <Zap size={16} className="text-purple-400" />
-              <span className="text-gray-300">We ship the work between calls</span>
+              <UserCheck size={16} className="text-purple-400" />
+              <span className="text-gray-300">Human-written content &amp; outreach</span>
             </div>
           </div>
 
@@ -66,7 +67,7 @@ export const Hero = () => {
                 size="xl"
                 className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_70px_-15px_rgba(16,185,129,0.7)] transition-all"
               >
-                Book a call
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={22} />
               </Button>
             </a>
@@ -106,7 +107,7 @@ export const Hero = () => {
           <div className="mb-8">
             <LogoStrip 
               companies={AI_COMPANIES} 
-              label="Get visible on Google + AI platforms"
+              label="Where we grow your visibility"
               size="md"
               showNames={true}
             />

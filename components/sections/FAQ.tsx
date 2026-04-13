@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import { PRIMARY_CTA_LABEL } from '@/lib/site';
 import { GlowPulse, ScaleOnScroll } from '../ui/animated-elements';
 
 const faqs = [
@@ -39,7 +40,7 @@ const faqs = [
   },
   {
     question: "Can I see examples of your work?",
-    answer: "Yes! When you book a call with us, we will walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We are happy to show real backlinks, real traffic numbers, and real ranking improvements."
+    answer: `Yes! After you ${PRIMARY_CTA_LABEL.toLowerCase()}, we walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We are happy to show real backlinks, real traffic numbers, and real ranking improvements.`
   },
   {
     question: "What if it does not work for me?",
@@ -51,7 +52,7 @@ const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: "Click Book a call to pick a time. We will walk you through fit and next steps on the call, then send onboarding details. Most clients are fully operational within 48 hours after we kick off."
+    answer: `Click ${PRIMARY_CTA_LABEL} to check out securely. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off.`
   }
 ];
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper } from 'lucide-react';
 import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
@@ -318,7 +318,7 @@ export default function ResourcesPage() {
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Book a call
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </a>

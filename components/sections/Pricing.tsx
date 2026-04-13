@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Check, Zap, Shield, ArrowRight, Sparkles, TrendingUp, Bot, Search, Users } from 'lucide-react';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse, GradientBeam, SpotlightCard, ScaleOnScroll, HoverTilt } from '../ui/animated-elements';
@@ -208,7 +208,7 @@ export const Pricing = () => {
               {/* CTA Button */}
               <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
                 <Button className="w-full h-14 md:h-16 text-lg md:text-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] hover:shadow-emerald-500/40">
-                  Book a call
+                  {PRIMARY_CTA_LABEL}
                   <ArrowRight className="ml-2" size={22} />
                 </Button>
               </a>

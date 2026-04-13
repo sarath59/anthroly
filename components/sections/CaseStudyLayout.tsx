@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { Target, Zap, TrendingUp } from 'lucide-react';
 
@@ -98,7 +98,7 @@ export function CaseStudyLayout({
               )}
               <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-emerald-500 text-black hover:bg-emerald-400">
-                  Book a call
+                  {PRIMARY_CTA_LABEL}
                 </Button>
               </a>
             </div>

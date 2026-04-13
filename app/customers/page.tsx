@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
@@ -102,7 +102,7 @@ export default function CustomersPage() {
             </div>
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-500 text-black hover:bg-emerald-400 font-semibold">
-                Book a call
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
             </a>

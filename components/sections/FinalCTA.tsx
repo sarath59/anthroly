@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -72,7 +72,7 @@ export const FinalCTA = () => {
           <div className="flex flex-col items-center gap-6 mb-12">
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
-                Book a call
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-3" size={24} />
               </Button>
             </a>

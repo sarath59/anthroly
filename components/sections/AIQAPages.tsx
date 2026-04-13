@@ -12,7 +12,7 @@ import {
   Zap,
   ArrowRight
 } from 'lucide-react';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { GlowPulse } from '../ui/animated-elements';
@@ -233,7 +233,7 @@ export const AIQAPages = () => {
               size="lg" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-400 hover:to-indigo-400 rounded-full font-bold shadow-lg shadow-purple-500/20"
             >
-              Book a call
+              {PRIMARY_CTA_LABEL}
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </a>

@@ -21,6 +21,8 @@ import {
   RelatedPage,
 } from './types';
 
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '../site';
+
 // ============================================================================
 // WORD COUNT UTILITY
 // ============================================================================
@@ -236,8 +238,8 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       context: 'Related service for implementing this concept',
     },
     {
-      url: '/#pricing',
-      anchorText: 'Book a call',
+      url: BOOK_CALL_URL,
+      anchorText: PRIMARY_CTA_LABEL,
       context: 'Conversion opportunity',
     },
     ...term.relatedTerms.slice(0, 3).map(relatedSlug => ({

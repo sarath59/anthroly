@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import { ArrowRight, ChevronRight, ExternalLink } from 'lucide-react';
 import type { PSEOPage, ContentSection, FAQ, InternalLink, RelatedPage } from '@/lib/pseo/types';
@@ -60,7 +60,7 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
                   variant="outline" 
                   className="border-gray-700 text-white hover:bg-white/10 rounded-full"
                 >
-                  Book a call
+                  {PRIMARY_CTA_LABEL}
                 </Button>
               </a>
             </div>
