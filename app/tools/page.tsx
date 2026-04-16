@@ -25,6 +25,7 @@ import {
   TrendingUp,
   ArrowRight,
   ExternalLink,
+  Phone,
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
@@ -100,15 +101,31 @@ export default function ToolsIndexPage() {
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto">
               Meta tags, word count, SERP preview, schema generators, and more. Use them on any device—no account required.
             </p>
-            <Link href="/#pricing">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/#pricing">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
+                >
+                  Get 20 Custom Tools Built for Your Site
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </Link>
+              <a
+                href="https://cal.com/sarath-kavuru-0uizws/15min"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Get 20 Custom Tools Built for Your Site
-                <ArrowRight className="ml-2" size={18} />
-              </Button>
-            </Link>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full font-semibold border-gray-600 text-white hover:border-teal-400 hover:text-teal-300"
+                >
+                  <Phone size={16} className="mr-2" />
+                  Book a Call
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -160,11 +177,26 @@ export default function ToolsIndexPage() {
           <p className="text-gray-400 mb-4">
             Want custom tools built for your brand? We build 20 tools per month for subscribers.
           </p>
-          <Link href="/#pricing">
-            <Button variant="outline" size="lg" className="rounded-full">
-              View pricing
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link href="/#pricing">
+              <Button variant="outline" size="lg" className="rounded-full">
+                View pricing
+              </Button>
+            </Link>
+            <a
+              href="https://cal.com/sarath-kavuru-0uizws/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
+              >
+                <Phone size={16} className="mr-2" />
+                Book a Call
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
     </div>
