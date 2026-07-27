@@ -113,7 +113,7 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
                   <p className="font-bold text-lg">Real Humans Work With You</p>
-                  <p className="text-gray-400">Dedicated team members onboard you, monitor your project, and talk to you every single week. Never left alone with software.</p>
+                  <p className="text-gray-400">A dedicated account manager onboards you, monitors your project, and keeps you updated. Never left alone with software.</p>
                 </div>
               </li>
               <li className="flex gap-4">
