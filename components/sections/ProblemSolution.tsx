@@ -126,13 +126,6 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Weekly Strategy Calls + Reports</p>
-                  <p className="text-gray-400">Not just automated reports — real conversations about progress, strategy, and next steps. You always know what&apos;s happening.</p>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
-                <div>
                   <p className="font-bold text-lg">Writers & Editors, Not Bots</p>
                   <p className="text-gray-400">People research, draft, and edit your content. We use tools where they help, but humans own quality and accuracy.</p>
                 </div>
@@ -140,7 +133,7 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">$535/Month. Results Guaranteed.</p>
+                  <p className="font-bold text-lg">$1,000/Month. Results Guaranteed.</p>
                   <p className="text-gray-400">If we miss commitments, you get a free month. Simple pricing, no contracts, cancel anytime.</p>
                 </div>
               </li>
@@ -169,7 +162,7 @@ export const ProblemSolution = () => {
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">$535</div>
+              <div className="text-2xl font-bold text-white mb-1">$1,000</div>
               <div className="text-sm text-gray-500">Flat Monthly Rate</div>
             </div>
           </div>

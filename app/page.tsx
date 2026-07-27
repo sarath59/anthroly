@@ -46,7 +46,7 @@ export default function Home() {
       <FreeToolsBuilder />
       <SocialArticles />
       
-      {/* 6. Human Touch - Weekly calls + reports */}
+      {/* 6. Human Touch - Reports + Dedicated Support */}
       <AutomatedReports />
       
       {/* 7. Social Proof */}

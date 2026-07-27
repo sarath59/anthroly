@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Clock, Target } from 'lucide-react';
+import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Target } from 'lucide-react';
 import { LogoStrip, ANALYTICS_TOOLS, SEO_TOOLS } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -48,10 +48,10 @@ export const AutomatedReports = () => {
             <span>📊 72% of marketers can&apos;t prove SEO ROI — you will</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Weekly Calls. Real Humans. Clear Results.
+            Real Humans. Clear Results.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Every week, you talk to a real person.</span> We walk through your progress, answer questions, and plan next steps together. Plus detailed reports so you always know exactly what&apos;s happening.
+            <span className="text-white font-semibold">A dedicated human team runs your program.</span> Detailed reports keep you informed so you always know exactly what&apos;s happening with your SEO.
           </p>
         </div>
 
@@ -138,16 +138,12 @@ export const AutomatedReports = () => {
             <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <Mail className="text-emerald-400" size={20} />
-                <h4 className="font-bold">Weekly Strategy Call + Report</h4>
+                <h4 className="font-bold">Dedicated Human Team + Reports</h4>
               </div>
               <p className="text-gray-400 mb-4">
-                <span className="text-white font-semibold">A real human walks you through everything.</span> Not just a report dump — a conversation about what&apos;s working, what&apos;s next, and how to accelerate your growth.
+                <span className="text-white font-semibold">A real human account manager owns your program.</span> Detailed reports delivered so you always know what&apos;s working and what&apos;s next.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Clock size={16} className="text-emerald-400" />
-                  <span>Weekly 30-min call</span>
-                </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Calendar size={16} className="text-emerald-400" />
                   <span>Reports every Monday</span>

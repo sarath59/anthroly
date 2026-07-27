@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
-import { ArrowRight, Users, UserCheck, MessageSquare } from 'lucide-react';
+import { ArrowRight, Users, UserCheck } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -36,7 +36,7 @@ export const Hero = () => {
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
             Strategists, writers, and link builders run your SEO <span className="text-white font-semibold">end to end</span>
             —so you rank on Google and stay visible wherever people search today, including AI-style answers.{' '}
-            <span className="text-white font-semibold">People do the work;</span> you get weekly calls and clear reporting.
+            <span className="text-white font-semibold">People do the work;</span> you get clear reporting and consistent results.
           </p>
 
           {/* Human Touch Highlight - Builds Trust */}
@@ -44,10 +44,6 @@ export const Hero = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <Users size={16} className="text-emerald-400" />
               <span className="text-gray-300">Senior SEO experts on your account</span>
-            </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              <MessageSquare size={16} className="text-cyan-400" />
-              <span className="text-gray-300">Weekly strategy calls</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <UserCheck size={16} className="text-purple-400" />
@@ -94,12 +90,12 @@ export const Hero = () => {
               <div className="text-gray-500 text-sm">Avg Backlinks</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">Weekly</div>
-              <div className="text-gray-500 text-sm">Human Check-ins</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">$1,000</div>
+              <div className="text-gray-500 text-sm">Per Month</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">$535</div>
-              <div className="text-gray-500 text-sm">Per Month</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">24hrs</div>
+              <div className="text-gray-500 text-sm">To Get Started</div>
             </div>
           </div>
 

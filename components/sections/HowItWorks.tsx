@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Users, Zap, MessageSquare, TrendingUp, ArrowRight, Check } from 'lucide-react';
+import { Users, Zap, TrendingUp, ArrowRight, Check } from 'lucide-react';
 import { GlowPulse } from '../ui/animated-elements';
 
 export const HowItWorks = () => {
@@ -41,13 +41,6 @@ export const HowItWorks = () => {
       humanElement: false
     },
     {
-      icon: MessageSquare,
-      title: "Weekly Human Check-ins",
-      description: "Every week, we review progress together. Real conversations about what's working and what's next.",
-      color: "purple",
-      humanElement: true
-    },
-    {
       icon: TrendingUp,
       title: "Results You Can See",
       description: "Watch your Google rankings climb and AI platforms start recommending you. Clear reports, no mysteries.",
@@ -68,7 +61,7 @@ export const HowItWorks = () => {
             Human-Led. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Full-Service.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            We&apos;re not a DIY tool. Real strategists and writers run your program—weekly calls, clear reporting, and consistent delivery.
+            We&apos;re not a DIY tool. Real strategists and writers run your program—clear reporting and consistent delivery every month.
           </p>
         </div>
 
@@ -129,7 +122,7 @@ export const HowItWorks = () => {
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">Weekly progress calls</span>
+                <span className="text-gray-300">Clear monthly reporting</span>
               </div>
             </div>
           </div>
