@@ -41,7 +41,7 @@ export const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:sarath.k@neuralnetwrk.com"
+                href="mailto:sharatth@anthroly.com"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
@@ -75,7 +75,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:sarath.k@neuralnetwrk.com" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:sharatth@anthroly.com" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </a>
               </li>

@@ -136,7 +136,7 @@ export const FAQ = () => {
         {/* Still Have Questions */}
         <div className={`mt-16 max-w-2xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-gray-400">
-            Still have questions? <a href="mailto:hello@anthroly.com" className="text-emerald-400 font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
+            Still have questions? <a href="mailto:sharatth@anthroly.com" className="text-emerald-400 font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
           </p>
         </div>
       </div>

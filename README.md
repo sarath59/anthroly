@@ -151,7 +151,7 @@ Copyright © 2024 Anthroly. All rights reserved.
 
 ## 🤝 Support
 
-For support, email hello@anthroly.com
+For support, email sharatth@anthroly.com
 
 ---
 

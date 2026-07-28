@@ -18,7 +18,7 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 - **Services** → `/#services`
 - **Pricing** → `/#pricing`
 - **Blog** → `/blog`
-- **Contact** → `mailto:sarath.k@neuralnetwrk.com` (opens email)
+- **Contact** → `mailto:sharatth@anthroly.com` (opens email)
 - **Privacy Policy** → `/privacy`
 - **Terms of Service** → `/terms`
 
@@ -32,7 +32,7 @@ All hash links now use `/#anchor` format so they work from any page (blog, priva
 
 ### Pricing Section
 - **Get Started Button** → `https://buy.polar.sh/polar_cl_NBzHmxi4dZuSh5bLGhG0iUoBqLAa8Y3dBUiFv0fZ1AN` (Polar Checkout)
-- **Contact Us** → `mailto:sarath.k@neuralnetwrk.com`
+- **Contact Us** → `mailto:sharatth@anthroly.com`
 
 ## 🔄 Dynamic Routes
 
@@ -67,7 +67,7 @@ To update the payment link:
 ## 📧 Email Links
 
 All contact links currently open an email client:
-- **General Contact**: sarath.k@neuralnetwrk.com
+- **General Contact**: sharatth@anthroly.com
 - **Twitter**: Update with your Twitter URL
 - **LinkedIn**: Update with your LinkedIn URL
 

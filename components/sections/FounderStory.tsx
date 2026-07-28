@@ -73,7 +73,7 @@ export const FounderStory = () => {
                         <Twitter size={18} className="text-gray-400" />
                       </a>
                       <a 
-                        href="mailto:sarath.k@neuralnetwrk.com"
+                        href="mailto:sharatth@anthroly.com"
                         className="w-10 h-10 bg-gray-800 hover:bg-emerald-500/20 border border-gray-700 hover:border-emerald-500/50 rounded-xl flex items-center justify-center transition-all"
                       >
                         <Mail size={18} className="text-gray-400" />

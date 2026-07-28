@@ -269,7 +269,7 @@ export default function TermsPage() {
                 If you have any questions about these Terms, please contact us:
               </p>
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-                <p className="text-gray-300 mb-2"><strong>Email:</strong> <span className="text-cyan-400">hello@anthroly.com</span></p>
+                <p className="text-gray-300 mb-2"><strong>Email:</strong> <span className="text-cyan-400">sharatth@anthroly.com</span></p>
                 <p className="text-gray-300"><strong>Website:</strong> <span className="text-cyan-400">www.anthroly.com</span></p>
               </div>
             </section>
