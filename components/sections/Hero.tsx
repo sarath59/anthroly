@@ -90,7 +90,7 @@ export const Hero = () => {
               <div className="text-gray-500 text-sm">Avg Backlinks</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">$1,000</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">$2,000</div>
               <div className="text-gray-500 text-sm">Per Month</div>
             </div>
             <div className="text-center">

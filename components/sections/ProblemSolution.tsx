@@ -133,8 +133,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">$1,000/Month. Results Guaranteed.</p>
-                  <p className="text-gray-400">If we miss commitments, you get a free month. Simple pricing, no contracts, cancel anytime.</p>
+                  <p className="font-bold text-lg">$2,000/Month. Results Guaranteed.</p>
+                  <p className="text-gray-400">Month 1: $1,000 upfront, rest after results. Then $2,000/mo. No contracts, cancel anytime.</p>
                 </div>
               </li>
             </ul>
@@ -162,7 +162,7 @@ export const ProblemSolution = () => {
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">$1,000</div>
+              <div className="text-2xl font-bold text-white mb-1">$2,000</div>
               <div className="text-sm text-gray-500">Flat Monthly Rate</div>
             </div>
           </div>

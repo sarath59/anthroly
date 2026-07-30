@@ -38,8 +38,8 @@ export const FoundingMembers = () => {
     },
     {
       icon: Shield,
-      title: "Simple $1,000/mo Pricing",
-      description: "One price, forever. No hidden fees, no surprises, no contracts"
+      title: "Simple $2,000/mo Pricing",
+      description: "Month 1: $1,000 upfront, rest after results. Then $2,000/mo—no surprises"
     },
     {
       icon: Sparkles,

@@ -87,10 +87,10 @@ export const Pricing = () => {
             <span>💰 This would cost $8,500/mo at a traditional agency</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            $1,000 to Change Everything
+            $2,000 to Change Everything
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">15 human-written blogs + 15–25 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $1,000/month. Same pricing, always. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">15 human-written blogs + 15–25 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $2,000/month. Start with $1,000 upfront—pay the rest after first-month results. No contracts. Cancel anytime.
           </p>
           <p className="text-sm md:text-base text-gray-500 mt-4">
             <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
@@ -114,11 +114,20 @@ export const Pricing = () => {
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <div className="flex items-baseline">
-                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">$1,000</span>
+                    <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-white">$2,000</span>
                     <span className="text-gray-400 text-xl ml-2">/month</span>
                   </div>
                 </div>
                 
+                <div className="max-w-md mx-auto space-y-2 mb-4 text-left">
+                  <p className="text-sm text-gray-300 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3">
+                    <span className="text-emerald-400 font-semibold">Month 1:</span> $1,000 upfront · remaining $1,000 after first-month results
+                  </p>
+                  <p className="text-sm text-gray-300 bg-white/5 border border-gray-700 rounded-xl px-4 py-3">
+                    <span className="text-white font-semibold">Month 2+:</span> $2,000 upfront each month
+                  </p>
+                </div>
+
                 <p className="text-gray-500">
                   Cancel anytime. No questions asked.
                 </p>
@@ -234,11 +243,11 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 15–25 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $1,000.
+                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 15–25 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $2,000—starting with just $1,000 upfront in month one.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">
-                  <div className="text-3xl font-bold text-white mb-1">$2,000+</div>
+                  <div className="text-3xl font-bold text-white mb-1">$8,500+</div>
                   <div className="text-sm text-gray-500">What agencies charge for this</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
@@ -246,7 +255,7 @@ export const Pricing = () => {
                   <div className="text-sm text-gray-500">Time saved per month</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
-                  <div className="text-3xl font-bold text-emerald-400 mb-1">95%</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-1">93%</div>
                   <div className="text-sm text-gray-500">Cost savings with us</div>
                 </div>
               </div>

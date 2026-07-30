@@ -96,7 +96,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> Our team runs the work—content, links, and technical fixes—with clear reporting every step of the way. <span className="text-emerald-400 font-semibold">$1,000/month. Cancel anytime.</span>
+              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> Our team runs the work—content, links, and technical fixes—with clear reporting every step of the way. <span className="text-emerald-400 font-semibold">$2,000/month · $1,000 to start. Cancel anytime.</span>
             </p>
           </div>
         </div>

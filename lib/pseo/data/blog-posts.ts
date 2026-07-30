@@ -147,7 +147,7 @@ Key metrics for Sacramento AI SEO include: AI mention frequency, recommendation 
       },
       {
         question: 'What\'s the cost of AI SEO services in Sacramento?',
-        answer: 'AI SEO costs vary based on scope and competition. Anthroly offers comprehensive AI SEO starting at $1,000/month, which includes content generation, backlink building, and AI optimization—a fraction of what traditional Sacramento agencies charge for less comprehensive services.'
+        answer: 'AI SEO costs vary based on scope and competition. Anthroly offers comprehensive AI SEO starting at $2,000/month, which includes content generation, backlink building, and AI optimization—a fraction of what traditional Sacramento agencies charge for less comprehensive services.'
       }
     ],
     relatedPosts: ['ai-seo-california-guide', 'local-seo-strategies-2024', 'chatgpt-optimization-businesses'],
@@ -588,7 +588,7 @@ Pay particular attention to neighborhood-specific performance. An Oakland busine
       },
       {
         question: 'What\'s the cost of AI SEO services for Oakland businesses?',
-        answer: 'AI SEO costs vary by scope and competition. Anthroly offers comprehensive AI SEO starting at $1,000/month, including content generation, backlink building, and AI optimization—significantly more affordable than traditional Oakland marketing agencies.'
+        answer: 'AI SEO costs vary by scope and competition. Anthroly offers comprehensive AI SEO starting at $2,000/month, including content generation, backlink building, and AI optimization—significantly more affordable than traditional Oakland marketing agencies.'
       }
     ],
     relatedPosts: ['east-bay-local-seo', 'san-francisco-vs-oakland-seo', 'bay-area-ai-search'],

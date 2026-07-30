@@ -240,7 +240,7 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     },
     {
       question: `How much does ${industry.name} SEO cost?`,
-      answer: `Anthroly starts at $1,000/month, including 15 blog posts, 15–25 high-DR backlinks, and continuous optimization. This is a fraction of what traditional agencies charge for ${industry.name.toLowerCase()} SEO, with more consistent execution through managed delivery.`,
+      answer: `Anthroly starts at $2,000/month ($1,000 upfront in month one, with the balance after first-month results). Includes 15 blog posts, 15–25 high-DR backlinks, and continuous optimization. This is a fraction of what traditional agencies charge for ${industry.name.toLowerCase()} SEO, with more consistent execution through managed delivery.`,
     },
   ];
   
