@@ -16,7 +16,7 @@ const CTAS = [
   'Join Now',
   'Subscribe',
   'Add to Cart',
-  'Get this offer',
+  'Connect with us',
   'Claim Offer',
   'Yes, I want this',
   'Send me the guide',

@@ -5,18 +5,15 @@ import {
   CheckCircle2, 
   Link2, 
   FileText, 
-  Wrench, 
   Search, 
   Bug, 
   Users, 
   Clock, 
   Shield,
   Zap,
-  TrendingUp,
   Bot,
   Target,
   BarChart3,
-  Globe,
   MessageCircleQuestion,
   Eye,
   MousePointerClick
@@ -45,12 +42,12 @@ export const GuaranteedResults = () => {
   }, []);
 
   const hardDeliverables = [
-    { icon: Link2, metric: "15–25", label: "High-DR Backlinks", detail: "Authoritative placements every month", highlight: true },
-    { icon: FileText, metric: "15", label: "Human-Written SEO Blogs", detail: "Conversation-style, built to rank on Google & in AI answers", highlight: true },
-    { icon: MessageCircleQuestion, metric: "15", label: "AI Q&A Pages", detail: "Human-reviewed (AI-assisted)", highlight: false },
-    { icon: Wrench, metric: "20", label: "Free Tools Deployed", detail: "Built & live on your domain", highlight: false },
-    { icon: TrendingUp, metric: "15", label: "Social Articles", detail: "LinkedIn, X, Medium", highlight: false },
-    { icon: Globe, metric: "15–25", label: "Referring Domains", detail: "From real outreach—not link farms", highlight: false },
+    { icon: Bot, metric: "4", label: "Agents Live in Production", detail: "SEO, sales, marketing, support—executing, not advising", highlight: true },
+    { icon: CheckCircle2, metric: "100%", label: "Actions Logged & Verified", detail: "Every decision auditable, every output signed off by a human", highlight: true },
+    { icon: FileText, metric: "15", label: "Human-Written SEO Blogs", detail: "Researched by the agent, written and edited by people", highlight: false },
+    { icon: Link2, metric: "15–25", label: "High-DR Backlinks", detail: "Earned through real outreach—not link farms", highlight: false },
+    { icon: Target, metric: "500+", label: "Leads Researched", detail: "Enriched and scored against your ICP", highlight: false },
+    { icon: MessageCircleQuestion, metric: "60%+", label: "Tickets Closed End to End", detail: "The rest escalated with full context attached", highlight: false },
   ];
 
   const seoOutcomes = [
@@ -76,11 +73,11 @@ export const GuaranteedResults = () => {
   ];
 
   const speedGuarantees = [
-    { milestone: "Kickoff call scheduled", time: "24 hours" },
-    { milestone: "First article live", time: "48 hours" },
-    { milestone: "Full system operational", time: "72 hours" },
-    { milestone: "First backlink acquired", time: "7 days" },
-    { milestone: "First tool deployed", time: "14 days" },
+    { milestone: "Workflow mapping call", time: "24 hours" },
+    { milestone: "First agent executing", time: "48 hours" },
+    { milestone: "All four agents live", time: "72 hours" },
+    { milestone: "First backlink earned", time: "7 days" },
+    { milestone: "First custom tool shipped", time: "14 days" },
   ];
 
   return (
@@ -103,17 +100,17 @@ export const GuaranteedResults = () => {
             <span>🛡️ Iron-Clad 30-Day Commitments</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Results You Get in Your First 30 Days
+            What Your Agents Deliver in 30 Days
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Not promises. Not &quot;best efforts.&quot; These are <span className="text-white font-semibold">contractual commitments</span> backed by one free month of service if we miss ANY of them.
+            Not a pilot. Not a &quot;proof of concept.&quot; These are <span className="text-white font-semibold">contractual commitments</span> backed by one free month of service if we miss ANY of them.
           </p>
         </div>
 
         {/* Hard Deliverables */}
         <div className={`mb-16 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-emerald-400">📦</span> Hard Deliverables <span className="text-gray-500 text-lg font-normal">(Count Them Yourself)</span>
+            <span className="text-emerald-400">📦</span> Work Actually Completed <span className="text-gray-500 text-lg font-normal">(Count It Yourself)</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             {hardDeliverables.filter((d) => d.highlight).map((item, index) => (
@@ -151,7 +148,7 @@ export const GuaranteedResults = () => {
         {/* SEO Outcomes */}
         <div className={`mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-cyan-400">📊</span> Google Traffic Results <span className="text-gray-500 text-lg font-normal">(Measurable in Search Console)</span>
+            <span className="text-cyan-400">📊</span> SEO Agent Results <span className="text-gray-500 text-lg font-normal">(Measurable in Search Console)</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {seoOutcomes.map((item, index) => (
@@ -171,7 +168,7 @@ export const GuaranteedResults = () => {
         {/* AI Outcomes */}
         <div className={`mb-16 transition-all duration-1000 delay-250 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-purple-400">🤖</span> AI Search Results <span className="text-gray-500 text-lg font-normal">(The Future of Search)</span>
+            <span className="text-purple-400">🤖</span> AI Search Results <span className="text-gray-500 text-lg font-normal">(Where Buyers Now Ask First)</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {aiOutcomes.map((item, index) => (
@@ -195,10 +192,10 @@ export const GuaranteedResults = () => {
             <div className="flex items-center gap-3 mb-6">
               <Bot className="text-purple-400" size={28} />
               <h3 className="text-xl font-bold">AI Visibility Tracking</h3>
-              <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">The Future</span>
+              <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">Always On</span>
             </div>
             <p className="text-gray-400 text-sm mb-6">
-              We track your brand&apos;s visibility across the 5 major AI engines. Know exactly when AI recommends you (or your competitors).
+              Your SEO agent queries all 5 major engines on a fixed prompt set, logs who gets cited, and acts when the answer stops being you.
             </p>
             <div className="space-y-3">
               {aiVisibility.map((ai, index) => (
@@ -222,11 +219,11 @@ export const GuaranteedResults = () => {
           <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="text-yellow-400" size={28} />
-              <h3 className="text-xl font-bold">Speed Guarantees</h3>
+              <h3 className="text-xl font-bold">Deployment Guarantees</h3>
               <span className="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">We Move Fast</span>
             </div>
             <p className="text-gray-400 text-sm mb-6">
-              No &quot;we&apos;ll get back to you.&quot; No endless onboarding. These are our speed commitments:
+              No six-week discovery phase. No integration theatre. Your agents are working this week:
             </p>
             <div className="space-y-3">
               {speedGuarantees.map((item, index) => (
@@ -254,35 +251,35 @@ export const GuaranteedResults = () => {
             <div className="relative p-8 md:p-10 bg-gray-900 rounded-3xl border border-gray-800">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Total Value Delivered in 30 Days
+                  What This Costs You to Build In-House
                 </h3>
-                <p className="text-gray-400">What agencies charge vs. what you pay</p>
+                <p className="text-gray-400">Hire it, or deploy it Monday</p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">15 SEO Blog Posts</div>
+                  <div className="text-sm text-gray-500 mb-1">SEO Agent</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$4,500</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">15 AI Q&A Pages</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
+                  <div className="text-sm text-gray-500 mb-1">Sales Automation Agent</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$5,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">15–25 High-DR Backlinks</div>
+                  <div className="text-sm text-gray-500 mb-1">Marketing Agent</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$4,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">20 Free Tools</div>
+                  <div className="text-sm text-gray-500 mb-1">Support Agent</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$3,500</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-sm text-gray-500 mb-1">20 Custom Tools</div>
                   <div className="text-xl font-bold text-gray-400 line-through">$10,000</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">15 Social Articles</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$3,000</div>
-                </div>
-                <div className="text-center p-4">
-                  <div className="text-sm text-gray-500 mb-1">50+ AI Mentions</div>
-                  <div className="text-xl font-bold text-gray-400 line-through">$2,500</div>
+                  <div className="text-sm text-gray-500 mb-1">Reporting & Analysis</div>
+                  <div className="text-xl font-bold text-gray-400 line-through">$1,500</div>
                 </div>
               </div>
 
@@ -311,7 +308,7 @@ export const GuaranteedResults = () => {
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
             <h3 className="text-2xl font-bold mb-4">The &quot;You Can&apos;t Lose&quot; Promise</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we fail to deliver <span className="text-white font-semibold">15–25 high-DR backlinks</span>, <span className="text-white font-semibold">15 blog posts</span>, <span className="text-white font-semibold">15 AI Q&amp;A pages</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
+              If we fail to deliver <span className="text-white font-semibold">four agents in production</span>, <span className="text-white font-semibold">15 human-written blogs</span>, <span className="text-white font-semibold">15–25 high-DR backlinks</span>, <span className="text-white font-semibold">20 functional tools</span>, or <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
               <span>🎁 One Free Month of Service</span>

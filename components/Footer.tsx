@@ -19,7 +19,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              Managed SEO and content: backlinks, blogs, and visibility on Google and AI search—delivered by real people on your behalf.
+              We build intelligent AI agents for SEO, sales automation, marketing, and customer support—agents that analyze, execute, and report end to end, with humans in the loop.
             </p>
             <div className="flex space-x-4">
               <a
@@ -56,7 +56,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/#features" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Features
+                  AI Agents
                 </Link>
               </li>
               <li>

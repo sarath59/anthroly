@@ -47,10 +47,10 @@ export const PSEOImplementation = () => {
             <span>🚀 Zapier used pSEO to capture 4.5M monthly visits</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            1,000+ Pages. 1 Click. Infinite Keywords.
+            1,000 Pages No Team Could Write by Hand
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Canva ranks for 9M keywords with pSEO.</span> Tripadvisor owns 280M pages. Now this enterprise strategy is available to you. We build templated, SEO-optimized pages at scale.
+            <span className="text-white font-semibold">Canva ranks for 9M keywords this way.</span> Tripadvisor owns 280M pages. It was only ever possible with an engineering team behind it — now an agent does the building, and a human designs what gets built.
           </p>
         </div>
 
@@ -63,10 +63,10 @@ export const PSEOImplementation = () => {
                 What is Programmatic SEO?
               </h3>
               <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                Instead of creating pages one-by-one, pSEO uses templates and data to generate hundreds or thousands of unique, valuable pages. Think of how Yelp has a page for every restaurant, or Zillow has a page for every property.
+                Instead of writing pages one at a time, your agent combines a template with real data to build thousands of genuinely useful ones. Yelp has a page for every restaurant. Zillow has a page for every property. Same idea, your market.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                <span className="font-semibold text-white">The result?</span> You capture long-tail traffic at scale — the kind of searches with high intent and low competition.
+                <span className="font-semibold text-white">The result?</span> You own the long tail — high-intent searches with almost no competition, captured while your rivals argue over ten keywords.
               </p>
             </div>
 
@@ -75,22 +75,22 @@ export const PSEOImplementation = () => {
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h4 className="font-bold text-white">Identify Patterns</h4>
-                  <p className="text-gray-400 text-sm">We analyze your industry to find scalable keyword patterns</p>
+                  <h4 className="font-bold text-white">The agent finds the pattern</h4>
+                  <p className="text-gray-400 text-sm">It reads your market for keyword structures that repeat at scale</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h4 className="font-bold text-white">Build Templates</h4>
-                  <p className="text-gray-400 text-sm">Create dynamic templates that generate unique, valuable content</p>
+                  <h4 className="font-bold text-white">A human designs the template</h4>
+                  <p className="text-gray-400 text-sm">We shape a page worth landing on, so scale never means thin</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h4 className="font-bold text-white">Deploy & Monitor</h4>
-                  <p className="text-gray-400 text-sm">Pages go live automatically and we track their performance</p>
+                  <h4 className="font-bold text-white">The agent builds and prunes</h4>
+                  <p className="text-gray-400 text-sm">It ships, measures, and retires the pages that don&apos;t earn their place</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ export const PSEOImplementation = () => {
             <div className="bg-black text-white p-6 md:p-8 rounded-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Code className="text-violet-400" size={24} />
-                <h3 className="text-xl font-bold">pSEO Templates We Create</h3>
+                <h3 className="text-xl font-bold">Templates Your Agent Builds On</h3>
               </div>
 
               <div className="space-y-4">

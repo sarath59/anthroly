@@ -29,23 +29,23 @@ export const AutomatedBlogs = () => {
   const blogFeatures = [
     {
       number: "01",
-      title: "Brief & keyword plan",
-      description: "We research SERPs and intent, then agree on topics and outlines that match your positioning."
+      title: "The agent researches",
+      description: "It reads the live SERP, the AI answers, your competitors, and your own analytics—then builds the brief and keyword map."
     },
     {
       number: "02",
-      title: "Human-written drafts",
-      description: "Writers produce conversation-style, SEO-solid articles—structured for Google and AI-overviews."
+      title: "Humans write it",
+      description: "Our writers draft every piece. Conversation-style, opinionated, structured to hold up on Google and inside AI answers."
     },
     {
       number: "03",
-      title: "Editorial QA",
-      description: "Editors check facts, tone, and on-page SEO before anything ships."
+      title: "An editor signs off",
+      description: "Facts, tone, and on-page SEO checked by a person. Nothing publishes on a maybe."
     },
     {
       number: "04",
-      title: "Publish & reporting",
-      description: "We publish on your schedule and report what went live, indexed, and how it performs."
+      title: "The agent ships and learns",
+      description: "It publishes on your schedule, watches how each piece performs, and feeds that evidence into next month's briefs."
     }
   ];
 
@@ -63,10 +63,10 @@ export const AutomatedBlogs = () => {
             <span>📝 Companies publishing 16+ blogs/month get 3.5x more traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Blogs Humans Write. Quality You Can Stand Behind.
+            The Agent Researches. Humans Write.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">30+ pages of content every month</span> — drafted and edited by our team so it reads like a person, ranks like SEO, and holds up in AI answers.
+            <span className="text-white font-semibold">30+ pages of content every month</span> — your agent handles research, briefs, and internal linking; our writers handle the sentences. It reads like a person because a person wrote it.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export const AutomatedBlogs = () => {
                 <span className="text-7xl md:text-8xl font-bold">45</span>
                 <span className="text-2xl text-gray-400">pages/month</span>
               </div>
-              <p className="text-gray-400 text-lg mb-6">15 SEO blogs + 15 AI Q&A pages = 360 pieces of content per year, building your authority on Google AND AI search results.</p>
+              <p className="text-gray-400 text-lg mb-6">15 SEO blogs + 15 AI Q&A pages = 360 pieces a year, compounding into authority on Google and inside every AI answer about your category.</p>
               
               <div className="grid grid-cols-3 gap-4">
                 <div className="p-4 bg-white/5 rounded-xl border border-white/10">
@@ -123,22 +123,22 @@ export const AutomatedBlogs = () => {
               <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
                 <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">Keyword-targeted:</span>
-                  <span className="text-gray-400"> Each article targets specific keywords with proven search volume</span>
+                  <span className="font-semibold text-white">Evidence-led:</span>
+                  <span className="text-gray-400"> Every topic is chosen from real search demand, not a content calendar guess</span>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
                 <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">Brand voice aligned:</span>
-                  <span className="text-gray-400"> We learn your tone and style to maintain consistency</span>
+                  <span className="font-semibold text-white">Your voice, kept:</span>
+                  <span className="text-gray-400"> The agent learns your tone from what you&apos;ve already published, and editors hold the line</span>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
                 <CheckCircle2 className="text-purple-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">Internally linked:</span>
-                  <span className="text-gray-400"> Strategic internal links boost your entire site&apos;s SEO</span>
+                  <span className="font-semibold text-white">Wired together:</span>
+                  <span className="text-gray-400"> Internal links are re-mapped across the whole site each time something new ships</span>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ export const AutomatedBlogs = () => {
               <div className="flex items-start gap-3">
                 <Sparkles className="text-yellow-400 flex-shrink-0" size={20} />
                 <p className="text-sm text-gray-300">
-                  <span className="font-bold text-yellow-400">Why this matters:</span> Businesses that publish consistently get dramatically more leads. But who has time to create 45 high-quality pages a month (blogs + AI Q&A)? Now you do.
+                  <span className="font-bold text-yellow-400">Why this matters:</span> Consistency is the whole game, and consistency is exactly what humans alone can&apos;t sustain. The agent never misses a month; the humans make sure it&apos;s worth reading.
                 </p>
               </div>
             </div>

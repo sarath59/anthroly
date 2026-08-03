@@ -69,7 +69,7 @@ export const FreeToolsBuilder = () => {
             20+ Free SEO Tools. Use Them Now.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-8">
-            <span className="text-white font-semibold">Meta tag generator, word counter, SERP preview, schema generators, and more.</span> No signup. Then get 20 custom tools built for your site every month.
+            <span className="text-white font-semibold">Meta tag generator, word counter, SERP preview, schema generators, and more.</span> No signup, no email wall. Then your agents build 20 custom tools on your own domain every month — each one a lead magnet your sales agent picks up.
           </p>
           <Link
             href="/tools"
@@ -116,7 +116,7 @@ export const FreeToolsBuilder = () => {
           {/* Left: Types of tools we build */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
-              Types of Tools We Build for You
+              Tools Your Agents Build and Ship
             </h3>
             
             <div className="grid grid-cols-2 gap-4 mb-8">
@@ -177,7 +177,7 @@ export const FreeToolsBuilder = () => {
               </div>
 
               <p className="text-gray-400 leading-relaxed mb-4">
-                Tools solve real problems. People bookmark them, share them with colleagues, and link to them in their own content. It&apos;s passive backlink generation.
+                Tools solve a real problem in ten seconds. People bookmark them, send them to colleagues, and cite them in their own writing. Backlinks stop being something you chase.
               </p>
 
               <div className="p-4 bg-teal-500/20 border border-teal-500/30 rounded-xl">
@@ -192,22 +192,22 @@ export const FreeToolsBuilder = () => {
               <div className="flex items-start gap-3 p-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
                 <CheckCircle2 className="text-teal-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">Lead magnets built-in:</span>
-                  <span className="text-gray-400"> Every tool captures emails before showing results</span>
+                  <span className="font-semibold text-white">Wired to your sales agent:</span>
+                  <span className="text-gray-400"> Every submission gets enriched, scored against your ICP, and followed up—automatically</span>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
                 <CheckCircle2 className="text-teal-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">SEO-optimized:</span>
-                  <span className="text-gray-400"> Each tool targets specific high-volume keywords</span>
+                  <span className="font-semibold text-white">Built to be found:</span>
+                  <span className="text-gray-400"> Each tool targets a high-volume keyword your competitors never bothered to serve</span>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-teal-500/10 rounded-xl border border-teal-500/20">
                 <CheckCircle2 className="text-teal-400 flex-shrink-0 mt-0.5" size={20} />
                 <div>
-                  <span className="font-semibold text-white">Branded for you:</span>
-                  <span className="text-gray-400"> Tools match your design and drive traffic to your site</span>
+                  <span className="font-semibold text-white">Yours, not ours:</span>
+                  <span className="text-gray-400"> They live on your domain, in your design, earning your links forever</span>
                 </div>
               </div>
             </div>

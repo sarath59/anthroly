@@ -9,9 +9,9 @@ import { ScrollAnimationWrapper } from "@/components/ui/ScrollAnimationWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anthroly - Human Content + AI Backlinks",
-  description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
-  keywords: ["SEO", "backlinks", "link building", "AI SEO", "content marketing", "agency", "SaaS growth"],
+  title: "Anthroly - AI Agents for SEO, Sales, Marketing & Support",
+  description: "We build intelligent AI agents that analyze, execute, and report end to end—for SEO, sales automation, marketing, and customer support. Human-led SEO included. From $2,000/mo.",
+  keywords: ["AI agents", "AI agents for business", "sales automation", "customer support automation", "marketing automation", "AI SEO", "agentic AI", "SaaS growth"],
   icons: {
     icon: [
       { url: '/logo.png', sizes: '32x32', type: 'image/png' },

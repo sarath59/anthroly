@@ -49,23 +49,23 @@ export const AIQAPages = () => {
   const features = [
     {
       icon: MessageCircleQuestion,
-      title: "Question-Answer Format",
-      description: "Structured content that AI engines love to cite. Each page answers specific questions your customers are asking."
+      title: "One Canonical Answer",
+      description: "Every question gets a single source of truth—shaped so AI engines can quote it and your support agent can serve it verbatim."
     },
     {
       icon: Target,
-      title: "Intent-Optimized",
-      description: "We research what questions are being asked about your industry and create pages that directly answer them."
+      title: "Drawn From Real Questions",
+      description: "Sourced from your support tickets, your sales calls, and what people actually type into AI—never brainstormed in a meeting."
     },
     {
       icon: Bot,
-      title: "AI-First Structure",
-      description: "Schema markup, clear headings, concise answers, and source citations that make it easy for AI to quote you."
+      title: "Built for Machines to Trust",
+      description: "Schema, clean headings, tight answers, cited sources. Everything an AI engine needs before it will repeat you."
     },
     {
       icon: TrendingUp,
-      title: "Dual Ranking",
-      description: "These pages rank on both Google AND AI search results. Double the visibility from a single piece of content."
+      title: "Deflects and Ranks",
+      description: "The same page quietly closes tickets and wins citations. One piece of work, returning twice."
     },
   ];
 
@@ -96,16 +96,16 @@ export const AIQAPages = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Sparkles size={16} />
-            <span>🚀 NEW: AI-Optimized Q&A Pages</span>
+            <span>🚀 One answer library. Your search agent and support agent both use it.</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            15 Pages/Month That Rank on{' '}
+            15 Answers a Month That Serve{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
-              AI Search Results
+              Search and Support
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            When someone asks ChatGPT or Perplexity about your industry, <span className="text-white font-semibold">you want to be the answer they cite</span>. We build Q&amp;A-style pages structured for AI-generated responses — and each page is <span className="text-white font-semibold">human-written and edited</span> before it goes live.
+            When someone asks ChatGPT or Perplexity about your category, <span className="text-white font-semibold">you want to be the answer they cite</span>. The same library your support agent uses to close tickets is the one AI engines quote — and every answer is <span className="text-white font-semibold">human-written and edited</span> before it goes live.
           </p>
         </div>
 
@@ -168,7 +168,7 @@ export const AIQAPages = () => {
         {/* Example Questions Section */}
         <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            Example Questions We&apos;ll Create Pages For
+            The Questions Your Buyers Are Already Asking
           </h3>
           <div className="grid md:grid-cols-2 gap-3">
             {exampleQuestions.map((question, index) => (
@@ -182,42 +182,42 @@ export const AIQAPages = () => {
             ))}
           </div>
           <p className="text-center text-gray-500 text-sm mt-4">
-            We research the exact questions being asked about your industry and create optimized pages for each one.
+            Pulled from your own tickets, calls, and live AI queries—then answered once, properly, for good.
           </p>
         </div>
 
         {/* How It Works */}
         <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="p-8 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-purple-500/10 border border-purple-500/20 rounded-3xl">
-            <h3 className="text-2xl font-bold text-center mb-8">How AI Q&A Pages Work</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">How the Answer Library Works</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">1. Research</div>
-                <p className="text-xs text-gray-500">We find the questions people ask about your industry</p>
+                <div className="text-sm font-semibold text-white mb-2">1. Mine</div>
+                <p className="text-xs text-gray-500">The agent harvests questions from tickets, calls, and AI queries</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircleQuestion className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">2. Create</div>
-                <p className="text-xs text-gray-500">We write AI-optimized Q&A pages with proper structure</p>
+                <div className="text-sm font-semibold text-white mb-2">2. Answer</div>
+                <p className="text-xs text-gray-500">A person writes the definitive answer, structured for machines</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">3. Publish</div>
-                <p className="text-xs text-gray-500">Pages go live on your site with schema markup</p>
+                <div className="text-sm font-semibold text-white mb-2">3. Deploy</div>
+                <p className="text-xs text-gray-500">It publishes with schema and loads into your support agent</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">4. Get Cited</div>
-                <p className="text-xs text-gray-500">AI engines start citing your content as a source</p>
+                <div className="text-sm font-semibold text-white mb-2">4. Compound</div>
+                <p className="text-xs text-gray-500">AI engines cite you; tickets close without anyone touching them</p>
               </div>
             </div>
           </div>

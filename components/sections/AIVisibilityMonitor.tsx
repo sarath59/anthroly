@@ -42,10 +42,10 @@ export const AIVisibilityMonitor = () => {
             <span>⚡ Rankings fluctuate 23% weekly — most businesses never notice</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Know The Moment AI Stops Recommending You
+            When AI Stops Recommending You, It Responds
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">AI algorithms update 500+ times per year.</span> One change can erase your visibility overnight. Our 24/7 monitors alert you within minutes — before your competitors even notice.
+            <span className="text-white font-semibold">AI algorithms update 500+ times a year.</span> A monitoring tool would email you about it. Your agent detects the change, diagnoses the cause, and has the fix moving before you finish your coffee.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export const AIVisibilityMonitor = () => {
               <div className="flex items-start gap-3 p-3 bg-orange-500/10 border border-orange-500/20 rounded-xl">
                 <AlertCircle size={18} className="text-orange-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Competitor launched new content — opportunity to respond</p>
+                  <p className="text-sm text-white">Competitor published on a keyword you own — counter-piece drafted, awaiting your approval</p>
                   <p className="text-xs text-gray-500 mt-1">8 hours ago</p>
                 </div>
               </div>
@@ -139,27 +139,27 @@ export const AIVisibilityMonitor = () => {
             <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Clock className="text-blue-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">24/7 Monitoring</h3>
+            <h3 className="text-xl font-bold mb-3">Never Off Duty</h3>
             <p className="text-gray-400 leading-relaxed">
-              While you sleep, we track every mention, every ranking change, every AI citation across all major platforms.
+              While you sleep it re-runs every prompt, every ranking, and every citation across all major platforms. No weekends, no backlog.
             </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Bell className="text-purple-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">Instant Alerts</h3>
+            <h3 className="text-xl font-bold mb-3">Diagnosis, Not Noise</h3>
             <p className="text-gray-400 leading-relaxed">
-              Get notified the moment something important happens — ranking drops, new opportunities, or competitor moves.
+              You don&apos;t get forty alerts to sort through. You get the one that matters, with the cause already traced and named.
             </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Shield className="text-emerald-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">Proactive Defense</h3>
+            <h3 className="text-xl font-bold mb-3">It Acts, Then Reports</h3>
             <p className="text-gray-400 leading-relaxed">
-              We don&apos;t just report problems — we flag them before they hurt you and recommend immediate actions to take.
+              Routine repairs ship on their own. Anything consequential waits for your yes, with the full reasoning attached.
             </p>
           </div>
         </div>
@@ -176,7 +176,7 @@ export const AIVisibilityMonitor = () => {
         {/* Bottom CTA */}
         <div className={`mt-16 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            <span className="text-white font-semibold">The businesses that win</span> aren&apos;t the ones with the best product — they&apos;re the ones who see changes first and respond fastest. That&apos;s what this gives you.
+            <span className="text-white font-semibold">The businesses that win</span> aren&apos;t the ones with the best product — they&apos;re the ones who notice first and move fastest. An agent shrinks that gap from weeks to minutes.
           </p>
         </div>
       </div>

@@ -28,22 +28,22 @@ export const HowItWorks = () => {
   const steps = [
     {
       icon: Users,
-      title: "Real Humans Onboard You",
-      description: "A dedicated team member learns your business, goals, and voice. We set strategy together.",
+      title: "We Map One Workflow",
+      description: "A strategist traces the work end to end with you—every decision, exception, and handoff. That map becomes your agent's brief.",
       color: "emerald",
       humanElement: true
     },
     {
       icon: Zap,
-      title: "We Execute Every Month",
-      description: "Our team produces your blogs, secures backlinks, and keeps your site optimized for Google and AI-driven search.",
+      title: "Your Agent Goes Live",
+      description: "It plugs into the tools you already run—CRM, inbox, CMS, helpdesk, analytics—and starts doing the actual task, not suggesting it.",
       color: "cyan",
       humanElement: false
     },
     {
       icon: TrendingUp,
-      title: "Results You Can See",
-      description: "Watch your Google rankings climb and AI platforms start recommending you. Clear reports, no mysteries.",
+      title: "It Analyzes, Acts, Reports",
+      description: "Every cycle: read the situation, choose the next move, execute, then write back what changed and why. You review outcomes, not dashboards.",
       color: "orange",
       humanElement: false
     }
@@ -58,10 +58,10 @@ export const HowItWorks = () => {
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Human-Led. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Full-Service.</span>
+            Intelligent. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Accountable.</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            We&apos;re not a DIY tool. Real strategists and writers run your program—clear reporting and consistent delivery every month.
+            An agent is not a chatbot and not a zap. Yours is trained on your workflow, given real permissions, and held to a standard a human signs off on.
           </p>
         </div>
 
@@ -110,19 +110,19 @@ export const HowItWorks = () => {
         {/* Bottom Callout */}
         <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="p-6 md:p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-purple-500/10 border border-white/10 rounded-2xl">
-            <h3 className="text-xl font-bold mb-4">What makes us different?</h3>
+            <h3 className="text-xl font-bold mb-4">What makes an Anthroly agent different?</h3>
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">Real humans, not just chatbots</span>
+                <span className="text-gray-300">It acts, it doesn&apos;t suggest</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">Google + AI SEO combined</span>
+                <span className="text-gray-300">It owns the task end to end</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">Clear monthly reporting</span>
+                <span className="text-gray-300">A human signs off before it ships</span>
               </div>
             </div>
           </div>

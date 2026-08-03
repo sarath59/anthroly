@@ -60,9 +60,9 @@ export const PoweredBy = () => {
           
           {/* Section Header */}
           <div className="text-center mb-12">
-            <p className="text-gray-500 text-sm uppercase tracking-widest mb-2">Built with enterprise-grade tools</p>
+            <p className="text-gray-500 text-sm uppercase tracking-widest mb-2">The stack your agents run on</p>
             <h3 className="text-2xl md:text-3xl font-bold text-white">
-              Powered by the Best in the Industry
+              Built on Infrastructure You Already Trust
             </h3>
           </div>
 
@@ -90,7 +90,7 @@ export const PoweredBy = () => {
 
           {/* Integrations - Logo Strip */}
           <div className="text-center">
-            <p className="text-gray-500 text-sm mb-8">Integrates seamlessly with</p>
+            <p className="text-gray-500 text-sm mb-8">Your agents plug straight into</p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 max-w-4xl mx-auto">
               {integrations.map((integration, index) => (
                 <div 

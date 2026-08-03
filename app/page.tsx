@@ -24,19 +24,19 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <>
-      {/* 1. Hook - Clear value prop */}
+      {/* 1. Hook - Agents that own outcomes */}
       <Hero />
       
-      {/* 2. How It Works - Human + AI combo explained */}
+      {/* 2. How It Works - Agent + human-in-the-loop explained */}
       <HowItWorks />
       
-      {/* 3. Problem/Solution - Why you need this */}
+      {/* 3. Problem/Solution - Why automations and copilots fail */}
       <ProblemSolution />
       
-      {/* 4. What You Get - Deliverables */}
+      {/* 4. What You Get - Agent deliverables */}
       <GuaranteedResults />
       
-      {/* 5. How We Do It - Features Deep Dive */}
+      {/* 5. Each agent, in depth */}
       <AICrawlerAnalysis />
       <AIVisibilityMonitor />
       <AutomatedBlogs />
@@ -46,7 +46,7 @@ export default function Home() {
       <FreeToolsBuilder />
       <SocialArticles />
       
-      {/* 6. Human Touch - Reports + Dedicated Support */}
+      {/* 6. Analyze + report, with a human accountable */}
       <AutomatedReports />
       
       {/* 7. Social Proof */}

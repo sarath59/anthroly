@@ -30,46 +30,49 @@ export const Pricing = () => {
 
   const highlightedServices = [
     {
-      title: '15–25 high-DR backlinks every month',
-      body: 'Editorial links from authoritative sites—built for trust, rankings, and long-term authority.',
+      title: 'Four intelligent agents, live in your stack',
+      body: 'SEO, sales automation, marketing, and customer support—each one analyzing, deciding, executing, and reporting on its own workflow.',
     },
     {
-      title: '15 human-written, conversation-style SEO blogs / month',
-      body: 'Natural, high-quality pieces optimized for Google and AI discovery—not generic AI fluff.',
+      title: 'Human-led SEO, still fully included',
+      body: '15 human-written blogs and 15–25 high-DR backlinks a month. Real writers, real outreach, a person signing off on everything published.',
     },
   ];
 
   const includedFeatures = [
     "Dedicated human account manager",
-    "15 Human-reviewed AI Q&A Pages/Month",
-    "50+ AI Brand Mentions/Month",
-    "AI Crawler Analysis & Monitoring 24/7",
-    "20 Free Tools Built for Your Site",
-    "LinkedIn, X, Medium Articles",
-    "Weekly Performance Reports",
-    "Competitor Analysis & Intel",
-    "Technical SEO Audits & Fixes",
+    "Lead research, enrichment & ICP scoring",
+    "Outbound sequences with context-aware replies",
+    "Ticket triage, resolution & escalation with context",
+    "Knowledge base written from real conversations",
+    "CRM hygiene & pipeline reporting",
+    "15 human-reviewed AI Q&A pages/month",
+    "50+ AI brand mentions/month",
+    "24/7 AI crawler analysis & monitoring",
+    "20 custom tools built for your site",
+    "LinkedIn, X, and Medium articles",
+    "Weekly report on every agent action",
+    "Competitor analysis & intel",
+    "Technical SEO audits & fixes",
     "LLM SEO (optimize for AI answers & citations)",
     "Entity building & knowledge graph signals",
     "Reddit distribution & community visibility",
     "Organic attribution & search-to-revenue tracking",
     "Programmatic SEO & scalable page systems",
-    "AI prompt discovery (what users ask AI)",
+    "AI prompt discovery (what buyers ask AI)",
     "Buyer decision mapping & intent content",
     "AI-first keyword research",
-    "Growth loops from search (traffic → signups → content)",
-    "Comparison page systems",
-    "Decision page frameworks",
+    "Comparison & decision page frameworks",
     "Topical authority architecture",
     "Structured content for LLM citation",
     "AI search discovery (ChatGPT, Perplexity, Claude, Gemini)",
   ];
 
   const expectedResults = [
-    { icon: Users, title: "Dedicated human support", detail: "Real account manager, not just reports" },
-    { icon: Bot, title: "50+ AI brand mentions", detail: "ChatGPT + Perplexity + Claude + Gemini" },
-    { icon: Search, title: "Rank on Google + AI", detail: "Traditional SEO + AI visibility combined" },
-    { icon: TrendingUp, title: "Results that compound", detail: "Growth accelerates month over month" },
+    { icon: Users, title: "A human on the hook", detail: "Real account manager, not a status page" },
+    { icon: Bot, title: "Agents that execute", detail: "Work completed, not recommendations filed" },
+    { icon: Search, title: "Found on Google + AI", detail: "Classic search and AI answers, together" },
+    { icon: TrendingUp, title: "Returns that compound", detail: "Every cycle teaches the next one" },
   ];
 
   return (
@@ -84,16 +87,16 @@ export const Pricing = () => {
         <div className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Sparkles size={16} />
-            <span>💰 This would cost $8,500/mo at a traditional agency</span>
+            <span>💰 Four hires to cover this would cost $28,500/mo</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            $2,000 to Change Everything
+            $2,000 to Change How Work Gets Done
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">15 human-written blogs + 15–25 high-DR backlinks + 15 AI Q&A pages + 50+ AI mentions + 20 tools = $28,500+ replacement value.</span> You get the full system for $2,000/month. Start with $1,000 upfront—pay the rest after first-month results. No contracts. Cancel anytime.
+            <span className="text-white font-semibold">SEO + sales + marketing + support agents, plus human-written content and real outreach = $28,500+ to assemble in-house.</span> You get the whole system for $2,000/month. Start with $1,000 upfront—pay the rest after first-month results. No contracts. Cancel anytime.
           </p>
           <p className="text-sm md:text-base text-gray-500 mt-4">
-            <span className="text-white font-semibold">3 engines working together:</span> Visibility (AI crawler + monitoring), Content (blogs + Q&amp;A + pSEO), Authority (backlinks + social + tools).
+            <span className="text-white font-semibold">4 agents, one shared brain:</span> SEO (visibility), Sales (pipeline), Marketing (demand), Support (retention)—each one executing end to end.
           </p>
         </div>
 
@@ -109,7 +112,7 @@ export const Pricing = () => {
 
               {/* Header */}
               <div className="text-center mb-10 pt-2">
-                <h3 className="text-xl text-gray-400 mb-4">Managed SEO + human support</h3>
+                <h3 className="text-xl text-gray-400 mb-4">Four agents + human oversight</h3>
                 
                 {/* Price Display */}
                 <div className="flex items-center justify-center gap-4 mb-4">
@@ -142,8 +145,8 @@ export const Pricing = () => {
                       <div className="w-6 h-6 rounded-lg bg-emerald-500/20 flex items-center justify-center">
                         <Zap size={14} className="text-emerald-400" />
                       </div>
-                      What we do for you
-                      <span className="text-gray-500 font-normal">(services)</span>
+                      What your agents do
+                      <span className="text-gray-500 font-normal">(the work)</span>
                     </div>
                     <div className="space-y-3">
                       {highlightedServices.map((item, i) => (
@@ -207,7 +210,7 @@ export const Pricing = () => {
                       })}
                     </div>
                     <p className="text-xs text-gray-500 mt-3 leading-relaxed">
-                      Results depend on niche + existing site baseline, but the system and deliverables are committed in your first 30 days.
+                      Results depend on your market and starting baseline, but the agents, the deliverables, and the human sign-off are all committed in your first 30 days.
                     </p>
                   </div>
                 </div>
@@ -229,7 +232,7 @@ export const Pricing = () => {
                   <span className="text-lg font-bold">Risk-Free Promise</span>
                 </div>
                 <p className="text-sm text-center text-gray-400 leading-relaxed max-w-lg mx-auto">
-                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (15–25 high-DR backlinks, 15 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
+                  If we miss <span className="text-emerald-400 font-semibold">ANY core commitment</span> in your first 30 days (four agents live, 15–25 high-DR backlinks, 15 blogs, 15 AI Q&A pages, 20 tools, or 50+ AI brand mentions), we&apos;ll <span className="text-white font-semibold">give you one free month of service.</span>
                 </p>
               </div>
             </div>
@@ -243,20 +246,20 @@ export const Pricing = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Think About the Math</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                A single SEO-generated lead can be worth $500-$5,000+ depending on your business. We&apos;re delivering 15 human-written blogs, 15–25 high-DR backlinks, 15 AI Q&A pages, 50+ AI mentions, 20 tools, and multi-platform content distribution every single month. For $2,000—starting with just $1,000 upfront in month one.
+                One junior hire covers one function, badly, for $4,000 a month. Four agents cover SEO, sales, marketing, and support—executing every day, reporting every week, and never taking a Friday off. For $2,000, starting with just $1,000 upfront.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">
-                  <div className="text-3xl font-bold text-white mb-1">$8,500+</div>
-                  <div className="text-sm text-gray-500">What agencies charge for this</div>
+                  <div className="text-3xl font-bold text-white mb-1">$28,500+</div>
+                  <div className="text-sm text-gray-500">To staff this in-house</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
                   <div className="text-3xl font-bold text-white mb-1">100+ hrs</div>
-                  <div className="text-sm text-gray-500">Time saved per month</div>
+                  <div className="text-sm text-gray-500">Given back every month</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
                   <div className="text-3xl font-bold text-emerald-400 mb-1">93%</div>
-                  <div className="text-sm text-gray-500">Cost savings with us</div>
+                  <div className="text-sm text-gray-500">Less than doing it yourself</div>
                 </div>
               </div>
             </div>
@@ -267,7 +270,7 @@ export const Pricing = () => {
         <div className={`mt-12 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <LogoStrip 
             companies={TECH_COMPANIES} 
-            label="Secure payments & enterprise infrastructure"
+            label="Enterprise infrastructure & secure payments"
             size="sm"
           />
         </div>

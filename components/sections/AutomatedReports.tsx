@@ -27,10 +27,10 @@ export const AutomatedReports = () => {
   }, []);
 
   const reportSections = [
-    { icon: TrendingUp, title: "Traffic Growth", description: "Week-over-week and month-over-month comparisons" },
-    { icon: BarChart3, title: "Keyword Rankings", description: "Position changes for all tracked keywords" },
-    { icon: Target, title: "Backlink Progress", description: "New links acquired and their impact" },
-    { icon: FileText, title: "Content Performance", description: "Which blogs are driving the most traffic" }
+    { icon: TrendingUp, title: "Every Action Taken", description: "What each agent did this week, and what it chose not to do" },
+    { icon: BarChart3, title: "Pipeline Movement", description: "Leads researched, sequences sent, replies handled, meetings booked" },
+    { icon: Target, title: "Search & Authority", description: "Rankings, AI citations, and new links—with the delta from last week" },
+    { icon: FileText, title: "Support Load", description: "Tickets closed end to end, plus what customers kept asking about" }
   ];
 
   return (
@@ -45,13 +45,13 @@ export const AutomatedReports = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <FileText size={16} />
-            <span>📊 72% of marketers can&apos;t prove SEO ROI — you will</span>
+            <span>📊 An agent you can&apos;t audit is an agent you can&apos;t trust</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Real Humans. Clear Results.
+            It Reports Back. A Human Reads It First.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">A dedicated human team runs your program.</span> Detailed reports keep you informed so you always know exactly what&apos;s happening with your SEO.
+            <span className="text-white font-semibold">Analyze, execute, report — every single cycle.</span> Your agents write down what they did and why, and a real account manager reviews it before it reaches you.
           </p>
         </div>
 
@@ -82,12 +82,12 @@ export const AutomatedReports = () => {
                   <div className="text-sm text-gray-600">Keyword Rankings Up</div>
                 </div>
                 <div className="p-4 bg-purple-50 rounded-xl">
-                  <div className="text-2xl font-bold text-purple-600">7</div>
-                  <div className="text-sm text-gray-600">New Backlinks</div>
+                  <div className="text-2xl font-bold text-purple-600">41</div>
+                  <div className="text-sm text-gray-600">Tickets Closed by Agent</div>
                 </div>
                 <div className="p-4 bg-orange-50 rounded-xl">
-                  <div className="text-2xl font-bold text-orange-600">8</div>
-                  <div className="text-sm text-gray-600">Blogs Published</div>
+                  <div className="text-2xl font-bold text-orange-600">19</div>
+                  <div className="text-sm text-gray-600">Meetings Booked</div>
                 </div>
               </div>
 
@@ -95,17 +95,17 @@ export const AutomatedReports = () => {
               <div className="p-4 bg-gray-50 rounded-xl mb-4">
                 <h4 className="font-semibold mb-2">Executive Summary</h4>
                 <p className="text-sm text-gray-600">
-                  Strong week with organic traffic up 23% from last week. 3 articles reached page 1 for target keywords. 2 high-DR backlinks secured from industry publications.
+                  Organic traffic up 23%. Support agent resolved 41 of 58 tickets without escalation. Sales agent found 3 repeat objections on pricing — a comparison page is drafted and waiting for your approval.
                 </p>
               </div>
 
               {/* Next Steps */}
               <div className="p-4 bg-emerald-500 text-white rounded-xl">
-                <h4 className="font-semibold mb-2">Next Week&apos;s Focus</h4>
+                <h4 className="font-semibold mb-2">What the Agents Do Next</h4>
                 <ul className="text-sm space-y-1">
-                  <li>• Publishing 8 new blog posts targeting competitor keywords</li>
-                  <li>• Outreach to 50 new backlink prospects</li>
-                  <li>• Launching 100 new pSEO pages</li>
+                  <li>• Publishing 8 articles against competitor keywords</li>
+                  <li>• Opening 50 new outreach threads for review</li>
+                  <li>• Rewriting 12 help answers that kept getting escalated</li>
                 </ul>
               </div>
             </div>
@@ -114,7 +114,7 @@ export const AutomatedReports = () => {
           {/* Right: Features */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <h3 className="text-2xl md:text-3xl font-bold mb-8">
-              Everything You Need to Know, Every Week
+              Everything They Did, Every Week
             </h3>
 
             <div className="space-y-6 mb-8">
@@ -138,10 +138,10 @@ export const AutomatedReports = () => {
             <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <Mail className="text-emerald-400" size={20} />
-                <h4 className="font-bold">Dedicated Human Team + Reports</h4>
+                <h4 className="font-bold">A Human Owns Your Account</h4>
               </div>
               <p className="text-gray-400 mb-4">
-                <span className="text-white font-semibold">A real human account manager owns your program.</span> Detailed reports delivered so you always know what&apos;s working and what&apos;s next.
+                <span className="text-white font-semibold">Agents execute; a person is accountable.</span> Your account manager reviews what the agents did, approves what needs judgment, and answers the phone when you call.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm">
                 <div className="flex items-center gap-2 text-gray-300">
@@ -155,11 +155,11 @@ export const AutomatedReports = () => {
             <div className="mt-8 space-y-3">
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
-                <span>No jargon — plain English anyone can understand</span>
+                <span>Plain English—no jargon, no vanity charts</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
-                <span>Actionable insights, not just data dumps</span>
+                <span>Decisions and reasoning, not raw data dumps</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />

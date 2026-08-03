@@ -1,5 +1,5 @@
-/** Primary conversion: Stripe checkout offer */
-export const BOOK_CALL_URL = 'https://buy.stripe.com/00w00l7NQ7I48Jaase4Ni00';
+/** Primary conversion: book a call */
+export const BOOK_CALL_URL = 'https://cal.com/sarath-kavuru-0uizws/30min';
 
 /** Label for primary CTA buttons site-wide */
-export const PRIMARY_CTA_LABEL = 'Get this offer';
+export const PRIMARY_CTA_LABEL = 'Connect with us';

@@ -29,23 +29,23 @@ export const AIBacklinkAgents = () => {
   const backlinkProcess = [
     {
       icon: Target,
-      title: "Prospect research",
-      description: "We map high-authority sites and angles that fit your niche—not mass lists or spam."
+      title: "The agent maps the targets",
+      description: "It scores thousands of domains for authority, relevance, and real editorial standards—then throws out the ones that would embarrass you."
     },
     {
       icon: Mail,
-      title: "Human-led outreach",
-      description: "Real pitches and follow-ups from our team to earn editorial placements."
+      title: "A human does the asking",
+      description: "Real pitches, real follow-ups, real relationships. Never template blasts—editors can smell those instantly."
     },
     {
       icon: Link2,
-      title: "Link Acquisition",
-      description: "Secure placements on DR 50-90 sites through genuine value exchange"
+      title: "The placement is earned",
+      description: "Editorial links on DR 50-90 sites, won through genuine value exchange rather than payment."
     },
     {
       icon: Shield,
-      title: "Quality Assurance",
-      description: "Every link is vetted for spam, relevance, and long-term ranking impact"
+      title: "The agent verifies and watches",
+      description: "Each link is checked for spam signals, then monitored to confirm it stays live and keeps its value."
     }
   ];
 
@@ -72,10 +72,10 @@ export const AIBacklinkAgents = () => {
             <span>🔗 One of Google&apos;s strongest ranking signals: authority links</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Backlinks That Cost Others $500 Each. Included for You.
+            The Agent Finds Them. A Human Earns Them.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We deliver 15–25 monthly. That&apos;s $6,000-$25,000+ in value — included in your $2,000. Our team runs outreach and negotiation—you stay focused on the business.
+            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000 and hours of chasing.</span> Your agent maps the targets and tracks every thread; our team sends the pitch and does the talking. 15–25 links a month — $6,000-$25,000 of value, included in your $2,000.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export const AIBacklinkAgents = () => {
                 Why Backlinks Matter
               </h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                A single backlink from a DR 90 site can boost your rankings more than 100 low-quality links. That&apos;s why we focus exclusively on premium placements that actually move the needle.
+                One link from a DR 90 site outweighs a hundred cheap ones. Volume is easy to fake and easy for Google to spot, so the agent optimizes for the placements that genuinely move rankings.
               </p>
             </div>
 
