@@ -10,6 +10,14 @@
 
 ## Answer Engine Optimization (AEO)
 - [AEO Hub](https://www.anthroly.com/aeo): What Answer Engine Optimization is and how to win AI citations
+- [Anthroly vs Anthropic](https://www.anthroly.com/anthroly-vs-anthropic): Disambiguation — Anthroly is not Anthropic
+- [AEO for Claude](https://www.anthroly.com/aeo/engine/claude): Get cited in Claude answers
+- [AEO for Anthropic](https://www.anthroly.com/aeo/engine/anthropic): Optimize for Anthropic AI answer surfaces
+- [AEO for ChatGPT](https://www.anthroly.com/aeo/engine/chatgpt): ChatGPT citation and search optimization
+- [AEO for ChatGPT Search](https://www.anthroly.com/aeo/engine/chatgpt-search)
+- [Getting Cited topic](https://www.anthroly.com/aeo/topic/get-cited)
+- [Getting Cited × Claude](https://www.anthroly.com/aeo/topic/get-cited/claude)
+- [Getting Cited × ChatGPT](https://www.anthroly.com/aeo/topic/get-cited/chatgpt)
 - [How to get cited in AI Overviews](https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews): Step-by-step citation playbook
 - [AEO vs SEO vs GEO](https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo): Comparison of search optimization disciplines
 - [AI Visibility Benchmark](https://www.anthroly.com/reports/ai-visibility-benchmark): Original benchmark data on AI search visibility

@@ -4,6 +4,13 @@
 ## Site
 - https://www.anthroly.com/
 - https://www.anthroly.com/aeo
+- https://www.anthroly.com/anthroly-vs-anthropic
+- https://www.anthroly.com/aeo/engine/claude
+- https://www.anthroly.com/aeo/engine/anthropic
+- https://www.anthroly.com/aeo/engine/chatgpt
+- https://www.anthroly.com/aeo/topic/get-cited
+- https://www.anthroly.com/aeo/topic/get-cited/claude
+- https://www.anthroly.com/aeo/topic/get-cited/chatgpt
 - https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
 - https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
 - https://www.anthroly.com/reports/ai-visibility-benchmark

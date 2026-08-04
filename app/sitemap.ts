@@ -8,6 +8,8 @@ import {
   industries,
   useCases,
   blogPosts,
+  answerEngines,
+  aeoTopics,
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
@@ -43,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/aeo', priority: 0.95 as const },
     { path: '/aeo/how-to-get-cited-in-ai-overviews', priority: 0.9 as const },
     { path: '/aeo/aeo-vs-seo-vs-geo', priority: 0.9 as const },
+    { path: '/anthroly-vs-anthropic', priority: 0.95 as const },
     { path: '/reports/ai-visibility-benchmark', priority: 0.9 as const },
     { path: '/glossary', priority: 0.9 as const },
     { path: '/blog', priority: 0.9 as const },
@@ -98,6 +101,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.85,
+    });
+  });
+
+  // AEO engine hubs (22) — heavy Anthropic / Claude / ChatGPT coverage
+  answerEngines.forEach(engine => {
+    entries.push({
+      url: `${SITE_URL}/aeo/engine/${engine.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: engine.category === 'anthropic-claude' || engine.category === 'openai-chatgpt' ? 0.85 : 0.75,
+    });
+  });
+
+  // AEO topic hubs (28)
+  aeoTopics.forEach(topic => {
+    entries.push({
+      url: `${SITE_URL}/aeo/topic/${topic.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
+  });
+
+  // AEO topic × engine two-ways (22 × 28 = 616 controlled pages)
+  aeoTopics.forEach(topic => {
+    answerEngines.forEach(engine => {
+      entries.push({
+        url: `${SITE_URL}/aeo/topic/${topic.slug}/${engine.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.65,
+      });
     });
   });
 

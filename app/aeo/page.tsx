@@ -123,6 +123,41 @@ export default function AeoHubPage() {
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
             <Link
+              href="/anthroly-vs-anthropic"
+              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
+            >
+              <h3 className="font-semibold text-white mb-2">Anthroly vs Anthropic</h3>
+              <p className="text-sm text-gray-400">Clear disambiguation—then how to get cited by Claude.</p>
+            </Link>
+            <Link
+              href="/aeo/engine/claude"
+              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
+            >
+              <h3 className="font-semibold text-white mb-2">AEO for Claude</h3>
+              <p className="text-sm text-gray-400">Get cited in Anthropic Claude answers.</p>
+            </Link>
+            <Link
+              href="/aeo/engine/chatgpt"
+              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
+            >
+              <h3 className="font-semibold text-white mb-2">AEO for ChatGPT</h3>
+              <p className="text-sm text-gray-400">Optimize for ChatGPT Search and citations.</p>
+            </Link>
+            <Link
+              href="/aeo/engine/anthropic"
+              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
+            >
+              <h3 className="font-semibold text-white mb-2">AEO for Anthropic</h3>
+              <p className="text-sm text-gray-400">Visibility in Anthropic-powered AI answers.</p>
+            </Link>
+            <Link
+              href="/aeo/topic/get-cited"
+              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
+            >
+              <h3 className="font-semibold text-white mb-2">Getting Cited (topic hub)</h3>
+              <p className="text-sm text-gray-400">Tactics + links into Claude/ChatGPT two-way guides.</p>
+            </Link>
+            <Link
               href="/aeo/how-to-get-cited-in-ai-overviews"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
@@ -142,13 +177,6 @@ export default function AeoHubPage() {
             >
               <h3 className="font-semibold text-white mb-2">AI Visibility Benchmark</h3>
               <p className="text-sm text-gray-400">Original benchmark framing from Anthroly customer results.</p>
-            </Link>
-            <Link
-              href="/glossary/answer-engine-optimization"
-              className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
-            >
-              <h3 className="font-semibold text-white mb-2">AEO glossary term</h3>
-              <p className="text-sm text-gray-400">Definition and examples in the SEO glossary.</p>
             </Link>
           </div>
         </section>

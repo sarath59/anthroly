@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const resourceCategories = [
   {
     title: 'Answer Engine Optimization',
-    description: 'AEO hub, AI Overview citation playbook, and SEO vs GEO comparison',
+    description: 'Claude, ChatGPT, Anthropic AEO hubs + 600+ topic×engine guides',
     href: '/aeo',
     icon: Sparkles,
-    count: 3,
-    countLabel: 'guides',
+    count: 600,
+    countLabel: 'AEO pages',
     gradient: 'from-emerald-500 to-teal-500',
     bgGlow: 'bg-emerald-600/10',
   },

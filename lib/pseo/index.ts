@@ -14,6 +14,10 @@ export { seoLocations, locationRegions } from './data/locations';
 export { seoIntegrations, integrationCategories } from './data/integrations';
 export { industries, industryCategories } from './data/industries';
 export { useCases } from './data/use-cases';
+export { answerEngines, anthropicClaudeEngines, chatgptEngines, getAnswerEngine } from './data/answer-engines';
+export type { AnswerEngine } from './data/answer-engines';
+export { aeoTopics, getAeoTopic } from './data/aeo-topics';
+export type { AeoTopic } from './data/aeo-topics';
 export { 
   blogPosts, 
   blogCategories, 
@@ -42,6 +46,13 @@ export {
 } from './generator';
 
 // Combinatorial Generators
+export {
+  generateAnswerEnginePage,
+  generateAeoTopicPage,
+  generateAeoTopicEnginePage,
+  getAeoScaleCounts,
+} from './aeo-generators';
+
 export {
   generatePersonaLocationPage,
   generatePersonaIndustryPage,

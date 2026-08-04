@@ -92,6 +92,21 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/aeo/engine/claude" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  AEO for Claude
+                </Link>
+              </li>
+              <li>
+                <Link href="/aeo/engine/chatgpt" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  AEO for ChatGPT
+                </Link>
+              </li>
+              <li>
+                <Link href="/anthroly-vs-anthropic" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Anthroly vs Anthropic
+                </Link>
+              </li>
+              <li>
                 <Link href="/reports/ai-visibility-benchmark" className="text-gray-400 hover:text-white transition-colors duration-200">
                   AI Visibility Benchmark
                 </Link>
@@ -144,8 +159,15 @@ export const Footer = () => {
 
         <Separator className="my-8 bg-gray-800" />
 
-        <div className="text-center text-gray-400 text-sm">
+        <div className="text-center text-gray-400 text-sm space-y-2">
           <p>&copy; {currentYear} Anthroly. All rights reserved.</p>
+          <p className="text-xs text-gray-500 max-w-2xl mx-auto">
+            Anthroly is an independent AI agents and SEO company. We are not affiliated with Anthropic,
+            OpenAI, or other AI model providers.{' '}
+            <Link href="/anthroly-vs-anthropic" className="text-gray-400 hover:text-emerald-400 underline-offset-2 hover:underline">
+              Anthroly vs Anthropic
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
