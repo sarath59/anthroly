@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { useCases } from '@/lib/pseo/data/use-cases';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'SEO Use Cases | How to Use SEO for Your Goals | Anthroly',
@@ -9,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Use Cases | Anthroly',
     description: 'AI-powered SEO strategies for 18+ business use cases.',
-    url: 'https://anthroly.com/use-cases',
+    url: absoluteUrl('/use-cases'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/use-cases',
+    canonical: absoluteUrl('/use-cases'),
   },
 };
 

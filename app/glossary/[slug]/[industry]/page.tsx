@@ -7,6 +7,7 @@ import {
   generatePageStructuredData 
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { 
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: page.seo.title,
       description: page.seo.metaDescription,
-      url: `https://www.anthroly.com${page.url}`,
+      url: absoluteUrl(page.url),
       type: 'article',
       siteName: 'Anthroly',
     },
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.seo.metaDescription,
     },
     alternates: {
-      canonical: `https://www.anthroly.com${page.url}`,
+      canonical: absoluteUrl(page.url),
     },
   };
 }

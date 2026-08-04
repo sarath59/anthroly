@@ -2,17 +2,28 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { 
   targetPersonas, 
-  seoLocations,
-  industries,
   generatePersonaPage, 
   generatePageStructuredData,
   generatePersonaLocationPage,
+  generatePersonaIndustryPage,
   generatePersonaIndustryLocationPage,
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { segments: string[] };
+}
+
+/**
+ * Resolve /for/[persona]/[second] — second segment may be a location or industry.
+ * Location wins if both ever collided (they currently do not).
+ */
+function generatePersonaTwoWayPage(personaSlug: string, secondSlug: string) {
+  return (
+    generatePersonaLocationPage(personaSlug, secondSlug) ??
+    generatePersonaIndustryPage(personaSlug, secondSlug)
+  );
 }
 
 /**
@@ -20,6 +31,7 @@ interface PageProps {
  * Handles:
  * - /for/[persona] - single persona page
  * - /for/[persona]/[location] - persona + location combo
+ * - /for/[persona]/[industry] - persona + industry combo
  * - /for/[persona]/[industry]/[location] - persona + industry + location combo
  */
 
@@ -55,33 +67,35 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: page.seo.title,
       description: page.seo.metaDescription,
       keywords: [page.seo.primaryKeyword, ...page.seo.secondaryKeywords],
-      alternates: { canonical: `https://anthroly.com${page.url}` },
+      alternates: { canonical: absoluteUrl(page.url) },
     };
   }
   
   if (segments.length === 2) {
-    // Persona + Location
-    const page = generatePersonaLocationPage(segments[0], segments[1]);
+    // Persona + Location OR Persona + Industry
+    const page = generatePersonaTwoWayPage(segments[0], segments[1]);
     if (!page) return { title: 'Not Found' };
     
     return {
       title: page.seo.title,
       description: page.seo.metaDescription,
       keywords: [page.seo.primaryKeyword, ...page.seo.secondaryKeywords],
-      alternates: { canonical: `https://anthroly.com${page.url}` },
+      alternates: { canonical: absoluteUrl(page.url) },
     };
   }
   
   if (segments.length === 3) {
-    // Persona + Industry + Location
+    // Thin 3-way template: keep for users, do not ask Google to index
     const page = generatePersonaIndustryLocationPage(segments[0], segments[1], segments[2]);
     if (!page) return { title: 'Not Found' };
+    const parentUrl = absoluteUrl(`/for/${segments[0]}/${segments[1]}`);
     
     return {
       title: page.seo.title,
       description: page.seo.metaDescription,
       keywords: [page.seo.primaryKeyword, ...page.seo.secondaryKeywords],
-      alternates: { canonical: `https://anthroly.com${page.url}` },
+      robots: { index: false, follow: true },
+      alternates: { canonical: parentUrl },
     };
   }
   
@@ -99,8 +113,8 @@ export default function ForPage({ params }: PageProps) {
     if (!persona) notFound();
     page = generatePersonaPage(persona);
   } else if (segments.length === 2) {
-    // Persona + Location
-    page = generatePersonaLocationPage(segments[0], segments[1]);
+    // Persona + Location OR Persona + Industry
+    page = generatePersonaTwoWayPage(segments[0], segments[1]);
     if (!page) notFound();
   } else if (segments.length === 3) {
     // Persona + Industry + Location

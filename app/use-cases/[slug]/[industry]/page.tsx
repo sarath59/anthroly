@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { PSEOPageLayout } from '@/components/pseo/PSEOPageLayout';
 import { generateUseCaseIndustryPage, getAllUseCaseIndustrySlugs } from '@/lib/pseo/combinations';
 import { generatePageStructuredData } from '@/lib/pseo/schema';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { slug: string; industry: string };
@@ -27,11 +28,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: page.seo.title,
       description: page.seo.metaDescription,
-      url: `https://anthroly.com${page.url}`,
+      url: absoluteUrl(page.url),
       type: 'website',
     },
     alternates: {
-      canonical: `https://anthroly.com${page.url}`,
+      canonical: absoluteUrl(page.url),
     },
   };
 }

@@ -4,6 +4,7 @@
  */
 
 import { PSEOPage, FAQ } from './types';
+import { SITE_URL, absoluteUrl } from '../site';
 
 export interface BreadcrumbItem {
   name: string;
@@ -39,7 +40,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]): object {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://anthroly.com${item.url}`,
+      item: absoluteUrl(item.url),
     })),
   };
 }
@@ -52,8 +53,8 @@ export function generateOrganizationSchema(): object {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Anthroly',
-    url: 'https://anthroly.com',
-    logo: 'https://anthroly.com/logo.png',
+    url: SITE_URL,
+    logo: absoluteUrl('/logo.png'),
     description: 'AI-powered SEO agency delivering automated backlinks, content, and search visibility optimization.',
     sameAs: [
       'https://twitter.com/anthroly',
@@ -62,7 +63,7 @@ export function generateOrganizationSchema(): object {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      url: 'https://anthroly.com/#pricing',
+      url: absoluteUrl('/#pricing'),
     },
     offers: {
       '@type': 'Offer',
@@ -90,25 +91,25 @@ export function generateArticleSchema(
     '@type': 'Article',
     headline: title,
     description: description,
-    url: `https://anthroly.com${url}`,
+    url: absoluteUrl(url),
     datePublished: datePublished,
     dateModified: dateModified || datePublished,
     author: {
       '@type': 'Organization',
       name: 'Anthroly',
-      url: 'https://anthroly.com',
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
       name: 'Anthroly',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://anthroly.com/logo.png',
+        url: absoluteUrl('/logo.png'),
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://anthroly.com${url}`,
+      '@id': absoluteUrl(url),
     },
   };
 }
@@ -128,12 +129,12 @@ export function generateServiceSchema(
     '@type': 'Service',
     name: name,
     description: description,
-    url: `https://anthroly.com${url}`,
+    url: absoluteUrl(url),
     serviceType: serviceType,
     provider: {
       '@type': 'Organization',
       name: 'Anthroly',
-      url: 'https://anthroly.com',
+      url: SITE_URL,
     },
   };
 
@@ -183,7 +184,7 @@ export function generateDefinedTermSchema(
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'SEO and AI Marketing Glossary',
-      url: 'https://anthroly.com/glossary',
+      url: absoluteUrl('/glossary'),
     },
   };
 }
@@ -206,7 +207,7 @@ export function generateItemListSchema(
       item: {
         '@type': 'Thing',
         name: item.name,
-        url: `https://anthroly.com${item.url}`,
+        url: absoluteUrl(item.url),
         description: item.description,
       },
     })),

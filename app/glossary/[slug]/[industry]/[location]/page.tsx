@@ -8,6 +8,7 @@ import {
   generatePageStructuredData 
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { 
@@ -32,14 +33,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const parentUrl = absoluteUrl(`/glossary/${params.slug}/${params.industry}`);
+
   return {
     title: page.seo.title,
     description: page.seo.metaDescription,
     keywords: [page.seo.primaryKeyword, ...page.seo.secondaryKeywords],
+    robots: { index: false, follow: true },
     openGraph: {
       title: page.seo.title,
       description: page.seo.metaDescription,
-      url: `https://www.anthroly.com${page.url}`,
+      url: parentUrl,
       type: 'article',
       siteName: 'Anthroly',
     },
@@ -49,7 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.seo.metaDescription,
     },
     alternates: {
-      canonical: `https://www.anthroly.com${page.url}`,
+      canonical: parentUrl,
     },
   };
 }

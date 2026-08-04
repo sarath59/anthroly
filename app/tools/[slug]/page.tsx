@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import { getFreeToolBySlug, getAllFreeToolSlugs } from '@/lib/data/free-tools';
 import { ToolRenderer } from '@/components/tools/ToolRenderer';
 import { Button } from '@/components/ui/button';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,11 +27,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: tool.metaTitle,
       description: tool.metaDescription,
-      url: `https://www.anthroly.com/tools/${tool.slug}`,
+      url: absoluteUrl(`/tools/${tool.slug}`),
       type: 'website',
     },
     alternates: {
-      canonical: `https://www.anthroly.com/tools/${tool.slug}`,
+      canonical: absoluteUrl(`/tools/${tool.slug}`),
     },
   };
 }

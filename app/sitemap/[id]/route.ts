@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/site';
 import { 
   seoGlossaryTerms, 
   targetPersonas, 
@@ -8,7 +9,6 @@ import {
   useCases,
 } from '@/lib/pseo';
 
-const BASE_URL = 'https://www.anthroly.com';
 
 interface SitemapEntry {
   url: string;
@@ -56,7 +56,7 @@ function generateCoreSitemap(): SitemapEntry[] {
 
   indexPages.forEach(page => {
     entries.push({
-      url: `${BASE_URL}${page.path}`,
+      url: `${SITE_URL}${page.path}`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: page.priority,
@@ -66,7 +66,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Glossary terms (60)
   seoGlossaryTerms.forEach(term => {
     entries.push({
-      url: `${BASE_URL}/glossary/${term.slug}`,
+      url: `${SITE_URL}/glossary/${term.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -76,7 +76,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Personas (10)
   targetPersonas.forEach(persona => {
     entries.push({
-      url: `${BASE_URL}/for/${persona.slug}`,
+      url: `${SITE_URL}/for/${persona.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -86,7 +86,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Locations (149)
   seoLocations.forEach(location => {
     entries.push({
-      url: `${BASE_URL}/ai-seo-agency/${location.slug}`,
+      url: `${SITE_URL}/ai-seo-agency/${location.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -96,7 +96,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Industries (20)
   industries.forEach(industry => {
     entries.push({
-      url: `${BASE_URL}/industries/${industry.slug}`,
+      url: `${SITE_URL}/industries/${industry.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -106,7 +106,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Use Cases (18)
   useCases.forEach(useCase => {
     entries.push({
-      url: `${BASE_URL}/use-cases/${useCase.slug}`,
+      url: `${SITE_URL}/use-cases/${useCase.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -116,7 +116,7 @@ function generateCoreSitemap(): SitemapEntry[] {
   // Integrations (14)
   seoIntegrations.forEach(integration => {
     entries.push({
-      url: `${BASE_URL}/integrations/${integration.slug}`,
+      url: `${SITE_URL}/integrations/${integration.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -128,7 +128,7 @@ function generateCoreSitemap(): SitemapEntry[] {
     for (let j = i + 1; j < seoTools.length; j++) {
       if (seoTools[i].category === seoTools[j].category) {
         entries.push({
-          url: `${BASE_URL}/compare/${seoTools[i].slug}-vs-${seoTools[j].slug}`,
+          url: `${SITE_URL}/compare/${seoTools[i].slug}-vs-${seoTools[j].slug}`,
           lastModified: now,
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -151,7 +151,7 @@ function generateTwoWayPart1Sitemap(): SitemapEntry[] {
   targetPersonas.forEach(persona => {
     seoLocations.forEach(location => {
       entries.push({
-        url: `${BASE_URL}/for/${persona.slug}/${location.slug}`,
+        url: `${SITE_URL}/for/${persona.slug}/${location.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -163,7 +163,7 @@ function generateTwoWayPart1Sitemap(): SitemapEntry[] {
   industries.forEach(industry => {
     seoLocations.forEach(location => {
       entries.push({
-        url: `${BASE_URL}/industries/${industry.slug}/${location.slug}`,
+        url: `${SITE_URL}/industries/${industry.slug}/${location.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -186,7 +186,7 @@ function generateTwoWayPart2Sitemap(): SitemapEntry[] {
   seoGlossaryTerms.forEach(term => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/glossary/${term.slug}/${industry.slug}`,
+        url: `${SITE_URL}/glossary/${term.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -198,7 +198,7 @@ function generateTwoWayPart2Sitemap(): SitemapEntry[] {
   useCases.forEach(useCase => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
+        url: `${SITE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -210,116 +210,13 @@ function generateTwoWayPart2Sitemap(): SitemapEntry[] {
   seoIntegrations.forEach(integration => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/integrations/${integration.slug}/${industry.slug}`,
+        url: `${SITE_URL}/integrations/${integration.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
       });
     });
   });
-
-  return entries;
-}
-
-// ============================================================================
-// SITEMAP 3-5: THREE-WAY - Persona×Industry×Location (29,800 pages in 3 chunks)
-// ============================================================================
-function generateThreeWayChunk(chunkIndex: number): SitemapEntry[] {
-  const now = new Date().toISOString();
-  const entries: SitemapEntry[] = [];
-  
-  const CHUNK_SIZE = 10000;
-  let count = 0;
-  const skip = chunkIndex * CHUNK_SIZE;
-  let added = 0;
-
-  outerLoop:
-  for (const persona of targetPersonas) {
-    for (const industry of industries) {
-      for (const location of seoLocations) {
-        if (count >= skip && added < CHUNK_SIZE) {
-          entries.push({
-            url: `${BASE_URL}/for/${persona.slug}/${industry.slug}/${location.slug}`,
-            lastModified: now,
-            changeFrequency: 'monthly',
-            priority: 0.5,
-          });
-          added++;
-        }
-        count++;
-        if (added >= CHUNK_SIZE) break outerLoop;
-      }
-    }
-  }
-
-  return entries;
-}
-
-// ============================================================================
-// SITEMAP 6-11: GLOSSARY THREE-WAY - Glossary×Industry×Location (178,800 pages, chunked)
-// This is a HIGH VALUE combination for local SEO terms
-// ============================================================================
-function generateGlossaryThreeWayChunk(chunkIndex: number): SitemapEntry[] {
-  const now = new Date().toISOString();
-  const entries: SitemapEntry[] = [];
-  
-  const CHUNK_SIZE = 30000; // Larger chunks, stay under 50K limit
-  let count = 0;
-  const skip = chunkIndex * CHUNK_SIZE;
-  let added = 0;
-
-  outerLoop:
-  for (const term of seoGlossaryTerms) {
-    for (const industry of industries) {
-      for (const location of seoLocations) {
-        if (count >= skip && added < CHUNK_SIZE) {
-          entries.push({
-            url: `${BASE_URL}/glossary/${term.slug}/${industry.slug}/${location.slug}`,
-            lastModified: now,
-            changeFrequency: 'monthly',
-            priority: 0.4,
-          });
-          added++;
-        }
-        count++;
-        if (added >= CHUNK_SIZE) break outerLoop;
-      }
-    }
-  }
-
-  return entries;
-}
-
-// ============================================================================
-// SITEMAP 12-13: USE CASE THREE-WAY - UseCase×Industry×Location (53,640 pages)
-// ============================================================================
-function generateUseCaseThreeWayChunk(chunkIndex: number): SitemapEntry[] {
-  const now = new Date().toISOString();
-  const entries: SitemapEntry[] = [];
-  
-  const CHUNK_SIZE = 30000;
-  let count = 0;
-  const skip = chunkIndex * CHUNK_SIZE;
-  let added = 0;
-
-  outerLoop:
-  for (const useCase of useCases) {
-    for (const industry of industries) {
-      for (const location of seoLocations) {
-        if (count >= skip && added < CHUNK_SIZE) {
-          entries.push({
-            url: `${BASE_URL}/use-cases/${useCase.slug}/${industry.slug}/${location.slug}`,
-            lastModified: now,
-            changeFrequency: 'monthly',
-            priority: 0.4,
-          });
-          added++;
-        }
-        count++;
-        if (added >= CHUNK_SIZE) break outerLoop;
-      }
-    }
-  }
 
   return entries;
 }
@@ -346,32 +243,16 @@ export async function GET(
       entries = generateTwoWayPart2Sitemap();
       break;
     
-    // Three-way: Persona×Industry×Location (29,800 in 3 chunks)
+    // Former three-way sitemap chunks — empty on purpose.
+    // Thin 3-way URLs are noindex and must not be re-submitted.
     case 3:
-      entries = generateThreeWayChunk(0);
-      break;
     case 4:
-      entries = generateThreeWayChunk(1);
-      break;
     case 5:
-      entries = generateThreeWayChunk(2);
-      break;
-    
-    // Three-way: Glossary×Industry×Location (178,800 in 6 chunks of 30K)
-    // We'll limit to first 60K (2 chunks) to stay reasonable
     case 6:
-      entries = generateGlossaryThreeWayChunk(0);
-      break;
     case 7:
-      entries = generateGlossaryThreeWayChunk(1);
-      break;
-    
-    // Three-way: UseCase×Industry×Location (53,640 in 2 chunks)
     case 8:
-      entries = generateUseCaseThreeWayChunk(0);
-      break;
     case 9:
-      entries = generateUseCaseThreeWayChunk(1);
+      entries = [];
       break;
     
     default:

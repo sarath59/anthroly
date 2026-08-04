@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { SITE_URL, absoluteUrl } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Calendar, Clock, Tag, User, Share2, BookOpen } from 'lucide-react';
 import { blogPosts, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/pseo/data/blog-posts';
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: post.title,
       description: post.metaDescription,
-      url: `https://anthroly.com/blog/${post.slug}`,
+      url: absoluteUrl(`/blog/${post.slug}`),
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       tags: post.tags,
     },
     alternates: {
-      canonical: `https://anthroly.com/blog/${post.slug}`,
+      canonical: absoluteUrl(`/blog/${post.slug}`),
     },
   };
 }
@@ -55,22 +55,22 @@ function generateArticleSchema(post: NonNullable<ReturnType<typeof getBlogPostBy
     author: {
       '@type': 'Organization',
       name: post.author,
-      url: 'https://anthroly.com',
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
       name: 'Anthroly',
-      url: 'https://anthroly.com',
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://anthroly.com/logo.png',
+        url: absoluteUrl('/logo.png'),
       },
     },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://anthroly.com/blog/${post.slug}`,
+      '@id': absoluteUrl(`/blog/${post.slug}`),
     },
     keywords: [post.primaryKeyword, ...post.secondaryKeywords].join(', '),
   };

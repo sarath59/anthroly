@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { absoluteUrl } from '@/lib/site';
 
 /**
  * ROBOTS.TXT - Google & AI Bot Configuration
@@ -115,8 +116,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    // Sitemap index pointing to 10 individual sitemaps
-    // Split to stay under Google's 50K URL / 50MB limits
-    sitemap: 'https://www.anthroly.com/sitemap.xml',
+    // Indexable URLs only (thin three-way combos excluded from sitemap)
+    sitemap: absoluteUrl('/sitemap.xml'),
   };
 }

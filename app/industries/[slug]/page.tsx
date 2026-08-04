@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { industries } from '@/lib/pseo/data/industries';
 import { seoLocations } from '@/lib/pseo/data/locations';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { slug: string };
@@ -25,11 +26,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${industry.name} SEO | Anthroly`,
       description: `AI-powered SEO for ${industry.name.toLowerCase()} companies.`,
-      url: `https://anthroly.com/industries/${industry.slug}`,
+      url: absoluteUrl(`/industries/${industry.slug}`),
       type: 'website',
     },
     alternates: {
-      canonical: `https://anthroly.com/industries/${industry.slug}`,
+      canonical: absoluteUrl(`/industries/${industry.slug}`),
     },
   };
 }
@@ -40,6 +41,9 @@ export default function IndustryPage({ params }: PageProps) {
   if (!industry) {
     notFound();
   }
+
+  // After notFound(), industry is defined (narrow for language servers that miss never-return typing)
+  const data = industry!;
   
   // Get featured locations for this industry
   const featuredLocations = seoLocations.slice(0, 12);
@@ -59,17 +63,17 @@ export default function IndustryPage({ params }: PageProps) {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               AI SEO for{' '}
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-transparent bg-clip-text">
-                {industry.name}
+                {data.name}
               </span>
             </h1>
             <p className="text-xl text-zinc-400 mb-8">
-              {industry.description}
+              {data.description}
             </p>
             <Link
               href="/#ai-crawler"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
             >
-              Get Your Free {industry.name} SEO Analysis
+              Get Your Free {data.name} SEO Analysis
             </Link>
           </div>
         </div>
@@ -78,9 +82,9 @@ export default function IndustryPage({ params }: PageProps) {
       {/* Pain Points */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8">{industry.name} SEO Challenges</h2>
+          <h2 className="text-3xl font-bold mb-8">{data.name} SEO Challenges</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {industry.painPoints.map((painPoint, index) => (
+            {data.painPoints.map((painPoint, index) => (
               <div key={index} className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
@@ -89,7 +93,7 @@ export default function IndustryPage({ params }: PageProps) {
                   <div>
                     <h3 className="font-semibold text-zinc-100 mb-2">{painPoint}</h3>
                     <p className="text-zinc-400 text-sm">
-                      A common challenge for {industry.name.toLowerCase()} companies that our team addresses with hands-on SEO and content.
+                      A common challenge for {data.name.toLowerCase()} companies that our team addresses with hands-on SEO and content.
                     </p>
                   </div>
                 </div>
@@ -102,9 +106,9 @@ export default function IndustryPage({ params }: PageProps) {
       {/* SEO Needs */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8">What {industry.name} Companies Need</h2>
+          <h2 className="text-3xl font-bold mb-8">What {data.name} Companies Need</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industry.seoNeeds.map((need, index) => (
+            {data.seoNeeds.map((need, index) => (
               <div key={index} className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl">
                 <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-4">
                   <span className="text-purple-400 text-lg">✓</span>
@@ -119,15 +123,15 @@ export default function IndustryPage({ params }: PageProps) {
       {/* Locations Grid */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-4">{industry.name} SEO by Location</h2>
+          <h2 className="text-3xl font-bold mb-4">{data.name} SEO by Location</h2>
           <p className="text-zinc-400 mb-8">
-            Get location-specific {industry.name.toLowerCase()} SEO in {seoLocations.length}+ cities worldwide.
+            Get location-specific {data.name.toLowerCase()} SEO in {seoLocations.length}+ cities worldwide.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {featuredLocations.map((location) => (
               <Link
                 key={location.slug}
-                href={`/industries/${industry.slug}/${location.slug}`}
+                href={`/industries/${data.slug}/${location.slug}`}
                 className="p-4 bg-zinc-900/50 border border-zinc-800 rounded-lg hover:border-purple-500/50 transition-all text-center"
               >
                 <div className="font-medium text-zinc-100">{location.city}</div>
@@ -144,9 +148,9 @@ export default function IndustryPage({ params }: PageProps) {
       {/* CTA */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Dominate {industry.name} Search?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Dominate {data.name} Search?</h2>
           <p className="text-zinc-400 mb-8">
-            Get a free AI analysis showing your {industry.name.toLowerCase()} search visibility and opportunities.
+            Get a free AI analysis showing your {data.name.toLowerCase()} search visibility and opportunities.
           </p>
           <Link
             href="/#ai-crawler"

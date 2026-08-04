@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useCases } from '@/lib/pseo/data/use-cases';
 import { industries } from '@/lib/pseo/data/industries';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { slug: string };
@@ -24,11 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${useCase.name} SEO | Anthroly`,
       description: `AI-powered SEO for ${useCase.name.toLowerCase()}.`,
-      url: `https://anthroly.com/use-cases/${useCase.slug}`,
+      url: absoluteUrl(`/use-cases/${useCase.slug}`),
       type: 'website',
     },
     alternates: {
-      canonical: `https://anthroly.com/use-cases/${useCase.slug}`,
+      canonical: absoluteUrl(`/use-cases/${useCase.slug}`),
     },
   };
 }

@@ -11,7 +11,8 @@ import { seoIntegrations } from './data/integrations';
 import { seoGlossaryTerms } from './data/seo-glossary';
 import { industries, Industry } from './data/industries';
 import { useCases, UseCase } from './data/use-cases';
-import { validatePage } from './generator';
+import { getExistingRelatedTerms, validatePage } from './generator';
+import { SITE_URL } from '../site';
 
 // ============================================================================
 // PERSONA + LOCATION COMBINATIONS
@@ -118,7 +119,7 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
       '@type': 'Service',
       name: `AI SEO for ${persona.name}s in ${location.city}`,
       description: `AI-powered SEO services for ${persona.title}s in ${locationName}`,
-      provider: { '@type': 'Organization', name: 'Anthroly', url: 'https://anthroly.com' },
+      provider: { '@type': 'Organization', name: 'Anthroly', url: SITE_URL },
       areaServed: { '@type': 'City', name: location.city },
       audience: { '@type': 'Audience', audienceType: persona.name },
     },
@@ -164,6 +165,155 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
   page.wordCount = validation.metrics.wordCount;
   page.qualityScore = validation.metrics.uniquenessScore;
   
+  return page;
+}
+
+// ============================================================================
+// PERSONA + INDUSTRY COMBINATIONS
+// Example: "AI SEO for Marketing Directors in Manufacturing"
+// Total: 10 personas × 20 industries = 200 pages
+// ============================================================================
+
+export function generatePersonaIndustryPage(personaSlug: string, industrySlug: string): PSEOPage | null {
+  const persona = targetPersonas.find(p => p.slug === personaSlug);
+  const industry = industries.find(i => i.slug === industrySlug);
+
+  if (!persona || !industry) return null;
+
+  const slug = `for/${persona.slug}/${industry.slug}`;
+  const url = `/${slug}`;
+
+  const sections: ContentSection[] = [
+    {
+      heading: `Why ${persona.name}s in ${industry.name} Need AI-Powered SEO`,
+      body: `As a ${persona.title} in ${industry.name.toLowerCase()}, you sit at the intersection of role pressure and industry competition. ${industry.painPoints[0]} Traditional SEO agencies move too slowly for that reality. Managed AI SEO gives you consistent execution—content, links, and technical work—without building an in-house team.`,
+    },
+    {
+      heading: `The ${industry.name} Challenge for ${persona.name}s`,
+      body: `${persona.name}s in ${industry.name.toLowerCase()} face a stacked set of constraints: the priorities of your role, plus industry-specific discovery problems buyers actually have:`,
+      listItems: [
+        ...persona.painPoints.slice(0, 3),
+        ...industry.painPoints.slice(0, 3),
+      ],
+    },
+    {
+      heading: `What ${persona.name}s Need from ${industry.name} SEO`,
+      body: `Winning organic growth in ${industry.name.toLowerCase()} means shipping the assets your buyers search for—and the systems that keep them ranking:`,
+      listItems: [
+        ...persona.goals.slice(0, 3),
+        ...industry.seoNeeds.slice(0, 4),
+      ],
+    },
+    {
+      heading: `How Anthroly Serves ${persona.name}s in ${industry.name}`,
+      body: `Our managed SEO service is built for ${persona.name}s who need ${industry.name.toLowerCase()} results without the operational drag:
+
+**Industry-Specific Content**: 15 human-written blogs and 15 AI Q&A pages monthly, mapped to ${industry.name.toLowerCase()} keywords like ${industry.keywords.slice(0, 2).join(' and ')}.
+
+**Authority Building**: 15–25 high-DR backlinks every month from real editorial placements—not link farms.
+
+**Role-Aligned Reporting**: Clear weekly updates a ${persona.title} can act on, not vanity dashboards.
+
+**AI Search Visibility**: Optimization for Google and AI answers (ChatGPT, Perplexity, Claude, Gemini) where ${industry.name.toLowerCase()} buyers research solutions.`,
+    },
+    {
+      heading: `Results ${persona.name}s See in ${industry.name}`,
+      body: `${persona.name}s using Anthroly in ${industry.name.toLowerCase()} typically see:
+
+• **15–25 high-quality backlinks monthly** with average DR 70+
+• **30+ pages of content** published every month (blogs + AI Q&A)
+• **Faster ranking movement** on industry and role-intent keywords
+• **Lower CAC** as organic and AI referral channels compound
+• **Hours returned every week** that used to go to SEO ops`,
+    },
+  ];
+
+  const faq: FAQ[] = [
+    {
+      question: `Is Anthroly built for ${persona.name}s in ${industry.name}?`,
+      answer: `Yes. We tailor strategy to both your role as a ${persona.title} and the realities of ${industry.name.toLowerCase()}—including content themes, competitive dynamics, and the keywords your buyers actually use.`,
+    },
+    {
+      question: `How is ${industry.name} SEO different for ${persona.name}s?`,
+      answer: `${industry.name} SEO requires focus on ${industry.seoNeeds[0].toLowerCase()} and industry language around ${industry.keywords[0]}. As a ${persona.title}, you also need clear reporting and predictable delivery—exactly what our managed service is designed for.`,
+    },
+    {
+      question: `How quickly will ${persona.name}s in ${industry.name} see results?`,
+      answer: `Most clients see measurable delivery in the first 30 days (content live, links acquired, AI visibility tracked), with compounding ranking and traffic gains over months 2–3.`,
+    },
+    {
+      question: `What does it cost?`,
+      answer: `Anthroly is $2,000/month. Month one starts at $1,000 upfront, with the balance after first-month results. No long-term contracts—cancel anytime.`,
+    },
+  ];
+
+  const internalLinks: InternalLink[] = [
+    { url: `/for/${persona.slug}`, anchorText: `AI SEO for ${persona.name}s`, context: 'Persona page' },
+    { url: `/industries/${industry.slug}`, anchorText: `${industry.name} SEO`, context: 'Industry page' },
+    { url: '/#ai-crawler', anchorText: 'Free AI Crawler Analysis', context: 'Lead magnet' },
+    { url: '/#pricing', anchorText: 'View Pricing', context: 'Conversion' },
+    { url: '/glossary/ai-seo', anchorText: 'What is AI SEO?', context: 'Educational' },
+  ];
+
+  const relatedPages: RelatedPage[] = [
+    { url: `/for/${persona.slug}`, title: `AI SEO for ${persona.name}s`, playbook: 'personas', relevanceScore: 95 },
+    { url: `/industries/${industry.slug}`, title: `${industry.name} SEO`, playbook: 'personas', relevanceScore: 95 },
+    { url: '/glossary/ai-seo', title: 'AI SEO Guide', playbook: 'glossary', relevanceScore: 80 },
+  ];
+
+  const schema: SchemaData = {
+    type: 'Service',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: `AI SEO for ${persona.name}s in ${industry.name}`,
+      description: `AI-powered SEO services for ${persona.title}s in the ${industry.name.toLowerCase()} industry`,
+      provider: { '@type': 'Organization', name: 'Anthroly', url: SITE_URL },
+      audience: { '@type': 'Audience', audienceType: persona.name },
+      serviceType: `${industry.name} SEO`,
+    },
+  };
+
+  const page: PSEOPage = {
+    url,
+    slug,
+    playbookType: 'personas',
+    seo: {
+      title: `AI SEO for ${persona.name}s in ${industry.name} | Anthroly`,
+      metaDescription: `Managed SEO for ${persona.name}s in ${industry.name.toLowerCase()}. Get 15 blogs/month, 15–25 high-DR backlinks, and industry-specific optimization.`,
+      primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')} ${industry.name.toLowerCase()}`,
+      secondaryKeywords: [
+        `${industry.name.toLowerCase()} seo for ${persona.name.toLowerCase()}`,
+        `${persona.name.toLowerCase()} ${industry.name.toLowerCase()} marketing`,
+        `ai seo ${industry.name.toLowerCase()}`,
+      ],
+      searchIntent: 'commercial',
+    },
+    content: {
+      h1: `AI SEO for ${persona.name}s in ${industry.name}`,
+      introduction: `You're a ${persona.title} responsible for growth in ${industry.name.toLowerCase()}. ${industry.painPoints[0]} Anthroly's managed SEO service gives ${persona.name}s enterprise-grade content, links, and AI-search visibility—without hiring a full SEO team.`,
+      sections,
+      faq,
+      callToAction: {
+        headline: `Ready to Grow ${industry.name} Organic Demand?`,
+        description: `Get a free AI Crawler Analysis showing how visible your ${industry.name.toLowerCase()} brand is today—and what it takes to outrank competitors.`,
+        buttonText: 'Get Your Free Analysis',
+        buttonUrl: '/#ai-crawler',
+      },
+    },
+    schema,
+    internalLinks,
+    relatedPages,
+    dataRequirementsUsed: ['persona', 'industry', 'painPoints', 'goals', 'seoNeeds'],
+    generatedAt: new Date().toISOString(),
+    wordCount: 0,
+    qualityScore: 0,
+  };
+
+  const validation = validatePage(page);
+  page.wordCount = validation.metrics.wordCount;
+  page.qualityScore = validation.metrics.uniquenessScore;
+
   return page;
 }
 
@@ -264,7 +414,7 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
       '@type': 'Service',
       name: `AI SEO for ${industry.name} in ${location.city}`,
       description: `AI-powered SEO services for ${industry.name.toLowerCase()} companies in ${locationName}`,
-      provider: { '@type': 'Organization', name: 'Anthroly', url: 'https://anthroly.com' },
+      provider: { '@type': 'Organization', name: 'Anthroly', url: SITE_URL },
       areaServed: { '@type': 'City', name: location.city },
     },
   };
@@ -375,11 +525,11 @@ export function generateGlossaryIndustryPage(termSlug: string, industrySlug: str
     { url: `/industries/${industry.slug}`, anchorText: `${industry.name} SEO`, context: 'Industry page' },
     { url: '/#ai-crawler', anchorText: 'Free Analysis', context: 'Lead magnet' },
     { url: '/glossary', anchorText: 'SEO Glossary', context: 'Glossary index' },
-    ...(term.relatedTerms.slice(0, 2).map(rt => ({
+    ...getExistingRelatedTerms(term.relatedTerms, 2).map(rt => ({
       url: `/glossary/${rt}`,
       anchorText: rt.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       context: 'Related term',
-    }))),
+    })),
   ];
   
   const relatedPages: RelatedPage[] = [
@@ -882,7 +1032,7 @@ export function generatePersonaIndustryLocationPage(
       '@type': 'Service',
       name: `${industry.name} SEO for ${persona.name}s in ${location.city}`,
       description: `AI-powered ${industry.name.toLowerCase()} SEO services for ${persona.title}s in ${locationName}`,
-      provider: { '@type': 'Organization', name: 'Anthroly', url: 'https://anthroly.com' },
+      provider: { '@type': 'Organization', name: 'Anthroly', url: SITE_URL },
       areaServed: { '@type': 'City', name: location.city },
       audience: { '@type': 'Audience', audienceType: persona.name },
     },
@@ -1259,6 +1409,7 @@ export function getCombinationCounts() {
   // Two-way combinations
   const twoWayTotal = 
     (personaCount * locationCount) +
+    (personaCount * industryCount) +
     (industryCount * locationCount) +
     (glossaryCount * industryCount) +
     (useCaseCount * industryCount) +
@@ -1286,6 +1437,7 @@ export function getCombinationCounts() {
       useCases: useCaseCount,
       toolPairs,
       personaLocation: personaCount * locationCount,
+      personaIndustry: personaCount * industryCount,
       industryLocation: industryCount * locationCount,
       glossaryIndustry: glossaryCount * industryCount,
       useCaseIndustry: useCaseCount * industryCount,
@@ -1304,6 +1456,16 @@ export function getAllPersonaLocationSlugs(): string[] {
   targetPersonas.forEach(persona => {
     seoLocations.forEach(location => {
       slugs.push(`${persona.slug}/${location.slug}`);
+    });
+  });
+  return slugs;
+}
+
+export function getAllPersonaIndustrySlugs(): string[] {
+  const slugs: string[] = [];
+  targetPersonas.forEach(persona => {
+    industries.forEach(industry => {
+      slugs.push(`${persona.slug}/${industry.slug}`);
     });
   });
   return slugs;

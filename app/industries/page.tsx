@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { industries, industryCategories } from '@/lib/pseo/data/industries';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO by Industry | Industry-Specific SEO Solutions | Anthroly',
@@ -9,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI SEO by Industry | Anthroly',
     description: 'Industry-specific AI SEO solutions for 20+ verticals.',
-    url: 'https://anthroly.com/industries',
+    url: absoluteUrl('/industries'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/industries',
+    canonical: absoluteUrl('/industries'),
   },
 };
 

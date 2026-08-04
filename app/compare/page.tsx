@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { seoTools, toolCategories } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GitCompare, Zap } from 'lucide-react';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'SEO Tool Comparisons | Side-by-Side Analysis | Anthroly',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Tool Comparisons | Anthroly',
     description: 'Side-by-side comparisons of popular SEO tools.',
-    url: 'https://anthroly.com/compare',
+    url: absoluteUrl('/compare'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/compare',
+    canonical: absoluteUrl('/compare'),
   },
 };
 

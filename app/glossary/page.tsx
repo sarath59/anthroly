@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { seoGlossaryTerms, glossaryCategories } from '@/lib/pseo';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { absoluteUrl } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Book, Search } from 'lucide-react';
 
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Glossary: 100+ Terms Explained | Anthroly',
     description: 'Comprehensive SEO glossary covering AI SEO, GEO, technical SEO, link building, and more.',
-    url: 'https://anthroly.com/glossary',
+    url: absoluteUrl('/glossary'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/glossary',
+    canonical: absoluteUrl('/glossary'),
   },
 };
 

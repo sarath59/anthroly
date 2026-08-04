@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { targetPersonas, personaCategories } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Briefcase, Target } from 'lucide-react';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO for Every Industry & Role | Who We Serve | Anthroly',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI SEO for Every Industry & Role | Anthroly',
     description: 'AI-powered SEO solutions tailored for your specific role and industry.',
-    url: 'https://anthroly.com/for',
+    url: absoluteUrl('/for'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/for',
+    canonical: absoluteUrl('/for'),
   },
 };
 

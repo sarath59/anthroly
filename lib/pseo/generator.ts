@@ -21,7 +21,15 @@ import {
   RelatedPage,
 } from './types';
 
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '../site';
+import { SITE_URL, absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '../site';
+import { seoGlossaryTerms } from './data/seo-glossary';
+
+const EXISTING_GLOSSARY_SLUGS = new Set(seoGlossaryTerms.map(t => t.slug));
+
+/** Only return relatedTerms that have real /glossary/[slug] pages. */
+export function getExistingRelatedTerms(relatedTerms: string[], limit = 3): string[] {
+  return relatedTerms.filter(slug => EXISTING_GLOSSARY_SLUGS.has(slug)).slice(0, limit);
+}
 
 // ============================================================================
 // WORD COUNT UTILITY
@@ -242,7 +250,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       anchorText: PRIMARY_CTA_LABEL,
       context: 'Conversion opportunity',
     },
-    ...term.relatedTerms.slice(0, 3).map(relatedSlug => ({
+    ...getExistingRelatedTerms(term.relatedTerms, 3).map(relatedSlug => ({
       url: `/glossary/${relatedSlug}`,
       anchorText: relatedSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       context: 'Related glossary term',
@@ -250,7 +258,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
   ];
   
   const relatedPages: RelatedPage[] = [
-    ...term.relatedTerms.slice(0, 2).map(relatedSlug => ({
+    ...getExistingRelatedTerms(term.relatedTerms, 2).map(relatedSlug => ({
       url: `/glossary/${relatedSlug}`,
       title: relatedSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
       playbook: 'glossary' as PlaybookType,
@@ -274,7 +282,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       inDefinedTermSet: {
         '@type': 'DefinedTermSet',
         name: 'SEO and AI Marketing Glossary',
-        url: 'https://anthroly.com/glossary',
+        url: absoluteUrl('/glossary'),
       },
     },
   };
@@ -458,7 +466,7 @@ Our managed service means you get consistent SEO execution at a fraction of the 
       provider: {
         '@type': 'Organization',
         name: 'Anthroly',
-        url: 'https://anthroly.com',
+        url: SITE_URL,
       },
       serviceType: 'AI SEO Services',
       audience: {
@@ -637,7 +645,7 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
       '@type': 'ProfessionalService',
       name: `Anthroly - AI SEO Agency ${location.city}`,
       description: `Managed SEO services for ${location.city} businesses. 15 blogs/month, 15–25 high-DR backlinks, ongoing optimization.`,
-      url: `https://anthroly.com${url}`,
+      url: absoluteUrl(url),
       areaServed: {
         '@type': 'City',
         name: location.city,
@@ -1021,7 +1029,7 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
       publisher: {
         '@type': 'Organization',
         name: 'Anthroly',
-        url: 'https://anthroly.com',
+        url: SITE_URL,
       },
     },
   };

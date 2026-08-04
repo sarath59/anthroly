@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { seoTools, generateToolComparisonPage, generatePageStructuredData } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
+import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { slug: string };
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: page.seo.title,
       description: page.seo.metaDescription,
-      url: `https://anthroly.com${page.url}`,
+      url: absoluteUrl(page.url),
       type: 'article',
       siteName: 'Anthroly',
     },
@@ -70,7 +71,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.seo.metaDescription,
     },
     alternates: {
-      canonical: `https://anthroly.com${page.url}`,
+      canonical: absoluteUrl(page.url),
     },
   };
 }

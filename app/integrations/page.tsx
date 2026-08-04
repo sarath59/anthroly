@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { seoIntegrations, integrationCategories } from '@/lib/pseo';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { absoluteUrl } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Puzzle, Zap, Link as LinkIcon } from 'lucide-react';
 
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Integrations | Anthroly',
     description: 'Connect your tech stack with AI-powered SEO automation.',
-    url: 'https://anthroly.com/integrations',
+    url: absoluteUrl('/integrations'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/integrations',
+    canonical: absoluteUrl('/integrations'),
   },
 };
 

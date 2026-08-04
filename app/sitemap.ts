@@ -9,22 +9,22 @@ import {
   useCases,
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
+import { SITE_URL } from '@/lib/site';
 
-const BASE_URL = 'https://www.anthroly.com';
 
 /**
- * SINGLE SITEMAP APPROACH
- * 
- * Next.js 14 generates /sitemap.xml automatically from this file.
- * We're keeping the total under 50,000 URLs by including:
- * - Core pages (11)
- * - Base single-dimension pages (~322)
- * - Two-way combinations (~6,632)
- * - Three-way persona×industry×location (29,800)
- * 
- * Total: ~36,765 pages (under 50K limit)
- * 
- * For additional pages, users can access /sitemap/6, /sitemap/7, etc.
+ * INDEXABLE SITEMAP ONLY
+ *
+ * Next.js 14 generates /sitemap.xml from this file.
+ * Include pages we want Google to consider for indexing:
+ * - Core + base single-dimension pages
+ * - Two-way combinations (enough intent signal)
+ *
+ * Three-way template combos (persona×industry×location, etc.) are
+ * intentionally omitted — they are thin near-duplicates. Google was
+ * crawling ~30K of them from the old sitemap and marking
+ * "Crawled - currently not indexed". Those URLs stay live for users
+ * but are noindex + canonicalized to the two-way parent.
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   indexPages.forEach(page => {
     entries.push({
-      url: `${BASE_URL}${page.path}`,
+      url: `${SITE_URL}${page.path}`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: page.priority,
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Glossary terms (60)
   seoGlossaryTerms.forEach(term => {
     entries.push({
-      url: `${BASE_URL}/glossary/${term.slug}`,
+      url: `${SITE_URL}/glossary/${term.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -75,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Personas (10)
   targetPersonas.forEach(persona => {
     entries.push({
-      url: `${BASE_URL}/for/${persona.slug}`,
+      url: `${SITE_URL}/for/${persona.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -85,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Locations (149)
   seoLocations.forEach(location => {
     entries.push({
-      url: `${BASE_URL}/ai-seo-agency/${location.slug}`,
+      url: `${SITE_URL}/ai-seo-agency/${location.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -95,7 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Industries (20)
   industries.forEach(industry => {
     entries.push({
-      url: `${BASE_URL}/industries/${industry.slug}`,
+      url: `${SITE_URL}/industries/${industry.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -105,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Use Cases (18)
   useCases.forEach(useCase => {
     entries.push({
-      url: `${BASE_URL}/use-cases/${useCase.slug}`,
+      url: `${SITE_URL}/use-cases/${useCase.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -115,7 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Integrations (14)
   seoIntegrations.forEach(integration => {
     entries.push({
-      url: `${BASE_URL}/integrations/${integration.slug}`,
+      url: `${SITE_URL}/integrations/${integration.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -125,7 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Free tools (22)
   FREE_TOOLS.forEach(tool => {
     entries.push({
-      url: `${BASE_URL}/tools/${tool.slug}`,
+      url: `${SITE_URL}/tools/${tool.slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -137,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (let j = i + 1; j < seoTools.length; j++) {
       if (seoTools[i].category === seoTools[j].category) {
         entries.push({
-          url: `${BASE_URL}/compare/${seoTools[i].slug}-vs-${seoTools[j].slug}`,
+          url: `${SITE_URL}/compare/${seoTools[i].slug}-vs-${seoTools[j].slug}`,
           lastModified: now,
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -154,7 +154,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   targetPersonas.forEach(persona => {
     seoLocations.forEach(location => {
       entries.push({
-        url: `${BASE_URL}/for/${persona.slug}/${location.slug}`,
+        url: `${SITE_URL}/for/${persona.slug}/${location.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    });
+  });
+
+  // Persona × Industry (10 × 20 = 200)
+  targetPersonas.forEach(persona => {
+    industries.forEach(industry => {
+      entries.push({
+        url: `${SITE_URL}/for/${persona.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -166,7 +178,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   industries.forEach(industry => {
     seoLocations.forEach(location => {
       entries.push({
-        url: `${BASE_URL}/industries/${industry.slug}/${location.slug}`,
+        url: `${SITE_URL}/industries/${industry.slug}/${location.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -178,7 +190,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   seoGlossaryTerms.forEach(term => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/glossary/${term.slug}/${industry.slug}`,
+        url: `${SITE_URL}/glossary/${term.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -190,7 +202,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   useCases.forEach(useCase => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
+        url: `${SITE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -202,7 +214,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   seoIntegrations.forEach(integration => {
     industries.forEach(industry => {
       entries.push({
-        url: `${BASE_URL}/integrations/${integration.slug}/${industry.slug}`,
+        url: `${SITE_URL}/integrations/${integration.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
@@ -210,23 +222,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ============================================================================
-  // THREE-WAY: Persona × Industry × Location (29,800 pages)
-  // 10 personas × 20 industries × 149 locations
-  // ============================================================================
-  targetPersonas.forEach(persona => {
-    industries.forEach(industry => {
-      seoLocations.forEach(location => {
-        entries.push({
-          url: `${BASE_URL}/for/${persona.slug}/${industry.slug}/${location.slug}`,
-          lastModified: now,
-          changeFrequency: 'monthly',
-          priority: 0.5,
-        });
-      });
-    });
-  });
-
-  // Total: ~36,765 pages (under 50K limit)
+  // Three-way pages intentionally omitted (noindex + not submitted).
   return entries;
 }

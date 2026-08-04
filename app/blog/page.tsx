@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Calendar, Clock, Tag } from 'lucide-react';
 import { blogPosts, blogCategories } from '@/lib/pseo/data/blog-posts';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO Blog | Insights, Strategies & Industry Guides | Anthroly',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI SEO Blog | Anthroly',
     description: 'Expert insights on AI SEO, local search optimization, and industry-specific strategies.',
-    url: 'https://anthroly.com/blog',
+    url: absoluteUrl('/blog'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/blog',
+    canonical: absoluteUrl('/blog'),
   },
 };
 

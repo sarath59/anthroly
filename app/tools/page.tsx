@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
+import { absoluteUrl } from '@/lib/site';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Tag,
@@ -61,11 +62,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Free SEO Tools | Anthroly',
     description: '20+ free SEO and marketing tools. Meta tags, word count, SERP preview, schema, and more.',
-    url: 'https://www.anthroly.com/tools',
+    url: absoluteUrl('/tools'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.anthroly.com/tools',
+    canonical: absoluteUrl('/tools'),
   },
 };
 

@@ -31,6 +31,7 @@ export {
   generateLocationPage,
   generateIntegrationPage,
   generateToolComparisonPage,
+  getExistingRelatedTerms,
   validatePage,
   countWords,
   isSlugUnique,
@@ -43,6 +44,7 @@ export {
 // Combinatorial Generators
 export {
   generatePersonaLocationPage,
+  generatePersonaIndustryPage,
   generateIndustryLocationPage,
   generateGlossaryIndustryPage,
   generateUseCaseIndustryPage,
@@ -53,6 +55,7 @@ export {
   generateUseCaseIndustryLocationPage,
   getCombinationCounts,
   getAllPersonaLocationSlugs,
+  getAllPersonaIndustrySlugs,
   getAllIndustryLocationSlugs,
   getAllGlossaryIndustrySlugs,
   getAllUseCaseIndustrySlugs,

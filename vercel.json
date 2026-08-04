@@ -4,6 +4,18 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "anthroly.com"
+        }
+      ],
+      "destination": "https://www.anthroly.com/:path*",
+      "permanent": true
+    }
+  ]
 }
-

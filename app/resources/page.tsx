@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { absoluteUrl } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper } from 'lucide-react';
 import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO Resources Hub | Anthroly',
     description: 'Comprehensive SEO resources including glossary, industry guides, use cases, and location insights.',
-    url: 'https://www.anthroly.com/resources',
+    url: absoluteUrl('/resources'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.anthroly.com/resources',
+    canonical: absoluteUrl('/resources'),
   },
 };
 

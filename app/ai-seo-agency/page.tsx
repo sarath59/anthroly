@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { seoLocations, locationRegions } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Globe } from 'lucide-react';
+import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO Agency Locations | Local & Global SEO Services | Anthroly',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI SEO Agency Locations | Anthroly',
     description: 'AI-powered SEO services in major markets worldwide.',
-    url: 'https://anthroly.com/ai-seo-agency',
+    url: absoluteUrl('/ai-seo-agency'),
     type: 'website',
   },
   alternates: {
-    canonical: 'https://anthroly.com/ai-seo-agency',
+    canonical: absoluteUrl('/ai-seo-agency'),
   },
 };
 
