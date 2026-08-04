@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper } from 'lucide-react';
+import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper, Sparkles } from 'lucide-react';
 import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
 import { industries } from '@/lib/pseo/data/industries';
 import { useCases } from '@/lib/pseo/data/use-cases';
@@ -23,6 +23,16 @@ export const metadata: Metadata = {
 };
 
 const resourceCategories = [
+  {
+    title: 'Answer Engine Optimization',
+    description: 'AEO hub, AI Overview citation playbook, and SEO vs GEO comparison',
+    href: '/aeo',
+    icon: Sparkles,
+    count: 3,
+    countLabel: 'guides',
+    gradient: 'from-emerald-500 to-teal-500',
+    bgGlow: 'bg-emerald-600/10',
+  },
   {
     title: 'Blog',
     description: 'Expert insights on AI SEO, local search, and industry strategies',

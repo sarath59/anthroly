@@ -38,6 +38,17 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
               {page.content.h1}
             </h1>
+
+            {page.content.directAnswer && (
+              <div className="mb-8 text-left max-w-3xl mx-auto rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 md:p-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
+                  Key answer
+                </p>
+                <p className="text-base md:text-lg text-white leading-relaxed">
+                  {page.content.directAnswer}
+                </p>
+              </div>
+            )}
             
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
               {page.content.introduction}
@@ -146,7 +157,7 @@ const Breadcrumbs: React.FC<{ url: string }> = ({ url }) => {
   );
 };
 
-const ContentBlock: React.FC<{ section: ContentSection; index: number }> = ({ section, index }) => {
+const ContentBlock: React.FC<{ section: ContentSection; index: number }> = ({ section }) => {
   return (
     <div className="mb-12">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -168,6 +179,38 @@ const ContentBlock: React.FC<{ section: ContentSection; index: number }> = ({ se
             </li>
           ))}
         </ul>
+      )}
+
+      {section.table && section.table.headers.length > 0 && (
+        <div className="mt-6 overflow-x-auto rounded-xl border border-gray-800">
+          {section.table.caption && (
+            <p className="px-4 py-2 text-sm text-gray-400 border-b border-gray-800 bg-gray-900/80">
+              {section.table.caption}
+            </p>
+          )}
+          <table className="w-full text-left text-sm text-gray-300">
+            <thead className="bg-gray-900 text-white">
+              <tr>
+                {section.table.headers.map((header, i) => (
+                  <th key={i} scope="col" className="px-4 py-3 font-semibold">
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map((row, ri) => (
+                <tr key={ri} className="border-t border-gray-800 odd:bg-black/40 even:bg-gray-900/40">
+                  {row.map((cell, ci) => (
+                    <td key={ci} className="px-4 py-3 align-top">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
       
       {section.codeExample && (

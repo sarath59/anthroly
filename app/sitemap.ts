@@ -7,9 +7,12 @@ import {
   seoTools,
   industries,
   useCases,
+  blogPosts,
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
+
+const CUSTOMER_SLUGS = ['llmoutrank', 'isthisaiorno', 'jobstronauts'] as const;
 
 
 /**
@@ -37,7 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const indexPages = [
     { path: '', priority: 1.0 as const },
     { path: '/resources', priority: 0.9 as const },
+    { path: '/aeo', priority: 0.95 as const },
+    { path: '/aeo/how-to-get-cited-in-ai-overviews', priority: 0.9 as const },
+    { path: '/aeo/aeo-vs-seo-vs-geo', priority: 0.9 as const },
+    { path: '/reports/ai-visibility-benchmark', priority: 0.9 as const },
     { path: '/glossary', priority: 0.9 as const },
+    { path: '/blog', priority: 0.9 as const },
+    { path: '/customers', priority: 0.9 as const },
     { path: '/for', priority: 0.9 as const },
     { path: '/ai-seo-agency', priority: 0.9 as const },
     { path: '/integrations', priority: 0.9 as const },
@@ -69,6 +78,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.8,
+    });
+  });
+
+  // Blog posts (high citation value)
+  blogPosts.forEach(post => {
+    entries.push({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
+  });
+
+  // Customer case studies
+  CUSTOMER_SLUGS.forEach(slug => {
+    entries.push({
+      url: `${SITE_URL}/customers/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
     });
   });
 

@@ -79,7 +79,20 @@ export function CaseStudyLayout({
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
               {headline}
             </h1>
-            <p className="text-xl text-gray-400">{summary}</p>
+            <div className="mb-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
+                Key result
+              </p>
+              <p className="text-base md:text-lg text-white leading-relaxed">{summary}</p>
+            </div>
+            <p className="text-sm text-gray-500">
+              Methodology: AI referral visits and citation/visibility lifts vs program baseline for this brand.
+              Aggregated benchmark:{' '}
+              <Link href="/reports/ai-visibility-benchmark" className="text-emerald-400 hover:underline">
+                AI Visibility Benchmark
+              </Link>
+              .
+            </p>
           </div>
 
           {/* About [Brand] */}

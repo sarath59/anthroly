@@ -33,44 +33,33 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
   const slug = `for/${persona.slug}/${location.slug}`;
   const url = `/${slug}`;
   
+  const directAnswer = `For ${persona.name}s in ${location.city}, Anthroly runs AI agents with human-led SEO: local + national visibility, AI Overview citation readiness, 15 blogs/month, and 15–25 high-DR backlinks—so you grow without building an in-house SEO team.`;
+
   const sections: ContentSection[] = [
     {
-      heading: `Why ${persona.name}s in ${location.city} Need AI-Powered SEO`,
-      body: `${location.city} is one of the most competitive markets for ${persona.industry.toLowerCase()} businesses. ${location.localInsights[0]} For ${persona.name}s operating here, traditional SEO simply can't keep pace with the demands of this environment. AI-powered SEO provides the automation, scale, and intelligence needed to compete effectively while you focus on growing your business.`,
+      heading: `Why do ${persona.name}s in ${location.city} need AI-powered SEO?`,
+      body: `${location.city} is highly competitive for ${persona.industry.toLowerCase()}. ${location.localInsights[0]} AI agents plus human SEO keep pace while you run the business.`,
     },
     {
-      heading: `The ${location.city} Market Challenge for ${persona.name}s`,
-      body: `As a ${persona.title} in ${location.city}, you face a unique combination of challenges. The local market dynamics—${location.localInsights[1] || location.localInsights[0]}—intersect with the specific pain points of your role:`,
+      heading: `What challenges do ${location.city} ${persona.name}s face?`,
+      body: `As a ${persona.title} in ${location.city}, local dynamics—${location.localInsights[1] || location.localInsights[0]}—collide with role pressure:`,
       listItems: persona.painPoints.slice(0, 5),
     },
     {
-      heading: `What ${location.city} ${persona.name}s Need from SEO`,
-      body: `Your goals as a ${persona.title} in this market are clear. You need organic growth that compounds over time, without the overhead of building and managing an internal team. Here's what matters most:`,
+      heading: `What do ${location.city} ${persona.name}s need from SEO and AEO?`,
+      body: `You need compounding organic growth and AI citation share without staffing a full SEO org:`,
       listItems: persona.goals.slice(0, 5),
     },
     {
-      heading: `How Anthroly Serves ${persona.name}s in ${location.city}`,
-      body: `Our managed SEO service was built for ${persona.name}s who need results without the complexity. For ${location.city} specifically, we provide:
-
-**Local + National Visibility**: We optimize for "${location.city} [your service]" searches while building the domain authority that drives traffic from anywhere.
-
-**AI Search Optimization**: With 40% of searches now happening through ChatGPT, Claude, and Perplexity, we ensure ${location.city} customers find you across all search platforms.
-
-**Automated Execution**: 15 SEO blogs monthly, 15–25 high-DR backlinks, continuous technical optimization—all running while you focus on your ${location.city} operations.
-
-**Market-Specific Intelligence**: Our team understands the ${location.city} competitive landscape and tailors strategies accordingly.`,
+      heading: `How does Anthroly serve ${persona.name}s in ${location.city}?`,
+      body: `**Local + national visibility**: "${location.city} [your service]" plus broader authority.
+**AI search / AEO**: Visibility in ChatGPT, Claude, Perplexity, and Google AI Overviews.
+**Monthly execution**: 15 blogs, 15–25 high-DR backlinks, technical optimization.
+**Market context**: Strategies tuned to ${location.city}'s competitive landscape.`,
     },
     {
-      heading: `Success Metrics for ${location.city} ${persona.name}s`,
-      body: `${persona.name}s using Anthroly in markets like ${location.city} typically see:
-
-• **15–25 high-quality backlinks monthly** with average DR 70-90
-• **15 SEO-optimized blog posts** published every month
-• **Domain Authority increases** averaging 12 points in the first year
-• **340%+ organic traffic growth** within 12 months
-• **Reduction in CAC** as organic channels mature
-
-The combination of ${location.city}'s market dynamics and AI-powered execution creates a powerful growth engine for your business.`,
+      heading: `What results do ${location.city} ${persona.name}s typically see?`,
+      body: `Typical outcomes include 15–25 high-DR backlinks/month, 15 blogs/month, stronger domain authority, organic traffic growth, and lower CAC as Google and AI channels compound.`,
     },
   ];
   
@@ -142,7 +131,8 @@ The combination of ${location.city}'s market dynamics and AI-powered execution c
     },
     content: {
       h1: `AI SEO for ${persona.name}s in ${location.city}`,
-      introduction: `You're a ${persona.title} in ${location.city}—one of the most dynamic markets in ${location.country}. ${location.localInsights[0]} In this environment, organic visibility isn't optional—it's essential. But building and managing SEO in-house? That's a distraction from what you do best. Anthroly's managed SEO service delivers enterprise-grade SEO results specifically optimized for ${persona.name}s in the ${location.city} market.`,
+      directAnswer,
+      introduction: `You're a ${persona.title} in ${location.city}. ${location.localInsights[0]} Anthroly pairs AI agents with human-led SEO so ${persona.name}s win Google and AI answers without building an internal SEO team.`,
       sections,
       faq,
       callToAction: {
@@ -183,48 +173,39 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
   const slug = `for/${persona.slug}/${industry.slug}`;
   const url = `/${slug}`;
 
+  const directAnswer = `Anthroly helps ${persona.name}s in ${industry.name} grow with AI agents and human-led SEO: industry-specific content, 15–25 high-DR backlinks/month, and AEO structure so buyers find you in Google and AI Overviews—without an in-house SEO team.`;
+
   const sections: ContentSection[] = [
     {
-      heading: `Why ${persona.name}s in ${industry.name} Need AI-Powered SEO`,
-      body: `As a ${persona.title} in ${industry.name.toLowerCase()}, you sit at the intersection of role pressure and industry competition. ${industry.painPoints[0]} Traditional SEO agencies move too slowly for that reality. Managed AI SEO gives you consistent execution—content, links, and technical work—without building an in-house team.`,
+      heading: `Why do ${persona.name}s in ${industry.name} need AI-powered SEO?`,
+      body: `As a ${persona.title} in ${industry.name.toLowerCase()}, role pressure meets industry competition. ${industry.painPoints[0]} AI agents plus human SEO deliver consistent content, links, and technical work.`,
     },
     {
-      heading: `The ${industry.name} Challenge for ${persona.name}s`,
-      body: `${persona.name}s in ${industry.name.toLowerCase()} face a stacked set of constraints: the priorities of your role, plus industry-specific discovery problems buyers actually have:`,
+      heading: `What challenges hit ${persona.name}s in ${industry.name}?`,
+      body: `Role priorities plus ${industry.name.toLowerCase()} discovery problems buyers actually have:`,
       listItems: [
         ...persona.painPoints.slice(0, 3),
         ...industry.painPoints.slice(0, 3),
       ],
     },
     {
-      heading: `What ${persona.name}s Need from ${industry.name} SEO`,
-      body: `Winning organic growth in ${industry.name.toLowerCase()} means shipping the assets your buyers search for—and the systems that keep them ranking:`,
+      heading: `What do ${persona.name}s need from ${industry.name} SEO and AEO?`,
+      body: `Ship the assets buyers search for—and structure them so answer engines can cite you:`,
       listItems: [
         ...persona.goals.slice(0, 3),
         ...industry.seoNeeds.slice(0, 4),
       ],
     },
     {
-      heading: `How Anthroly Serves ${persona.name}s in ${industry.name}`,
-      body: `Our managed SEO service is built for ${persona.name}s who need ${industry.name.toLowerCase()} results without the operational drag:
-
-**Industry-Specific Content**: 15 human-written blogs and 15 AI Q&A pages monthly, mapped to ${industry.name.toLowerCase()} keywords like ${industry.keywords.slice(0, 2).join(' and ')}.
-
-**Authority Building**: 15–25 high-DR backlinks every month from real editorial placements—not link farms.
-
-**Role-Aligned Reporting**: Clear weekly updates a ${persona.title} can act on, not vanity dashboards.
-
-**AI Search Visibility**: Optimization for Google and AI answers (ChatGPT, Perplexity, Claude, Gemini) where ${industry.name.toLowerCase()} buyers research solutions.`,
+      heading: `How does Anthroly serve ${persona.name}s in ${industry.name}?`,
+      body: `**Industry content**: 15 blogs + AI Q&A pages mapped to keywords like ${industry.keywords.slice(0, 2).join(' and ')}.
+**Authority**: 15–25 high-DR editorial backlinks/month.
+**Role-aligned reporting**: Weekly updates a ${persona.title} can act on.
+**AI visibility**: Google + ChatGPT, Perplexity, Claude, Gemini where ${industry.name.toLowerCase()} buyers research.`,
     },
     {
-      heading: `Results ${persona.name}s See in ${industry.name}`,
-      body: `${persona.name}s using Anthroly in ${industry.name.toLowerCase()} typically see:
-
-• **15–25 high-quality backlinks monthly** with average DR 70+
-• **30+ pages of content** published every month (blogs + AI Q&A)
-• **Faster ranking movement** on industry and role-intent keywords
-• **Lower CAC** as organic and AI referral channels compound
-• **Hours returned every week** that used to go to SEO ops`,
+      heading: `What results do ${persona.name}s see in ${industry.name}?`,
+      body: `Typical outcomes: 15–25 high-DR links/month, 30+ content pages/month, faster ranking on role and industry keywords, lower CAC, and hours returned from SEO ops.`,
     },
   ];
 
@@ -291,7 +272,8 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
     },
     content: {
       h1: `AI SEO for ${persona.name}s in ${industry.name}`,
-      introduction: `You're a ${persona.title} responsible for growth in ${industry.name.toLowerCase()}. ${industry.painPoints[0]} Anthroly's managed SEO service gives ${persona.name}s enterprise-grade content, links, and AI-search visibility—without hiring a full SEO team.`,
+      directAnswer,
+      introduction: `You're a ${persona.title} responsible for growth in ${industry.name.toLowerCase()}. ${industry.painPoints[0]} Anthroly's AI agents and human-led SEO give ${persona.name}s content, links, and AI-search visibility—without a full SEO hire.`,
       sections,
       faq,
       callToAction: {

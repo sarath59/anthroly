@@ -186,28 +186,35 @@ function calculateUniquenessScore(page: PSEOPage): number {
 export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
   const slug = `glossary/${term.slug}`;
   const url = `/${slug}`;
+  const directAnswer =
+    term.definition.length <= 320
+      ? term.definition
+      : `${term.definition.slice(0, 280).replace(/\s+\S*$/, '')}.`;
   
   const sections: ContentSection[] = [
     {
-      heading: `What is ${term.term}?`,
-      body: term.definition,
-    },
-    {
-      heading: `${term.term}: A Technical Deep Dive`,
+      heading: `How does ${term.term} work?`,
       body: term.technicalExplanation,
     },
     {
-      heading: `Practical Examples of ${term.term}`,
-      body: `Understanding ${term.term} becomes clearer with real-world applications. Here are concrete examples that illustrate how this concept works in practice:`,
+      heading: `What are practical examples of ${term.term}?`,
+      body: `These real-world examples show how ${term.term.toLowerCase()} shows up in modern search and AI answers:`,
       listItems: term.examples,
     },
     {
-      heading: `Why ${term.term} Matters for Your SEO Strategy`,
-      body: `In the evolving landscape of search, understanding ${term.term} is no longer optional—it's essential. As AI-powered search engines like ChatGPT, Claude, and Perplexity reshape how users find information, mastering concepts like ${term.term} gives you a competitive edge. This knowledge helps you build strategies that work across both traditional and AI-powered search, ensuring your business remains visible wherever your customers are looking.`,
+      heading: `How does ${term.term} compare to related SEO concepts?`,
+      body: `${term.term} sits alongside related ideas that AI Overviews and traditional rankings both use. Use the related terms below to build topical coverage so answer engines can cite you as a complete source—not a single-keyword page.`,
+      listItems: getExistingRelatedTerms(term.relatedTerms, 5).map(
+        (rt) => rt.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+      ),
     },
     {
-      heading: `How Anthroly Helps with ${term.term}`,
-      body: `At Anthroly, a dedicated team optimizes your presence for concepts like ${term.term}. Crawler analysis identifies gaps in your ${term.term.toLowerCase()} strategy, while writers and link builders ship content and backlinks each month. Whether it's publishing optimized pages, earning high-quality backlinks, or monitoring your competitive position, our managed approach keeps you visible in both traditional Google SEO and AI-driven search.`,
+      heading: `What are the risks of ignoring ${term.term}?`,
+      body: `Skipping ${term.term.toLowerCase()} usually means weaker extractability for AI Overviews, thinner topical authority, and slower ranking movement when competitors publish clearer, better-structured answers. Teams that treat ${term.term.toLowerCase()} as a one-off tactic—not an ongoing practice—lose citation share as answer engines refresh sources.`,
+    },
+    {
+      heading: `How do Anthroly AI agents help with ${term.term}?`,
+      body: `Anthroly pairs AI agents with human-led SEO so ${term.term.toLowerCase()} is implemented, measured, and improved every month. Agents analyze gaps; humans write and place content and links. You get crawler analysis, AI visibility monitoring, 15 blogs/month, 15–25 high-DR backlinks, and reporting built for both Google and answer engines.`,
     },
   ];
   
@@ -217,20 +224,20 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       answer: term.definition,
     },
     {
-      question: `Why is ${term.term} important for SEO?`,
-      answer: `${term.term} is crucial because it directly impacts how search engines and AI systems understand and rank your content. Mastering this concept helps you build more effective SEO strategies that drive organic traffic and improve visibility in both traditional and AI-powered search results.`,
+      question: `Why is ${term.term} important for SEO and AEO?`,
+      answer: `${term.term} affects how Google and AI answer engines extract, trust, and cite your content. Strong ${term.term.toLowerCase()} practice improves classic rankings and makes your pages easier to quote in AI Overviews.`,
     },
     {
       question: `How do I implement ${term.term} for my website?`,
-      answer: `Implementation starts with understanding your current state through an SEO audit, then systematically applying ${term.term.toLowerCase()} best practices. This typically involves technical optimizations, content strategy adjustments, and ongoing monitoring. For complex implementations, working with an AI-powered SEO agency like Anthroly can accelerate results through automated optimization and expert guidance.`,
+      answer: `Start with an audit, ship answer-first content and technical fixes, then monitor Search Console and AI citations. Anthroly's agents plus human SEO team can run this loop monthly so execution does not stall.`,
     },
     {
       question: `What tools help with ${term.term}?`,
-      answer: `Several tools can help you implement and monitor ${term.term}, including Google Search Console for foundational data, dedicated SEO platforms like Ahrefs and Semrush for advanced analysis, and AI-powered tools for automation. The right combination depends on your specific needs and technical resources.`,
+      answer: `Use Google Search Console for foundational data, crawler and citation checks for AI visibility, and platforms like Ahrefs or Semrush for competitive gaps. Pair tools with clear on-page answers and schema.`,
     },
     {
-      question: `How does ${term.term} relate to AI search optimization?`,
-      answer: `As AI-powered search engines become more prevalent, ${term.term} takes on new dimensions. AI systems interpret and weight this concept differently than traditional search algorithms, making it essential to optimize for both. Understanding these nuances ensures your content performs well across ChatGPT, Perplexity, Claude, and traditional search engines.`,
+      question: `How does ${term.term} relate to AI Overviews?`,
+      answer: `AI Overviews prefer clear, sourced paragraphs they can lift. Pages that define ${term.term.toLowerCase()} early, support it with examples and lists, and demonstrate expertise are more likely to be cited.`,
     },
   ];
   
@@ -239,6 +246,11 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       url: '/glossary',
       anchorText: 'SEO Glossary',
       context: 'Parent category page',
+    },
+    {
+      url: '/aeo',
+      anchorText: 'Answer Engine Optimization hub',
+      context: 'AEO pillar',
     },
     {
       url: '/#ai-crawler',
@@ -264,6 +276,12 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       playbook: 'glossary' as PlaybookType,
       relevanceScore: 90,
     })),
+    {
+      url: '/aeo',
+      title: 'Answer Engine Optimization',
+      playbook: 'glossary' as PlaybookType,
+      relevanceScore: 85,
+    },
     {
       url: '/for/seo-professionals',
       title: 'AI SEO for SEO Professionals',
@@ -304,13 +322,14 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       searchIntent: 'informational',
     },
     content: {
-      h1: `${term.term}: The Complete Guide`,
-      introduction: `${term.term} is a fundamental concept that shapes modern search engine optimization. Whether you're new to SEO or a seasoned professional, understanding ${term.term.toLowerCase()} is essential for building effective strategies that drive organic traffic. In this comprehensive guide, we'll explore what ${term.term.toLowerCase()} means, why it matters, and how you can leverage it to improve your search visibility in both traditional and AI-powered search engines.`,
+      h1: `What is ${term.term}?`,
+      directAnswer,
+      introduction: `This guide explains how ${term.term.toLowerCase()} works, how it compares to related concepts, when to use it, and how Anthroly's AI agents plus human-led SEO help you implement it for Google and AI answer engines.`,
       sections,
       faq,
       callToAction: {
         headline: `Ready to Master ${term.term}?`,
-        description: `Let Anthroly optimize your site for ${term.term.toLowerCase()} and hundreds of other ranking factors—with a human-led team behind the work. Start with a free AI Crawler Analysis.`,
+        description: `Let Anthroly optimize your site for ${term.term.toLowerCase()} and hundreds of other ranking factors—with AI agents and a human-led team. Start with a free AI Crawler Analysis.`,
         buttonText: 'Get Your Free Analysis',
         buttonUrl: '/#ai-crawler',
       },
@@ -340,79 +359,77 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
   const slug = `for/${persona.slug}`;
   const url = `/${slug}`;
   
+  const directAnswer = `Anthroly helps ${persona.name}s grow organic and AI-search demand with AI agents plus human-led SEO: 15 blogs/month, 15–25 high-DR backlinks, AI visibility monitoring, and weekly reporting—without hiring a full in-house SEO team. Built for ${persona.title}s who need outcomes, not another dashboard.`;
+
   const sections: ContentSection[] = [
     {
-      heading: `The Challenge: Why ${persona.name}s Struggle with SEO`,
-      body: `As a ${persona.title}, you face unique challenges when it comes to search visibility. The digital landscape has shifted dramatically—40% of searches now happen through AI assistants like ChatGPT and Claude, yet most SEO strategies are still built for the old paradigm. Let's examine the specific obstacles standing between you and organic growth:`,
+      heading: `What challenges do ${persona.name}s face with SEO?`,
+      body: `As a ${persona.title}, search visibility competes with everything else on your plate. Buyers now discover brands through Google and AI assistants, but most SEO plans still ignore answer engines. Common blockers:`,
       listItems: persona.painPoints,
     },
     {
-      heading: `What ${persona.name}s Actually Need from SEO`,
-      body: `Understanding your goals is the first step toward achieving them. ${persona.name}s consistently tell us they're looking for sustainable, measurable growth without the overhead of building internal teams. Here's what matters most:`,
+      heading: `What do ${persona.name}s need from SEO and AEO?`,
+      body: `${persona.name}s want compounding organic growth, clear ROI, and citation-ready content for AI Overviews—without building a large SEO org:`,
       listItems: persona.goals,
     },
     {
-      heading: `The Roadblocks: Why Traditional SEO Falls Short`,
-      body: `Traditional SEO approaches often fail ${persona.name}s because they weren't designed for your reality. Limited time, competing priorities, and the rapid pace of AI-driven change create a perfect storm of challenges:`,
+      heading: `How does Anthroly compare to traditional agencies?`,
+      body: `Traditional SEO often fails ${persona.name}s because it is slow, report-heavy, and Google-only. Anthroly ships monthly with AI agents for analysis and humans for content and links—covering classic SEO and Answer Engine Optimization:`,
       listItems: persona.challenges,
     },
     {
-      heading: `How AI-Powered SEO Solves These Problems`,
-      body: `This is where Anthroly's service model changes the math. Instead of hiring a full in-house SEO bench, you get a team that ships every month—content, links, and fixes—while you stay focused on the business. Here's how we address each challenge:`,
+      heading: `How do AI agents solve these problems?`,
+      body: `Agents analyze and monitor; humans execute content and outreach. You stay focused on the business while we address each gap:`,
       listItems: persona.solutions,
     },
     {
-      heading: `The Anthroly Advantage for ${persona.name}s`,
-      body: `Our platform was built specifically for busy professionals like you who need results without the overhead. Here's what you get:
-
-**AI Crawler Analysis**: We audit your site and identify exactly where you're invisible to AI search engines, with prioritized recommendations.
-
-**AI visibility monitoring**: Ongoing tracking of how ChatGPT, Claude, and Perplexity reference your brand and competitors.
-
-**30 SEO Blogs/Month**: AI-generated, human-refined content that builds topical authority and captures search traffic.
-
-**Backlink program**: Our outreach team earns 15–25 high-quality backlinks monthly (DR 70-90 average) while you focus on your business.
-
-**Programmatic SEO**: Automated generation of conversion-focused landing pages that capture long-tail search traffic.
-
-**Automated Reporting**: Weekly performance reports delivered to your inbox—no dashboards to check, no metrics to decipher.`,
+      heading: `What do ${persona.name}s get with Anthroly?`,
+      body: `**AI Crawler Analysis**: Find where you are invisible to AI search.
+**AI visibility monitoring**: Track ChatGPT, Claude, Perplexity, and Google AI citations.
+**15 SEO blogs/month**: Human-refined content for topical authority and extractable answers.
+**15–25 high-DR backlinks/month**: Editorial placements that strengthen entity trust.
+**Programmatic SEO + AEO structure**: Pages built for query fan-out and citation.
+**Weekly reporting**: Clear progress without vanity dashboards.`,
     },
     {
-      heading: `Real Results for ${persona.industry} Professionals`,
-      body: `${persona.name}s using Anthroly typically see significant improvements within the first 90 days. Domain authority increases averaging 12 points, 340%+ organic traffic growth, and consistent high-quality backlink acquisition. But perhaps most importantly, they achieve this without adding headcount or spending hours on SEO execution.
-
-Our managed service means you get consistent SEO execution at a fraction of the cost and time investment of traditional agencies or in-house teams. The future of search includes AI answers—your SEO program should cover both.`,
+      heading: `When should a ${persona.title} start?`,
+      body: `Start when organic CAC is rising, competitors appear in AI answers you do not, or you cannot staff SEO full-time. Most ${persona.name}s see delivery in 30 days and compounding gains by 90 days—domain authority, traffic, and AI citation share—without adding headcount.`,
     },
   ];
   
   const faq: FAQ[] = [
     {
       question: `Is Anthroly right for ${persona.name}s?`,
-      answer: `Yes, Anthroly is specifically designed for ${persona.name}s who need powerful SEO results without the time investment of traditional approaches. Our team handles the execution while you maintain strategic oversight through automated reports and a dedicated account manager.`,
+      answer: `Yes. Anthroly is built for ${persona.name}s who need SEO and AI-citation results without full-time SEO ops. Agents plus humans execute; you get weekly reports and strategic oversight.`,
     },
     {
       question: `How quickly will I see results?`,
-      answer: `Most ${persona.name}s see initial improvements within 30 days, with significant results by 90 days. This includes backlink acquisition (15–25 high-DR links monthly), content publication (15 blogs/month), and improved rankings for target keywords. SEO compounds over time, so results accelerate the longer you work with us.`,
+      answer: `Most ${persona.name}s see initial delivery within 30 days and stronger results by 90 days: 15 blogs/month, 15–25 high-DR links, and improving rankings plus AI visibility. Results compound over time.`,
     },
     {
       question: `Do I need technical knowledge to use Anthroly?`,
-      answer: `No technical expertise required. Our team handles technical SEO, content, and implementation for you. You receive clear, jargon-free reports showing your progress and ROI. For ${persona.name}s who want deeper involvement, we provide strategic consultation calls as needed.`,
+      answer: `No. Our team handles technical SEO, content, and links. Reports stay clear for ${persona.name}s; deeper strategy calls are available when you want them.`,
     },
     {
       question: `How does Anthroly compare to hiring an in-house SEO or agency?`,
-      answer: `Traditional SEO teams cost $8,000-$25,000+ monthly when you factor in salaries, tools, and overhead. Agencies often charge similar rates with inconsistent results. Anthroly delivers more output (15 blogs, 15–25 backlinks, continuous optimization) at a fraction of the cost because we run a tight, specialized team instead of bloated overhead.`,
+      answer: `In-house SEO often costs $8,000–$25,000+/month fully loaded. Anthroly delivers 15 blogs, 15–25 backlinks, and AI visibility work at $2,000/month with a specialized team instead of bloated overhead.`,
     },
     {
-      question: `What makes AI SEO different from traditional SEO?`,
-      answer: `AI SEO addresses a new reality: 40% of searches now happen through AI assistants like ChatGPT and Claude. Traditional SEO only optimizes for Google. Anthroly optimizes for both—ensuring you're visible whether customers search through Google, ask ChatGPT, or query Perplexity. Our team ships month after month so execution doesn't stall when you're busy.`,
+      question: `What makes AI SEO and AEO different from traditional SEO?`,
+      answer: `Traditional SEO targets Google blue links. AI SEO and AEO also optimize for AI Overviews and assistants like ChatGPT and Perplexity. Anthroly covers both so customers find you in classic search and AI answers.`,
     },
   ];
   
   const internalLinks: InternalLink[] = [
     {
       url: '/',
-      anchorText: 'AI SEO Platform',
+      anchorText: 'AI agents platform',
       context: 'Homepage',
+    },
+    {
+      url: '/aeo',
+      anchorText: 'Answer Engine Optimization',
+      context: 'AEO hub',
     },
     {
       url: '/#ai-crawler',
@@ -430,18 +447,24 @@ Our managed service means you get consistent SEO execution at a fraction of the 
       context: 'Educational content',
     },
     {
-      url: '/glossary/generative-engine-optimization-geo',
-      anchorText: 'Learn about GEO',
+      url: '/glossary/answer-engine-optimization',
+      anchorText: 'What is AEO?',
       context: 'Educational content',
     },
     {
       url: '/for',
-      anchorText: 'All Industries We Serve',
+      anchorText: 'All personas we serve',
       context: 'Parent category',
     },
   ];
   
   const relatedPages: RelatedPage[] = [
+    {
+      url: '/aeo',
+      title: 'Answer Engine Optimization',
+      playbook: 'glossary' as PlaybookType,
+      relevanceScore: 90,
+    },
     {
       url: '/glossary/ai-seo',
       title: 'AI SEO Definition & Guide',
@@ -462,13 +485,13 @@ Our managed service means you get consistent SEO execution at a fraction of the 
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: `AI SEO for ${persona.name}s`,
-      description: `AI-powered SEO services designed specifically for ${persona.title}s in ${persona.industry}`,
+      description: `AI agents and human-led SEO for ${persona.title}s in ${persona.industry}, optimized for Google and AI answer engines`,
       provider: {
         '@type': 'Organization',
         name: 'Anthroly',
         url: SITE_URL,
       },
-      serviceType: 'AI SEO Services',
+      serviceType: 'AI SEO and Answer Engine Optimization',
       audience: {
         '@type': 'Audience',
         audienceType: persona.name,
@@ -493,8 +516,9 @@ Our managed service means you get consistent SEO execution at a fraction of the 
       searchIntent: 'commercial',
     },
     content: {
-      h1: `AI SEO Built for ${persona.name}s`,
-      introduction: `You're a ${persona.title} with too much to do and too little time. SEO is important—you know that—but executing it effectively? That's another story. Between ${persona.challenges[0].toLowerCase()} and ${persona.challenges[1]?.toLowerCase() || 'managing competing priorities'}, finding the bandwidth for comprehensive SEO feels impossible. That's exactly why we built Anthroly: AI-powered SEO that works while you focus on what matters most.`,
+      h1: `AI Agents & SEO for ${persona.name}s`,
+      directAnswer,
+      introduction: `You're a ${persona.title} balancing growth with limited bandwidth. Between ${persona.challenges[0].toLowerCase()} and ${persona.challenges[1]?.toLowerCase() || 'competing priorities'}, full SEO + AEO execution rarely fits. Anthroly runs AI agents with human-led SEO so you stay visible in Google and AI answers.`,
       sections,
       faq,
       callToAction: {
@@ -531,39 +555,33 @@ export function generateLocationPage(location: Location): PSEOPage {
     ? `${location.city}, ${location.state}` 
     : `${location.city}, ${location.country}`;
   
+  const directAnswer = `Anthroly is an AI-agents + human-led SEO partner for ${location.city} businesses: local and national search, AI Overview citation readiness, 15 blogs/month, and 15–25 high-DR backlinks—so customers find you on Google and in AI answers.`;
+
   const sections: ContentSection[] = [
     {
-      heading: `Why ${location.city} Businesses Need AI-Powered SEO`,
-      body: `${locationName} is a competitive market where digital visibility can make or break your business. ${location.localInsights[0]} ${location.localInsights[1] || ''} In this environment, traditional SEO isn't enough—you need AI-powered optimization that works 24/7 to keep you ahead of local competitors and visible to the growing number of customers using AI search.`,
+      heading: `Why do ${location.city} businesses need AI-powered SEO?`,
+      body: `${locationName} is a competitive market where digital visibility can make or break your business. ${location.localInsights[0]} ${location.localInsights[1] || ''} Traditional SEO alone is not enough—you need agents and humans optimizing for Google and answer engines.`,
     },
     {
-      heading: `The ${location.city} SEO Landscape`,
-      body: `Understanding your local market is crucial for SEO success. Here's what makes ${location.city} unique:`,
+      heading: `What makes the ${location.city} SEO landscape unique?`,
+      body: `Local market context that should shape your SEO and AEO plan:`,
       listItems: location.localInsights,
     },
     {
-      heading: `What Anthroly Delivers for ${location.city} Businesses`,
-      body: `Anthroly's managed SEO program provides everything ${location.city} businesses need to grow in both traditional and AI-powered search:
-
-**Local + Global Visibility**: We optimize for "${location.city} [your service]" searches while building authority that drives traffic from anywhere.
-
-**AI Search Optimization**: 40% of searches now happen through ChatGPT, Claude, and Perplexity. We ensure ${location.city} customers find you there too.
-
-**High-Quality Content**: 15 SEO blogs monthly, written and edited by humans, establishing your ${location.city} business as an industry authority.
-
-**Premium Backlinks**: 15–25 high-DR (70-90) backlinks monthly. We earn links from publications your ${location.city} competitors can't reach.
-
-**Full execution**: From technical SEO to publishing to reporting—our team handles delivery while you run your business.`,
+      heading: `What does Anthroly deliver for ${location.city} businesses?`,
+      body: `**Local + national visibility**: Rank for "${location.city} [your service]" while building broader authority.
+**AI search / AEO**: Optimize for ChatGPT, Claude, Perplexity, and Google AI Overviews.
+**15 SEO blogs/month**: Human-refined, answer-first content.
+**15–25 high-DR backlinks/month**: Entity-strengthening editorial links.
+**Full execution**: Technical SEO, publishing, and weekly reporting.`,
     },
     {
-      heading: `Local SEO + AI SEO: The Winning Combination`,
-      body: `${location.city} businesses often choose between local SEO (Google Maps, local pack) and broader content SEO. With Anthroly, you get both. Our team optimizes your Google Business Profile, builds local citations, and creates location-specific content—while simultaneously building the domain authority and AI visibility that drives traffic from anywhere.
-
-This hybrid approach is especially powerful in ${location.city}, where ${location.localInsights[2] || 'businesses face increasing competition from both local and national players'}.`,
+      heading: `How does local SEO compare to AI SEO in ${location.city}?`,
+      body: `${location.city} teams often pick Maps/local pack or content SEO. Anthroly does both: Google Business Profile, citations, and location content—plus domain authority and AI visibility. That hybrid matters where ${location.localInsights[2] || 'local and national competitors collide'}.`,
     },
     {
-      heading: `Serving ${location.city} and Beyond`,
-      body: `While we specialize in helping ${location.city} businesses succeed, Anthroly works with companies worldwide. Our playbooks aren't limited by geography—we can optimize for any market, any language, and any search engine. Whether you're a local ${location.city} business or a company looking to expand into ${location.state || location.country}, we scale with your ambitions.`,
+      heading: `When should a ${location.city} company start?`,
+      body: `Start when local pack rankings stall, AI assistants omit your brand, or you cannot staff SEO. Anthroly works for ${location.city}-based companies and remote teams targeting ${location.state || location.country}.`,
     },
   ];
   
@@ -676,7 +694,8 @@ This hybrid approach is especially powerful in ${location.city}, where ${locatio
     },
     content: {
       h1: `AI SEO Agency in ${location.city}`,
-      introduction: `Looking for an SEO agency in ${location.city} that actually delivers? Anthroly brings managed SEO to ${locationName} businesses—combining local search optimization with visibility in AI answers. While traditional ${location.city} agencies promise results, our team ships every month: 15 optimized blogs, 15–25 high-DR backlinks, continuous technical fixes, and structured content for AI search engines your competitors may still be ignoring.`,
+      directAnswer,
+      introduction: `Looking for SEO in ${location.city} that covers Google and AI answers? Anthroly pairs AI agents with human-led SEO for ${locationName}: monthly content, high-DR links, local optimization, and citation-ready structure competitors still ignore.`,
       sections,
       faq,
       callToAction: {

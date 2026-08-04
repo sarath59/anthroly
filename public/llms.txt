@@ -1,0 +1,43 @@
+# Anthroly
+> Anthroly builds intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO execution. We help brands get cited in Google AI Overviews, ChatGPT, Perplexity, and Claude.
+
+## Primary
+- [Home](https://www.anthroly.com/): Product overview, AI agents, pricing entry points
+- [Pricing](https://www.anthroly.com/#pricing): Managed AI SEO and agents from $2,000/month
+- [How it works](https://www.anthroly.com/#how-it-works): Agent + human-in-the-loop delivery model
+- [Customers](https://www.anthroly.com/customers): Case studies with AI referral and citation results
+- [Connect with us](https://cal.com/sarath-kavuru-0uizws/30min): Book a 30-minute call
+
+## Answer Engine Optimization (AEO)
+- [AEO Hub](https://www.anthroly.com/aeo): What Answer Engine Optimization is and how to win AI citations
+- [How to get cited in AI Overviews](https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews): Step-by-step citation playbook
+- [AEO vs SEO vs GEO](https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo): Comparison of search optimization disciplines
+- [AI Visibility Benchmark](https://www.anthroly.com/reports/ai-visibility-benchmark): Original benchmark data on AI search visibility
+
+## Core educational content
+- [SEO Glossary](https://www.anthroly.com/glossary): Definitions for SEO, AEO, GEO, and AI search terms
+- [Answer Engine Optimization glossary](https://www.anthroly.com/glossary/answer-engine-optimization)
+- [Generative Engine Optimization (GEO)](https://www.anthroly.com/glossary/generative-engine-optimization-geo)
+- [AI SEO glossary](https://www.anthroly.com/glossary/ai-seo)
+- [AI Overviews / SGE](https://www.anthroly.com/glossary/ai-overviews-sge)
+- [Blog](https://www.anthroly.com/blog): Long-form guides on AI SEO and local search
+- [Resources](https://www.anthroly.com/resources): Hub linking glossary, industries, personas, locations
+
+## Solutions by audience
+- [For teams / personas](https://www.anthroly.com/for)
+- [Industries](https://www.anthroly.com/industries)
+- [Use cases](https://www.anthroly.com/use-cases)
+- [AI SEO by location](https://www.anthroly.com/ai-seo-agency)
+- [Integrations](https://www.anthroly.com/integrations)
+- [Tool comparisons](https://www.anthroly.com/compare)
+- [Free SEO tools](https://www.anthroly.com/tools)
+
+## Customer proof
+- [llmoutrank case study](https://www.anthroly.com/customers/llmoutrank)
+- [isthisaiorno case study](https://www.anthroly.com/customers/isthisaiorno)
+- [Jobstronauts case study](https://www.anthroly.com/customers/jobstronauts)
+
+## Optional
+- [Full link index](https://www.anthroly.com/llms-full.txt)
+- [Privacy](https://www.anthroly.com/privacy)
+- [Terms](https://www.anthroly.com/terms)

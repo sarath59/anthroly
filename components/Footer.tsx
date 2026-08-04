@@ -87,6 +87,16 @@ export const Footer = () => {
             <h3 className="font-semibold text-lg mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/aeo" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Answer Engine Optimization
+                </Link>
+              </li>
+              <li>
+                <Link href="/reports/ai-visibility-benchmark" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  AI Visibility Benchmark
+                </Link>
+              </li>
+              <li>
                 <Link href="/glossary" className="text-gray-400 hover:text-white transition-colors duration-200">
                   SEO Glossary
                 </Link>

@@ -52,27 +52,72 @@ export function generateOrganizationSchema(): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
     name: 'Anthroly',
     url: SITE_URL,
-    logo: absoluteUrl('/logo.png'),
-    description: 'AI-powered SEO agency delivering automated backlinks, content, and search visibility optimization.',
+    logo: {
+      '@type': 'ImageObject',
+      url: absoluteUrl('/logo.png'),
+    },
+    image: absoluteUrl('/logo.png'),
+    description:
+      'Anthroly builds intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO for Google and AI answer engines.',
+    foundingDate: '2024',
+    email: 'sharatth@anthroly.com',
+    knowsAbout: [
+      'AI agents',
+      'Answer Engine Optimization',
+      'Generative Engine Optimization',
+      'AI SEO',
+      'AI Overviews',
+      'Sales automation',
+      'Marketing automation',
+      'Customer support automation',
+    ],
     sameAs: [
       'https://twitter.com/anthroly',
       'https://linkedin.com/company/anthroly',
+      'https://www.producthunt.com/products/anthroly',
     ],
+    founder: {
+      '@type': 'Person',
+      name: 'Sarath Kavuru',
+      jobTitle: 'Founder',
+      email: 'sharatth@anthroly.com',
+      url: absoluteUrl('/aeo'),
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
+      email: 'sharatth@anthroly.com',
       url: absoluteUrl('/#pricing'),
     },
     offers: {
       '@type': 'Offer',
       name: 'AI Agents for Business',
-      description: 'Intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO with 15 blogs/month and 15–25 high-DR backlinks',
+      description:
+        'Intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO with 15 blogs/month and 15–25 high-DR backlinks',
       price: '2000',
       priceCurrency: 'USD',
       priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
     },
+  };
+}
+
+/**
+ * Sitewide WebSite schema (homepage / root layout)
+ */
+export function generateWebSiteSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Anthroly',
+    url: SITE_URL,
+    description:
+      'AI agents for SEO, sales, marketing, and support—plus human-led SEO optimized for Google and AI answer engines.',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en-US',
   };
 }
 
@@ -95,9 +140,15 @@ export function generateArticleSchema(
     datePublished: datePublished,
     dateModified: dateModified || datePublished,
     author: {
-      '@type': 'Organization',
-      name: 'Anthroly',
-      url: SITE_URL,
+      '@type': 'Person',
+      name: 'Sarath Kavuru',
+      jobTitle: 'Founder, Anthroly',
+      url: absoluteUrl('/aeo'),
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Anthroly',
+        url: SITE_URL,
+      },
     },
     publisher: {
       '@type': 'Organization',

@@ -39,10 +39,17 @@ export interface SEOMetadata {
 // CONTENT STRUCTURES
 // ============================================================================
 
+export interface ContentTable {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface ContentSection {
   heading: string;
   body: string;
   listItems?: string[];
+  table?: ContentTable;
   codeExample?: string;
   image?: {
     src: string;
@@ -58,6 +65,8 @@ export interface FAQ {
 
 export interface PageContent {
   h1: string;
+  /** 40–60 word extractable answer for AI Overviews / AEO (shown above intro when set) */
+  directAnswer?: string;
   introduction: string;
   sections: ContentSection[];
   faq: FAQ[];

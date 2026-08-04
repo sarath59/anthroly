@@ -117,6 +117,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     // Indexable URLs only (thin three-way combos excluded from sitemap)
+    // Also see /llms.txt for AI crawler content guidance
     sitemap: absoluteUrl('/sitemap.xml'),
   };
 }

@@ -1,10 +1,17 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SITE_URL, absoluteUrl } from '@/lib/site';
+import { SITE_URL, absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { SITE_AUTHOR } from '@/lib/author';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Calendar, Clock, Tag, User, Share2, BookOpen } from 'lucide-react';
 import { blogPosts, getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/pseo/data/blog-posts';
+import { AuthorByline } from '@/components/aeo/AuthorByline';
+
+function resolveAuthorName(author: string) {
+  if (!author || /anthroly team/i.test(author)) return SITE_AUTHOR.name;
+  return author;
+}
 
 interface PageProps {
   params: { slug: string };
@@ -29,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${post.title} | Anthroly Blog`,
     description: post.metaDescription,
     keywords: [post.primaryKeyword, ...post.secondaryKeywords],
-    authors: [{ name: post.author }],
+    authors: [{ name: resolveAuthorName(post.author), url: SITE_AUTHOR.url }],
     openGraph: {
       title: post.title,
       description: post.metaDescription,
@@ -37,8 +44,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
-      authors: [post.author],
+      authors: [resolveAuthorName(post.author)],
       tags: post.tags,
+      images: [{ url: absoluteUrl('/logo.png'), alt: post.title }],
     },
     alternates: {
       canonical: absoluteUrl(`/blog/${post.slug}`),
@@ -47,15 +55,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function generateArticleSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+  const authorName = resolveAuthorName(post.author);
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
     author: {
-      '@type': 'Organization',
-      name: post.author,
-      url: SITE_URL,
+      '@type': 'Person',
+      name: authorName,
+      jobTitle: SITE_AUTHOR.jobTitle,
+      url: SITE_AUTHOR.url,
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Anthroly',
+        url: SITE_URL,
+      },
     },
     publisher: {
       '@type': 'Organization',
@@ -160,10 +175,10 @@ export default function BlogPostPage({ params }: PageProps) {
               </h1>
 
               {/* Post Meta */}
-              <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-8">
+              <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-6">
                 <span className="flex items-center gap-2">
                   <User size={16} className="text-emerald-400" />
-                  {post.author}
+                  {resolveAuthorName(post.author)}
                 </span>
                 <span className="flex items-center gap-2">
                   <Calendar size={16} className="text-emerald-400" />
@@ -178,6 +193,8 @@ export default function BlogPostPage({ params }: PageProps) {
                   {post.readingTime} min read
                 </span>
               </div>
+
+              <AuthorByline className="mb-8" />
 
               {/* Excerpt */}
               <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-emerald-500 pl-6">

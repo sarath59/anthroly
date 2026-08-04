@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { seoIntegrations, integrationCategories } from '@/lib/pseo';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Puzzle, Zap, Link as LinkIcon } from 'lucide-react';
 

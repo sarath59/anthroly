@@ -71,6 +71,7 @@ export {
   generateFAQSchema,
   generateBreadcrumbSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
   generateArticleSchema,
   generateServiceSchema,
   generateHowToSchema,
