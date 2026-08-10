@@ -13,8 +13,7 @@ import {
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
-
-const CUSTOMER_SLUGS = ['llmoutrank', 'isthisaiorno', 'jobstronauts'] as const;
+import { allCustomerStories } from '@/lib/customers';
 
 
 /**
@@ -94,8 +93,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Customer case studies
-  CUSTOMER_SLUGS.forEach(slug => {
+  // Customer case studies (dedicated indexable page per brand)
+  allCustomerStories.forEach(({ slug }) => {
     entries.push({
       url: `${SITE_URL}/customers/${slug}`,
       lastModified: now,

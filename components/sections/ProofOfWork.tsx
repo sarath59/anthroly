@@ -4,24 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { GlowPulse, SpotlightCard } from "../ui/animated-elements";
-
-const customers = [
-  {
-    slug: "llmoutrank",
-    brand: "llmoutrank",
-    result: "Grew AI referral traffic to thousands of visits in 2 months",
-  },
-  {
-    slug: "isthisaiorno",
-    brand: "isthisaiorno.com",
-    result: "Hit 3,000+ monthly visitors from AI search in 6 weeks",
-  },
-  {
-    slug: "jobstronauts",
-    brand: "Jobstronauts",
-    result: "Captured 1,500+ AI-driven clicks in their first month",
-  },
-];
+import { allCustomerStories, ENTERPRISE_PROOF_LINE } from "@/lib/customers";
+import { CustomerLogoWall } from "./CustomerLogoWall";
 
 export const ProofOfWork = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -32,7 +16,7 @@ export const ProofOfWork = () => {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -58,40 +42,41 @@ export const ProofOfWork = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Sparkles size={16} />
-            <span>Case Studies</span>
+            <span>Customers</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Trusted by Growing Brands
+            Meet the teams who are using Anthroly
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            See how brands use Anthroly to capture AI referral traffic and visibility.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-3">
+            We help companies of all sizes around the world achieve measurable results.
           </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto">{ENTERPRISE_PROOF_LINE}</p>
         </div>
 
         <div
-          className={`max-w-4xl mx-auto transition-all duration-1000 delay-150 ${
+          className={`max-w-6xl mx-auto transition-all duration-1000 delay-150 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {customers.map((c) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {allCustomerStories.map((c) => (
               <SpotlightCard
                 key={c.slug}
                 className="rounded-2xl border border-gray-800 bg-black/40 overflow-hidden"
               >
                 <Link
                   href={`/customers/${c.slug}`}
-                  className="block p-6 h-full flex flex-col group"
+                  className="p-5 h-full flex flex-col group"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors">
-                    {c.brand}
+                  <p className="text-sm font-semibold text-emerald-400 mb-2">{c.brand}</p>
+                  <h3 className="text-sm font-medium text-gray-200 leading-snug flex-1 mb-4 group-hover:text-white transition-colors">
+                    {c.title}
                   </h3>
-                  <p className="text-gray-400 text-sm flex-1 mb-4">{c.result}</p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 group-hover:gap-3 transition-all">
                     Read story
-                    <ArrowRight size={16} />
+                    <ArrowRight size={14} />
                   </span>
                 </Link>
               </SpotlightCard>
@@ -107,6 +92,8 @@ export const ProofOfWork = () => {
               <ArrowRight size={16} />
             </Link>
           </div>
+
+          <CustomerLogoWall className="mt-24" />
         </div>
       </div>
     </section>
