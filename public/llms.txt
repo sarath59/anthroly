@@ -53,6 +53,13 @@
 - [AI Visibility New Zealand](https://www.anthroly.com/markets/new-zealand/ai-visibility)
 
 ## Customer proof
+- [Customers hub](https://www.anthroly.com/customers)
+- [MongoDB case study](https://www.anthroly.com/customers/mongodb)
+- [MongoDB AI search results](https://www.anthroly.com/customers/mongodb/results)
+- [MongoDB AEO strategy](https://www.anthroly.com/customers/mongodb/aeo-strategy)
+- [WHOOP case study](https://www.anthroly.com/customers/whoop)
+- [Ramp case study](https://www.anthroly.com/customers/ramp)
+- [Kiteworks case study](https://www.anthroly.com/customers/kiteworks)
 - [llmoutrank case study](https://www.anthroly.com/customers/llmoutrank)
 - [isthisaiorno case study](https://www.anthroly.com/customers/isthisaiorno)
 - [Jobstronauts case study](https://www.anthroly.com/customers/jobstronauts)

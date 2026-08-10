@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { customerCaseStudies, getCaseStudy, type CaseBlock } from '@/lib/customers';
+import { getClusterTopicsForBrand } from '@/lib/customer-clusters';
 import { absoluteUrl } from '@/lib/site';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
@@ -119,6 +120,7 @@ export default function CustomerCaseStudyPage({ params }: PageProps) {
     customerCaseStudies[(idx + 1) % customerCaseStudies.length],
     customerCaseStudies[(idx + 2) % customerCaseStudies.length],
   ];
+  const clusterTopics = getClusterTopicsForBrand(study.slug);
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-24">
@@ -162,7 +164,7 @@ export default function CustomerCaseStudyPage({ params }: PageProps) {
           </div>
 
           {/* Metrics band */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {study.metrics.map((metric, i) => (
               <div
                 key={i}
@@ -176,8 +178,55 @@ export default function CustomerCaseStudyPage({ params }: PageProps) {
             ))}
           </div>
 
+          {/* Brand SEO cluster — crawlable internal links */}
+          {clusterTopics.length > 0 && (
+            <nav aria-label={`${study.brand} topic pages`} className="mb-14">
+              <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">
+                Explore the {study.brand} topic cluster
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {clusterTopics.map((t) => (
+                  <li key={t.slug}>
+                    <Link
+                      href={t.url}
+                      className="inline-block text-sm px-3 py-1.5 rounded-full border border-gray-700 text-gray-300 hover:border-emerald-500/40 hover:text-emerald-400 transition-colors"
+                    >
+                      {t.navLabel}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
           {/* Body */}
           <div>{study.blocks.map((block, i) => renderBlock(block, i))}</div>
+
+          {/* Cluster recap for SEO internal linking */}
+          {clusterTopics.length > 0 && (
+            <div className="mt-16 pt-12 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                {study.brand} AI search topic pages
+              </h2>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+                Focused pages for people researching {study.brand} AI search results, AEO strategy,
+                ChatGPT visibility, quotes, and execution playbooks.
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {clusterTopics.map((t) => (
+                  <li key={t.slug}>
+                    <Link
+                      href={t.url}
+                      className="block p-4 rounded-xl border border-gray-800 hover:border-gray-700 text-sm text-gray-300 hover:text-white transition-colors"
+                    >
+                      <span className="text-emerald-400 font-medium">{t.navLabel}</span>
+                      <span className="block text-gray-500 mt-1">{t.primaryKeyword}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Other teams we empower */}
           <div className="mt-16 pt-12 border-t border-gray-800">

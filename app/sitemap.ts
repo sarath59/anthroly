@@ -19,6 +19,7 @@ import {
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
 import { allCustomerStories } from '@/lib/customers';
+import { getAllCustomerClusterPaths } from '@/lib/customer-clusters';
 
 
 /**
@@ -136,6 +137,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.85,
+    });
+  });
+
+  // Customer brand SEO clusters (results, AEO strategy, ChatGPT, quotes, playbook)
+  // 20 brands × 5 topics = 100 unique indexable pages
+  getAllCustomerClusterPaths().forEach(({ slug, topic }) => {
+    entries.push({
+      url: `${SITE_URL}/customers/${slug}/${topic}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     });
   });
 

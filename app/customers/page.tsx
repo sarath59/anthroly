@@ -73,7 +73,11 @@ export default function CustomersPage() {
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
               We help companies of all sizes around the world achieve measurable results.
             </p>
-            <p className="text-sm text-gray-500 max-w-2xl mx-auto">{ENTERPRISE_PROOF_LINE}</p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-3">{ENTERPRISE_PROOF_LINE}</p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+              Each full story includes topic pages for results, AEO strategy, ChatGPT visibility,
+              quotes, and playbooks — built to rank for brand + AI search queries.
+            </p>
           </div>
 
           {/* Story grid */}
