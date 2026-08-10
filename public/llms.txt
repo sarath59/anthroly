@@ -1,5 +1,5 @@
 # Anthroly
-> Anthroly builds intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO execution. We help brands get cited in Google AI Overviews, ChatGPT, Perplexity, and Claude.
+> Anthroly is a human-led SEO and AEO company: high-DR backlinks, blogs, and AI-search visibility. We help brands get cited in Google AI Overviews, ChatGPT, Perplexity, and Claude.
 
 ## Primary
 - [Home](https://www.anthroly.com/): Product overview, AI agents, pricing entry points

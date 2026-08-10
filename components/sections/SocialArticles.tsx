@@ -64,10 +64,10 @@ export const SocialArticles = () => {
             <span>🌐 AI pulls from social content — be where it looks</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Your Marketing Agent Is Everywhere AI Looks
+            Be Everywhere AI Looks
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">AI engines cite social and publisher content millions of times a day.</span> Your agent adapts each piece for each platform and ships it — until your brand is the default answer instead of your competitor.
+            <span className="text-white font-semibold">AI engines cite social + publisher content millions of times.</span> We publish across high-authority platforms so your brand becomes the “default answer” — not your competitor.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ export const SocialArticles = () => {
           {/* Right: Sample Content */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="bg-black text-white rounded-3xl p-6 md:p-8">
-              <h3 className="text-xl font-bold mb-6">What Your Agent Ships Each Month</h3>
+              <h3 className="text-xl font-bold mb-6">What We Create For You</h3>
               
               <div className="space-y-4">
                 {/* LinkedIn */}
@@ -209,15 +209,15 @@ export const SocialArticles = () => {
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>Written in your voice, approved before it posts</span>
+                <span>All content written in your brand voice</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>Re-cut per platform, scheduled, and published by the agent</span>
+                <span>Scheduled and published automatically</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>Built from your best-performing pages, never padded filler</span>
+                <span>Repurposed from your blog content for efficiency</span>
               </div>
             </div>
 

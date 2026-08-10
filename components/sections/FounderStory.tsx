@@ -97,26 +97,25 @@ export const FounderStory = () => {
 
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
-                  <span className="text-white font-medium">I&apos;ve been in the trenches.</span> Built multiple startups.
-                  Hired agencies that charged $5,000/month and delivered slide decks. Wired up hundreds of
-                  automations that snapped the first time a customer did something unexpected.
+                  <span className="text-white font-medium">I&apos;ve been in the trenches.</span> Built multiple startups. 
+                  Hired SEO agencies that charged $5,000/month and delivered PowerPoint decks. 
+                  Tried DIY with every tool under the sun. Spent countless hours on content that nobody read.
                 </p>
                 
                 <p>
-                  The pattern never changed. Tools that suggest. Automations that break. Real people stuck
-                  doing the repetitive middle of every process. Nobody was selling the thing I actually
-                  wanted: something that would just finish the job.
+                  The SEO industry is broken. It&apos;s expensive, slow, opaque, and designed to keep you dependent 
+                  on agencies forever. I knew there had to be a better way.
                 </p>
 
                 <p>
-                  <span className="text-white font-medium">So I built Anthroly.</span> Intelligent agents for the four
-                  functions every business repeats — SEO, sales, marketing, and support. They analyze, decide,
-                  execute, and write down exactly what they did. And where judgment matters, a human still
-                  signs off before anything reaches your customers.
+                  <span className="text-white font-medium">So I built Anthroly.</span> A human-led SEO service that does 
+                  what a $10,000/month agency does — but faster, cheaper, and with complete transparency. 
+                  Every backlink tracked. Every blog published. Every ranking monitored. All for less than 
+                  what you&apos;d pay for a single strategy call elsewhere.
                 </p>
 
                 <p className="text-emerald-400 font-medium">
-                  This isn&apos;t just a product for me. It&apos;s the teammate I wish I had 5 years ago.
+                  This isn&apos;t just a product for me. It&apos;s the solution I wish I had 5 years ago.
                 </p>
               </div>
 
@@ -129,7 +128,7 @@ export const FounderStory = () => {
                   <span className="text-gray-500">Built:</span> <span className="text-white">3 SaaS Products</span>
                 </div>
                 <div className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm">
-                  <span className="text-gray-500">Focus:</span> <span className="text-white">AI Agents + Growth</span>
+                  <span className="text-gray-500">Focus:</span> <span className="text-white">AI + Growth</span>
                 </div>
               </div>
             </div>

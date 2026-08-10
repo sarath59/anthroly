@@ -30,43 +30,43 @@ export const WhoIsThisFor = () => {
     {
       icon: Rocket,
       title: "Indie Hackers & Solo Founders",
-      description: "You are the product team, the sales team, and the support desk. Agents give you the three colleagues you cannot afford to hire yet.",
-      benefits: ["Build product, not busywork", "Cover four functions alone", "Compete with funded teams"],
+      description: "You&apos;re building something amazing, but SEO keeps falling to the bottom of your todo list. Get enterprise-level growth without hiring a team.",
+      benefits: ["Focus on product, not marketing", "Punch above your weight", "Compete with funded startups"],
       color: "emerald"
     },
     {
       icon: Building2,
       title: "Startups & Scale-ups",
-      description: "You found product-market fit, and suddenly every function wants headcount. Deploy agents where the work repeats; hire only where judgment is required.",
-      benefits: ["Grow without growing payroll", "Execution you can predict", "CAC that falls every month"],
+      description: "You&apos;ve found product-market fit. Now you need predictable, scalable growth. We&apos;re the growth engine you don&apos;t have to manage.",
+      benefits: ["Reduce CAC dramatically", "Build sustainable traffic", "Scale without scaling team"],
       color: "blue"
     },
     {
       icon: Store,
       title: "E-commerce & DTC Brands",
-      description: "Ad costs climb every quarter while the support inbox never empties. Your agents own organic demand and the inbox at the same time.",
-      benefits: ["Break the ad dependency", "Rank for buyer intent", "Answer customers instantly"],
+      description: "Paid ads are getting more expensive. Organic search is the highest-margin channel. Let us build your traffic moat.",
+      benefits: ["Reduce ad dependency", "Rank for buyer keywords", "Build brand authority"],
       color: "purple"
     },
     {
       icon: Code2,
       title: "SaaS Companies",
-      description: "Your best growth loops are all repeatable: content, trials, onboarding, renewals. Repeatable is precisely what an agent is for.",
-      benefits: ["Programmatic SEO at scale", "Leads qualified automatically", "Support that scales flat"],
+      description: "The most successful SaaS companies own their organic traffic. From Zapier to HubSpot, SEO compounds. Start building your moat.",
+      benefits: ["pSEO at scale", "Content that converts", "Competitive intelligence"],
       color: "pink"
     },
     {
       icon: Briefcase,
       title: "Agencies & Consultants",
-      description: "Take on more clients without adding more juniors. White-label our agents and ship work you would happily put your name on.",
-      benefits: ["White-label delivery", "Serve more accounts", "Protect your margins"],
+      description: "Offer SEO as a service without the headache. White-label our entire platform and deliver results you can be proud of.",
+      benefits: ["White-label solution", "Scale client delivery", "Increase margins"],
       color: "orange"
     },
     {
       icon: Users,
       title: "Enterprise Marketing Teams",
-      description: "Your strategy is sound; execution is stuck behind queues and approvals. Agents clear the backlog while your people decide direction.",
-      benefits: ["Clear the execution backlog", "Move without new headcount", "Fully auditable output"],
+      description: "Move faster than your bureaucracy allows. Get full-service SEO execution while your team focuses on strategy.",
+      benefits: ["Augment your team", "Rapid execution", "Measurable ROI"],
       color: "cyan"
     }
   ];
@@ -83,16 +83,16 @@ export const WhoIsThisFor = () => {
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 mb-6">
-            <span>👥 Every team has work that repeats. Almost none of it needs a human.</span>
+            <span>👥 82% of founders say SEO is important — only 12% actually do it</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            You Know What Needs Doing.
+            You Know SEO Matters.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              You Just Don&apos;t Have the Hours.
+              You Just Don&apos;t Have 20 Hours/Week.
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Research, outreach, content, triage—15 to 20 hours a week, every week.</span> That is the work your agents take. What&apos;s left is the work only you can actually do.
+            <span className="text-white font-semibold">The average SEO campaign needs 15-20 hours weekly.</span> You have a business to run. We built Anthroly for ambitious teams who want enterprise results without enterprise resources.
           </p>
         </div>
 
@@ -145,10 +145,10 @@ export const WhoIsThisFor = () => {
         <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="p-8 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-3xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Four Teammates Who Never Clock Out
+              The Perfect Place to Grow Your Business
             </h3>
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-              They cost less together than one junior hire, they work through the night, and every action they take is written down. The only real question is how much longer you&apos;ll do it by hand.
+              You&apos;ve found it. A growth partner that works 24/7, costs less than a junior hire, and delivers measurable results every single week. The only question is: how much longer will you wait?
             </p>
             <div className="flex items-center justify-center gap-2 text-emerald-400 font-semibold hover:gap-4 transition-all cursor-pointer">
               <span>See pricing below</span>

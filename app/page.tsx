@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { MarketingAgents } from "@/components/sections/MarketingAgents";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GuaranteedResults } from "@/components/sections/GuaranteedResults";
 import { PoweredBy } from "@/components/sections/PoweredBy";
@@ -24,19 +25,22 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <>
-      {/* 1. Hook - Agents that own outcomes */}
+      {/* 1. Hook - Clear value prop */}
       <Hero />
-      
-      {/* 2. How It Works - Agent + human-in-the-loop explained */}
+
+      {/* 2. How It Works - Human + AI combo explained */}
       <HowItWorks />
-      
-      {/* 3. Problem/Solution - Why automations and copilots fail */}
+
+      {/* 3. Marketing agents for AI answers - platform overview */}
+      <MarketingAgents />
+
+      {/* 4. Problem/Solution - Why you need this */}
       <ProblemSolution />
       
-      {/* 4. What You Get - Agent deliverables */}
+      {/* 4. What You Get - Deliverables */}
       <GuaranteedResults />
       
-      {/* 5. Each agent, in depth */}
+      {/* 5. How We Do It - Features Deep Dive */}
       <AICrawlerAnalysis />
       <AIVisibilityMonitor />
       <AutomatedBlogs />
@@ -46,7 +50,7 @@ export default function Home() {
       <FreeToolsBuilder />
       <SocialArticles />
       
-      {/* 6. Analyze + report, with a human accountable */}
+      {/* 6. Human Touch - Reports + Dedicated Support */}
       <AutomatedReports />
       
       {/* 7. Social Proof */}

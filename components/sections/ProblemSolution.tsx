@@ -32,16 +32,16 @@ export const ProblemSolution = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
-            <span>📊 Most business automation breaks the moment reality gets messy</span>
+            <span>📊 Most SEO campaigns fail to show ROI fast enough</span>
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Why Your Automation Never Freed Anyone
+            Why Billions Are Wasted on SEO Every Year
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              (And What Finally Does)
+              (And How to Be the Exception)
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-            <span className="text-white font-semibold">The average team runs 30+ tools and still does the work by hand.</span> Every one promised leverage. Not one of them owns an outcome. Here&apos;s the gap nobody sells you...
+            <span className="text-white font-semibold">68% of online experiences start with search.</span> Yet most businesses burn money on agencies that deliver reports instead of results. Here&apos;s what they don&apos;t tell you...
           </p>
         </div>
 
@@ -61,36 +61,36 @@ export const ProblemSolution = () => {
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Automations, Not Intelligence</p>
-                  <p className="text-gray-400">A trigger fires, a template runs, and the first exception breaks it. Now you maintain the automation instead of doing the task.</p>
+                  <p className="font-bold text-lg text-gray-200">Expensive Agencies</p>
+                  <p className="text-gray-400">$2,000-$10,000/month for a few blog posts and &quot;strategy calls&quot; that go nowhere. Where does the money even go?</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Copilots That Only Suggest</p>
-                  <p className="text-gray-400">It hands you a draft and stops. You still research, decide, send, and follow up. The work never actually left your desk.</p>
+                  <p className="font-bold text-lg text-gray-200">Black Box Results</p>
+                  <p className="text-gray-400">&quot;Trust us, it&apos;s working.&quot; Months pass. Rankings don&apos;t move. No clear explanation of what they&apos;re actually doing.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Headcount for Repetition</p>
-                  <p className="text-gray-400">You hire people to run checklists—prospect lists, ticket triage, content ops—then spend your week managing the checklist runners.</p>
+                  <p className="font-bold text-lg text-gray-200">Spammy Backlinks</p>
+                  <p className="text-gray-400">Cheap agencies buy links from shady sites. Google catches on. Your rankings tank. You&apos;re worse off than before.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Agencies Billing for Motion</p>
-                  <p className="text-gray-400">$2,000-$10,000/month for decks and status calls. Plenty of activity, and no system you own when they leave.</p>
+                  <p className="font-bold text-lg text-gray-200">DIY Time Sink</p>
+                  <p className="text-gray-400">Tried doing it yourself? That&apos;s 20+ hours/week you don&apos;t have, with a steep learning curve and slow results.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">No Audit Trail</p>
-                  <p className="text-gray-400">Something went out wrong and nobody can say which step did it. You can&apos;t improve a process you can&apos;t see.</p>
+                  <p className="font-bold text-lg text-gray-200">AI Tools Without Strategy</p>
+                  <p className="text-gray-400">ChatGPT can write content, but without SEO expertise it&apos;s just words on a page that no one will ever find.</p>
                 </div>
               </li>
             </ul>
@@ -106,28 +106,28 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-500" />
                 The Anthroly Way
               </h3>
-              <p className="text-gray-400 mt-2">Agent-run, human-verified</p>
+              <p className="text-gray-400 mt-2">Human-led, results-driven</p>
             </div>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Agents That Own the Outcome</p>
-                  <p className="text-gray-400">Each one analyzes, decides, executes, and closes the loop. You hand over a result to be achieved, not a list of steps to babysit.</p>
+                  <p className="font-bold text-lg">Real Humans Work With You</p>
+                  <p className="text-gray-400">A dedicated account manager onboards you, monitors your project, and keeps you updated. Never left alone with software.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Four Functions, One Brain</p>
-                  <p className="text-gray-400">SEO, sales, marketing, and support agents that share context—so your pipeline knows what your content published and what support keeps hearing.</p>
+                  <p className="font-bold text-lg">Google + AI Search Combined</p>
+                  <p className="text-gray-400">We optimize for traditional Google AND AI platforms like ChatGPT, Perplexity, and Claude. Get visible everywhere that matters.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Precision You Can Audit</p>
-                  <p className="text-gray-400">Every action is logged with the reasoning behind it. Where judgment matters—strategy, outreach, published words—a human signs off first.</p>
+                  <p className="font-bold text-lg">Writers & Editors, Not Bots</p>
+                  <p className="text-gray-400">People research, draft, and edit your content. We use tools where they help, but humans own quality and accuracy.</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -148,7 +148,7 @@ export const ProblemSolution = () => {
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <TrendingUp className="text-emerald-500 mx-auto mb-3" size={32} />
               <div className="text-2xl font-bold text-white mb-1">95%</div>
-              <div className="text-sm text-gray-500">Cheaper Than Hiring For It</div>
+              <div className="text-sm text-gray-500">Cost Savings vs Agencies</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Clock className="text-blue-500 mx-auto mb-3" size={32} />
@@ -158,7 +158,7 @@ export const ProblemSolution = () => {
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Zap className="text-purple-500 mx-auto mb-3" size={32} />
               <div className="text-2xl font-bold text-white mb-1">Always</div>
-              <div className="text-sm text-gray-500">Executing, never idle</div>
+              <div className="text-sm text-gray-500">On your roadmap</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
@@ -172,12 +172,12 @@ export const ProblemSolution = () => {
         <div className={`mt-12 flex flex-col md:flex-row justify-center gap-8 md:gap-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <LogoStrip 
             companies={AI_COMPANIES.slice(0, 3)} 
-            label="Intelligence behind the agents"
+            label="Stack we work with"
             size="sm"
           />
           <LogoStrip 
             companies={SEO_TOOLS.slice(0, 3)} 
-            label="Live data they act on"
+            label="Data from industry leaders"
             size="sm"
           />
         </div>

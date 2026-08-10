@@ -50,16 +50,16 @@ export const FinalCTA = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            <span className="text-white font-semibold">Every week you wait is another week of work done by hand.</span> Agents compound the same way SEO does—each cycle teaches the next. Your competitors are deploying them on these exact four functions right now. The math is simple. The decision is yours.
+            <span className="text-white font-semibold">SEO compounds at 10-20% monthly.</span> Starting now vs. 6 months later means 2-3x more traffic by year end. While you&apos;re reading this, your competitors are ranking. The math is simple. The decision is yours.
           </p>
 
           {/* What You Get Summary */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "Four agents live in 72 hours",
-              "A human owns your account",
-              "Human-written content & outreach",
-              "Every action logged and reviewed"
+              "Dedicated human account manager",
+              "Google + AI SEO combined",
+              "30+ pages of content/month",
+              "15–25 backlinks/month"
             ].map((item, index) => (
               <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white/5 border border-white/10 rounded-xl">
                 <CheckCircle2 className="text-emerald-400" size={18} />
@@ -84,7 +84,7 @@ export const FinalCTA = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Zap size={16} className="text-emerald-400" />
-                <span>Agents live in 72 hours</span>
+                <span>Start in 24 hours</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} className="text-emerald-400" />
@@ -96,7 +96,7 @@ export const FinalCTA = () => {
           {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">Real agents. Real execution. Real accountability.</span> Four agents own the repeatable work while a human owns the outcome—with every action written down and reviewed. <span className="text-emerald-400 font-semibold">$2,000/month · $1,000 to start. Cancel anytime.</span>
+              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> Our team runs the work—content, links, and technical fixes—with clear reporting every step of the way. <span className="text-emerald-400 font-semibold">$2,000/month · $1,000 to start. Cancel anytime.</span>
             </p>
           </div>
         </div>

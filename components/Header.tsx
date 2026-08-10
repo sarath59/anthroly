@@ -56,7 +56,7 @@ export const Header = () => {
               href="/#features"
               className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
             >
-              AI Agents
+              Services
             </Link>
             <Link
               href="/#pricing"
@@ -114,7 +114,7 @@ export const Header = () => {
               className="block px-4 py-3 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              AI Agents
+              Services
             </Link>
             <Link
               href="/#pricing"

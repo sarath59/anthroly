@@ -12,16 +12,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Anthroly - AI Agents for SEO, Sales, Marketing & Support",
-  description: "We build intelligent AI agents that analyze, execute, and report end to end—for SEO, sales automation, marketing, and customer support. Human-led SEO included. From $2,000/mo.",
-  keywords: ["AI agents", "AI agents for business", "sales automation", "customer support automation", "marketing automation", "AI SEO", "agentic AI", "SaaS growth", "answer engine optimization", "AEO"],
+  title: "Anthroly - Human Content + AI Backlinks",
+  description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
+  keywords: ["AI SEO", "human-led SEO", "high-DR backlinks", "SEO content", "answer engine optimization", "AEO", "LLM SEO", "SaaS SEO"],
   alternates: {
     // Absolute, query-free — tracking params like ?ref=producthunt must not create a second indexable URL
     canonical: absoluteUrl('/'),
   },
   openGraph: {
-    title: "Anthroly - AI Agents for SEO, Sales, Marketing & Support",
-    description: "Intelligent AI agents that analyze, execute, and report—plus human-led SEO for Google and AI answer engines.",
+    title: "Anthroly - Human Content + AI Backlinks",
+    description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
     url: absoluteUrl('/'),
     siteName: 'Anthroly',
     type: 'website',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
         url: absoluteUrl('/logo.png'),
         width: 512,
         height: 512,
-        alt: 'Anthroly — AI agents for SEO, sales, marketing, and support',
+        alt: 'Anthroly — human-led SEO, content, and AI-search visibility',
       },
     ],
   },
   twitter: {
     card: 'summary',
-    title: "Anthroly - AI Agents for SEO, Sales, Marketing & Support",
-    description: "Intelligent AI agents that analyze, execute, and report—plus human-led SEO for Google and AI answer engines.",
+    title: "Anthroly - Human Content + AI Backlinks",
+    description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
     images: [absoluteUrl('/logo.png')],
   },
   icons: {

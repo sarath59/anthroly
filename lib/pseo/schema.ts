@@ -61,18 +61,18 @@ export function generateOrganizationSchema(): object {
     },
     image: absoluteUrl('/logo.png'),
     description:
-      'Anthroly builds intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO for Google and AI answer engines.',
+      'Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility for Google and answer engines.',
     foundingDate: '2024',
     email: 'sharatth@anthroly.com',
     knowsAbout: [
-      'AI agents',
       'Answer Engine Optimization',
       'Generative Engine Optimization',
       'AI SEO',
       'AI Overviews',
-      'Sales automation',
-      'Marketing automation',
-      'Customer support automation',
+      'Link building',
+      'Content SEO',
+      'Programmatic SEO',
+      'LLM SEO',
     ],
     sameAs: [
       'https://twitter.com/anthroly',
@@ -94,9 +94,9 @@ export function generateOrganizationSchema(): object {
     },
     offers: {
       '@type': 'Offer',
-      name: 'AI Agents for Business',
+      name: 'Managed SEO + AEO',
       description:
-        'Intelligent AI agents for SEO, sales automation, marketing, and customer support—plus human-led SEO with 15 blogs/month and 15–25 high-DR backlinks',
+        'Human-led SEO with 15 blogs/month, 15–25 high-DR backlinks, and optimization for Google and AI answer engines',
       price: '2000',
       priceCurrency: 'USD',
       priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
@@ -115,7 +115,7 @@ export function generateWebSiteSchema(): object {
     name: 'Anthroly',
     url: SITE_URL,
     description:
-      'AI agents for SEO, sales, marketing, and support—plus human-led SEO optimized for Google and AI answer engines.',
+      'Human-led SEO and AEO—backlinks, content, and AI-search visibility for Google and answer engines.',
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'en-US',
   };

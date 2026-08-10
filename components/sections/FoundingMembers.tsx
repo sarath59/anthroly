@@ -28,13 +28,13 @@ export const FoundingMembers = () => {
   const benefits = [
     {
       icon: Users,
-      title: "A Human Owns Your Account",
-      description: "A real person onboards you, reviews everything your agents ship, and talks to you weekly"
+      title: "Dedicated Human Support",
+      description: "A real person onboards you, monitors your project, and talks to you weekly"
     },
     {
       icon: TrendingUp,
-      title: "Done-for-you deployment",
-      description: "We map the workflow, build the agents, and run them—you approve direction, not tickets."
+      title: "Done-for-you delivery",
+      description: "Writers, link builders, and strategists ship every month—you approve direction, not spreadsheets."
     },
     {
       icon: Shield,
@@ -44,7 +44,7 @@ export const FoundingMembers = () => {
     {
       icon: Sparkles,
       title: "Exclusive Community",
-      description: "Private Slack with other founders running agents—what works, what breaks, what's next"
+      description: "Private Slack with other founders for networking and growth tips"
     }
   ];
 
@@ -72,11 +72,11 @@ export const FoundingMembers = () => {
               {/* Header */}
               <div className="text-center mb-10 pt-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Agents Do It. People Own It.
+                  People Run Your Program.
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  We&apos;re not a builder you have to learn. We map your workflows, deploy the agents, and stay
-                  accountable for what they produce—reviewing the output with you every single week.
+                  We&apos;re not a DIY dashboard—we&apos;re a service. Strategists and writers onboard you, ship your deliverables,
+                  and meet with you every week while we execute the plan.
                 </p>
               </div>
 
@@ -104,8 +104,8 @@ export const FoundingMembers = () => {
               {/* Trust Note */}
               <div className="text-center p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
                 <p className="text-gray-300 text-sm">
-                  <span className="text-amber-400 font-semibold">Why we&apos;re different:</span> Most platforms hand you a canvas and wish you luck.
-                  We deliver working agents and keep a human on the hook for what they do. <span className="text-white font-medium">You&apos;re never on your own.</span>
+                  <span className="text-amber-400 font-semibold">Why we&apos;re different:</span> Most tools leave you to figure it out alone. 
+                  We&apos;re a human team that does the work with you in the loop. <span className="text-white font-medium">You&apos;re never on your own.</span>
                 </p>
               </div>
             </div>

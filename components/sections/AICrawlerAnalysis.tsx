@@ -29,23 +29,23 @@ export const AICrawlerAnalysis = () => {
   const crawlerFeatures = [
     {
       icon: Eye,
-      title: "Continuous Visibility Scoring",
-      description: "It measures how legible your site is to ChatGPT, Perplexity, Claude, and Gemini—then re-scores itself after every fix it ships"
+      title: "AI Visibility Score",
+      description: "Know exactly how visible you are to ChatGPT, Perplexity, Claude, and other AI systems"
     },
     {
       icon: AlertTriangle,
-      title: "Competitive Gap Analysis",
-      description: "It works out precisely why AI names a competitor instead of you, and what closes the distance"
+      title: "Gap Analysis",
+      description: "Discover what your competitors are doing that makes AI recommend them over you"
     },
     {
       icon: Search,
-      title: "Full-Site Audit, Every Cycle",
-      description: "Every page, every crawl. Structural problems surface before they quietly cost you a citation"
+      title: "Content Audit",
+      description: "AI scans every page to find optimization opportunities humans miss"
     },
     {
       icon: Zap,
-      title: "It Fixes, It Doesn't Flag",
-      description: "The agent executes in order of impact and hands you the diff—not another prioritized to-do list"
+      title: "Priority Actions",
+      description: "Get a ranked list of exactly what to fix, in order of impact on your rankings"
     }
   ];
 
@@ -59,13 +59,13 @@ export const AICrawlerAnalysis = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
-            <span>📈 Your buyers now ask an AI before they ever ask you</span>
+            <span>📈 Sites optimized for AI can see 3x more referral traffic</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Meet Your SEO Agent. It Sees What AI Sees.
+            Most Sites Are Invisible to AI Search (For Now)
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Most sites fail the basic AI visibility checks.</span> Your agent reads your site the way ChatGPT, Perplexity, and Claude do, scores every gap, then repairs them in priority order — with a human approving each change before it ships.
+            <span className="text-white font-semibold">Most websites fail basic AI visibility checks.</span> Our crawler analyzes how ChatGPT, Perplexity, and Claude interpret your site — and reveals the exact fixes to get discovered and recommended.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export const AICrawlerAnalysis = () => {
             <div className="mt-10">
               <LogoStrip 
                 companies={AI_COMPANIES} 
-                label="Your agent checks you on"
+                label="We analyze visibility on"
                 size="sm"
               />
             </div>
@@ -142,10 +142,10 @@ export const AICrawlerAnalysis = () => {
           <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                An Audit Tells You. An Agent Handles It.
+                See What AI Sees (Or Doesn&apos;t See)
               </h3>
               <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                ChatGPT and Perplexity don&apos;t read a page the way Google does. Different signals, different structures, different patterns of trust. <span className="font-semibold text-white">Knowing that is worthless unless something acts on it — so your agent does.</span>
+                ChatGPT and Perplexity don&apos;t read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-white">If you&apos;re optimizing only for Google, you&apos;re already behind.</span>
               </p>
             </div>
 
@@ -171,7 +171,7 @@ export const AICrawlerAnalysis = () => {
 
             <div className="pt-4">
               <p className="text-sm text-gray-400 bg-gray-900/80 border border-gray-800 p-4 rounded-xl">
-                <span className="font-semibold text-white">What the score measures:</span> indexability, structured data, entity clarity, answer coverage, and citation-readiness — the signals AI engines rely on to recommend a brand. Nothing goes live on your domain without human review.
+                <span className="font-semibold text-white">What the score measures:</span> indexability, structured data, entity clarity, answer coverage, and citation-readiness — the signals AI engines rely on to recommend a brand.
               </p>
             </div>
           </div>

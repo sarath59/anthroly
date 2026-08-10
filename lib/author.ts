@@ -11,7 +11,7 @@ export const SITE_AUTHOR = {
     'https://twitter.com/anthroly',
     'https://linkedin.com/company/anthroly',
   ],
-  bio: 'Sarath Kavuru is the founder of Anthroly, where he builds AI agents for SEO, sales, marketing, and support—and leads human-in-the-loop SEO programs focused on AI Overview and answer-engine citations.',
+  bio: 'Sarath Kavuru is the founder of Anthroly, a human-led SEO and AEO company focused on high-DR backlinks, content, and getting brands cited in Google and AI answer engines.',
 } as const;
 
 export function generatePersonSchema(): object {

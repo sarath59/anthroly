@@ -66,7 +66,7 @@ export const ProofOfWork = () => {
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            What changes when agents own the work instead of sitting in someone&apos;s to-do list.
+            See how brands use Anthroly to capture AI referral traffic and visibility.
           </p>
         </div>
 

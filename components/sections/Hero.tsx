@@ -25,29 +25,29 @@ export const Hero = () => {
           
           {/* Main Heading - Clear Value Prop */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="block text-white mb-2">We build AI agents</span>
-            <span className="block text-white mb-2">that finish the work.</span>
+            <span className="block text-white mb-2">Real SEO experts.</span>
+            <span className="block text-white mb-2">Working on your business.</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              SEO. Sales. Marketing. Support.
+              Not software. Not bots.
             </span>
           </h1>
 
           {/* Subheadline - Problem + Solution */}
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Not automations that fire on a trigger and wait. <span className="text-white font-semibold">Intelligent agents that own an outcome</span>
-            —they analyze the situation, decide the next move, execute it end to end, and report back in plain language.{' '}
-            <span className="text-white font-semibold">Every action is precise, logged, and verifiable.</span>
+            Strategists, writers, and link builders run your SEO <span className="text-white font-semibold">end to end</span>
+            —so you rank on Google and stay visible wherever people search today, including AI-style answers.{' '}
+            <span className="text-white font-semibold">People do the work;</span> you get clear reporting and consistent results.
           </p>
 
           {/* Human Touch Highlight - Builds Trust */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <Users size={16} className="text-emerald-400" />
-              <span className="text-gray-300">Humans in the loop on every output</span>
+              <span className="text-gray-300">Senior SEO experts on your account</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
               <UserCheck size={16} className="text-purple-400" />
-              <span className="text-gray-300">Human-led SEO still included</span>
+              <span className="text-gray-300">Human-written content &amp; outreach</span>
             </div>
           </div>
 
@@ -82,12 +82,12 @@ export const Hero = () => {
           {/* Quick Stats - Social Proof */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">4</div>
-              <div className="text-gray-500 text-sm">Agent Teams</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">30+</div>
+              <div className="text-gray-500 text-sm">Pages/Month</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">24/7</div>
-              <div className="text-gray-500 text-sm">Always Executing</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">DR 70+</div>
+              <div className="text-gray-500 text-sm">Avg Backlinks</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">$2,000</div>
@@ -95,7 +95,7 @@ export const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">24hrs</div>
-              <div className="text-gray-500 text-sm">To Deploy</div>
+              <div className="text-gray-500 text-sm">To Get Started</div>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export const Hero = () => {
           <div className="mb-8">
             <LogoStrip 
               companies={AI_COMPANIES} 
-              label="The intelligence our agents are built on"
+              label="Where we grow your visibility"
               size="md"
               showNames={true}
             />
@@ -114,7 +114,7 @@ export const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-gray-500">
-          <span className="text-xs uppercase tracking-widest">Meet your agents</span>
+          <span className="text-xs uppercase tracking-widest">See what you get</span>
           <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
             <div className="w-1.5 h-3 bg-gray-500 rounded-full animate-bounce"></div>
           </div>

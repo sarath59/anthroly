@@ -19,7 +19,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              We build intelligent AI agents for SEO, sales automation, marketing, and customer support—agents that analyze, execute, and report end to end, with humans in the loop.
+              Managed SEO and content: backlinks, blogs, and visibility on Google and AI search—delivered by real people on your behalf.
             </p>
             <div className="flex space-x-4">
               <a
@@ -162,7 +162,7 @@ export const Footer = () => {
         <div className="text-center text-gray-400 text-sm space-y-2">
           <p>&copy; {currentYear} Anthroly. All rights reserved.</p>
           <p className="text-xs text-gray-500 max-w-2xl mx-auto">
-            Anthroly is an independent AI agents and SEO company. We are not affiliated with Anthropic,
+            Anthroly is an independent SEO and AEO company. We are not affiliated with Anthropic,
             OpenAI, or other AI model providers.{' '}
             <Link href="/anthroly-vs-anthropic" className="text-gray-400 hover:text-emerald-400 underline-offset-2 hover:underline">
               Anthroly vs Anthropic

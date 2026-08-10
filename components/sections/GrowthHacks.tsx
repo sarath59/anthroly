@@ -31,11 +31,11 @@ export const GrowthHacks = () => {
       title: "SaaS Companies",
       color: "from-blue-500 to-cyan-500",
       hacks: [
-        "SEO agent: product-led pages and integration hubs at scale",
-        "Sales agent: every trial signup enriched and routed in minutes",
-        "Support agent: onboarding questions answered inside the product",
-        "Marketing agent: comparison and alternative pages that convert",
-        "Weekly read on activation, expansion, and churn signals"
+        "Product-led SEO landing pages",
+        "Integration pages for every tool you connect with",
+        "Alternative pages (vs competitors)",
+        "Feature comparison matrices",
+        "Use case templates library"
       ]
     },
     {
@@ -43,11 +43,11 @@ export const GrowthHacks = () => {
       title: "E-Commerce",
       color: "from-orange-500 to-red-500",
       hacks: [
-        "SEO agent: category and product pages tuned continuously",
-        "Support agent: orders, shipping, and returns closed end to end",
-        "Sales agent: cart recovery that reads context, not just a timer",
-        "Marketing agent: seasonal campaigns built and launched on time",
-        "Margin by channel, reported every Monday"
+        "Category page optimization at scale",
+        "Product schema for rich snippets",
+        "Review aggregation for UGC SEO",
+        "Seasonal landing pages automated",
+        "Local inventory pages"
       ]
     },
     {
@@ -55,11 +55,11 @@ export const GrowthHacks = () => {
       title: "Agencies & Services",
       color: "from-purple-500 to-pink-500",
       hacks: [
-        "SEO agent: a service-area page for every location you cover",
-        "Sales agent: inbound leads qualified before you call back",
-        "Marketing agent: case studies written from your delivery data",
-        "Support agent: client questions answered from your own docs",
-        "White-label reporting your clients will actually read"
+        "Case study optimization",
+        "Service area pages at scale",
+        "Industry-specific landing pages",
+        "Client results showcases",
+        "Thought leadership syndication"
       ]
     }
   ];
@@ -77,13 +77,13 @@ export const GrowthHacks = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Rocket size={16} />
-            <span>💡 The same four agents, tuned to how your industry actually sells</span>
+            <span>💡 Top 1% of companies use 5+ growth channels — we give you 8</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Your Industry&apos;s Secret Growth Playbook
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Generic automation fails. Trained agents win.</span> We&apos;ve studied how the best operators in your category actually run — then built your agents to work the same way.
+            <span className="text-white font-semibold">Generic SEO fails. Industry-specific wins.</span> We&apos;ve analyzed 10,000+ successful campaigns to extract the exact tactics that work for SaaS, e-commerce, and service businesses.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export const GrowthHacks = () => {
           <div className="bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 border border-white/10 rounded-3xl p-8">
             <div className="flex items-center gap-3 mb-6">
               <Sparkles className="text-yellow-400" size={24} />
-              <h3 className="text-2xl font-bold">Plus These, Whatever You Sell</h3>
+              <h3 className="text-2xl font-bold">Plus These Universal Strategies</h3>
             </div>
             
             <div className="grid sm:grid-cols-2 gap-4">
@@ -133,7 +133,7 @@ export const GrowthHacks = () => {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
-                <span className="text-gray-300">Lead enrichment and ICP scoring</span>
+                <span className="text-gray-300">Podcast guesting for backlinks</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
@@ -141,7 +141,7 @@ export const GrowthHacks = () => {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={18} />
-                <span className="text-gray-300">Objection-handling pages from real sales calls</span>
+                <span className="text-gray-300">YouTube SEO for video content</span>
               </div>
             </div>
           </div>
