@@ -7,6 +7,8 @@ import {
   generatePersonaLocationPage,
   generatePersonaIndustryPage,
   generatePersonaIndustryLocationPage,
+  APAC_CITY_SLUGS,
+  APAC_PRIORITY_PERSONA_SLUGS,
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
@@ -35,18 +37,21 @@ function generatePersonaTwoWayPage(personaSlug: string, secondSlug: string) {
  * - /for/[persona]/[industry]/[location] - persona + industry + location combo
  */
 
-// Only pre-generate the most important pages at build time
-// Other pages will be generated on-demand with ISR
+// Pre-build personas + APAC persona×city combos for reliable indexing
 export async function generateStaticParams() {
   const params: { segments: string[] }[] = [];
   
-  // Single persona pages: /for/[persona] - Always pre-build (10 pages)
+  // Single persona pages: /for/[persona]
   targetPersonas.forEach((persona) => {
     params.push({ segments: [persona.slug] });
   });
-  
-  // Skip pre-generating combinations - they'll be generated on-demand
-  // This reduces build from ~40K pages to ~300 pages
+
+  // APAC persona × city two-ways (priority markets)
+  for (const persona of APAC_PRIORITY_PERSONA_SLUGS) {
+    for (const city of APAC_CITY_SLUGS) {
+      params.push({ segments: [persona, city] });
+    }
+  }
   
   return params;
 }

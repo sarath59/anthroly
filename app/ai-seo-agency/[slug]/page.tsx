@@ -1,6 +1,11 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { seoLocations, generateLocationPage, generatePageStructuredData } from '@/lib/pseo';
+import {
+  seoLocations,
+  generateLocationPage,
+  generatePageStructuredData,
+  APAC_CITY_SLUGS,
+} from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
 
@@ -8,12 +13,20 @@ interface PageProps {
   params: { slug: string };
 }
 
-// Pre-generate top 20 locations, rest use ISR
+const APAC_SET = new Set<string>(APAC_CITY_SLUGS);
+
+// Pre-build ALL APAC cities + top global hubs so Google gets fast 200s on first crawl
 export async function generateStaticParams() {
-  // Only pre-build the top 20 most important locations
-  return seoLocations.slice(0, 20).map((location) => ({
-    slug: location.slug,
-  }));
+  const apac = seoLocations.filter((l) => APAC_SET.has(l.slug));
+  const rest = seoLocations.filter((l) => !APAC_SET.has(l.slug)).slice(0, 25);
+  const seen = new Set<string>();
+  return [...apac, ...rest]
+    .filter((l) => {
+      if (seen.has(l.slug)) return false;
+      seen.add(l.slug);
+      return true;
+    })
+    .map((location) => ({ slug: location.slug }));
 }
 
 // Enable ISR - pages regenerate every 24 hours  

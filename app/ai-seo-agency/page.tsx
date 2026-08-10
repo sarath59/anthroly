@@ -1,17 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { seoLocations, locationRegions } from '@/lib/pseo';
+import { seoLocations, apacCountries, APAC_CITY_SLUGS } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Globe } from 'lucide-react';
 import { absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'AI SEO Agency Locations | Local & Global SEO Services | Anthroly',
-  description: 'AI-powered SEO services in San Francisco, New York, London, and 20+ major markets worldwide. Local expertise, global reach, automated execution.',
-  keywords: ['seo agency', 'ai seo agency', 'local seo services', 'seo company near me', 'global seo agency'],
+  title: 'AI SEO Agency Locations | Singapore, China, Australia, NZ & Global | Anthroly',
+  description: 'AI SEO and AEO services in Singapore, China, Australia, New Zealand, and 100+ cities worldwide. Local expertise plus answer engine optimization.',
+  keywords: ['seo agency', 'ai seo agency', 'AI SEO Singapore', 'AEO Australia', 'SEO China', 'SEO New Zealand'],
   openGraph: {
     title: 'AI SEO Agency Locations | Anthroly',
-    description: 'AI-powered SEO services in major markets worldwide.',
+    description: 'Priority APAC markets plus major cities worldwide.',
     url: absoluteUrl('/ai-seo-agency'),
     type: 'website',
   },
@@ -21,9 +21,12 @@ export const metadata: Metadata = {
 };
 
 export default function LocationsIndexPage() {
-  // Group locations by region
+  const apacSet = new Set<string>(APAC_CITY_SLUGS);
   const usLocations = seoLocations.filter(l => l.country === 'United States');
-  const internationalLocations = seoLocations.filter(l => l.country !== 'United States');
+  const apacCityLocations = seoLocations.filter(l => apacSet.has(l.slug));
+  const internationalLocations = seoLocations.filter(
+    l => l.country !== 'United States' && !apacSet.has(l.slug)
+  );
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -63,6 +66,57 @@ export default function LocationsIndexPage() {
                 <ArrowRight className="ml-2" size={18} />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Priority APAC country hubs */}
+      <section className="py-16 border-b border-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-between gap-4 mb-8 flex-wrap">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+                  <Globe className="text-emerald-400" size={24} />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-white">Priority APAC Markets</h2>
+                  <p className="text-gray-500">Singapore · China · Australia · New Zealand</p>
+                </div>
+              </div>
+              <Link href="/markets" className="text-emerald-400 text-sm font-medium hover:text-emerald-300">
+                View all market hubs →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+              {apacCountries.map((country) => (
+                <Link
+                  key={country.slug}
+                  href={`/markets/${country.slug}`}
+                  className="group p-5 bg-emerald-500/5 border border-emerald-500/20 rounded-xl hover:border-emerald-500/40 transition-all"
+                >
+                  <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors mb-1">
+                    {country.name}
+                  </h3>
+                  <p className="text-sm text-gray-500">Country AEO hub</p>
+                </Link>
+              ))}
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-4">APAC cities</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {apacCityLocations.map((location) => (
+                <Link
+                  key={location.id}
+                  href={`/ai-seo-agency/${location.slug}`}
+                  className="group p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all"
+                >
+                  <h3 className="font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                    {location.city}
+                  </h3>
+                  <p className="text-sm text-gray-500">{location.country}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

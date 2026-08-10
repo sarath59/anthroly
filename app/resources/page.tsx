@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper, Sparkles, Globe2 } from 'lucide-react';
 import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
 import { industries } from '@/lib/pseo/data/industries';
 import { useCases } from '@/lib/pseo/data/use-cases';
@@ -23,6 +23,16 @@ export const metadata: Metadata = {
 };
 
 const resourceCategories = [
+  {
+    title: 'APAC Markets',
+    description: 'Singapore, China, Australia & New Zealand AI SEO / AEO hubs',
+    href: '/markets',
+    icon: Globe2,
+    count: 100,
+    countLabel: 'market pages',
+    gradient: 'from-emerald-500 to-cyan-500',
+    bgGlow: 'bg-emerald-600/10',
+  },
   {
     title: 'Answer Engine Optimization',
     description: 'Claude, ChatGPT, Anthropic AEO hubs + 600+ topic×engine guides',

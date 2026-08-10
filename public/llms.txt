@@ -40,6 +40,18 @@
 - [Tool comparisons](https://www.anthroly.com/compare)
 - [Free SEO tools](https://www.anthroly.com/tools)
 
+## Priority APAC markets (SEO / AEO)
+- [APAC Markets hub](https://www.anthroly.com/markets)
+- [AI SEO & AEO Singapore](https://www.anthroly.com/markets/singapore)
+- [AI SEO & AEO China](https://www.anthroly.com/markets/china)
+- [AI SEO & AEO Australia](https://www.anthroly.com/markets/australia)
+- [AI SEO & AEO New Zealand](https://www.anthroly.com/markets/new-zealand)
+- [AEO Singapore](https://www.anthroly.com/markets/singapore/answer-engine-optimization)
+- [ChatGPT SEO Singapore](https://www.anthroly.com/markets/singapore/chatgpt-seo)
+- [AI SEO China](https://www.anthroly.com/markets/china/ai-seo)
+- [AEO Australia](https://www.anthroly.com/markets/australia/answer-engine-optimization)
+- [AI Visibility New Zealand](https://www.anthroly.com/markets/new-zealand/ai-visibility)
+
 ## Customer proof
 - [llmoutrank case study](https://www.anthroly.com/customers/llmoutrank)
 - [isthisaiorno case study](https://www.anthroly.com/customers/isthisaiorno)

@@ -10,6 +10,11 @@ import {
   blogPosts,
   answerEngines,
   aeoTopics,
+  apacCountries,
+  apacTopics,
+  APAC_CITY_SLUGS,
+  APAC_PRIORITY_INDUSTRY_SLUGS,
+  APAC_PRIORITY_PERSONA_SLUGS,
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
@@ -20,26 +25,33 @@ import { allCustomerStories } from '@/lib/customers';
  * INDEXABLE SITEMAP ONLY
  *
  * Next.js 14 generates /sitemap.xml from this file.
- * Include pages we want Google to consider for indexing:
- * - Core + base single-dimension pages
- * - Two-way combinations (enough intent signal)
  *
- * Three-way template combos (persona×industry×location, etc.) are
- * intentionally omitted — they are thin near-duplicates. Google was
- * crawling ~30K of them from the old sitemap and marking
- * "Crawled - currently not indexed". Those URLs stay live for users
- * but are noindex + canonicalized to the two-way parent.
+ * INDEXING STRATEGY (APAC focus):
+ * 1. Prioritize /markets country hubs + country×topic pages (unique long-form)
+ * 2. Include all base pages + AEO
+ * 3. For location two-ways, submit ONLY APAC cities (SG/CN/AU/NZ/HK)
+ *    to protect crawl budget — thin global two-ways were getting
+ *    "Crawled – currently not indexed"
+ * 4. Three-ways remain omitted (noindex + canonical to parent)
  */
+
+const APAC_CITY_SET = new Set<string>(APAC_CITY_SLUGS);
+const APAC_INDUSTRY_SET = new Set<string>(APAC_PRIORITY_INDUSTRY_SLUGS);
+const APAC_PERSONA_SET = new Set<string>(APAC_PRIORITY_PERSONA_SLUGS);
+
+/** Stable lastmod for APAC market pack — avoid fake "everything changed today" signal */
+const APAC_LASTMOD = new Date('2026-08-10T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
   // ============================================================================
-  // INDEX PAGES (11)
+  // INDEX PAGES
   // ============================================================================
   const indexPages = [
     { path: '', priority: 1.0 as const },
+    { path: '/markets', priority: 0.98 as const },
     { path: '/resources', priority: 0.9 as const },
     { path: '/aeo', priority: 0.95 as const },
     { path: '/aeo/how-to-get-cited-in-ai-overviews', priority: 0.9 as const },
@@ -63,9 +75,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
   indexPages.forEach(page => {
     entries.push({
       url: `${SITE_URL}${page.path}`,
-      lastModified: now,
+      lastModified: page.path === '/markets' ? APAC_LASTMOD : now,
       changeFrequency: 'weekly',
       priority: page.priority,
+    });
+  });
+
+  // ============================================================================
+  // APAC MARKETS — highest crawl priority (unique long-form)
+  // 4 country hubs + ~112 country×topic spokes
+  // ============================================================================
+  apacCountries.forEach((country) => {
+    entries.push({
+      url: `${SITE_URL}/markets/${country.slug}`,
+      lastModified: APAC_LASTMOD,
+      changeFrequency: 'weekly',
+      priority: country.slug === 'singapore' || country.slug === 'china' || country.slug === 'australia'
+        ? 0.95
+        : 0.9,
+    });
+
+    apacTopics.forEach((topic) => {
+      entries.push({
+        url: `${SITE_URL}/markets/${country.slug}/${topic.slug}`,
+        lastModified: APAC_LASTMOD,
+        changeFrequency: 'weekly',
+        priority: 0.85,
+      });
     });
   });
 
@@ -145,13 +181,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Locations (149)
+  // Locations — APAC cities get higher priority
   seoLocations.forEach(location => {
+    const isApac = APAC_CITY_SET.has(location.slug);
     entries.push({
       url: `${SITE_URL}/ai-seo-agency/${location.slug}`,
-      lastModified: now,
+      lastModified: isApac ? APAC_LASTMOD : now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: isApac ? 0.88 : 0.75,
     });
   });
 
@@ -210,77 +247,82 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // ============================================================================
-  // TWO-WAY COMBINATIONS (~6,632 pages)
+  // TWO-WAY COMBINATIONS — APAC-FIRST CRAWL BUDGET
+  // Only submit location combos for Singapore / China / Australia / NZ / HK
   // ============================================================================
 
-  // Persona × Location (10 × 149 = 1,490)
-  targetPersonas.forEach(persona => {
-    seoLocations.forEach(location => {
+  const apacLocations = seoLocations.filter((l) => APAC_CITY_SET.has(l.slug));
+  const priorityPersonas = targetPersonas.filter((p) => APAC_PERSONA_SET.has(p.slug));
+  const priorityIndustries = industries.filter((i) => APAC_INDUSTRY_SET.has(i.slug));
+
+  // Persona × APAC Location
+  priorityPersonas.forEach((persona) => {
+    apacLocations.forEach((location) => {
       entries.push({
         url: `${SITE_URL}/for/${persona.slug}/${location.slug}`,
-        lastModified: now,
+        lastModified: APAC_LASTMOD,
         changeFrequency: 'monthly',
-        priority: 0.7,
+        priority: 0.72,
       });
     });
   });
 
-  // Persona × Industry (10 × 20 = 200)
-  targetPersonas.forEach(persona => {
-    industries.forEach(industry => {
+  // Persona × Industry (keep — smaller set, useful)
+  targetPersonas.forEach((persona) => {
+    industries.forEach((industry) => {
       entries.push({
         url: `${SITE_URL}/for/${persona.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
-        priority: 0.7,
+        priority: 0.65,
       });
     });
   });
 
-  // Industry × Location (20 × 149 = 2,980)
-  industries.forEach(industry => {
-    seoLocations.forEach(location => {
+  // Industry × APAC Location (priority industries only)
+  priorityIndustries.forEach((industry) => {
+    apacLocations.forEach((location) => {
       entries.push({
         url: `${SITE_URL}/industries/${industry.slug}/${location.slug}`,
-        lastModified: now,
+        lastModified: APAC_LASTMOD,
         changeFrequency: 'monthly',
-        priority: 0.7,
+        priority: 0.72,
       });
     });
   });
 
-  // Glossary × Industry (60 × 20 = 1,200)
-  seoGlossaryTerms.forEach(term => {
-    industries.forEach(industry => {
+  // Glossary × Industry (top industries only — reduce thin crawl waste)
+  seoGlossaryTerms.forEach((term) => {
+    priorityIndustries.forEach((industry) => {
       entries.push({
         url: `${SITE_URL}/glossary/${term.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
-        priority: 0.6,
+        priority: 0.55,
       });
     });
   });
 
-  // UseCase × Industry (18 × 20 = 360)
-  useCases.forEach(useCase => {
-    industries.forEach(industry => {
+  // UseCase × Industry
+  useCases.forEach((useCase) => {
+    priorityIndustries.forEach((industry) => {
       entries.push({
         url: `${SITE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
-        priority: 0.6,
+        priority: 0.55,
       });
     });
   });
 
-  // Integration × Industry (14 × 20 = 280)
-  seoIntegrations.forEach(integration => {
-    industries.forEach(industry => {
+  // Integration × Industry
+  seoIntegrations.forEach((integration) => {
+    priorityIndustries.forEach((industry) => {
       entries.push({
         url: `${SITE_URL}/integrations/${integration.slug}/${industry.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
-        priority: 0.6,
+        priority: 0.55,
       });
     });
   });

@@ -76,6 +76,24 @@ export {
 // Additional Data
 export { languages, languageRegions } from './data/languages';
 export { seoServices, serviceCategories } from './data/services';
+export {
+  apacCountries,
+  apacTopics,
+  getApacCountry,
+  getApacTopic,
+  getAllApacCountrySlugs,
+  getAllApacTopicSlugs,
+  getAllApacMarketPaths,
+  APAC_CITY_SLUGS,
+  APAC_PRIORITY_INDUSTRY_SLUGS,
+  APAC_PRIORITY_PERSONA_SLUGS,
+} from './data/apac-markets';
+export {
+  generateApacCountryHubPage,
+  generateApacTopicPage,
+  getApacCountryPage,
+  getApacTopicComboPage,
+} from './apac-generators';
 
 // Schema
 export {

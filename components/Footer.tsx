@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black border-t border-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="mb-4">
@@ -134,6 +134,43 @@ export const Footer = () => {
               <li>
                 <Link href="/ai-seo-agency" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Locations
+                </Link>
+              </li>
+              <li>
+                <Link href="/markets" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  APAC Markets
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Markets */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-white">Markets</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/markets" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  All APAC Markets
+                </Link>
+              </li>
+              <li>
+                <Link href="/markets/singapore" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Singapore
+                </Link>
+              </li>
+              <li>
+                <Link href="/markets/china" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  China
+                </Link>
+              </li>
+              <li>
+                <Link href="/markets/australia" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Australia
+                </Link>
+              </li>
+              <li>
+                <Link href="/markets/new-zealand" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  New Zealand
                 </Link>
               </li>
             </ul>

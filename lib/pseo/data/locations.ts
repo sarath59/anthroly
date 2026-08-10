@@ -803,10 +803,10 @@ export const seoLocations: Location[] = [
     timezone: 'Asia/Singapore',
     localInsights: [
       'Major APAC business hub with regional headquarters for global companies',
-      'Strong fintech and enterprise software presence',
-      'Multilingual market (English, Mandarin, Malay, Tamil) with sophisticated buyers',
-      'Gateway to Southeast Asian markets with excellent connectivity',
-      'Government support for innovation and digital transformation'
+      'Strong fintech, SaaS, and enterprise software presence with English-first buyers',
+      'Multilingual market (English, Mandarin, Malay, Tamil) with sophisticated B2B research habits',
+      'ChatGPT, Claude, and Perplexity commonly used for vendor shortlists before demos',
+      'Gateway to Southeast Asian markets—AEO programs often expand from Singapore across SEA'
     ]
   },
   {
@@ -839,6 +839,182 @@ export const seoLocations: Location[] = [
       'Strong coffee, food, and lifestyle culture influencing brand marketing',
       'Major education hub with significant international student population',
       'Events and conference city creating B2B marketing opportunities'
+    ]
+  },
+  {
+    id: 'brisbane',
+    city: 'Brisbane',
+    state: 'Queensland',
+    country: 'Australia',
+    slug: 'brisbane',
+    population: 2560000,
+    timezone: 'Australia/Brisbane',
+    localInsights: [
+      'Fast-growing Australian metro with expanding SaaS, services, and tourism brands',
+      'Strong demand for national SEO that still wins Queensland local intent',
+      'Businesses compete against Sydney/Melbourne brands for AI recommendations',
+      'English-first market with high ChatGPT and Google AI Overview adoption',
+      'Ideal market for AEO plus local SEO hybrid programs'
+    ]
+  },
+  {
+    id: 'perth',
+    city: 'Perth',
+    state: 'Western Australia',
+    country: 'Australia',
+    slug: 'perth',
+    population: 2192000,
+    timezone: 'Australia/Perth',
+    localInsights: [
+      'Resources, energy, and professional services hub on Australia’s west coast',
+      'Companies need visibility with both local buyers and national decision-makers',
+      'Timezone proximity to Asia creates APAC GTM opportunities',
+      'AI search used for vendor shortlists in industrial and services categories',
+      'Content must balance technical B2B proof with clear commercial answers'
+    ]
+  },
+  {
+    id: 'adelaide',
+    city: 'Adelaide',
+    state: 'South Australia',
+    country: 'Australia',
+    slug: 'adelaide',
+    population: 1403000,
+    timezone: 'Australia/Adelaide',
+    localInsights: [
+      'Defence, space, education, and growing tech ecosystem',
+      'Lower competition than Sydney/Melbourne creates first-mover AEO advantage',
+      'Strong university and research presence supporting E-E-A-T content',
+      'Businesses expanding nationally still need South Australian local signals',
+      'Ideal for lean teams adopting managed AI SEO programs'
+    ]
+  },
+  {
+    id: 'canberra',
+    city: 'Canberra',
+    state: 'Australian Capital Territory',
+    country: 'Australia',
+    slug: 'canberra',
+    population: 473000,
+    timezone: 'Australia/Sydney',
+    localInsights: [
+      'Government, civic tech, and enterprise services concentration',
+      'Trust, compliance, and clarity matter more than hype in buyer research',
+      'AI assistants used for vendor and policy-adjacent research',
+      'Strong opportunity for professional services and B2B SaaS AEO',
+      'National capital positioning supports authoritative content strategies'
+    ]
+  },
+  {
+    id: 'gold-coast',
+    city: 'Gold Coast',
+    state: 'Queensland',
+    country: 'Australia',
+    slug: 'gold-coast',
+    population: 720000,
+    timezone: 'Australia/Brisbane',
+    localInsights: [
+      'Tourism, hospitality, lifestyle, and growing services economy',
+      'Seasonal demand and experience-led search behavior',
+      'AI travel research increasingly influences bookings and brand choice',
+      'Competes with OTAs and national tourism brands in AI answers',
+      'Local SEO plus destination AEO is a high-leverage combination'
+    ]
+  },
+  {
+    id: 'auckland',
+    city: 'Auckland',
+    state: 'Auckland',
+    country: 'New Zealand',
+    slug: 'auckland',
+    population: 1657000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'New Zealand’s largest commercial hub for SaaS, services, and consumer brands',
+      'Many Auckland companies sell into Australia and global English-speaking markets',
+      'AI search used for both local vendor discovery and export brand research',
+      'Lean marketing teams benefit from managed AEO over DIY tooling',
+      'Strong opportunity to outpace larger AU competitors in niche categories'
+    ]
+  },
+  {
+    id: 'wellington',
+    city: 'Wellington',
+    state: 'Wellington',
+    country: 'New Zealand',
+    slug: 'wellington',
+    population: 215000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'Government, creative, and tech hub with high trust expectations',
+      'Strong professional services and civic-tech buyer base',
+      'Buyers research carefully—clear, citable content wins AI answers',
+      'National NZ visibility often starts with Wellington and Auckland authority',
+      'Ideal market for B2B SEO plus answer engine optimization'
+    ]
+  },
+  {
+    id: 'christchurch',
+    city: 'Christchurch',
+    state: 'Canterbury',
+    country: 'New Zealand',
+    slug: 'christchurch',
+    population: 396000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'South Island commercial center with tourism, services, and agribusiness ties',
+      'Regional brands need national NZ and Australia-facing visibility',
+      'AI travel and services queries create recommendation opportunities',
+      'Lower content competition than major AU metros',
+      'Local proof plus export-ready English content performs well'
+    ]
+  },
+  {
+    id: 'hamilton',
+    city: 'Hamilton',
+    state: 'Waikato',
+    country: 'New Zealand',
+    slug: 'hamilton',
+    population: 192000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'Growing Waikato commercial center with education and services demand',
+      'Businesses compete for attention against Auckland brands in AI answers',
+      'Local SEO and clear service pages improve both Maps and AI visibility',
+      'Strong fit for professional services and regional ecommerce',
+      'Managed AI SEO helps lean teams punch above market size'
+    ]
+  },
+  {
+    id: 'tauranga',
+    city: 'Tauranga',
+    state: 'Bay of Plenty',
+    country: 'New Zealand',
+    slug: 'tauranga',
+    population: 161000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'Fast-growing trade and coastal business hub',
+      'Logistics, services, and tourism brands need discoverability beyond the city',
+      'AI search used for regional vendor and destination research',
+      'Opportunity to own niche prompts before national competitors saturate them',
+      'Combine local SEO with national NZ AEO for compounding reach'
+    ]
+  },
+  {
+    id: 'queenstown',
+    city: 'Queenstown',
+    state: 'Otago',
+    country: 'New Zealand',
+    slug: 'queenstown',
+    population: 48000,
+    timezone: 'Pacific/Auckland',
+    localInsights: [
+      'Global tourism and experience-brand destination',
+      'Travelers ask AI for itineraries, stays, and adventure recommendations',
+      'Competes with OTAs and international travel publishers in AI answers',
+      'Unique local expertise is a citation advantage',
+      'Seasonal AEO content can drive high-intent inbound'
     ]
   },
   {
@@ -2315,6 +2491,54 @@ export const seoLocations: Location[] = [
     ]
   },
   {
+    id: 'guangzhou',
+    city: 'Guangzhou',
+    state: 'Guangdong',
+    country: 'China',
+    slug: 'guangzhou',
+    population: 18870000,
+    timezone: 'Asia/Shanghai',
+    localInsights: [
+      'Trade, manufacturing, and cross-border commerce powerhouse',
+      'Exporters need English AI visibility for overseas buyer shortlists',
+      'Canton Fair and trade networks create B2B discovery opportunities',
+      'Strong fit for manufacturing AEO and international SEO',
+      'Buyers abroad ask AI which Guangzhou suppliers to trust'
+    ]
+  },
+  {
+    id: 'hangzhou',
+    city: 'Hangzhou',
+    state: 'Zhejiang',
+    country: 'China',
+    slug: 'hangzhou',
+    population: 12370000,
+    timezone: 'Asia/Shanghai',
+    localInsights: [
+      'Ecommerce and digital platform hub with global brand ambitions',
+      'Consumer and SaaS companies expanding into Western AI search',
+      'High competition for category ownership in AI answers abroad',
+      'English entity clarity and third-party citations are critical',
+      'Ideal market for ChatGPT and Google visibility programs for exporters'
+    ]
+  },
+  {
+    id: 'chengdu',
+    city: 'Chengdu',
+    state: 'Sichuan',
+    country: 'China',
+    slug: 'chengdu',
+    population: 21190000,
+    timezone: 'Asia/Shanghai',
+    localInsights: [
+      'Western China growth hub for tech, manufacturing, and services',
+      'Companies competing nationally and internationally from inland China',
+      'AI search used by global buyers researching capable suppliers',
+      'Opportunity to build English citation footprint ahead of coastal peers',
+      'Combine technical product content with export-focused AEO'
+    ]
+  },
+  {
     id: 'taipei',
     city: 'Taipei',
     state: 'Taiwan',
@@ -2438,9 +2662,11 @@ export const locationRegions = [
   { id: 'western-europe', name: 'Western Europe', slug: 'western-europe', countries: ['Germany', 'France', 'Netherlands', 'Belgium', 'Switzerland', 'Austria'] },
   { id: 'southern-europe', name: 'Southern Europe', slug: 'southern-europe', countries: ['Spain', 'Italy', 'Portugal'] },
   { id: 'nordic', name: 'Nordic', slug: 'nordic', countries: ['Sweden', 'Denmark', 'Finland', 'Norway'] },
-  { id: 'apac', name: 'Asia Pacific', slug: 'asia-pacific', countries: ['Singapore', 'Australia', 'Japan', 'South Korea', 'Hong Kong SAR'] },
+  { id: 'apac', name: 'Asia Pacific', slug: 'asia-pacific', countries: ['Singapore', 'Australia', 'New Zealand', 'China', 'Japan', 'South Korea', 'Hong Kong SAR'] },
+  { id: 'australia-nz', name: 'Australia & New Zealand', slug: 'australia-new-zealand', countries: ['Australia', 'New Zealand'] },
+  { id: 'greater-china', name: 'Greater China', slug: 'greater-china', countries: ['China', 'Hong Kong SAR', 'Taiwan'] },
   { id: 'south-asia', name: 'South Asia', slug: 'south-asia', countries: ['India'] },
-  { id: 'southeast-asia', name: 'Southeast Asia', slug: 'southeast-asia', countries: ['Indonesia', 'Malaysia', 'Thailand', 'Philippines'] },
+  { id: 'southeast-asia', name: 'Southeast Asia', slug: 'southeast-asia', countries: ['Singapore', 'Indonesia', 'Malaysia', 'Thailand', 'Philippines'] },
   { id: 'middle-east', name: 'Middle East', slug: 'middle-east', countries: ['Israel', 'United Arab Emirates'] },
   { id: 'africa', name: 'Africa', slug: 'africa', countries: ['South Africa', 'Kenya', 'Nigeria'] },
   { id: 'latam', name: 'Latin America', slug: 'latin-america', countries: ['Brazil', 'Mexico', 'Argentina', 'Colombia', 'Chile'] },
