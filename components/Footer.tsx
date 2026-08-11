@@ -75,6 +75,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  FAQ (1000+)
+                </Link>
+              </li>
+              <li>
                 <a href="mailto:sharatth@anthroly.com" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Contact
                 </a>
@@ -109,6 +114,11 @@ export const Footer = () => {
               <li>
                 <Link href="/reports/ai-visibility-benchmark" className="text-gray-400 hover:text-white transition-colors duration-200">
                   AI Visibility Benchmark
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Agency FAQ
                 </Link>
               </li>
               <li>

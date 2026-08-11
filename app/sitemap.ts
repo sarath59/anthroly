@@ -62,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/glossary', priority: 0.9 as const },
     { path: '/blog', priority: 0.9 as const },
     { path: '/customers', priority: 0.9 as const },
+    { path: '/faq', priority: 0.95 as const },
     { path: '/for', priority: 0.9 as const },
     { path: '/ai-seo-agency', priority: 0.9 as const },
     { path: '/integrations', priority: 0.9 as const },

@@ -24,6 +24,16 @@ export const metadata: Metadata = {
 
 const resourceCategories = [
   {
+    title: 'Agency FAQ',
+    description: '1000+ detailed Q&As about Anthroly, AEO, customers, and AI search',
+    href: '/faq',
+    icon: BookOpen,
+    count: 1000,
+    countLabel: 'answers',
+    gradient: 'from-cyan-500 to-emerald-500',
+    bgGlow: 'bg-cyan-600/10',
+  },
+  {
     title: 'APAC Markets',
     description: 'Singapore, China, Australia & New Zealand AI SEO / AEO hubs',
     href: '/markets',

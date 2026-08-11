@@ -1,145 +1,161 @@
-"use client"
+import React from 'react';
+import Link from 'next/link';
+import { HelpCircle } from 'lucide-react';
+import {
+  agencyFaqCategories,
+  agencyFaqs,
+  getAgencyFaqCount,
+  getAgencyFaqsByCategory,
+  getHomepageFeaturedFaqs,
+} from '@/lib/data/agency-faq';
+import { FAQAccordion } from './FAQAccordion';
+import {
+  combineSchemas,
+  generateFAQSchema,
+} from '@/lib/pseo/schema';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-import { PRIMARY_CTA_LABEL } from '@/lib/site';
-import { GlowPulse, ScaleOnScroll } from '../ui/animated-elements';
-
-const faqs = [
-  {
-    question: "How is this different from other SEO agencies?",
-    answer: "Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We use AI to automate the repetitive work (research, drafting, internal linking, monitoring) so we can ship faster — but the final output is still human-quality. Our content is overseen by humans and reviewed before publishing. Plus, we focus on both traditional SEO and the emerging GEO (Generative Engine Optimization) for AI search engines."
-  },
-  {
-    question: "Is your content AI-generated spam? Who actually writes it?",
-    answer: "No. We use a human-led, AI-assisted workflow. AI helps with research, outlines, and first drafts — then humans edit for accuracy, clarity, brand voice, and usefulness. We fact-check, add structure/schema where needed, and only publish content that meets a human quality bar (not “AI fluff”)."
-  },
-  {
-    question: "What kind of results can I expect in 30 days?",
-    answer: "Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, AI Q&A pages getting cited by AI engines, and increased organic traffic. By day 30, you will typically have 15–25 new backlinks, 15 published blog posts, 15 AI Q&A pages, 50+ AI brand mentions, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth."
-  },
-  {
-    question: "Do you work with any industry?",
-    answer: "Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our strategists and writers adapt to your industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market."
-  },
-  {
-    question: "What are AI Q&A Pages and how do they rank on AI search?",
-    answer: "AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. You get 15 of these pages per month, and they contribute to your 50+ AI brand mentions guarantee."
-  },
-  {
-    question: "What counts as an \"AI brand mention\" and how do you measure it?",
-    answer: "We count a mention when an AI engine recommends your brand (name, domain, product, or clearly attributable reference) in response to relevant queries we track. We monitor across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overview using a consistent prompt set and log the outputs over time so you can verify the mentions week-by-week."
-  },
-  {
-    question: "Will these backlinks hurt my site? Are they safe?",
-    answer: "Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 50-90, avg DR 70+). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our promise backs this up — if anything we do hurts your rankings, we will fix it immediately."
-  },
-  {
-    question: "How much of my time does this require?",
-    answer: "Almost none. We run the program for you. We will need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you will receive weekly reports and can check in anytime, but zero hands-on SEO work is required from you."
-  },
-  {
-    question: "Can I see examples of your work?",
-    answer: `Yes! After you ${PRIMARY_CTA_LABEL.toLowerCase()}, we walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We are happy to show real backlinks, real traffic numbers, and real ranking improvements.`
-  },
-  {
-    question: "What if it does not work for me?",
-    answer: "That is what the promise is for. If we cannot deliver 15–25 high-quality backlinks per month (DR 50-90, avg DR 70+), we will give you one free month of service. We have never had to honor this — but it is there so you have zero risk."
-  },
-  {
-    question: "Do you offer white-label services for agencies?",
-    answer: "Yes! If you are an agency looking to offer SEO services to your clients, we can white-label everything we do. Your clients see your brand, you maintain the relationship, and we do all the work behind the scenes. This is perfect for agencies looking to scale their service offerings."
-  },
-  {
-    question: "How do I get started?",
-    answer: `Click ${PRIMARY_CTA_LABEL} to book a 30-minute call. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off.`
-  }
-];
-
+/**
+ * Main site FAQ (#faq on homepage).
+ * - Featured accordion for buyers
+ * - Full 1000+ corpus in HTML for humans + AI crawlers
+ */
 export const FAQ = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const count = getAgencyFaqCount();
+  const featured = getHomepageFeaturedFaqs(12);
+  const structuredData = combineSchemas(
+    generateFAQSchema(
+      featured.map((f) => ({ question: f.question, answer: f.answer }))
+    )
+  );
 
   return (
-    <section id="faq" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
-      <GlowPulse className="top-1/2 right-0" color="emerald" size={400} />
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
-      
+    <section id="faq" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredData }}
+      />
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]" />
+
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-semibold mb-6 border border-gray-700">
             <HelpCircle size={16} />
-            <span>🤔 87% of buyers have questions before purchasing</span>
+            <span>{count}+ answers · main Anthroly FAQ</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Your Questions. Straight Answers.
           </h2>
-          <p className="text-xl text-gray-400">
-            No fluff, no jargon. Just the truth about what we do and how it works.
+          <p className="text-xl text-gray-400 mb-4">
+            No fluff, no jargon. Just the truth about what we do and how it works — including
+            AEO, customers, industries, and AI search.
+          </p>
+          <p className="text-sm text-gray-500">
+            Prefer a dedicated page?{' '}
+            <Link href="/faq" className="text-emerald-400 hover:text-emerald-300 font-medium">
+              Open the full FAQ hub
+            </Link>
+            {' · '}
+            <Link href="/faq.json" className="text-emerald-400 hover:text-emerald-300 font-medium">
+              JSON feed for AI bots
+            </Link>
           </p>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index}
-                className="bg-gray-900/80 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-colors"
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
-                >
-                  <span className="font-bold text-white text-lg pr-4">{faq.question}</span>
-                  <ChevronDown 
-                    className={`flex-shrink-0 text-gray-500 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`} 
-                    size={24} 
-                  />
-                </button>
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
-                  }`}
-                >
-                  <p className="px-6 text-gray-400 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Featured conversion FAQs */}
+        <div className="max-w-3xl mx-auto mb-20">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-4 text-center">
+            Most asked
+          </h3>
+          <FAQAccordion faqs={featured} />
         </div>
 
-        {/* Still Have Questions */}
-        <div className={`mt-16 max-w-2xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Category jump links */}
+        <nav
+          aria-label="All FAQ categories"
+          className="max-w-4xl mx-auto mb-12 rounded-2xl border border-gray-800 bg-black/40 p-6"
+        >
+          <h3 className="text-lg font-semibold text-white mb-4">
+            All {count} FAQs by category
+          </h3>
+          <ul className="flex flex-wrap gap-2">
+            {agencyFaqCategories.map((cat) => {
+              const n = getAgencyFaqsByCategory(cat).length;
+              const id = slugifyCategory(cat);
+              return (
+                <li key={cat}>
+                  <a
+                    href={`#faq-${id}`}
+                    className="inline-block text-sm px-3 py-1.5 rounded-full border border-gray-700 text-gray-300 hover:border-emerald-500/40 hover:text-emerald-400"
+                  >
+                    {cat} ({n})
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* FULL CORPUS — every question/answer in HTML for AI + SEO */}
+        <div className="max-w-4xl mx-auto space-y-14">
+          {agencyFaqCategories.map((category) => {
+            const items = getAgencyFaqsByCategory(category);
+            const id = slugifyCategory(category);
+            return (
+              <div key={category} id={`faq-${id}`} className="scroll-mt-28">
+                <h3 className="text-2xl font-bold text-white mb-2">{category}</h3>
+                <p className="text-sm text-gray-500 mb-5">{items.length} questions</p>
+                <div className="space-y-3">
+                  {items.map((faq) => (
+                    <details
+                      key={faq.id}
+                      className="group rounded-xl border border-gray-800 bg-gray-900/60 open:border-emerald-500/30"
+                    >
+                      <summary className="cursor-pointer list-none px-5 py-4 font-medium text-white flex items-start justify-between gap-4">
+                        <span className="text-left">{faq.question}</span>
+                        <span className="text-emerald-400 shrink-0 group-open:rotate-45 transition-transform">
+                          +
+                        </span>
+                      </summary>
+                      <div className="px-5 pb-5 text-gray-400 leading-relaxed border-t border-gray-800/80 pt-4">
+                        <p>{faq.answer}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 max-w-2xl mx-auto text-center">
           <p className="text-gray-400">
-            Still have questions? <a href="mailto:sharatth@anthroly.com" className="text-emerald-400 font-semibold underline hover:no-underline">Email us directly</a> and we will get back to you within 24 hours.
+            Still have questions?{' '}
+            <a
+              href="mailto:sharatth@anthroly.com"
+              className="text-emerald-400 font-semibold underline hover:no-underline"
+            >
+              Email us directly
+            </a>{' '}
+            and we will get back to you within 24 hours. Full archive also at{' '}
+            <Link href="/faq" className="text-emerald-400 font-semibold hover:underline">
+              /faq
+            </Link>
+            .
+          </p>
+          <p className="text-xs text-gray-600 mt-3">
+            Showing all {agencyFaqs.length} Anthroly FAQ answers on this page.
           </p>
         </div>
       </div>
     </section>
   );
 };
+
+function slugifyCategory(category: string): string {
+  return category
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}

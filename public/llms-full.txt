@@ -1,50 +1,101 @@
 # Anthroly — Full content index for AI systems
-> Prefer /llms.txt for a curated summary. This file lists additional high-value URLs.
+> Prefer https://www.anthroly.com/llms.txt for a curated summary.
+> Prefer https://www.anthroly.com/faq and https://www.anthroly.com/faq.json for dense Q&A facts.
+> Crawler policy: all major AI training, retrieval, and user-fetch bots are allowed via robots.txt.
 
-## Site
+## Core
 - https://www.anthroly.com/
-- https://www.anthroly.com/aeo
+- https://www.anthroly.com/faq
+- https://www.anthroly.com/faq.json
+- https://www.anthroly.com/llms.txt
+- https://www.anthroly.com/sitemap.xml
+- https://www.anthroly.com/robots.txt
 - https://www.anthroly.com/anthroly-vs-anthropic
+- https://www.anthroly.com/#pricing
+- https://www.anthroly.com/#ai-crawler
+- https://www.anthroly.com/#how-it-works
+
+## AEO
+- https://www.anthroly.com/aeo
+- https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
+- https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
 - https://www.anthroly.com/aeo/engine/claude
 - https://www.anthroly.com/aeo/engine/anthropic
 - https://www.anthroly.com/aeo/engine/chatgpt
+- https://www.anthroly.com/aeo/engine/chatgpt-search
 - https://www.anthroly.com/aeo/topic/get-cited
 - https://www.anthroly.com/aeo/topic/get-cited/claude
 - https://www.anthroly.com/aeo/topic/get-cited/chatgpt
-- https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
-- https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
 - https://www.anthroly.com/reports/ai-visibility-benchmark
-- https://www.anthroly.com/resources
-- https://www.anthroly.com/glossary
-- https://www.anthroly.com/blog
+
+## Customers (hub + sample stories + cluster spokes)
 - https://www.anthroly.com/customers
-- https://www.anthroly.com/for
-- https://www.anthroly.com/industries
-- https://www.anthroly.com/use-cases
-- https://www.anthroly.com/ai-seo-agency
-- https://www.anthroly.com/integrations
-- https://www.anthroly.com/compare
-- https://www.anthroly.com/tools
-- https://www.anthroly.com/#pricing
-- https://www.anthroly.com/#ai-crawler
-
-## Glossary (priority AEO / AI search terms)
-- https://www.anthroly.com/glossary/answer-engine-optimization
-- https://www.anthroly.com/glossary/generative-engine-optimization-geo
-- https://www.anthroly.com/glossary/ai-seo
-- https://www.anthroly.com/glossary/ai-overviews-sge
-- https://www.anthroly.com/glossary/llm-optimization
-- https://www.anthroly.com/glossary/featured-snippets
-- https://www.anthroly.com/glossary/schema-markup
-- https://www.anthroly.com/glossary/e-e-a-t-experience-expertise-authoritativeness-trustworthiness
-- https://www.anthroly.com/glossary/topical-authority
-- https://www.anthroly.com/glossary/search-intent
-
-## Case studies
+- https://www.anthroly.com/customers/mongodb
+- https://www.anthroly.com/customers/mongodb/results
+- https://www.anthroly.com/customers/mongodb/aeo-strategy
+- https://www.anthroly.com/customers/mongodb/chatgpt-visibility
+- https://www.anthroly.com/customers/mongodb/quotes-and-lessons
+- https://www.anthroly.com/customers/mongodb/playbook
+- https://www.anthroly.com/customers/whoop
+- https://www.anthroly.com/customers/ramp
+- https://www.anthroly.com/customers/kiteworks
+- https://www.anthroly.com/customers/alchemy
+- https://www.anthroly.com/customers/airbyte
+- https://www.anthroly.com/customers/opusclip
+- https://www.anthroly.com/customers/optro
+- https://www.anthroly.com/customers/aleph
+- https://www.anthroly.com/customers/statsig
+- https://www.anthroly.com/customers/hone
+- https://www.anthroly.com/customers/omnilux
+- https://www.anthroly.com/customers/apartment-list
+- https://www.anthroly.com/customers/gr0
+- https://www.anthroly.com/customers/jordan-digital-marketing
+- https://www.anthroly.com/customers/arizona-college-of-nursing
+- https://www.anthroly.com/customers/crs-credit-api
+- https://www.anthroly.com/customers/one-identity
+- https://www.anthroly.com/customers/lake
+- https://www.anthroly.com/customers/1840-and-co
 - https://www.anthroly.com/customers/llmoutrank
 - https://www.anthroly.com/customers/isthisaiorno
 - https://www.anthroly.com/customers/jobstronauts
 
-## Contact
+## APAC markets
+- https://www.anthroly.com/markets
+- https://www.anthroly.com/markets/singapore
+- https://www.anthroly.com/markets/china
+- https://www.anthroly.com/markets/australia
+- https://www.anthroly.com/markets/new-zealand
+- https://www.anthroly.com/markets/singapore/answer-engine-optimization
+- https://www.anthroly.com/markets/singapore/chatgpt-seo
+- https://www.anthroly.com/markets/china/ai-seo
+- https://www.anthroly.com/markets/australia/answer-engine-optimization
+- https://www.anthroly.com/markets/new-zealand/ai-visibility
+- https://www.anthroly.com/ai-seo-agency
+- https://www.anthroly.com/ai-seo-agency/singapore
+- https://www.anthroly.com/ai-seo-agency/sydney
+- https://www.anthroly.com/ai-seo-agency/melbourne
+- https://www.anthroly.com/ai-seo-agency/auckland
+- https://www.anthroly.com/ai-seo-agency/shanghai
+- https://www.anthroly.com/ai-seo-agency/beijing
+- https://www.anthroly.com/ai-seo-agency/shenzhen
+
+## Education & tools
+- https://www.anthroly.com/resources
+- https://www.anthroly.com/glossary
+- https://www.anthroly.com/glossary/answer-engine-optimization
+- https://www.anthroly.com/glossary/generative-engine-optimization-geo
+- https://www.anthroly.com/glossary/ai-seo
+- https://www.anthroly.com/glossary/ai-overviews-sge
+- https://www.anthroly.com/blog
+- https://www.anthroly.com/industries
+- https://www.anthroly.com/use-cases
+- https://www.anthroly.com/for
+- https://www.anthroly.com/integrations
+- https://www.anthroly.com/compare
+- https://www.anthroly.com/tools
+
+## Legal & contact
+- https://www.anthroly.com/privacy
+- https://www.anthroly.com/terms
 - https://cal.com/sarath-kavuru-0uizws/30min
-- Email: sharatth@anthroly.com
+- mailto:sharatth@anthroly.com

@@ -2,122 +2,111 @@ import { MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/site';
 
 /**
- * ROBOTS.TXT - Google & AI Bot Configuration
- * 
- * This file tells search engines and AI crawlers:
- * 1. What they can and cannot crawl
- * 2. Where to find the sitemap index
- * 
- * Google Best Practices:
- * ✅ Allow Googlebot full access
- * ✅ Point to sitemap index (not individual sitemaps)
- * ✅ Block non-content paths
- * ✅ Allow AI bots for GEO (Generative Engine Optimization)
+ * robots.txt — maximum AI + search crawl permission
+ *
+ * Policy: ALLOW all major search and AI bots (training, retrieval, and
+ * user-triggered fetchers). Only block non-content internals.
+ *
+ * See also: /llms.txt and /llms-full.txt for AI content guidance.
  */
+
+const AI_AND_SEARCH_BOTS = [
+  // Google (search + AI)
+  'Googlebot',
+  'Googlebot-Image',
+  'Googlebot-News',
+  'Googlebot-Video',
+  'Google-Extended', // Gemini / Google AI training opt-in when Allowed
+  'GoogleOther',
+  'Storebot-Google',
+  'AdsBot-Google',
+  // Microsoft / Bing
+  'Bingbot',
+  'BingPreview',
+  'msnbot',
+  // OpenAI (training + retrieval + user fetch)
+  'GPTBot',
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  // Anthropic / Claude
+  'ClaudeBot',
+  'Claude-Web',
+  'anthropic-ai',
+  'Claude-SearchBot',
+  'Claude-User',
+  // Perplexity
+  'PerplexityBot',
+  'Perplexity-User',
+  // Meta AI
+  'Meta-ExternalAgent',
+  'Meta-ExternalFetcher',
+  'FacebookBot',
+  'facebookexternalhit',
+  // Apple Intelligence / Applebot
+  'Applebot',
+  'Applebot-Extended',
+  // Amazon
+  'Amazonbot',
+  // ByteDance
+  'Bytespider',
+  // Common Crawl / open training corpora
+  'CCBot',
+  // Other AI / answer engines
+  'cohere-ai',
+  'YouBot',
+  'Diffbot',
+  'DuckAssistBot',
+  'AI2Bot',
+  'Ai2Bot-Dolma',
+  'omgili',
+  'omgilibot',
+  'Webzio-Extended',
+  'Timpibot',
+  'PetalBot',
+  'YandexBot',
+  'DuckDuckBot',
+  'Baiduspider',
+  'Sogou',
+  'Slurp', // Yahoo
+  'LinkedInBot',
+  'Twitterbot',
+  'Slackbot',
+  'Discordbot',
+  'TelegramBot',
+  'WhatsApp',
+  'SemrushBot',
+  'AhrefsBot',
+  'DotBot',
+  'Rogerbot',
+  'MJ12bot',
+] as const;
+
+// Do NOT blanket-block *.json — AI systems prefer structured feeds like /faq.json
+const DISALLOW_NON_CONTENT = [
+  '/api/',
+  '/_next/',
+  '/private/',
+  '/admin/',
+];
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Main rule for all crawlers
+      // Default: open site to every crawler
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',           // API routes
-          '/_next/',         // Next.js internal
-          '/private/',       // Private pages
-          '/*.json$',        // JSON files
-          '/admin/',         // Admin area
-        ],
+        disallow: DISALLOW_NON_CONTENT,
       },
-      // Googlebot - full access (most important)
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-      },
-      // Google Image bot
-      {
-        userAgent: 'Googlebot-Image',
-        allow: '/',
-      },
-      // Bing
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-      },
-      // =========================================
-      // OpenAI Bots (for ChatGPT, SearchGPT)
-      // =========================================
-      // GPTBot - Main OpenAI crawler for training & ChatGPT
-      {
-        userAgent: 'GPTBot',
-        allow: '/',
-      },
-      // ChatGPT-User - When users browse with ChatGPT
-      {
-        userAgent: 'ChatGPT-User',
-        allow: '/',
-      },
-      // OAI-SearchBot - OpenAI's search/browsing feature
-      {
-        userAgent: 'OAI-SearchBot',
-        allow: '/',
-      },
-      // =========================================
-      // Anthropic Bots (for Claude)
-      // =========================================
-      {
-        userAgent: 'Claude-Web',
-        allow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        allow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-      },
-      // =========================================
-      // Other AI Bots
-      // =========================================
-      // Perplexity AI
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-      },
-      // Google SGE / AI Overview
-      {
-        userAgent: 'Google-Extended',
-        allow: '/',
-      },
-      // Cohere AI
-      {
-        userAgent: 'cohere-ai',
-        allow: '/',
-      },
-      // Meta AI
-      {
-        userAgent: 'FacebookBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Meta-ExternalAgent',
-        allow: '/',
-      },
-      // Apple's Applebot (for Siri, Spotlight)
-      {
-        userAgent: 'Applebot',
-        allow: '/',
-      },
-      // You.com AI
-      {
-        userAgent: 'YouBot',
-        allow: '/',
-      },
+      // Explicit allow for every major AI + search agent
+      ...AI_AND_SEARCH_BOTS.map((userAgent) => ({
+        userAgent,
+        allow: '/' as const,
+        // Mirror the same internal blocks so bots do not waste crawl on app internals
+        disallow: DISALLOW_NON_CONTENT,
+      })),
     ],
-    // Indexable URLs only (thin three-way combos excluded from sitemap)
-    // Also see /llms.txt for AI crawler content guidance
     sitemap: absoluteUrl('/sitemap.xml'),
+    host: 'www.anthroly.com',
   };
 }
