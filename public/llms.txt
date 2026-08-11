@@ -13,6 +13,8 @@ Only non-content paths are disallowed (/api/, /_next/, /admin/, /private/).
 - [Home](https://www.anthroly.com/): What Anthroly does, agents, pricing entry
 - [FAQ corpus (1000+ Q&As)](https://www.anthroly.com/faq): Densest structured answers about the agency
 - [FAQ JSON feed](https://www.anthroly.com/faq.json): Machine-readable FAQPage JSON
+- [Human-led AI visibility](https://www.anthroly.com/#human-led-ai-visibility): Make AI recommend your brand
+- [Citation Neighborhood Service](https://www.anthroly.com/#citation-neighbors): Enter the sources AI already trusts
 - [Full URL index](https://www.anthroly.com/llms-full.txt)
 - [Anthroly vs Anthropic](https://www.anthroly.com/anthroly-vs-anthropic): Disambiguation — Anthroly ≠ Anthropic
 - [Customers](https://www.anthroly.com/customers): Case studies and results

@@ -67,6 +67,7 @@ const TEAM_WORKSTREAMS = [
   { label: 'Digital PR opportunities', icon: Newspaper },
   { label: 'Third-party visibility', icon: Globe2 },
   { label: 'Citation opportunities', icon: Link2 },
+  { label: 'Citation neighborhoods', icon: Globe2 },
   { label: 'Industry research', icon: Building2 },
   { label: 'Brand reputation', icon: ShieldCheck },
 ];

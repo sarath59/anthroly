@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { MarketingAgents } from "@/components/sections/MarketingAgents";
 import { HumanLedAIVisibility } from "@/components/sections/HumanLedAIVisibility";
+import { CitationNeighbors } from "@/components/sections/CitationNeighbors";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GuaranteedResults } from "@/components/sections/GuaranteedResults";
 import { PoweredBy } from "@/components/sections/PoweredBy";
@@ -45,8 +46,23 @@ const aiVisibilityServiceSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Competitive intelligence for AI search" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Content, authority, and citation building" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital PR and third-party visibility" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Citation neighborhood mapping and placement" } },
     ],
   },
+};
+
+const citationNeighborsServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/#citation-neighbors-service`,
+  name: "Citation Neighborhood Service",
+  serviceType: "AI citation neighborhood mapping and digital PR",
+  description:
+    "Human researchers map the sources ChatGPT, Perplexity, Claude, and Gemini repeatedly cite beside competitors in your category, then Anthroly’s team earns brand mentions on those AI-trusted sources — not random backlinks.",
+  provider: { "@id": `${SITE_URL}/#organization` },
+  areaServed: "Worldwide",
+  url: `${SITE_URL}/#citation-neighbors`,
+  isRelatedTo: { "@id": `${SITE_URL}/#ai-visibility-service` },
 };
 
 export default function Home() {
@@ -55,6 +71,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aiVisibilityServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(citationNeighborsServiceSchema) }}
       />
       {/* 1. Hook - Clear value prop */}
       <Hero />
@@ -67,6 +87,9 @@ export default function Home() {
 
       {/* 3b. Human-led AI visibility service - make AI recommend your brand */}
       <HumanLedAIVisibility />
+
+      {/* 3c. Citation neighborhood — enter sources AI already trusts */}
+      <CitationNeighbors />
 
       {/* 4. Problem/Solution - Why you need this */}
       <ProblemSolution />

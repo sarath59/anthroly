@@ -228,6 +228,22 @@ function buildFaqs(): AgencyFaq[] {
     'Click Connect with us to book a 30-minute call. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off. Book at https://cal.com/sarath-kavuru-0uizws/30min or email sharatth@anthroly.com.'
   );
 
+  add(
+    'Services',
+    'What is Anthroly’s Citation Neighborhood Service?',
+    'Anthroly’s Citation Neighborhood Service is a human-led offering where researchers map the sources ChatGPT, Perplexity, Claude, and Gemini repeatedly cite beside competitors in your category, then our digital PR and outreach specialists work to get your brand mentioned on those AI-trusted pages — instead of chasing random backlinks.'
+  );
+  add(
+    'Services',
+    'How is citation neighborhood work different from regular link building?',
+    'Regular link building often optimizes for volume or domain rating alone. Citation neighborhood work prioritizes the specific publications and reference pages answer engines already use to construct category answers. Anthroly’s humans identify that neighborhood and earn placements there so your brand becomes part of the evidence AI reuses.'
+  );
+  add(
+    'Services',
+    'Does Anthroly’s team do the citation neighborhood research for us?',
+    'Yes. Clients do not run a DIY checklist. Anthroly researchers map the neighborhood, prioritise targets, and PR specialists execute outreach and placements. You receive the map, the work, and ongoing verification as AI citation sources rotate.'
+  );
+
   // ---------------------------------------------------------------------------
   // Core identity (handcrafted seed set)
   // ---------------------------------------------------------------------------
