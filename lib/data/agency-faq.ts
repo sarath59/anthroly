@@ -229,19 +229,109 @@ function buildFaqs(): AgencyFaq[] {
   );
 
   add(
-    'Services',
+    'Citation Neighborhood',
     'What is Anthroly’s Citation Neighborhood Service?',
-    'Anthroly’s Citation Neighborhood Service is a human-led offering where researchers map the sources ChatGPT, Perplexity, Claude, and Gemini repeatedly cite beside competitors in your category, then our digital PR and outreach specialists work to get your brand mentioned on those AI-trusted pages — instead of chasing random backlinks.'
+    'Anthroly’s Citation Neighborhood Service is a human-led offering where researchers map the sources ChatGPT, Perplexity, Claude, and Gemini repeatedly cite beside competitors in your category, then our digital PR and outreach specialists work to get your brand mentioned on those AI-trusted pages — instead of chasing random backlinks. Learn more at https://www.anthroly.com/#citation-neighbors'
   );
   add(
-    'Services',
+    'Citation Neighborhood',
     'How is citation neighborhood work different from regular link building?',
     'Regular link building often optimizes for volume or domain rating alone. Citation neighborhood work prioritizes the specific publications and reference pages answer engines already use to construct category answers. Anthroly’s humans identify that neighborhood and earn placements there so your brand becomes part of the evidence AI reuses.'
   );
   add(
-    'Services',
+    'Citation Neighborhood',
     'Does Anthroly’s team do the citation neighborhood research for us?',
     'Yes. Clients do not run a DIY checklist. Anthroly researchers map the neighborhood, prioritise targets, and PR specialists execute outreach and placements. You receive the map, the work, and ongoing verification as AI citation sources rotate.'
+  );
+  add(
+    'Citation Neighborhood',
+    'What is a “citation neighborhood” in AI search?',
+    'A citation neighborhood is the set of third-party pages — publications, reviews, listicles, research, docs, and reference sites — that answer engines repeatedly cite when constructing answers in your category. Those sources sit beside competitor mentions and shape what AI trusts. Anthroly’s service gets your brand into that neighborhood.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Why ignore competitor pages when mapping citation neighbors?',
+    'Competitor pages show who you are up against, but they are not usually where you can earn an independent mention. Anthroly focuses human effort on the other sources appearing beside competitors — the neighborhood AI already trusts — because that is where editorial placements and brand mentions can change what models cite next.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Which AI platforms does the Citation Neighborhood Service cover?',
+    'Anthroly’s researchers study citation patterns across major answer surfaces relevant to your buyers, including ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews where applicable. The neighborhood map reflects the engines that matter for your category, not a single chatbot in isolation.'
+  );
+  add(
+    'Citation Neighborhood',
+    'What do clients receive from the Citation Neighborhood Service?',
+    'Clients receive a human-built citation-neighborhood map for priority prompts, a prioritized target list of AI-trusted sources (excluding competitor pages as placement targets), human-led pitches and digital PR toward those sources, tracking of brand presence in the neighborhood, and ongoing refresh as answer engines rotate citations.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Is this service only about getting backlinks?',
+    'No. Backlinks can be one outcome, but the primary goal is brand presence inside the sources AI already cites — mentions, quotes, data inclusions, listicle slots, and editorial coverage. Anthroly optimizes for recommendation evidence in answer engines, not vanity link counts.'
+  );
+  add(
+    'Citation Neighborhood',
+    'How is this different from buying 100 random backlinks?',
+    'Volume-based link packages chase metrics that may never appear in AI answers. Citation neighborhood work is selective: Anthroly’s humans identify roughly the trusted sources models already use for your category and work to place your brand there. Fewer, better-placed mentions beat scattered links AI ignores.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Who on Anthroly’s team runs citation neighborhood work?',
+    'Researchers map and score the neighborhood. Strategists set angles and priority. Writers and digital PR specialists execute outreach, contributions, and placements. Analysts verify whether brand presence in cited sources improves over time. It is a human pod — not a self-serve tool.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Is the Citation Neighborhood Service included in AI visibility retainers?',
+    'Citation neighborhood mapping and placement is part of Anthroly’s broader human-led AI visibility / AEO programs and can be scoped as a focused workstream. Exact deliverables depend on category competitiveness and how many priority prompts you need covered — discussed on the strategy call.'
+  );
+  add(
+    'Citation Neighborhood',
+    'How long before citation neighborhood work shows up in AI answers?',
+    'Timelines vary. Placements and mentions can land within weeks; answer engines may take longer to refresh what they cite. Anthroly runs continuous human work and re-checks category answers so you are not waiting on a one-off blast. Compounding usually builds over 30–90 days as evidence accumulates.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Can citation neighborhood work help if competitors dominate ChatGPT answers?',
+    'Yes — that is a primary use case. When competitors appear often, Anthroly maps the non-competitor sources cited beside them and works to insert your brand into that trusted evidence set. The aim is to change the inputs AI reuses, not only to publish more on your own site.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Do you guarantee ChatGPT will cite a specific publication after outreach?',
+    'No ethical agency can guarantee model outputs. Anthroly systematically increases the probability that your brand appears inside sources answer engines already trust. We measure neighborhood presence and AI visibility movement, then keep iterating as citations shift.'
+  );
+  add(
+    'Citation Neighborhood',
+    'What kinds of sites appear in a typical citation neighborhood?',
+    'Neighborhoods often include industry publications, comparison and review sites, research reports, reputable blogs, documentation hubs, community threads engines already cite, and high-authority listicles. Anthroly’s map is category-specific — researchers list the actual URLs AI is using for your prompts, not a generic media list.'
+  );
+  add(
+    'Citation Neighborhood',
+    'How does citation neighborhood work connect to Answer Engine Optimization (AEO)?',
+    'AEO improves how AI understands, cites, and recommends your brand. Citation neighborhood work is a core AEO authority motion: strengthen presence on the third-party sources models already pull into answers. It pairs with Anthroly’s on-site content, monitoring, and human-led AI visibility programs.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Will Anthroly handle outreach and pitching for citation targets?',
+    'Yes. Digital PR and outreach are executed by Anthroly’s humans. We prepare angles, pitch editors and site owners, follow up, and pursue placements on the prioritized neighborhood list. Clients approve brand messaging; Anthroly owns the heavy execution.'
+  );
+  add(
+    'Citation Neighborhood',
+    'How often is the citation neighborhood map updated?',
+    'Answer engines rotate sources. Anthroly treats the neighborhood as a living map — researchers refresh which URLs appear beside competitors for your priority prompts and adjust outreach priorities as the citation set changes.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Is Citation Neighborhood Service right for SaaS and B2B brands?',
+    'Yes. SaaS and B2B buyers heavily use ChatGPT, Claude, and Perplexity for shortlists. When competitors dominate those answers, entering the citation neighborhood is often higher leverage than more generic link building. Anthroly scopes maps around the prompts your buyers actually ask.'
+  );
+  add(
+    'Citation Neighborhood',
+    'How do I start the Citation Neighborhood Service with Anthroly?',
+    'Book a call at https://cal.com/sarath-kavuru-0uizws/30min or request a citation neighborhood map via https://www.anthroly.com/#citation-neighbors. Anthroly reviews your category, priority prompts, and competitive set, then proposes a human-led mapping and placement plan.'
+  );
+  add(
+    'Citation Neighborhood',
+    'Does citation neighborhood work replace on-site SEO and content?',
+    'No. It complements them. On-site clarity and owned content still matter for extraction and accuracy. Citation neighborhood work strengthens the third-party evidence layer AI already trusts. Anthroly typically runs both inside a full human-led AI visibility program.'
   );
 
   // ---------------------------------------------------------------------------
