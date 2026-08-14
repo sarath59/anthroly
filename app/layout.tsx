@@ -5,8 +5,9 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollAnimationWrapper } from "@/components/ui/ScrollAnimationWrapper";
-import { SITE_URL, absoluteUrl } from "@/lib/site";
+import { SITE_URL, absoluteUrl, DATAFAST_WEBSITE_ID } from "@/lib/site";
 import { SiteJsonLd } from "@/components/schema/SiteJsonLd";
+import { DataFastGoals } from "@/components/analytics/DataFastGoals";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,14 +64,18 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <SiteJsonLd />
-        {/* Datafast Analytics */}
+        {/* Queue goals fired before the DataFast script loads */}
+        <Script id="datafast-queue" strategy="beforeInteractive">
+          {`window.datafast=window.datafast||function(){(window.datafast.q=window.datafast.q||[]).push(arguments);};`}
+        </Script>
         <Script
           defer
-          data-website-id="dfid_64UKkRm4SuynXLuxGKg4u"
+          data-website-id={DATAFAST_WEBSITE_ID}
           data-domain="anthroly.com"
           src="https://datafa.st/js/script.js"
           strategy="afterInteractive"
         />
+        <DataFastGoals />
         
         <ScrollAnimationWrapper>
           <Header />

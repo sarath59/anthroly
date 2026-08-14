@@ -23,6 +23,7 @@ import {
   Upload,
 } from 'lucide-react';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { currentPageParam, DATAFAST_GOALS, trackGoal } from '@/lib/datafast';
 import { Button } from '../ui/button';
 import {
   GlowPulse,
@@ -568,6 +569,10 @@ export const MarketingAgents = () => {
                 className="mt-7 flex flex-col gap-3 sm:flex-row"
                 onSubmit={event => {
                   event.preventDefault();
+                  trackGoal(DATAFAST_GOALS.aeoReport, {
+                    page: currentPageParam(),
+                    website: (reportUrl || 'my website').slice(0, 255),
+                  });
                   window.open(
                     bookCallWith(`Free AEO report request for ${reportUrl || 'my website'}`),
                     '_blank',
@@ -676,6 +681,11 @@ export const MarketingAgents = () => {
                   className="mt-7 flex flex-col gap-3 sm:flex-row"
                   onSubmit={event => {
                     event.preventDefault();
+                    trackGoal(DATAFAST_GOALS.tryAgent, {
+                      page: currentPageParam(),
+                      agent: selectedAgent.name.slice(0, 255),
+                      email: (agentEmail || '').slice(0, 255),
+                    });
                     window.open(
                       bookCallWith(
                         `Try an agent: ${selectedAgent.name}${agentEmail ? ` — ${agentEmail}` : ''}`

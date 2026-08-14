@@ -1,4 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server';
+import {
+  NextResponse,
+  type NextFetchEvent,
+  type NextRequest,
+} from 'next/server';
+import { trackAICrawlerRequest } from '@datafast/ai-crawl';
+import { DATAFAST_WEBSITE_ID, SITE_URL } from '@/lib/site';
 
 /** Marketing/tracking params that create duplicate URLs for Google */
 const TRACKING_PARAMS = new Set([
@@ -28,8 +34,15 @@ function isTrackingParam(key: string): boolean {
 /**
  * 301-strip tracking query params so Google doesn't treat
  * e.g. /?ref=producthunt as a separate duplicate of /.
+ * Also reports AI/search crawler hits to DataFast (non-blocking).
  */
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest, event: NextFetchEvent) {
+  trackAICrawlerRequest(request, event, {
+    websiteId: DATAFAST_WEBSITE_ID,
+    publicOrigin: SITE_URL,
+    authToken: process.env.DATAFAST_BOT_TOKEN,
+  });
+
   const { searchParams } = request.nextUrl;
   if (![...searchParams.keys()].some(isTrackingParam)) {
     return NextResponse.next();
@@ -46,5 +59,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|api|favicon.ico|.*\\.[\\w]+$).*)'],
+  // Keep robots.txt, llms.txt, llms-full.txt, and sitemaps in this matcher.
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|map|webp|avif)$).*)',
+  ],
 };

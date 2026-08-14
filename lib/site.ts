@@ -1,6 +1,9 @@
 /** Canonical site origin — must match sitemap, robots, and redirects */
 export const SITE_URL = 'https://www.anthroly.com';
 
+/** Public DataFast website ID (browser script + server-side bot tracking) */
+export const DATAFAST_WEBSITE_ID = 'dfid_64UKkRm4SuynXLuxGKg4u';
+
 /** Absolute URL helper for canonicals, Open Graph, and JSON-LD */
 export function absoluteUrl(path: string = ''): string {
   if (!path) return SITE_URL;
