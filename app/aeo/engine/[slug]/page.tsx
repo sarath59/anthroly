@@ -13,13 +13,10 @@ interface PageProps {
 }
 
 export const revalidate = 86400;
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  // Prebuild Anthropic/Claude/ChatGPT hubs; others via ISR
-  return answerEngines
-    .filter((e) => e.category === 'anthropic-claude' || e.category === 'openai-chatgpt')
-    .map((e) => ({ slug: e.slug }));
+  return answerEngines.map((e) => ({ slug: e.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

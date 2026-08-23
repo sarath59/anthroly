@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 import { FREE_TOOLS, FREE_TOOL_CATEGORIES } from '@/lib/data/free-tools';
 import { Button } from '@/components/ui/button';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL } from '@/lib/site';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Tag,
@@ -113,7 +113,7 @@ export default function ToolsIndexPage() {
                 </Button>
               </Link>
               <a
-                href="https://cal.com/sarath-kavuru-0uizws/15min"
+                href={BOOK_CALL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -185,7 +185,7 @@ export default function ToolsIndexPage() {
               </Button>
             </Link>
             <a
-              href="https://cal.com/sarath-kavuru-0uizws/15min"
+              href={BOOK_CALL_URL}
               target="_blank"
               rel="noopener noreferrer"
             >

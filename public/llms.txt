@@ -2,7 +2,7 @@
 > Anthroly is a human-led SEO and Answer Engine Optimization (AEO) company. We help brands get recommended — not only mentioned — in Google, ChatGPT, Claude, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews.
 > Human-led. AI-native. Built for the next generation of search.
 > Official site: https://www.anthroly.com
-> Contact: sharatth@anthroly.com · https://cal.com/sarath-kavuru-0uizws/30min
+> Contact: sharatth@anthroly.com · https://cal.com/sarath-kavuru-0uizws/15min
 
 ## AI crawler policy
 Anthroly allows training bots, retrieval/search bots, and user-triggered fetchers.

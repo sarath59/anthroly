@@ -3,25 +3,17 @@ import { notFound } from 'next/navigation';
 import { PSEOPageLayout } from '@/components/pseo/PSEOPageLayout';
 import { generateIndustryLocationPage } from '@/lib/pseo/combinations';
 import { generatePageStructuredData } from '@/lib/pseo/schema';
+import { getIndexableIndustryLocationParams } from '@/lib/pseo/indexable';
 import { absoluteUrl } from '@/lib/site';
-import {
-  APAC_CITY_SLUGS,
-  APAC_PRIORITY_INDUSTRY_SLUGS,
-} from '@/lib/pseo/data/apac-markets';
 
 interface PageProps {
   params: { slug: string; location: string };
 }
 
-/** Pre-build APAC industry × city pages so Google never hits a cold ISR miss */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  const params: { slug: string; location: string }[] = [];
-  for (const slug of APAC_PRIORITY_INDUSTRY_SLUGS) {
-    for (const location of APAC_CITY_SLUGS) {
-      params.push({ slug, location });
-    }
-  }
-  return params;
+  return getIndexableIndustryLocationParams();
 }
 
 // Enable ISR - pages regenerate every 24 hours

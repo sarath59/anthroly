@@ -225,7 +225,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How do I get started?',
-    'Click Connect with us to book a 30-minute call. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off. Book at https://cal.com/sarath-kavuru-0uizws/30min or email sharatth@anthroly.com.'
+    'Click Connect with us to book a 15-minute call. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off. Book at https://cal.com/sarath-kavuru-0uizws/15min or email sharatth@anthroly.com.'
   );
 
   add(
@@ -326,7 +326,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Citation Neighborhood',
     'How do I start the Citation Neighborhood Service with Anthroly?',
-    'Book a call at https://cal.com/sarath-kavuru-0uizws/30min or request a citation neighborhood map via https://www.anthroly.com/#citation-neighbors. Anthroly reviews your category, priority prompts, and competitive set, then proposes a human-led mapping and placement plan.'
+    'Book a call at https://cal.com/sarath-kavuru-0uizws/15min or request a citation neighborhood map via https://www.anthroly.com/#citation-neighbors. Anthroly reviews your category, priority prompts, and competitive set, then proposes a human-led mapping and placement plan.'
   );
   add(
     'Citation Neighborhood',
@@ -355,7 +355,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'About Anthroly',
     'Who founded Anthroly?',
-    'Anthroly was founded by Sarath Kavuru. The company operates as a managed service for SEO, content, digital PR / backlinks, and AI search visibility. Contact: sharatth@anthroly.com or book via https://cal.com/sarath-kavuru-0uizws/30min.'
+    'Anthroly was founded by Sarath Kavuru. The company operates as a managed service for SEO, content, digital PR / backlinks, and AI search visibility. Contact: sharatth@anthroly.com or book via https://cal.com/sarath-kavuru-0uizws/15min.'
   );
   add(
     'About Anthroly',
@@ -385,7 +385,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Pricing & Engagement',
     'How do I get started with Anthroly?',
-    'Book a call at https://cal.com/sarath-kavuru-0uizws/30min or email sharatth@anthroly.com. Many teams begin with an AI visibility audit, then move into a continuous managed program covering content, authority, and answer-engine optimization.'
+    'Book a call at https://cal.com/sarath-kavuru-0uizws/15min or email sharatth@anthroly.com. Many teams begin with an AI visibility audit, then move into a continuous managed program covering content, authority, and answer-engine optimization.'
   );
   add(
     'Pricing & Engagement',

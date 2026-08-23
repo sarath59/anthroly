@@ -1,4 +1,4 @@
-import { SITE_URL, absoluteUrl } from './site';
+import { SITE_URL, absoluteUrl, BOOK_CALL_URL } from './site';
 
 /** Named author used for E-E-A-T on blog, AEO hubs, and Person schema */
 export const SITE_AUTHOR = {
@@ -7,7 +7,7 @@ export const SITE_AUTHOR = {
   email: 'sharatth@anthroly.com',
   url: absoluteUrl('/aeo'),
   sameAs: [
-    'https://cal.com/sarath-kavuru-0uizws/30min',
+    BOOK_CALL_URL,
     'https://twitter.com/anthroly',
     'https://linkedin.com/company/anthroly',
   ],

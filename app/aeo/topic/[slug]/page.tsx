@@ -13,6 +13,7 @@ interface PageProps {
 }
 
 export const revalidate = 86400;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return aeoTopics.map((t) => ({ slug: t.slug }));

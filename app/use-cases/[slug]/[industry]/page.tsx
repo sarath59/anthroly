@@ -1,17 +1,19 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PSEOPageLayout } from '@/components/pseo/PSEOPageLayout';
-import { generateUseCaseIndustryPage, getAllUseCaseIndustrySlugs } from '@/lib/pseo/combinations';
+import { generateUseCaseIndustryPage } from '@/lib/pseo/combinations';
 import { generatePageStructuredData } from '@/lib/pseo/schema';
+import { getIndexableUseCaseIndustryParams } from '@/lib/pseo/indexable';
 import { absoluteUrl } from '@/lib/site';
 
 interface PageProps {
   params: { slug: string; industry: string };
 }
 
-// Don't pre-generate all combinations - use ISR instead
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return [];
+  return getIndexableUseCaseIndustryParams();
 }
 
 // Enable ISR - pages regenerate every 24 hours

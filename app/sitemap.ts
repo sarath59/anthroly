@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next';
 import { 
   seoGlossaryTerms, 
   targetPersonas, 
-  seoLocations, 
   seoIntegrations,
   seoTools,
   industries,
@@ -13,8 +12,14 @@ import {
   apacCountries,
   apacTopics,
   APAC_CITY_SLUGS,
-  APAC_PRIORITY_INDUSTRY_SLUGS,
-  APAC_PRIORITY_PERSONA_SLUGS,
+  uniqueSeoLocations,
+  getIndexablePersonaLocationParams,
+  getIndexablePersonaIndustryParams,
+  getIndexableIndustryLocationParams,
+  getIndexableGlossaryIndustryParams,
+  getIndexableUseCaseIndustryParams,
+  getIndexableIntegrationIndustryParams,
+  getIndexablePersonaThreeWayParams,
 } from '@/lib/pseo';
 import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
@@ -27,18 +32,15 @@ import { getAllCustomerClusterPaths } from '@/lib/customer-clusters';
  *
  * Next.js 14 generates /sitemap.xml from this file.
  *
- * INDEXING STRATEGY (APAC focus):
- * 1. Prioritize /markets country hubs + country×topic pages (unique long-form)
- * 2. Include all base pages + AEO
- * 3. For location two-ways, submit ONLY APAC cities (SG/CN/AU/NZ/HK)
- *    to protect crawl budget — thin global two-ways were getting
- *    "Crawled – currently not indexed"
- * 4. Three-ways remain omitted (noindex + canonical to parent)
+ * Inventory is locked to lib/pseo/indexable.ts so sitemap URLs always
+ * match prebuilt generateStaticParams (no 404 / cold ISR misses).
+ *
+ * Two-ways: all unique cities × all industries / personas.
+ * Three-ways: curated commercial hubs only (not the old 35k doorway set).
  */
 
 const APAC_CITY_SET = new Set<string>(APAC_CITY_SLUGS);
-const APAC_INDUSTRY_SET = new Set<string>(APAC_PRIORITY_INDUSTRY_SLUGS);
-const APAC_PERSONA_SET = new Set<string>(APAC_PRIORITY_PERSONA_SLUGS);
+const seoLocations = uniqueSeoLocations();
 
 /** Stable lastmod for APAC market pack — avoid fake "everything changed today" signal */
 const APAC_LASTMOD = new Date('2026-08-10T00:00:00.000Z');
@@ -260,86 +262,72 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // ============================================================================
-  // TWO-WAY COMBINATIONS — APAC-FIRST CRAWL BUDGET
-  // Only submit location combos for Singapore / China / Australia / NZ / HK
+  // TWO-WAY COMBINATIONS — full unique-city × industry / persona matrix
   // ============================================================================
 
-  const apacLocations = seoLocations.filter((l) => APAC_CITY_SET.has(l.slug));
-  const priorityPersonas = targetPersonas.filter((p) => APAC_PERSONA_SET.has(p.slug));
-  const priorityIndustries = industries.filter((i) => APAC_INDUSTRY_SET.has(i.slug));
-
-  // Persona × APAC Location
-  priorityPersonas.forEach((persona) => {
-    apacLocations.forEach((location) => {
-      entries.push({
-        url: `${SITE_URL}/for/${persona.slug}/${location.slug}`,
-        lastModified: APAC_LASTMOD,
-        changeFrequency: 'monthly',
-        priority: 0.72,
-      });
+  getIndexablePersonaLocationParams().forEach(({ persona, location }) => {
+    entries.push({
+      url: `${SITE_URL}/for/${persona}/${location}`,
+      lastModified: APAC_CITY_SET.has(location) ? APAC_LASTMOD : now,
+      changeFrequency: 'monthly',
+      priority: APAC_CITY_SET.has(location) ? 0.72 : 0.64,
     });
   });
 
-  // Persona × Industry (keep — smaller set, useful)
-  targetPersonas.forEach((persona) => {
-    industries.forEach((industry) => {
-      entries.push({
-        url: `${SITE_URL}/for/${persona.slug}/${industry.slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.65,
-      });
+  getIndexablePersonaIndustryParams().forEach(({ persona, industry }) => {
+    entries.push({
+      url: `${SITE_URL}/for/${persona}/${industry}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.65,
     });
   });
 
-  // Industry × APAC Location (priority industries only)
-  priorityIndustries.forEach((industry) => {
-    apacLocations.forEach((location) => {
-      entries.push({
-        url: `${SITE_URL}/industries/${industry.slug}/${location.slug}`,
-        lastModified: APAC_LASTMOD,
-        changeFrequency: 'monthly',
-        priority: 0.72,
-      });
+  getIndexableIndustryLocationParams().forEach(({ slug, location }) => {
+    entries.push({
+      url: `${SITE_URL}/industries/${slug}/${location}`,
+      lastModified: APAC_CITY_SET.has(location) ? APAC_LASTMOD : now,
+      changeFrequency: 'monthly',
+      priority: APAC_CITY_SET.has(location) ? 0.72 : 0.64,
     });
   });
 
-  // Glossary × Industry (top industries only — reduce thin crawl waste)
-  seoGlossaryTerms.forEach((term) => {
-    priorityIndustries.forEach((industry) => {
-      entries.push({
-        url: `${SITE_URL}/glossary/${term.slug}/${industry.slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.55,
-      });
+  getIndexableGlossaryIndustryParams().forEach(({ slug, industry }) => {
+    entries.push({
+      url: `${SITE_URL}/glossary/${slug}/${industry}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.55,
     });
   });
 
-  // UseCase × Industry
-  useCases.forEach((useCase) => {
-    priorityIndustries.forEach((industry) => {
-      entries.push({
-        url: `${SITE_URL}/use-cases/${useCase.slug}/${industry.slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.55,
-      });
+  getIndexableUseCaseIndustryParams().forEach(({ slug, industry }) => {
+    entries.push({
+      url: `${SITE_URL}/use-cases/${slug}/${industry}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.55,
     });
   });
 
-  // Integration × Industry
-  seoIntegrations.forEach((integration) => {
-    priorityIndustries.forEach((industry) => {
-      entries.push({
-        url: `${SITE_URL}/integrations/${integration.slug}/${industry.slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.55,
-      });
+  getIndexableIntegrationIndustryParams().forEach(({ slug, industry }) => {
+    entries.push({
+      url: `${SITE_URL}/integrations/${slug}/${industry}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.55,
     });
   });
 
-  // Three-way pages intentionally omitted (noindex + not submitted).
+  // Curated persona × industry × city three-ways (commercial hubs only)
+  getIndexablePersonaThreeWayParams().forEach(({ persona, industry, location }) => {
+    entries.push({
+      url: `${SITE_URL}/for/${persona}/${industry}/${location}`,
+      lastModified: APAC_CITY_SET.has(location) ? APAC_LASTMOD : now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    });
+  });
+
   return entries;
 }

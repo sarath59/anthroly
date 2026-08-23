@@ -7,8 +7,10 @@ import {
   generatePersonaLocationPage,
   generatePersonaIndustryPage,
   generatePersonaIndustryLocationPage,
-  APAC_CITY_SLUGS,
-  APAC_PRIORITY_PERSONA_SLUGS,
+  getIndexablePersonaLocationParams,
+  getIndexablePersonaIndustryParams,
+  getIndexablePersonaThreeWayParams,
+  isIndexablePersonaThreeWay,
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
@@ -37,22 +39,25 @@ function generatePersonaTwoWayPage(personaSlug: string, secondSlug: string) {
  * - /for/[persona]/[industry]/[location] - persona + industry + location combo
  */
 
-// Pre-build personas + APAC persona×city combos for reliable indexing
 export async function generateStaticParams() {
   const params: { segments: string[] }[] = [];
-  
-  // Single persona pages: /for/[persona]
+
   targetPersonas.forEach((persona) => {
     params.push({ segments: [persona.slug] });
   });
 
-  // APAC persona × city two-ways (priority markets)
-  for (const persona of APAC_PRIORITY_PERSONA_SLUGS) {
-    for (const city of APAC_CITY_SLUGS) {
-      params.push({ segments: [persona, city] });
-    }
+  for (const { persona, location } of getIndexablePersonaLocationParams()) {
+    params.push({ segments: [persona, location] });
   }
-  
+
+  for (const { persona, industry } of getIndexablePersonaIndustryParams()) {
+    params.push({ segments: [persona, industry] });
+  }
+
+  for (const { persona, industry, location } of getIndexablePersonaThreeWayParams()) {
+    params.push({ segments: [persona, industry, location] });
+  }
+
   return params;
 }
 
@@ -90,17 +95,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   
   if (segments.length === 3) {
-    // Thin 3-way template: keep for users, do not ask Google to index
     const page = generatePersonaIndustryLocationPage(segments[0], segments[1], segments[2]);
     if (!page) return { title: 'Not Found' };
-    const parentUrl = absoluteUrl(`/for/${segments[0]}/${segments[1]}`);
-    
+    const indexable = isIndexablePersonaThreeWay(segments[0], segments[1], segments[2]);
+    const canonical = indexable
+      ? absoluteUrl(page.url)
+      : absoluteUrl(`/for/${segments[0]}/${segments[1]}`);
+
     return {
       title: page.seo.title,
       description: page.seo.metaDescription,
       keywords: [page.seo.primaryKeyword, ...page.seo.secondaryKeywords],
-      robots: { index: false, follow: true },
-      alternates: { canonical: parentUrl },
+      robots: { index: indexable, follow: true },
+      alternates: { canonical },
     };
   }
   

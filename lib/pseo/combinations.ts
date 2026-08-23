@@ -61,6 +61,16 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
       heading: `What results do ${location.city} ${persona.name}s typically see?`,
       body: `Typical outcomes include 15–25 high-DR backlinks/month, 15 blogs/month, stronger domain authority, organic traffic growth, and lower CAC as Google and AI channels compound.`,
     },
+    {
+      heading: `How do ChatGPT, Claude, and Google treat ${persona.name}s in ${location.city}?`,
+      body: `Answer engines fetch local + role context before they recommend a brand. For ${persona.name}s in ${location.city}, Anthroly structures pages so models can cite a clear offer, proof, and city-specific facts—not a generic national template.`,
+      listItems: [
+        `Google / AI Overviews: local + ${persona.industry.toLowerCase()} queries that include ${location.city}`,
+        `ChatGPT and Claude: buyer prompts such as “best ${persona.industry.toLowerCase()} SEO for a ${persona.title} in ${location.city}”`,
+        `Perplexity: source-backed answers that prefer pages with ${location.city} evidence and named outcomes`,
+        ...location.localInsights.slice(0, 3).map((insight) => `Local signal: ${insight}`),
+      ],
+    },
   ];
   
   const faq: FAQ[] = [
@@ -354,6 +364,16 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
 • **AI search visibility** ensuring presence in ChatGPT and Perplexity results
 • **Local market dominance** for ${location.city}-specific searches
 • **Reduced customer acquisition costs** as organic channels mature`,
+    },
+    {
+      heading: `AI answer coverage for ${industry.name} in ${location.city}`,
+      body: `Buyers in ${location.city} now ask ChatGPT, Claude, Perplexity, and Google AI Overviews which ${industry.name.toLowerCase()} brands to trust. Pages that only repeat a national ${industry.name.toLowerCase()} brief get skipped.`,
+      listItems: [
+        `Priority queries: ${industry.keywords.slice(0, 3).map((k) => `${k} ${location.city}`).join('; ')}`,
+        `Industry need: ${industry.seoNeeds[0]}`,
+        `Local constraint: ${location.localInsights[0]}`,
+        `Citation assets: FAQ, comparison, and proof blocks a model can quote without guessing`,
+      ],
     },
   ];
   
@@ -973,7 +993,23 @@ export function generatePersonaIndustryLocationPage(
 • **Local visibility** for ${location.city} searches
 • **Reduced time investment** through managed delivery
 • **Domain authority growth** averaging 12 points annually
-• **AI search presence** in ChatGPT, Perplexity, and Google SGE`,
+• **AI search presence** in ChatGPT, Perplexity, and Google AI Overviews`,
+    },
+    {
+      heading: `What ${location.city} ${industry.name} buyers ask AI`,
+      body: `A ${persona.title} in ${location.city} is competing for both Google rankings and model citations. Anthroly maps the prompts and SERPs that actually mention ${industry.name.toLowerCase()} in this market.`,
+      listItems: [
+        `“Who should a ${persona.title} hire for ${industry.name.toLowerCase()} SEO in ${location.city}?”`,
+        `“Best ${industry.keywords[0]} agency near ${location.city}”`,
+        ...location.localInsights.slice(0, 3),
+        ...industry.painPoints.slice(0, 2).map((p) => `${industry.name} pressure: ${p}`),
+        ...persona.goals.slice(0, 2).map((g) => `${persona.name} goal: ${g}`),
+      ],
+    },
+    {
+      heading: `${location.city} market facts that belong on the page`,
+      body: `Generic industry copy fails here because ${locationName} has its own demand pattern. These are the facts we put on citation-ready pages for ${persona.name}s in ${industry.name.toLowerCase()}:`,
+      listItems: location.localInsights,
     },
   ];
   
@@ -989,6 +1025,14 @@ export function generatePersonaIndustryLocationPage(
     {
       question: `What results can ${persona.name}s in ${industry.name} expect?`,
       answer: `Most ${persona.name}s see initial improvements within 30-60 days, with significant results by 90 days. ${industry.name} companies typically benefit from our focus on ${industry.seoNeeds[0].toLowerCase()}.`,
+    },
+    {
+      question: `Can Anthroly help ${persona.name}s get cited in ChatGPT and Claude for ${industry.name} in ${location.city}?`,
+      answer: `Yes. We write answer-first pages, local proof, and FAQ blocks that ChatGPT, Claude, Perplexity, and Google AI Overviews can quote. The work is specific to ${industry.name.toLowerCase()} buyers in ${location.city}, not a reused national template.`,
+    },
+    {
+      question: `Is this page for companies based in ${location.city} or targeting ${location.city}?`,
+      answer: `Both. ${persona.name}s based in ${location.city} and teams selling into ${location.city}'s ${industry.name.toLowerCase()} market use the same program: local keywords, city-specific citations, and national authority.`,
     },
   ];
   

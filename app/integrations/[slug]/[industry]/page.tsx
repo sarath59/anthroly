@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { 
-  seoIntegrations, 
-  industries, 
   generateIntegrationIndustryPage, 
-  generatePageStructuredData 
+  generatePageStructuredData,
+  getIndexableIntegrationIndustryParams,
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
@@ -16,9 +15,13 @@ interface PageProps {
   };
 }
 
-// Use ISR for these pages
 export const dynamic = 'force-static';
-export const revalidate = 86400; // Revalidate every 24 hours
+export const revalidate = 86400;
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return getIndexableIntegrationIndustryParams();
+}
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

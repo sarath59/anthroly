@@ -95,6 +95,21 @@ export {
   getApacTopicComboPage,
 } from './apac-generators';
 
+export {
+  uniqueSeoLocations,
+  INDEXABLE_THREE_WAY_CITIES,
+  isIndexablePersonaThreeWay,
+  getIndexablePersonaLocationParams,
+  getIndexablePersonaIndustryParams,
+  getIndexableIndustryLocationParams,
+  getIndexableGlossaryIndustryParams,
+  getIndexableUseCaseIndustryParams,
+  getIndexableIntegrationIndustryParams,
+  getIndexablePersonaThreeWayParams,
+  getIndexableAeoTopicEngineParams,
+  getIndexableCounts,
+} from './indexable';
+
 // Schema
 export {
   generateFAQSchema,
