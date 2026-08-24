@@ -238,7 +238,7 @@ export function generateAeoTopicPage(topicSlug: string): PSEOPage | null {
       faq,
       callToAction: {
         headline: `Put ${topic.name} into monthly execution`,
-        description: PRIMARY_CTA_LABEL + ' for a 15-minute plan, or run a free AI Crawler Analysis.',
+        description: PRIMARY_CTA_LABEL + ' — a 90-minute researched audit — or run a free AI Crawler Analysis.',
         buttonText: 'Get Your Free Analysis',
         buttonUrl: '/#ai-crawler',
       },

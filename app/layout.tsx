@@ -13,16 +13,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Anthroly - Human Content + AI Backlinks",
-  description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
-  keywords: ["AI SEO", "human-led SEO", "high-DR backlinks", "SEO content", "answer engine optimization", "AEO", "LLM SEO", "SaaS SEO"],
+  title: "Anthroly — Founder AI Authority & Pipeline System",
+  description: "Become easier to discover, trust, and contact in the AI era. $216 Founder Growth Diagnostic (credited toward a $1,500 30-day sprint). Then $1,000/month. Humans do the work. Machines help us scale.",
+  keywords: ["GEO", "AI search visibility", "ChatGPT SEO", "Perplexity citations", "AI lead generation", "founder ghostwriting", "LinkedIn ghostwriting", "AEO", "human-led SEO"],
   alternates: {
     // Absolute, query-free — tracking params like ?ref=producthunt must not create a second indexable URL
     canonical: absoluteUrl('/'),
   },
   openGraph: {
-    title: "Anthroly - Human Content + AI Backlinks",
-    description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
+    title: "Anthroly — Founder AI Authority & Pipeline System",
+    description: "Become easier to discover, trust, and contact in the AI era. $216 diagnostic (credited toward $1,500 sprint). Then $1,000/month.",
     url: absoluteUrl('/'),
     siteName: 'Anthroly',
     type: 'website',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: "Anthroly - Human Content + AI Backlinks",
-    description: "Human-led SEO and content: high-DR backlinks, blogs, and AI-search visibility—delivered by our team from $2,000/mo.",
+    title: "Anthroly — Founder AI Authority & Pipeline System",
+    description: "Become easier to discover, trust, and contact in the AI era. $216 diagnostic (credited toward $1,500 sprint). Then $1,000/month.",
     images: [absoluteUrl('/logo.png')],
   },
   icons: {

@@ -2,56 +2,77 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import {
+  BOOK_CALL_URL,
+  CORE_PROMISE,
+  DIAGNOSTIC_CREDIT_NOTE,
+  GROWTH_PILLARS,
+  PRIMARY_CTA_LABEL,
+  STORY_LINE,
+  SYSTEM_NAME,
+} from '@/lib/site';
 import { Button } from '../ui/button';
-import { ArrowRight, Users, UserCheck } from 'lucide-react';
+import { ArrowRight, Megaphone, Search, Target } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/animated-elements';
+
+const PILLAR_ICONS = [Search, Megaphone, Target];
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden pt-24 pb-16">
-      {/* Subtle dot grid */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#222_1px,_transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
       </div>
       
-      {/* Ambient glow */}
       <GlowPulse className="top-1/4 left-1/4" color="emerald" size={500} />
       <GlowPulse className="bottom-1/4 right-1/4" color="cyan" size={400} />
 
       <div className="container mx-auto px-4 lg:px-8 xl:px-12 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           
-          {/* Main Heading - Clear Value Prop */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="block text-white mb-2">Real SEO experts.</span>
-            <span className="block text-white mb-2">Working on your business.</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              Not software. Not bots.
-            </span>
-          </h1>
-
-          {/* Subheadline - Problem + Solution */}
-          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Strategists, writers, and link builders run your SEO <span className="text-white font-semibold">end to end</span>
-            —so you rank on Google and stay visible wherever people search today, including AI-style answers.{' '}
-            <span className="text-white font-semibold">People do the work;</span> you get clear reporting and consistent results.
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
+            {SYSTEM_NAME}
           </p>
 
-          {/* Human Touch Highlight - Builds Trust */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              <Users size={16} className="text-emerald-400" />
-              <span className="text-gray-300">Senior SEO experts on your account</span>
-            </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">
-              <UserCheck size={16} className="text-purple-400" />
-              <span className="text-gray-300">Human-written content &amp; outreach</span>
-            </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+            <span className="block text-white mb-2">Become easier to</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
+              discover, trust, and contact
+            </span>
+            <span className="block text-white mt-2">in the AI era.</span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
+            {CORE_PROMISE}{' '}
+            <span className="text-white font-semibold">Humans research, write, and qualify.</span> Machines help us move faster — they do not replace the work.
+          </p>
+
+          <div className="grid sm:grid-cols-3 gap-3 max-w-5xl mx-auto mb-10 text-left">
+            {GROWTH_PILLARS.map((pillar, i) => {
+              const Icon = PILLAR_ICONS[i];
+              return (
+                <div
+                  key={pillar.id}
+                  className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-colors"
+                >
+                  <div className="text-[11px] font-semibold uppercase tracking-wider text-emerald-400 mb-1">
+                    {pillar.name}
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon size={16} className="text-white" />
+                    <span className="text-sm font-semibold text-white">{pillar.mechanism}</span>
+                  </div>
+                  <p className="text-xs text-gray-400 leading-relaxed">{pillar.sell}</p>
+                </div>
+              );
+            })}
           </div>
 
-          {/* CTA */}
+          <p className="text-sm text-gray-500 mb-8 max-w-2xl mx-auto">
+            {STORY_LINE}
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href={BOOK_CALL_URL}
@@ -68,42 +89,25 @@ export const Hero = () => {
               </Button>
             </a>
 
-            <Link href="/#how-it-works" className="w-full sm:w-auto">
+            <Link href="/#pricing" className="w-full sm:w-auto">
               <Button
                 size="xl"
                 variant="outline"
                 className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold"
               >
-                See How It Works
+                See the 30-day sprint
               </Button>
             </Link>
           </div>
 
-          {/* Quick Stats - Social Proof */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">30+</div>
-              <div className="text-gray-500 text-sm">Pages/Month</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">DR 70+</div>
-              <div className="text-gray-500 text-sm">Avg Backlinks</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">$2,000</div>
-              <div className="text-gray-500 text-sm">Per Month</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">24hrs</div>
-              <div className="text-gray-500 text-sm">To Get Started</div>
-            </div>
-          </div>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto mb-12">
+            {DIAGNOSTIC_CREDIT_NOTE}
+          </p>
 
-          {/* Platforms We Optimize For */}
           <div className="mb-8">
             <LogoStrip 
               companies={AI_COMPANIES} 
-              label="Where we grow your visibility"
+              label="Where your buyers already ask questions"
               size="md"
               showNames={true}
             />
@@ -111,10 +115,9 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-gray-500">
-          <span className="text-xs uppercase tracking-widest">See what you get</span>
+          <span className="text-xs uppercase tracking-widest">How the system works</span>
           <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
             <div className="w-1.5 h-3 bg-gray-500 rounded-full animate-bounce"></div>
           </div>

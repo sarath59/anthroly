@@ -27,17 +27,18 @@ function trackFromAnchor(anchor: HTMLAnchorElement): void {
     return;
   }
 
-  const isCal =
+  const isPaidConnect =
+    href.includes('buy.stripe.com') ||
     href.includes('cal.com/sarath-kavuru') ||
     href.includes('cal.com/sarath');
-  if (!isCal) return;
+  if (!isPaidConnect) return;
 
   try {
     const url = new URL(href, window.location.origin);
     const notes = url.searchParams.get('notes') || '';
-    trackGoal(goalFromCalNotes(notes), {
+    trackGoal(DATAFAST_GOALS.bookCall, {
       page,
-      intent: notes.slice(0, 255) || 'connect_with_us',
+      intent: notes.slice(0, 255) || 'pay_216_to_connect',
     });
   } catch {
     trackGoal(DATAFAST_GOALS.bookCall, { page });

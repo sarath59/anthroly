@@ -14,7 +14,7 @@ import {
   Target,
   Users,
 } from 'lucide-react';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import {
   GlowPulse,
@@ -23,8 +23,8 @@ import {
   StaggerItem,
 } from '../ui/animated-elements';
 
-function bookCallWith(note: string): string {
-  return `${BOOK_CALL_URL}?notes=${encodeURIComponent(note)}`;
+function bookCallWith(_note: string): string {
+  return BOOK_CALL_URL;
 }
 
 /** What our human team delivers — not a DIY playbook */
@@ -163,7 +163,7 @@ export const CitationNeighbors = () => {
                 size="xl"
                 className="h-14 w-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-10 text-lg font-bold text-black shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] transition-all hover:shadow-[0_0_70px_-15px_rgba(34,211,238,0.55)] sm:w-auto"
               >
-                Get your citation neighborhood map
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </a>

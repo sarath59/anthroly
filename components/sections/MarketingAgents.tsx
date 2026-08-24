@@ -223,8 +223,8 @@ const COLOR_MAP: Record<string, { border: string; text: string; glow: string; ch
   },
 };
 
-function bookCallWith(note: string): string {
-  return `${BOOK_CALL_URL}?notes=${encodeURIComponent(note)}`;
+function bookCallWith(_note: string): string {
+  return BOOK_CALL_URL;
 }
 
 const RotatingSurface = ({ index }: { index: number }) => (
@@ -277,18 +277,18 @@ export const MarketingAgents = () => {
         <ScrollReveal className="mx-auto max-w-5xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-gray-300 backdrop-blur">
             <Sparkles size={14} className="text-emerald-400" />
-            The AI answer layer
+            The AI discovery + trust + contact layer
           </div>
 
           <h2 className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block text-white">Marketing agents to win in</span>
+            <span className="block text-white">One system to win in</span>
             <span className="block">
               <RotatingSurface index={surfaceIndex} />
             </span>
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
-            Reach millions of consumers who are using AI to discover new products and brands.
+            Discover in AI search. Trust through founder authority. Contact through qualified outreach. Humans do the work. Machines help us scale.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -307,7 +307,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                Get started
+                See the 30-day sprint
               </Button>
             </Link>
           </div>
@@ -820,7 +820,7 @@ export const MarketingAgents = () => {
             </span>
           </h3>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-            Reach millions of consumers who are using AI to discover new products and brands.
+            Discover in AI search. Trust through founder authority. Contact through qualified outreach. Humans do the work. Machines help us scale.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -838,7 +838,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                Get started
+                See the 30-day sprint
               </Button>
             </Link>
           </div>

@@ -61,13 +61,16 @@ export function generateOrganizationSchema(): object {
     },
     image: absoluteUrl('/logo.png'),
     description:
-      'Human-led SEO and Answer Engine Optimization (AEO) agency. Anthroly helps brands get recommended in ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews with researchers, content, digital PR, and high-DR backlinks.',
-    slogan: 'Human-led. AI-native. Built for the next generation of search.',
+      'Anthroly runs the Founder AI Authority & Pipeline System: AI search visibility, founder authority, and qualified conversations — so brands become easier to discover, trust, and contact in the AI era. Humans do the work; machines help scale.',
+    slogan: 'Become easier to discover, trust, and contact in the AI era.',
     foundingDate: '2024',
     email: 'sharatth@anthroly.com',
     knowsAbout: [
       'Answer Engine Optimization',
       'Generative Engine Optimization',
+      'AI lead generation',
+      'founder ghostwriting',
+      'LinkedIn ghostwriting',
       'AI SEO',
       'AI Overviews',
       'ChatGPT SEO',

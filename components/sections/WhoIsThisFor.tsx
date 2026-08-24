@@ -86,13 +86,13 @@ export const WhoIsThisFor = () => {
             <span>👥 82% of founders say SEO is important — only 12% actually do it</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            You Know SEO Matters.
+            You Need Pipeline, Not Another SEO Report.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              You Just Don&apos;t Have 20 Hours/Week.
+              Built for founders who cannot spend 20 hours a week on it.
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">The average SEO campaign needs 15-20 hours weekly.</span> You have a business to run. We built Anthroly for ambitious teams who want enterprise results without enterprise resources.
+            <span className="text-white font-semibold">SaaS, AI, cybersecurity, fintech, consultants, professional services.</span> If buyers already ask AI who to hire — and you have expertise but no interest in becoming a full-time content creator — this is for you.
           </p>
         </div>
 

@@ -34,17 +34,17 @@ export const FoundingMembers = () => {
     {
       icon: TrendingUp,
       title: "Done-for-you delivery",
-      description: "Writers, link builders, and strategists ship every month—you approve direction, not spreadsheets."
+      description: "One 30–45 minute founder interview a month. We turn it into posts, articles, FAQ content, and outreach."
     },
     {
       icon: Shield,
-      title: "Simple $2,000/mo Pricing",
-      description: "Month 1: $1,000 upfront, rest after results. Then $2,000/mo—no surprises"
+      title: "$216 diagnostic, then $1,500 sprint",
+      description: "The diagnostic fee is credited 100% toward implementation if you start within 7 days. Then $1,000/month to run the system."
     },
     {
       icon: Sparkles,
-      title: "Exclusive Community",
-      description: "Private Slack with other founders for networking and growth tips"
+      title: "One system, not three retainers",
+      description: "Discover in AI search. Trust through founder authority. Contact through qualified conversations."
     }
   ];
 
@@ -65,7 +65,7 @@ export const FoundingMembers = () => {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <div className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-full text-sm font-bold shadow-lg">
                   <Clock size={16} />
-                  <span>LIMITED: 12 of 20 Spots Remaining</span>
+                  <span>Human-led. Not a dashboard.</span>
                 </div>
               </div>
 

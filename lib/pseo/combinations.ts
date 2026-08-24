@@ -234,7 +234,7 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
     },
     {
       question: `What does it cost?`,
-      answer: `Anthroly is $2,000/month. Month one starts at $1,000 upfront, with the balance after first-month results. No long-term contracts—cancel anytime.`,
+      answer: `Start with the $216 Founder Growth Diagnostic — a 90-minute AI visibility + founder authority audit. Implementation is a $1,500 30-Day AI Authority Sprint, then $1,000/month. The diagnostic is credited 100% toward the sprint if you start within 7 days. No long-term contracts.`,
     },
   ];
 

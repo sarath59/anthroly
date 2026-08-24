@@ -19,7 +19,7 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react';
-import { BOOK_CALL_URL } from '@/lib/site';
+import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import {
   GlowPulse,
@@ -29,8 +29,8 @@ import {
   StaggerItem,
 } from '../ui/animated-elements';
 
-function bookCallWith(note: string): string {
-  return `${BOOK_CALL_URL}?notes=${encodeURIComponent(note)}`;
+function bookCallWith(_note: string): string {
+  return BOOK_CALL_URL;
 }
 
 /** What shifts underneath your AI visibility every week */
@@ -145,7 +145,7 @@ export const HumanLedAIVisibility = () => {
         <ScrollReveal className="mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-gray-300 backdrop-blur">
             <Users size={14} className="text-purple-400" />
-            Human-led AI visibility service
+            Human-led · Discover layer
           </div>
 
           <h2
@@ -159,8 +159,7 @@ export const HumanLedAIVisibility = () => {
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-xl font-medium leading-relaxed text-gray-200">
-            Your customers are asking AI who to buy from. We make sure your brand is part of the
-            answer.
+            Your customers ask ChatGPT who to buy from. This is the Discover layer: we make you easier to find in AI answers — then founder authority and outreach turn that attention into conversations.
           </p>
 
           <div className="mx-auto mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-gray-400">
@@ -183,7 +182,7 @@ export const HumanLedAIVisibility = () => {
 
           <div className="mx-auto mt-8 w-fit rounded-2xl border border-purple-500/25 bg-purple-500/10 px-6 py-4">
             <p className="text-base font-semibold text-purple-200 md:text-lg">
-              A dedicated team of 30–40+ human researchers working on your brand every day.
+              Researchers and writers work your category every week — not a dashboard you log into alone.
             </p>
           </div>
 
@@ -198,7 +197,7 @@ export const HumanLedAIVisibility = () => {
                 size="xl"
                 className="h-14 w-full rounded-full bg-gradient-to-r from-purple-500 via-emerald-500 to-cyan-500 px-10 text-lg font-bold text-black shadow-[0_0_50px_-12px_rgba(168,85,247,0.5)] transition-all hover:shadow-[0_0_70px_-15px_rgba(16,185,129,0.7)] sm:w-auto"
               >
-                Get your AI Visibility Audit
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </a>
@@ -258,7 +257,7 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 max-w-6xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              30–40+ humans.{' '}
+              Humans research and write.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">
                 One mission:
               </span>{' '}
@@ -435,7 +434,7 @@ export const HumanLedAIVisibility = () => {
 
               <div className="grid content-center gap-4">
                 {[
-                  { stat: '30–40+', label: 'specialists behind your program' },
+                  { stat: 'Human-led', label: 'researchers, writers, operators — not a dashboard' },
                   { stat: 'Every day', label: 'research, content, and outreach in motion' },
                   { stat: 'One focus', label: 'your visibility across answer engines' },
                 ].map(row => (

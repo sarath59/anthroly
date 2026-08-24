@@ -1,9 +1,18 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import {
+  BOOK_CALL_URL,
+  CONNECT_FEE_LABEL,
+  CORE_OUTCOME,
+  DIAGNOSTIC_CREDIT_NOTE,
+  PACKAGE_RETAINER,
+  PACKAGE_SETUP,
+  PRIMARY_CTA_LABEL,
+  STORY_LINE,
+  SYSTEM_NAME,
+} from '@/lib/site';
 import { Button } from '../ui/button';
 import { GlowPulse } from '../ui/animated-elements';
 
@@ -30,7 +39,6 @@ export const FinalCTA = () => {
 
   return (
     <section ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0">
         <GlowPulse className="top-0 left-1/4" color="emerald" size={600} />
         <GlowPulse className="bottom-0 right-1/4" color="cyan" size={500} />
@@ -40,26 +48,21 @@ export const FinalCTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
-          {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-            6 Months From Now, <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              You&apos;ll Wish You Started Today.
-            </span>
+            {CORE_OUTCOME.replace(/\.$/, '')}.
           </h2>
 
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            <span className="text-white font-semibold">SEO compounds at 10-20% monthly.</span> Starting now vs. 6 months later means 2-3x more traffic by year end. While you&apos;re reading this, your competitors are ranking. The math is simple. The decision is yours.
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
+            <span className="text-white font-semibold">{SYSTEM_NAME}.</span> Discover in AI search. Trust through founder authority. Contact through qualified outreach.
           </p>
+          <p className="text-sm text-gray-500 mb-12">{STORY_LINE}</p>
 
-          {/* What You Get Summary */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "Dedicated human account manager",
-              "Google + AI SEO combined",
-              "30+ pages of content/month",
-              "15–25 backlinks/month"
+              "Named in ChatGPT & Perplexity",
+              "One interview a month — we write",
+              "Outreach tied to the content",
+              "Humans with machines — never AI-only"
             ].map((item, index) => (
               <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white/5 border border-white/10 rounded-xl">
                 <CheckCircle2 className="text-emerald-400" size={18} />
@@ -68,7 +71,6 @@ export const FinalCTA = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="flex flex-col items-center gap-6 mb-12">
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 h-16 md:h-20 px-12 md:px-16 text-xl md:text-2xl rounded-full font-bold shadow-[0_0_60px_-12px_rgba(16,185,129,0.5)] hover:shadow-[0_0_80px_-15px_rgba(16,185,129,0.7)] transition-all transform hover:-translate-y-1 hover:scale-105">
@@ -80,23 +82,22 @@ export const FinalCTA = () => {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Shield size={16} className="text-emerald-400" />
-                <span>Results backed (1 free month if we miss)</span>
+                <span>{CONNECT_FEE_LABEL} credited toward {PACKAGE_SETUP} within 7 days</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap size={16} className="text-emerald-400" />
-                <span>Start in 24 hours</span>
+                <span>90-minute researched audit</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} className="text-emerald-400" />
-                <span>Cancel anytime</span>
+                <span>Then {PACKAGE_SETUP} sprint · {PACKAGE_RETAINER}/mo</span>
               </div>
             </div>
           </div>
 
-          {/* Final Trust Message */}
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">Real humans. Real strategy. Real results.</span> Our team runs the work—content, links, and technical fixes—with clear reporting every step of the way. <span className="text-emerald-400 font-semibold">$2,000/month · $1,000 to start. Cancel anytime.</span>
+              <span className="text-white font-bold">You are not paying to talk.</span> {DIAGNOSTIC_CREDIT_NOTE}
             </p>
           </div>
         </div>

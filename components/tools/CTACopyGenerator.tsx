@@ -16,7 +16,7 @@ const CTAS = [
   'Join Now',
   'Subscribe',
   'Add to Cart',
-  'Connect with us',
+  'Get the $216 diagnostic',
   'Claim Offer',
   'Yes, I want this',
   'Send me the guide',

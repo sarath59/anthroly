@@ -30,10 +30,10 @@ const aiVisibilityServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}/#ai-visibility-service`,
-  name: "Human-Led AI Visibility Service",
-  serviceType: "Answer Engine Optimization (AEO) and AI search visibility",
+  name: "Founder AI Authority & Pipeline System — AI Search Visibility",
+  serviceType: "Generative Engine Optimization and AI search visibility",
   description:
-    "A continuous, human-led AI visibility service. A dedicated team of 30–40+ researchers, strategists, writers, and analysts works every day to get your brand recommended by ChatGPT, Gemini, Claude, Perplexity, and other AI platforms.",
+    "Discover layer of Anthroly's Founder AI Authority & Pipeline System: we identify the questions prospects ask ChatGPT, Gemini, Perplexity, and Google AI, then close gaps with answer-focused content, comparison pages, citation work, and monthly AI visibility tracking. Humans do the work; machines help us scale.",
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: "Worldwide",
   url: `${SITE_URL}/#human-led-ai-visibility`,

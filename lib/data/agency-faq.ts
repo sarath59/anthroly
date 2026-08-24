@@ -205,17 +205,17 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How much of my time does this require?',
-    'Almost none. We run the program for you. We will need a brief onboarding call (30 minutes) to understand your business, brand voice, and goals. After that, you will receive weekly reports and can check in anytime, but zero hands-on SEO work is required from you.'
+    'Almost none after onboarding. You give us one 30–45 minute founder interview per month. We turn it into LinkedIn posts, articles, newsletter, X, FAQ/AI-search content, and outreach. You do not sit around writing posts.'
   );
   add(
     'Getting Started',
     'Can I see examples of your work?',
-    `Yes! After you ${'Connect with us'.toLowerCase()}, we walk you through case studies from businesses similar to yours, showing exactly what we did and the results we achieved. We are happy to show real backlinks, real traffic numbers, and real ranking improvements. Browse published stories at https://www.anthroly.com/customers.`
+    `Yes. The $216 Founder Growth Diagnostic includes a walkthrough of relevant case studies — real AI visibility work, content, and pipeline results for businesses similar to yours. Browse published stories at https://www.anthroly.com/customers.`
   );
   add(
     'Getting Started',
     'What if it does not work for me?',
-    'That is what the promise is for. If we cannot deliver 15–25 high-quality backlinks per month (DR 50-90, avg DR 70+), we will give you one free month of service. We have never had to honor this — but it is there so you have zero risk.'
+    'If we miss a core first-month commitment on the 30-Day AI Authority Sprint — GEO visibility work started, founder content in distribution, outreach system live — we give you one free month of retainer. The $216 diagnostic is still a finished audit even if you do not continue.'
   );
   add(
     'Getting Started',
@@ -225,7 +225,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How do I get started?',
-    'Click Connect with us to book a 15-minute call. We then send onboarding details and next steps. Most clients are fully operational within 48 hours after we kick off. Book at https://cal.com/sarath-kavuru-0uizws/15min or email sharatth@anthroly.com.'
+    'Start with the $216 Founder Growth Diagnostic at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02. That is a 90-minute AI visibility + founder authority audit, researched before the call. The $216 is credited 100% toward the $1,500 30-Day AI Authority Sprint if you start within 7 days. Ongoing management is $1,000/month. Email sharatth@anthroly.com if you need a receipt.'
   );
 
   add(
@@ -326,7 +326,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Citation Neighborhood',
     'How do I start the Citation Neighborhood Service with Anthroly?',
-    'Book a call at https://cal.com/sarath-kavuru-0uizws/15min or request a citation neighborhood map via https://www.anthroly.com/#citation-neighbors. Anthroly reviews your category, priority prompts, and competitive set, then proposes a human-led mapping and placement plan.'
+    'Book a call at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02 or request a citation neighborhood map via https://www.anthroly.com/#citation-neighbors. Anthroly reviews your category, priority prompts, and competitive set, then proposes a human-led mapping and placement plan.'
   );
   add(
     'Citation Neighborhood',
@@ -340,7 +340,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'About Anthroly',
     'What is Anthroly?',
-    'Anthroly is a human-led SEO and Answer Engine Optimization (AEO) company. We help brands become visible and recommendable in Google search and in AI answers from ChatGPT, Claude, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews. Delivery combines specialist researchers, strategists, writers, and analysts with AI-assisted workflows — not a self-serve dashboard alone.'
+    'Anthroly runs the Founder AI Authority & Pipeline System. We help founders become easier to discover, trust, and contact in the AI era: AI search visibility (GEO), founder authority from one monthly interview, and AI-assisted lead generation. Humans do the work. Machines help us scale. Anthroly is not a self-serve dashboard.'
   );
   add(
     'About Anthroly',
@@ -355,7 +355,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'About Anthroly',
     'Who founded Anthroly?',
-    'Anthroly was founded by Sarath Kavuru. The company operates as a managed service for SEO, content, digital PR / backlinks, and AI search visibility. Contact: sharatth@anthroly.com or book via https://cal.com/sarath-kavuru-0uizws/15min.'
+    'Anthroly was founded by Sarath Kavuru. The company operates as a managed service for SEO, content, digital PR / backlinks, and AI search visibility. Contact: sharatth@anthroly.com or book via https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
   );
   add(
     'About Anthroly',
@@ -380,22 +380,37 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Pricing & Engagement',
     'How much does Anthroly cost?',
-    'Managed SEO and AEO programs typically start around $2,000 per month depending on scope. Packages commonly include content production (for example 15 SEO blogs/month), high-DR backlinks (often 15–25/month), AI visibility work, and reporting. Book a call for a scoped proposal.'
+    'The Founder AI Authority & Pipeline System is $1,500 for a 30-Day AI Authority Sprint, then $1,000/month. You start with a $216 Founder Growth Diagnostic (90-minute AI visibility + founder authority audit). The $216 is credited 100% toward the $1,500 sprint if you decide to work with us within 7 days. One core outcome: become easier to discover, trust, and contact in the AI era.'
   );
   add(
     'Pricing & Engagement',
     'How do I get started with Anthroly?',
-    'Book a call at https://cal.com/sarath-kavuru-0uizws/15min or email sharatth@anthroly.com. Many teams begin with an AI visibility audit, then move into a continuous managed program covering content, authority, and answer-engine optimization.'
+    'Get the $216 Founder Growth Diagnostic at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02, or email sharatth@anthroly.com. You are paying for a researched 90-minute audit, not a conversation. Implementation is a $1,500 30-day sprint, then $1,000/month. The diagnostic fee is credited toward the sprint if you start within 7 days.'
   );
   add(
     'Pricing & Engagement',
     'Does Anthroly offer a free AI visibility audit?',
-    'Yes — Anthroly offers AI crawler / visibility analysis entry points on the homepage (https://www.anthroly.com/#ai-crawler) so brands can understand how AI systems see them before committing to a full program.'
+    'Anthroly offers a free AI crawler analysis on the homepage (https://www.anthroly.com/#ai-crawler). That is a lightweight check of how AI systems see your site. The $216 Founder Growth Diagnostic is different: a 90-minute researched audit covering AI visibility, competitors, LinkedIn, content, positioning, and lead-generation gaps — credited toward implementation if you start within 7 days.'
   );
   add(
     'Pricing & Engagement',
     'What is included in a typical Anthroly retainer?',
-    'A typical retainer blends: AI search visibility monitoring, prompt and citation opportunity mapping, AI-ready content (blogs/FAQs/comparison pages), digital PR and high-DR backlinks, technical/entity improvements, and weekly or regular reporting. Exact deliverables are scoped per brand.'
+    'The $1,000/month retainer continues the Founder AI Authority & Pipeline System: ongoing AI visibility monitoring, content production, founder ghostwriting, AI-search content, outreach optimization, reporting, and monthly strategy. Exact mix is scoped after the diagnostic and 30-day sprint.'
+  );
+  add(
+    'Pricing & Engagement',
+    'What is the $216 Founder Growth Diagnostic?',
+    'The $216 Founder Growth Diagnostic is a 90-minute AI Visibility + Founder Authority Audit. Before the call, Anthroly analyzes current AI visibility, 3–5 competitors, LinkedIn presence, existing content, website, positioning, and lead-generation gaps. On the call: 20 min current situation, 25 min AI visibility, 20 min founder authority, 15 min lead generation, 10 min growth plan. You are paying for a diagnosis, not a conversation. Get it at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
+  );
+  add(
+    'Pricing & Engagement',
+    'Is the $216 diagnostic fee credited toward implementation?',
+    'Yes. The $216 diagnostic fee is credited 100% toward the $1,500 30-Day AI Authority Sprint if you decide to work with Anthroly within 7 days.'
+  );
+  add(
+    'Pricing & Engagement',
+    'What is included in the $1,500 30-Day AI Authority Sprint?',
+    'Week 1 Positioning: ICP, buyer-question research, competitor analysis, AI visibility baseline, founder positioning. Week 2 Authority: one 30–45 minute founder interview, 8–12 LinkedIn posts, 2 authority articles, 5–10 AI-search/FAQ opportunities. Week 3 AI Search: content restructuring, comparison/alternative content, entity optimization, citation opportunities, AI-search tracking. Week 4 Pipeline: ICP prospect list, lead enrichment, personalized outreach, follow-up sequence, CRM/pipeline setup.'
   );
   add(
     'Services',

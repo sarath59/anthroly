@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { XCircle, CheckCircle2, TrendingUp, Zap, DollarSign, Clock } from 'lucide-react';
+import { CONNECT_FEE_LABEL, PACKAGE_RETAINER, PACKAGE_SETUP } from '@/lib/site';
 import { LogoStrip, AI_COMPANIES, SEO_TOOLS } from '../ui/CompanyLogos';
 import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
 
@@ -35,13 +36,13 @@ export const ProblemSolution = () => {
             <span>📊 Most SEO campaigns fail to show ROI fast enough</span>
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Why Billions Are Wasted on SEO Every Year
+            Why Brands Lose Deals Before the Sales Call
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              (And How to Be the Exception)
+              (AI already picked someone else)
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-            <span className="text-white font-semibold">68% of online experiences start with search.</span> Yet most businesses burn money on agencies that deliver reports instead of results. Here&apos;s what they don&apos;t tell you...
+            <span className="text-white font-semibold">Buyers ask ChatGPT who to hire. They never see your ads.</span> Generic agencies sell three disconnected retainers. We run one system: discover in AI search, earn trust as the founder, then turn attention into conversations.
           </p>
         </div>
 
@@ -61,8 +62,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Expensive Agencies</p>
-                  <p className="text-gray-400">$2,000-$10,000/month for a few blog posts and &quot;strategy calls&quot; that go nowhere. Where does the money even go?</p>
+                  <p className="font-bold text-lg text-gray-200">SEO-only retainers</p>
+                  <p className="text-gray-400">$2k–$10k/month for blogs nobody cites in ChatGPT. Google&apos;s updates punish thin AI content. You still have no pipeline and no founder voice.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
@@ -89,8 +90,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">AI Tools Without Strategy</p>
-                  <p className="text-gray-400">ChatGPT can write content, but without SEO expertise it&apos;s just words on a page that no one will ever find.</p>
+                  <p className="font-bold text-lg text-gray-200">AI-only content farms</p>
+                  <p className="text-gray-400">Unedited model output. No entity work. No citations. Google and answer engines ignore it — or worse, they trust your competitor&apos;s humans.</p>
                 </div>
               </li>
             </ul>
@@ -119,8 +120,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Google + AI Search Combined</p>
-                  <p className="text-gray-400">We optimize for traditional Google AND AI platforms like ChatGPT, Perplexity, and Claude. Get visible everywhere that matters.</p>
+                  <p className="font-bold text-lg">Discover → Trust → Contact</p>
+                  <p className="text-gray-400">GEO so AI can find you. Founder authority so they trust you. Lead generation so they can contact you. One acquisition system — not three unrelated services.</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -133,8 +134,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">$2,000/Month. Results Guaranteed.</p>
-                  <p className="text-gray-400">Month 1: $1,000 upfront, rest after results. Then $2,000/mo. No contracts, cancel anytime.</p>
+                  <p className="font-bold text-lg">{CONNECT_FEE_LABEL} diagnostic, then {PACKAGE_SETUP} + {PACKAGE_RETAINER}/mo</p>
+                  <p className="text-gray-400">You buy a 90-minute researched audit, not a conversation. The {CONNECT_FEE_LABEL} is credited 100% toward the {PACKAGE_SETUP} sprint if you start within 7 days. Then {PACKAGE_RETAINER}/month to run the system.</p>
                 </div>
               </li>
             </ul>
@@ -147,23 +148,23 @@ export const ProblemSolution = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <TrendingUp className="text-emerald-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">95%</div>
-              <div className="text-sm text-gray-500">Cost Savings vs Agencies</div>
+              <div className="text-2xl font-bold text-white mb-1">Discover</div>
+              <div className="text-sm text-gray-500">AI search visibility</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Clock className="text-blue-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">100+</div>
-              <div className="text-sm text-gray-500">Hours Saved/Month</div>
+              <div className="text-2xl font-bold text-white mb-1">Trust</div>
+              <div className="text-sm text-gray-500">Founder authority engine</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Zap className="text-purple-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">Always</div>
-              <div className="text-sm text-gray-500">On your roadmap</div>
+              <div className="text-2xl font-bold text-white mb-1">Contact</div>
+              <div className="text-sm text-gray-500">Qualified conversations</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">$2,000</div>
-              <div className="text-sm text-gray-500">Flat Monthly Rate</div>
+              <div className="text-2xl font-bold text-white mb-1">{PACKAGE_SETUP}</div>
+              <div className="text-sm text-gray-500">+ {PACKAGE_RETAINER}/mo retainer</div>
             </div>
           </div>
         </div>
