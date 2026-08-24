@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import React from 'react';
 
 /**
  * Elite Scroll Animation System
