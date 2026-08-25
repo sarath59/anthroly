@@ -353,19 +353,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Smooth image loading */
-img {
-  transition: opacity 0.3s ease;
-}
-
-img[loading] {
-  opacity: 0;
-}
-
-img.loaded {
-  opacity: 1;
-}
-
 /* ============================================================================
    SCROLL ANIMATIONS
    ============================================================================ */
