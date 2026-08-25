@@ -38,7 +38,7 @@ export const FinalCTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+    <section id="final-cta" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white overflow-hidden relative">
       <div className="absolute inset-0">
         <GlowPulse className="top-0 left-1/4" color="emerald" size={600} />
         <GlowPulse className="bottom-0 right-1/4" color="cyan" size={500} />

@@ -11,6 +11,17 @@ export const DATAFAST_GOALS = {
   citationNeighborhood: 'citation_neighborhood',
   aiVisibilityAudit: 'ai_visibility_audit',
   emailContact: 'email_contact',
+  /** Interactive click (button, link, control) with from/to params */
+  click: 'click',
+  /** Section entered the viewport */
+  sectionView: 'section_view',
+  /** Time spent in a section when the visitor leaves it */
+  sectionTime: 'section_time',
+  /** 25 / 50 / 75 / 100 page scroll milestones */
+  scrollDepth: 'scroll_depth',
+  /** In-site or outbound navigation with from → to */
+  nav: 'nav',
+  formSubmit: 'form_submit',
 } as const;
 
 export type DataFastGoalName = (typeof DATAFAST_GOALS)[keyof typeof DATAFAST_GOALS];

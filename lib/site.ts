@@ -12,7 +12,10 @@ export function absoluteUrl(path: string = ''): string {
 }
 
 /** $216 Founder Growth Diagnostic (credited toward implementation) */
-export const BOOK_CALL_URL = 'https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02';
+export const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02';
+/** Creates a Stripe Checkout Session with DataFast visitor/session metadata */
+export const CHECKOUT_PATH = '/api/create-checkout';
+export const BOOK_CALL_URL = CHECKOUT_PATH;
 export const CONNECT_FEE_LABEL = '$216';
 export const DIAGNOSTIC_NAME = 'Founder Growth Diagnostic';
 export const PRIMARY_CTA_LABEL = 'Get the $216 diagnostic';

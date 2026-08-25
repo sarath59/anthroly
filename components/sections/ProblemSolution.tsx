@@ -28,7 +28,7 @@ export const ProblemSolution = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-transparent overflow-hidden">
+    <section id="problem" ref={sectionRef} className="py-24 md:py-32 bg-transparent overflow-hidden">
       <GlowPulse className="top-1/3 left-0" color="emerald" size={500} />
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

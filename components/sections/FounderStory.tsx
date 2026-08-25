@@ -26,7 +26,7 @@ export const FounderStory = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-transparent relative overflow-hidden">
+    <section id="founder-story" ref={sectionRef} className="py-20 md:py-28 bg-transparent relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <GlowPulse className="top-1/2 left-0" color="emerald" size={400} />

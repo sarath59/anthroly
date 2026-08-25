@@ -21,7 +21,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
+    <header id="site-header" className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
       {/* Glassmorphism nav container */}
       <nav
         className={`

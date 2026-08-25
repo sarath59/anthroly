@@ -53,7 +53,7 @@ export const PoweredBy = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-transparent relative overflow-hidden border-y border-gray-800/50">
+    <section id="powered-by" ref={sectionRef} className="py-16 md:py-20 bg-transparent relative overflow-hidden border-y border-gray-800/50">
       <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="cyan" size={600} />
       <div className="container mx-auto px-4">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
