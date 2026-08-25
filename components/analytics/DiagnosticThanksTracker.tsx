@@ -10,9 +10,9 @@ export function DiagnosticThanksTracker() {
 
   useEffect(() => {
     const sessionId = params.get('session_id') || '';
-    trackGoal(DATAFAST_GOALS.bookCall, {
+    trackGoal(DATAFAST_GOALS.diagnosticPaid, {
       page: '/diagnostic/thanks',
-      intent: 'diagnostic_paid',
+      intent: 'paid',
       session: sessionId.slice(0, 255) || 'unknown',
     });
   }, [params]);

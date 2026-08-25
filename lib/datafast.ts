@@ -5,7 +5,8 @@
  */
 
 export const DATAFAST_GOALS = {
-  bookCall: 'book_call',
+  diagnostic: 'diagnostic',
+  diagnosticPaid: 'diagnostic_paid',
   aeoReport: 'aeo_report',
   tryAgent: 'try_agent',
   citationNeighborhood: 'citation_neighborhood',

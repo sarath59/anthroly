@@ -81,12 +81,8 @@ function regionFrom(el: Element | null): string {
 function conversionGoalForHref(href: string): string | null {
   const lower = href.toLowerCase();
   if (lower.startsWith('mailto:')) return DATAFAST_GOALS.emailContact;
-  if (
-    lower.includes('buy.stripe.com') ||
-    lower.includes('/api/create-checkout') ||
-    lower.includes('cal.com/sarath')
-  ) {
-    return DATAFAST_GOALS.bookCall;
+  if (lower.includes('buy.stripe.com') || lower.includes('/api/create-checkout')) {
+    return DATAFAST_GOALS.diagnostic;
   }
   return null;
 }
@@ -257,7 +253,7 @@ export function DataFastGoals() {
           page,
           from,
           to: to || href.slice(0, 255),
-          intent: conversion === DATAFAST_GOALS.bookCall ? 'diagnostic' : 'email',
+          intent: conversion === DATAFAST_GOALS.diagnostic ? 'checkout' : 'email',
         });
       }
     };
