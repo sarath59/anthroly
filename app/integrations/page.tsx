@@ -69,15 +69,15 @@ export default function IntegrationsIndexPage() {
               automate your SEO workflows without disrupting what&apos;s already working.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                See How It Works
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

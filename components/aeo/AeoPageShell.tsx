@@ -74,20 +74,20 @@ export function AeoPageShell({
             Want help getting cited in AI answers?
           </h2>
           <p className="text-gray-400 mb-8">
-            Anthroly runs AI agents with human-led SEO so your brand shows up in Google and answer engines.
+            Start with the $216 Founder Growth Diagnostic. Humans do the citation work; machines help us scale.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black rounded-full font-semibold">
-                Free AI Crawler Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
-            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-gray-700 text-white rounded-full">
-                {PRIMARY_CTA_LABEL}
-              </Button>
             </a>
+            <Link href="/#pricing">
+              <Button variant="outline" className="border-gray-700 text-white rounded-full">
+                See pricing
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

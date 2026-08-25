@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Search, Eye, AlertTriangle, CheckCircle2, Bot, Zap } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
-import { GlowPulse, SpotlightCard, GradientBeam, ScaleOnScroll } from '../ui/animated-elements';
+import { GlowPulse, SpotlightCard, GradientBeam, ScaleOnScroll } from '../ui/static-fx';
 
 export const AICrawlerAnalysis = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const crawlerFeatures = [
     {
@@ -50,13 +29,13 @@ export const AICrawlerAnalysis = () => {
   ];
 
   return (
-    <section id="ai-crawler" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+    <section id="ai-crawler" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(16,185,129,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
             <span>📈 Sites optimized for AI can see 3x more referral traffic</span>
@@ -72,7 +51,7 @@ export const AICrawlerAnalysis = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Visual Demo */}
-          <div className={`relative transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`relative transition-all duration-1000 delay-200 opacity-100 translate-x-0`}>
             <ScaleOnScroll><div className="relative bg-black rounded-3xl p-8 shadow-2xl">
               <div className="absolute -top-4 -right-4 bg-emerald-500 text-black px-4 py-2 rounded-full text-sm font-bold">
                 Live Analysis
@@ -122,8 +101,8 @@ export const AICrawlerAnalysis = () => {
                   <CheckCircle2 className="text-emerald-400" size={20} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">+340%</div>
-                  <div className="text-xs text-gray-500">AI Traffic Potential</div>
+                  <div className="text-sm font-bold text-white">ChatGPT · Claude · Perplexity</div>
+                  <div className="text-xs text-gray-500">Surfaces we analyze</div>
                 </div>
               </div>
             </div>
@@ -139,7 +118,7 @@ export const AICrawlerAnalysis = () => {
           </div>
 
           {/* Right: Features */}
-          <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`space-y-8 transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 See What AI Sees (Or Doesn&apos;t See)

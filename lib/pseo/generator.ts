@@ -21,8 +21,17 @@ import {
   RelatedPage,
 } from './types';
 
-import { SITE_URL, absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '../site';
+import { SITE_URL, absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL, SYSTEM_NAME, SPRINT_NAME } from '../site';
 import { seoGlossaryTerms } from './data/seo-glossary';
+import { citationGuideForPersona } from '../guides/citations-cluster';
+import {
+  commercialCta,
+  howAnthrolyServesBody,
+  locationLabel,
+  locationMarketSection,
+  personaRoleTable,
+  pricingAnswer,
+} from './page-facts';
 
 const EXISTING_GLOSSARY_SLUGS = new Set(seoGlossaryTerms.map(t => t.slug));
 
@@ -213,8 +222,10 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       body: `Skipping ${term.term.toLowerCase()} usually means weaker extractability for AI Overviews, thinner topical authority, and slower ranking movement when competitors publish clearer, better-structured answers. Teams that treat ${term.term.toLowerCase()} as a one-off tactic—not an ongoing practice—lose citation share as answer engines refresh sources.`,
     },
     {
-      heading: `How do Anthroly AI agents help with ${term.term}?`,
-      body: `Anthroly pairs AI agents with human-led SEO so ${term.term.toLowerCase()} is implemented, measured, and improved every month. Agents analyze gaps; humans write and place content and links. You get crawler analysis, AI visibility monitoring, 15 blogs/month, 15–25 high-DR backlinks, and reporting built for both Google and answer engines.`,
+      heading: `How do Anthroly humans and AI agents help with ${term.term}?`,
+      body: howAnthrolyServesBody([
+        `**${term.term} execution**: Agents analyze gaps; humans write and place content so ${term.term.toLowerCase()} is implemented, measured, and improved.`,
+      ]),
     },
   ];
   
@@ -253,7 +264,7 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       context: 'AEO pillar',
     },
     {
-      url: '/#ai-crawler',
+      url: '/#pricing',
       anchorText: 'AI Crawler Analysis',
       context: 'Related service for implementing this concept',
     },
@@ -327,12 +338,10 @@ export function generateGlossaryPage(term: GlossaryTerm): PSEOPage {
       introduction: `This guide explains how ${term.term.toLowerCase()} works, how it compares to related concepts, when to use it, and how Anthroly's AI agents plus human-led SEO help you implement it for Google and AI answer engines.`,
       sections,
       faq,
-      callToAction: {
-        headline: `Ready to Master ${term.term}?`,
-        description: `Let Anthroly optimize your site for ${term.term.toLowerCase()} and hundreds of other ranking factors—with AI agents and a human-led team. Start with a free AI Crawler Analysis.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
-      },
+      callToAction: commercialCta(
+        `Ready to apply ${term.term}?`,
+        `A 90-minute researched ${SYSTEM_NAME} audit that includes ${term.term.toLowerCase()} — credited 100% toward the sprint if you start within 7 days.`
+      ),
     },
     schema,
     internalLinks,
@@ -359,7 +368,7 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
   const slug = `for/${persona.slug}`;
   const url = `/${slug}`;
   
-  const directAnswer = `Anthroly helps ${persona.name}s grow organic and AI-search demand with AI agents plus human-led SEO: 15 blogs/month, 15–25 high-DR backlinks, AI visibility monitoring, and weekly reporting—without hiring a full in-house SEO team. Built for ${persona.title}s who need outcomes, not another dashboard.`;
+  const directAnswer = `Anthroly helps ${persona.name}s grow organic and AI-search demand with the ${SYSTEM_NAME}: Discover, Trust, and Contact — without hiring a full in-house SEO team. Built for ${persona.title}s who need outcomes, not another dashboard.`;
 
   const sections: ContentSection[] = [
     {
@@ -384,12 +393,10 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
     },
     {
       heading: `What do ${persona.name}s get with Anthroly?`,
-      body: `**AI Crawler Analysis**: Find where you are invisible to AI search.
-**AI visibility monitoring**: Track ChatGPT, Claude, Perplexity, and Google AI citations.
-**15 SEO blogs/month**: Human-refined content for topical authority and extractable answers.
-**15–25 high-DR backlinks/month**: Editorial placements that strengthen entity trust.
-**Programmatic SEO + AEO structure**: Pages built for query fan-out and citation.
-**Weekly reporting**: Clear progress without vanity dashboards.`,
+      body: howAnthrolyServesBody([
+        `**Role fit**: Built for ${persona.title}s in ${persona.industry}.`,
+      ]),
+      table: personaRoleTable(persona),
     },
     {
       heading: `When should a ${persona.title} start?`,
@@ -404,7 +411,7 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
     },
     {
       question: `How quickly will I see results?`,
-      answer: `Most ${persona.name}s see initial delivery within 30 days and stronger results by 90 days: 15 blogs/month, 15–25 high-DR links, and improving rankings plus AI visibility. Results compound over time.`,
+      answer: `Most ${persona.name}s see the ${SPRINT_NAME} ship in 30 days, then monthly Discover / Trust / Contact work. Rankings and citations compound; we do not guarantee a traffic number. ${pricingAnswer(`Scoped to ${persona.title}s, not a bloated agency retainer.`)}`,
     },
     {
       question: `Do I need technical knowledge to use Anthroly?`,
@@ -412,7 +419,7 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
     },
     {
       question: `How does Anthroly compare to hiring an in-house SEO or agency?`,
-      answer: `In-house SEO often costs $8,000–$25,000+/month fully loaded. Anthroly delivers 15 blogs, 15–25 backlinks, and AI visibility work at $2,000/month with a specialized team instead of bloated overhead.`,
+      answer: `In-house SEO often costs $8,000–$25,000+/month fully loaded. ${pricingAnswer(`You get the ${SYSTEM_NAME} instead of bloated overhead.`)}`,
     },
     {
       question: `What makes AI SEO and AEO different from traditional SEO?`,
@@ -432,7 +439,7 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
       context: 'AEO hub',
     },
     {
-      url: '/#ai-crawler',
+      url: '/#pricing',
       anchorText: 'AI Crawler Analysis',
       context: 'Key service',
     },
@@ -457,6 +464,15 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
       context: 'Parent category',
     },
   ];
+
+  const personaGuide = citationGuideForPersona(persona.slug);
+  if (personaGuide) {
+    internalLinks.push({
+      url: personaGuide.href,
+      anchorText: personaGuide.title,
+      context: 'Niche AI citations guide',
+    });
+  }
   
   const relatedPages: RelatedPage[] = [
     {
@@ -478,6 +494,15 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
       relevanceScore: 80,
     },
   ];
+
+  if (personaGuide) {
+    relatedPages.push({
+      url: personaGuide.href,
+      title: personaGuide.title,
+      playbook: 'glossary' as PlaybookType,
+      relevanceScore: 88,
+    });
+  }
   
   const schema: SchemaData = {
     type: 'Service',
@@ -505,7 +530,7 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
     playbookType: 'personas',
     seo: {
       title: `AI SEO for ${persona.name}s | ${persona.industry} SEO Solutions | Anthroly`,
-      metaDescription: `Managed SEO built for ${persona.name}s. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization—without building an in-house team. See how it works.`,
+      metaDescription: `Managed SEO for ${persona.name}s. The ${SYSTEM_NAME}: Discover, Trust, and Contact — without building an in-house team.`,
       primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')}`,
       secondaryKeywords: [
         `${persona.industry.toLowerCase()} seo`,
@@ -521,12 +546,10 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
       introduction: `You're a ${persona.title} balancing growth with limited bandwidth. Between ${persona.challenges[0].toLowerCase()} and ${persona.challenges[1]?.toLowerCase() || 'competing priorities'}, full SEO + AEO execution rarely fits. Anthroly runs AI agents with human-led SEO so you stay visible in Google and AI answers.`,
       sections,
       faq,
-      callToAction: {
-        headline: `Ready to See AI SEO in Action?`,
-        description: `Get a free AI Crawler Analysis showing exactly how visible you are to AI search engines—and how to fix it. No commitment, no sales pitch, just actionable insights.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
-      },
+      callToAction: commercialCta(
+        `Get the diagnostic for ${persona.name}s`,
+        `A 90-minute researched ${SYSTEM_NAME} audit for ${persona.title}s — credited 100% toward the sprint if you start within 7 days.`
+      ),
     },
     schema,
     internalLinks,
@@ -551,17 +574,16 @@ export function generatePersonaPage(persona: Persona): PSEOPage {
 export function generateLocationPage(location: Location): PSEOPage {
   const slug = `ai-seo-agency/${location.slug}`;
   const url = `/${slug}`;
-  const locationName = location.state 
-    ? `${location.city}, ${location.state}` 
-    : `${location.city}, ${location.country}`;
+  const locationName = locationLabel(location);
   
-  const directAnswer = `Anthroly is an AI-agents + human-led SEO partner for ${location.city} businesses: local and national search, AI Overview citation readiness, 15 blogs/month, and 15–25 high-DR backlinks—so customers find you on Google and in AI answers.`;
+  const directAnswer = `Anthroly is a human-led SEO partner for ${location.city} businesses: local and national search plus AI Overview citation readiness through the ${SYSTEM_NAME} — so customers find you on Google and in AI answers.`;
 
   const sections: ContentSection[] = [
     {
       heading: `Why do ${location.city} businesses need AI-powered SEO?`,
-      body: `${locationName} is a competitive market where digital visibility can make or break your business. ${location.localInsights[0]} ${location.localInsights[1] || ''} Traditional SEO alone is not enough—you need agents and humans optimizing for Google and answer engines.`,
+      body: `${locationName} is a competitive market where digital visibility can make or break your business. ${location.localInsights[0]} ${location.localInsights[1] || ''} Traditional SEO alone is not enough—you need humans optimizing for Google and answer engines, with machines helping you ship.`,
     },
+    locationMarketSection(location),
     {
       heading: `What makes the ${location.city} SEO landscape unique?`,
       body: `Local market context that should shape your SEO and AEO plan:`,
@@ -569,11 +591,10 @@ export function generateLocationPage(location: Location): PSEOPage {
     },
     {
       heading: `What does Anthroly deliver for ${location.city} businesses?`,
-      body: `**Local + national visibility**: Rank for "${location.city} [your service]" while building broader authority.
-**AI search / AEO**: Optimize for ChatGPT, Claude, Perplexity, and Google AI Overviews.
-**15 SEO blogs/month**: Human-refined, answer-first content.
-**15–25 high-DR backlinks/month**: Entity-strengthening editorial links.
-**Full execution**: Technical SEO, publishing, and weekly reporting.`,
+      body: howAnthrolyServesBody([
+        `**Local + national visibility**: Rank for "${location.city} [your service]" while building broader authority.`,
+        `**Market context**: ${location.localInsights[2] || location.localInsights[0]}`,
+      ]),
     },
     {
       heading: `How does local SEO compare to AI SEO in ${location.city}?`,
@@ -592,7 +613,7 @@ export function generateLocationPage(location: Location): PSEOPage {
     },
     {
       question: `How is Anthroly different from other ${location.city} SEO agencies?`,
-      answer: `Traditional ${location.city} SEO agencies often bill like senior consultants but move slowly. Anthroly ships every month: 15 blogs, 15–25 high-DR backlinks, and continuous optimization—with a dedicated team and clear reporting. You get reliable output plus optimization for AI search engines many agencies still ignore.`,
+      answer: `Traditional ${location.city} SEO agencies often bill like senior consultants but move slowly. ${pricingAnswer(`Work is scoped to ${location.city} demand, including AI search engines many agencies still ignore.`)}`,
     },
     {
       question: `Can you help with local SEO for my ${location.city} business?`,
@@ -615,7 +636,7 @@ export function generateLocationPage(location: Location): PSEOPage {
       context: 'Homepage',
     },
     {
-      url: '/#ai-crawler',
+      url: '/#pricing',
       anchorText: 'Free AI Crawler Analysis',
       context: 'Lead magnet',
     },
@@ -662,7 +683,7 @@ export function generateLocationPage(location: Location): PSEOPage {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
       name: `Anthroly - AI SEO Agency ${location.city}`,
-      description: `Managed SEO services for ${location.city} businesses. 15 blogs/month, 15–25 high-DR backlinks, ongoing optimization.`,
+      description: `Managed SEO for ${location.city} businesses through the ${SYSTEM_NAME}: Discover, Trust, and Contact.`,
       url: absoluteUrl(url),
       areaServed: {
         '@type': 'City',
@@ -682,7 +703,7 @@ export function generateLocationPage(location: Location): PSEOPage {
     playbookType: 'locations',
     seo: {
       title: `AI SEO Agency in ${location.city} | Local + AI Search Optimization | Anthroly`,
-      metaDescription: `${location.city}'s managed SEO team. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization for local and AI search visibility.`,
+      metaDescription: `${location.city} managed SEO. The ${SYSTEM_NAME} for local Google visibility and AI-search citations — not a thin city template.`,
       primaryKeyword: `ai seo agency ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `seo agency ${location.city.toLowerCase()}`,
@@ -698,12 +719,10 @@ export function generateLocationPage(location: Location): PSEOPage {
       introduction: `Looking for SEO in ${location.city} that covers Google and AI answers? Anthroly pairs AI agents with human-led SEO for ${locationName}: monthly content, high-DR links, local optimization, and citation-ready structure competitors still ignore.`,
       sections,
       faq,
-      callToAction: {
-        headline: `See How Visible Your ${location.city} Business Is`,
-        description: `Get a free AI Crawler Analysis showing exactly how you appear in AI search results—and what it takes to dominate ${location.city} search.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
-      },
+      callToAction: commercialCta(
+        `Get the diagnostic for ${location.city}`,
+        `A 90-minute researched ${SYSTEM_NAME} audit for businesses targeting ${location.city} — credited 100% toward the sprint if you start within 7 days.`
+      ),
     },
     schema,
     internalLinks,
@@ -792,7 +811,7 @@ This integration creates a flywheel effect: ${integration.name} handles your cor
       context: 'Homepage',
     },
     {
-      url: '/#ai-crawler',
+      url: '/#pricing',
       anchorText: 'AI Crawler Analysis',
       context: 'Service',
     },
@@ -872,8 +891,8 @@ This integration creates a flywheel effect: ${integration.name} handles your cor
       callToAction: {
         headline: `Supercharge Your ${integration.name} with AI SEO`,
         description: `See how Anthroly can automate your ${integration.name} SEO workflows. Get a free analysis showing your current gaps and opportunities.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
+        buttonText: PRIMARY_CTA_LABEL,
+        buttonUrl: BOOK_CALL_URL,
       },
     },
     schema,
@@ -982,7 +1001,7 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
     },
     {
       question: `What's the best alternative to ${toolA.name} and ${toolB.name}?`,
-      answer: `Alternatives depend on your primary use case. For comprehensive SEO, consider Moz Pro or SE Ranking. For a completely different approach, Anthroly uses AI to execute SEO automatically—so instead of analyzing what to do, you get 15 blogs/month, 15–25 backlinks, and continuous optimization done for you.`,
+      answer: `Alternatives depend on your primary use case. For comprehensive SEO, consider Moz Pro or SE Ranking. For a different approach, Anthroly runs the ${SYSTEM_NAME} so you get execution instead of another dashboard. ${pricingAnswer('')}`,
     },
   ];
   
@@ -1058,7 +1077,7 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
     slug,
     playbookType: 'comparisons',
     seo: {
-      title: `${toolA.name} vs ${toolB.name}: Complete Comparison Guide (2024) | Anthroly`,
+      title: `${toolA.name} vs ${toolB.name}: Complete Comparison Guide (2026) | Anthroly`,
       metaDescription: `${toolA.name} vs ${toolB.name}: Detailed comparison of features, pricing, pros & cons. Find out which SEO tool is right for you.`,
       primaryKeyword: `${toolA.name.toLowerCase()} vs ${toolB.name.toLowerCase()}`,
       secondaryKeywords: [
@@ -1077,8 +1096,8 @@ ${toolB.pros.slice(0, 3).map(p => `- You need ${p.toLowerCase()}`).join('\n')}
       callToAction: {
         headline: 'Skip the Tool Overwhelm',
         description: `Instead of managing SEO tools yourself, let Anthroly's team handle execution. We use the best tools internally so you get results without the complexity.`,
-        buttonText: 'See How It Works',
-        buttonUrl: '/#ai-crawler',
+        buttonText: PRIMARY_CTA_LABEL,
+        buttonUrl: BOOK_CALL_URL,
       },
     },
     schema,

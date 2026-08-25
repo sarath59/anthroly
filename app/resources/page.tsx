@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper, Sparkles, Globe2 } from 'lucide-react';
+import { ArrowRight, BookOpen, Building2, Target, Users, MapPin, FileText, Newspaper, Sparkles, Globe2, Quote } from 'lucide-react';
 import { seoGlossaryTerms, targetPersonas, seoLocations, blogPosts } from '@/lib/pseo';
 import { industries } from '@/lib/pseo/data/industries';
 import { useCases } from '@/lib/pseo/data/use-cases';
@@ -41,6 +41,16 @@ const resourceCategories = [
     count: 100,
     countLabel: 'market pages',
     gradient: 'from-emerald-500 to-cyan-500',
+    bgGlow: 'bg-emerald-600/10',
+  },
+  {
+    title: 'AI citation guides',
+    description: 'How founders in cybersecurity, legal, hotels, and AI startups get cited in Overviews and ChatGPT',
+    href: '/guides/ai-citations',
+    icon: Quote,
+    count: 13,
+    countLabel: 'guides',
+    gradient: 'from-emerald-500 to-teal-500',
     bgGlow: 'bg-emerald-600/10',
   },
   {
@@ -151,15 +161,26 @@ export default function ResourcesPage() {
               use cases, and local insights to accelerate your search visibility.
             </p>
 
-            <Link href="/#ai-crawler">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
-              >
-                Get Free AI SEO Analysis
-                <ArrowRight className="ml-2" size={18} />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
+                >
+                  {PRIMARY_CTA_LABEL}
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </a>
+              <Link href="/guides/ai-citations">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full font-semibold border-gray-600 text-white"
+                >
+                  AI citation guides
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -340,8 +361,7 @@ export default function ResourcesPage() {
               Ready to Put This Knowledge to Work?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Let our team run execution. Get 15 blogs/month, 15–25 high-DR backlinks, 
-              and continuous optimization—without becoming an SEO expert yourself.
+              Let our team run the Founder AI Authority &amp; Pipeline System — Discover, Trust, and Contact — without becoming a full-time content creator.
             </p>
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 

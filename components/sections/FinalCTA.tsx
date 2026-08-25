@@ -1,6 +1,4 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
 import {
   BOOK_CALL_URL,
@@ -14,31 +12,12 @@ import {
   SYSTEM_NAME,
 } from '@/lib/site';
 import { Button } from '../ui/button';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 export const FinalCTA = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
-    <section id="final-cta" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white overflow-hidden relative">
+    <section id="final-cta" className="py-24 md:py-32 bg-transparent text-white overflow-hidden relative">
       <div className="absolute inset-0">
         <GlowPulse className="top-0 left-1/4" color="emerald" size={600} />
         <GlowPulse className="bottom-0 right-1/4" color="cyan" size={500} />
@@ -46,7 +25,7 @@ export const FinalCTA = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0`}>
           
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight">
             {CORE_OUTCOME.replace(/\.$/, '')}.

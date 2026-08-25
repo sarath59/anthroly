@@ -3,10 +3,11 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { industries } from '@/lib/pseo/data/industries';
 import { uniqueSeoLocations } from '@/lib/pseo/indexable';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { readParams } from '@/lib/next-params';
 import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
 import { getApacCitySpokes } from '@/lib/pseo/apac-spokes';
+import { citationGuideForIndustry } from '@/lib/guides/citations-cluster';
 
 interface PageProps {
   params: { slug: string };
@@ -27,7 +28,7 @@ export async function generateMetadata({ params: rawParams }: PageProps): Promis
   
   return {
     title: `${industry.name} SEO | AI-Powered ${industry.name} Marketing | Anthroly`,
-    description: `AI SEO for ${industry.name.toLowerCase()} companies. Get 15 blogs/month, 15–25 high-DR backlinks, and ${industry.name.toLowerCase()}-specific optimization.`,
+    description: `AI SEO for ${industry.name.toLowerCase()} companies. Industry-specific pages, founder authority, and AI-search citation work — start with the $216 diagnostic.`,
     keywords: industry.keywords.join(', '),
     openGraph: {
       title: `${industry.name} SEO | Anthroly`,
@@ -51,6 +52,7 @@ export default async function IndustryPage({ params: rawParams }: PageProps) {
 
   // After notFound(), industry is defined (narrow for language servers that miss never-return typing)
   const data = industry!;
+  const citationGuide = citationGuideForIndustry(data.slug);
   
   const apacCities = new Set(getApacCitySpokes().map((city) => city.slug));
   const otherLocations = uniqueSeoLocations()
@@ -78,12 +80,22 @@ export default async function IndustryPage({ params: rawParams }: PageProps) {
             <p className="text-xl text-zinc-400 mb-8">
               {data.description}
             </p>
-            <Link
-              href="/#ai-crawler"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
-            >
-              Get Your Free {data.name} SEO Analysis
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={BOOK_CALL_URL}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
+              >
+                {PRIMARY_CTA_LABEL}
+              </a>
+              {citationGuide && (
+                <Link
+                  href={citationGuide.href}
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:border-emerald-400/50"
+                >
+                  {citationGuide.title}
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -111,6 +123,26 @@ export default async function IndustryPage({ params: rawParams }: PageProps) {
           </div>
         </div>
       </section>
+
+      {citationGuide && (
+        <section className="py-12 border-t border-zinc-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Link
+              href={citationGuide.href}
+              className="block p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 hover:border-emerald-400/50"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-2">
+                Niche AI citations
+              </p>
+              <h2 className="text-2xl font-bold text-white mb-2">{citationGuide.title}</h2>
+              <p className="text-zinc-400">
+                Original AEO brief for this niche — extractable answers, tables, and YMYL-safe structure.
+                Not another programmatic city page.
+              </p>
+            </Link>
+          </div>
+        </section>
+      )}
       
       {/* SEO Needs */}
       <section className="py-16 border-t border-zinc-800">
@@ -162,15 +194,15 @@ export default async function IndustryPage({ params: rawParams }: PageProps) {
       {/* CTA */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Dominate {data.name} Search?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready for {data.name} AI search visibility?</h2>
           <p className="text-zinc-400 mb-8">
-            Get a free AI analysis showing your {data.name.toLowerCase()} search visibility and opportunities.
+            Start with the $216 Founder Growth Diagnostic — credited 100% toward the sprint if you start within 7 days.
           </p>
           <Link
-            href="/#ai-crawler"
+            href="/#pricing"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
           >
-            Get Your Free Analysis
+            {PRIMARY_CTA_LABEL}
           </Link>
         </div>
       </section>

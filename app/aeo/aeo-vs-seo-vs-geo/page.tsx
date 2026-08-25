@@ -125,6 +125,11 @@ export default function AeoVsSeoVsGeoPage() {
               <Link href="/aeo" className="text-emerald-400 hover:underline">AEO hub</Link>
             </li>
             <li>
+              <Link href="/guides/ai-citations" className="text-emerald-400 hover:underline">
+                Founder AI citation cluster
+              </Link>
+            </li>
+            <li>
               <Link href="/glossary/generative-engine-optimization-geo" className="text-emerald-400 hover:underline">
                 GEO glossary
               </Link>

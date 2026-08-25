@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { seoLocations, apacCountries, APAC_CITY_SLUGS } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Globe } from 'lucide-react';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO Agency Locations | Singapore, China, Australia, NZ & Global | Anthroly',
@@ -59,15 +59,15 @@ export default function LocationsIndexPage() {
               or Singapore, our platform optimizes for your specific market while building global authority.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                Get Local SEO Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -241,18 +241,18 @@ export default function LocationsIndexPage() {
               Ready to Dominate Your Local Market?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Get a free AI analysis showing your local search visibility and opportunities 
-              in your specific market.
+              Start with the $216 Founder Growth Diagnostic — a 90-minute researched audit
+              of AI visibility in your market, credited toward the sprint if you start within 7 days.
             </p>
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Get Your Free Local Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

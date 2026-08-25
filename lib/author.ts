@@ -1,17 +1,18 @@
-import { SITE_URL, absoluteUrl, BOOK_CALL_URL } from './site';
+import { SITE_URL, absoluteUrl } from './site';
+
+export const AUTHOR_PATH = '/author/sarath-kavuru';
 
 /** Named author used for E-E-A-T on blog, AEO hubs, and Person schema */
 export const SITE_AUTHOR = {
   name: 'Sarath Kavuru',
   jobTitle: 'Founder, Anthroly',
   email: 'sharatth@anthroly.com',
-  url: absoluteUrl('/aeo'),
+  url: absoluteUrl(AUTHOR_PATH),
   sameAs: [
-    BOOK_CALL_URL,
     'https://twitter.com/anthroly',
     'https://linkedin.com/company/anthroly',
   ],
-  bio: 'Sarath Kavuru is the founder of Anthroly, a human-led SEO and AEO company focused on high-DR backlinks, content, and getting brands cited in Google and AI answer engines.',
+  bio: 'Sarath Kavuru is the founder of Anthroly. He runs a human-led SEO and AEO practice that turns founder expertise into AI-search citations, authority content, and qualified conversations.',
 } as const;
 
 export function generatePersonSchema(): object {

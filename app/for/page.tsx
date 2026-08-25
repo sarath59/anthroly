@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { targetPersonas, personaCategories } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Briefcase, Target } from 'lucide-react';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
 
 export const revalidate = 86400;
@@ -64,15 +64,15 @@ export default function ForIndexPage() {
               adapts to your specific challenges and goals. Explore solutions designed for your role.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                Get Free AI Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -179,18 +179,18 @@ export default function ForIndexPage() {
               Don&apos;t See Your Role?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Our team adapts to any industry and role. Get a free analysis to see exactly 
-              how we can help your specific situation.
+              Our team adapts to any industry and role. Start with the $216 Founder Growth
+              Diagnostic — a 90-minute researched audit mapped to your situation.
             </p>
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Get Your Free AI Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

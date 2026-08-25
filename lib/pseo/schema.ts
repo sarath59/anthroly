@@ -4,7 +4,8 @@
  */
 
 import { PSEOPage, FAQ } from './types';
-import { SITE_URL, absoluteUrl } from '../site';
+import { SITE_URL, absoluteUrl, CONNECT_FEE_LABEL, DIAGNOSTIC_NAME, PACKAGE_SETUP, PACKAGE_RETAINER, SPRINT_NAME, SYSTEM_NAME } from '../site';
+import { SITE_AUTHOR, generatePersonSchema } from '../author';
 
 export interface BreadcrumbItem {
   name: string;
@@ -99,10 +100,10 @@ export function generateOrganizationSchema(): object {
     ],
     founder: {
       '@type': 'Person',
-      name: 'Sarath Kavuru',
+      name: SITE_AUTHOR.name,
       jobTitle: 'Founder',
-      email: 'sharatth@anthroly.com',
-      url: absoluteUrl('/aeo'),
+      email: SITE_AUTHOR.email,
+      url: SITE_AUTHOR.url,
     },
     contactPoint: {
       '@type': 'ContactPoint',
@@ -111,13 +112,40 @@ export function generateOrganizationSchema(): object {
       url: absoluteUrl('/#pricing'),
     },
     offers: {
-      '@type': 'Offer',
-      name: 'Managed SEO + AEO',
-      description:
-        'Human-led SEO with 15 blogs/month, 15–25 high-DR backlinks, and optimization for Google and AI answer engines',
-      price: '2000',
+      '@type': 'AggregateOffer',
       priceCurrency: 'USD',
-      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      lowPrice: '216',
+      highPrice: '1500',
+      offerCount: '3',
+      name: SYSTEM_NAME,
+      description: `${SYSTEM_NAME}: ${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME}, ${PACKAGE_SETUP} ${SPRINT_NAME}, then ${PACKAGE_RETAINER}/month.`,
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: SYSTEM_NAME,
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          name: DIAGNOSTIC_NAME,
+          price: '216',
+          priceCurrency: 'USD',
+          priceValidUntil: '2027-08-25',
+        },
+        {
+          '@type': 'Offer',
+          name: SPRINT_NAME,
+          price: '1500',
+          priceCurrency: 'USD',
+          priceValidUntil: '2027-08-25',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Monthly retainer',
+          price: '1000',
+          priceCurrency: 'USD',
+          priceValidUntil: '2027-08-25',
+        },
+      ],
     },
   };
 }
@@ -159,9 +187,9 @@ export function generateArticleSchema(
     dateModified: dateModified || datePublished,
     author: {
       '@type': 'Person',
-      name: 'Sarath Kavuru',
-      jobTitle: 'Founder, Anthroly',
-      url: absoluteUrl('/aeo'),
+      name: SITE_AUTHOR.name,
+      jobTitle: SITE_AUTHOR.jobTitle,
+      url: SITE_AUTHOR.url,
       worksFor: {
         '@type': 'Organization',
         name: 'Anthroly',
@@ -223,18 +251,30 @@ export function generateServiceSchema(
 export function generateHowToSchema(
   name: string,
   description: string,
-  steps: string[]
+  steps: Array<string | { name: string; text: string }>,
+  extra?: { url?: string }
 ): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: name,
-    description: description,
-    step: steps.map((step, index) => ({
-      '@type': 'HowToStep',
-      position: index + 1,
-      text: step,
-    })),
+    name,
+    description,
+    ...(extra?.url ? { url: absoluteUrl(extra.url) } : {}),
+    step: steps.map((step, index) => {
+      if (typeof step === 'string') {
+        return {
+          '@type': 'HowToStep',
+          position: index + 1,
+          text: step,
+        };
+      }
+      return {
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+      };
+    }),
   };
 }
 
@@ -345,6 +385,7 @@ export function generatePageStructuredData(page: PSEOPage): string {
   
   // Add organization schema
   schemas.push(generateOrganizationSchema());
+  schemas.push(generatePersonSchema());
   
   return combineSchemas(...schemas);
 }
@@ -368,6 +409,17 @@ function generateWebPageSchema(page: PSEOPage): object {
     inLanguage: 'en-US',
     isPartOf: { '@id': `${SITE_URL}/#website` },
     publisher: { '@id': `${SITE_URL}/#organization` },
+    author: {
+      '@type': 'Person',
+      name: SITE_AUTHOR.name,
+      jobTitle: SITE_AUTHOR.jobTitle,
+      url: SITE_AUTHOR.url,
+    },
+    reviewedBy: {
+      '@type': 'Person',
+      name: SITE_AUTHOR.name,
+      jobTitle: SITE_AUTHOR.jobTitle,
+    },
     about: {
       '@type': 'Thing',
       name: page.content.h1,

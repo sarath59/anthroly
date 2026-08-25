@@ -1,31 +1,10 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
-import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
+import React from 'react';
+import { GlowPulse, SpotlightCard } from '../ui/static-fx';
 
 // Logo.dev publishable key
 const LOGO_DEV_KEY = 'pk_FajouHbYTb2g0kE67Vlytw';
 
 export const PoweredBy = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const tools = [
     { name: "OpenAI", domain: "openai.com" },
@@ -53,10 +32,10 @@ export const PoweredBy = () => {
   };
 
   return (
-    <section id="powered-by" ref={sectionRef} className="py-16 md:py-20 bg-transparent relative overflow-hidden border-y border-gray-800/50">
+    <section id="powered-by" className="py-16 md:py-20 bg-transparent relative overflow-hidden border-y border-gray-800/50">
       <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="cyan" size={600} />
       <div className="container mx-auto px-4">
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`transition-all duration-1000 opacity-100 translate-y-0`}>
           
           {/* Section Header */}
           <div className="text-center mb-12">

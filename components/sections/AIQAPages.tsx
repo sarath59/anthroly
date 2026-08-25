@@ -1,6 +1,4 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { 
   MessageCircleQuestion, 
   Bot, 
@@ -15,28 +13,9 @@ import {
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 export const AIQAPages = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const aiEngines = [
     { name: "ChatGPT", description: "400M+ weekly users" },
@@ -81,7 +60,7 @@ export const AIQAPages = () => {
   return (
     <section 
       id="ai-qa-pages" 
-      ref={sectionRef} 
+      
       className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden"
     >
       <GlowPulse className="top-1/4 right-0" color="purple" size={500} />
@@ -93,7 +72,7 @@ export const AIQAPages = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Sparkles size={16} />
             <span>🚀 NEW: AI-Optimized Q&A Pages</span>
@@ -110,7 +89,7 @@ export const AIQAPages = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className={`grid lg:grid-cols-2 gap-12 items-center mb-16 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`grid lg:grid-cols-2 gap-12 items-center mb-16 transition-all duration-1000 delay-100 opacity-100 translate-y-0`}>
           {/* Left: Features */}
           <div className="space-y-6">
             {features.map((feature, index) => (
@@ -150,23 +129,23 @@ export const AIQAPages = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
-                <div className="text-3xl font-bold text-purple-400 mb-1">15</div>
-                <div className="text-xs text-gray-500">Pages/Month</div>
+                <div className="text-3xl font-bold text-purple-400 mb-1">$216</div>
+                <div className="text-xs text-gray-500">Diagnostic</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
-                <div className="text-3xl font-bold text-purple-400 mb-1">50+</div>
-                <div className="text-xs text-gray-500">AI Mentions</div>
+                <div className="text-3xl font-bold text-purple-400 mb-1">$1,500</div>
+                <div className="text-xs text-gray-500">30-day sprint</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
-                <div className="text-3xl font-bold text-purple-400 mb-1">5</div>
-                <div className="text-xs text-gray-500">AI Engines</div>
+                <div className="text-3xl font-bold text-purple-400 mb-1">$1,000</div>
+                <div className="text-xs text-gray-500">Then / month</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Example Questions Section */}
-        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
             Example Questions We&apos;ll Create Pages For
           </h3>
@@ -187,7 +166,7 @@ export const AIQAPages = () => {
         </div>
 
         {/* How It Works */}
-        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 opacity-100 translate-y-0`}>
           <div className="p-8 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-purple-500/10 border border-purple-500/20 rounded-3xl">
             <h3 className="text-2xl font-bold text-center mb-8">How AI Q&A Pages Work</h3>
             <div className="grid md:grid-cols-4 gap-6">
@@ -224,9 +203,9 @@ export const AIQAPages = () => {
         </div>
 
         {/* CTA */}
-        <div className={`text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center transition-all duration-1000 delay-400 opacity-100 translate-y-0`}>
           <p className="text-gray-400 mb-6">
-            <span className="text-white font-semibold">50+ AI brand mentions</span> in your first 30 days, or we give you an extra month free.
+            Start with the $216 diagnostic. The sprint ships citation-ready Q&amp;A pages; we do not quote a mention quota.
           </p>
           <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
             <Button 

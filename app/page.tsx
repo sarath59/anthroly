@@ -1,5 +1,5 @@
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
-import { MarketingAgents } from "@/components/sections/MarketingAgents";
 import { HumanLedAIVisibility } from "@/components/sections/HumanLedAIVisibility";
 import { CitationNeighbors } from "@/components/sections/CitationNeighbors";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -24,6 +24,16 @@ import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { SITE_URL } from "@/lib/site";
+
+const MarketingAgents = dynamic(
+  () =>
+    import("@/components/sections/MarketingAgents").then((mod) => ({
+      default: mod.MarketingAgents,
+    })),
+  {
+    loading: () => <section className="py-24 min-h-[32rem]" aria-hidden />,
+  }
+);
 
 /** Service JSON-LD for the human-led AI visibility program */
 const aiVisibilityServiceSchema = {

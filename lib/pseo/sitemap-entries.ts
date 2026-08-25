@@ -30,6 +30,7 @@ import { FREE_TOOLS } from '@/lib/data/free-tools';
 import { SITE_URL } from '@/lib/site';
 import { allCustomerStories } from '@/lib/customers';
 import { getAllCustomerClusterPaths } from '@/lib/customer-clusters';
+import { CITATION_PILLAR_PATH, getCitationGuidePaths } from '@/lib/guides/citations-cluster';
 
 export const SITEMAP_TIERS = ['core', 'twoway-apac', 'twoway', 'threeway', 'aeo'] as const;
 export type SitemapTier = (typeof SITEMAP_TIERS)[number];
@@ -97,6 +98,8 @@ export function getCoreSitemapEntries(): MetadataRoute.Sitemap {
     { path: '/industries', priority: 0.9 as const, daily: false },
     { path: '/use-cases', priority: 0.9 as const, daily: false },
     { path: '/tools', priority: 0.9 as const, daily: false },
+    { path: '/author/sarath-kavuru', priority: 0.7 as const, daily: false },
+    { path: '/guides/ai-citations', priority: 0.92 as const, daily: false },
     { path: '/privacy', priority: 0.3 as const, daily: false },
     { path: '/terms', priority: 0.3 as const, daily: false },
   ];
@@ -110,6 +113,12 @@ export function getCoreSitemapEntries(): MetadataRoute.Sitemap {
       })
     );
   });
+
+  getCitationGuidePaths()
+    .filter((path) => path !== CITATION_PILLAR_PATH)
+    .forEach((path) => {
+      entries.push(loc(path, { changeFrequency: 'weekly', priority: 0.86 }));
+    });
 
   apacCountries.forEach((country) => {
     entries.push(

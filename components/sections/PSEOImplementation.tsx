@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Layers, Code, Zap, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import { LogoStrip, PSEO_SUCCESS } from '../ui/CompanyLogos';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 export const PSEOImplementation = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const pseoExamples = [
     { template: "/best-[software]-for-[industry]", pages: "500+ pages", example: "best-crm-for-real-estate" },
@@ -34,14 +13,14 @@ export const PSEOImplementation = () => {
   ];
 
   return (
-    <section id="pseo" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+    <section id="pseo" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       <GlowPulse className="bottom-1/4 left-0" color="purple" size={500} />
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,_rgba(139,92,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 text-violet-300 rounded-full text-sm font-semibold mb-6 border border-violet-500/30">
             <Layers size={16} />
             <span>🚀 Zapier used pSEO to capture 4.5M monthly visits</span>
@@ -57,7 +36,7 @@ export const PSEOImplementation = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Explanation */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-200 opacity-100 translate-x-0`}>
             <div className="mb-8">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 What is Programmatic SEO?
@@ -97,7 +76,7 @@ export const PSEOImplementation = () => {
           </div>
 
           {/* Right: Examples */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <div className="bg-black text-white p-6 md:p-8 rounded-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Code className="text-violet-400" size={24} />

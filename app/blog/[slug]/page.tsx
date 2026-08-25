@@ -386,18 +386,19 @@ export default async function BlogPostPage({ params: rawParams }: PageProps) {
                   Ready to Implement These Strategies?
                 </h3>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Stop reading and start ranking. Get a free AI analysis showing exactly 
-                  how visible you are to AI assistants—and what it takes to reach #1.
+                  Stop reading and start ranking. The $216 Founder Growth Diagnostic maps
+                  buyer prompts, current citations, and extractable pages — credited toward
+                  the sprint if you start within 7 days.
                 </p>
-                <Link href="/#ai-crawler">
+                <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                   <Button 
                     size="lg" 
                     className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
                   >
-                    Get Your Free AI Analysis
+                    {PRIMARY_CTA_LABEL}
                     <ArrowRight className="ml-2" size={18} />
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -446,8 +447,7 @@ export default async function BlogPostPage({ params: rawParams }: PageProps) {
                 Let Our Team Run Your SEO
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                15 blogs/month. 15–25 high-DR backlinks. Continuous AI optimization. 
-                All for less than the cost of a single freelance article.
+                Start with the $216 Founder Growth Diagnostic. Implementation is $1,500 for the 30-Day AI Authority Sprint, then $1,000/month. The diagnostic is credited 100% toward the sprint if you start within 7 days.
               </p>
               <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button 

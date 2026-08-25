@@ -32,7 +32,7 @@ import {
   SpotlightCard,
   StaggerContainer,
   StaggerItem,
-} from '../ui/animated-elements';
+} from '../ui/static-fx';
 
 const ROTATING_SURFACES = ['AI answers', 'ChatGPT', 'Claude', 'Perplexity', 'AI Overviews', 'Gemini'];
 
@@ -91,7 +91,7 @@ const CHANNEL_AGENTS = [
   {
     name: 'Content & Demand',
     promise: 'Drive human and bot traffic',
-    detail: '15 human-reviewed blogs a month, plus glossary and comparison pages that earn citations.',
+    detail: 'One 30–45 minute founder interview a month, turned into LinkedIn, X, articles, newsletter, and FAQ content that earns citations.',
     href: '/#features',
     icon: FileText,
     color: 'cyan',
@@ -99,7 +99,7 @@ const CHANNEL_AGENTS = [
   {
     name: 'PR & Communications',
     promise: 'Shape AI conversations',
-    detail: '15–25 high-DR placements a month, because engines repeat what credible sources say about you.',
+    detail: 'Digital PR and citation work so engines repeat what credible sources say about you — not a guaranteed link quota.',
     href: '/#pricing',
     icon: Megaphone,
     color: 'purple',

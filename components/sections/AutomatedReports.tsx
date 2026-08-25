@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { FileText, TrendingUp, BarChart3, Calendar, CheckCircle2, Mail, Target } from 'lucide-react';
 import { LogoStrip, ANALYTICS_TOOLS, SEO_TOOLS } from '../ui/CompanyLogos';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 export const AutomatedReports = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const reportSections = [
     { icon: TrendingUp, title: "Traffic Growth", description: "Week-over-week and month-over-month comparisons" },
@@ -34,7 +13,7 @@ export const AutomatedReports = () => {
   ];
 
   return (
-    <section id="reports" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+    <section id="reports" className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <GlowPulse className="top-0 left-1/2 -translate-x-1/2" color="emerald" size={600} />
@@ -42,7 +21,7 @@ export const AutomatedReports = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <FileText size={16} />
             <span>📊 72% of marketers can&apos;t prove SEO ROI — you will</span>
@@ -58,7 +37,7 @@ export const AutomatedReports = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Report Preview */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-200 opacity-100 translate-x-0`}>
             <div className="bg-white text-black rounded-3xl p-6 md:p-8 shadow-2xl">
               {/* Report Header */}
               <div className="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
@@ -112,7 +91,7 @@ export const AutomatedReports = () => {
           </div>
 
           {/* Right: Features */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <h3 className="text-2xl md:text-3xl font-bold mb-8">
               Everything You Need to Know, Every Week
             </h3>

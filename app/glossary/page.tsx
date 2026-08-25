@@ -70,15 +70,15 @@ export default function GlossaryIndexPage() {
               get clear definitions and practical examples for every term you need to know.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                Get Free AI SEO Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -166,8 +166,7 @@ export default function GlossaryIndexPage() {
               Ready to Apply These Concepts?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Let our team run execution. Get 15 blogs/month, 15–25 high-DR backlinks, 
-              and continuous optimization—without becoming an SEO expert yourself.
+              Let our team run the Founder AI Authority &amp; Pipeline System — Discover, Trust, and Contact — without becoming a full-time content creator.
             </p>
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 

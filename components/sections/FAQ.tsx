@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { HelpCircle } from 'lucide-react';
 import {
   agencyFaqCategories,
-  agencyFaqs,
   getAgencyFaqCount,
   getAgencyFaqsByCategory,
   getHomepageFeaturedFaqs,
@@ -15,9 +14,9 @@ import {
 } from '@/lib/pseo/schema';
 
 /**
- * Main site FAQ (#faq on homepage).
- * - Featured accordion for buyers
- * - Full 1000+ corpus in HTML for humans + AI crawlers
+ * Homepage FAQ (#faq).
+ * Featured answers only — the full 1000+ corpus lives on /faq and /faq.json
+ * so the homepage stays under Core Web Vitals budgets.
  */
 export const FAQ = () => {
   const count = getAgencyFaqCount();
@@ -41,7 +40,7 @@ export const FAQ = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-300 rounded-full text-sm font-semibold mb-6 border border-gray-700">
             <HelpCircle size={16} />
-            <span>{count}+ answers · main Anthroly FAQ</span>
+            <span>{count}+ answers on the FAQ hub</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             Your Questions. Straight Answers.
@@ -51,9 +50,9 @@ export const FAQ = () => {
             AEO, customers, industries, and AI search.
           </p>
           <p className="text-sm text-gray-500">
-            Prefer a dedicated page?{' '}
+            Prefer the full archive?{' '}
             <Link href="/faq" className="text-emerald-400 hover:text-emerald-300 font-medium">
-              Open the full FAQ hub
+              Open the FAQ hub
             </Link>
             {' · '}
             <Link href="/faq.json" className="text-emerald-400 hover:text-emerald-300 font-medium">
@@ -62,21 +61,19 @@ export const FAQ = () => {
           </p>
         </div>
 
-        {/* Featured conversion FAQs */}
-        <div className="max-w-3xl mx-auto mb-20">
+        <div className="max-w-3xl mx-auto mb-16">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-4 text-center">
             Most asked
           </h3>
           <FAQAccordion faqs={featured} />
         </div>
 
-        {/* Category jump links */}
         <nav
-          aria-label="All FAQ categories"
+          aria-label="FAQ categories"
           className="max-w-4xl mx-auto mb-12 rounded-2xl border border-gray-800 bg-black/40 p-6"
         >
           <h3 className="text-lg font-semibold text-white mb-4">
-            All {count} FAQs by category
+            Browse all {count} FAQs by category
           </h3>
           <ul className="flex flex-wrap gap-2">
             {agencyFaqCategories.map((cat) => {
@@ -84,51 +81,19 @@ export const FAQ = () => {
               const id = slugifyCategory(cat);
               return (
                 <li key={cat}>
-                  <a
-                    href={`#faq-${id}`}
+                  <Link
+                    href={`/faq#faq-${id}`}
                     className="inline-block text-sm px-3 py-1.5 rounded-full border border-gray-700 text-gray-300 hover:border-emerald-500/40 hover:text-emerald-400"
                   >
                     {cat} ({n})
-                  </a>
+                  </Link>
                 </li>
               );
             })}
           </ul>
         </nav>
 
-        {/* FULL CORPUS — every question/answer in HTML for AI + SEO */}
-        <div className="max-w-4xl mx-auto space-y-14">
-          {agencyFaqCategories.map((category) => {
-            const items = getAgencyFaqsByCategory(category);
-            const id = slugifyCategory(category);
-            return (
-              <div key={category} id={`faq-${id}`} className="scroll-mt-28">
-                <h3 className="text-2xl font-bold text-white mb-2">{category}</h3>
-                <p className="text-sm text-gray-500 mb-5">{items.length} questions</p>
-                <div className="space-y-3">
-                  {items.map((faq) => (
-                    <details
-                      key={faq.id}
-                      className="group rounded-xl border border-gray-800 bg-gray-900/60 open:border-emerald-500/30"
-                    >
-                      <summary className="cursor-pointer list-none px-5 py-4 font-medium text-white flex items-start justify-between gap-4">
-                        <span className="text-left">{faq.question}</span>
-                        <span className="text-emerald-400 shrink-0 group-open:rotate-45 transition-transform">
-                          +
-                        </span>
-                      </summary>
-                      <div className="px-5 pb-5 text-gray-400 leading-relaxed border-t border-gray-800/80 pt-4">
-                        <p>{faq.answer}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-16 max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <p className="text-gray-400">
             Still have questions?{' '}
             <a
@@ -136,15 +101,12 @@ export const FAQ = () => {
               className="text-emerald-400 font-semibold underline hover:no-underline"
             >
               Email us directly
-            </a>{' '}
-            and we will get back to you within 24 hours. Full archive also at{' '}
+            </a>
+            . The complete {count}+ answer corpus is at{' '}
             <Link href="/faq" className="text-emerald-400 font-semibold hover:underline">
               /faq
             </Link>
             .
-          </p>
-          <p className="text-xs text-gray-600 mt-3">
-            Showing all {agencyFaqs.length} Anthroly FAQ answers on this page.
           </p>
         </div>
       </div>

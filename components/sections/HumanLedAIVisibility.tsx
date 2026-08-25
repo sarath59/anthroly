@@ -27,7 +27,7 @@ import {
   SpotlightCard,
   StaggerContainer,
   StaggerItem,
-} from '../ui/animated-elements';
+} from '../ui/static-fx';
 
 function bookCallWith(_note: string): string {
   return BOOK_CALL_URL;

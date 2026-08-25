@@ -172,7 +172,7 @@ function toolComparisonCount() {
   return count;
 }
 
-const INDEX_PAGES = 23;
+const INDEX_PAGES = 37;
 
 export function getIndexableCounts() {
   const locations = uniqueSeoLocations().length;

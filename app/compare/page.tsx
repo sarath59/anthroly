@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { seoTools, toolCategories } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GitCompare, Zap } from 'lucide-react';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'SEO Tool Comparisons | Side-by-Side Analysis | Anthroly',
@@ -76,15 +76,15 @@ export default function CompareIndexPage() {
               Our detailed comparisons help you pick the perfect SEO stack for your needs.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                Or Skip the Tools — Let AI Handle It
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -181,15 +181,14 @@ export default function CompareIndexPage() {
               What If You Didn&apos;t Need Any of These Tools?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Anthroly uses AI to execute SEO automatically. Instead of analyzing what to do, 
-              you get 15 blogs/month, 15–25 high-DR backlinks, and continuous optimization—done for you.
+              Anthroly runs the Founder AI Authority &amp; Pipeline System. Instead of analyzing what to do in another dashboard, you get human-led execution for Google and AI search — Discover, Trust, and Contact.
             </p>
-            <Link href="/#ai-crawler">
+            <Link href="/#pricing">
               <Button 
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                See AI SEO in Action
+                See pricing
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>

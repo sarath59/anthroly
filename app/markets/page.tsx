@@ -108,22 +108,13 @@ export default function MarketsIndexPage() {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#ai-crawler">
+              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
                 >
-                  Get your AI visibility audit
-                  <ArrowRight className="ml-2" size={18} />
-                </Button>
-              </Link>
-              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-gray-700 text-white hover:bg-white/10 rounded-full"
-                >
                   {PRIMARY_CTA_LABEL}
+                  <ArrowRight className="ml-2" size={18} />
                 </Button>
               </a>
             </div>

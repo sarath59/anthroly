@@ -383,8 +383,8 @@ export const apacTopics: ApacTopic[] = [
     outcomes: [
       'Sustainable organic growth',
       'AI Overview and assistant readiness',
-      '15 human-refined blogs per month',
-      '15–25 high-DR backlinks per month',
+      'Founder-sourced authority content from one interview a month',
+      'Citation-ready pages for Google and answer engines',
     ],
     faqSeed: [
       {
@@ -492,7 +492,7 @@ export const apacTopics: ApacTopic[] = [
       'Earn the third-party mentions and high-authority pages that AI systems cite when recommending brands in your category.',
     outcomes: [
       'Publisher and listicle targeting from citation data',
-      '15–25 high-DR editorial links monthly',
+      'Earned mentions AI systems actually cite',
       'Brand narrative control in earned media',
       'AI citation share growth',
     ],
@@ -513,7 +513,7 @@ export const apacTopics: ApacTopic[] = [
     angle:
       'Publish answer-first, citation-ready content that ranks on Google and gets extracted by AI assistants—without sounding like machine filler.',
     outcomes: [
-      '15 SEO blogs per month',
+      'Founder-sourced authority content from one interview a month',
       'FAQ and Q&A systems for AI extraction',
       'Topic clusters mapped to real AI prompts',
       'Human editorial quality control',

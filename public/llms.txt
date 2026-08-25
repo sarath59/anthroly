@@ -30,6 +30,12 @@ Only non-content paths are disallowed (/api/, /_next/, /admin/, /private/).
 
 ## Answer Engine Optimization (AEO)
 - [AEO Hub](https://www.anthroly.com/aeo)
+- [How founders get cited in AI Overviews](https://www.anthroly.com/guides/ai-citations)
+- [Cybersecurity AI citations](https://www.anthroly.com/guides/ai-citations/cybersecurity)
+- [Legal AI citations](https://www.anthroly.com/guides/ai-citations/legal)
+- [Hotels & accommodations AI citations](https://www.anthroly.com/guides/ai-citations/accommodations)
+- [AI startup citations](https://www.anthroly.com/guides/ai-citations/ai-startups)
+- [Author: Sarath Kavuru](https://www.anthroly.com/author/sarath-kavuru)
 - [How to get cited in AI Overviews](https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews)
 - [AEO vs SEO vs GEO](https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo)
 - [AEO for Claude](https://www.anthroly.com/aeo/engine/claude)

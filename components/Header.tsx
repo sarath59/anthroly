@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
@@ -8,30 +8,12 @@ import { Button } from './ui/button';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 export const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <header id="site-header" className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
       {/* Glassmorphism nav container */}
-      <nav
-        className={`
-          mx-auto max-w-6xl rounded-2xl transition-all duration-500 ease-out
-          ${isScrolled
-            ? 'bg-gray-900/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]'
-            : 'bg-white/5 backdrop-blur-md border border-white/10'
-          }
-        `}
-      >
+      <nav className="mx-auto max-w-6xl rounded-2xl bg-gray-900/80 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
         <div className="flex items-center justify-between px-6 py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -41,8 +23,8 @@ export const Header = () => {
                 alt="Anthroly"
                 width={32}
                 height={32}
+                sizes="32px"
                 className="object-contain invert opacity-90 group-hover:scale-110 transition-transform duration-300"
-                priority
               />
             </div>
             <span className="text-xl font-bold text-white tracking-tight">

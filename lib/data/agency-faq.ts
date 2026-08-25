@@ -170,7 +170,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How is this different from other SEO agencies?',
-    'Traditional agencies charge $2,000-$10,000/month and rely on manual labor. We use AI to automate the repetitive work (research, drafting, internal linking, monitoring) so we can ship faster — but the final output is still human-quality. Our content is overseen by humans and reviewed before publishing. Plus, we focus on both traditional SEO and Answer Engine Optimization (AEO) / GEO for AI search engines like ChatGPT, Claude, Perplexity, and Google AI Overviews.'
+    'Traditional agencies often charge $2,000–$10,000/month and rely on manual labor. We use AI to automate repetitive work (research, drafting, internal linking, monitoring) so we can ship faster — but the final output is still human-quality. Start with the $216 Founder Growth Diagnostic; implementation is $1,500 for the 30-Day AI Authority Sprint, then $1,000/month. Plus, we focus on both traditional SEO and Answer Engine Optimization (AEO) / GEO for AI search engines like ChatGPT, Claude, Perplexity, and Google AI Overviews.'
   );
   add(
     'Getting Started',
@@ -180,7 +180,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'What kind of results can I expect in 30 days?',
-    'Most clients see measurable improvements within the first 30 days: new backlinks appearing, blog posts ranking, AI Q&A pages getting cited by AI engines, and increased organic traffic. By day 30, you will typically have 15–25 new backlinks, 15 published blog posts, 15 AI Q&A pages, 50+ AI brand mentions, and early signs of ranking improvements. SEO compounds over time, so month 2-3 is when you will see more dramatic growth.'
+    'The 30-Day AI Authority Sprint is the implementation window: GEO/AI visibility work started, founder content in distribution, and the outreach system live. Rankings and citations compound after that. We do not quote a guaranteed link, blog, or mention quota. If we miss a core first-month sprint commitment, you get one free month of retainer. SEO compounds over months 2–3 as Discover, Trust, and Contact keep running.'
   );
   add(
     'Getting Started',
@@ -190,7 +190,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'What are AI Q&A Pages and how do they rank on AI search?',
-    'AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. You get 15 of these pages per month, and they contribute to your 50+ AI brand mentions guarantee.'
+    'AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. Volume is scoped in the $216 diagnostic and shipped in the $1,500 sprint — not a fixed 15-pages-per-month quota or a 50+ mention guarantee.'
   );
   add(
     'Getting Started',

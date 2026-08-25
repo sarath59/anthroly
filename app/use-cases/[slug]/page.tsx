@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useCases } from '@/lib/pseo/data/use-cases';
 import { industries } from '@/lib/pseo/data/industries';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { readParams } from '@/lib/next-params';
 
 interface PageProps {
@@ -67,12 +67,14 @@ export default async function UseCasePage({ params: rawParams }: PageProps) {
             <p className="text-xl text-zinc-400 mb-8">
               {useCase.description}
             </p>
-            <Link
-              href="/#ai-crawler"
+            <a
+              href={BOOK_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
             >
-              Start {useCase.name} with AI SEO
-            </Link>
+              {PRIMARY_CTA_LABEL}
+            </a>
           </div>
         </div>
       </section>
@@ -148,16 +150,18 @@ export default async function UseCasePage({ params: rawParams }: PageProps) {
       {/* CTA */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start {useCase.name}?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to start {useCase.name}?</h2>
           <p className="text-zinc-400 mb-8">
-            Get a free AI analysis showing your {useCase.name.toLowerCase()} opportunities.
+            Start with the $216 Founder Growth Diagnostic — credited 100% toward the sprint if you start within 7 days.
           </p>
-          <Link
-            href="/#ai-crawler"
+          <a
+            href={BOOK_CALL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
           >
-            Get Your Free Analysis
-          </Link>
+            {PRIMARY_CTA_LABEL}
+          </a>
         </div>
       </section>
     </div>

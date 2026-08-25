@@ -32,6 +32,11 @@ export const CORE_OUTCOME = 'Become easier to discover, trust, and contact in th
 
 export const DIAGNOSTIC_CREDIT_NOTE = `The ${CONNECT_FEE_LABEL} diagnostic fee is credited 100% toward the ${PACKAGE_SETUP} implementation if you decide to work with us within 7 days.`;
 
+/** Canonical offer sentence used on pSEO, schema, and hub CTAs. */
+export const OFFER_ONE_LINER = `Start with a ${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME} (90-minute researched audit). Implementation is ${PACKAGE_SETUP} for the ${SPRINT_NAME}, then ${PACKAGE_RETAINER}/month. ${DIAGNOSTIC_CREDIT_NOTE}`;
+
+export const EXECUTION_SUMMARY = `${SYSTEM_NAME}: Discover (AI search visibility), Trust (founder authority from one 30–45 minute interview a month), and Contact (AI lead generation). Humans do the work; machines help scale. You do not become a full-time content creator.`;
+
 export const STORY_LINE =
   'Expertise → Content → AI visibility → Attention → Outreach → Conversations';
 

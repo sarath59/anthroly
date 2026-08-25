@@ -59,7 +59,7 @@ function baseInternalLinks(country: ApacCountry): InternalLink[] {
     { url: '/aeo', anchorText: 'Answer Engine Optimization', context: 'Service' },
     { url: '/customers', anchorText: 'Customer case studies', context: 'Proof' },
     { url: '/aeo/aeo-vs-seo-vs-geo', anchorText: 'AEO vs SEO vs GEO', context: 'Education' },
-    { url: '/#ai-crawler', anchorText: 'Free AI visibility audit', context: 'CTA' },
+    { url: '/#pricing', anchorText: 'View pricing', context: 'CTA' },
     { url: '/ai-seo-agency', anchorText: 'AI SEO by city', context: 'Locations' },
   ];
 }

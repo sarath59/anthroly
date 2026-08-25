@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Share2, Linkedin, Twitter, BookOpen, TrendingUp, Users, CheckCircle2, Eye, MessageSquare } from 'lucide-react';
 import { LogoStrip, SOCIAL_PLATFORMS } from '../ui/CompanyLogos';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 export const SocialArticles = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const platforms = [
     {
@@ -51,14 +30,14 @@ export const SocialArticles = () => {
   ];
 
   return (
-    <section id="social" ref={sectionRef} className="py-24 md:py-32 bg-transparent relative overflow-hidden">
+    <section id="social" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
       {/* Background */}
       <GlowPulse className="bottom-1/3 left-0" color="blue" size={500} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(59,130,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Share2 size={16} />
             <span>🌐 Founder-led distribution — LinkedIn, X, newsletters</span>
@@ -72,7 +51,7 @@ export const SocialArticles = () => {
         </div>
 
         {/* Platform Cards */}
-        <div className={`grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           {platforms.map((platform, index) => {
             const Icon = platform.icon;
             return (
@@ -97,7 +76,7 @@ export const SocialArticles = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left: Why It Matters */}
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-300 opacity-100 translate-x-0`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Why Social Content Matters for SEO & GEO
             </h3>
@@ -142,7 +121,7 @@ export const SocialArticles = () => {
           </div>
 
           {/* Right: Sample Content */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <div className="bg-black text-white rounded-3xl p-6 md:p-8">
               <h3 className="text-xl font-bold mb-6">What We Create For You</h3>
               

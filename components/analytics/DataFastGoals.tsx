@@ -191,20 +191,25 @@ export function DataFastGoals() {
       stopObserving = observeSections(onEnter, onLeave);
     }, 400);
 
+    let scrollRaf = 0;
     const onScroll = () => {
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - window.innerHeight;
-      const pct = max <= 0 ? 100 : Math.min(100, Math.round((window.scrollY / max) * 100));
-      for (const mark of SCROLL_MARKS) {
-        if (pct >= mark && !scrollMarks.current.has(mark)) {
-          scrollMarks.current.add(mark);
-          trackGoal(DATAFAST_GOALS.scrollDepth, {
-            page: pagePath(),
-            depth: String(mark),
-            section: lastSection.current,
-          });
+      if (scrollRaf) return;
+      scrollRaf = window.requestAnimationFrame(() => {
+        scrollRaf = 0;
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - window.innerHeight;
+        const pct = max <= 0 ? 100 : Math.min(100, Math.round((window.scrollY / max) * 100));
+        for (const mark of SCROLL_MARKS) {
+          if (pct >= mark && !scrollMarks.current.has(mark)) {
+            scrollMarks.current.add(mark);
+            trackGoal(DATAFAST_GOALS.scrollDepth, {
+              page: pagePath(),
+              depth: String(mark),
+              section: lastSection.current,
+            });
+          }
         }
-      }
+      });
     };
 
     const onClick = (event: MouseEvent) => {
@@ -284,6 +289,7 @@ export function DataFastGoals() {
 
     return () => {
       window.clearTimeout(remount);
+      if (scrollRaf) window.cancelAnimationFrame(scrollRaf);
       stopObserving();
       for (const id of [...enterAt.current.keys()]) {
         flushSection(id, 'unmount');

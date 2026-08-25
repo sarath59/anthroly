@@ -33,13 +33,13 @@ export const LogoWithImage = ({ className = "", variant = 'white', size = 'md' }
           alt="Anthroly Logo"
           width={image}
           height={image}
+          sizes="40px"
           className={`
             object-contain 
             group-hover:scale-110 
             transition-transform duration-300
             ${variant === 'white' ? 'invert opacity-90' : ''}
           `}
-          priority
         />
       </div>
       

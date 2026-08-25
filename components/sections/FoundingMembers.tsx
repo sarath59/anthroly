@@ -1,29 +1,8 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Users, Sparkles, TrendingUp, Shield, Clock } from 'lucide-react';
-import { GlowPulse, GradientBeam, SpotlightCard } from '../ui/animated-elements';
+import { GlowPulse, GradientBeam, SpotlightCard } from '../ui/static-fx';
 
 export const FoundingMembers = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const benefits = [
     {
@@ -49,10 +28,10 @@ export const FoundingMembers = () => {
   ];
 
   return (
-    <section id="founding-members" ref={sectionRef} className="py-16 md:py-20 bg-transparent relative overflow-hidden">
+    <section id="founding-members" className="py-16 md:py-20 bg-transparent relative overflow-hidden">
       <GlowPulse className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" color="amber" size={600} />
       <div className="container mx-auto px-4 relative z-10">
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 opacity-100 translate-y-0`}>
           
           {/* Main Card */}
           <div className="relative">

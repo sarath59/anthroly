@@ -87,7 +87,7 @@ export function generateAnswerEnginePage(engineSlug: string): PSEOPage | null {
     { url: '/aeo', anchorText: 'AEO hub', context: 'Pillar' },
     { url: '/anthroly-vs-anthropic', anchorText: 'Anthroly vs Anthropic', context: 'Disambiguation' },
     { url: '/reports/ai-visibility-benchmark', anchorText: 'AI Visibility Benchmark', context: 'Data' },
-    { url: '/#ai-crawler', anchorText: 'Free AI Crawler Analysis', context: 'CTA' },
+    { url: '/#pricing', anchorText: 'View pricing', context: 'CTA' },
     ...relatedTopics.map((t) => ({
       url: topicEngineUrl(t, engine),
       anchorText: `${t.name} for ${engine.name}`,
@@ -124,9 +124,9 @@ export function generateAnswerEnginePage(engineSlug: string): PSEOPage | null {
       faq,
       callToAction: {
         headline: `Want ${engine.name} citation visibility?`,
-        description: `Get a free AI Crawler Analysis and a plan to earn mentions across ${engine.name} and Google.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
+        description: `Start with the ${PRIMARY_CTA_LABEL.toLowerCase()} — a 90-minute researched audit for ${engine.name} and Google.`,
+        buttonText: PRIMARY_CTA_LABEL,
+        buttonUrl: BOOK_CALL_URL,
       },
     },
     schema: {
@@ -237,10 +237,10 @@ export function generateAeoTopicPage(topicSlug: string): PSEOPage | null {
       sections,
       faq,
       callToAction: {
-        headline: `Put ${topic.name} into monthly execution`,
-        description: PRIMARY_CTA_LABEL + ' — a 90-minute researched audit — or run a free AI Crawler Analysis.',
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
+        headline: `Put ${topic.name} into the 30-day sprint`,
+        description: `${PRIMARY_CTA_LABEL} — a 90-minute researched audit mapped to ${topic.name.toLowerCase()}.`,
+        buttonText: PRIMARY_CTA_LABEL,
+        buttonUrl: BOOK_CALL_URL,
       },
     },
     schema: {
@@ -377,9 +377,9 @@ export function generateAeoTopicEnginePage(
       faq,
       callToAction: {
         headline: `Get ${engine.name} working for your brand`,
-        description: `Run a free AI Crawler Analysis or ${PRIMARY_CTA_LABEL.toLowerCase()} to map ${topic.name.toLowerCase()} opportunities.`,
-        buttonText: 'Get Your Free Analysis',
-        buttonUrl: '/#ai-crawler',
+        description: `${PRIMARY_CTA_LABEL} to map ${topic.name.toLowerCase()} opportunities in ${engine.name}.`,
+        buttonText: PRIMARY_CTA_LABEL,
+        buttonUrl: BOOK_CALL_URL,
       },
     },
     schema: {

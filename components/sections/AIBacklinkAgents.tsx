@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Link2, Mail, Target, Award, Shield, TrendingUp, CheckCircle2, ExternalLink } from 'lucide-react';
 import { LogoStrip, PUBLISHING_PLATFORMS } from '../ui/CompanyLogos';
-import { GlowPulse, SpotlightCard, StaggerContainer, StaggerItem, GradientBeam } from '../ui/animated-elements';
+import { GlowPulse, SpotlightCard, StaggerContainer, StaggerItem, GradientBeam } from '../ui/static-fx';
 
 export const AIBacklinkAgents = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const backlinkProcess = [
     {
@@ -57,7 +36,7 @@ export const AIBacklinkAgents = () => {
   ];
 
   return (
-    <section id="backlinks" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+    <section id="backlinks" className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[150px] -translate-y-1/2"></div>
@@ -66,7 +45,7 @@ export const AIBacklinkAgents = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
             <Link2 size={16} />
             <span>🔗 One of Google&apos;s strongest ranking signals: authority links</span>
@@ -82,7 +61,7 @@ export const AIBacklinkAgents = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
           {/* Left: Process */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-200 opacity-100 translate-x-0`}>
             <h3 className="text-2xl md:text-3xl font-bold mb-8">How We Earn Your Links</h3>
             
             <div className="space-y-6">
@@ -109,13 +88,13 @@ export const AIBacklinkAgents = () => {
                 <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
               <p className="text-gray-300">
-                We commit to <span className="text-orange-400 font-semibold">15–25 backlinks per month</span> (DR 50-90, <span className="text-white font-semibold">avg DR 70+</span>). If we miss the target, you get <span className="text-white font-semibold">one free month of service</span>.
+                Editorial placements are part of GEO, not a fixed quota. If we miss a core first-month sprint commitment (GEO work started, founder content in distribution, outreach live), you get <span className="text-white font-semibold">one free month of retainer</span>.
               </p>
             </div>
           </div>
 
           {/* Right: Live Feed + Stats */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div className={`transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
@@ -123,8 +102,8 @@ export const AIBacklinkAgents = () => {
                 <div className="text-sm text-gray-500">Average DR</div>
               </div>
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
-                <div className="text-4xl font-bold text-white mb-1">15–25</div>
-                <div className="text-sm text-gray-500">Links Per Month</div>
+                <div className="text-4xl font-bold text-white mb-1">$1,000</div>
+                <div className="text-sm text-gray-500">Monthly retainer</div>
               </div>
             </div>
 

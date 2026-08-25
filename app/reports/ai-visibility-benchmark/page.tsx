@@ -160,6 +160,11 @@ export default function AiVisibilityBenchmarkPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Source case studies</h2>
           <ul className="space-y-2">
             <li>
+              <Link href="/guides/ai-citations/measuring-ai-mentions" className="text-emerald-400 hover:underline">
+                How we measure AI mentions (prompt log)
+              </Link>
+            </li>
+            <li>
               <Link href="/customers/llmoutrank" className="text-emerald-400 hover:underline">
                 llmoutrank case study
               </Link>

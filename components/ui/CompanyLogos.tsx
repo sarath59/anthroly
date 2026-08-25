@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 
 // Logo.dev publishable key
@@ -133,6 +131,10 @@ export const LogoStrip: React.FC<LogoStripProps> = ({
               <img
                 src={getLogoUrl(company.domain)}
                 alt={`${company.name} logo`}
+                width={size === 'lg' ? 36 : size === 'sm' ? 24 : 28}
+                height={size === 'lg' ? 36 : size === 'sm' ? 24 : 28}
+                loading="lazy"
+                decoding="async"
                 className={`${imgSizeClasses[size]} object-contain`}
               />
             </div>
@@ -164,6 +166,10 @@ export const InlineLogos: React.FC<InlineLogosProps> = ({ companies, className =
           <img
             src={getLogoUrl(company.domain)}
             alt={`${company.name}`}
+            width={16}
+            height={16}
+            loading="lazy"
+            decoding="async"
             className="w-4 h-4 object-contain"
           />
         </div>

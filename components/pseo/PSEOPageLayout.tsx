@@ -1,8 +1,7 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { SITE_AUTHOR } from '@/lib/author';
 import { Button } from '../ui/button';
 import { ArrowRight, ChevronRight, ExternalLink } from 'lucide-react';
 import type { PSEOPage, ContentSection, FAQ, InternalLink, RelatedPage } from '@/lib/pseo/types';
@@ -36,10 +35,6 @@ function RichText({ text }: { text: string }) {
       })}
     </>
   );
-}
-
-interface PSEOPageLayoutProps {
-  page: PSEOPage;
 }
 
 export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
@@ -84,30 +79,37 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
               </div>
             )}
             
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-4">
               <RichText text={page.content.introduction} />
+            </p>
+            <p className="text-sm text-gray-500 mb-8">
+              Written and reviewed by{' '}
+              <Link href="/aeo" className="text-emerald-400 hover:text-emerald-300">
+                {SITE_AUTHOR.name}
+              </Link>
+              , {SITE_AUTHOR.jobTitle}. Updated August 2026.
             </p>
 
             {/* Quick Actions */}
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#ai-crawler">
+              <a href={BOOK_CALL_URL}>
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold shadow-[0_0_30px_-8px_rgba(16,185,129,0.5)]"
                 >
-                  Get Free AI Analysis
+                  {PRIMARY_CTA_LABEL}
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
-              </Link>
-              <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
+              </a>
+              <Link href="/#pricing">
                 <Button 
                   size="lg" 
                   variant="outline" 
                   className="border-gray-700 text-white hover:bg-white/10 rounded-full"
                 >
-                  {PRIMARY_CTA_LABEL}
+                  See pricing
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

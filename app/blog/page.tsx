@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Calendar, Clock, Tag } from 'lucide-react';
 import { blogPosts, blogCategories } from '@/lib/pseo/data/blog-posts';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'AI SEO Blog | Insights, Strategies & Industry Guides | Anthroly',
@@ -54,15 +54,15 @@ export default function BlogIndexPage() {
               Industry strategies, local SEO guides, and the latest in AI search optimization.
             </p>
 
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-semibold"
               >
-                Get Free AI Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -208,18 +208,19 @@ export default function BlogIndexPage() {
               Ready to Dominate AI Search?
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              Stop reading about AI SEO—start implementing it. Get a free analysis showing 
-              exactly how visible you are to AI assistants and what it takes to rank #1.
+              Stop reading about AI SEO—start implementing it. The $216 Founder Growth
+              Diagnostic maps buyer prompts, current citations, and the pages that can actually
+              be extracted.
             </p>
-            <Link href="/#ai-crawler">
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="xl" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:from-emerald-400 hover:to-cyan-400 rounded-full font-bold shadow-[0_0_40px_-10px_rgba(16,185,129,0.6)]"
               >
-                Get Your Free AI Analysis
+                {PRIMARY_CTA_LABEL}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

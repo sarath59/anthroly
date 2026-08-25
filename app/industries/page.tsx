@@ -110,12 +110,12 @@ export default function IndustriesPage() {
               <div className="text-zinc-400">Industry-Location Pages</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">340%</div>
-              <div className="text-zinc-400">Avg Traffic Growth</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">21</div>
+              <div className="text-zinc-400">APAC city hubs</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">$1,500</div>
-              <div className="text-zinc-400">Starting Price</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">$216</div>
+              <div className="text-zinc-400">Founder Growth Diagnostic</div>
             </div>
           </div>
         </div>
@@ -124,15 +124,15 @@ export default function IndustriesPage() {
       {/* CTA */}
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Dominate Your Industry&apos;s Search Results?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready for industry-specific AI search visibility?</h2>
           <p className="text-zinc-400 mb-8">
-            Get a free AI analysis showing your industry search visibility and opportunities.
+            Start with the $216 Founder Growth Diagnostic — credited 100% toward the 30-Day AI Authority Sprint if you start within 7 days.
           </p>
           <Link
-            href="/#ai-crawler"
+            href="/#pricing"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/25"
           >
-            Get Your Free Industry Analysis
+            See pricing
           </Link>
         </div>
       </section>

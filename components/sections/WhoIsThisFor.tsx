@@ -1,30 +1,9 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Rocket, Building2, Users, Code2, Store, Briefcase, CheckCircle2, ArrowRight } from 'lucide-react';
 import { LogoStrip, SAAS_LEADERS, ECOMMERCE } from '../ui/CompanyLogos';
-import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
+import { GlowPulse, SpotlightCard } from '../ui/static-fx';
 
 export const WhoIsThisFor = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const audiences = [
     {
@@ -72,7 +51,7 @@ export const WhoIsThisFor = () => {
   ];
 
   return (
-    <section id="who" ref={sectionRef} className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
+    <section id="who" className="py-24 md:py-32 bg-transparent text-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <GlowPulse className="top-1/3 left-0" color="emerald" size={600} />
@@ -81,7 +60,7 @@ export const WhoIsThisFor = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 mb-6">
             <span>👥 82% of founders say SEO is important — only 12% actually do it</span>
           </div>
@@ -97,7 +76,7 @@ export const WhoIsThisFor = () => {
         </div>
 
         {/* Audience Grid */}
-        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           {audiences.map((audience, index) => {
             const Icon = audience.icon;
             return (
@@ -126,7 +105,7 @@ export const WhoIsThisFor = () => {
         </div>
 
         {/* Trusted By Leaders */}
-        <div className={`mt-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-16 transition-all duration-1000 delay-300 opacity-100 translate-y-0`}>
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
             <LogoStrip 
               companies={SAAS_LEADERS} 
@@ -142,7 +121,7 @@ export const WhoIsThisFor = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-16 max-w-3xl mx-auto text-center transition-all duration-1000 delay-400 opacity-100 translate-y-0`}>
           <div className="p-8 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-3xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               The Perfect Place to Grow Your Business

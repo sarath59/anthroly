@@ -19,11 +19,11 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              Managed SEO and content: backlinks, blogs, and visibility on Google and AI search—delivered by real people on your behalf.
+              Human-led SEO and AEO: AI-search citations, founder authority, and qualified conversations — without making the founder a full-time content creator.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/anthroly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -32,7 +32,7 @@ export const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/anthroly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -92,8 +92,18 @@ export const Footer = () => {
             <h3 className="font-semibold text-lg mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/guides/ai-citations" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  AI citation guides
+                </Link>
+              </li>
+              <li>
                 <Link href="/aeo" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Answer Engine Optimization
+                </Link>
+              </li>
+              <li>
+                <Link href="/author/sarath-kavuru" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Sarath Kavuru
                 </Link>
               </li>
               <li>

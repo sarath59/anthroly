@@ -4,18 +4,34 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ScrollAnimationWrapper } from "@/components/ui/ScrollAnimationWrapper";
 import { SITE_URL, absoluteUrl, DATAFAST_WEBSITE_ID } from "@/lib/site";
 import { SiteJsonLd } from "@/components/schema/SiteJsonLd";
 import { DataFastGoals } from "@/components/analytics/DataFastGoals";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  adjustFontFallback: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Anthroly — Founder AI Authority & Pipeline System",
   description: "Become easier to discover, trust, and contact in the AI era. $216 Founder Growth Diagnostic (credited toward a $1,500 30-day sprint). Then $1,000/month. Humans do the work. Machines help us scale.",
   keywords: ["GEO", "AI search visibility", "ChatGPT SEO", "Perplexity citations", "AI lead generation", "founder ghostwriting", "LinkedIn ghostwriting", "AEO", "human-led SEO"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     // Absolute, query-free — tracking params like ?ref=producthunt must not create a second indexable URL
     canonical: absoluteUrl('/'),
@@ -36,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: "Anthroly — Founder AI Authority & Pipeline System",
     description: "Become easier to discover, trust, and contact in the AI era. $216 diagnostic (credited toward $1,500 sprint). Then $1,000/month.",
     images: [absoluteUrl('/logo.png')],
@@ -61,11 +77,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <head>
+        <link rel="preconnect" href="https://datafa.st" />
+        <link rel="dns-prefetch" href="https://img.logo.dev" />
+      </head>
+      <body className="min-h-screen bg-black text-white antialiased">
         <SiteJsonLd />
-        {/* Queue goals fired before the DataFast script loads */}
-        <Script id="datafast-queue" strategy="beforeInteractive">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Script id="datafast-queue" strategy="afterInteractive">
           {`window.datafast=window.datafast||function(){(window.datafast.q=window.datafast.q||[]).push(arguments);};`}
         </Script>
         <Script
@@ -73,15 +95,9 @@ export default function RootLayout({
           data-website-id={DATAFAST_WEBSITE_ID}
           data-domain="anthroly.com"
           src="https://datafa.st/js/script.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <DataFastGoals />
-        
-        <ScrollAnimationWrapper>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ScrollAnimationWrapper>
       </body>
     </html>
   );

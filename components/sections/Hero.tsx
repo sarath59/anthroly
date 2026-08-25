@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -14,7 +12,7 @@ import {
 import { Button } from '../ui/button';
 import { ArrowRight, Megaphone, Search, Target } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
-import { GlowPulse } from '../ui/animated-elements';
+import { GlowPulse } from '../ui/static-fx';
 
 const PILLAR_ICONS = [Search, Megaphone, Target];
 

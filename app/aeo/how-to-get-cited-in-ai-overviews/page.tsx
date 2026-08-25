@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { absoluteUrl } from '@/lib/site';
 import { AeoPageShell } from '@/components/aeo/AeoPageShell';
 import {
@@ -118,6 +119,17 @@ export default function HowToGetCitedPage() {
             <li>Blocking AI crawlers you want discovery from</li>
             <li>Unsourced claims with no method or proof</li>
           </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Niche playbooks</h2>
+          <p className="mb-3">
+            Structure is the same; the facts are not.{' '}
+            <Link href="/guides/ai-citations" className="text-emerald-400 hover:underline">
+              Founder AI citation cluster
+            </Link>{' '}
+            covers cybersecurity, legal, hotels, and AI startups without adding another pSEO matrix.
+          </p>
         </section>
 
         <section>

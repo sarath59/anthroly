@@ -1,37 +1,16 @@
-"use client"
-
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { XCircle, CheckCircle2, TrendingUp, Zap, DollarSign, Clock } from 'lucide-react';
 import { CONNECT_FEE_LABEL, PACKAGE_RETAINER, PACKAGE_SETUP } from '@/lib/site';
 import { LogoStrip, AI_COMPANIES, SEO_TOOLS } from '../ui/CompanyLogos';
-import { GlowPulse, SpotlightCard } from '../ui/animated-elements';
+import { GlowPulse, SpotlightCard } from '../ui/static-fx';
 
 export const ProblemSolution = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
-    <section id="problem" ref={sectionRef} className="py-24 md:py-32 bg-transparent overflow-hidden">
+    <section id="problem" className="py-24 md:py-32 bg-transparent overflow-hidden">
       <GlowPulse className="top-1/3 left-0" color="emerald" size={500} />
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
             <span>📊 Most SEO campaigns fail to show ROI fast enough</span>
           </div>
@@ -46,7 +25,7 @@ export const ProblemSolution = () => {
           </p>
         </div>
 
-        <div className={`grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           {/* The Old Way */}
           <SpotlightCard className="rounded-3xl" spotlightColor="rgba(239,68,68,0.1)">
           <div className="bg-gray-900/80 p-6 md:p-10 rounded-3xl border border-gray-800 relative overflow-hidden">
@@ -144,7 +123,7 @@ export const ProblemSolution = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className={`mt-20 max-w-5xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-20 max-w-5xl mx-auto transition-all duration-1000 delay-400 opacity-100 translate-y-0`}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <TrendingUp className="text-emerald-500 mx-auto mb-3" size={32} />
@@ -170,7 +149,7 @@ export const ProblemSolution = () => {
         </div>
 
         {/* Powered By */}
-        <div className={`mt-12 flex flex-col md:flex-row justify-center gap-8 md:gap-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mt-12 flex flex-col md:flex-row justify-center gap-8 md:gap-16 transition-all duration-1000 delay-500 opacity-100 translate-y-0`}>
           <LogoStrip 
             companies={AI_COMPANIES.slice(0, 3)} 
             label="Stack we work with"

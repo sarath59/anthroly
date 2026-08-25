@@ -123,6 +123,15 @@ export default function AeoHubPage() {
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
             <Link
+              href="/guides/ai-citations"
+              className="p-5 rounded-xl border border-emerald-500/40 bg-emerald-500/5 hover:border-emerald-400/60 transition-colors md:col-span-2"
+            >
+              <h3 className="font-semibold text-white mb-2">Niche AI citation cluster (new)</h3>
+              <p className="text-sm text-gray-400">
+                Founder playbooks for cybersecurity, legal, hotels/accommodations, and AI startups — plus measurement, schema, and YMYL rules.
+              </p>
+            </Link>
+            <Link
               href="/anthroly-vs-anthropic"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
