@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { customerCaseStudies, getCaseStudy, type CaseBlock } from '@/lib/customers';
 import { getClusterTopicsForBrand } from '@/lib/customer-clusters';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '@/components/ui/button';
 import {
@@ -20,6 +21,7 @@ interface PageProps {
 }
 
 export const dynamicParams = false;
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return customerCaseStudies.map((c) => ({ slug: c.slug }));
@@ -99,7 +101,8 @@ function renderBlock(block: CaseBlock, index: number) {
   }
 }
 
-export default function CustomerCaseStudyPage({ params }: PageProps) {
+export default async function CustomerCaseStudyPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const study = getCaseStudy(params.slug);
   if (!study) notFound();
 

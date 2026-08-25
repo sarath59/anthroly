@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { seoTools, generateToolComparisonPage, generatePageStructuredData } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string };
@@ -26,6 +27,8 @@ export async function generateStaticParams() {
   return paths;
 }
 
+export const revalidate = 86400;
+
 // Parse comparison slug to get tool IDs
 function parseComparisonSlug(slug: string): { toolA: typeof seoTools[0]; toolB: typeof seoTools[0] } | null {
   const vsIndex = slug.indexOf('-vs-');
@@ -43,7 +46,8 @@ function parseComparisonSlug(slug: string): { toolA: typeof seoTools[0]; toolB: 
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const tools = parseComparisonSlug(params.slug);
   
   if (!tools) {
@@ -76,7 +80,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function ComparisonPage({ params }: PageProps) {
+export default async function ComparisonPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const tools = parseComparisonSlug(params.slug);
   
   if (!tools) {

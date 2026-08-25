@@ -14,6 +14,7 @@ import {
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { segments: string[] };
@@ -65,7 +66,7 @@ export async function generateStaticParams() {
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { segments } = params;
+  const { segments } = await readParams(params);
   
   if (segments.length === 1) {
     // Single persona
@@ -114,8 +115,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return { title: 'Not Found' };
 }
 
-export default function ForPage({ params }: PageProps) {
-  const { segments } = params;
+export default async function ForPage({ params }: PageProps) {
+  const { segments } = await readParams(params);
   
   let page;
   

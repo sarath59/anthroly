@@ -9,6 +9,7 @@ import {
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { 
@@ -24,7 +25,8 @@ export const dynamic = 'force-static';
 export const revalidate = 86400; // Revalidate every 24 hours
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const page = generateGlossaryIndustryLocationPage(params.slug, params.industry, params.location);
   
   if (!page) {
@@ -58,7 +60,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function GlossaryIndustryLocationPage({ params }: PageProps) {
+export default async function GlossaryIndustryLocationPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const page = generateGlossaryIndustryLocationPage(params.slug, params.industry, params.location);
   
   if (!page) {

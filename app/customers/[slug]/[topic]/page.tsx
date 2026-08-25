@@ -10,6 +10,7 @@ import {
 } from '@/lib/customer-clusters';
 import { getCaseStudy } from '@/lib/customers';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 import { Button } from '@/components/ui/button';
 import {
   combineSchemas,
@@ -24,6 +25,7 @@ interface PageProps {
 }
 
 export const dynamicParams = false;
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return getAllCustomerClusterPaths();
@@ -58,7 +60,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function CustomerClusterTopicPage({ params }: PageProps) {
+export default async function CustomerClusterTopicPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const study = getCaseStudy(params.slug);
   const page = generateCustomerClusterPage(params.slug, params.topic);
   if (!study || !page) notFound();

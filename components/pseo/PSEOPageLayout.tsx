@@ -11,6 +11,37 @@ interface PSEOPageLayoutProps {
   page: PSEOPage;
 }
 
+function headingId(heading: string): string {
+  return heading
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80);
+}
+
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const match = part.match(/^\*\*([^*]+)\*\*$/);
+        if (match) {
+          return (
+            <strong key={i} className="text-white font-semibold">
+              {match[1]}
+            </strong>
+          );
+        }
+        return <React.Fragment key={i}>{part}</React.Fragment>;
+      })}
+    </>
+  );
+}
+
+interface PSEOPageLayoutProps {
+  page: PSEOPage;
+}
+
 export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -40,18 +71,21 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
             </h1>
 
             {page.content.directAnswer && (
-              <div className="mb-8 text-left max-w-3xl mx-auto rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 md:p-6">
+              <div
+                className="mb-8 text-left max-w-3xl mx-auto rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5 md:p-6"
+                data-seo-summary
+              >
                 <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
                   Key answer
                 </p>
                 <p className="text-base md:text-lg text-white leading-relaxed">
-                  {page.content.directAnswer}
+                  <RichText text={page.content.directAnswer} />
                 </p>
               </div>
             )}
             
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
-              {page.content.introduction}
+              <RichText text={page.content.introduction} />
             </p>
 
             {/* Quick Actions */}
@@ -83,6 +117,26 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            {page.content.sections.length >= 3 && (
+              <nav aria-label="On this page" className="mb-12 p-5 border border-gray-800 rounded-2xl bg-gray-900/40">
+                <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">
+                  On this page
+                </p>
+                <ol className="grid gap-2 md:grid-cols-2 text-sm">
+                  {page.content.sections.map((section) => (
+                    <li key={section.heading}>
+                      <a
+                        href={`#${headingId(section.heading)}`}
+                        className="text-gray-300 hover:text-emerald-400 transition-colors"
+                      >
+                        {section.heading}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
+
             {/* Content Sections */}
             {page.content.sections.map((section, index) => (
               <ContentBlock key={index} section={section} index={index} />
@@ -100,8 +154,14 @@ export const PSEOPageLayout: React.FC<PSEOPageLayoutProps> = ({ page }) => {
 
             {/* Related Pages */}
             {page.relatedPages.length > 0 && (
-              <RelatedPagesBlock pages={page.relatedPages} />
+              <RelatedPagesBlock pages={page.relatedPages} currentUrl={page.url} />
             )}
+
+            <p className="text-sm text-gray-500">
+              <Link href="/llms.txt" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                Structured site summary for AI crawlers
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -121,11 +181,16 @@ const Breadcrumbs: React.FC<{ url: string }> = ({ url }) => {
   const breadcrumbs = [{ name: 'Home', url: '/' }];
   
   const categoryNames: Record<string, string> = {
-    glossary: 'SEO Glossary',
-    for: 'Industries',
+    for: 'For',
+    industries: 'Industries',
     'ai-seo-agency': 'Locations',
     integrations: 'Integrations',
     compare: 'Comparisons',
+    glossary: 'SEO Glossary',
+    'use-cases': 'Use Cases',
+    aeo: 'AEO',
+    markets: 'Markets',
+    tools: 'Tools',
   };
   
   let currentPath = '';
@@ -160,12 +225,12 @@ const Breadcrumbs: React.FC<{ url: string }> = ({ url }) => {
 const ContentBlock: React.FC<{ section: ContentSection; index: number }> = ({ section }) => {
   return (
     <div className="mb-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+      <h2 id={headingId(section.heading)} className="text-2xl md:text-3xl font-bold text-white mb-4 scroll-mt-28">
         {section.heading}
       </h2>
       
       <div className="text-gray-300 leading-relaxed whitespace-pre-wrap">
-        {section.body}
+        <RichText text={section.body} />
       </div>
       
       {section.listItems && section.listItems.length > 0 && (
@@ -175,7 +240,9 @@ const ContentBlock: React.FC<{ section: ContentSection; index: number }> = ({ se
               <div className="flex-shrink-0 w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mt-0.5">
                 <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
               </div>
-              <span className="text-gray-300">{item}</span>
+              <span className="text-gray-300">
+                <RichText text={item} />
+              </span>
             </li>
           ))}
         </ul>
@@ -250,8 +317,6 @@ const InternalLinksBlock: React.FC<{ links: InternalLink[] }> = ({ links }) => {
 };
 
 const FAQBlock: React.FC<{ faqs: FAQ[] }> = ({ faqs }) => {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(0);
-
   return (
     <div className="mb-12">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -260,60 +325,82 @@ const FAQBlock: React.FC<{ faqs: FAQ[] }> = ({ faqs }) => {
       
       <div className="space-y-3">
         {faqs.map((faq, index) => (
-          <div 
+          <details
             key={index}
-            className="border border-gray-800 rounded-xl overflow-hidden"
+            open={index === 0}
+            className="border border-gray-800 rounded-xl overflow-hidden group"
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between p-5 text-left bg-gray-900/50 hover:bg-gray-900 transition-colors"
-            >
+            <summary className="w-full flex items-center justify-between p-5 text-left bg-gray-900/50 hover:bg-gray-900 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
               <span className="font-semibold text-white pr-4">{faq.question}</span>
-              <ChevronRight 
-                size={20} 
-                className={`flex-shrink-0 text-emerald-400 transition-transform ${
-                  openIndex === index ? 'rotate-90' : ''
-                }`}
+              <ChevronRight
+                size={20}
+                className="flex-shrink-0 text-emerald-400 transition-transform group-open:rotate-90"
               />
-            </button>
-            
-            {openIndex === index && (
-              <div className="p-5 bg-black/50 border-t border-gray-800">
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-              </div>
-            )}
-          </div>
+            </summary>
+            <div className="p-5 bg-black/50 border-t border-gray-800">
+              <p className="text-gray-300 leading-relaxed">
+                <RichText text={faq.answer} />
+              </p>
+            </div>
+          </details>
         ))}
       </div>
     </div>
   );
 };
 
-const RelatedPagesBlock: React.FC<{ pages: RelatedPage[] }> = ({ pages }) => {
+const RelatedPagesBlock: React.FC<{ pages: RelatedPage[]; currentUrl: string }> = ({ pages, currentUrl }) => {
+  const other = pages.filter((page) => page.url !== currentUrl);
+  const cityPages = other.filter(
+    (page) => page.playbook === 'locations' && !page.url.startsWith('/ai-seo-agency')
+  );
+  const rest = other.filter((page) => !cityPages.some((city) => city.url === page.url));
+
   return (
     <div className="mb-12">
-      <h3 className="text-xl font-bold text-white mb-4">You Might Also Like</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {pages.map((page, index) => (
-          <Link
-            key={index}
-            href={page.url}
-            className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all group"
-          >
-            <div className="flex items-center gap-2 mb-2">
-              <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full capitalize">
-                {page.playbook}
-              </span>
-              <span className="text-xs text-gray-500">
-                {page.relevanceScore}% match
-              </span>
-            </div>
-            <h4 className="font-semibold text-white group-hover:text-emerald-400 transition-colors">
-              {page.title}
-            </h4>
-          </Link>
-        ))}
-      </div>
+      {cityPages.length > 0 && (
+        <section className="mb-10">
+          <h3 className="text-xl font-bold text-white mb-4">Regional AI visibility hubs</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {cityPages.map((page) => (
+              <Link
+                key={page.url}
+                href={page.url}
+                className="p-3 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all text-sm text-gray-200 hover:text-emerald-400"
+              >
+                {page.title}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {rest.length > 0 && (
+        <>
+          <h3 className="text-xl font-bold text-white mb-4">You Might Also Like</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {rest.map((page) => (
+              <Link
+                key={page.url}
+                href={page.url}
+                className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all group"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full capitalize">
+                    {page.playbook}
+                  </span>
+                  <span className="text-xs text-gray-500">
+                    {page.relevanceScore}% match
+                  </span>
+                </div>
+                <h4 className="font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                  {page.title}
+                </h4>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

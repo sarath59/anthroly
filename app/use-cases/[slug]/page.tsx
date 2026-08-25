@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useCases } from '@/lib/pseo/data/use-cases';
 import { industries } from '@/lib/pseo/data/industries';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string };
@@ -15,7 +16,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export const revalidate = 86400;
+
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const useCase = useCases.find(u => u.slug === params.slug);
   if (!useCase) return { title: 'Not Found' };
   
@@ -34,7 +38,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function UseCasePage({ params }: PageProps) {
+export default async function UseCasePage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const useCase = useCases.find(u => u.slug === params.slug);
   
   if (!useCase) {

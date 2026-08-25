@@ -14,6 +14,9 @@ import {
   generateOrganizationSchema,
   combineSchemas,
 } from '@/lib/pseo/schema';
+import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'AI SEO & AEO Markets: Singapore, China, Australia, New Zealand | Anthroly',
@@ -269,6 +272,12 @@ export default function MarketsIndexPage() {
           </div>
         </div>
       </section>
+
+      <ApacCitySpokeGrid
+        heading="APAC city pages Googlebot should crawl first"
+        description="21 priority city hubs, linked in HTML from this market index — not sitemap-only orphans."
+        hrefFor={(citySlug) => `/ai-seo-agency/${citySlug}`}
+      />
     </div>
   );
 }

@@ -326,6 +326,8 @@ export function combineSchemas(...schemas: object[]): string {
  */
 export function generatePageStructuredData(page: PSEOPage): string {
   const schemas: object[] = [];
+
+  schemas.push(generateWebPageSchema(page));
   
   // Always add FAQ schema if FAQs exist
   if (page.content.faq.length > 0) {
@@ -347,6 +349,40 @@ export function generatePageStructuredData(page: PSEOPage): string {
   return combineSchemas(...schemas);
 }
 
+/** Stable dates so crawlers do not see a new lastmod on every request. */
+const PSEO_DATE_PUBLISHED = '2025-06-01';
+const PSEO_DATE_MODIFIED = '2026-08-25';
+
+function generateWebPageSchema(page: PSEOPage): object {
+  const url = absoluteUrl(page.url);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: page.seo.title,
+    headline: page.content.h1,
+    description: page.seo.metaDescription,
+    datePublished: PSEO_DATE_PUBLISHED,
+    dateModified: PSEO_DATE_MODIFIED,
+    inLanguage: 'en-US',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    about: {
+      '@type': 'Thing',
+      name: page.content.h1,
+    },
+    ...(page.content.directAnswer
+      ? {
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['[data-seo-summary]', 'h1'],
+          },
+        }
+      : {}),
+  };
+}
+
 /**
  * Generate breadcrumbs from URL path
  */
@@ -360,13 +396,17 @@ function generateBreadcrumbsFromUrl(url: string): BreadcrumbItem[] {
   
   const categoryNames: Record<string, string> = {
     glossary: 'SEO Glossary',
-    for: 'Industries',
+    for: 'For',
+    industries: 'Industries',
     'ai-seo-agency': 'Locations',
     integrations: 'Integrations',
     compare: 'Comparisons',
     tools: 'Tools',
     examples: 'Examples',
     templates: 'Templates',
+    'use-cases': 'Use Cases',
+    aeo: 'AEO',
+    markets: 'Markets',
   };
   
   parts.forEach((part, index) => {

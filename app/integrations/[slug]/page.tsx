@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { seoIntegrations, generateIntegrationPage, generatePageStructuredData } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string };
@@ -15,8 +16,11 @@ export async function generateStaticParams() {
   }));
 }
 
+export const revalidate = 86400;
+
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const integration = seoIntegrations.find((i) => i.slug === params.slug);
   
   if (!integration) {
@@ -49,7 +53,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function IntegrationPage({ params }: PageProps) {
+export default async function IntegrationPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const integration = seoIntegrations.find((i) => i.slug === params.slug);
   
   if (!integration) {

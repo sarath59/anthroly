@@ -5,6 +5,7 @@ import { generateUseCaseIndustryPage } from '@/lib/pseo/combinations';
 import { generatePageStructuredData } from '@/lib/pseo/schema';
 import { getIndexableUseCaseIndustryParams } from '@/lib/pseo/indexable';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string; industry: string };
@@ -19,7 +20,8 @@ export async function generateStaticParams() {
 // Enable ISR - pages regenerate every 24 hours
 export const revalidate = 86400;
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const page = generateUseCaseIndustryPage(params.slug, params.industry);
   if (!page) return { title: 'Not Found' };
   
@@ -39,7 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function UseCaseIndustryPage({ params }: PageProps) {
+export default async function UseCaseIndustryPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const page = generateUseCaseIndustryPage(params.slug, params.industry);
   
   if (!page) {

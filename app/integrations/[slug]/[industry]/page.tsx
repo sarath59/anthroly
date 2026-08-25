@@ -7,6 +7,7 @@ import {
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { 
@@ -24,7 +25,8 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const page = generateIntegrationIndustryPage(params.slug, params.industry);
   
   if (!page) {
@@ -55,7 +57,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function IntegrationIndustryPage({ params }: PageProps) {
+export default async function IntegrationIndustryPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const page = generateIntegrationIndustryPage(params.slug, params.industry);
   
   if (!page) {

@@ -2,12 +2,17 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { industries } from '@/lib/pseo/data/industries';
-import { seoLocations } from '@/lib/pseo/data/locations';
+import { uniqueSeoLocations } from '@/lib/pseo/indexable';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
+import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
+import { getApacCitySpokes } from '@/lib/pseo/apac-spokes';
 
 interface PageProps {
   params: { slug: string };
 }
+
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return industries.map((industry) => ({
@@ -15,7 +20,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const industry = industries.find(i => i.slug === params.slug);
   if (!industry) return { title: 'Not Found' };
   
@@ -35,7 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function IndustryPage({ params }: PageProps) {
+export default async function IndustryPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const industry = industries.find(i => i.slug === params.slug);
   
   if (!industry) {
@@ -45,8 +52,10 @@ export default function IndustryPage({ params }: PageProps) {
   // After notFound(), industry is defined (narrow for language servers that miss never-return typing)
   const data = industry!;
   
-  // Get featured locations for this industry
-  const featuredLocations = seoLocations.slice(0, 12);
+  const apacCities = new Set(getApacCitySpokes().map((city) => city.slug));
+  const otherLocations = uniqueSeoLocations()
+    .filter((location) => !apacCities.has(location.slug))
+    .slice(0, 12);
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -120,15 +129,22 @@ export default function IndustryPage({ params }: PageProps) {
         </div>
       </section>
       
-      {/* Locations Grid */}
+      <ApacCitySpokeGrid
+        heading={`${data.name} SEO in APAC cities`}
+        description={`HTML spokes into /industries/${data.slug}/[city] for the 21 priority APAC markets.`}
+        hrefFor={(citySlug) => `/industries/${data.slug}/${citySlug}`}
+        accent="purple"
+      />
+
+      {otherLocations.length > 0 && (
       <section className="py-16 border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-4">{data.name} SEO by Location</h2>
+          <h2 className="text-3xl font-bold mb-4">{data.name} SEO in other cities</h2>
           <p className="text-zinc-400 mb-8">
-            Get location-specific {data.name.toLowerCase()} SEO in {seoLocations.length}+ cities worldwide.
+            Additional {data.name.toLowerCase()} location pages beyond the APAC crawl set.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {featuredLocations.map((location) => (
+            {otherLocations.map((location) => (
               <Link
                 key={location.slug}
                 href={`/industries/${data.slug}/${location.slug}`}
@@ -139,11 +155,9 @@ export default function IndustryPage({ params }: PageProps) {
               </Link>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <p className="text-zinc-400">+ {seoLocations.length - 12} more locations</p>
-          </div>
         </div>
       </section>
+      )}
       
       {/* CTA */}
       <section className="py-16 border-t border-zinc-800">

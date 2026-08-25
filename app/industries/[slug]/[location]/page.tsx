@@ -5,6 +5,7 @@ import { generateIndustryLocationPage } from '@/lib/pseo/combinations';
 import { generatePageStructuredData } from '@/lib/pseo/schema';
 import { getIndexableIndustryLocationParams } from '@/lib/pseo/indexable';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string; location: string };
@@ -20,7 +21,8 @@ export async function generateStaticParams() {
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const page = generateIndustryLocationPage(params.slug, params.location);
+  const { slug, location } = await readParams(params);
+  const page = generateIndustryLocationPage(slug, location);
   if (!page) return { title: 'Not Found' };
   
   return {
@@ -39,8 +41,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function IndustryLocationPage({ params }: PageProps) {
-  const page = generateIndustryLocationPage(params.slug, params.location);
+export default async function IndustryLocationPage({ params }: PageProps) {
+  const { slug, location } = await readParams(params);
+  const page = generateIndustryLocationPage(slug, location);
   
   if (!page) {
     notFound();

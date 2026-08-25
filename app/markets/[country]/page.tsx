@@ -11,6 +11,7 @@ import { getApacCountryPage } from '@/lib/pseo/apac-generators';
 import { generatePageStructuredData } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { country: string };
@@ -21,8 +22,10 @@ export function generateStaticParams() {
 }
 
 export const dynamicParams = false;
+export const revalidate = 86400;
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const page = getApacCountryPage(params.country);
   if (!page) {
     return { title: 'Market Not Found | Anthroly' };
@@ -54,7 +57,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function ApacCountryPage({ params }: PageProps) {
+export default async function ApacCountryPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const country = getApacCountry(params.country);
   const page = getApacCountryPage(params.country);
 

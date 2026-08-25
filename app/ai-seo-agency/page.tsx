@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 86400;
+
 export default function LocationsIndexPage() {
   const apacSet = new Set<string>(APAC_CITY_SLUGS);
   const usLocations = seoLocations.filter(l => l.country === 'United States');

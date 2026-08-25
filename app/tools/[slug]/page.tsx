@@ -6,6 +6,7 @@ import { getFreeToolBySlug, getAllFreeToolSlugs } from '@/lib/data/free-tools';
 import { ToolRenderer } from '@/components/tools/ToolRenderer';
 import { Button } from '@/components/ui/button';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -15,7 +16,10 @@ export async function generateStaticParams() {
   return getAllFreeToolSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export const revalidate = 86400;
+
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const { slug } = await params;
   const tool = getFreeToolBySlug(slug);
   if (!tool) {
@@ -36,7 +40,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function ToolPage({ params }: PageProps) {
+export default async function ToolPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const { slug } = await params;
   const tool = getFreeToolBySlug(slug);
   if (!tool) notFound();

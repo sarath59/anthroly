@@ -1,6 +1,34 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/sitemaps/index',
+      },
+      {
+        source: '/sitemap-core.xml',
+        destination: '/sitemaps/core',
+      },
+      {
+        source: '/sitemap-apac-twoway.xml',
+        destination: '/sitemaps/twoway-apac',
+      },
+      {
+        source: '/sitemap-twoway.xml',
+        destination: '/sitemaps/twoway',
+      },
+      {
+        source: '/sitemap-threeway.xml',
+        destination: '/sitemaps/threeway',
+      },
+      {
+        source: '/sitemap-aeo.xml',
+        destination: '/sitemaps/aeo',
+      },
+    ];
+  },
   async redirects() {
     // Dead glossary relatedTerms Google already crawled → closest real pages
     return [

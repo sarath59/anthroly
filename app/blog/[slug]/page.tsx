@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { SITE_URL, absoluteUrl, BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 import { SITE_AUTHOR } from '@/lib/author';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Calendar, Clock, Tag, User, Share2, BookOpen } from 'lucide-react';
@@ -25,7 +26,8 @@ export async function generateStaticParams() {
 
 export const revalidate = 86400;
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const post = getBlogPostBySlug(params.slug);
   
   if (!post) {
@@ -108,7 +110,8 @@ function generateFAQSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug
   };
 }
 
-export default function BlogPostPage({ params }: PageProps) {
+export default async function BlogPostPage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const post = getBlogPostBySlug(params.slug);
   
   if (!post) {

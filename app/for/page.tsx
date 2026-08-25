@@ -4,6 +4,9 @@ import { targetPersonas, personaCategories } from '@/lib/pseo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Briefcase, Target } from 'lucide-react';
 import { absoluteUrl } from '@/lib/site';
+import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'AI SEO for Every Industry & Role | Who We Serve | Anthroly',
@@ -159,6 +162,12 @@ export default function ForIndexPage() {
           </div>
         </div>
       </section>
+
+      <ApacCitySpokeGrid
+        heading="Priority APAC city pages"
+        description="Direct HTML links from this persona hub into the 21 APAC city agency pages."
+        hrefFor={(citySlug) => `/ai-seo-agency/${citySlug}`}
+      />
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">

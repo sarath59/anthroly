@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { industries, industryCategories } from '@/lib/pseo/data/industries';
 import { absoluteUrl } from '@/lib/site';
+import { ApacCitySpokeGrid } from '@/components/pseo/ApacCitySpokeGrid';
+
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'AI SEO by Industry | Industry-Specific SEO Solutions | Anthroly',
@@ -86,6 +89,13 @@ export default function IndustriesPage() {
           ))}
         </div>
       </section>
+
+      <ApacCitySpokeGrid
+        heading="Priority APAC city pages"
+        description="Direct HTML links to the 21 city hubs Google should discover from this industry index."
+        hrefFor={(citySlug) => `/ai-seo-agency/${citySlug}`}
+        accent="purple"
+      />
       
       {/* Stats */}
       <section className="py-16 border-t border-zinc-800">

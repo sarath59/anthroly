@@ -7,6 +7,7 @@ import {
 } from '@/lib/pseo';
 import PSEOPageLayout from '@/components/pseo/PSEOPageLayout';
 import { absoluteUrl } from '@/lib/site';
+import { readParams } from '@/lib/next-params';
 
 interface PageProps {
   params: { slug: string; engine: string };
@@ -19,7 +20,8 @@ export async function generateStaticParams() {
   return getIndexableAeoTopicEngineParams();
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params: rawParams }: PageProps): Promise<Metadata> {
+  const params = await readParams(rawParams);
   const page = generateAeoTopicEnginePage(params.slug, params.engine);
   if (!page) return { title: 'Not Found' };
   return {
@@ -36,7 +38,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function AeoTopicEnginePage({ params }: PageProps) {
+export default async function AeoTopicEnginePage({ params: rawParams }: PageProps) {
+  const params = await readParams(rawParams);
   const page = generateAeoTopicEnginePage(params.slug, params.engine);
   if (!page) notFound();
   const structuredData = generatePageStructuredData(page);

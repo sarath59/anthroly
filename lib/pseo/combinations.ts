@@ -12,7 +12,41 @@ import { seoGlossaryTerms } from './data/seo-glossary';
 import { industries, Industry } from './data/industries';
 import { useCases, UseCase } from './data/use-cases';
 import { getExistingRelatedTerms, validatePage } from './generator';
-import { SITE_URL } from '../site';
+import {
+  SITE_URL,
+  CONNECT_FEE_LABEL,
+  DIAGNOSTIC_NAME,
+  PACKAGE_SETUP,
+  PACKAGE_RETAINER,
+  SPRINT_NAME,
+} from '../site';
+import { APAC_CITY_SLUGS } from './data/apac-markets';
+
+const APAC_CITY_SET = new Set<string>(APAC_CITY_SLUGS);
+const KNOWN_CITY_SLUGS = new Set(seoLocations.map((l) => l.slug));
+
+function pricingAnswer(context: string): string {
+  return `Anthroly starts with a ${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME} (90-minute researched audit). Implementation is ${PACKAGE_SETUP} for the ${SPRINT_NAME}, then ${PACKAGE_RETAINER}/month. The diagnostic is credited 100% toward the sprint if you start within 7 days. ${context}`;
+}
+
+function apacSiblingPages(
+  currentCitySlug: string,
+  hrefFor: (citySlug: string) => string,
+  titleFor: (cityName: string) => string
+): RelatedPage[] {
+  return APAC_CITY_SLUGS.filter((slug) => slug !== currentCitySlug && KNOWN_CITY_SLUGS.has(slug))
+    .slice(0, 8)
+    .map((slug) => {
+      const loc = seoLocations.find((l) => l.slug === slug);
+      const cityName = loc?.city ?? slug.replace(/-/g, ' ');
+      return {
+        url: hrefFor(slug),
+        title: titleFor(cityName),
+        playbook: 'locations' as const,
+        relevanceScore: APAC_CITY_SET.has(currentCitySlug) ? 78 : 70,
+      };
+    });
+}
 
 // ============================================================================
 // PERSONA + LOCATION COMBINATIONS
@@ -33,12 +67,25 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
   const slug = `for/${persona.slug}/${location.slug}`;
   const url = `/${slug}`;
   
-  const directAnswer = `For ${persona.name}s in ${location.city}, Anthroly runs AI agents with human-led SEO: local + national visibility, AI Overview citation readiness, 15 blogs/month, and 15–25 high-DR backlinks—so you grow without building an in-house SEO team.`;
+  const directAnswer = `${persona.name}s in ${location.city} rank and get cited when they answer the questions buyers ask Google, ChatGPT, Gemini, Perplexity, and Claude — with proof, local facts, and pages models can quote. Anthroly turns founder expertise into that system so you are easier to discover, trust, and contact.`;
 
   const sections: ContentSection[] = [
     {
+      heading: `What ${persona.name}s in ${location.city} need to rank in Google and AI answers`,
+      body: `${location.city} is competitive for ${persona.industry.toLowerCase()}. ${location.localInsights[0]} Ranking now means appearing in classic results and in AI Overviews / ChatGPT-style answers, not keyword density on a thin location page.`,
+      table: {
+        caption: `How ${persona.name}s in ${location.city} get found`,
+        headers: ['Surface', 'What buyers ask', 'What this page is built to support'],
+        rows: [
+          ['Google', `${persona.industry} + ${location.city} commercial queries`, 'Answer-first copy, FAQ, and local facts crawlers can extract'],
+          ['Google AI Overviews', 'Short definitions and who to hire', 'Opening answer block plus structured Q&A'],
+          ['ChatGPT / Claude / Perplexity', `Best ${persona.industry.toLowerCase()} help for a ${persona.title} in ${location.city}`, 'Named outcomes, city evidence, and citation-ready lists'],
+        ],
+      },
+    },
+    {
       heading: `Why do ${persona.name}s in ${location.city} need AI-powered SEO?`,
-      body: `${location.city} is highly competitive for ${persona.industry.toLowerCase()}. ${location.localInsights[0]} AI agents plus human SEO keep pace while you run the business.`,
+      body: `${location.city} is highly competitive for ${persona.industry.toLowerCase()}. ${location.localInsights[0]} Humans research and write; machines help ship. You do not become a full-time content creator.`,
     },
     {
       heading: `What challenges do ${location.city} ${persona.name}s face?`,
@@ -94,8 +141,18 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
       question: `Do I need to be physically located in ${location.city}?`,
       answer: `No. While we optimize for ${location.city} if that's your target market, our platform works for ${persona.name}s anywhere targeting any market. Whether you're based in ${location.city} or targeting it remotely, we can help.`,
     },
+    {
+      question: `What does AI SEO for ${persona.name}s in ${location.city} cost?`,
+      answer: pricingAnswer(`Work is scoped to ${location.city} demand, not a reused national template.`),
+    },
   ];
   
+  const apacSiblings = apacSiblingPages(
+    location.slug,
+    (citySlug) => `/for/${persona.slug}/${citySlug}`,
+    (cityName) => `AI SEO for ${persona.name}s in ${cityName}`
+  );
+
   const internalLinks: InternalLink[] = [
     { url: `/for/${persona.slug}`, anchorText: `AI SEO for ${persona.name}s`, context: 'Persona page' },
     { url: `/ai-seo-agency/${location.slug}`, anchorText: `AI SEO Agency in ${location.city}`, context: 'Location page' },
@@ -103,12 +160,18 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
     { url: '/#pricing', anchorText: 'View Pricing', context: 'Conversion' },
     { url: '/glossary/ai-seo', anchorText: 'What is AI SEO?', context: 'Educational' },
     { url: '/glossary/local-seo', anchorText: 'Local SEO Guide', context: 'Educational' },
+    ...apacSiblings.slice(0, 4).map((p) => ({
+      url: p.url,
+      anchorText: p.title,
+      context: 'APAC / regional hub',
+    })),
   ];
   
   const relatedPages: RelatedPage[] = [
     { url: `/for/${persona.slug}`, title: `AI SEO for ${persona.name}s`, playbook: 'personas', relevanceScore: 95 },
     { url: `/ai-seo-agency/${location.slug}`, title: `AI SEO in ${location.city}`, playbook: 'locations', relevanceScore: 95 },
     { url: '/glossary/local-seo', title: 'Local SEO Guide', playbook: 'glossary', relevanceScore: 80 },
+    ...apacSiblings,
   ];
   
   const schema: SchemaData = {
@@ -129,8 +192,8 @@ export function generatePersonaLocationPage(personaSlug: string, locationSlug: s
     slug,
     playbookType: 'personas',
     seo: {
-      title: `AI SEO for ${persona.name}s in ${location.city} | ${persona.industry} SEO | Anthroly`,
-      metaDescription: `Managed SEO for ${persona.name}s in ${location.city}. Get 15 blogs/month, 15–25 high-DR backlinks, and ongoing optimization tailored to the ${location.city} market.`,
+      title: `Best AI SEO for ${persona.name}s in ${location.city} (2026 Comparison)`,
+      metaDescription: `How ${persona.name}s in ${location.city} get found in Google, ChatGPT, and Perplexity. Answer-first pages, local proof, and a human-led system — not a thin city template.`,
       primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')} ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `${location.city.toLowerCase()} ${persona.industry.toLowerCase()} seo`,
@@ -189,6 +252,15 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
     {
       heading: `Why do ${persona.name}s in ${industry.name} need AI-powered SEO?`,
       body: `As a ${persona.title} in ${industry.name.toLowerCase()}, role pressure meets industry competition. ${industry.painPoints[0]} AI agents plus human SEO deliver consistent content, links, and technical work.`,
+      table: {
+        caption: `What ${persona.name}s in ${industry.name} need from search`,
+        headers: ['Job', 'Google', 'AI answers'],
+        rows: [
+          ['Discover', `Rank for ${industry.keywords[0] || industry.name.toLowerCase()} queries`, 'Be the brand ChatGPT and Perplexity can name'],
+          ['Trust', 'Proof, FAQ, and named expertise on the page', 'Third-party mentions plus extractable definitions'],
+          ['Contact', 'Clear next step from organic pages', 'Recommendable offer a model can quote without guessing'],
+        ],
+      },
     },
     {
       heading: `What challenges hit ${persona.name}s in ${industry.name}?`,
@@ -234,7 +306,7 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
     },
     {
       question: `What does it cost?`,
-      answer: `Start with the $216 Founder Growth Diagnostic — a 90-minute AI visibility + founder authority audit. Implementation is a $1,500 30-Day AI Authority Sprint, then $1,000/month. The diagnostic is credited 100% toward the sprint if you start within 7 days. No long-term contracts.`,
+      answer: pricingAnswer(`Scoped to ${persona.title}s shipping ${industry.name.toLowerCase()} growth, not a generic agency retainer.`),
     },
   ];
 
@@ -270,8 +342,8 @@ export function generatePersonaIndustryPage(personaSlug: string, industrySlug: s
     slug,
     playbookType: 'personas',
     seo: {
-      title: `AI SEO for ${persona.name}s in ${industry.name} | Anthroly`,
-      metaDescription: `Managed SEO for ${persona.name}s in ${industry.name.toLowerCase()}. Get 15 blogs/month, 15–25 high-DR backlinks, and industry-specific optimization.`,
+      title: `Best AI SEO for ${persona.name}s in ${industry.name} (2026 Comparison)`,
+      metaDescription: `How ${persona.name}s in ${industry.name.toLowerCase()} get found in Google, ChatGPT, and Perplexity. Industry language, answer-first pages, and a human-led system.`,
       primaryKeyword: `seo for ${persona.slug.replace(/-/g, ' ')} ${industry.name.toLowerCase()}`,
       secondaryKeywords: [
         `${industry.name.toLowerCase()} seo for ${persona.name.toLowerCase()}`,
@@ -328,7 +400,22 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
   const slug = `industries/${industry.slug}/${location.slug}`;
   const url = `/${slug}`;
   
+  const directAnswer = `${industry.name} companies in ${location.city} get found when they publish extractable answers, local proof, and FAQ that Google, ChatGPT, Claude, and Perplexity can cite. Anthroly runs that as the Founder AI Authority & Pipeline System — discover, trust, contact — not a thin city template.`;
+
   const sections: ContentSection[] = [
+    {
+      heading: `How ${industry.name} companies in ${location.city} rank and get cited`,
+      body: `The ${industry.name.toLowerCase()} market in ${location.city} is competitive for both Google and AI answers. ${location.localInsights[0]} Buyers still search city + category terms; they also ask ChatGPT who to hire. This page is built so both surfaces can quote a clear answer.`,
+      table: {
+        caption: `${industry.name} visibility in ${location.city}`,
+        headers: ['Channel', 'Typical query', 'Page signal'],
+        rows: [
+          ['Google', `${industry.keywords[0] || industry.name.toLowerCase()} ${location.city}`, 'H1, FAQ, and local facts in the first screen'],
+          ['AI Overviews', `Best ${industry.name.toLowerCase()} SEO in ${location.city}`, 'Two-sentence definition plus structured Q&A'],
+          ['ChatGPT / Perplexity', `Who helps ${industry.name.toLowerCase()} brands in ${location.city}?`, 'Named offer, city evidence, and citation-ready lists'],
+        ],
+      },
+    },
     {
       heading: `Why ${industry.name} Companies in ${location.city} Need AI SEO`,
       body: `The ${industry.name.toLowerCase()} industry in ${location.city} faces intense competition for search visibility. ${location.localInsights[0]} Combined with the specific challenges of ${industry.name.toLowerCase()} marketing—${industry.painPoints[0].toLowerCase()}—traditional SEO approaches simply can't keep pace. AI-powered SEO provides the automation, intelligence, and scale needed to compete effectively.`,
@@ -392,21 +479,34 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     },
     {
       question: `How much does ${industry.name} SEO cost?`,
-      answer: `Anthroly starts at $2,000/month ($1,000 upfront in month one, with the balance after first-month results). Includes 15 blog posts, 15–25 high-DR backlinks, and continuous optimization. This is a fraction of what traditional agencies charge for ${industry.name.toLowerCase()} SEO, with more consistent execution through managed delivery.`,
+      answer: pricingAnswer(`Includes ${industry.name.toLowerCase()}-specific pages, local ${location.city} proof, and ongoing human-led execution.`),
     },
   ];
   
+  const apacSiblings = apacSiblingPages(
+    location.slug,
+    (citySlug) => `/industries/${industry.slug}/${citySlug}`,
+    (cityName) => `${industry.name} SEO in ${cityName}`
+  );
+
   const internalLinks: InternalLink[] = [
     { url: `/ai-seo-agency/${location.slug}`, anchorText: `AI SEO in ${location.city}`, context: 'Location page' },
     { url: '/#ai-crawler', anchorText: 'Free AI Analysis', context: 'Lead magnet' },
     { url: '/#pricing', anchorText: 'View Pricing', context: 'Conversion' },
     { url: '/glossary/ai-seo', anchorText: 'What is AI SEO?', context: 'Educational' },
     { url: `/industries/${industry.slug}`, anchorText: `${industry.name} SEO`, context: 'Parent industry page' },
+    ...apacSiblings.slice(0, 4).map((p) => ({
+      url: p.url,
+      anchorText: p.title,
+      context: 'APAC / regional hub',
+    })),
   ];
   
   const relatedPages: RelatedPage[] = [
+    { url: `/industries/${industry.slug}`, title: `${industry.name} SEO`, playbook: 'personas', relevanceScore: 92 },
     { url: `/ai-seo-agency/${location.slug}`, title: `AI SEO in ${location.city}`, playbook: 'locations', relevanceScore: 90 },
     { url: '/glossary/ai-seo', title: 'AI SEO Guide', playbook: 'glossary', relevanceScore: 80 },
+    ...apacSiblings,
   ];
   
   const schema: SchemaData = {
@@ -426,14 +526,15 @@ export function generateIndustryLocationPage(industrySlug: string, locationSlug:
     slug,
     playbookType: 'locations',
     seo: {
-      title: `${industry.name} SEO in ${location.city} | AI-Powered ${industry.name} Marketing | Anthroly`,
-      metaDescription: `AI SEO for ${industry.name.toLowerCase()} companies in ${location.city}. Get 15 blogs/month, 15–25 high-DR backlinks, and industry-specific optimization.`,
+      title: `Best ${industry.name} SEO in ${location.city} | Verified Rankings`,
+      metaDescription: `${industry.name} companies in ${location.city}: how to rank in Google and get cited in ChatGPT and AI Overviews. Local facts, FAQ, and a human-led system — not a thin template.`,
       primaryKeyword: `${industry.name.toLowerCase()} seo ${location.city.toLowerCase()}`,
       secondaryKeywords: industry.keywords.map(k => `${k} ${location.city.toLowerCase()}`).slice(0, 3),
       searchIntent: 'commercial',
     },
     content: {
       h1: `${industry.name} SEO in ${location.city}`,
+      directAnswer,
       introduction: `${industry.name} companies in ${location.city} face a unique competitive landscape. ${location.localInsights[0]} In this environment, organic search visibility can be the difference between growth and stagnation. Anthroly's managed SEO service delivers enterprise-grade SEO specifically optimized for the ${industry.name.toLowerCase()} industry in the ${location.city} market.`,
       sections,
       faq,
@@ -953,11 +1054,22 @@ export function generatePersonaIndustryLocationPage(
   
   const slug = `for/${persona.slug}/${industry.slug}/${location.slug}`;
   const url = `/${slug}`;
+
+  const directAnswer = `${persona.name}s running ${industry.name.toLowerCase()} companies in ${location.city} get cited when pages answer the local commercial question first, then prove it with city facts. Anthroly builds that for Google, ChatGPT, Claude, and Perplexity — not a national template with a city name swapped in.`;
   
   const sections: ContentSection[] = [
     {
       heading: `${industry.name} SEO for ${persona.name}s in ${location.city}`,
       body: `As a ${persona.title} in ${location.city}'s ${industry.name.toLowerCase()} sector, you face a triple challenge: the competitive pressures of ${industry.name.toLowerCase()}, the specific demands of ${location.city}'s market, and the unique priorities of your role. ${location.localInsights[0]} This creates both complexity and opportunity for AI-powered SEO.`,
+      table: {
+        caption: `${persona.name} × ${industry.name} × ${location.city}`,
+        headers: ['Layer', 'Buyer question', 'What we put on the page'],
+        rows: [
+          ['Role', `What should a ${persona.title} do about SEO?`, `${persona.goals[0]}`],
+          ['Industry', `${industry.keywords[0] || industry.name} in ${location.city}`, industry.seoNeeds[0]],
+          ['City', `Who can help in ${location.city}?`, location.localInsights[0]],
+        ],
+      },
     },
     {
       heading: `${industry.name} + ${location.city} = Unique SEO Challenges`,
@@ -1034,8 +1146,18 @@ export function generatePersonaIndustryLocationPage(
       question: `Is this page for companies based in ${location.city} or targeting ${location.city}?`,
       answer: `Both. ${persona.name}s based in ${location.city} and teams selling into ${location.city}'s ${industry.name.toLowerCase()} market use the same program: local keywords, city-specific citations, and national authority.`,
     },
+    {
+      question: `What does this cost for a ${persona.title} in ${location.city}?`,
+      answer: pricingAnswer(`Pages stay specific to ${industry.name.toLowerCase()} buyers in ${location.city}.`),
+    },
   ];
   
+  const apacSiblings = apacSiblingPages(
+    location.slug,
+    (citySlug) => `/for/${persona.slug}/${industry.slug}/${citySlug}`,
+    (cityName) => `${industry.name} SEO for ${persona.name}s in ${cityName}`
+  );
+
   const internalLinks: InternalLink[] = [
     { url: `/for/${persona.slug}`, anchorText: `AI SEO for ${persona.name}s`, context: 'Persona page' },
     { url: `/industries/${industry.slug}`, anchorText: `${industry.name} SEO`, context: 'Industry page' },
@@ -1043,12 +1165,19 @@ export function generatePersonaIndustryLocationPage(
     { url: `/for/${persona.slug}/${location.slug}`, anchorText: `${persona.name}s in ${location.city}`, context: 'Persona-location' },
     { url: `/industries/${industry.slug}/${location.slug}`, anchorText: `${industry.name} in ${location.city}`, context: 'Industry-location' },
     { url: '/#ai-crawler', anchorText: 'Get Free Analysis', context: 'Lead magnet' },
+    ...apacSiblings.slice(0, 3).map((p) => ({
+      url: p.url,
+      anchorText: p.title,
+      context: 'APAC / regional hub',
+    })),
   ];
   
   const relatedPages: RelatedPage[] = [
     { url: `/for/${persona.slug}`, title: `SEO for ${persona.name}s`, playbook: 'personas', relevanceScore: 90 },
     { url: `/industries/${industry.slug}`, title: `${industry.name} SEO`, playbook: 'personas', relevanceScore: 90 },
     { url: `/ai-seo-agency/${location.slug}`, title: `SEO in ${location.city}`, playbook: 'locations', relevanceScore: 85 },
+    { url: `/for/${persona.slug}/${industry.slug}`, title: `${persona.name}s in ${industry.name}`, playbook: 'personas', relevanceScore: 88 },
+    ...apacSiblings,
   ];
   
   const schema: SchemaData = {
@@ -1069,8 +1198,8 @@ export function generatePersonaIndustryLocationPage(
     slug,
     playbookType: 'personas',
     seo: {
-      title: `${industry.name} SEO for ${persona.name}s in ${location.city} | AI-Powered | Anthroly`,
-      metaDescription: `AI SEO for ${persona.name.toLowerCase()}s in ${location.city} ${industry.name.toLowerCase()}. Get 15 blogs/month, 15–25 backlinks, and industry-specific optimization.`,
+      title: `Best ${industry.name} SEO for ${persona.name}s in ${location.city} (2026)`,
+      metaDescription: `${persona.name}s in ${location.city} ${industry.name.toLowerCase()}: rank in Google and get cited in ChatGPT. Local facts, role-specific answers, and a human-led system.`,
       primaryKeyword: `${industry.name.toLowerCase()} seo ${persona.slug.replace(/-/g, ' ')} ${location.city.toLowerCase()}`,
       secondaryKeywords: [
         `${persona.name.toLowerCase()} seo ${location.city.toLowerCase()}`,
@@ -1080,6 +1209,7 @@ export function generatePersonaIndustryLocationPage(
     },
     content: {
       h1: `${industry.name} SEO for ${persona.name}s in ${location.city}`,
+      directAnswer,
       introduction: `You're a ${persona.title} in ${location.city}'s ${industry.name.toLowerCase()} sector. ${location.localInsights[0]} This intersection of role, industry, and location creates specific SEO challenges—and opportunities. Anthroly's managed SEO service delivers precisely targeted organic growth for ${persona.name}s like you.`,
       sections,
       faq,
