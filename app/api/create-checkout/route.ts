@@ -49,7 +49,7 @@ async function createCheckout(request: NextRequest): Promise<NextResponse> {
             product_data: {
               name: `${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME}`,
               description:
-                'Starts setting up both AI agents (1,000 emails/day + 24/7 backlinks). Only 10 slots. $1,000 one-time when you are happy. Then $500/month to run them with daily updates. Not happy? We refund the $1,000.',
+                'Start fee to claim a slot and begin building both AI agents (1,000 emails/day + 24/7 backlinks). Only 10 slots. $1,000 go-live fee when you are happy. Then $500/month to run them with daily updates. Not happy? We refund the $1,000 go-live fee.',
             },
           },
         },

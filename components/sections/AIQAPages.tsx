@@ -12,17 +12,16 @@ import {
 } from 'lucide-react';
 import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from '../ui/button';
-import Link from 'next/link';
 import { GlowPulse } from '../ui/static-fx';
 
 export const AIQAPages = () => {
 
-  const aiEngines = [
-    { name: "ChatGPT", description: "400M+ weekly users" },
-    { name: "Claude", description: "Growing rapidly" },
-    { name: "Perplexity", description: "10M+ daily searches" },
-    { name: "Gemini", description: "Google's AI search" },
-    { name: "Google AI Overview", description: "Billions of searches" },
+  const objections = [
+    { name: "Price", description: "Too expensive / later" },
+    { name: "Timing", description: "Not this quarter" },
+    { name: "Incumbent", description: "We already have a vendor" },
+    { name: "Trust", description: "Never heard of you" },
+    { name: "Busy", description: "No time for a call" },
   ];
 
   const features = [
@@ -39,7 +38,7 @@ export const AIQAPages = () => {
     {
       icon: Bot,
       title: "Agent-ready copy",
-      description: "Short, specific, human. The kind of email you'd send if you had 8 hours and only 10 accounts."
+      description: "Short, specific, human. The kind of email you'd send if you had time for ten accounts, not a thousand."
     },
     {
       icon: TrendingUp,
@@ -48,13 +47,13 @@ export const AIQAPages = () => {
     },
   ];
 
-  const exampleQuestions = [
-    "What is [your service] and how does it work?",
-    "How much does [your product] cost?",
-    "What are the benefits of [your solution]?",
-    "[Your product] vs competitors comparison",
-    "Best [your category] for [use case]",
-    "How to choose a [your industry] provider",
+  const exampleObjections = [
+    "We already have someone for this",
+    "Not in the budget this quarter",
+    "Send me something and I'll look later",
+    "How is this different from [incumbent]?",
+    "Who else in [category] uses you?",
+    "Can we start with a smaller test?",
   ];
 
   return (
@@ -114,13 +113,13 @@ export const AIQAPages = () => {
             <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
                 <Bot className="text-purple-400" size={24} />
-                AI Engines We Optimize For
+                Objections the agent already handled
               </h3>
               <div className="space-y-3">
-                {aiEngines.map((engine, index) => (
+                {objections.map((item, index) => (
                   <div key={index} className="flex items-center justify-between p-3 bg-black/30 rounded-xl">
-                    <span className="text-white font-medium">{engine.name}</span>
-                    <span className="text-purple-300 text-sm">{engine.description}</span>
+                    <span className="text-white font-medium">{item.name}</span>
+                    <span className="text-purple-300 text-sm">{item.description}</span>
                   </div>
                 ))}
               </div>
@@ -130,11 +129,11 @@ export const AIQAPages = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">$216</div>
-                <div className="text-xs text-gray-500">Upfront</div>
+                <div className="text-xs text-gray-500">Start fee</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">$1,000</div>
-                <div className="text-xs text-gray-500">When you&apos;re happy</div>
+                <div className="text-xs text-gray-500">Go-live</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">$500</div>
@@ -147,10 +146,10 @@ export const AIQAPages = () => {
         {/* Example Questions Section */}
         <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            Example Questions We&apos;ll Create Pages For
+            Objections the follow-up already answers
           </h3>
           <div className="grid md:grid-cols-2 gap-3">
-            {exampleQuestions.map((question, index) => (
+            {exampleObjections.map((question, index) => (
               <div 
                 key={index}
                 className="flex items-center gap-3 p-4 bg-gray-900/50 border border-gray-800 rounded-xl"
@@ -161,42 +160,42 @@ export const AIQAPages = () => {
             ))}
           </div>
           <p className="text-center text-gray-500 text-sm mt-4">
-            We research the exact questions being asked about your industry and create optimized pages for each one.
+            We lock your real objections during the start fee — then the outreach agent uses them in every sequence.
           </p>
         </div>
 
         {/* How It Works */}
         <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 opacity-100 translate-y-0`}>
           <div className="p-8 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-purple-500/10 border border-purple-500/20 rounded-3xl">
-            <h3 className="text-2xl font-bold text-center mb-8">How AI Q&A Pages Work</h3>
+            <h3 className="text-2xl font-bold text-center mb-8">How objection-ready copy ships</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">1. Research</div>
-                <p className="text-xs text-gray-500">We find the questions people ask about your industry</p>
+                <div className="text-sm font-semibold text-white mb-2">1. Lock objections</div>
+                <p className="text-xs text-gray-500">We map why your buyers actually go silent</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircleQuestion className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">2. Create</div>
-                <p className="text-xs text-gray-500">We write AI-optimized Q&A pages with proper structure</p>
+                <div className="text-sm font-semibold text-white mb-2">2. Write angles</div>
+                <p className="text-xs text-gray-500">Short, specific replies in your voice — not a template dump</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">3. Publish</div>
-                <p className="text-xs text-gray-500">Pages go live on your site with schema markup</p>
+                <div className="text-sm font-semibold text-white mb-2">3. Load the agent</div>
+                <p className="text-xs text-gray-500">Sequences use those answers in every follow-up</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="text-purple-400" size={24} />
                 </div>
-                <div className="text-sm font-semibold text-white mb-2">4. Get Cited</div>
-                <p className="text-xs text-gray-500">AI engines start citing your content as a source</p>
+                <div className="text-sm font-semibold text-white mb-2">4. You take the reply</div>
+                <p className="text-xs text-gray-500">When they write back, it lands with you</p>
               </div>
             </div>
           </div>
@@ -205,7 +204,7 @@ export const AIQAPages = () => {
         {/* CTA */}
         <div className={`text-center transition-all duration-1000 delay-400 opacity-100 translate-y-0`}>
           <p className="text-gray-400 mb-6">
-            Start with the $216 initial fee. Only 10 slots. We set up the agents; you pay $1,000 once you are happy. Then $500/month to run them with daily updates.
+            Start with the $216 start fee. We set up the agents; you pay $1,000 go-live once you are happy. Then $500/month to run them with daily updates.
           </p>
           <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
             <Button 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Users, Sparkles, TrendingUp, Shield, Clock } from 'lucide-react';
-import { GlowPulse, GradientBeam, SpotlightCard } from '../ui/static-fx';
-import { CONNECT_FEE_LABEL, PACKAGE_RETAINER, PACKAGE_SETUP } from '@/lib/site';
+import { GlowPulse, GradientBeam } from '../ui/static-fx';
+import { CONNECT_FEE_LABEL, DIAGNOSTIC_NAME, IDENTITY_LINE, PACKAGE_RETAINER, PACKAGE_SETUP, SETUP_REFUND_NOTE, SPRINT_NAME } from '@/lib/site';
 
 export const FoundingMembers = () => {
 
@@ -18,13 +18,13 @@ export const FoundingMembers = () => {
     },
     {
       icon: Shield,
-      title: "$216 to start. $1,000 when you are happy.",
-      description: "Then $500/month to maintain and run both agents — with daily updates. Not happy at any point? We refund the $1,000 setup fee."
+      title: `${CONNECT_FEE_LABEL} start fee. ${PACKAGE_SETUP} go-live when you are happy.`,
+      description: `Then ${PACKAGE_RETAINER}/month to maintain and run both agents — with daily updates. ${SETUP_REFUND_NOTE}`
     },
     {
       icon: Sparkles,
       title: "Two agents, not two jobs",
-      description: "1,000 emails a day. High-quality backlinks 24/7. You stay the founder. They hunt."
+      description: `1,000 emails a day. High-quality backlinks 24/7. ${IDENTITY_LINE}`
     }
   ];
 
@@ -45,17 +45,18 @@ export const FoundingMembers = () => {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <div className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-full text-sm font-bold shadow-lg">
                   <Clock size={16} />
-                  <span>Only {COHORT_SLOTS} slots this round</span>
+                  <span>We run the agents. You stay the founder.</span>
                 </div>
               </div>
 
               {/* Header */}
               <div className="text-center mb-10 pt-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Only 10 people. We run the agents.
+                  Two agents. One human team.
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  {CONNECT_FEE_LABEL} starts the setup. Once you are happy, a {PACKAGE_SETUP} one-time setup fee.
+                  {CONNECT_FEE_LABEL} {DIAGNOSTIC_NAME.toLowerCase()} claims a slot and we begin building.
+                  Once you are happy, a {PACKAGE_SETUP} {SPRINT_NAME.toLowerCase()}.
                   Then {PACKAGE_RETAINER}/month to run both agents — with a daily update. Not a dashboard you log into alone.
                 </p>
               </div>

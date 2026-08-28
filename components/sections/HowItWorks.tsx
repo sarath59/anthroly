@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Link2, Zap, ArrowRight, Check } from 'lucide-react';
 import { GlowPulse } from '../ui/static-fx';
-import { GROWTH_PILLARS, SLOTS_LINE, STORY_LINE, SYSTEM_NAME } from '@/lib/site';
+import { GROWTH_PILLARS, STORY_LINE, SYSTEM_NAME } from '@/lib/site';
 
 const ICONS = [Mail, Link2, Zap];
 const COLORS = ['emerald', 'cyan', 'orange'] as const;
@@ -16,7 +16,7 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
-            {SYSTEM_NAME} · only 10 slots
+            {SYSTEM_NAME}
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Two agents.{' '}
@@ -25,7 +25,7 @@ export const HowItWorks = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            {SLOTS_LINE} Cold email without links is ignored. Links without a pipeline are a trophy case. We run both — every day, including the days you don&apos;t.
+            Cold email without links is ignored. Links without a pipeline are a trophy case. We run both — every day, including the days you don&apos;t.
           </p>
           <p className="text-sm text-gray-500">{STORY_LINE}</p>
         </div>

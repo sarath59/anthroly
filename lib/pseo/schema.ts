@@ -62,11 +62,14 @@ export function generateOrganizationSchema(): object {
     },
     image: absoluteUrl('/logo.png'),
     description:
-      'Anthroly sets up and runs two AI agents for clients: a lead-gen outreach agent that sends 1,000 personalized cold emails a day, and a 24/7 high-quality backlink agent. You stay in the founder seat.',
-    slogan: 'Two agents that never clock out so you don\'t have to.',
+      'Anthroly sets up and runs two AI agents for clients: a lead-gen outreach agent that sends 1,000 personalized cold emails a day, and a 24/7 high-quality backlink agent. You stay the founder. They hunt.',
+    slogan: 'You stay the founder. They hunt.',
     foundingDate: '2024',
     email: 'sharatth@anthroly.com',
     knowsAbout: [
+      'AI lead generation',
+      'cold email outreach',
+      'editorial link building',
       'Answer Engine Optimization',
       'Generative Engine Optimization',
       'AI lead generation',

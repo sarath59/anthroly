@@ -1,81 +1,69 @@
 import React from 'react';
-import { Share2, Linkedin, Twitter, BookOpen, TrendingUp, Users, CheckCircle2, Eye, MessageSquare } from 'lucide-react';
-import { LogoStrip, SOCIAL_PLATFORMS } from '../ui/CompanyLogos';
+import { Mail, RefreshCw, ShieldCheck, TrendingUp, Users, CheckCircle2, MessageSquare } from 'lucide-react';
 import { GlowPulse } from '../ui/static-fx';
+import { DAILY_UPDATE_LINE } from '@/lib/site';
 
 export const SocialArticles = () => {
 
-  const platforms = [
+  const sequences = [
     {
-      icon: Linkedin,
-      name: "LinkedIn",
+      icon: Mail,
+      name: "First touch",
       color: "bg-blue-600",
-      description: "Thought leadership articles that position you as an industry expert",
-      stats: "4.2K avg views"
+      description: "A personalized reason to write — not a template with a first name pasted in.",
     },
     {
-      icon: Twitter,
-      name: "X (Twitter)",
+      icon: RefreshCw,
+      name: "Bump-back",
       color: "bg-black",
-      description: "Engaging threads that spark conversations and build your following",
-      stats: "8.5K avg impressions"
+      description: "The agent follows up until they reply or we kill it. You do not babysit the thread.",
     },
     {
-      icon: BookOpen,
-      name: "Medium",
+      icon: ShieldCheck,
+      name: "Proof in the thread",
       color: "bg-green-600",
-      description: "In-depth articles that rank on Google and establish domain authority",
-      stats: "2.1K avg reads"
+      description: "When a high-quality link lands, the next email can cite it. Cold stops feeling cold.",
     }
   ];
 
   return (
     <section id="social" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
-      {/* Background */}
       <GlowPulse className="bottom-1/3 left-0" color="blue" size={500} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(59,130,246,0.05)_0%,_transparent_50%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
-            <Share2 size={16} />
+            <Mail size={16} />
             <span>Follow-ups your prospects actually read</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             The outreach agent doesn&apos;t send once and hope.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Not “20 LinkedIn posts.”</span> Sequences, bump-backs, and proof in the thread. The agent follows up until they reply or we kill it. You take the conversation.
+            <span className="text-white font-semibold">Not a social calendar.</span> Sequences, bump-backs, and proof in the thread. The agent follows up until they reply or we kill it. You take the conversation.
           </p>
         </div>
 
-        {/* Platform Cards */}
         <div className={`grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
-          {platforms.map((platform, index) => {
-            const Icon = platform.icon;
+          {sequences.map((item, index) => {
+            const Icon = item.icon;
             return (
               <div 
                 key={index}
                 className="bg-gray-900/80 rounded-2xl p-6 border border-gray-800 hover:border-blue-500/30 transition-all duration-300 group"
               >
-                <div className={`w-14 h-14 ${platform.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div className={`w-14 h-14 ${item.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <Icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{platform.name}</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">{platform.description}</p>
-                <div className="flex items-center gap-2 text-sm text-emerald-400 font-semibold">
-                  <Eye size={16} />
-                  <span>{platform.stats}</span>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                <p className="text-gray-400 leading-relaxed">{item.description}</p>
               </div>
             );
           })}
         </div>
 
-        {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Left: Why It Matters */}
           <div className={`transition-all duration-1000 delay-300 opacity-100 translate-x-0`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Why follow-up volume beats founder willpower
@@ -88,8 +76,8 @@ export const SocialArticles = () => {
                     <TrendingUp className="text-blue-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">AI Reads Everything</h4>
-                    <p className="text-gray-400 text-sm">ChatGPT and Claude pull information from LinkedIn articles, X threads, and Medium posts. Being visible there means being recommended more often.</p>
+                    <h4 className="font-bold text-white mb-1">Most deals die in silence</h4>
+                    <p className="text-gray-400 text-sm">The first email is rarely the one they answer. The agent keeps the thread alive so you do not have to remember who went quiet on Tuesday.</p>
                   </div>
                 </div>
               </div>
@@ -100,8 +88,8 @@ export const SocialArticles = () => {
                     <Users className="text-purple-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">Build Authority Signals</h4>
-                    <p className="text-gray-400 text-sm">When your content appears across multiple high-authority platforms, search engines trust you more. It&apos;s called E-E-A-T (Experience, Expertise, Authoritativeness, Trust).</p>
+                    <h4 className="font-bold text-white mb-1">Kill-switch is human</h4>
+                    <p className="text-gray-400 text-sm">Personalized. No junk. If a sequence should stop, we stop it. Volume without a kill-switch is how domains die.</p>
                   </div>
                 </div>
               </div>
@@ -112,101 +100,80 @@ export const SocialArticles = () => {
                     <MessageSquare className="text-emerald-400" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white mb-1">Engagement Drives Rankings</h4>
-                    <p className="text-gray-400 text-sm">High engagement on social platforms sends positive signals to search engines. More likes, comments, and shares = higher rankings.</p>
+                    <h4 className="font-bold text-white mb-1">You take the conversation</h4>
+                    <p className="text-gray-400 text-sm">{DAILY_UPDATE_LINE} When they write back, it lands with you.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Sample Content */}
           <div className={`transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <div className="bg-black text-white rounded-3xl p-6 md:p-8">
-              <h3 className="text-xl font-bold mb-6">What We Create For You</h3>
+              <h3 className="text-xl font-bold mb-6">What a sequence actually looks like</h3>
               
               <div className="space-y-4">
-                {/* LinkedIn */}
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
                   <div className="flex items-center gap-2 mb-2">
-                    <Linkedin className="text-blue-400" size={18} />
-                    <span className="text-sm text-gray-400">LinkedIn Article</span>
+                    <Mail className="text-blue-400" size={18} />
+                    <span className="text-sm text-gray-400">Email 1 · First touch</span>
                   </div>
-                  <p className="text-white font-medium mb-2">&quot;Why 80% of SaaS Companies Fail at SEO (And How to Be in the 20%)&quot;</p>
+                  <p className="text-white font-medium mb-2">&quot;Saw [specific reason]. Worth a 15-minute look?&quot;</p>
                   <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <span>2,400 words</span>
+                    <span>Personalized</span>
                     <span>•</span>
-                    <span>SEO-optimized</span>
-                    <span>•</span>
-                    <span>Includes CTA</span>
+                    <span>One ask</span>
                   </div>
                 </div>
 
-                {/* X Thread */}
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
                   <div className="flex items-center gap-2 mb-2">
-                    <Twitter className="text-white" size={18} />
-                    <span className="text-sm text-gray-400">X Thread</span>
+                    <RefreshCw className="text-white" size={18} />
+                    <span className="text-sm text-gray-400">Email 2–4 · Bump-backs</span>
                   </div>
-                  <p className="text-white font-medium mb-2">&quot;I analyzed 500 top-ranking pages. Here&apos;s what they all have in common (Thread) 🧵&quot;</p>
+                  <p className="text-white font-medium mb-2">&quot;Still the wrong time — or the wrong thread?&quot;</p>
                   <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <span>12 tweets</span>
+                    <span>Until they reply</span>
                     <span>•</span>
-                    <span>Engagement hooks</span>
-                    <span>•</span>
-                    <span>Data-driven</span>
+                    <span>Or we kill it</span>
                   </div>
                 </div>
 
-                {/* Medium */}
                 <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
                   <div className="flex items-center gap-2 mb-2">
-                    <BookOpen className="text-green-400" size={18} />
-                    <span className="text-sm text-gray-400">Medium Post</span>
+                    <ShieldCheck className="text-green-400" size={18} />
+                    <span className="text-sm text-gray-400">Proof · When a link lands</span>
                   </div>
-                  <p className="text-white font-medium mb-2">&quot;The Complete Guide to AI-Powered SEO in 2026&quot;</p>
+                  <p className="text-white font-medium mb-2">&quot;New editorial mention landed — here is why this is not a cold pitch.&quot;</p>
                   <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <span>3,500 words</span>
+                    <span>Authority in the thread</span>
                     <span>•</span>
-                    <span>Top publication</span>
-                    <span>•</span>
-                    <span>Backlinks included</span>
+                    <span>No junk links</span>
                   </div>
                 </div>
               </div>
 
-              {/* Output */}
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Monthly output:</span>
-                  <span className="text-emerald-400 font-bold">15 social articles across all platforms</span>
+                  <span className="text-gray-400">You do:</span>
+                  <span className="text-emerald-400 font-bold">Take the conversation</span>
                 </div>
               </div>
             </div>
 
-            {/* Benefits */}
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>All content written in your brand voice</span>
+                <span>Written in your voice. Approved by you.</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>Scheduled and published automatically</span>
+                <span>Follow-ups that do not forget, freeze, or get tired</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="text-blue-400 flex-shrink-0" size={18} />
-                <span>Repurposed from your blog content for efficiency</span>
+                <span>Replies routed to you — the agent hunts, you close</span>
               </div>
-            </div>
-
-            {/* Social Platforms */}
-            <div className="mt-8">
-              <LogoStrip 
-                companies={SOCIAL_PLATFORMS} 
-                label="Published across"
-                size="sm"
-              />
             </div>
           </div>
         </div>

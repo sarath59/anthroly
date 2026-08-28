@@ -51,15 +51,15 @@ export const AIVisibilityMonitor = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 py-6">
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">89</div>
-                <div className="text-sm text-gray-500">Sends today</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">1,000</div>
+                <div className="text-sm text-gray-500">Sends today (cap)</div>
                 <div className="flex items-center gap-1 mt-2 text-emerald-400 text-xs">
                   <TrendingUp size={12} />
-                  <span>+12 this week</span>
+                  <span>Personalized cold email</span>
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">5</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">2</div>
                 <div className="text-sm text-gray-500">Agents running</div>
                 <div className="flex items-center gap-1 mt-2 text-emerald-400 text-xs">
                   <TrendingUp size={12} />
@@ -67,19 +67,19 @@ export const AIVisibilityMonitor = () => {
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">156</div>
-                <div className="text-sm text-gray-500">Replies routed</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">Inbox</div>
+                <div className="text-sm text-gray-500">Replies routed to you</div>
                 <div className="flex items-center gap-1 mt-2 text-blue-400 text-xs">
                   <BarChart3 size={12} />
-                  <span>Monitoring 24/7</span>
+                  <span>You take the conversation</span>
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">3</div>
-                <div className="text-sm text-gray-500">Alerts Today</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">Watch</div>
+                <div className="text-sm text-gray-500">Deliverability + kill-switch</div>
                 <div className="flex items-center gap-1 mt-2 text-orange-400 text-xs">
                   <Bell size={12} />
-                  <span>Action needed</span>
+                  <span>Humans own the stop button</span>
                 </div>
               </div>
             </div>
@@ -90,14 +90,14 @@ export const AIVisibilityMonitor = () => {
               <div className="flex items-start gap-3 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                 <CheckIcon className="text-emerald-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Outreach agent: 1,000 personalized emails sent · 14 replies routed</p>
+                  <p className="text-sm text-white">Outreach agent: personalized emails sent · replies routed to you</p>
                   <p className="text-xs text-gray-500 mt-1">2 hours ago</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl">
                 <TrendingUp size={18} className="text-blue-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Backlink agent: editorial placement landed on DR 82 publication</p>
+                  <p className="text-sm text-white">Backlink agent: editorial placement landed — quality filter passed</p>
                   <p className="text-xs text-gray-500 mt-1">5 hours ago</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const AIVisibilityMonitor = () => {
         <div className={`mt-12 transition-all duration-1000 delay-500 opacity-100 translate-y-0`}>
           <LogoStrip 
             companies={AI_COMPANIES} 
-            label="24/7 monitoring across"
+            label="Models and tools both agents run on"
             size="sm"
           />
         </div>

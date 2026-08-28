@@ -38,7 +38,7 @@ export const GrowthHacks = () => {
         "1,000 emails/day on their offer",
         "Backlink agent for their domain",
         "Daily updates you can forward",
-        "Only 10 slots — white-label if it fits"
+        "White-label if it fits"
       ]
     }
   ];

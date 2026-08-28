@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-  description: "Two AI agents we set up and run: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 initial fee. $1,000 one-time when you are happy. Then $500/month with daily updates. Unhappy? We refund the $1,000.",
+  description: "Two AI agents we set up and run: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee to claim a slot. $1,000 go-live when you are happy. Then $500/month with daily updates. Unhappy? We refund the $1,000 go-live fee.",
   keywords: ["AI outreach agent", "cold email", "lead generation", "backlink agent", "link building", "1000 emails a day", "AI SEO", "founder pipeline"],
   robots: {
     index: true,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 to start setup. $1,000 one-time when you are happy. Then $500/month. Unhappy? We refund the $1,000.",
+    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee. $1,000 go-live when you are happy. Then $500/month. Unhappy? We refund the $1,000 go-live fee.",
     url: absoluteUrl('/'),
     siteName: 'Anthroly',
     type: 'website',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 to start setup. $1,000 one-time when you are happy. Then $500/month. Unhappy? We refund the $1,000.",
+    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee. $1,000 go-live when you are happy. Then $500/month. Unhappy? We refund the $1,000 go-live fee.",
     images: [absoluteUrl('/logo.png')],
   },
   icons: {

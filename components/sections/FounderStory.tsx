@@ -88,8 +88,7 @@ export const FounderStory = () => {
 
                 <p>
                   <span className="text-white font-medium">So I built Anthroly.</span> Two AI agents we set up and run: 
-                  1,000 personalized cold emails a day, and a 24/7 high-quality backlink hunter. 
-                  Only 10 slots, because we actually operate them — not a dashboard we sell to everyone.
+                  1,000 personalized cold emails a day, and a 24/7 high-quality backlink hunter. We operate them ourselves — not a dashboard we sell to everyone.
                 </p>
 
                 <p className="text-emerald-400 font-medium">

@@ -16,7 +16,7 @@ import {
   Link2,
 } from 'lucide-react';
 import { GlowPulse } from '../ui/static-fx';
-import { CORE_OUTCOME, PACKAGE_RETAINER, PACKAGE_SETUP, SYSTEM_NAME } from '@/lib/site';
+import { CORE_OUTCOME, IDENTITY_LINE, PACKAGE_RETAINER, PACKAGE_SETUP, SYSTEM_NAME } from '@/lib/site';
 
 export const GuaranteedResults = () => {
 
@@ -71,19 +71,19 @@ export const GuaranteedResults = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Shield size={16} />
-            <span>Setup you only pay for when you sign off</span>
+            <span>Go-live fee you only pay when you sign off</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             What {PACKAGE_SETUP} actually buys
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            {CORE_OUTCOME} Only 10 slots. The {SYSTEM_NAME} are two machines we set up and operate. <span className="text-white font-semibold">You approve. They hunt.</span>
+            {CORE_OUTCOME} The {SYSTEM_NAME} are two machines we set up and operate. <span className="text-white font-semibold">{IDENTITY_LINE}</span>
           </p>
         </div>
 
         <div className={`mb-16 transition-all duration-1000 delay-100 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span>📦 What setup actually ships</span>
+            <span>What the go-live fee actually ships</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             {sprintDeliverables.filter((d) => d.highlight).map((item, index) => (
@@ -221,7 +221,7 @@ export const GuaranteedResults = () => {
               If you are not happy at any point in this process, you get:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
-              <span>The {PACKAGE_SETUP} setup fee back. In full.</span>
+              <span>The {PACKAGE_SETUP} go-live fee back. In full.</span>
             </div>
           </div>
         </div>

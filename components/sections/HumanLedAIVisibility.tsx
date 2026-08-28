@@ -172,8 +172,8 @@ export const HumanLedAIVisibility = () => {
             </p>
             <p>
               Our team sets up and operates the lead-gen agent across your ICP — and pairs it with{' '}
-              <Link href="/aeo" className="text-emerald-400 underline-offset-4 hover:underline">
-                the rest of the program
+              <Link href="/#citation-neighbors" className="text-emerald-400 underline-offset-4 hover:underline">
+                the 24/7 backlink agent
               </Link>
               .
             </p>
@@ -214,14 +214,7 @@ export const HumanLedAIVisibility = () => {
             </h3>
             <p className="mt-5 text-lg leading-relaxed text-gray-400">
               Pipeline isn&apos;t something you batch on Sunday. That&apos;s why we run a continuous
-              outreach agent—the managed alternative to yet another{' '}
-              <Link
-                href="/aeo/aeo-vs-seo-vs-geo"
-                className="text-emerald-400 underline-offset-4 hover:underline"
-              >
-                AEO
-              </Link>{' '}
-              dashboard.
+              outreach agent—the managed alternative to yet another SDR dashboard.
             </p>
             <p className="mt-4 leading-relaxed text-gray-400">
               Our operators monitor sends, replies, and bounce risk, then keep the agent hunting —

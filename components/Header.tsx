@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { BOOK_CALL_URL, COHORT_SLOTS, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { Button } from './ui/button';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
@@ -66,6 +66,10 @@ export const Header = () => {
             </Link>
             
             <div className="w-px h-6 bg-white/10 mx-2"></div>
+
+            <span className="hidden lg:inline text-xs font-semibold text-emerald-400 mr-2">
+              Only {COHORT_SLOTS} slots
+            </span>
             
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
               <Button 
@@ -126,6 +130,7 @@ export const Header = () => {
             >
               Free Tools
             </Link>
+            <p className="px-4 py-2 text-xs font-semibold text-emerald-400">Only {COHORT_SLOTS} slots</p>
             <div className="pt-2">
               <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button 

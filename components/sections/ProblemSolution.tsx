@@ -113,8 +113,8 @@ export const ProblemSolution = () => {
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">{CONNECT_FEE_LABEL} starts setup. {PACKAGE_SETUP} one-time when you are happy. {PACKAGE_RETAINER}/mo after.</p>
-                  <p className="text-gray-400">{CONNECT_FEE_LABEL} is the initial fee to start setting up both agents. Once you sign off, a {PACKAGE_SETUP} one-time setup fee. Then {PACKAGE_RETAINER}/month to run them with daily updates. Not happy at any point? We refund the {PACKAGE_SETUP}.</p>
+                  <p className="font-bold text-lg">{CONNECT_FEE_LABEL} start fee. {PACKAGE_SETUP} go-live when you are happy. {PACKAGE_RETAINER}/mo after.</p>
+                  <p className="text-gray-400">{CONNECT_FEE_LABEL} claims a slot and we begin building both agents. Once you sign off, a {PACKAGE_SETUP} go-live fee. Then {PACKAGE_RETAINER}/month to run them with daily updates. Not happy at any point? We refund the {PACKAGE_SETUP} go-live fee.</p>
                 </div>
               </li>
             </ul>

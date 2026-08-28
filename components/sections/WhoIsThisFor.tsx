@@ -62,7 +62,7 @@ export const WhoIsThisFor = () => {
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 mb-6">
-            <span>Only 10 slots. We actually run the agents.</span>
+            <span>We actually run the agents</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             You Need Pipeline, Not Another SDR Seat.
@@ -71,7 +71,7 @@ export const WhoIsThisFor = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">SaaS, agencies, consultants, professional services.</span> If you need conversations this quarter and cannot become the SDR or the link-builder — this is for you. Only 10 slots.
+            <span className="text-white font-semibold">SaaS, agencies, consultants, professional services.</span> If you need conversations this quarter and cannot become the SDR or the link-builder — this is for you.
           </p>
         </div>
 

@@ -169,63 +169,63 @@ function buildFaqs(): AgencyFaq[] {
   // ---------------------------------------------------------------------------
   add(
     'Getting Started',
-    'How is this different from other SEO agencies?',
-    'Traditional agencies often charge $2,000–$10,000/month and still ask you to be the operator. Anthroly sets up and runs two AI agents: 1,000 personalized cold emails a day, plus a 24/7 high-quality backlink agent. Start with $216. When setup is complete and you are happy: $1,000 setup + $500/month to maintain and run them, with daily updates. If you are not happy at any point, we refund the $1,000 setup fee.'
+    'How is this different from other agencies?',
+    'Traditional agencies often charge thousands per month and still ask you to be the operator. Anthroly sets up and runs two AI agents: a lead-gen outreach agent that sends up to 1,000 personalized cold emails a day, plus a 24/7 high-quality backlink agent (editorial only — not PBNs or junk). $216 start fee claims a slot and we begin building. When you are happy: $1,000 go-live fee + $500/month to run them, with daily updates. If you are not happy at any point, we refund the $1,000 go-live fee.'
   );
   add(
     'Getting Started',
-    'Is your content AI-generated spam? Who actually writes it?',
-    'No. We use a human-led, AI-assisted workflow. AI helps with research, outlines, and first drafts — then humans edit for accuracy, clarity, brand voice, and usefulness. We fact-check, add structure/schema where needed, and only publish content that meets a human quality bar (not “AI fluff”).'
+    'Is this spam? Who actually writes the emails?',
+    'No. Emails are personalized to your ICP. Humans own the kill-switch, quality filters, and voice. Agents do the hunting and follow-ups. We do not send junk, and the backlink agent does not buy PBNs or directory spam. If a sequence should stop, we stop it.'
   );
   add(
     'Getting Started',
-    'What kind of results can I expect in 30 days?',
-    'The Dual-Agent Setup is the implementation window: outreach agent sending 1,000 emails/day, backlink agent hunting 24/7, quality filters live. If you are not happy at any point, we refund the $1,000 setup fee. Results compound as both agents keep running.'
+    'What happens after I pay $216?',
+    'The $216 start fee claims a slot and we begin building both agents: ICP, inboxes, domains, sequences, and the link neighborhood. You pay the $1,000 go-live fee only when you are happy and both agents are live. Then $500/month to run them, with a daily update (sends, replies, whether a high-quality link landed). Results compound as both agents keep running — we do not promise a 30-day miracle number.'
   );
   add(
     'Getting Started',
     'Do you work with any industry?',
-    'Yes! We have worked with SaaS companies, e-commerce brands, service businesses, agencies, and more. Our strategists and writers adapt to your industry, competitors, and target keywords. Whether you are B2B or B2C, selling software or services, we tailor our approach to your market.'
+    'We work with SaaS, agencies, consultants, and professional services — founders who need conversations this quarter and cannot become the SDR or the link-builder. If your ICP can be reached by email and editorial links would make those emails land heavier, this is in scope. We lock ICP tightness during the start fee so the agent does not burn the domain.'
   );
   add(
     'Getting Started',
-    'What are AI Q&A Pages and how do they rank on AI search?',
-    'The outreach agent uses objection-handling copy and Q&A-style sequences so replies do not die in silence. Volume and angles are scoped in the $216 start fee and shipped in the $1,000 Dual-Agent Setup — not a fixed 15-pages-per-month quota.'
+    'What do the two agents actually do?',
+    'The outreach agent researches your ICP, writes personalized cold emails, and sends up to 1,000 a day with follow-ups that do not forget, freeze, or get tired. The backlink agent hunts, pitches, and earns high-quality editorial placements 24/7. Together they compound: links make emails convert; pipeline makes the links worth having. You stay the founder. They hunt.'
   );
   add(
     'Getting Started',
-    'What counts as an "AI brand mention" and how do you measure it?',
-    'We count a mention when an AI engine recommends your brand (name, domain, product, or clearly attributable reference) in response to relevant queries we track. We monitor across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overview using a consistent prompt set and log the outputs over time so you can verify the mentions week-by-week.'
+    'What does a daily update include?',
+    'Tomorrow\'s update looks like this: how many emails went out, how many people replied, and whether a high-quality link landed. That is the operating picture — not a monthly PDF of hope.'
   );
   add(
     'Getting Started',
     'Will these backlinks hurt my site? Are they safe?',
-    'Absolutely safe. We only build white-hat, editorial backlinks from real websites with genuine domain authority (DR 50-90, avg DR 70+). No PBNs, no link farms, no spammy directories. Every link is the kind that Google rewards, not penalizes. Our promise backs this up — if anything we do hurts your rankings, we will fix it immediately.'
+    'The backlink agent earns editorial placements only. No PBNs, no junk, no link farms. Humans QA quality. If a placement is not the kind that makes a cold email land heavier, it does not ship. If you are not happy at any point, we refund the $1,000 go-live fee.'
   );
   add(
     'Getting Started',
     'How much of my time does this require?',
-    'Almost none after onboarding. You give us one 30–45 minute founder interview per month. We turn it into LinkedIn posts, articles, newsletter, X, FAQ/AI-search content, and outreach. You do not sit around writing posts.'
+    'You approve ICP and voice. We set up, maintain, and run both agents. After onboarding you are not writing sequences or pitching editors on Sunday. Replies route to you so you take the conversation. You get a daily update.'
   );
   add(
     'Getting Started',
     'Can I see examples of your work?',
-    `Yes. The $216 Founder Growth Diagnostic includes a walkthrough of relevant case studies — real AI visibility work, content, and pipeline results for businesses similar to yours. Browse published stories at https://www.anthroly.com/customers.`
+    'Yes. Published customer stories at https://www.anthroly.com/customers are from prior AI-visibility work with Anthroly — related, not this dual-agent offer. This offer is the two agents we set up and run: 1,000 emails/day outreach plus a 24/7 high-quality backlink agent. Browse those stories for how we have worked with teams; the homepage is the current offer.'
   );
   add(
     'Getting Started',
     'What if it does not work for me?',
-    'If you are not happy at any point, we refund the $1,000 setup fee in full. The $216 starts setup. You pay $1,000 only when setup is complete and you sign off — then $500/month to run both agents with daily updates.'
+    'If you are not happy at any point, we refund the $1,000 go-live fee in full. The $216 start fee is how you claim a slot and we begin building. $500/month is for the month we already ran the agents. No call to “save” you. No leftover credit. The $1,000 comes back.'
   );
   add(
     'Getting Started',
     'Do you offer white-label services for agencies?',
-    'Yes! If you are an agency looking to offer SEO services to your clients, we can white-label everything we do. Your clients see your brand, you maintain the relationship, and we do all the work behind the scenes. This is perfect for agencies looking to scale their service offerings.'
+    'Agencies can take a slot. We set up and run both agents on the client offer; you keep the relationship. White-label if it fits — discussed when you claim a slot. This is not a dashboard we sell to every agency on the internet.'
   );
   add(
     'Getting Started',
     'How do I get started?',
-    'Start with $216 at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02. That unlocks dual-agent setup: 1,000 emails/day outreach plus a 24/7 backlink agent. When setup is complete and you are happy, it is $1,000 setup + $500/month to maintain and run them, with daily updates. If you are not happy at any point, we refund the $1,000. Email sharatth@anthroly.com if you need a receipt.'
+    'Claim a slot with the $216 start fee at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02. We begin building both agents. When you are happy: $1,000 go-live fee + $500/month to run them, with daily updates. If you are not happy at any point, we refund the $1,000 go-live fee. Email sharatth@anthroly.com if you need a receipt.'
   );
 
   add(
@@ -340,7 +340,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'About Anthroly',
     'What is Anthroly?',
-    'Anthroly runs the Founder AI Authority & Pipeline System. We help founders become easier to discover, trust, and contact in the AI era: AI search visibility (GEO), founder authority from one monthly interview, and AI-assisted lead generation. Humans do the work. Machines help us scale. Anthroly is not a self-serve dashboard.'
+    'Anthroly sets up and runs two AI agents for clients: a lead-gen outreach agent that sends up to 1,000 personalized cold emails a day, and a 24/7 high-quality backlink agent (editorial only — not PBNs or junk). $216 start fee claims a slot and we begin building. When you are happy: $1,000 go-live fee + $500/month to run them, with daily updates. You stay the founder. They hunt. Anthroly is not a self-serve dashboard.'
   );
   add(
     'About Anthroly',
@@ -380,37 +380,37 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Pricing & Engagement',
     'How much does Anthroly cost?',
-    'Only 10 slots. Start with $216 — the initial fee to start setting up both AI agents (1,000 emails/day outreach + 24/7 backlink hunter). Once you are happy: $1,000 one-time setup fee + $500/month to run them, with daily updates. If you are not happy at any point, we refund the $1,000.'
+    'Start with $216 — the start fee to claim a slot and begin building both AI agents (1,000 emails/day outreach + 24/7 backlink hunter). Once you are happy: $1,000 go-live fee + $500/month to run them, with daily updates. If you are not happy at any point, we refund the $1,000 go-live fee. $216 claims the slot. $500/month is for the month we already ran the agents.'
   );
   add(
     'Pricing & Engagement',
     'How do I get started with Anthroly?',
-    'Get started with $216 at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02, or email sharatth@anthroly.com. We set up both agents. You pay $1,000 only when setup is complete and you are happy, then $500/month to run them with daily updates. If you are not happy at any point, we refund the $1,000 setup fee.'
+    'Claim a slot with $216 at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02, or email sharatth@anthroly.com. We begin building both agents. You pay $1,000 go-live only when you are happy, then $500/month to run them with daily updates. If you are not happy at any point, we refund the $1,000 go-live fee.'
   );
   add(
     'Pricing & Engagement',
     'Does Anthroly offer a free AI visibility audit?',
-    'Anthroly offers a free crawler peek on the homepage (https://www.anthroly.com/#ai-crawler). The $216 Founder Growth Diagnostic is different: it starts dual-agent setup. You pay $1,000 only when setup is complete and you are happy. If you are not happy at any point, we refund the $1,000.'
+    'Anthroly offers a free readiness scan on the homepage (https://www.anthroly.com/#ai-crawler) — inboxes, domains, and link neighborhood before 1,000 emails/day. The $216 start fee is different: it claims a slot and we begin building both agents. You pay $1,000 go-live only when you are happy. If you are not happy at any point, we refund the $1,000 go-live fee.'
   );
   add(
     'Pricing & Engagement',
     'What is included in a typical Anthroly retainer?',
-    'The $500/month retainer is how we maintain and run both agents for you: 1,000 emails/day outreach, 24/7 backlink hunting, list refresh, deliverability watch, link quality QA, and a daily update. You stay in the founder seat.'
+    'The $500/month retainer is how we maintain and run both agents for you: 1,000 emails/day outreach, 24/7 backlink hunting, list refresh, deliverability watch, link quality QA, and a daily update. You stay the founder. They hunt.'
   );
   add(
     'Pricing & Engagement',
-    'What is the $216 Founder Growth Diagnostic?',
-    'The $216 Founder Growth Diagnostic is the initial fee to start setting up both AI agents. We lock ICP, inboxes, and the link neighborhood, then we build. You do not pay the $1,000 one-time setup fee until you are happy. Only 10 slots. Get started at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
+    'What is the $216 start fee?',
+    'The $216 start fee claims a slot and we begin building both AI agents. We lock ICP, inboxes, and the link neighborhood, then we build. You do not pay the $1,000 go-live fee until you are happy. Get started at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
   );
   add(
     'Pricing & Engagement',
-    'Is the $216 credited toward the $1,000 setup?',
-    'No. $216 is the upfront fee to start. You pay $1,000 only when setup is complete and you are happy. If you are not happy at any point, we refund the $1,000 setup fee in full.'
+    'Is the $216 credited toward the $1,000 go-live fee?',
+    'No. $216 is the start fee to claim a slot and begin building. You pay $1,000 go-live only when you are happy. If you are not happy at any point, we refund the $1,000 go-live fee in full.'
   );
   add(
     'Pricing & Engagement',
-    'What is included in the $1,000 Dual-Agent Setup?',
-    'Week 1: ICP, sending domains, warmup, competitor link map, guardrails. Week 2: outreach agent live at 1,000 emails/day with follow-ups and reply routing. Week 3: 24/7 backlink agent live with quality filters (no junk, no PBNs). Week 4: the loop — links feeding email proof, CRM wiring, kill-switch, operating cadence. You pay the $1,000 when this is complete and you are happy.'
+    'What is included in the $1,000 go-live fee?',
+    'The $1,000 is a one-time go-live fee charged when both agents are live and you sign off: outreach at 1,000 emails/day with follow-ups and reply routing, plus the 24/7 backlink agent with quality filters (no junk, no PBNs). The $216 start fee is what begins that build. Then $500/month to run them with daily updates. If you are not happy at any point, we refund the $1,000 go-live fee.'
   );
   add(
     'Services',

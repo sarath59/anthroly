@@ -48,7 +48,7 @@ export const FreeToolsBuilder = () => {
             20+ Free Tools. Use Them Now.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-8">
-            <span className="text-white font-semibold">The same utilities our agents lean on.</span> No signup. Then, if you take one of the 10 slots, we run the machines for you.
+            <span className="text-white font-semibold">The same utilities our agents lean on.</span> No signup. Use them now — or we run the machines for you.
           </p>
           <Link
             href="/tools"

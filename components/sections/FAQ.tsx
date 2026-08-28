@@ -46,7 +46,7 @@ export const FAQ = () => {
             Your Questions. Straight Answers.
           </h2>
           <p className="text-xl text-gray-400 mb-4">
-            No fluff. What the two agents do, what $216 starts, and why there are only 10 slots.
+            No fluff. What the two agents do, what $216 starts, and how $1,000 / $500 works.
           </p>
           <p className="text-sm text-gray-500">
             Prefer the full archive?{' '}

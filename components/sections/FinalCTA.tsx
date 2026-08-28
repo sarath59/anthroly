@@ -4,11 +4,11 @@ import {
   BOOK_CALL_URL,
   COHORT_SLOTS,
   CONNECT_FEE_LABEL,
-  CORE_OUTCOME,
-  DIAGNOSTIC_CREDIT_NOTE,
+  IDENTITY_LINE,
   PACKAGE_RETAINER,
   PACKAGE_SETUP,
   PRIMARY_CTA_LABEL,
+  SETUP_REFUND_NOTE,
   SLOTS_LINE,
   STORY_LINE,
   SYSTEM_NAME,
@@ -30,17 +30,17 @@ export const FinalCTA = () => {
         <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0`}>
           
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-            {CORE_OUTCOME.replace(/\.$/, '')}.
+            Your competitor already sent 1,000 emails today.
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
-            <span className="text-white font-semibold">{SYSTEM_NAME}.</span> Only {COHORT_SLOTS} slots. 1,000 emails a day. High-quality backlinks 24/7. You stay in the founder seat.
+            <span className="text-white font-semibold">{SYSTEM_NAME}.</span> 1,000 emails a day. High-quality backlinks 24/7. {IDENTITY_LINE}
           </p>
           <p className="text-sm text-gray-500 mb-12">{STORY_LINE}</p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "Only 10 slots",
+              `Only ${COHORT_SLOTS} slots`,
               "1,000 personalized emails / day",
               "Backlink agent hunting 24/7",
               "Daily updates. We run them."
@@ -62,12 +62,12 @@ export const FinalCTA = () => {
             
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
-                <Shield size={16} className="text-emerald-400" />
-                <span>{CONNECT_FEE_LABEL} to start · {PACKAGE_SETUP} when you are happy</span>
+                <Zap size={16} className="text-emerald-400" />
+                <span>{CONNECT_FEE_LABEL} start fee claims a slot</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap size={16} className="text-emerald-400" />
-                <span>Only {COHORT_SLOTS} slots · {CONNECT_FEE_LABEL} starts setup</span>
+                <Shield size={16} className="text-emerald-400" />
+                <span>{PACKAGE_SETUP} go-live — refunded if you are not happy</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} className="text-emerald-400" />
@@ -78,7 +78,7 @@ export const FinalCTA = () => {
 
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">{SLOTS_LINE}</span> {DIAGNOSTIC_CREDIT_NOTE}
+              <span className="text-white font-bold">{SLOTS_LINE}</span> {SETUP_REFUND_NOTE}
             </p>
           </div>
         </div>

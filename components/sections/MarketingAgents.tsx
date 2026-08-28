@@ -16,13 +16,12 @@ import {
   Megaphone,
   MessageSquare,
   Play,
-  Quote,
   Search,
   Sparkles,
   Target,
   Upload,
 } from 'lucide-react';
-import { BOOK_CALL_URL, COHORT_SLOTS, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { BOOK_CALL_URL, DAILY_UPDATE_LINE, PRIMARY_CTA_LABEL, SECONDARY_CTA_LABEL } from '@/lib/site';
 import { currentPageParam, DATAFAST_GOALS, trackGoal } from '@/lib/datafast';
 import { Button } from '../ui/button';
 import {
@@ -49,7 +48,7 @@ const PLATFORM_MODULES = [
     name: 'Reply Insights',
     tagline: 'See what lands, what bounces, and which angles book meetings.',
     detail: 'Track send volume, reply rate, spam risk, and the sequences that convert — so the agent gets smarter every week.',
-    href: '/aeo',
+    href: '/#features',
     icon: MessageSquare,
     color: 'cyan',
   },
@@ -65,7 +64,7 @@ const PLATFORM_MODULES = [
     name: 'Agent Analytics',
     tagline: 'Track every send and every placement as it happens.',
     detail: 'Live logs show volume, replies, bounces, and editorial links earned — not a monthly PDF of hope.',
-    href: '/aeo/engine/chatgpt',
+    href: '/#features',
     icon: BarChart3,
     color: 'blue',
   },
@@ -128,34 +127,34 @@ const TRY_AGENTS = [
 
 const RESOURCES = [
   {
-    label: 'Report',
-    title: 'AI Visibility Benchmark',
-    description: 'How brands are actually being cited across answer engines, with our own program data.',
-    href: '/reports/ai-visibility-benchmark',
+    label: 'Tools',
+    title: 'Free outreach & link tools',
+    description: 'The same utilities both agents lean on. Use them now — no signup.',
+    href: '/tools',
   },
   {
-    label: 'Playbook',
-    title: 'How to get cited in AI Overviews',
-    description: 'The exact structure, schema, and sourcing that makes a page quotable.',
-    href: '/aeo/how-to-get-cited-in-ai-overviews',
+    label: 'Pricing',
+    title: 'How $216 / $1,000 / $500 works',
+    description: 'Start fee claims a slot. Go-live when you are happy. Then we run them.',
+    href: '/#pricing',
   },
   {
-    label: 'Guides',
-    title: 'AEO vs SEO vs GEO',
-    description: 'What changed, what still works, and where to spend your next hour of effort.',
-    href: '/aeo/aeo-vs-seo-vs-geo',
+    label: 'How it works',
+    title: 'Two agents. One loop.',
+    description: 'Outreach at 1,000 emails/day. Backlinks 24/7. You stay the founder.',
+    href: '/#how-it-works',
   },
 ];
 
 const EXPLORE_COLUMNS = [
   {
-    heading: 'Platform',
+    heading: 'The agents',
     links: [
-      { label: 'Answer Engine Optimization', href: '/aeo' },
-      { label: 'AEO for ChatGPT', href: '/aeo/engine/chatgpt' },
-      { label: 'AEO for Claude', href: '/aeo/engine/claude' },
-      { label: 'AEO for Perplexity', href: '/aeo/engine/perplexity' },
-      { label: 'AI Overviews', href: '/aeo/engine/google-ai-overviews' },
+      { label: 'Outreach agent', href: '/#human-led-ai-visibility' },
+      { label: 'Backlink agent', href: '/#citation-neighbors' },
+      { label: 'How it works', href: '/#how-it-works' },
+      { label: 'Pricing', href: '/#pricing' },
+      { label: 'Free tools', href: '/tools' },
     ],
   },
   {
@@ -307,7 +306,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                See the {COHORT_SLOTS} slots
+                {SECONDARY_CTA_LABEL}
               </Button>
             </Link>
           </div>
@@ -522,32 +521,25 @@ export const MarketingAgents = () => {
           </StaggerContainer>
         </div>
 
-        {/* ── Testimonial ──────────────────────────────────────── */}
+        {/* ── What tomorrow's update looks like ────────────────── */}
         <ScrollReveal className="mx-auto mt-24 max-w-4xl md:mt-32">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-black/50 p-8 backdrop-blur md:p-12">
             <GlowPulse className="-right-20 -top-20" color="cyan" size={320} />
-            <Quote size={44} className="relative mb-6 text-emerald-400/40" />
-            <blockquote className="relative text-2xl font-semibold leading-snug text-white md:text-3xl">
-              &ldquo;Cold email used to be a Sunday chore. Now it&apos;s a machine that never clocks out.&rdquo;
-            </blockquote>
-            <div className="relative mt-8 flex flex-wrap items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 text-lg font-bold text-black">
-                GB
-              </div>
-              <div>
-                <p className="font-semibold text-white">George Bonaci</p>
-                <p className="text-sm text-gray-400">VP of Growth &amp; Demand</p>
-              </div>
-            </div>
+            <p className="relative mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
+              Daily update
+            </p>
+            <p className="relative text-2xl font-semibold leading-snug text-white md:text-3xl">
+              {DAILY_UPDATE_LINE}
+            </p>
             <p className="relative mt-8 rounded-2xl border border-white/10 bg-black/40 p-5 text-sm leading-relaxed text-gray-400">
-              <span className="font-semibold text-gray-200">Our part in this:</span> Anthroly was a
-              small piece of a much bigger program. We genuinely worked with this team—on outreach
-              and authority links—and we&apos;re not claiming credit for the whole result.
+              <span className="font-semibold text-gray-200">No fake quotes.</span> You get the numbers
+              we actually produce: sends, replies, and whether a high-quality editorial link landed.
+              We run both agents. You stay the founder.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* ── Free AEO report ──────────────────────────────────── */}
+        {/* ── Pipeline + backlink audit ────────────────────────── */}
         <ScrollReveal className="mx-auto mt-24 max-w-5xl md:mt-32">
           <div className="grid gap-8 rounded-3xl border border-white/10 bg-black/40 p-8 md:grid-cols-[1.05fr_0.95fr] md:p-12">
             <div>
@@ -570,7 +562,7 @@ export const MarketingAgents = () => {
                     website: (reportUrl || 'my website').slice(0, 255),
                   });
                   window.open(
-                    bookCallWith(`Free AEO report request for ${reportUrl || 'my website'}`),
+                    bookCallWith(`Pipeline + backlink audit request for ${reportUrl || 'my website'}`),
                     '_blank',
                     'noopener,noreferrer'
                   );
@@ -833,7 +825,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                See the {COHORT_SLOTS} slots
+                {SECONDARY_CTA_LABEL}
               </Button>
             </Link>
           </div>

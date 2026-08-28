@@ -24,7 +24,7 @@ export const AICrawlerAnalysis = () => {
     {
       icon: Zap,
       title: "Priority actions",
-      description: "A ranked list of what we lock first when your slot starts — setup, not a PDF"
+      description: "A ranked list of what we lock first when your slot starts — a build plan, not a PDF"
     }
   ];
 
@@ -101,8 +101,8 @@ export const AICrawlerAnalysis = () => {
                   <CheckCircle2 className="text-emerald-400" size={20} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">ChatGPT · Claude · Perplexity</div>
-                  <div className="text-xs text-gray-500">Surfaces we analyze</div>
+                  <div className="text-sm font-bold text-white">Inboxes · Domains · Links</div>
+                  <div className="text-xs text-gray-500">What we scan first</div>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const AICrawlerAnalysis = () => {
             <div className="mt-10">
               <LogoStrip 
                 companies={AI_COMPANIES} 
-                label="We analyze visibility on"
+                label="Models both agents can work with"
                 size="sm"
               />
             </div>

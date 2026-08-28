@@ -88,7 +88,7 @@ export const AIBacklinkAgents = () => {
                 <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
               <p className="text-gray-300">
-                Not happy at any point? We refund the <span className="text-white font-semibold">$1,000 setup fee</span>. Editorial only — no PBNs, no junk. The agent hunts 24/7. You get a daily update.
+                Not happy at any point? We refund the <span className="text-white font-semibold">$1,000 go-live fee</span>. Editorial only — no PBNs, no junk. The agent hunts 24/7. You get a daily update.
               </p>
             </div>
           </div>
