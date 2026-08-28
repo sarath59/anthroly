@@ -28,23 +28,23 @@ export const AIQAPages = () => {
   const features = [
     {
       icon: MessageCircleQuestion,
-      title: "Question-Answer Format",
-      description: "Structured content that AI engines love to cite. Each page answers specific questions your customers are asking."
+      title: "Objection library",
+      description: "The real reasons they don't reply — mapped once, used in every sequence."
     },
     {
       icon: Target,
-      title: "Intent-Optimized",
-      description: "We research what questions are being asked about your industry and create pages that directly answer them."
+      title: "Intent-matched angles",
+      description: "Different proof for a VP who just hired a competitor vs one who has never heard of you."
     },
     {
       icon: Bot,
-      title: "AI-First Structure",
-      description: "Schema markup, clear headings, concise answers, and source citations that make it easy for AI to quote you."
+      title: "Agent-ready copy",
+      description: "Short, specific, human. The kind of email you'd send if you had 8 hours and only 10 accounts."
     },
     {
       icon: TrendingUp,
-      title: "Dual Ranking",
-      description: "These pages rank on both Google AND AI search results. Double the visibility from a single piece of content."
+      title: "Reply routing",
+      description: "When they write back, it lands with you. The agent hunts. You take the conversation."
     },
   ];
 
@@ -75,16 +75,16 @@ export const AIQAPages = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Sparkles size={16} />
-            <span>🚀 NEW: AI-Optimized Q&A Pages</span>
+            <span>Every reply is an objection the agent already handled</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            15 Pages/Month That Rank on{' '}
+            Copy That Gets Replies, Not{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
-              AI Search Results
+              Silence
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            When someone asks ChatGPT or Perplexity about your industry, <span className="text-white font-semibold">you want to be the answer they cite</span>. We build Q&amp;A-style pages structured for AI-generated responses — and each page is <span className="text-white font-semibold">human-written and edited</span> before it goes live.
+            Prospects don&apos;t ghost because they hate you. They ghost because the email had no answer. <span className="text-white font-semibold">The outreach agent is trained on your objections</span> — price, timing, &quot;we already have a vendor&quot; — so the follow-up does the work you never have time for.
           </p>
         </div>
 
@@ -130,14 +130,14 @@ export const AIQAPages = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">$216</div>
-                <div className="text-xs text-gray-500">Diagnostic</div>
-              </div>
-              <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
-                <div className="text-3xl font-bold text-purple-400 mb-1">$1,500</div>
-                <div className="text-xs text-gray-500">30-day sprint</div>
+                <div className="text-xs text-gray-500">Upfront</div>
               </div>
               <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
                 <div className="text-3xl font-bold text-purple-400 mb-1">$1,000</div>
+                <div className="text-xs text-gray-500">When you&apos;re happy</div>
+              </div>
+              <div className="text-center p-4 bg-gray-900/50 border border-gray-800 rounded-2xl">
+                <div className="text-3xl font-bold text-purple-400 mb-1">$500</div>
                 <div className="text-xs text-gray-500">Then / month</div>
               </div>
             </div>
@@ -205,7 +205,7 @@ export const AIQAPages = () => {
         {/* CTA */}
         <div className={`text-center transition-all duration-1000 delay-400 opacity-100 translate-y-0`}>
           <p className="text-gray-400 mb-6">
-            Start with the $216 diagnostic. The sprint ships citation-ready Q&amp;A pages; we do not quote a mention quota.
+            Start with the $216 initial fee. Only 10 slots. We set up the agents; you pay $1,000 once you are happy. Then $500/month to run them with daily updates.
           </p>
           <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">
             <Button 

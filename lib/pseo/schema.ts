@@ -62,8 +62,8 @@ export function generateOrganizationSchema(): object {
     },
     image: absoluteUrl('/logo.png'),
     description:
-      'Anthroly runs the Founder AI Authority & Pipeline System: AI search visibility, founder authority, and qualified conversations — so brands become easier to discover, trust, and contact in the AI era. Humans do the work; machines help scale.',
-    slogan: 'Become easier to discover, trust, and contact in the AI era.',
+      'Anthroly sets up and runs two AI agents for clients: a lead-gen outreach agent that sends 1,000 personalized cold emails a day, and a 24/7 high-quality backlink agent. You stay in the founder seat.',
+    slogan: 'Two agents that never clock out so you don\'t have to.',
     foundingDate: '2024',
     email: 'sharatth@anthroly.com',
     knowsAbout: [
@@ -115,10 +115,10 @@ export function generateOrganizationSchema(): object {
       '@type': 'AggregateOffer',
       priceCurrency: 'USD',
       lowPrice: '216',
-      highPrice: '1500',
+      highPrice: '1000',
       offerCount: '3',
       name: SYSTEM_NAME,
-      description: `${SYSTEM_NAME}: ${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME}, ${PACKAGE_SETUP} ${SPRINT_NAME}, then ${PACKAGE_RETAINER}/month.`,
+      description: `${SYSTEM_NAME}: ${CONNECT_FEE_LABEL} to start, ${PACKAGE_SETUP} ${SPRINT_NAME} when you are happy (refundable), then ${PACKAGE_RETAINER}/month with daily updates.`,
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -134,14 +134,14 @@ export function generateOrganizationSchema(): object {
         {
           '@type': 'Offer',
           name: SPRINT_NAME,
-          price: '1500',
+          price: '1000',
           priceCurrency: 'USD',
           priceValidUntil: '2027-08-25',
         },
         {
           '@type': 'Offer',
           name: 'Monthly retainer',
-          price: '1000',
+          price: '500',
           priceCurrency: 'USD',
           priceValidUntil: '2027-08-25',
         },

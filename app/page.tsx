@@ -35,28 +35,28 @@ const MarketingAgents = dynamic(
   }
 );
 
-/** Service JSON-LD for the human-led AI visibility program */
+/** Service JSON-LD for the lead-gen outreach agent */
 const aiVisibilityServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}/#ai-visibility-service`,
-  name: "Founder AI Authority & Pipeline System — AI Search Visibility",
-  serviceType: "Generative Engine Optimization and AI search visibility",
+  name: "Lead-gen + mass cold outreach agent — 1,000 emails/day",
+  serviceType: "AI lead generation and cold outreach",
   description:
-    "Discover layer of Anthroly's Founder AI Authority & Pipeline System: we identify the questions prospects ask ChatGPT, Gemini, Perplexity, and Google AI, then close gaps with answer-focused content, comparison pages, citation work, and monthly AI visibility tracking. Humans do the work; machines help us scale.",
+    "Anthroly sets up and runs a lead-generation outreach agent that researches your ICP, writes personalized cold emails, and sends up to 1,000 a day with follow-ups that do not stop. You approve ICP and voice; we operate the agent.",
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: "Worldwide",
   url: `${SITE_URL}/#human-led-ai-visibility`,
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "AI visibility program",
+    name: "Outreach agent program",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI search visibility monitoring" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand recommendation optimization" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Competitive intelligence for AI search" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Content, authority, and citation building" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital PR and third-party visibility" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Citation neighborhood mapping and placement" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "ICP research and list building" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Personalized cold email at 1,000/day" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Automated follow-up sequences" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deliverability and domain warmup" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reply routing and pipeline reporting" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Offer and proof-point personalization" } },
     ],
   },
 };
@@ -65,10 +65,10 @@ const citationNeighborsServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}/#citation-neighbors-service`,
-  name: "Citation Neighborhood Service",
-  serviceType: "AI citation neighborhood mapping and digital PR",
+  name: "Autonomous 24/7 high-quality backlink agent",
+  serviceType: "AI-powered editorial link building",
   description:
-    "Human researchers map the sources ChatGPT, Perplexity, Claude, and Gemini repeatedly cite beside competitors in your category, then Anthroly’s team earns brand mentions on those AI-trusted sources — not random backlinks.",
+    "Anthroly sets up and runs a 24/7 backlink agent that hunts, pitches, and earns high-quality editorial backlinks around the clock — not PBNs or junk. Authority links that make every cold email land heavier.",
   provider: { "@id": `${SITE_URL}/#organization` },
   areaServed: "Worldwide",
   url: `${SITE_URL}/#citation-neighbors`,

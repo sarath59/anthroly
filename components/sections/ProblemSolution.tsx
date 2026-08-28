@@ -12,16 +12,16 @@ export const ProblemSolution = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-sm font-medium text-red-400 mb-6">
-            <span>📊 Most SEO campaigns fail to show ROI fast enough</span>
+            <span>Most founders still hunt leads by hand — while rivals never stop</span>
           </div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Why Brands Lose Deals Before the Sales Call
+            Why Pipeline Dies While You Sleep
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-              (AI already picked someone else)
+              (Someone else already emailed them)
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-            <span className="text-white font-semibold">Buyers ask ChatGPT who to hire. They never see your ads.</span> Generic agencies sell three disconnected retainers. We run one system: discover in AI search, earn trust as the founder, then turn attention into conversations.
+            <span className="text-white font-semibold">Every hour your inbox is quiet, a competitor is sending.</span> DIY SDR work burns the founder. Cheap link farms poison the domain. We run two agents instead: 1,000 personalized emails a day, and a 24/7 hunter that earns real backlinks.
           </p>
         </div>
 
@@ -41,36 +41,36 @@ export const ProblemSolution = () => {
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">SEO-only retainers</p>
-                  <p className="text-gray-400">$2k–$10k/month for blogs nobody cites in ChatGPT. Google&apos;s updates punish thin AI content. You still have no pipeline and no founder voice.</p>
+                  <p className="font-bold text-lg text-gray-200">Founder-as-SDR</p>
+                  <p className="text-gray-400">You write 40 emails, then the product calls. Volume dies. Follow-ups die. The calendar stays empty — and you tell yourself you&apos;ll &quot;batch it on Sunday.&quot;</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Black Box Results</p>
-                  <p className="text-gray-400">&quot;Trust us, it&apos;s working.&quot; Months pass. Rankings don&apos;t move. No clear explanation of what they&apos;re actually doing.</p>
+                  <p className="font-bold text-lg text-gray-200">Black-box agencies</p>
+                  <p className="text-gray-400">&quot;Trust us, it&apos;s working.&quot; Months pass. No send log. No reply rate. No link neighborhood. You paid for hope, not a machine you can inspect.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">Spammy Backlinks</p>
-                  <p className="text-gray-400">Cheap agencies buy links from shady sites. Google catches on. Your rankings tank. You&apos;re worse off than before.</p>
+                  <p className="font-bold text-lg text-gray-200">Junk link farms</p>
+                  <p className="text-gray-400">Cheap agencies buy PBNs and directories. Your domain gets stained. Every cold email you send after that looks like a scam — because the web already said you are one.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">DIY Time Sink</p>
-                  <p className="text-gray-400">Tried doing it yourself? That&apos;s 20+ hours/week you don&apos;t have, with a steep learning curve and slow results.</p>
+                  <p className="font-bold text-lg text-gray-200">DIY time sink</p>
+                  <p className="text-gray-400">Tried doing it yourself? That&apos;s 20+ hours a week you don&apos;t have — hunting lists, writing pitches, chasing editors — while the product waits.</p>
                 </div>
               </li>
               <li className="flex gap-4 opacity-80">
                 <XCircle className="text-red-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg text-gray-200">AI-only content farms</p>
-                  <p className="text-gray-400">Unedited model output. No entity work. No citations. Google and answer engines ignore it — or worse, they trust your competitor&apos;s humans.</p>
+                  <p className="font-bold text-lg text-gray-200">Spray-and-pray tools</p>
+                  <p className="text-gray-400">A dashboard, a CSV, and a prayer. No ICP tightness. No personalization. No quality filter on links. Inboxes burn. Domains die. You still have no pipeline.</p>
                 </div>
               </li>
             </ul>
@@ -86,35 +86,35 @@ export const ProblemSolution = () => {
                 <CheckCircle2 className="text-emerald-500" />
                 The Anthroly Way
               </h3>
-              <p className="text-gray-400 mt-2">Human-led, results-driven</p>
+              <p className="text-gray-400 mt-2">Two agents. We operate them.</p>
             </div>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Real Humans Work With You</p>
-                  <p className="text-gray-400">A dedicated account manager onboards you, monitors your project, and keeps you updated. Never left alone with software.</p>
+                  <p className="font-bold text-lg">We set them up. We run them.</p>
+                  <p className="text-gray-400">You approve ICP and voice. A human operator onboards you, watches deliverability, and QA&apos;s every link. Never left alone with a dashboard.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Discover → Trust → Contact</p>
-                  <p className="text-gray-400">GEO so AI can find you. Founder authority so they trust you. Lead generation so they can contact you. One acquisition system — not three unrelated services.</p>
+                  <p className="font-bold text-lg">Outreach + backlinks, compounding</p>
+                  <p className="text-gray-400">1,000 personalized emails a day so the calendar fills. A 24/7 backlink agent so those emails don&apos;t look like strangers. One loop — not two disconnected retainers.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">Writers & Editors, Not Bots</p>
-                  <p className="text-gray-400">People research, draft, and edit your content. We use tools where they help, but humans own quality and accuracy.</p>
+                  <p className="font-bold text-lg">Quality filters, not spam</p>
+                  <p className="text-gray-400">Personalization that names a real reason to write. Editorial links — no PBNs, no junk. Humans own the kill-switch. Agents do the hunting.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <CheckCircle2 className="text-emerald-400 flex-shrink-0 mt-1" size={22} />
                 <div>
-                  <p className="font-bold text-lg">{CONNECT_FEE_LABEL} diagnostic, then {PACKAGE_SETUP} + {PACKAGE_RETAINER}/mo</p>
-                  <p className="text-gray-400">You buy a 90-minute researched audit, not a conversation. The {CONNECT_FEE_LABEL} is credited 100% toward the {PACKAGE_SETUP} sprint if you start within 7 days. Then {PACKAGE_RETAINER}/month to run the system.</p>
+                  <p className="font-bold text-lg">{CONNECT_FEE_LABEL} starts setup. {PACKAGE_SETUP} one-time when you are happy. {PACKAGE_RETAINER}/mo after.</p>
+                  <p className="text-gray-400">{CONNECT_FEE_LABEL} is the initial fee to start setting up both agents. Once you sign off, a {PACKAGE_SETUP} one-time setup fee. Then {PACKAGE_RETAINER}/month to run them with daily updates. Not happy at any point? We refund the {PACKAGE_SETUP}.</p>
                 </div>
               </li>
             </ul>
@@ -127,23 +127,23 @@ export const ProblemSolution = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <TrendingUp className="text-emerald-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">Discover</div>
-              <div className="text-sm text-gray-500">AI search visibility</div>
+              <div className="text-2xl font-bold text-white mb-1">1,000/day</div>
+              <div className="text-sm text-gray-500">Outreach agent</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Clock className="text-blue-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">Trust</div>
-              <div className="text-sm text-gray-500">Founder authority engine</div>
+              <div className="text-2xl font-bold text-white mb-1">24/7</div>
+              <div className="text-sm text-gray-500">Backlink agent</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <Zap className="text-purple-500 mx-auto mb-3" size={32} />
-              <div className="text-2xl font-bold text-white mb-1">Contact</div>
-              <div className="text-sm text-gray-500">Qualified conversations</div>
+              <div className="text-2xl font-bold text-white mb-1">Compound</div>
+              <div className="text-sm text-gray-500">Links make emails convert</div>
             </div>
             <div className="text-center p-6 bg-gray-900/80 rounded-2xl border border-gray-800">
               <DollarSign className="text-orange-500 mx-auto mb-3" size={32} />
               <div className="text-2xl font-bold text-white mb-1">{PACKAGE_SETUP}</div>
-              <div className="text-sm text-gray-500">+ {PACKAGE_RETAINER}/mo retainer</div>
+              <div className="text-sm text-gray-500">when you are happy</div>
             </div>
           </div>
         </div>

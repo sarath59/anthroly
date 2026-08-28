@@ -33,90 +33,90 @@ function bookCallWith(_note: string): string {
   return BOOK_CALL_URL;
 }
 
-/** What shifts underneath your AI visibility every week */
+/** What shifts underneath your pipeline every week */
 const WHAT_CHANGES = [
   {
-    label: 'The answers change',
-    detail: 'Every model update rewrites who gets named, cited, and recommended.',
+    label: 'The inboxes change',
+    detail: 'New titles, new companies, new buying windows. Yesterday’s list is already stale.',
     icon: MessageCircleQuestion,
   },
   {
-    label: 'The sources change',
-    detail: 'Engines rotate the publications, reviews, and pages they trust.',
+    label: 'The proof changes',
+    detail: 'New competitors, new objections, new reasons they ignore a cold email.',
     icon: Newspaper,
   },
   {
-    label: 'Your competitors change',
-    detail: 'Rivals publish, pitch, and optimize for the same prompts you care about.',
+    label: 'Your rivals change',
+    detail: 'Someone else is already sending 1,000 a day. Silence is a decision.',
     icon: Scale,
   },
   {
-    label: "Your customers' questions change",
-    detail: 'New prompts appear weekly as buyers learn to research with AI.',
+    label: 'Your offer changes',
+    detail: 'What converted last month can bounce this month. The agent has to keep up.',
     icon: Compass,
   },
 ];
 
-/** Workstreams the research team runs every day */
+/** Workstreams the outreach team runs every day */
 const TEAM_WORKSTREAMS = [
-  { label: 'AI search visibility', icon: LineChart },
-  { label: 'Brand recommendations', icon: BadgeCheck },
-  { label: 'Competitive intelligence', icon: Scale },
-  { label: 'Original research', icon: FileSearch },
-  { label: 'Content & authority', icon: BookOpenCheck },
-  { label: 'Digital PR opportunities', icon: Newspaper },
-  { label: 'Third-party visibility', icon: Globe2 },
-  { label: 'Citation opportunities', icon: Link2 },
-  { label: 'Citation neighborhoods', icon: Globe2 },
-  { label: 'Industry research', icon: Building2 },
-  { label: 'Brand reputation', icon: ShieldCheck },
+  { label: 'ICP research', icon: LineChart },
+  { label: 'List building', icon: BadgeCheck },
+  { label: 'Personalization', icon: Scale },
+  { label: 'Sequence design', icon: FileSearch },
+  { label: '1,000 emails/day', icon: BookOpenCheck },
+  { label: 'Follow-ups', icon: Newspaper },
+  { label: 'Deliverability', icon: Globe2 },
+  { label: 'Reply routing', icon: Link2 },
+  { label: 'Offer testing', icon: Globe2 },
+  { label: 'Exclusion lists', icon: Building2 },
+  { label: 'Spam defense', icon: ShieldCheck },
 ];
 
-/** The battlegrounds where brands win or lose AI recommendations */
+/** The battlegrounds where pipeline is won or lost */
 const COMPETE_FOR = [
   {
-    name: 'Category recommendations',
+    name: 'The first inbox',
     detail:
-      'Be in the consideration set when buyers ask ChatGPT, Gemini, Claude, or Perplexity for the best companies, products, and services in your category.',
+      'Be the email they actually open — personalized to a real reason, not a mail-merge first name.',
     icon: Award,
     color: 'emerald',
   },
   {
-    name: 'High-intent questions',
+    name: 'High-intent accounts',
     detail:
-      'Strengthen your presence around the pricing, comparison, and "is it worth it" questions customers ask AI immediately before they buy.',
+      'Reach the people who can buy this quarter — not a scraped list of anyone with a LinkedIn URL.',
     icon: MessageCircleQuestion,
     color: 'cyan',
   },
   {
-    name: 'Competitive comparisons',
+    name: 'The follow-up they never get',
     detail:
-      'Improve how answer engines frame your brand when a prompt puts you head-to-head with competitors and alternatives.',
+      'Most deals die in the silence after email one. The agent never forgets the second, third, or fifth touch.',
     icon: Scale,
     color: 'purple',
   },
   {
-    name: 'Industry authority',
+    name: 'Proof in the pitch',
     detail:
-      'Build the original research, data, and evidence that establish your brand as a credible source AI systems keep returning to.',
+      'Authority links and real outcomes in the copy — so you do not sound like a stranger with a calendar link.',
     icon: Building2,
     color: 'blue',
   },
   {
-    name: 'AI citations',
+    name: 'Deliverability',
     detail:
-      'Increase the likelihood that answer engines discover, crawl, and reference your pages when they assemble an answer.',
+      'Volume without a burned domain. Warmup, rotation, and kill-switches so 1,000/day does not become 0/day.',
     icon: Link2,
     color: 'amber',
   },
 ];
 
 const BUYER_QUESTIONS = [
-  "What's the best option for me?",
-  'Which company should I choose?',
-  'What are the alternatives?',
-  'Which product is most reliable?',
-  'What do experts recommend?',
+  'Why should I reply to this?',
+  'Is this another spray-and-pray?',
+  'Who else uses this?',
+  'Can I trust the domain?',
+  'What happens if I ignore it?',
 ];
 
 const COLOR_MAP: Record<string, { border: string; text: string; glow: string }> = {
@@ -145,36 +145,35 @@ export const HumanLedAIVisibility = () => {
         <ScrollReveal className="mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-gray-300 backdrop-blur">
             <Users size={14} className="text-purple-400" />
-            Human-led · Discover layer
+            Outreach agent · 1,000 emails / day
           </div>
 
           <h2
             id="human-led-ai-visibility-heading"
             className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl"
           >
-            <span className="block text-white">Make AI recommend</span>
+            <span className="block text-white">Fill the calendar without</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-emerald-400 to-cyan-400">
-              your brand
+              becoming the SDR
             </span>
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-xl font-medium leading-relaxed text-gray-200">
-            Your customers ask ChatGPT who to buy from. This is the Discover layer: we make you easier to find in AI answers — then founder authority and outreach turn that attention into conversations.
+            This is the outreach agent: 1,000 personalized cold emails a day, with follow-ups that never freeze. You approve ICP and voice. We run the hunt.
           </p>
 
           <div className="mx-auto mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-gray-400">
             <p>
-              ChatGPT, Gemini, Claude, Perplexity, and other AI platforms are becoming part of the
-              buying journey. But getting your brand mentioned isn&apos;t enough.{' '}
+              Most founders still write 40 emails, then the product calls. Volume dies. Follow-ups die.
+              Meanwhile a competitor is sending while you sleep.{' '}
               <strong className="font-semibold text-white">
-                You need AI to understand why your brand should be recommended.
+                Silence in the inbox is not rest. It is lost pipeline.
               </strong>
             </p>
             <p>
-              Our team works continuously to improve your brand&apos;s presence, authority, and
-              recommendations across{' '}
+              Our team sets up and operates the lead-gen agent across your ICP — and pairs it with{' '}
               <Link href="/aeo" className="text-emerald-400 underline-offset-4 hover:underline">
-                AI search
+                the rest of the program
               </Link>
               .
             </p>
@@ -182,7 +181,7 @@ export const HumanLedAIVisibility = () => {
 
           <div className="mx-auto mt-8 w-fit rounded-2xl border border-purple-500/25 bg-purple-500/10 px-6 py-4">
             <p className="text-base font-semibold text-purple-200 md:text-lg">
-              Researchers and writers work your category every week — not a dashboard you log into alone.
+              Operators watch deliverability and QA every sequence — not a dashboard you log into alone.
             </p>
           </div>
 
@@ -208,14 +207,14 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 grid max-w-6xl items-center gap-10 md:mt-32 lg:grid-cols-[1fr_1fr]">
           <ScrollReveal>
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Your AI search presence,{' '}
+              Your outreach agent,{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 managed by humans
               </span>
             </h3>
             <p className="mt-5 text-lg leading-relaxed text-gray-400">
-              AI visibility isn&apos;t something you fix once. That&apos;s why we run a continuous,
-              human-led AI visibility service—the managed alternative to yet another{' '}
+              Pipeline isn&apos;t something you batch on Sunday. That&apos;s why we run a continuous
+              outreach agent—the managed alternative to yet another{' '}
               <Link
                 href="/aeo/aeo-vs-seo-vs-geo"
                 className="text-emerald-400 underline-offset-4 hover:underline"
@@ -225,12 +224,11 @@ export const HumanLedAIVisibility = () => {
               dashboard.
             </p>
             <p className="mt-4 leading-relaxed text-gray-400">
-              Our research team monitors how AI platforms perceive your brand, identifies
-              opportunities to strengthen your presence, and continuously develops the content,
-              research, and evidence your brand needs to become more authoritative in AI search.
+              Our operators monitor sends, replies, and bounce risk, then keep the agent hunting —
+              lists refreshed, copy tightened, follow-ups never dropped.
             </p>
             <p className="mt-6 text-lg font-semibold text-white">
-              You don&apos;t get a dashboard and a list of recommendations.{' '}
+              You don&apos;t get a CSV and a login.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 You get a team working on your brand.
               </span>
@@ -257,15 +255,14 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 max-w-6xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Humans research and write.{' '}
+              The agent hunts.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">
-                One mission:
-              </span>{' '}
-              get your brand recommended.
+                You take the meetings.
+              </span>
             </h3>
             <p className="mt-5 text-lg text-gray-400">
-              Behind your AI visibility program is a dedicated team of researchers, strategists,
-              writers, analysts, and content specialists. Every day, they work across:
+              Behind your outreach agent is a dedicated team of operators, copy leads, and
+              deliverability specialists. Every day, they work across:
             </p>
           </ScrollReveal>
 
@@ -285,9 +282,9 @@ export const HumanLedAIVisibility = () => {
 
           <ScrollReveal className="mx-auto mt-10 max-w-3xl text-center">
             <p className="text-lg text-gray-400">
-              Software can tell you that your visibility changed.{' '}
+              Software can tell you that volume dropped.{' '}
               <span className="font-semibold text-white">
-                Our people work on why it changed—and what to do next.
+                Our people work on why it dropped—and what the agent does next.
               </span>
             </p>
           </ScrollReveal>
@@ -297,15 +294,14 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 max-w-5xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              We don&apos;t just track AI.{' '}
+              We don&apos;t just send volume.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                We work to change what AI says about your brand.
+                We work to change who replies.
               </span>
             </h3>
             <p className="mt-5 text-lg text-gray-400">
-              Most AEO solutions stop at monitoring. We go further—continuously studying your
-              brand&apos;s presence across AI search and strengthening the information, authority,
-              and evidence surrounding it.
+              Most outreach tools stop at a CSV. We go further — continuously tightening ICP,
+              personalization, and proof so 1,000 emails a day feel like one thoughtful note.
             </p>
           </ScrollReveal>
 
@@ -316,7 +312,7 @@ export const HumanLedAIVisibility = () => {
                   The goal isn&apos;t simply
                 </p>
                 <p className="text-2xl font-semibold text-gray-500 md:text-3xl">
-                  &ldquo;Your brand was mentioned.&rdquo;
+                  &ldquo;We blasted 1,000 emails.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -327,7 +323,7 @@ export const HumanLedAIVisibility = () => {
                   The goal is
                 </p>
                 <p className="text-2xl font-bold text-white md:text-3xl">
-                  &ldquo;Your brand became the recommendation.&rdquo;
+                  &ldquo;Replies showed up on the calendar.&rdquo;
                 </p>
               </div>
             </ScrollReveal>
@@ -338,13 +334,11 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 max-w-6xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Built for brands that depend on being chosen
+              Built for founders who cannot be the SDR
             </h3>
             <p className="mt-5 text-lg text-gray-400">
-              Enterprise software, consumer brands, financial platforms, healthcare companies,
-              marketplaces, fast-growing startups—your customers are increasingly using AI to
-              research their options. We help make sure your brand is visible throughout that
-              journey.
+              SaaS, agencies, consultants, professional services — if you need conversations this
+              quarter and cannot spend 20 hours a week hunting lists, the outreach agent is for you.
             </p>
           </ScrollReveal>
 
@@ -377,11 +371,10 @@ export const HumanLedAIVisibility = () => {
                     <Users size={20} className="text-purple-400" />
                   </div>
                   <h4 className="mb-3 text-lg font-bold text-white">
-                    See where you stand today
+                    See if 1,000/day would print money
                   </h4>
                   <p className="text-sm leading-relaxed text-gray-300">
-                    Start with a human-reviewed audit of how answer engines describe, compare, and
-                    recommend your brand right now.
+                    Start with a human-reviewed audit of your list, reply rate, and where an outreach agent would waste budget vs fill the calendar.
                   </p>
                 </div>
                 <a
@@ -407,18 +400,17 @@ export const HumanLedAIVisibility = () => {
             <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  Your AI visibility team,{' '}
+                  Your outreach team,{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-emerald-400">
                     without hiring 40 people
                   </span>
                 </h3>
                 <p className="mt-5 leading-relaxed text-gray-400">
-                  Building an internal AI search team means recruiting researchers, content
-                  strategists, analysts, writers, SEO specialists, and PR expertise—then managing
-                  all of it. Instead, get access to an entire team already working on your brand.
+                  Hiring an SDR team means recruiting, ramping, and managing people who still sleep.
+                  Instead, get an outreach agent already hunting — plus operators who watch it.
                 </p>
                 <ul className="mt-6 space-y-2.5 text-sm text-gray-300">
-                  {['No hiring.', 'No managing freelancers.', 'No building an AEO department from scratch.'].map(
+                  {['No hiring SDRs.', 'No managing freelancers.', 'No becoming the SDR yourself.'].map(
                     item => (
                       <li key={item} className="flex items-center gap-3">
                         <BadgeCheck size={16} className="flex-shrink-0 text-emerald-400" />
@@ -428,15 +420,15 @@ export const HumanLedAIVisibility = () => {
                   )}
                 </ul>
                 <p className="mt-6 font-semibold text-white">
-                  Just a team working continuously to grow your presence in AI search.
+                  Just an agent sending 1,000 a day — so you stay in the product.
                 </p>
               </div>
 
               <div className="grid content-center gap-4">
                 {[
-                  { stat: 'Human-led', label: 'researchers, writers, operators — not a dashboard' },
-                  { stat: 'Every day', label: 'research, content, and outreach in motion' },
-                  { stat: 'One focus', label: 'your visibility across answer engines' },
+                  { stat: '1,000/day', label: 'personalized cold emails — not a blast from a CSV' },
+                  { stat: '24/7', label: 'the backlink agent hunts while this one sends' },
+                  { stat: 'You decide', label: 'approve ICP and voice. Take the replies.' },
                 ].map(row => (
                   <div
                     key={row.stat}
@@ -457,10 +449,10 @@ export const HumanLedAIVisibility = () => {
         <div className="mx-auto mt-24 max-w-4xl text-center md:mt-32">
           <ScrollReveal>
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              The new search is already here.
+              Your buyers already live in inboxes.
             </h3>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-400">
-              Your customers aren&apos;t only searching Google anymore. They&apos;re asking:
+              They&apos;re not waiting for another blog post. They&apos;re asking:
             </p>
           </ScrollReveal>
 
@@ -477,11 +469,10 @@ export const HumanLedAIVisibility = () => {
 
           <ScrollReveal delay={0.1} className="mt-12">
             <p className="text-xl font-semibold text-white">
-              We help make sure your brand is ready for those answers.
+              We help make sure those emails get a reply.
             </p>
             <p className="mx-auto mt-4 max-w-xl text-gray-400">
-              Put your brand in the conversation. Get a dedicated human team working on your AI
-              visibility—see{' '}
+              Put both agents to work. See{' '}
               <Link href="/customers" className="text-emerald-400 underline-offset-4 hover:underline">
                 how teams already use us
               </Link>{' '}

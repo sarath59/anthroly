@@ -22,7 +22,7 @@ import {
   Target,
   Upload,
 } from 'lucide-react';
-import { BOOK_CALL_URL, PRIMARY_CTA_LABEL } from '@/lib/site';
+import { BOOK_CALL_URL, COHORT_SLOTS, PRIMARY_CTA_LABEL } from '@/lib/site';
 import { currentPageParam, DATAFAST_GOALS, trackGoal } from '@/lib/datafast';
 import { Button } from '../ui/button';
 import {
@@ -34,45 +34,45 @@ import {
   StaggerItem,
 } from '../ui/static-fx';
 
-const ROTATING_SURFACES = ['AI answers', 'ChatGPT', 'Claude', 'Perplexity', 'AI Overviews', 'Gemini'];
+const ROTATING_SURFACES = ['your inbox', 'every timezone', 'cold email', 'reply rates', 'authority links', 'the pipeline'];
 
 const PLATFORM_MODULES = [
   {
-    name: 'Prompt Volumes',
-    tagline: 'See what millions of people ask AI, and align strategy with demand.',
-    detail: 'We map the prompts your buyers actually type, cluster them by intent, and turn them into a publishing queue.',
+    name: 'ICP Volumes',
+    tagline: 'See who is actually worth 1,000 emails a day — and who will burn the domain.',
+    detail: 'We map your buyers, exclusion list, and proof points, then feed the outreach agent a list it can personalize at scale.',
     href: '/tools',
     icon: Search,
     color: 'emerald',
   },
   {
-    name: 'Answer Engine Insights',
-    tagline: 'See how AI represents your brand in every conversation.',
-    detail: 'Track sentiment, competitor share of answer, and the sources each engine cites when it describes you.',
+    name: 'Reply Insights',
+    tagline: 'See what lands, what bounces, and which angles book meetings.',
+    detail: 'Track send volume, reply rate, spam risk, and the sequences that convert — so the agent gets smarter every week.',
     href: '/aeo',
     icon: MessageSquare,
     color: 'cyan',
   },
   {
     name: 'Agents',
-    tagline: 'Autonomous workers for every function of your marketing team.',
-    detail: 'Research, briefs, drafts, FAQ blocks, schema, and outreach lists—run by agents, reviewed by our strategists.',
+    tagline: 'Two autonomous workers: outreach at 1,000/day, backlinks at 24/7.',
+    detail: 'Research, personalization, follow-ups, pitches, and quality filters — run by agents, reviewed by our operators.',
     href: '/#features',
     icon: Bot,
     color: 'purple',
   },
   {
     name: 'Agent Analytics',
-    tagline: 'Track how your site is interpreted and crawled by ChatGPT, Gemini, Claude, Perplexity, and more.',
-    detail: 'Bot-level crawl logs show which pages each engine fetches, how often, and what it takes away.',
+    tagline: 'Track every send and every placement as it happens.',
+    detail: 'Live logs show volume, replies, bounces, and editorial links earned — not a monthly PDF of hope.',
     href: '/aeo/engine/chatgpt',
     icon: BarChart3,
     color: 'blue',
   },
   {
     name: 'Aim',
-    tagline: 'Find the highest-impact work for your brand, every week.',
-    detail: 'A prioritised queue of the pages, prompts, and citations worth fixing next—shipped in your weekly report.',
+    tagline: 'Find the highest-impact work for both agents, every week.',
+    detail: 'A prioritised queue of lists, angles, and link neighborhoods worth hunting next — shipped in your weekly report.',
     href: '/#how-it-works',
     icon: Crosshair,
     color: 'amber',
@@ -81,48 +81,48 @@ const PLATFORM_MODULES = [
 
 const CHANNEL_AGENTS = [
   {
-    name: 'AEO & SEO',
-    promise: 'Increase AI Search visibility',
-    detail: 'Answer-first pages, schema, and internal links built so engines can quote you cleanly.',
+    name: 'Outreach agent',
+    promise: '1,000 personalized emails a day',
+    detail: 'ICP research, personalization, sequences, and follow-ups that never forget — so the founder is not the SDR.',
     href: '/aeo',
     icon: Target,
     color: 'emerald',
   },
   {
-    name: 'Content & Demand',
-    promise: 'Drive human and bot traffic',
-    detail: 'One 30–45 minute founder interview a month, turned into LinkedIn, X, articles, newsletter, and FAQ content that earns citations.',
+    name: 'Backlink agent',
+    promise: 'High-quality links, 24/7',
+    detail: 'Autonomous prospecting and pitching for editorial placements. Not PBNs. Not junk. Authority that makes every email heavier.',
     href: '/#features',
     icon: FileText,
     color: 'cyan',
   },
   {
-    name: 'PR & Communications',
-    promise: 'Shape AI conversations',
-    detail: 'Digital PR and citation work so engines repeat what credible sources say about you — not a guaranteed link quota.',
+    name: 'The compounding loop',
+    promise: 'Links make emails convert',
+    detail: 'Cold email without authority is noise. Links without a pipeline are vanity. Together they fill the calendar while you stay in product.',
     href: '/#pricing',
     icon: Megaphone,
     color: 'purple',
   },
 ];
 
-const REPORT_CHECKS = ['AI Visibility', 'Source Citations', 'Brand Sentiment', 'Content AEO'];
+const REPORT_CHECKS = ['Sends / day', 'Reply rate', 'Link quality', 'Deliverability'];
 
 const TRY_AGENTS = [
   {
     id: 'demand',
-    name: 'Demand Gen Agent',
-    output: 'Finds the 20 highest-volume prompts in your category and the pages that answer them.',
+    name: 'Outreach Agent',
+    output: 'Builds a tight ICP list and writes 1,000 personalized cold emails a day — with follow-ups that never drop.',
   },
   {
     id: 'brand',
-    name: 'Brand Agent',
-    output: 'Audits how ChatGPT, Claude, and Perplexity describe you today—and what they get wrong.',
+    name: 'Backlink Agent',
+    output: 'Hunts editorial placements 24/7, filters junk, and logs every high-quality link as it lands.',
   },
   {
     id: 'content',
-    name: 'Content Agent',
-    output: 'Generates AEO-optimised FAQ blocks and schema for any landing page you point it at.',
+    name: 'Compound Agent',
+    output: 'Feeds new authority links into the next email batch so cold outreach stops feeling cold.',
   },
 ];
 
@@ -277,18 +277,18 @@ export const MarketingAgents = () => {
         <ScrollReveal className="mx-auto max-w-5xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-gray-300 backdrop-blur">
             <Sparkles size={14} className="text-emerald-400" />
-            The AI discovery + trust + contact layer
+            Two agents that never clock out
           </div>
 
           <h2 className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block text-white">One system to win in</span>
+            <span className="block text-white">Two agents that win in</span>
             <span className="block">
               <RotatingSurface index={surfaceIndex} />
             </span>
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
-            Discover in AI search. Trust through founder authority. Contact through qualified outreach. Humans do the work. Machines help us scale.
+            1,000 emails a day. High-quality backlinks 24/7. We set them up. We run them. You stay the founder.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -307,7 +307,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                See the 30-day sprint
+                See the {COHORT_SLOTS} slots
               </Button>
             </Link>
           </div>
@@ -323,7 +323,7 @@ export const MarketingAgents = () => {
                   <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-500/70" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/70" />
-                  <span className="ml-3 font-mono text-xs text-gray-500">anthroly / content-agent</span>
+                  <span className="ml-3 font-mono text-xs text-gray-500">anthroly / dual-agents</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
@@ -356,15 +356,15 @@ export const MarketingAgents = () => {
               <div className="grid gap-6 p-6 md:grid-cols-[1.1fr_0.9fr] md:p-8">
                 <div>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                    {consoleTab === 'publish' ? 'Queued this week' : 'Prompt under test'}
+                    {consoleTab === 'publish' ? 'Hunting this week' : 'Sequence under test'}
                   </p>
                   {consoleTab === 'publish' ? (
                     <ul className="space-y-3">
                       {[
-                        'FAQ block + schema for /pricing',
-                        'Comparison page: you vs top 3 alternatives',
-                        'Glossary entry: answer engine optimization',
-                        'Outreach batch — 6 DR 70+ prospects',
+                        'ICP batch — 1,000 personalized emails/day',
+                        'Follow-up sequence: no-reply after 3 days',
+                        'Backlink agent: 12 DR 70+ editorial targets',
+                        'Quality filter pass — junk domains blocked',
                       ].map(item => (
                         <li
                           key={item}
@@ -378,10 +378,10 @@ export const MarketingAgents = () => {
                   ) : (
                     <div className="space-y-4">
                       <div className="rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3 font-mono text-sm text-gray-300">
-                        &ldquo;What&apos;s the best tool for tracking brand mentions in AI search?&rdquo;
+                        &ldquo;VP Ops at a 20–50 person SaaS — tried a competitor last quarter.&rdquo;
                       </div>
                       <p className="text-sm text-gray-500">
-                        We run the prompt across engines, capture who gets named, and log every source cited.
+                        We test the angle, capture reply likelihood, and log every personalization token before 1,000 go out.
                       </p>
                     </div>
                   )}
@@ -389,14 +389,14 @@ export const MarketingAgents = () => {
 
                 <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-5">
                   <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                    Answer engines watched
+                    Agent health watched
                   </p>
                   <div className="space-y-3">
                     {[
-                      { engine: 'ChatGPT', share: 78 },
-                      { engine: 'Claude', share: 64 },
-                      { engine: 'Perplexity', share: 71 },
-                      { engine: 'AI Overviews', share: 58 },
+                      { engine: 'Sends / day', share: 78 },
+                      { engine: 'Reply rate', share: 64 },
+                      { engine: 'Link quality', share: 71 },
+                      { engine: 'Deliverability', share: 58 },
                     ].map(row => (
                       <div key={row.engine}>
                         <div className="mb-1.5 flex items-center justify-between text-xs">
@@ -416,7 +416,7 @@ export const MarketingAgents = () => {
                     ))}
                   </div>
                   <p className="mt-5 text-xs leading-relaxed text-gray-500">
-                    Illustrative view of the visibility tracking included in every Anthroly program.
+                    Illustrative view of the send + placement tracking included with both agents.
                   </p>
                 </div>
               </div>
@@ -450,11 +450,10 @@ export const MarketingAgents = () => {
         {/* ── Big statement ────────────────────────────────────── */}
         <ScrollReveal delay={0.1} className="mx-auto mt-24 max-w-4xl text-center md:mt-32">
           <p className="text-2xl font-semibold leading-snug text-white sm:text-3xl md:text-4xl">
-            Over 100 million people search with AI every day. Brands that aren&apos;t recommended get
-            left behind.
+            Over 1,000 inboxes go quiet every night if nobody writes. Founders who still hunt by hand get left behind.
           </p>
           <p className="mt-6 text-xl text-gray-400 md:text-2xl">
-            Anthroly ensures yours isn&apos;t one of them.
+            Anthroly runs the two agents so yours isn&apos;t one of them.
           </p>
         </ScrollReveal>
 
@@ -462,14 +461,13 @@ export const MarketingAgents = () => {
         <div className="mx-auto mt-24 max-w-6xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Scale your presence,{' '}
+              Scale the hunt,{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 not your workload
               </span>
             </h3>
             <p className="mt-5 text-lg text-gray-400">
-              Anthroly is the full-stack marketing layer for the marketer of the future. Understand,
-              analyze, build, and measure—all in one program.
+              Two agents. One operator team. Understand the ICP, send 1,000 a day, earn links 24/7, and measure — without becoming the SDR.
             </p>
           </ScrollReveal>
 
@@ -508,10 +506,9 @@ export const MarketingAgents = () => {
                   <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/30">
                     <Gauge size={20} className="text-emerald-400" />
                   </div>
-                  <h4 className="mb-2 text-lg font-bold text-white">One program, one team</h4>
+                  <h4 className="mb-2 text-lg font-bold text-white">Two agents, one team</h4>
                   <p className="text-sm leading-relaxed text-gray-300">
-                    Every module above ships as part of a single managed engagement—senior strategists
-                    with agents doing the heavy lifting.
+                    Outreach and backlinks ship as a single managed engagement — operators with agents doing the hunting.
                   </p>
                 </div>
                 <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="mt-6">
@@ -531,7 +528,7 @@ export const MarketingAgents = () => {
             <GlowPulse className="-right-20 -top-20" color="cyan" size={320} />
             <Quote size={44} className="relative mb-6 text-emerald-400/40" />
             <blockquote className="relative text-2xl font-semibold leading-snug text-white md:text-3xl">
-              &ldquo;AI Search used to be a black box. Now it&apos;s a competitive advantage.&rdquo;
+              &ldquo;Cold email used to be a Sunday chore. Now it&apos;s a machine that never clocks out.&rdquo;
             </blockquote>
             <div className="relative mt-8 flex flex-wrap items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 text-lg font-bold text-black">
@@ -544,8 +541,8 @@ export const MarketingAgents = () => {
             </div>
             <p className="relative mt-8 rounded-2xl border border-white/10 bg-black/40 p-5 text-sm leading-relaxed text-gray-400">
               <span className="font-semibold text-gray-200">Our part in this:</span> Anthroly was a
-              small piece of a much bigger program. We genuinely worked with this team—on AEO content
-              and citation coverage—and we&apos;re not claiming credit for the whole result.
+              small piece of a much bigger program. We genuinely worked with this team—on outreach
+              and authority links—and we&apos;re not claiming credit for the whole result.
             </p>
           </div>
         </ScrollReveal>
@@ -555,14 +552,13 @@ export const MarketingAgents = () => {
           <div className="grid gap-8 rounded-3xl border border-white/10 bg-black/40 p-8 md:grid-cols-[1.05fr_0.95fr] md:p-12">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300">
-                AEO Report
+                Dual-agent audit
               </div>
               <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Get your free AEO Report today
+                Get your pipeline + backlink audit today
               </h3>
               <p className="mt-4 text-gray-400">
-                Discover how your brand performs on answer engines—and uncover the opportunities to
-                outpace the competition.
+                See whether your list can survive 1,000 emails a day — and whether your domain can earn editorial links, not junk.
               </p>
 
               <form
@@ -624,10 +620,10 @@ export const MarketingAgents = () => {
         <div className="mx-auto mt-24 max-w-6xl md:mt-32">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Agents for every marketing channel
+              Agents for pipeline and authority
             </h3>
             <p className="mt-5 text-lg text-gray-400">
-              Pick the outcome you need. The same team and the same agents run behind all three.
+              Pick the outcome you need. The same team runs both agents behind all three.
             </p>
           </ScrollReveal>
 
@@ -670,11 +666,10 @@ export const MarketingAgents = () => {
             <div className="grid gap-8 md:grid-cols-[1fr_1fr]">
               <div>
                 <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  Try an Anthroly Agent
+                  Meet the two agents we run for you
                 </h3>
                 <p className="mt-4 text-gray-400">
-                  Use one of our most popular agents to generate AEO-optimized FAQs for your landing
-                  pages.
+                  Outreach at 1,000/day. Backlinks at 24/7. Tell us your site — we&apos;ll show you how they&apos;d hunt.
                 </p>
 
                 <form
@@ -814,13 +809,13 @@ export const MarketingAgents = () => {
         {/* ── Closing CTA ──────────────────────────────────────── */}
         <ScrollReveal className="mx-auto mt-24 max-w-4xl text-center md:mt-32">
           <h3 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            <span className="block text-white">Get your brand mentioned by</span>
+            <span className="block text-white">Get both agents hunting in</span>
             <span className="mt-2 block">
               <RotatingSurface index={surfaceIndex} />
             </span>
           </h3>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
-            Discover in AI search. Trust through founder authority. Contact through qualified outreach. Humans do the work. Machines help us scale.
+            1,000 emails a day. High-quality backlinks 24/7. We set them up. We run them. You stay the founder.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -838,7 +833,7 @@ export const MarketingAgents = () => {
                 variant="outline"
                 className="h-14 w-full rounded-full border-white/20 px-10 text-lg font-bold text-white hover:bg-white/10 sm:w-auto"
               >
-                See the 30-day sprint
+                See the {COHORT_SLOTS} slots
               </Button>
             </Link>
           </div>

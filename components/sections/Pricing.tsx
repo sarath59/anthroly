@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, Shield, ArrowRight, Sparkles, ClipboardCheck, Calendar } from 'lucide-react';
 import {
   BOOK_CALL_URL,
+  COHORT_SLOTS,
   CONNECT_FEE_LABEL,
   CORE_OUTCOME,
   DIAGNOSTIC_CREDIT_NOTE,
@@ -9,61 +10,61 @@ import {
   PACKAGE_RETAINER,
   PACKAGE_SETUP,
   PRIMARY_CTA_LABEL,
-  SPRINT_NAME,
-  SYSTEM_NAME,
+  SETUP_REFUND_NOTE,
+  SLOTS_LINE,
 } from '@/lib/site';
 import { Button } from '../ui/button';
 import { LogoStrip, TECH_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse, SpotlightCard, HoverTilt } from '../ui/static-fx';
 
 const diagnosticPrep = [
-  'Current AI visibility (ChatGPT, Gemini, Perplexity, Google AI)',
-  '3–5 competitor comparison',
-  'LinkedIn presence review',
-  'Existing content audit',
-  'Website + positioning gaps',
-  'Obvious lead-generation gaps',
+  'Current outbound volume, reply rate, and list quality',
+  '3–5 competitor outreach + link profiles',
+  'Inbox, domain, and deliverability risk',
+  'Existing backlink neighborhood (who already cites rivals)',
+  'ICP tightness — who should never get an email',
+  'Where a 1,000/day agent would waste budget vs print money',
 ];
 
 const diagnosticAgenda = [
-  { time: '20 min', label: 'Current situation' },
-  { time: '25 min', label: 'AI visibility' },
-  { time: '20 min', label: 'Founder authority' },
-  { time: '15 min', label: 'Lead generation' },
-  { time: '10 min', label: 'Growth plan' },
+  { time: 'Start', label: 'Current pipeline reality' },
+  { time: 'Build', label: 'Outreach agent design' },
+  { time: 'Build', label: '24/7 backlink agent design' },
+  { time: 'Loop', label: 'Compounding loop' },
+  { time: 'Go live', label: 'You sign off — then $1,000' },
 ];
 
 const sprintWeeks = [
   {
     week: 'Week 1',
-    title: 'Positioning',
-    items: ['ICP definition', 'Buyer-question research', 'Competitor analysis', 'AI visibility baseline', 'Founder positioning'],
+    title: 'ICP + infrastructure',
+    items: ['ICP and exclusion list', 'Sending domains + warmup', 'Offer + proof points', 'Competitor link map', 'Agent access and guardrails'],
   },
   {
     week: 'Week 2',
-    title: 'Authority',
-    items: ['Founder interview (30–45 min)', '8–12 LinkedIn posts', '2 authority articles', '5–10 AI-search / FAQ opportunities'],
+    title: 'Outreach agent live',
+    items: ['Personalization engine', '1,000-email/day sequences', 'Follow-up that never drops', 'Reply routing to your inbox', 'Daily send dashboard'],
   },
   {
     week: 'Week 3',
-    title: 'AI Search',
-    items: ['Content restructuring', 'Comparison / alternative pages', 'Entity optimization', 'Citation opportunities', 'AI-search tracking setup'],
+    title: 'Backlink agent live',
+    items: ['Target neighborhood locked', '24/7 prospecting + pitching', 'Quality filters (no junk, no PBNs)', 'Placement tracking', 'First editorial wins in motion'],
   },
   {
     week: 'Week 4',
-    title: 'Pipeline',
-    items: ['ICP prospect list', 'Lead enrichment', 'Personalized outreach system', 'Follow-up sequence', 'CRM / pipeline setup'],
+    title: 'The loop',
+    items: ['Links feeding email proof', 'Reply handling playbook', 'CRM / pipeline wiring', 'Kill-switch rules', 'Month-2 operating cadence'],
   },
 ];
 
 const retainerIncludes = [
-  'Ongoing AI visibility monitoring',
-  'Content production',
-  'Founder ghostwriting',
-  'AI-search content',
-  'Outreach optimization',
-  'Reporting',
-  'Monthly strategy',
+  '1,000 emails/day outreach agent',
+  '24/7 backlink agent',
+  'We maintain and run both agents',
+  'Daily updates',
+  'List + ICP refresh',
+  'Deliverability watch',
+  'Link quality QA',
 ];
 
 export const Pricing = () => {
@@ -78,14 +79,16 @@ export const Pricing = () => {
         <div className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Sparkles size={16} />
-            <span>Start with a diagnostic. Implementation is optional.</span>
+            <span>Only {COHORT_SLOTS} slots. {CONNECT_FEE_LABEL} starts the setup.</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             {CORE_OUTCOME.replace(/\.$/, '')}.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            The {SYSTEM_NAME} is one acquisition system — not three disconnected agency services.
-            You don&apos;t buy a call. You buy a 90-minute AI visibility + founder authority audit.
+            {SLOTS_LINE} {CONNECT_FEE_LABEL} is the initial fee to start setting up both agents.
+            Once you are happy, we charge a {PACKAGE_SETUP} one-time setup fee. Then {PACKAGE_RETAINER}/month
+            to run them every month — with a daily update in your inbox.
+            Not happy at any point? We refund the {PACKAGE_SETUP}.
           </p>
         </div>
 
@@ -98,11 +101,11 @@ export const Pricing = () => {
               <div className="relative bg-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
                 <div className="text-center mb-8">
                   <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-2">
-                    Step 1 · What you buy first
+                    Step 1 · {CONNECT_FEE_LABEL} initial fee
                   </p>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{CONNECT_FEE_LABEL} {DIAGNOSTIC_NAME}</h3>
                   <p className="text-gray-400 max-w-xl mx-auto">
-                    90-minute AI Visibility + Founder Authority Audit. Researched before the call. A growth plan at the end.
+                    This is the initial fee to start setting up both AI agents — outreach at 1,000 emails/day and the 24/7 backlink hunter. You do not pay the {PACKAGE_SETUP} one-time setup until you are happy.
                   </p>
                 </div>
 
@@ -120,7 +123,7 @@ export const Pricing = () => {
                   <div>
                     <div className="text-sm font-bold text-white mb-4 flex items-center gap-2">
                       <ClipboardCheck size={16} className="text-emerald-400" />
-                      Before the call, we analyze
+                      What we lock in during setup
                     </div>
                     <ul className="space-y-3">
                       {diagnosticPrep.map((item) => (
@@ -136,7 +139,7 @@ export const Pricing = () => {
                   <div>
                     <div className="text-sm font-bold text-white mb-4 flex items-center gap-2">
                       <Calendar size={16} className="text-cyan-400" />
-                      On the 90-minute call
+                      How setup rolls out
                     </div>
                     <ul className="space-y-3">
                       {diagnosticAgenda.map((item) => (
@@ -150,7 +153,7 @@ export const Pricing = () => {
                 </div>
 
                 <p className="text-sm text-gray-400 text-center mb-6">
-                  At the end: if you want us to implement, the {SPRINT_NAME} is {PACKAGE_SETUP} and ongoing management is {PACKAGE_RETAINER}/month.
+                  After this: both agents are being built. You pay the {PACKAGE_SETUP} one-time setup fee only when you are happy. Then {PACKAGE_RETAINER}/month to run them — with a daily update.
                 </p>
 
                 <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
@@ -169,13 +172,13 @@ export const Pricing = () => {
           <div className="bg-gray-900/80 rounded-3xl p-8 md:p-12 border border-gray-800">
             <div className="text-center mb-10">
               <p className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                Step 2 · If you want us to implement
+                Step 2 · Once you are happy
               </p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                {PACKAGE_SETUP} — {SPRINT_NAME}
+                {PACKAGE_SETUP} one-time setup + {PACKAGE_RETAINER}/month
               </h3>
               <p className="text-gray-400">
-                Then {PACKAGE_RETAINER}/month. Cancel anytime.
+                The {PACKAGE_SETUP} is a one-time setup fee when both agents are live and you sign off. Then {PACKAGE_RETAINER}/month every month to run them and send you daily updates.
               </p>
             </div>
 
@@ -197,7 +200,7 @@ export const Pricing = () => {
             </div>
 
             <div className="mb-8 p-5 rounded-2xl border border-white/10 bg-white/5">
-              <h4 className="text-sm font-bold text-white mb-3">{PACKAGE_RETAINER}/month ongoing</h4>
+              <h4 className="text-sm font-bold text-white mb-3">{PACKAGE_RETAINER}/month to run both agents</h4>
               <div className="flex flex-wrap gap-2">
                 {retainerIncludes.map((item) => (
                   <span key={item} className="text-xs text-gray-300 px-3 py-1.5 rounded-full bg-black/40 border border-gray-800">
@@ -210,10 +213,10 @@ export const Pricing = () => {
             <div className="pt-6 border-t border-gray-800">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Shield className="text-emerald-400" size={24} />
-                <span className="text-lg font-bold">If we miss a first-month commitment</span>
+                <span className="text-lg font-bold">Not happy at any point?</span>
               </div>
               <p className="text-sm text-center text-gray-400 leading-relaxed max-w-lg mx-auto">
-                If we miss a core first-month commitment (GEO visibility work started, founder content in distribution, outreach system live), we give you <span className="text-white font-semibold">one free month of retainer.</span>
+                {SETUP_REFUND_NOTE} No call to &quot;save&quot; you. No leftover credit. The {PACKAGE_SETUP} comes back.
               </p>
             </div>
           </div>
@@ -222,22 +225,24 @@ export const Pricing = () => {
         <div className={`mt-16 max-w-4xl mx-auto transition-all duration-1000 delay-500 opacity-100 translate-y-0`}>
           <div className="p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-blue-500/10 border border-emerald-500/20 rounded-3xl">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Why start with {CONNECT_FEE_LABEL}</h3>
+              <h3 className="text-2xl font-bold mb-4">Only {COHORT_SLOTS} slots. Why {CONNECT_FEE_LABEL} first.</h3>
               <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                You get a professional diagnosis either way. If you start the sprint within 7 days, {CONNECT_FEE_LABEL} applies to {PACKAGE_SETUP}. If you don&apos;t, you still leave with a plan — not a sales conversation you paid for.
+                We set up and run the agents ourselves. That is why there are only {COHORT_SLOTS} slots.
+                {CONNECT_FEE_LABEL} starts the setup. You pay the {PACKAGE_SETUP} one-time fee when you are happy.
+                Then {PACKAGE_RETAINER}/month to keep them hunting — with a daily update. If that feeling ever breaks, the {PACKAGE_SETUP} comes back.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-5 bg-black/50 rounded-xl">
                   <div className="text-3xl font-bold text-white mb-1">{CONNECT_FEE_LABEL}</div>
-                  <div className="text-sm text-gray-500">Diagnostic · 90 minutes · researched first</div>
+                  <div className="text-sm text-gray-500">Initial fee · we start setting up both agents</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
                   <div className="text-3xl font-bold text-white mb-1">{PACKAGE_SETUP}</div>
-                  <div className="text-sm text-gray-500">{SPRINT_NAME}</div>
+                  <div className="text-sm text-gray-500">One-time setup · only when you are happy · refundable</div>
                 </div>
                 <div className="p-5 bg-black/50 rounded-xl">
                   <div className="text-3xl font-bold text-emerald-400 mb-1">{PACKAGE_RETAINER}/mo</div>
-                  <div className="text-sm text-gray-500">Ongoing system + reporting</div>
+                  <div className="text-sm text-gray-500">We run the agents every month + daily updates</div>
                 </div>
               </div>
             </div>

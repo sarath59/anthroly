@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Sparkles, TrendingUp, Shield, Clock } from 'lucide-react';
 import { GlowPulse, GradientBeam, SpotlightCard } from '../ui/static-fx';
+import { CONNECT_FEE_LABEL, PACKAGE_RETAINER, PACKAGE_SETUP } from '@/lib/site';
 
 export const FoundingMembers = () => {
 
@@ -8,22 +9,22 @@ export const FoundingMembers = () => {
     {
       icon: Users,
       title: "Dedicated Human Support",
-      description: "A real person onboards you, monitors your project, and talks to you weekly"
+      description: "A real person onboards you, watches both agents, and sends you a daily update."
     },
     {
       icon: TrendingUp,
-      title: "Done-for-you delivery",
-      description: "One 30–45 minute founder interview a month. We turn it into posts, articles, FAQ content, and outreach."
+      title: "Daily updates. We run them.",
+      description: "You approve ICP and voice. We set up, maintain, and operate both agents — and you get a daily update."
     },
     {
       icon: Shield,
-      title: "$216 diagnostic, then $1,500 sprint",
-      description: "The diagnostic fee is credited 100% toward implementation if you start within 7 days. Then $1,000/month to run the system."
+      title: "$216 to start. $1,000 when you are happy.",
+      description: "Then $500/month to maintain and run both agents — with daily updates. Not happy at any point? We refund the $1,000 setup fee."
     },
     {
       icon: Sparkles,
-      title: "One system, not three retainers",
-      description: "Discover in AI search. Trust through founder authority. Contact through qualified conversations."
+      title: "Two agents, not two jobs",
+      description: "1,000 emails a day. High-quality backlinks 24/7. You stay the founder. They hunt."
     }
   ];
 
@@ -44,18 +45,18 @@ export const FoundingMembers = () => {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <div className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-full text-sm font-bold shadow-lg">
                   <Clock size={16} />
-                  <span>Human-led. Not a dashboard.</span>
+                  <span>Only {COHORT_SLOTS} slots this round</span>
                 </div>
               </div>
 
               {/* Header */}
               <div className="text-center mb-10 pt-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  People Run Your Program.
+                  Only 10 people. We run the agents.
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                  We&apos;re not a DIY dashboard—we&apos;re a service. Strategists and writers onboard you, ship your deliverables,
-                  and meet with you every week while we execute the plan.
+                  {CONNECT_FEE_LABEL} starts the setup. Once you are happy, a {PACKAGE_SETUP} one-time setup fee.
+                  Then {PACKAGE_RETAINER}/month to run both agents — with a daily update. Not a dashboard you log into alone.
                 </p>
               </div>
 

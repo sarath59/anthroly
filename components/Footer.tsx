@@ -19,7 +19,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              Human-led SEO and AEO: AI-search citations, founder authority, and qualified conversations — without making the founder a full-time content creator.
+              Two AI agents we set up and run: 1,000 personalized cold emails a day, plus a 24/7 high-quality backlink agent — so you stay the founder, not the SDR.
             </p>
             <div className="flex space-x-4">
               <a

@@ -11,53 +11,59 @@ export function absoluteUrl(path: string = ''): string {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
-/** $216 Founder Growth Diagnostic (credited toward implementation) */
+/** $216 initial fee to start setting up both AI agents */
 export const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02';
 /** Creates a Stripe Checkout Session with DataFast visitor/session metadata */
 export const CHECKOUT_PATH = '/api/create-checkout';
 export const BOOK_CALL_URL = CHECKOUT_PATH;
 export const CONNECT_FEE_LABEL = '$216';
-export const DIAGNOSTIC_NAME = 'Founder Growth Diagnostic';
-export const PRIMARY_CTA_LABEL = 'Get the $216 diagnostic';
+export const DIAGNOSTIC_NAME = 'Initial Agent Setup';
+export const PRIMARY_CTA_LABEL = 'Claim a slot — $216';
 
-export const SYSTEM_NAME = 'Founder AI Authority & Pipeline System';
-export const PACKAGE_SETUP = '$1,500';
-export const PACKAGE_RETAINER = '$1,000';
-export const SPRINT_NAME = '30-Day AI Authority Sprint';
+export const SYSTEM_NAME = 'Anthroly Dual Agents';
+export const PACKAGE_SETUP = '$1,000';
+export const PACKAGE_RETAINER = '$500';
+export const SPRINT_NAME = 'One-time setup';
+
+/** We only take this many clients. Used in Hero, Pricing, FinalCTA. */
+export const COHORT_SLOTS = 10;
+export const SLOTS_LINE = `Only ${COHORT_SLOTS} slots. We set up and run both agents ourselves — this is not a dashboard we sell to everyone.`;
 
 export const CORE_PROMISE =
-  'We turn your expertise into AI-search visibility, founder authority, and qualified conversations — without requiring you to become a full-time content creator.';
+  'We set up and run two AI agents for you: a lead-gen outreach agent that sends 1,000 personalized cold emails a day, and a 24/7 backlink agent that earns high-quality links while you sleep.';
 
-export const CORE_OUTCOME = 'Become easier to discover, trust, and contact in the AI era.';
+export const CORE_OUTCOME = 'Fill the pipeline and build authority without becoming the SDR or the link-builder.';
 
-export const DIAGNOSTIC_CREDIT_NOTE = `The ${CONNECT_FEE_LABEL} diagnostic fee is credited 100% toward the ${PACKAGE_SETUP} implementation if you decide to work with us within 7 days.`;
+export const SETUP_REFUND_NOTE = `If you are not happy at any point, we refund the ${PACKAGE_SETUP} one-time setup fee. In full.`;
+
+export const DIAGNOSTIC_CREDIT_NOTE = `${CONNECT_FEE_LABEL} is the initial fee to start setting up both agents. Once you are happy, it is a ${PACKAGE_SETUP} one-time setup fee. Then ${PACKAGE_RETAINER}/month to run them — with daily updates. ${SETUP_REFUND_NOTE}`;
 
 /** Canonical offer sentence used on pSEO, schema, and hub CTAs. */
-export const OFFER_ONE_LINER = `Start with a ${CONNECT_FEE_LABEL} ${DIAGNOSTIC_NAME} (90-minute researched audit). Implementation is ${PACKAGE_SETUP} for the ${SPRINT_NAME}, then ${PACKAGE_RETAINER}/month. ${DIAGNOSTIC_CREDIT_NOTE}`;
+export const OFFER_ONE_LINER = `${SLOTS_LINE} Start with ${CONNECT_FEE_LABEL} to set up both agents. When you are happy: ${PACKAGE_SETUP} one-time setup + ${PACKAGE_RETAINER}/month to run them, with daily updates. ${SETUP_REFUND_NOTE}`;
 
-export const EXECUTION_SUMMARY = `${SYSTEM_NAME}: Discover (AI search visibility), Trust (founder authority from one 30–45 minute interview a month), and Contact (AI lead generation). Humans do the work; machines help scale. You do not become a full-time content creator.`;
+export const EXECUTION_SUMMARY = `${SYSTEM_NAME}: an outreach agent at 1,000 emails/day plus a 24/7 high-quality backlink agent. We set them up. We run them. You stay in the founder seat.`;
 
 export const STORY_LINE =
-  'Expertise → Content → AI visibility → Attention → Outreach → Conversations';
+  'ICP → 1,000 emails/day → replies → authority links 24/7 → more replies';
 
-/** One system. Three mechanisms. */
+/** Two agents. One compounding loop. */
 export const GROWTH_PILLARS = [
   {
     id: 'discover',
-    name: 'Discover',
-    mechanism: 'AI Search Visibility',
-    sell: 'We find the questions your prospects ask ChatGPT, Gemini, Perplexity, and Google AI — then close the gaps with answer-focused pages, comparisons, and citation work.',
+    name: 'Outreach',
+    mechanism: 'Lead-gen + mass cold outreach',
+    sell: 'A dedicated outreach agent researches your ICP, writes personalized cold emails, and sends up to 1,000 a day — with follow-ups that do not forget, freeze, or get tired.',
   },
   {
     id: 'trust',
-    name: 'Trust',
-    mechanism: 'Founder Authority Engine',
-    sell: 'One 30–45 minute founder interview a month. Humans turn it into LinkedIn, X, articles, newsletter, and FAQ content. You do not sit around writing posts.',
+    name: 'Backlinks',
+    mechanism: 'Autonomous 24/7 backlink agent',
+    sell: 'A second agent hunts, pitches, and earns high-quality backlinks around the clock. Not PBNs. Not junk. Editorial placements that make every email land heavier.',
   },
   {
     id: 'contact',
-    name: 'Contact',
-    mechanism: 'AI Lead Generation',
-    sell: 'We connect visibility and authority to outbound: ICP, research, enrichment, personalized outreach, follow-up, and CRM — so attention becomes conversations.',
+    name: 'Compound',
+    mechanism: 'Links make emails convert',
+    sell: 'Cold email without authority is noise. Links without a pipeline are vanity. Together they create a loop: more domain trust, more replies, more conversations — while you stay in the product.',
   },
 ] as const;

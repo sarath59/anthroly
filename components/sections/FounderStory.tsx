@@ -77,24 +77,23 @@ export const FounderStory = () => {
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
                   <span className="text-white font-medium">I&apos;ve been in the trenches.</span> Built multiple startups. 
-                  Hired SEO agencies that charged $5,000/month and delivered PowerPoint decks. 
-                  Tried DIY with every tool under the sun. Spent countless hours on content that nobody read.
+                  Hired agencies that charged $5,000/month and delivered decks. 
+                  Tried being the SDR on Sunday. Tried buying cheap links. Both made me poorer and more tired.
                 </p>
                 
                 <p>
-                  The SEO industry is broken. It&apos;s expensive, slow, opaque, and designed to keep you dependent 
-                  on agencies forever. I knew there had to be a better way.
+                  Founders should not have to choose between shipping product and filling the pipeline. 
+                  I knew there had to be a better way than becoming the operator.
                 </p>
 
                 <p>
-                  <span className="text-white font-medium">So I built Anthroly.</span> A human-led SEO service that does 
-                  what a $10,000/month agency does — but faster, cheaper, and with complete transparency. 
-                  Every backlink tracked. Every blog published. Every ranking monitored. All for less than 
-                  what you&apos;d pay for a single strategy call elsewhere.
+                  <span className="text-white font-medium">So I built Anthroly.</span> Two AI agents we set up and run: 
+                  1,000 personalized cold emails a day, and a 24/7 high-quality backlink hunter. 
+                  Only 10 slots, because we actually operate them — not a dashboard we sell to everyone.
                 </p>
 
                 <p className="text-emerald-400 font-medium">
-                  This isn&apos;t just a product for me. It&apos;s the solution I wish I had 5 years ago.
+                  This isn&apos;t just a product for me. It&apos;s the pair of agents I wish I had 5 years ago.
                 </p>
               </div>
 

@@ -9,8 +9,8 @@ export const WhoIsThisFor = () => {
     {
       icon: Rocket,
       title: "Indie Hackers & Solo Founders",
-      description: "You&apos;re building something amazing, but SEO keeps falling to the bottom of your todo list. Get enterprise-level growth without hiring a team.",
-      benefits: ["Focus on product, not marketing", "Punch above your weight", "Compete with funded startups"],
+      description: "You&apos;re building something amazing, but outbound keeps falling to the bottom of your todo list. Get 1,000 emails/day without hiring an SDR.",
+      benefits: ["Focus on product, not prospecting", "Punch above your weight", "Compete with funded startups"],
       color: "emerald"
     },
     {
@@ -62,16 +62,16 @@ export const WhoIsThisFor = () => {
         {/* Section Header */}
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 mb-6">
-            <span>👥 82% of founders say SEO is important — only 12% actually do it</span>
+            <span>Only 10 slots. We actually run the agents.</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            You Need Pipeline, Not Another SEO Report.
+            You Need Pipeline, Not Another SDR Seat.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              Built for founders who cannot spend 20 hours a week on it.
+              Built for founders who cannot spend 20 hours a week hunting.
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">SaaS, AI, cybersecurity, fintech, consultants, professional services.</span> If buyers already ask AI who to hire — and you have expertise but no interest in becoming a full-time content creator — this is for you.
+            <span className="text-white font-semibold">SaaS, agencies, consultants, professional services.</span> If you need conversations this quarter and cannot become the SDR or the link-builder — this is for you. Only 10 slots.
           </p>
         </div>
 

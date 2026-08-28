@@ -18,9 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Anthroly — Founder AI Authority & Pipeline System",
-  description: "Become easier to discover, trust, and contact in the AI era. $216 Founder Growth Diagnostic (credited toward a $1,500 30-day sprint). Then $1,000/month. Humans do the work. Machines help us scale.",
-  keywords: ["GEO", "AI search visibility", "ChatGPT SEO", "Perplexity citations", "AI lead generation", "founder ghostwriting", "LinkedIn ghostwriting", "AEO", "human-led SEO"],
+  title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
+  description: "Two AI agents we set up and run: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 initial fee. $1,000 one-time when you are happy. Then $500/month with daily updates. Unhappy? We refund the $1,000.",
+  keywords: ["AI outreach agent", "cold email", "lead generation", "backlink agent", "link building", "1000 emails a day", "AI SEO", "founder pipeline"],
   robots: {
     index: true,
     follow: true,
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     canonical: absoluteUrl('/'),
   },
   openGraph: {
-    title: "Anthroly — Founder AI Authority & Pipeline System",
-    description: "Become easier to discover, trust, and contact in the AI era. $216 diagnostic (credited toward $1,500 sprint). Then $1,000/month.",
+    title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
+    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 to start setup. $1,000 one-time when you are happy. Then $500/month. Unhappy? We refund the $1,000.",
     url: absoluteUrl('/'),
     siteName: 'Anthroly',
     type: 'website',
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
         url: absoluteUrl('/logo.png'),
         width: 512,
         height: 512,
-        alt: 'Anthroly — human-led SEO, content, and AI-search visibility',
+        alt: 'Anthroly — outreach and backlink AI agents',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Anthroly — Founder AI Authority & Pipeline System",
-    description: "Become easier to discover, trust, and contact in the AI era. $216 diagnostic (credited toward $1,500 sprint). Then $1,000/month.",
+    title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
+    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 to start setup. $1,000 one-time when you are happy. Then $500/month. Unhappy? We refund the $1,000.",
     images: [absoluteUrl('/logo.png')],
   },
   icons: {

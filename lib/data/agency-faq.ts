@@ -170,7 +170,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How is this different from other SEO agencies?',
-    'Traditional agencies often charge $2,000–$10,000/month and rely on manual labor. We use AI to automate repetitive work (research, drafting, internal linking, monitoring) so we can ship faster — but the final output is still human-quality. Start with the $216 Founder Growth Diagnostic; implementation is $1,500 for the 30-Day AI Authority Sprint, then $1,000/month. Plus, we focus on both traditional SEO and Answer Engine Optimization (AEO) / GEO for AI search engines like ChatGPT, Claude, Perplexity, and Google AI Overviews.'
+    'Traditional agencies often charge $2,000–$10,000/month and still ask you to be the operator. Anthroly sets up and runs two AI agents: 1,000 personalized cold emails a day, plus a 24/7 high-quality backlink agent. Start with $216. When setup is complete and you are happy: $1,000 setup + $500/month to maintain and run them, with daily updates. If you are not happy at any point, we refund the $1,000 setup fee.'
   );
   add(
     'Getting Started',
@@ -180,7 +180,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'What kind of results can I expect in 30 days?',
-    'The 30-Day AI Authority Sprint is the implementation window: GEO/AI visibility work started, founder content in distribution, and the outreach system live. Rankings and citations compound after that. We do not quote a guaranteed link, blog, or mention quota. If we miss a core first-month sprint commitment, you get one free month of retainer. SEO compounds over months 2–3 as Discover, Trust, and Contact keep running.'
+    'The Dual-Agent Setup is the implementation window: outreach agent sending 1,000 emails/day, backlink agent hunting 24/7, quality filters live. If you are not happy at any point, we refund the $1,000 setup fee. Results compound as both agents keep running.'
   );
   add(
     'Getting Started',
@@ -190,7 +190,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'What are AI Q&A Pages and how do they rank on AI search?',
-    'AI Q&A pages are specially structured content pages that answer specific questions people ask about your industry. Unlike regular blog posts, these are optimized for AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview. We research the exact questions being asked, then create pages with proper schema markup and structure that AI engines love to cite. Volume is scoped in the $216 diagnostic and shipped in the $1,500 sprint — not a fixed 15-pages-per-month quota or a 50+ mention guarantee.'
+    'The outreach agent uses objection-handling copy and Q&A-style sequences so replies do not die in silence. Volume and angles are scoped in the $216 start fee and shipped in the $1,000 Dual-Agent Setup — not a fixed 15-pages-per-month quota.'
   );
   add(
     'Getting Started',
@@ -215,7 +215,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'What if it does not work for me?',
-    'If we miss a core first-month commitment on the 30-Day AI Authority Sprint — GEO visibility work started, founder content in distribution, outreach system live — we give you one free month of retainer. The $216 diagnostic is still a finished audit even if you do not continue.'
+    'If you are not happy at any point, we refund the $1,000 setup fee in full. The $216 starts setup. You pay $1,000 only when setup is complete and you sign off — then $500/month to run both agents with daily updates.'
   );
   add(
     'Getting Started',
@@ -225,7 +225,7 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Getting Started',
     'How do I get started?',
-    'Start with the $216 Founder Growth Diagnostic at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02. That is a 90-minute AI visibility + founder authority audit, researched before the call. The $216 is credited 100% toward the $1,500 30-Day AI Authority Sprint if you start within 7 days. Ongoing management is $1,000/month. Email sharatth@anthroly.com if you need a receipt.'
+    'Start with $216 at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02. That unlocks dual-agent setup: 1,000 emails/day outreach plus a 24/7 backlink agent. When setup is complete and you are happy, it is $1,000 setup + $500/month to maintain and run them, with daily updates. If you are not happy at any point, we refund the $1,000. Email sharatth@anthroly.com if you need a receipt.'
   );
 
   add(
@@ -380,37 +380,37 @@ function buildFaqs(): AgencyFaq[] {
   add(
     'Pricing & Engagement',
     'How much does Anthroly cost?',
-    'The Founder AI Authority & Pipeline System is $1,500 for a 30-Day AI Authority Sprint, then $1,000/month. You start with a $216 Founder Growth Diagnostic (90-minute AI visibility + founder authority audit). The $216 is credited 100% toward the $1,500 sprint if you decide to work with us within 7 days. One core outcome: become easier to discover, trust, and contact in the AI era.'
+    'Only 10 slots. Start with $216 — the initial fee to start setting up both AI agents (1,000 emails/day outreach + 24/7 backlink hunter). Once you are happy: $1,000 one-time setup fee + $500/month to run them, with daily updates. If you are not happy at any point, we refund the $1,000.'
   );
   add(
     'Pricing & Engagement',
     'How do I get started with Anthroly?',
-    'Get the $216 Founder Growth Diagnostic at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02, or email sharatth@anthroly.com. You are paying for a researched 90-minute audit, not a conversation. Implementation is a $1,500 30-day sprint, then $1,000/month. The diagnostic fee is credited toward the sprint if you start within 7 days.'
+    'Get started with $216 at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02, or email sharatth@anthroly.com. We set up both agents. You pay $1,000 only when setup is complete and you are happy, then $500/month to run them with daily updates. If you are not happy at any point, we refund the $1,000 setup fee.'
   );
   add(
     'Pricing & Engagement',
     'Does Anthroly offer a free AI visibility audit?',
-    'Anthroly offers a free AI crawler analysis on the homepage (https://www.anthroly.com/#ai-crawler). That is a lightweight check of how AI systems see your site. The $216 Founder Growth Diagnostic is different: a 90-minute researched audit covering AI visibility, competitors, LinkedIn, content, positioning, and lead-generation gaps — credited toward implementation if you start within 7 days.'
+    'Anthroly offers a free crawler peek on the homepage (https://www.anthroly.com/#ai-crawler). The $216 Founder Growth Diagnostic is different: it starts dual-agent setup. You pay $1,000 only when setup is complete and you are happy. If you are not happy at any point, we refund the $1,000.'
   );
   add(
     'Pricing & Engagement',
     'What is included in a typical Anthroly retainer?',
-    'The $1,000/month retainer continues the Founder AI Authority & Pipeline System: ongoing AI visibility monitoring, content production, founder ghostwriting, AI-search content, outreach optimization, reporting, and monthly strategy. Exact mix is scoped after the diagnostic and 30-day sprint.'
+    'The $500/month retainer is how we maintain and run both agents for you: 1,000 emails/day outreach, 24/7 backlink hunting, list refresh, deliverability watch, link quality QA, and a daily update. You stay in the founder seat.'
   );
   add(
     'Pricing & Engagement',
     'What is the $216 Founder Growth Diagnostic?',
-    'The $216 Founder Growth Diagnostic is a 90-minute AI Visibility + Founder Authority Audit. Before the call, Anthroly analyzes current AI visibility, 3–5 competitors, LinkedIn presence, existing content, website, positioning, and lead-generation gaps. On the call: 20 min current situation, 25 min AI visibility, 20 min founder authority, 15 min lead generation, 10 min growth plan. You are paying for a diagnosis, not a conversation. Get it at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
+    'The $216 Founder Growth Diagnostic is the initial fee to start setting up both AI agents. We lock ICP, inboxes, and the link neighborhood, then we build. You do not pay the $1,000 one-time setup fee until you are happy. Only 10 slots. Get started at https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02.'
   );
   add(
     'Pricing & Engagement',
-    'Is the $216 diagnostic fee credited toward implementation?',
-    'Yes. The $216 diagnostic fee is credited 100% toward the $1,500 30-Day AI Authority Sprint if you decide to work with Anthroly within 7 days.'
+    'Is the $216 credited toward the $1,000 setup?',
+    'No. $216 is the upfront fee to start. You pay $1,000 only when setup is complete and you are happy. If you are not happy at any point, we refund the $1,000 setup fee in full.'
   );
   add(
     'Pricing & Engagement',
-    'What is included in the $1,500 30-Day AI Authority Sprint?',
-    'Week 1 Positioning: ICP, buyer-question research, competitor analysis, AI visibility baseline, founder positioning. Week 2 Authority: one 30–45 minute founder interview, 8–12 LinkedIn posts, 2 authority articles, 5–10 AI-search/FAQ opportunities. Week 3 AI Search: content restructuring, comparison/alternative content, entity optimization, citation opportunities, AI-search tracking. Week 4 Pipeline: ICP prospect list, lead enrichment, personalized outreach, follow-up sequence, CRM/pipeline setup.'
+    'What is included in the $1,000 Dual-Agent Setup?',
+    'Week 1: ICP, sending domains, warmup, competitor link map, guardrails. Week 2: outreach agent live at 1,000 emails/day with follow-ups and reply routing. Week 3: 24/7 backlink agent live with quality filters (no junk, no PBNs). Week 4: the loop — links feeding email proof, CRM wiring, kill-switch, operating cadence. You pay the $1,000 when this is complete and you are happy.'
   );
   add(
     'Services',

@@ -48,13 +48,13 @@ export const AIBacklinkAgents = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-semibold mb-6 border border-orange-500/30">
             <Link2 size={16} />
-            <span>🔗 One of Google&apos;s strongest ranking signals: authority links</span>
+            <span>The backlink agent hunts while you sleep</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Backlinks That Cost Others $500 Each. Included for You.
+            A 24/7 Backlink Agent. Editorial Only.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">One DR 80+ backlink costs $400-$1,000.</span> We still earn editorial placements as part of GEO — humans pitch, machines help research. You stay focused on the business.
+            <span className="text-white font-semibold">Cheap links stain the domain. Then every cold email looks like a scam.</span> The second agent hunts, pitches, and earns high-quality backlinks around the clock. Not PBNs. Not junk. Authority that makes 1,000 emails a day land heavier.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export const AIBacklinkAgents = () => {
                 <span className="text-lg font-bold">Our Backlink Guarantee</span>
               </div>
               <p className="text-gray-300">
-                Editorial placements are part of GEO, not a fixed quota. If we miss a core first-month sprint commitment (GEO work started, founder content in distribution, outreach live), you get <span className="text-white font-semibold">one free month of retainer</span>.
+                Not happy at any point? We refund the <span className="text-white font-semibold">$1,000 setup fee</span>. Editorial only — no PBNs, no junk. The agent hunts 24/7. You get a daily update.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ export const AIBacklinkAgents = () => {
                 <div className="text-sm text-gray-500">Average DR</div>
               </div>
               <div className="p-6 bg-gray-900 border border-gray-800 rounded-2xl text-center">
-                <div className="text-4xl font-bold text-white mb-1">$1,000</div>
+                <div className="text-4xl font-bold text-white mb-1">$500</div>
                 <div className="text-sm text-gray-500">Monthly retainer</div>
               </div>
             </div>

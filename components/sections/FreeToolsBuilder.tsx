@@ -42,13 +42,13 @@ export const FreeToolsBuilder = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-semibold mb-6 border border-teal-500/30">
             <Wrench size={16} />
-            <span>🛠️ Free tools generate 4x more backlinks than blog posts</span>
+            <span>Free tools the agents use — and you can steal</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            20+ Free SEO Tools. Use Them Now.
+            20+ Free Tools. Use Them Now.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-8">
-            <span className="text-white font-semibold">Meta tag generator, word counter, SERP preview, schema generators, and more.</span> No signup. Then get 20 custom tools built for your site every month.
+            <span className="text-white font-semibold">The same utilities our agents lean on.</span> No signup. Then, if you take one of the 10 slots, we run the machines for you.
           </p>
           <Link
             href="/tools"

@@ -2,19 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import {
   BOOK_CALL_URL,
+  COHORT_SLOTS,
   CORE_PROMISE,
   DIAGNOSTIC_CREDIT_NOTE,
   GROWTH_PILLARS,
   PRIMARY_CTA_LABEL,
+  SLOTS_LINE,
   STORY_LINE,
   SYSTEM_NAME,
 } from '@/lib/site';
 import { Button } from '../ui/button';
-import { ArrowRight, Megaphone, Search, Target } from 'lucide-react';
+import { ArrowRight, Link2, Mail, Zap } from 'lucide-react';
 import { LogoStrip, AI_COMPANIES } from '../ui/CompanyLogos';
 import { GlowPulse } from '../ui/static-fx';
 
-const PILLAR_ICONS = [Search, Megaphone, Target];
+const PILLAR_ICONS = [Mail, Link2, Zap];
 
 export const Hero = () => {
   return (
@@ -30,20 +32,20 @@ export const Hero = () => {
         <div className="max-w-6xl mx-auto text-center">
           
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
-            {SYSTEM_NAME}
+            {SYSTEM_NAME} · only {COHORT_SLOTS} slots
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="block text-white mb-2">Become easier to</span>
+            <span className="block text-white mb-2">Two agents that never</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              discover, trust, and contact
+              clock out
             </span>
-            <span className="block text-white mt-2">in the AI era.</span>
+            <span className="block text-white mt-2">so you don&apos;t have to.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
             {CORE_PROMISE}{' '}
-            <span className="text-white font-semibold">Humans research, write, and qualify.</span> Machines help us move faster — they do not replace the work.
+            <span className="text-white font-semibold">You stay the founder.</span> They do the hunting.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-3 max-w-5xl mx-auto mb-10 text-left">
@@ -93,11 +95,14 @@ export const Hero = () => {
                 variant="outline"
                 className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl rounded-full font-bold"
               >
-                See the 30-day sprint
+                See the {COHORT_SLOTS} slots
               </Button>
             </Link>
           </div>
 
+          <p className="text-sm text-amber-300/90 max-w-xl mx-auto mb-3 font-semibold">
+            {SLOTS_LINE}
+          </p>
           <p className="text-sm text-gray-500 max-w-xl mx-auto mb-12">
             {DIAGNOSTIC_CREDIT_NOTE}
           </p>
@@ -105,7 +110,7 @@ export const Hero = () => {
           <div className="mb-8">
             <LogoStrip 
               companies={AI_COMPANIES} 
-              label="Where your buyers already ask questions"
+              label="Inboxes and domains your buyers already trust"
               size="md"
               showNames={true}
             />
@@ -115,7 +120,7 @@ export const Hero = () => {
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
         <div className="flex flex-col items-center gap-2 text-gray-500">
-          <span className="text-xs uppercase tracking-widest">How the system works</span>
+          <span className="text-xs uppercase tracking-widest">How the two agents work</span>
           <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
             <div className="w-1.5 h-3 bg-gray-500 rounded-full animate-bounce"></div>
           </div>

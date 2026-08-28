@@ -2,12 +2,14 @@ import React from 'react';
 import { ArrowRight, Zap, Clock, Shield, CheckCircle2 } from 'lucide-react';
 import {
   BOOK_CALL_URL,
+  COHORT_SLOTS,
   CONNECT_FEE_LABEL,
   CORE_OUTCOME,
   DIAGNOSTIC_CREDIT_NOTE,
   PACKAGE_RETAINER,
   PACKAGE_SETUP,
   PRIMARY_CTA_LABEL,
+  SLOTS_LINE,
   STORY_LINE,
   SYSTEM_NAME,
 } from '@/lib/site';
@@ -32,16 +34,16 @@ export const FinalCTA = () => {
           </h2>
 
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
-            <span className="text-white font-semibold">{SYSTEM_NAME}.</span> Discover in AI search. Trust through founder authority. Contact through qualified outreach.
+            <span className="text-white font-semibold">{SYSTEM_NAME}.</span> Only {COHORT_SLOTS} slots. 1,000 emails a day. High-quality backlinks 24/7. You stay in the founder seat.
           </p>
           <p className="text-sm text-gray-500 mb-12">{STORY_LINE}</p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
-              "Named in ChatGPT & Perplexity",
-              "One interview a month — we write",
-              "Outreach tied to the content",
-              "Humans with machines — never AI-only"
+              "Only 10 slots",
+              "1,000 personalized emails / day",
+              "Backlink agent hunting 24/7",
+              "Daily updates. We run them."
             ].map((item, index) => (
               <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white/5 border border-white/10 rounded-xl">
                 <CheckCircle2 className="text-emerald-400" size={18} />
@@ -61,22 +63,22 @@ export const FinalCTA = () => {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Shield size={16} className="text-emerald-400" />
-                <span>{CONNECT_FEE_LABEL} credited toward {PACKAGE_SETUP} within 7 days</span>
+                <span>{CONNECT_FEE_LABEL} to start · {PACKAGE_SETUP} when you are happy</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap size={16} className="text-emerald-400" />
-                <span>90-minute researched audit</span>
+                <span>Only {COHORT_SLOTS} slots · {CONNECT_FEE_LABEL} starts setup</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} className="text-emerald-400" />
-                <span>Then {PACKAGE_SETUP} sprint · {PACKAGE_RETAINER}/mo</span>
+                <span>Then {PACKAGE_RETAINER}/mo to run the agents + daily updates</span>
               </div>
             </div>
           </div>
 
           <div className="max-w-2xl mx-auto p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-2xl">
             <p className="text-gray-300 leading-relaxed">
-              <span className="text-white font-bold">You are not paying to talk.</span> {DIAGNOSTIC_CREDIT_NOTE}
+              <span className="text-white font-bold">{SLOTS_LINE}</span> {DIAGNOSTIC_CREDIT_NOTE}
             </p>
           </div>
         </div>

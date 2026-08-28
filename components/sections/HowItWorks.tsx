@@ -1,9 +1,9 @@
 import React from 'react';
-import { Search, Megaphone, Target, ArrowRight, Check } from 'lucide-react';
+import { Mail, Link2, Zap, ArrowRight, Check } from 'lucide-react';
 import { GlowPulse } from '../ui/static-fx';
-import { CORE_OUTCOME, GROWTH_PILLARS, STORY_LINE, SYSTEM_NAME } from '@/lib/site';
+import { GROWTH_PILLARS, SLOTS_LINE, STORY_LINE, SYSTEM_NAME } from '@/lib/site';
 
-const ICONS = [Search, Megaphone, Target];
+const ICONS = [Mail, Link2, Zap];
 const COLORS = ['emerald', 'cyan', 'orange'] as const;
 
 export const HowItWorks = () => {
@@ -16,16 +16,16 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
-            {SYSTEM_NAME}
+            {SYSTEM_NAME} · only 10 slots
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            One outcome.{' '}
+            Two agents.{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              Three mechanisms.
+              Zero idle hours.
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            {CORE_OUTCOME} GEO, founder authority, and lead generation are not three separate retainers — they are how that outcome happens.
+            {SLOTS_LINE} Cold email without links is ignored. Links without a pipeline are a trophy case. We run both — every day, including the days you don&apos;t.
           </p>
           <p className="text-sm text-gray-500">{STORY_LINE}</p>
         </div>
@@ -75,15 +75,15 @@ export const HowItWorks = () => {
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">You: one interview a month</span>
+                <span className="text-gray-300">You: approve ICP + voice</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">We: research, write, outreach</span>
+                <span className="text-gray-300">We: set up + run both agents</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <Check size={16} className="text-emerald-400" />
-                <span className="text-gray-300">Humans lead. Machines assist.</span>
+                <span className="text-gray-300">They hunt. You decide.</span>
               </div>
             </div>
           </div>

@@ -8,23 +8,23 @@ export const AICrawlerAnalysis = () => {
   const crawlerFeatures = [
     {
       icon: Eye,
-      title: "AI Visibility Score",
-      description: "Know exactly how visible you are to ChatGPT, Perplexity, Claude, and other AI systems"
+      title: "Outbound readiness",
+      description: "See if your domain, inboxes, and list can survive 1,000 personalized emails a day"
     },
     {
       icon: AlertTriangle,
-      title: "Gap Analysis",
-      description: "Discover what your competitors are doing that makes AI recommend them over you"
+      title: "Link neighborhood gaps",
+      description: "Where rivals already earn editorial links — and where junk would stain your domain"
     },
     {
       icon: Search,
-      title: "Content Audit",
-      description: "AI scans every page to find optimization opportunities humans miss"
+      title: "Agent fit audit",
+      description: "ICP tightness, exclusion list, and where an outreach agent would waste budget vs print money"
     },
     {
       icon: Zap,
-      title: "Priority Actions",
-      description: "Get a ranked list of exactly what to fix, in order of impact on your rankings"
+      title: "Priority actions",
+      description: "A ranked list of what we lock first when your slot starts — setup, not a PDF"
     }
   ];
 
@@ -38,13 +38,13 @@ export const AICrawlerAnalysis = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Bot size={16} />
-            <span>📈 Sites optimized for AI can see 3x more referral traffic</span>
+            <span>Before 1,000 emails/day, we scan what would break</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Most Sites Are Invisible to AI Search (For Now)
+            Most Inboxes Are Not Ready for 1,000/Day
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Most websites fail basic AI visibility checks.</span> Our crawler analyzes how ChatGPT, Perplexity, and Claude interpret your site — and reveals the exact fixes to get discovered and recommended.
+            <span className="text-white font-semibold">Volume without a scan is how domains die.</span> We check deliverability, list quality, and your link neighborhood before either agent goes hunting.
           </p>
         </div>
 
@@ -72,23 +72,23 @@ export const AICrawlerAnalysis = () => {
                 {/* Score Display */}
                 <div className="text-center py-6">
                   <div className="text-6xl font-bold text-white mb-2">47<span className="text-3xl text-gray-500">/100</span></div>
-                  <div className="text-orange-400 font-semibold">AI Visibility Score</div>
-                  <p className="text-gray-500 text-sm mt-2">You&apos;re leaving AI discovery traffic on the table</p>
+                  <div className="text-orange-400 font-semibold">Agent-readiness score</div>
+                  <p className="text-gray-500 text-sm mt-2">You&apos;re not ready for 1,000 emails/day yet</p>
                 </div>
                 
                 {/* Issues Found */}
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 p-3 bg-red-500/10 border border-red-500/20 rounded-xl">
                     <AlertTriangle size={18} className="text-red-400" />
-                    <span className="text-gray-300 text-sm">12 pages not indexed by AI crawlers</span>
+                    <span className="text-gray-300 text-sm">Sending domain not warmed</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-orange-500/10 border border-orange-500/20 rounded-xl">
                     <AlertTriangle size={18} className="text-orange-400" />
-                    <span className="text-gray-300 text-sm">Missing structured data on 8 pages</span>
+                    <span className="text-gray-300 text-sm">ICP list too wide — burn risk</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                     <CheckCircle2 size={18} className="text-emerald-400" />
-                    <span className="text-gray-300 text-sm">5 opportunities to outrank competitors</span>
+                    <span className="text-gray-300 text-sm">3 editorial link gaps vs rivals</span>
                   </div>
                 </div>
               </div>
@@ -121,10 +121,10 @@ export const AICrawlerAnalysis = () => {
           <div className={`space-y-8 transition-all duration-1000 delay-400 opacity-100 translate-x-0`}>
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                See What AI Sees (Or Doesn&apos;t See)
+                See What Would Break at 1,000/Day
               </h3>
               <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                ChatGPT and Perplexity don&apos;t read websites like Google does. They look for different signals, different structures, different content patterns. <span className="font-semibold text-white">If you&apos;re optimizing only for Google, you&apos;re already behind.</span>
+                Cold email at this volume is not a CSV and a prayer. We look at inboxes, domains, and the links that make those emails land. <span className="font-semibold text-white">If you skip the scan, you pay in spam folders.</span>
               </p>
             </div>
 
@@ -150,7 +150,7 @@ export const AICrawlerAnalysis = () => {
 
             <div className="pt-4">
               <p className="text-sm text-gray-400 bg-gray-900/80 border border-gray-800 p-4 rounded-xl">
-                <span className="font-semibold text-white">What the score measures:</span> indexability, structured data, entity clarity, answer coverage, and citation-readiness — the signals AI engines rely on to recommend a brand.
+                <span className="font-semibold text-white">What the score measures:</span> deliverability, list tightness, bounce risk, and whether your domain already has the authority links that make cold email convert.
               </p>
             </div>
           </div>

@@ -40,13 +40,13 @@ export const SocialArticles = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Share2 size={16} />
-            <span>🌐 Founder-led distribution — LinkedIn, X, newsletters</span>
+            <span>Follow-ups your prospects actually read</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            Turn one founder interview into a distribution engine
+            The outreach agent doesn&apos;t send once and hope.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Not “20 LinkedIn posts.”</span> Humans extract your expertise. Machines help us draft. Writers ship LinkedIn, X, newsletters, articles, and talking points — then we distribute and watch what books meetings.
+            <span className="text-white font-semibold">Not “20 LinkedIn posts.”</span> Sequences, bump-backs, and proof in the thread. The agent follows up until they reply or we kill it. You take the conversation.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export const SocialArticles = () => {
           {/* Left: Why It Matters */}
           <div className={`transition-all duration-1000 delay-300 opacity-100 translate-x-0`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Why Social Content Matters for SEO & GEO
+              Why follow-up volume beats founder willpower
             </h3>
             
             <div className="space-y-6 mb-8">

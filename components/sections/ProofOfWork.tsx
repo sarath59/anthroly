@@ -28,7 +28,7 @@ export const ProofOfWork = () => {
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-3">
-            We help companies of all sizes around the world achieve measurable results.
+            We help companies of all sizes. Right now we only take 10 clients — because we set up and run both agents ourselves.
           </p>
           <p className="text-sm text-gray-500 max-w-2xl mx-auto">{ENTERPRISE_PROOF_LINE}</p>
         </div>

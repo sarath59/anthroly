@@ -31,37 +31,37 @@ function bookCallWith(_note: string): string {
 const WHAT_WE_DO = [
   {
     step: '01',
-    title: 'Map your citation neighborhood',
+    title: 'Map the authority neighborhood',
     detail:
-      'Our researchers study the pages ChatGPT, Perplexity, Claude, and Gemini repeatedly cite when answering category questions — especially the sources that appear beside your competitors.',
+      'The backlink agent studies where your rivals already earn editorial mentions — publications, resources, and reference sites that make a cold email feel familiar.',
     icon: Map,
   },
   {
     step: '02',
-    title: 'Isolate the sources AI already trusts',
+    title: 'Isolate sources worth earning',
     detail:
-      'We set the competitor pages aside and focus on the other publications, reviews, listicles, docs, and reference sites that form the neighborhood answer engines already rely on.',
+      'We set junk, PBNs, and directories aside. The agent hunts the other publications, reviews, listicles, and docs that actually move domain trust.',
     icon: Eye,
   },
   {
     step: '03',
     title: 'Prioritize where your brand must appear',
     detail:
-      'Humans score each neighbor by citation frequency, topical fit, and commercial impact — then build a shortlist of placements worth earning, not a random outreach blast.',
+      'Humans score each target by relevance, authority, and commercial impact — then the agent works the shortlist 24/7, not a random blast.',
     icon: Crosshair,
   },
   {
     step: '04',
-    title: 'Earn mentions with human digital PR',
+    title: 'Earn links while you sleep',
     detail:
-      'Our writers, outreach specialists, and strategists secure brand mentions, quotes, data inclusions, and editorial coverage on those trusted sources.',
+      'The agent prospects, pitches, and follows up around the clock. Operators QA every placement. Editorial only.',
     icon: Network,
   },
   {
     step: '05',
-    title: 'Verify the neighborhood reflects you',
+    title: 'Feed proof into outreach',
     detail:
-      'We re-check how AI answers cite the category after placements land — and keep working the neighborhood as sources rotate.',
+      'New links go back into the email agent — so the next 1,000 sends land heavier than the last.',
     icon: ShieldCheck,
   },
 ];
@@ -70,29 +70,29 @@ const OUTCOMES = [
   {
     title: 'Not 100 random backlinks',
     detail:
-      'We pursue the specific sources AI already uses to construct answers in your category — so authority compounds where models look.',
+      'We pursue the specific sources that actually move authority in your category — so every link compounds the next email.',
     icon: Target,
   },
   {
-    title: 'Human judgment on every target',
+    title: 'Quality filter on every target',
     detail:
-      'Researchers decide which neighbors matter. Strategists decide the angle. Writers and PR specialists execute. Nothing is spray-and-pray.',
+      'Operators decide which neighbors matter. The agent never stops hunting. Nothing is spray-and-pray. Nothing is a PBN.',
     icon: Users,
   },
   {
-    title: 'Built for recommendation, not vanity links',
+    title: 'Built for replies, not vanity DR',
     detail:
-      'The goal is for answer engines to keep encountering your brand inside the evidence they already trust — until you become part of the recommendation.',
+      'The goal is a domain that makes cold email feel like a warm intro — because the web already vouches for you.',
     icon: Sparkles,
   },
 ];
 
 const DELIVERABLES = [
-  'Citation-neighborhood map for your category prompts',
-  'Prioritized target list of AI-trusted sources (excluding competitor pages)',
-  'Human-led pitches, contributions, and digital PR for those sources',
-  'Tracking of brand presence inside the neighborhood over time',
-  'Ongoing refresh as answer engines rotate what they cite',
+  'Authority-neighborhood map for your category',
+  'Prioritized target list (junk and PBNs excluded)',
+  '24/7 prospecting, pitching, and follow-up',
+  'Tracking of every editorial placement as it lands',
+  'Ongoing refresh as the neighborhood rotates',
 ];
 
 export const CitationNeighbors = () => {
@@ -113,42 +113,39 @@ export const CitationNeighbors = () => {
         <ScrollReveal className="mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-emerald-300 backdrop-blur">
             <Layers size={14} />
-            Citation Neighborhood Service
+            24/7 backlink agent
           </div>
 
           <h2
             id="citation-neighbors-heading"
             className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl"
           >
-            <span className="block text-white">Enter the sources AI already</span>
+            <span className="block text-white">High-quality backlinks while</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400">
-              uses to build the answer
+              you sleep, ship, and sell
             </span>
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-xl font-medium leading-relaxed text-gray-200">
-            Answer engines don&apos;t invent authority from scratch. They assemble answers from a
-            citation neighborhood they already trust.
+            Cold email without authority is noise. This agent hunts editorial links around the clock — so every send lands heavier than the last.
           </p>
 
           <div className="mx-auto mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-gray-400">
             <p>
-              When ChatGPT or Perplexity recommends your competitors, other pages appear beside
-              them — publications, reviews, research, and reference sites the model keeps citing.
-              Those sites are the neighborhood.
+              Cheap link farms stain the domain. Then every cold email looks like a scam — because
+              the web already said you are one. The 24/7 backlink agent does the opposite.
             </p>
             <p>
               <strong className="font-semibold text-white">
-                Our human team maps that neighborhood for your category, then works to get your
-                brand mentioned there.
+                It hunts, pitches, and earns high-quality placements while you stay in the product.
               </strong>{' '}
-              Not a hundred random backlinks. The sources AI already uses.
+              Not a hundred random backlinks. Editorial only. No PBNs. No junk.
             </p>
           </div>
 
           <div className="mx-auto mt-8 w-fit rounded-2xl border border-cyan-500/25 bg-cyan-500/10 px-6 py-4">
             <p className="text-base font-semibold text-cyan-100 md:text-lg">
-              Researchers + digital PR specialists. Human outreach. Human prioritization.
+              Autonomous hunting. Human quality filters. 24/7.
             </p>
           </div>
 
@@ -239,7 +236,7 @@ export const CitationNeighbors = () => {
                 </span>
               </div>
               <h3 className="mb-6 text-2xl font-bold text-white md:text-3xl">
-                What you receive from our humans
+                What you receive from the backlink agent
               </h3>
               <ul className="space-y-4">
                 {DELIVERABLES.map((item) => (
@@ -250,18 +247,18 @@ export const CitationNeighbors = () => {
                 ))}
               </ul>
               <p className="mt-8 text-sm text-gray-500">
-                Part of Anthroly&apos;s broader{' '}
+                Part of Anthroly&apos;s{' '}
                 <Link
                   href="/#human-led-ai-visibility"
                   className="text-emerald-400 underline-offset-4 hover:underline"
                 >
-                  human-led AI visibility
+                  outreach agent
                 </Link>{' '}
                 and{' '}
                 <Link href="/aeo" className="text-emerald-400 underline-offset-4 hover:underline">
-                  Answer Engine Optimization
+                  dual-agent program
                 </Link>{' '}
-                program — executed by people, not a self-serve checklist.
+                — two machines we set up and run, not a self-serve checklist.
               </p>
             </div>
           </ScrollReveal>
@@ -271,11 +268,10 @@ export const CitationNeighbors = () => {
               <div>
                 <Quote size={28} className="mb-6 text-cyan-400/70" />
                 <p className="text-2xl font-semibold leading-snug text-white md:text-3xl">
-                  Don&apos;t chase links AI ignores.
+                  Don&apos;t buy links that stain the domain.
                 </p>
                 <p className="mt-5 text-lg leading-relaxed text-gray-300">
-                  Enter the citation neighborhood your category already lives in — and make your
-                  brand part of the evidence answer engines reuse.
+                  Let a 24/7 agent earn editorial placements — the kind that make 1,000 emails a day feel like a warm intro.
                 </p>
               </div>
               <a

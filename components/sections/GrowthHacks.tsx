@@ -10,11 +10,11 @@ export const GrowthHacks = () => {
       title: "SaaS Companies",
       color: "from-blue-500 to-cyan-500",
       hacks: [
-        "Product-led SEO landing pages",
-        "Integration pages for every tool you connect with",
-        "Alternative pages (vs competitors)",
-        "Feature comparison matrices",
-        "Use case templates library"
+        "ICP lists of ops / growth titles",
+        "1,000 personalized emails/day",
+        "Follow-ups that never drop",
+        "Editorial links that make cold mail convert",
+        "Daily send + reply updates"
       ]
     },
     {
@@ -22,11 +22,11 @@ export const GrowthHacks = () => {
       title: "E-Commerce",
       color: "from-orange-500 to-red-500",
       hacks: [
-        "Category page optimization at scale",
-        "Product schema for rich snippets",
-        "Review aggregation for UGC SEO",
-        "Seasonal landing pages automated",
-        "Local inventory pages"
+        "Store + brand ICP outreach",
+        "Partnership and wholesale inboxes",
+        "24/7 editorial link hunting",
+        "Quality filters — no junk domains",
+        "Daily placement + send updates"
       ]
     },
     {
@@ -34,11 +34,11 @@ export const GrowthHacks = () => {
       title: "Agencies & Services",
       color: "from-purple-500 to-pink-500",
       hacks: [
-        "Case study optimization",
-        "Service area pages at scale",
-        "Industry-specific landing pages",
-        "Client results showcases",
-        "Thought leadership syndication"
+        "Client-ready outbound without hiring SDRs",
+        "1,000 emails/day on their offer",
+        "Backlink agent for their domain",
+        "Daily updates you can forward",
+        "Only 10 slots — white-label if it fits"
       ]
     }
   ];
@@ -56,13 +56,13 @@ export const GrowthHacks = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold mb-6 border border-purple-500/30">
             <Rocket size={16} />
-            <span>💡 Top 1% of companies use 5+ growth channels — we give you 8</span>
+            <span>Two agents. Tuned to how your market actually buys.</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Your Industry&apos;s Secret Growth Playbook
+            How Both Agents Hunt in Your Market
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Generic SEO fails. Industry-specific wins.</span> We&apos;ve analyzed 10,000+ successful campaigns to extract the exact tactics that work for SaaS, e-commerce, and service businesses.
+            <span className="text-white font-semibold">Generic blasts fail. Industry-specific wins.</span> We tune ICP, angles, and link neighborhoods for SaaS, e-commerce, and service businesses — then both agents hunt 24/7.
           </p>
         </div>
 

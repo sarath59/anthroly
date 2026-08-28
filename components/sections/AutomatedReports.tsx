@@ -6,10 +6,10 @@ import { GlowPulse } from '../ui/static-fx';
 export const AutomatedReports = () => {
 
   const reportSections = [
-    { icon: TrendingUp, title: "Traffic Growth", description: "Week-over-week and month-over-month comparisons" },
-    { icon: BarChart3, title: "Keyword Rankings", description: "Position changes for all tracked keywords" },
-    { icon: Target, title: "Backlink Progress", description: "New links acquired and their impact" },
-    { icon: FileText, title: "Content Performance", description: "Which blogs are driving the most traffic" }
+    { icon: Mail, title: "Sends & replies", description: "1,000/day volume, reply rate, bounce risk" },
+    { icon: BarChart3, title: "Deliverability", description: "Domain health, warmup, kill-switch events" },
+    { icon: Target, title: "Backlinks earned", description: "Editorial placements as they land — quality, not junk" },
+    { icon: FileText, title: "Daily update", description: "What both agents did yesterday, in your inbox" }
   ];
 
   return (
@@ -24,13 +24,13 @@ export const AutomatedReports = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <FileText size={16} />
-            <span>📊 72% of marketers can&apos;t prove SEO ROI — you will</span>
+            <span>Daily updates — the $500/month you can actually see</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Real Humans. Clear Results.
+            Daily Updates. Both Agents. No Black Box.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">A dedicated human team runs your program.</span> Detailed reports keep you informed so you always know exactly what&apos;s happening with your SEO.
+            <span className="text-white font-semibold">$500/month is not a retainer you hope is working.</span> We run both agents and send you a daily update: sends, replies, links earned. Operators watch. You stay in the product.
           </p>
         </div>
 

@@ -46,8 +46,7 @@ export const FAQ = () => {
             Your Questions. Straight Answers.
           </h2>
           <p className="text-xl text-gray-400 mb-4">
-            No fluff, no jargon. Just the truth about what we do and how it works — including
-            AEO, customers, industries, and AI search.
+            No fluff. What the two agents do, what $216 starts, and why there are only 10 slots.
           </p>
           <p className="text-sm text-gray-500">
             Prefer the full archive?{' '}

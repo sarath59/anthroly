@@ -6,10 +6,10 @@ import { GlowPulse } from '../ui/static-fx';
 export const PSEOImplementation = () => {
 
   const pseoExamples = [
-    { template: "/best-[software]-for-[industry]", pages: "500+ pages", example: "best-crm-for-real-estate" },
-    { template: "/[city]-[service]-guide", pages: "1,000+ pages", example: "austin-marketing-agency-guide" },
-    { template: "/[tool]-vs-[competitor]", pages: "200+ pages", example: "notion-vs-asana" },
-    { template: "/how-to-[action]-in-[tool]", pages: "300+ pages", example: "how-to-automate-in-zapier" }
+    { template: "[title] at [company] in [industry]", pages: "1,000/day", example: "VP Ops at a 20–50 person SaaS" },
+    { template: "[trigger] + [offer]", pages: "follow-ups", example: "just hired a competitor last quarter" },
+    { template: "[you] vs [incumbent]", pages: "proof batch", example: "why they reply after the 3rd touch" },
+    { template: "[city] [role] buying now", pages: "ICP slice", example: "Austin marketing directors" }
   ];
 
   return (
@@ -23,13 +23,13 @@ export const PSEOImplementation = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 text-violet-300 rounded-full text-sm font-semibold mb-6 border border-violet-500/30">
             <Layers size={16} />
-            <span>🚀 Zapier used pSEO to capture 4.5M monthly visits</span>
+            <span>1,000 emails/day is a system, not a heroic Sunday</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-            1,000+ Pages. 1 Click. Infinite Keywords.
+            1,000 Emails a Day. One ICP. Infinite Angles.
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">Canva ranks for 9M keywords with pSEO.</span> Tripadvisor owns 280M pages. Now this enterprise strategy is available to you. We build templated, SEO-optimized pages at scale.
+            <span className="text-white font-semibold">Founders send 40. The agent sends 1,000.</span> Same offer, templated across industries, titles, and triggers — personalized enough to get a reply, volume enough to fill a calendar.
           </p>
         </div>
 
@@ -39,13 +39,13 @@ export const PSEOImplementation = () => {
           <div className={`transition-all duration-1000 delay-200 opacity-100 translate-x-0`}>
             <div className="mb-8">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                What is Programmatic SEO?
+                What is 1,000 emails/day, actually?
               </h3>
               <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                Instead of creating pages one-by-one, pSEO uses templates and data to generate hundreds or thousands of unique, valuable pages. Think of how Yelp has a page for every restaurant, or Zillow has a page for every property.
+                Instead of you writing one email at a time, the outreach agent uses templates and data to generate hundreds of unique, personalized notes a day. Think of how a great SDR would write if they never slept — then give them a kill-switch and an operator.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                <span className="font-semibold text-white">The result?</span> You capture long-tail traffic at scale — the kind of searches with high intent and low competition.
+                <span className="font-semibold text-white">The result?</span> Pipeline at a volume no founder can sustain by hand — without sounding like a blast from a CSV.
               </p>
             </div>
 
@@ -54,22 +54,22 @@ export const PSEOImplementation = () => {
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h4 className="font-bold text-white">Identify Patterns</h4>
-                  <p className="text-gray-400 text-sm">We analyze your industry to find scalable keyword patterns</p>
+                  <h4 className="font-bold text-white">Lock the pattern</h4>
+                  <p className="text-gray-400 text-sm">ICP, exclusion list, and the 3–5 angles that actually get replies</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h4 className="font-bold text-white">Build Templates</h4>
-                  <p className="text-gray-400 text-sm">Create dynamic templates that generate unique, valuable content</p>
+                  <h4 className="font-bold text-white">Build sequences</h4>
+                  <p className="text-gray-400 text-sm">Personalization tokens + follow-ups that never drop</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 bg-violet-500/10 rounded-xl border border-violet-500/20">
                 <div className="flex-shrink-0 w-10 h-10 bg-violet-500 text-white rounded-lg flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h4 className="font-bold text-white">Deploy & Monitor</h4>
-                  <p className="text-gray-400 text-sm">Pages go live automatically and we track their performance</p>
+                  <h4 className="font-bold text-white">Send &amp; watch</h4>
+                  <p className="text-gray-400 text-sm">1,000/day live. Daily updates. Kill-switch if a domain wobbles.</p>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export const PSEOImplementation = () => {
             <div className="bg-black text-white p-6 md:p-8 rounded-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Code className="text-violet-400" size={24} />
-                <h3 className="text-xl font-bold">pSEO Templates We Create</h3>
+                <h3 className="text-xl font-bold">List patterns the agent uses</h3>
               </div>
 
               <div className="space-y-4">

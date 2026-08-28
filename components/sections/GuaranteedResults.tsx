@@ -12,46 +12,48 @@ import {
   Target,
   MessageCircleQuestion,
   Megaphone,
+  Mail,
+  Link2,
 } from 'lucide-react';
 import { GlowPulse } from '../ui/static-fx';
-import { CORE_OUTCOME, PACKAGE_RETAINER, PACKAGE_SETUP, SPRINT_NAME, SYSTEM_NAME } from '@/lib/site';
+import { CORE_OUTCOME, PACKAGE_RETAINER, PACKAGE_SETUP, SYSTEM_NAME } from '@/lib/site';
 
 export const GuaranteedResults = () => {
 
   const sprintDeliverables = [
-    { icon: Search, metric: "W1", label: "Positioning", detail: "ICP, buyer questions, competitors, AI baseline", highlight: true },
-    { icon: Megaphone, metric: "W2", label: "Authority", detail: "1 interview → 8–12 LinkedIn posts + 2 articles", highlight: true },
-    { icon: FileText, metric: "W3", label: "AI Search", detail: "Restructure, comparison pages, citations, tracking", highlight: false },
-    { icon: Target, metric: "W4", label: "Pipeline", detail: "ICP list, enrichment, outreach, follow-up, CRM", highlight: false },
+    { icon: Target, metric: "W1", label: "ICP + infra", detail: "ICP, domains, warmup, competitor link map", highlight: true },
+    { icon: Mail, metric: "W2", label: "Outreach live", detail: "1,000 emails/day + follow-ups that never drop", highlight: true },
+    { icon: Link2, metric: "W3", label: "Backlinks live", detail: "24/7 hunter + quality filters, no junk", highlight: false },
+    { icon: Zap, metric: "W4", label: "The loop", detail: "Links feeding emails, CRM, kill-switch, cadence", highlight: false },
   ];
 
   const discoverOutcomes = [
-    { icon: Bot, metric: "Baseline", label: "AI visibility map", detail: "Where you appear — and where you don't" },
-    { icon: Search, metric: "3–5", label: "Competitors compared", detail: "Share of answer in your category" },
-    { icon: MessageCircleQuestion, metric: "5–10", label: "FAQ / AI-search gaps", detail: "Questions prospects already ask" },
-    { icon: FileText, metric: "Pages", label: "Comparison & alternative", detail: "Content engines can cite" },
+    { icon: Mail, metric: "1,000", label: "Emails / day", detail: "Personalized. Not a blast from a CSV." },
+    { icon: Users, metric: "ICP", label: "Tight lists", detail: "Who should never get an email, locked" },
+    { icon: MessageCircleQuestion, metric: "Follow-ups", label: "Never drop", detail: "The agent remembers. Founders forget." },
+    { icon: Target, metric: "Replies", label: "Routed to you", detail: "You take the conversation. It hunts." },
   ];
 
   const trustOutcomes = [
-    { icon: Users, metric: "30–45m", label: "Founder interview", detail: "Once a month. We do the rest." },
-    { icon: Megaphone, metric: "8–12", label: "LinkedIn posts", detail: "From your expertise, not a content calendar you write" },
-    { icon: FileText, metric: "2", label: "Authority articles", detail: "Long-form that AI and buyers can cite" },
-    { icon: TrendingUp, metric: "X + email", label: "Distribution", detail: "Newsletter and short posts included" },
+    { icon: Link2, metric: "24/7", label: "Backlink agent", detail: "Hunting while you sleep, ship, and sell." },
+    { icon: Shield, metric: "Editorial", label: "Quality filter", detail: "No PBNs. No directories. No stains." },
+    { icon: FileText, metric: "Pitch", label: "Human-grade", detail: "Real angles. Real editors. Real placements." },
+    { icon: TrendingUp, metric: "Proof", label: "Feeds email", detail: "Authority makes cold mail feel warm." },
   ];
 
   const aiVisibility = [
-    { name: "ChatGPT", tracked: true },
-    { name: "Claude", tracked: true },
-    { name: "Perplexity", tracked: true },
-    { name: "Gemini", tracked: true },
-    { name: "Google AI Overview", tracked: true },
+    { name: "Sends / day", tracked: true },
+    { name: "Reply rate", tracked: true },
+    { name: "Bounce + spam risk", tracked: true },
+    { name: "Links earned", tracked: true },
+    { name: "Link quality score", tracked: true },
   ];
 
   const sprintWeeks = [
-    { milestone: "Week 1 — Positioning locked", time: "Days 1–7" },
-    { milestone: "Week 2 — First authority batch live", time: "Days 8–14" },
-    { milestone: "Week 3 — AI-search pages in motion", time: "Days 15–21" },
-    { milestone: "Week 4 — Outreach system live", time: "Days 22–30" },
+    { milestone: "Week 1 — ICP + sending infra locked", time: "Days 1–7" },
+    { milestone: "Week 2 — Outreach agent sending 1,000/day", time: "Days 8–14" },
+    { milestone: "Week 3 — Backlink agent hunting 24/7", time: "Days 15–21" },
+    { milestone: "Week 4 — Loop live: links feeding replies", time: "Days 22–30" },
   ];
 
   return (
@@ -69,19 +71,19 @@ export const GuaranteedResults = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-semibold mb-6 border border-emerald-500/30">
             <Shield size={16} />
-            <span>{SPRINT_NAME} — tangible week by week</span>
+            <span>Setup you only pay for when you sign off</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             What {PACKAGE_SETUP} actually buys
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            {CORE_OUTCOME} The {SYSTEM_NAME} is one acquisition system. <span className="text-white font-semibold">Humans ship the work.</span> Machines help us move faster.
+            {CORE_OUTCOME} Only 10 slots. The {SYSTEM_NAME} are two machines we set up and operate. <span className="text-white font-semibold">You approve. They hunt.</span>
           </p>
         </div>
 
         <div className={`mb-16 transition-all duration-1000 delay-100 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-emerald-400">📦</span> 30-day deliverable stack
+            <span>📦 What setup actually ships</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             {sprintDeliverables.filter((d) => d.highlight).map((item, index) => (
@@ -115,7 +117,7 @@ export const GuaranteedResults = () => {
 
         <div className={`mb-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-cyan-400">🧭</span> Discover <span className="text-gray-500 text-lg font-normal">(AI Search Visibility)</span>
+            <span className="text-cyan-400">📬</span> Outreach <span className="text-gray-500 text-lg font-normal">(1,000 emails / day)</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {discoverOutcomes.map((item, index) => (
@@ -134,7 +136,7 @@ export const GuaranteedResults = () => {
 
         <div className={`mb-16 transition-all duration-1000 delay-250 opacity-100 translate-y-0`}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-purple-400">🎤</span> Trust <span className="text-gray-500 text-lg font-normal">(Founder Authority Engine)</span>
+            <span className="text-purple-400">🔗</span> Backlinks <span className="text-gray-500 text-lg font-normal">(24/7 high-quality hunter)</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {trustOutcomes.map((item, index) => (
@@ -155,10 +157,10 @@ export const GuaranteedResults = () => {
           <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
             <div className="flex items-center gap-3 mb-6">
               <Bot className="text-purple-400" size={28} />
-              <h3 className="text-xl font-bold">AI Visibility Tracking</h3>
+              <h3 className="text-xl font-bold">What we track</h3>
             </div>
             <p className="text-gray-400 text-sm mb-6">
-              We track whether ChatGPT, Perplexity, Gemini, Claude, and Google AI name you — or a competitor — for the questions your buyers actually ask.
+              You don&apos;t buy a black box. You see sends, replies, bounces, and every placement as it lands — so you know both agents are hunting, not napping.
             </p>
             <div className="space-y-3">
               {aiVisibility.map((ai, index) => (
@@ -176,10 +178,10 @@ export const GuaranteedResults = () => {
           <div className="p-8 bg-gray-900/50 border border-gray-800 rounded-3xl">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="text-yellow-400" size={28} />
-              <h3 className="text-xl font-bold">Contact — week 4</h3>
+              <h3 className="text-xl font-bold">Both agents — week by week</h3>
             </div>
             <p className="text-gray-400 text-sm mb-6">
-              Authority without outreach is unfinished. Week 4 connects the work to conversations.
+              Outreach without links is noise. Links without a pipeline are a trophy case. Week 4 locks the loop.
             </p>
             <div className="space-y-3">
               {sprintWeeks.map((item, index) => (
@@ -201,10 +203,10 @@ export const GuaranteedResults = () => {
             <div className="relative p-8 md:p-10 bg-gray-900 rounded-3xl border border-gray-800">
               <div className="text-center mb-6">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Then {PACKAGE_RETAINER}/month keeps the system running
+                  Then {PACKAGE_RETAINER}/month keeps both agents hunting
                 </h3>
                 <p className="text-gray-400 max-w-2xl mx-auto">
-                  AI visibility monitoring, content production, founder ghostwriting, AI-search content, outreach optimization, reporting, and monthly strategy.
+                  We maintain and run both agents for you — 1,000 emails/day, 24/7 backlink hunting, and a daily update so you never wonder if they clocked out.
                 </p>
               </div>
             </div>
@@ -214,12 +216,12 @@ export const GuaranteedResults = () => {
         <div className={`max-w-3xl mx-auto mt-12 text-center transition-all duration-1000 delay-500 opacity-100 translate-y-0`}>
           <div className="p-8 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-emerald-500/10 border border-emerald-500/20 rounded-3xl">
             <Shield className="mx-auto text-emerald-400 mb-4" size={40} />
-            <h3 className="text-2xl font-bold mb-4">If we miss a first-month commitment</h3>
+            <h3 className="text-2xl font-bold mb-4">Not happy at any point?</h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              If we miss a core first-month commitment — GEO visibility work started, founder content in distribution, outreach system live — you get:
+              If you are not happy at any point in this process, you get:
             </p>
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 font-bold text-lg">
-              <span>One free month of retainer</span>
+              <span>The {PACKAGE_SETUP} setup fee back. In full.</span>
             </div>
           </div>
         </div>

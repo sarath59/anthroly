@@ -18,13 +18,13 @@ export const AIVisibilityMonitor = () => {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 opacity-100 translate-y-0`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold mb-6 border border-blue-500/30">
             <Activity size={16} />
-            <span>⚡ Rankings fluctuate 23% weekly — most businesses never notice</span>
+            <span>Daily updates — you never wonder if the agents clocked out</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Know The Moment AI Stops Recommending You
+            Know The Moment an Agent Stops Hunting
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
-            <span className="text-white font-semibold">AI algorithms update 500+ times per year.</span> One change can erase your visibility overnight. Our 24/7 monitors alert you within minutes — before your competitors even notice.
+            <span className="text-white font-semibold">$500/month includes a daily update.</span> Sends, replies, bounces, and every editorial link as it lands — so you know both agents are working, not napping.
           </p>
         </div>
 
@@ -38,8 +38,8 @@ export const AIVisibilityMonitor = () => {
                   <Eye className="text-emerald-400" size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white">Visibility Dashboard</h3>
-                  <p className="text-sm text-gray-500">Real-time monitoring</p>
+                  <h3 className="font-bold text-white">Agent Dashboard</h3>
+                  <p className="text-sm text-gray-500">Daily updates · both agents</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-sm">
@@ -52,7 +52,7 @@ export const AIVisibilityMonitor = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 py-6">
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">89</div>
-                <div className="text-sm text-gray-500">AI Visibility Score</div>
+                <div className="text-sm text-gray-500">Sends today</div>
                 <div className="flex items-center gap-1 mt-2 text-emerald-400 text-xs">
                   <TrendingUp size={12} />
                   <span>+12 this week</span>
@@ -60,15 +60,15 @@ export const AIVisibilityMonitor = () => {
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">5</div>
-                <div className="text-sm text-gray-500">AI surfaces tracked</div>
+                <div className="text-sm text-gray-500">Agents running</div>
                 <div className="flex items-center gap-1 mt-2 text-emerald-400 text-xs">
                   <TrendingUp size={12} />
-                  <span>ChatGPT, Claude, Perplexity, Gemini, AI Overviews</span>
+                  <span>Outreach + backlink, 24/7</span>
                 </div>
               </div>
               <div className="p-4 bg-black/50 rounded-2xl border border-gray-800">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">156</div>
-                <div className="text-sm text-gray-500">Keywords Tracked</div>
+                <div className="text-sm text-gray-500">Replies routed</div>
                 <div className="flex items-center gap-1 mt-2 text-blue-400 text-xs">
                   <BarChart3 size={12} />
                   <span>Monitoring 24/7</span>
@@ -90,21 +90,21 @@ export const AIVisibilityMonitor = () => {
               <div className="flex items-start gap-3 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                 <CheckIcon className="text-emerald-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">New AI citation detected on Perplexity for &quot;best project management tools&quot;</p>
+                  <p className="text-sm text-white">Outreach agent: 1,000 personalized emails sent · 14 replies routed</p>
                   <p className="text-xs text-gray-500 mt-1">2 hours ago</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl">
                 <TrendingUp size={18} className="text-blue-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Ranking improved: Page 3 → Page 1 for &quot;SaaS analytics&quot;</p>
+                  <p className="text-sm text-white">Backlink agent: editorial placement landed on DR 82 publication</p>
                   <p className="text-xs text-gray-500 mt-1">5 hours ago</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-3 bg-orange-500/10 border border-orange-500/20 rounded-xl">
                 <AlertCircle size={18} className="text-orange-400 mt-0.5" />
                 <div>
-                  <p className="text-sm text-white">Competitor launched new content — opportunity to respond</p>
+                  <p className="text-sm text-white">Deliverability watch: bounce rate ticked up — warmup paused on one domain</p>
                   <p className="text-xs text-gray-500 mt-1">8 hours ago</p>
                 </div>
               </div>
@@ -118,27 +118,27 @@ export const AIVisibilityMonitor = () => {
             <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Clock className="text-blue-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">24/7 Monitoring</h3>
+            <h3 className="text-xl font-bold mb-3">Daily updates</h3>
             <p className="text-gray-400 leading-relaxed">
-              While you sleep, we track every mention, every ranking change, every AI citation across all major platforms.
+              While you sleep, both agents hunt. You wake up to sends, replies, and links — not a monthly PDF.
             </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Bell className="text-purple-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">Instant Alerts</h3>
+            <h3 className="text-xl font-bold mb-3">Instant alerts</h3>
             <p className="text-gray-400 leading-relaxed">
-              Get notified the moment something important happens — ranking drops, new opportunities, or competitor moves.
+              Bounce spikes, spam-folder risk, a high-quality link landing — you hear it the same day, not next quarter.
             </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Shield className="text-emerald-400" size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-3">Proactive Defense</h3>
+            <h3 className="text-xl font-bold mb-3">Kill-switch ready</h3>
             <p className="text-gray-400 leading-relaxed">
-              We don&apos;t just report problems — we flag them before they hurt you and recommend immediate actions to take.
+              We don&apos;t just report problems. Operators pause a domain, tighten ICP, or stop junk pitches before they stain you.
             </p>
           </div>
         </div>
@@ -155,7 +155,7 @@ export const AIVisibilityMonitor = () => {
         {/* Bottom CTA */}
         <div className={`mt-16 text-center transition-all duration-1000 delay-500 opacity-100 translate-y-0`}>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            <span className="text-white font-semibold">The businesses that win</span> aren&apos;t the ones with the best product — they&apos;re the ones who see changes first and respond fastest. That&apos;s what this gives you.
+            <span className="text-white font-semibold">The founders who win</span> are not the ones writing 40 emails on Sunday. They&apos;re the ones whose agents never clock out — and who see the proof every morning.
           </p>
         </div>
       </div>
