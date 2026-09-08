@@ -163,7 +163,7 @@ export const citationSpokes: GuidePage[] = [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Founder playbook' },
       { href: '/guides/ai-citations/ymyl-citation-rules', label: 'YMYL citation rules', note: 'Shared with legal' },
       { href: '/guides/ai-citations/citation-neighborhoods', label: 'Citation neighborhoods', note: 'Which sources models already trust' },
-      { href: '/industries/cybersecurity', label: 'Cybersecurity SEO hub', note: 'Industry pages and cities' },
+      { href: '/faq', label: 'Agency FAQ', note: 'How Anthroly scopes security AEO' },
       { href: '/aeo', label: 'AEO hub', note: 'Engine-level tactics' },
     ],
     sections: [
@@ -236,7 +236,7 @@ export const citationSpokes: GuidePage[] = [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Founder playbook' },
       { href: '/guides/ai-citations/ymyl-citation-rules', label: 'YMYL citation rules', note: 'Shared with cybersecurity' },
       { href: '/guides/ai-citations/founder-interview-method', label: 'Founder interview method', note: 'Turn partner expertise into pages' },
-      { href: '/industries/legal', label: 'Legal SEO hub', note: 'Industry and city pages' },
+      { href: '/faq', label: 'Agency FAQ', note: 'How Anthroly scopes legal AEO' },
       { href: '/aeo', label: 'AEO hub', note: 'Engine-level tactics' },
     ],
     sections: [
@@ -302,7 +302,7 @@ export const citationSpokes: GuidePage[] = [
     related: [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Founder playbook' },
       { href: '/guides/ai-citations/citation-neighborhoods', label: 'Citation neighborhoods', note: 'OTAs vs brand.com vs tourism boards' },
-      { href: '/industries/travel', label: 'Travel & hospitality SEO hub', note: 'Existing industry cluster' },
+      { href: '/guides/ai-citations/measuring-ai-mentions', label: 'Measuring AI mentions', note: 'Prompt logs for hotel queries' },
       { href: '/guides/ai-citations/schema-that-helps', label: 'Schema that helps', note: 'Hotel / lodging markup vs junk' },
       { href: '/aeo', label: 'AEO hub', note: 'Engine-level tactics' },
     ],
@@ -369,8 +369,8 @@ export const citationSpokes: GuidePage[] = [
     related: [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Founder playbook' },
       { href: '/anthroly-vs-anthropic', label: 'Anthroly vs Anthropic', note: 'How we handle our own entity collision' },
-      { href: '/industries/saas', label: 'SaaS SEO hub', note: 'Closest industry cluster — no extra pSEO industry' },
-      { href: '/for/saas-founders', label: 'For SaaS founders', note: 'Persona hub' },
+      { href: '/customers', label: 'Customer stories', note: 'SaaS and AI program results' },
+      { href: '/faq', label: 'Agency FAQ', note: 'How founder programs are scoped' },
       { href: '/guides/ai-citations/schema-that-helps', label: 'Schema that helps', note: 'SoftwareApplication vs junk' },
     ],
     sections: [
@@ -436,7 +436,7 @@ export const citationSpokes: GuidePage[] = [
       'Publish one canonical answer page, then vary proof: Overviews favor extractable HTML and established entities; Perplexity favors cited URLs and recent pages; ChatGPT mixes training memory with browsing. Do not clone three keyword variants. Do write engine-aware examples — especially in cybersecurity, legal, hotels, and AI startups where the default sources differ.',
     related: [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Founder playbook' },
-      { href: '/aeo/engine/chatgpt', label: 'AEO for ChatGPT', note: 'Engine hub' },
+      { href: '/aeo', label: 'AEO hub', note: 'Answer-engine playbook' },
       { href: '/aeo/aeo-vs-seo-vs-geo', label: 'AEO vs SEO vs GEO', note: 'Discipline comparison' },
       { href: '/guides/ai-citations/measuring-ai-mentions', label: 'Measuring mentions', note: 'Prompt logs per engine' },
     ],
@@ -460,7 +460,7 @@ export const citationSpokes: GuidePage[] = [
       {
         heading: 'Reuse rules',
         body: [
-          'Keep one canonical URL per intent. Internally link to engine hubs (/aeo/engine/chatgpt, Claude, etc.) for people who want engine-specific tactics. Do not create /chatgpt-version and /perplexity-version of the same article.',
+          'Keep one canonical URL per intent. Internally link to the AEO hub and citation guides for people who want engine-specific tactics. Do not create /chatgpt-version and /perplexity-version of the same article.',
         ],
         list: [
           'Lead with a 40–60 word answer every time.',
@@ -695,15 +695,15 @@ export const citationSpokes: GuidePage[] = [
     related: [
       { href: '/guides/ai-citations', label: 'Citation pillar', note: 'Human cluster' },
       { href: '/guides/ai-citations/accommodations', label: 'Hotels', note: 'Where thin city pages fail' },
-      { href: '/industries', label: 'Industries hub', note: 'Existing pSEO, not expanded this round' },
+      { href: '/customers', label: 'Customer stories', note: 'Proof instead of more URL matrix' },
       { href: '/aeo', label: 'AEO hub', note: 'Engine pages' },
     ],
     sections: [
       {
         heading: 'The mistake we already made — and locked',
         body: [
-          'This site once listed on the order of 35k three-way URLs. They were crawled and often not indexed. The inventory is now capped in code (lib/pseo/indexable.ts) so a well-meaning “add more cities” request cannot explode the graph again.',
-          'That history is why this cluster is twelve human pages plus a pillar — not a new industry dimension that would multiply glossary and location combinations.',
+          'This site once listed on the order of 35k three-way URLs. They were crawled and often not indexed. Those generated pages are gone. The remaining site is editorial: FAQ, guides, customers, tools, and a few AEO explainers.',
+          'That history is why this cluster is twelve human pages plus a pillar — not another industry or city matrix.',
         ],
       },
       {

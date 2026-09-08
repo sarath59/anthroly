@@ -7,7 +7,7 @@ import {
   generateArticleSchema,
   generateFAQSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { generatePersonSchema, SITE_AUTHOR } from '@/lib/author';
 
 export const metadata: Metadata = {
@@ -130,13 +130,13 @@ export default function AeoVsSeoVsGeoPage() {
               </Link>
             </li>
             <li>
-              <Link href="/glossary/generative-engine-optimization-geo" className="text-emerald-400 hover:underline">
-                GEO glossary
+              <Link href="/faq" className="text-emerald-400 hover:underline">
+                Agency FAQ
               </Link>
             </li>
             <li>
-              <Link href="/glossary/ai-seo" className="text-emerald-400 hover:underline">
-                AI SEO glossary
+              <Link href="/aeo/how-to-get-cited-in-ai-overviews" className="text-emerald-400 hover:underline">
+                How to get cited in AI Overviews
               </Link>
             </li>
           </ul>

@@ -106,14 +106,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: DISALLOW_NON_CONTENT,
       })),
     ],
-    sitemap: [
-      absoluteUrl('/sitemap.xml'),
-      absoluteUrl('/sitemap-core.xml'),
-      absoluteUrl('/sitemap-apac-twoway.xml'),
-      absoluteUrl('/sitemap-twoway.xml'),
-      absoluteUrl('/sitemap-threeway.xml'),
-      absoluteUrl('/sitemap-aeo.xml'),
-    ],
+    sitemap: absoluteUrl('/sitemap.xml'),
     host: 'www.anthroly.com',
   };
 }

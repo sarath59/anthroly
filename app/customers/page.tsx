@@ -9,7 +9,7 @@ import {
   generateBreadcrumbSchema,
   generateItemListSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 

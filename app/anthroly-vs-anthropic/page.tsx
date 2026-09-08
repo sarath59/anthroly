@@ -7,7 +7,7 @@ import {
   generateArticleSchema,
   generateFAQSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { generatePersonSchema, SITE_AUTHOR } from '@/lib/author';
 
 export const metadata: Metadata = {
@@ -114,18 +114,18 @@ export default function AnthrolyVsAnthropicPage() {
           </p>
           <ul className="mt-4 space-y-2">
             <li>
-              <Link href="/aeo/engine/claude" className="text-emerald-400 hover:underline">
-                AEO for Claude
+              <Link href="/guides/ai-citations" className="text-emerald-400 hover:underline">
+                Founder AI citation guides
               </Link>
             </li>
             <li>
-              <Link href="/aeo/engine/anthropic" className="text-emerald-400 hover:underline">
-                AEO for Anthropic AI answers
+              <Link href="/aeo/how-to-get-cited-in-ai-overviews" className="text-emerald-400 hover:underline">
+                How to get cited in AI Overviews
               </Link>
             </li>
             <li>
-              <Link href="/aeo/engine/chatgpt" className="text-emerald-400 hover:underline">
-                AEO for ChatGPT
+              <Link href="/guides/ai-citations/chatgpt-perplexity-overviews" className="text-emerald-400 hover:underline">
+                ChatGPT vs Perplexity vs Overviews
               </Link>
             </li>
             <li>

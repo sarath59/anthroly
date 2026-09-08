@@ -14,7 +14,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const FAQ_COUNT = getAgencyFaqCount();

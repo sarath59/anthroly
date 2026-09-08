@@ -33,13 +33,6 @@
 - https://www.anthroly.com/guides/ai-citations/citation-neighborhoods
 - https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
 - https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
-- https://www.anthroly.com/aeo/engine/claude
-- https://www.anthroly.com/aeo/engine/anthropic
-- https://www.anthroly.com/aeo/engine/chatgpt
-- https://www.anthroly.com/aeo/engine/chatgpt-search
-- https://www.anthroly.com/aeo/topic/get-cited
-- https://www.anthroly.com/aeo/topic/get-cited/claude
-- https://www.anthroly.com/aeo/topic/get-cited/chatgpt
 - https://www.anthroly.com/reports/ai-visibility-benchmark
 
 ## Customers (hub + sample stories + cluster spokes)
@@ -73,39 +66,7 @@
 - https://www.anthroly.com/customers/isthisaiorno
 - https://www.anthroly.com/customers/jobstronauts
 
-## APAC markets
-- https://www.anthroly.com/markets
-- https://www.anthroly.com/markets/singapore
-- https://www.anthroly.com/markets/china
-- https://www.anthroly.com/markets/australia
-- https://www.anthroly.com/markets/new-zealand
-- https://www.anthroly.com/markets/singapore/answer-engine-optimization
-- https://www.anthroly.com/markets/singapore/chatgpt-seo
-- https://www.anthroly.com/markets/china/ai-seo
-- https://www.anthroly.com/markets/australia/answer-engine-optimization
-- https://www.anthroly.com/markets/new-zealand/ai-visibility
-- https://www.anthroly.com/ai-seo-agency
-- https://www.anthroly.com/ai-seo-agency/singapore
-- https://www.anthroly.com/ai-seo-agency/sydney
-- https://www.anthroly.com/ai-seo-agency/melbourne
-- https://www.anthroly.com/ai-seo-agency/auckland
-- https://www.anthroly.com/ai-seo-agency/shanghai
-- https://www.anthroly.com/ai-seo-agency/beijing
-- https://www.anthroly.com/ai-seo-agency/shenzhen
-
 ## Education & tools
-- https://www.anthroly.com/resources
-- https://www.anthroly.com/glossary
-- https://www.anthroly.com/glossary/answer-engine-optimization
-- https://www.anthroly.com/glossary/generative-engine-optimization-geo
-- https://www.anthroly.com/glossary/ai-seo
-- https://www.anthroly.com/glossary/ai-overviews-sge
-- https://www.anthroly.com/blog
-- https://www.anthroly.com/industries
-- https://www.anthroly.com/use-cases
-- https://www.anthroly.com/for
-- https://www.anthroly.com/integrations
-- https://www.anthroly.com/compare
 - https://www.anthroly.com/tools
 
 ## Legal & contact

@@ -84,7 +84,7 @@ export const AutomatedReports = () => {
                 <ul className="text-sm space-y-1">
                   <li>• Publishing 8 new blog posts targeting competitor keywords</li>
                   <li>• Outreach to 50 new backlink prospects</li>
-                  <li>• Launching 100 new pSEO pages</li>
+                  <li>• Shipping founder-led authority pages</li>
                 </ul>
               </div>
             </div>

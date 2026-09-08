@@ -7,7 +7,7 @@ import {
   generateFAQSchema,
   generateHowToSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { generatePersonSchema, SITE_AUTHOR } from '@/lib/author';
 
 export const metadata: Metadata = {

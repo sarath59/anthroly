@@ -11,7 +11,7 @@ import { FAQAccordion } from './FAQAccordion';
 import {
   combineSchemas,
   generateFAQSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 
 /**
  * Homepage FAQ (#faq).

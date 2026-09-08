@@ -1,4 +1,4 @@
-import { combineSchemas, generateOrganizationSchema, generateWebSiteSchema } from '@/lib/pseo/schema';
+import { combineSchemas, generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema';
 import { generatePersonSchema } from '@/lib/author';
 
 /** Sitewide Organization + WebSite + founder Person JSON-LD */

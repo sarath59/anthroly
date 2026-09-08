@@ -6,7 +6,7 @@ import { getFreeToolBySlug, getAllFreeToolSlugs } from '@/lib/data/free-tools';
 import { ToolRenderer } from '@/components/tools/ToolRenderer';
 import { absoluteUrl } from '@/lib/site';
 import { readParams } from '@/lib/next-params';
-import { combineSchemas, generateHowToSchema } from '@/lib/pseo/schema';
+import { combineSchemas, generateHowToSchema } from '@/lib/schema';
 
 interface PageProps {
   params: { slug: string };

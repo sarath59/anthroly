@@ -75,26 +75,26 @@ const ENGINES = [
 ] as const;
 
 const MARKETS = [
-  { name: 'Singapore', path: '/markets/singapore' },
-  { name: 'Australia', path: '/markets/australia' },
-  { name: 'China', path: '/markets/china' },
-  { name: 'New Zealand', path: '/markets/new-zealand' },
-  { name: 'Sydney', path: '/ai-seo-agency/sydney' },
-  { name: 'Melbourne', path: '/ai-seo-agency/melbourne' },
-  { name: 'Brisbane', path: '/ai-seo-agency/brisbane' },
-  { name: 'Auckland', path: '/ai-seo-agency/auckland' },
-  { name: 'Wellington', path: '/ai-seo-agency/wellington' },
-  { name: 'Shanghai', path: '/ai-seo-agency/shanghai' },
-  { name: 'Beijing', path: '/ai-seo-agency/beijing' },
-  { name: 'Shenzhen', path: '/ai-seo-agency/shenzhen' },
-  { name: 'Hong Kong', path: '/ai-seo-agency/hong-kong' },
-  { name: 'San Francisco', path: '/ai-seo-agency/san-francisco' },
-  { name: 'New York', path: '/ai-seo-agency/new-york' },
-  { name: 'London', path: '/ai-seo-agency/london' },
-  { name: 'Perth', path: '/ai-seo-agency/perth' },
-  { name: 'Adelaide', path: '/ai-seo-agency/adelaide' },
-  { name: 'Canberra', path: '/ai-seo-agency/canberra' },
-  { name: 'Christchurch', path: '/ai-seo-agency/christchurch' },
+  { name: 'Singapore' },
+  { name: 'Australia' },
+  { name: 'China' },
+  { name: 'New Zealand' },
+  { name: 'Sydney' },
+  { name: 'Melbourne' },
+  { name: 'Brisbane' },
+  { name: 'Auckland' },
+  { name: 'Wellington' },
+  { name: 'Shanghai' },
+  { name: 'Beijing' },
+  { name: 'Shenzhen' },
+  { name: 'Hong Kong' },
+  { name: 'San Francisco' },
+  { name: 'New York' },
+  { name: 'London' },
+  { name: 'Perth' },
+  { name: 'Adelaide' },
+  { name: 'Canberra' },
+  { name: 'Christchurch' },
 ] as const;
 
 const SERVICES = [
@@ -106,7 +106,7 @@ const SERVICES = [
   'Generative Engine Optimization (GEO)',
   'high-DR digital PR and backlinks',
   'AI-ready content marketing',
-  'programmatic SEO page systems',
+  'founder authority content systems',
   'local SEO plus AI search',
   'B2B SEO and AEO',
   'ecommerce SEO for AI shopping queries',
@@ -511,7 +511,7 @@ function buildFaqs(): AgencyFaq[] {
     add(
       'Industries',
       `Does Anthroly work with ${industry} companies?`,
-      `Yes. Anthroly runs SEO and AEO programs for ${industry} brands, adapting prompt maps, YMYL/compliance sensitivity where relevant, content formats, and citation strategies to that vertical. Industry hubs live under https://www.anthroly.com/industries with location combinations for priority markets.`
+      `Yes. Anthroly runs SEO and AEO programs for ${industry} brands, adapting prompt maps, YMYL/compliance sensitivity where relevant, content formats, and citation strategies to that vertical. See https://www.anthroly.com/faq and https://www.anthroly.com/customers for program details and proof.`
     );
     add(
       'Industries',
@@ -572,7 +572,7 @@ function buildFaqs(): AgencyFaq[] {
     add(
       'Answer Engines',
       `What is Anthroly’s approach to ${engine.name} AEO?`,
-      `For ${engine.name}, Anthroly combines measurement (where you appear and how you are described), content systems designed for extraction, digital PR for citable sources, and human review loops. Related educational pages live under https://www.anthroly.com/aeo/engine and https://www.anthroly.com/aeo/topic.`
+      `For ${engine.name}, Anthroly combines measurement (where you appear and how you are described), content systems designed for extraction, digital PR for citable sources, and human review loops. Related educational pages live under https://www.anthroly.com/aeo.`
     );
     add(
       'Answer Engines',
@@ -598,7 +598,7 @@ function buildFaqs(): AgencyFaq[] {
     add(
       'Markets & Locations',
       `Does Anthroly offer AI SEO in ${market.name}?`,
-      `Yes. Anthroly supports AI SEO and AEO programs for teams in or targeting ${market.name}. See ${market.path.startsWith('/markets') ? `https://www.anthroly.com${market.path}` : `https://www.anthroly.com${market.path}`} for market-specific context and internal links to related playbooks.`
+      `Yes. Anthroly supports AI SEO and AEO programs for teams in or targeting ${market.name}. Programs use local buyer language and competitive context rather than generic US-only templates. See https://www.anthroly.com/faq for how the work is scoped.`
     );
     add(
       'Markets & Locations',
@@ -825,7 +825,7 @@ function buildFaqs(): AgencyFaq[] {
       add(
         'Markets & Locations',
         `Can Anthroly deliver ${service} for a company in ${market.name}?`,
-        `Yes. Anthroly delivers ${service} for teams based in or targeting ${market.name}. Local buyer language and competitive context inform the prompt map, while execution remains human-led. Start at https://www.anthroly.com${market.path} or book a call.`
+        `Yes. Anthroly delivers ${service} for teams based in or targeting ${market.name}. Local buyer language and competitive context inform the prompt map, while execution remains human-led. Start at https://www.anthroly.com/faq or book a call.`
       );
     }
   }

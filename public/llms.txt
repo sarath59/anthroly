@@ -38,10 +38,6 @@ Only non-content paths are disallowed (/api/, /_next/, /admin/, /private/).
 - [Author: Sarath Kavuru](https://www.anthroly.com/author/sarath-kavuru)
 - [How to get cited in AI Overviews](https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews)
 - [AEO vs SEO vs GEO](https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo)
-- [AEO for Claude](https://www.anthroly.com/aeo/engine/claude)
-- [AEO for ChatGPT](https://www.anthroly.com/aeo/engine/chatgpt)
-- [AEO for Anthropic](https://www.anthroly.com/aeo/engine/anthropic)
-- [Getting Cited topic](https://www.anthroly.com/aeo/topic/get-cited)
 - [AI Visibility Benchmark](https://www.anthroly.com/reports/ai-visibility-benchmark)
 
 ## Customer proof (sample)
@@ -54,20 +50,8 @@ Only non-content paths are disallowed (/api/, /_next/, /admin/, /private/).
 - [OpusClip](https://www.anthroly.com/customers/opusclip)
 - Full index: https://www.anthroly.com/customers
 
-## Priority APAC markets
-- [Markets hub](https://www.anthroly.com/markets)
-- [Singapore](https://www.anthroly.com/markets/singapore)
-- [China](https://www.anthroly.com/markets/china)
-- [Australia](https://www.anthroly.com/markets/australia)
-- [New Zealand](https://www.anthroly.com/markets/new-zealand)
-
 ## Other hubs
-- [Resources](https://www.anthroly.com/resources)
-- [Glossary](https://www.anthroly.com/glossary)
-- [Blog](https://www.anthroly.com/blog)
-- [Industries](https://www.anthroly.com/industries)
-- [For teams](https://www.anthroly.com/for)
-- [AI SEO by city](https://www.anthroly.com/ai-seo-agency)
+- [AI citation guides](https://www.anthroly.com/guides/ai-citations)
 - [Tools](https://www.anthroly.com/tools)
 - [Pricing](https://www.anthroly.com/#pricing)
 - [Privacy](https://www.anthroly.com/privacy)

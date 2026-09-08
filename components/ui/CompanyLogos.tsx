@@ -70,13 +70,6 @@ export const SAAS_LEADERS: Company[] = [
   { name: "Slack", domain: "slack.com" },
 ];
 
-export const PSEO_SUCCESS: Company[] = [
-  { name: "Zapier", domain: "zapier.com" },
-  { name: "Canva", domain: "canva.com" },
-  { name: "Tripadvisor", domain: "tripadvisor.com" },
-  { name: "Yelp", domain: "yelp.com" },
-];
-
 export const ECOMMERCE: Company[] = [
   { name: "Shopify", domain: "shopify.com" },
   { name: "Amazon", domain: "amazon.com" },

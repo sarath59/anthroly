@@ -10,127 +10,34 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/sitemaps/index',
-      },
-      {
-        source: '/sitemap-core.xml',
-        destination: '/sitemaps/core',
-      },
-      {
-        source: '/sitemap-apac-twoway.xml',
-        destination: '/sitemaps/twoway-apac',
-      },
-      {
-        source: '/sitemap-twoway.xml',
-        destination: '/sitemaps/twoway',
-      },
-      {
-        source: '/sitemap-threeway.xml',
-        destination: '/sitemaps/threeway',
-      },
-      {
-        source: '/sitemap-aeo.xml',
-        destination: '/sitemaps/aeo',
-      },
-    ];
-  },
   async redirects() {
-    // Dead glossary relatedTerms Google already crawled → closest real pages
     return [
-      {
-        source: '/glossary/position-zero',
-        destination: '/glossary/featured-snippets',
-        permanent: true,
-      },
-      {
-        source: '/glossary/rich-snippets',
-        destination: '/glossary/schema-markup',
-        permanent: true,
-      },
-      {
-        source: '/glossary/geotargeting',
-        destination: '/glossary/local-seo',
-        permanent: true,
-      },
-      {
-        source: '/glossary/generative-engine-optimization',
-        destination: '/glossary/generative-engine-optimization-geo',
-        permanent: true,
-      },
-      {
-        source: '/glossary/serp-features',
-        destination: '/glossary/featured-snippets',
-        permanent: true,
-      },
-      {
-        source: '/glossary/knowledge-graph',
-        destination: '/glossary/knowledge-panel',
-        permanent: true,
-      },
-      {
-        source: '/glossary/crawlability',
-        destination: '/glossary/crawl-budget',
-        permanent: true,
-      },
-      {
-        source: '/glossary/semantic-seo',
-        destination: '/glossary/nlp-content-optimization',
-        permanent: true,
-      },
-      {
-        source: '/glossary/entity-seo',
-        destination: '/glossary/topical-authority',
-        permanent: true,
-      },
-      {
-        source: '/glossary/competitive-analysis',
-        destination: '/glossary/competitor-analysis-seo',
-        permanent: true,
-      },
-      {
-        source: '/glossary/zero-click-searches',
-        destination: '/glossary/featured-snippets',
-        permanent: true,
-      },
-      {
-        source: '/glossary/helpful-content-update',
-        destination: '/glossary/e-e-a-t-experience-expertise-authoritativeness-trustworthiness',
-        permanent: true,
-      },
-      {
-        source: '/glossary/dofollow',
-        destination: '/glossary/dofollow-nofollow-links',
-        permanent: true,
-      },
-      {
-        source: '/glossary/pillar-pages',
-        destination: '/glossary/content-clusters',
-        permanent: true,
-      },
-      {
-        source: '/glossary/page-experience',
-        destination: '/glossary/core-web-vitals',
-        permanent: true,
-      },
-      {
-        source: '/glossary/noindex',
-        destination: '/glossary/robots-txt',
-        permanent: true,
-      },
-      {
-        source: '/glossary/content-audit',
-        destination: '/glossary/seo-audit',
-        permanent: true,
-      },
-      {
-        source: '/glossary/content-quality',
-        destination: '/glossary/e-e-a-t-experience-expertise-authoritativeness-trustworthiness',
-        permanent: true,
-      },
+      { source: '/sitemap-core.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap-apac-twoway.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap-twoway.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap-threeway.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap-aeo.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/blog', destination: '/guides/ai-citations', permanent: true },
+      { source: '/blog/:path*', destination: '/guides/ai-citations', permanent: true },
+      { source: '/glossary', destination: '/faq', permanent: true },
+      { source: '/glossary/:path*', destination: '/faq', permanent: true },
+      { source: '/resources', destination: '/guides/ai-citations', permanent: true },
+      { source: '/markets', destination: '/', permanent: true },
+      { source: '/markets/:path*', destination: '/', permanent: true },
+      { source: '/ai-seo-agency', destination: '/', permanent: true },
+      { source: '/ai-seo-agency/:path*', destination: '/', permanent: true },
+      { source: '/industries', destination: '/customers', permanent: true },
+      { source: '/industries/:path*', destination: '/customers', permanent: true },
+      { source: '/use-cases', destination: '/faq', permanent: true },
+      { source: '/use-cases/:path*', destination: '/faq', permanent: true },
+      { source: '/for', destination: '/', permanent: true },
+      { source: '/for/:path*', destination: '/', permanent: true },
+      { source: '/integrations', destination: '/tools', permanent: true },
+      { source: '/integrations/:path*', destination: '/tools', permanent: true },
+      { source: '/compare', destination: '/anthroly-vs-anthropic', permanent: true },
+      { source: '/compare/:path*', destination: '/anthroly-vs-anthropic', permanent: true },
+      { source: '/aeo/engine/:path*', destination: '/aeo', permanent: true },
+      { source: '/aeo/topic/:path*', destination: '/aeo', permanent: true },
     ];
   },
 };

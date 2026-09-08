@@ -6,7 +6,7 @@ import {
   combineSchemas,
   generateBreadcrumbSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 
 export const revalidate = 86400;
 

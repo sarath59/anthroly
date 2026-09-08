@@ -11,7 +11,6 @@ import { AIVisibilityMonitor } from "@/components/sections/AIVisibilityMonitor";
 import { AutomatedBlogs } from "@/components/sections/AutomatedBlogs";
 import { AIQAPages } from "@/components/sections/AIQAPages";
 import { AIBacklinkAgents } from "@/components/sections/AIBacklinkAgents";
-import { PSEOImplementation } from "@/components/sections/PSEOImplementation";
 import { AutomatedReports } from "@/components/sections/AutomatedReports";
 import { SocialArticles } from "@/components/sections/SocialArticles";
 import { FreeToolsBuilder } from "@/components/sections/FreeToolsBuilder";
@@ -113,7 +112,6 @@ export default function Home() {
       <AutomatedBlogs />
       <AIQAPages />
       <AIBacklinkAgents />
-      <PSEOImplementation />
       <FreeToolsBuilder />
       <SocialArticles />
       

@@ -31,7 +31,7 @@ export const WhoIsThisFor = () => {
       icon: Code2,
       title: "SaaS Companies",
       description: "The most successful SaaS companies own their organic traffic. From Zapier to HubSpot, SEO compounds. Start building your moat.",
-      benefits: ["pSEO at scale", "Content that converts", "Competitive intelligence"],
+      benefits: ["Organic search at scale", "Content that converts", "Competitive intelligence"],
       color: "pink"
     },
     {

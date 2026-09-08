@@ -14,7 +14,7 @@ import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 
 interface PageProps {
   params: { slug: string };

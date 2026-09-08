@@ -7,7 +7,7 @@ import {
   generateArticleSchema,
   generateFAQSchema,
   generateOrganizationSchema,
-} from '@/lib/pseo/schema';
+} from '@/lib/schema';
 import { generatePersonSchema, SITE_AUTHOR } from '@/lib/author';
 
 export const metadata: Metadata = {
@@ -139,32 +139,32 @@ export default function AeoHubPage() {
               <p className="text-sm text-gray-400">Clear disambiguation—then how to get cited by Claude.</p>
             </Link>
             <Link
-              href="/aeo/engine/claude"
+              href="/guides/ai-citations/chatgpt-perplexity-overviews"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
-              <h3 className="font-semibold text-white mb-2">AEO for Claude</h3>
-              <p className="text-sm text-gray-400">Get cited in Anthropic Claude answers.</p>
+              <h3 className="font-semibold text-white mb-2">ChatGPT vs Perplexity vs Overviews</h3>
+              <p className="text-sm text-gray-400">What to publish for each answer engine.</p>
             </Link>
             <Link
-              href="/aeo/engine/chatgpt"
+              href="/guides/ai-citations/measuring-ai-mentions"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
-              <h3 className="font-semibold text-white mb-2">AEO for ChatGPT</h3>
-              <p className="text-sm text-gray-400">Optimize for ChatGPT Search and citations.</p>
+              <h3 className="font-semibold text-white mb-2">Measuring AI mentions</h3>
+              <p className="text-sm text-gray-400">Prompt logs and citation share, not vanity traffic.</p>
             </Link>
             <Link
-              href="/aeo/engine/anthropic"
+              href="/faq"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
-              <h3 className="font-semibold text-white mb-2">AEO for Anthropic</h3>
-              <p className="text-sm text-gray-400">Visibility in Anthropic-powered AI answers.</p>
+              <h3 className="font-semibold text-white mb-2">Agency FAQ</h3>
+              <p className="text-sm text-gray-400">1,000+ answers about Anthroly, AEO, and AI search.</p>
             </Link>
             <Link
-              href="/aeo/topic/get-cited"
+              href="/customers"
               className="p-5 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-emerald-500/40 transition-colors"
             >
-              <h3 className="font-semibold text-white mb-2">Getting Cited (topic hub)</h3>
-              <p className="text-sm text-gray-400">Tactics + links into Claude/ChatGPT two-way guides.</p>
+              <h3 className="font-semibold text-white mb-2">Customer stories</h3>
+              <p className="text-sm text-gray-400">Documented AEO results from real programs.</p>
             </Link>
             <Link
               href="/aeo/how-to-get-cited-in-ai-overviews"

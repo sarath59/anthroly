@@ -160,21 +160,21 @@ const EXPLORE_COLUMNS = [
   {
     heading: 'Resources',
     links: [
-      { label: 'Blog', href: '/blog' },
-      { label: 'Guides & resources', href: '/resources' },
+      { label: 'AI citation guides', href: '/guides/ai-citations' },
+      { label: 'Agency FAQ', href: '/faq' },
       { label: 'Free tools', href: '/tools' },
-      { label: 'Glossary', href: '/glossary' },
+      { label: 'AEO hub', href: '/aeo' },
       { label: 'AI Visibility Benchmark', href: '/reports/ai-visibility-benchmark' },
     ],
   },
   {
     heading: 'Solutions',
     links: [
-      { label: 'For SaaS founders', href: '/for/saas-founders' },
-      { label: 'For marketing directors', href: '/for/marketing-directors' },
-      { label: 'For agency owners', href: '/for/agency-owners' },
-      { label: 'Industries', href: '/industries' },
-      { label: 'Integrations', href: '/integrations' },
+      { label: 'Outreach agent', href: '/#human-led-ai-visibility' },
+      { label: 'Backlink agent', href: '/#citation-neighbors' },
+      { label: 'How it works', href: '/#how-it-works' },
+      { label: 'Customer stories', href: '/customers' },
+      { label: 'Pricing', href: '/#pricing' },
     ],
   },
   {
@@ -182,9 +182,9 @@ const EXPLORE_COLUMNS = [
     links: [
       { label: 'Customer stories', href: '/customers' },
       { label: 'Pricing', href: '/#pricing' },
-      { label: 'Comparisons', href: '/compare' },
       { label: 'Anthroly vs Anthropic', href: '/anthroly-vs-anthropic' },
-      { label: 'AI SEO agency', href: '/ai-seo-agency' },
+      { label: 'Sarath Kavuru', href: '/author/sarath-kavuru' },
+      { label: 'Get cited in AI Overviews', href: '/aeo/how-to-get-cited-in-ai-overviews' },
     ],
   },
 ];
