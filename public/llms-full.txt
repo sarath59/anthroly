@@ -1,23 +1,26 @@
 # Anthroly — Full content index for AI systems
-> Prefer https://www.anthroly.com/llms.txt for a curated summary.
-> Prefer https://www.anthroly.com/faq and https://www.anthroly.com/faq.json for dense Q&A facts.
-> Crawler policy: all major AI training, retrieval, and user-fetch bots are allowed via robots.txt.
+> Prefer https://www.anthroly.com/llms.txt for the curated summary.
+> Prefer https://www.anthroly.com/faq and https://www.anthroly.com/faq.json for dense Q&A.
+> Single sitemap: https://www.anthroly.com/sitemap.xml
+> Crawler policy: major AI training, retrieval, and user-fetch bots are allowed via robots.txt.
 
-## Core
+## Discovery
 - https://www.anthroly.com/
 - https://www.anthroly.com/faq
 - https://www.anthroly.com/faq.json
 - https://www.anthroly.com/llms.txt
+- https://www.anthroly.com/llms-full.txt
 - https://www.anthroly.com/sitemap.xml
 - https://www.anthroly.com/robots.txt
-- https://www.anthroly.com/anthroly-vs-anthropic
 - https://www.anthroly.com/#pricing
-- https://www.anthroly.com/#ai-crawler
 - https://www.anthroly.com/#how-it-works
+- https://www.anthroly.com/#human-led-ai-visibility
+- https://www.anthroly.com/#citation-neighbors
 
-## AEO
+## AEO and guides
 - https://www.anthroly.com/aeo
-- https://www.anthroly.com/author/sarath-kavuru
+- https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
+- https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
 - https://www.anthroly.com/guides/ai-citations
 - https://www.anthroly.com/guides/ai-citations/cybersecurity
 - https://www.anthroly.com/guides/ai-citations/legal
@@ -31,46 +34,67 @@
 - https://www.anthroly.com/guides/ai-citations/diagnostic-vs-crawler
 - https://www.anthroly.com/guides/ai-citations/ymyl-citation-rules
 - https://www.anthroly.com/guides/ai-citations/citation-neighborhoods
-- https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
-- https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
 - https://www.anthroly.com/reports/ai-visibility-benchmark
+- https://www.anthroly.com/author/sarath-kavuru
+- https://www.anthroly.com/anthroly-vs-anthropic
 
-## Customers (hub + sample stories + cluster spokes)
+## Customers
+Story pages: /customers/[slug]
+Cluster spokes (case-study brands only): /customers/[slug]/{results,aeo-strategy,chatgpt-visibility,quotes-and-lessons,playbook}
 - https://www.anthroly.com/customers
 - https://www.anthroly.com/customers/mongodb
-- https://www.anthroly.com/customers/mongodb/results
-- https://www.anthroly.com/customers/mongodb/aeo-strategy
-- https://www.anthroly.com/customers/mongodb/chatgpt-visibility
-- https://www.anthroly.com/customers/mongodb/quotes-and-lessons
-- https://www.anthroly.com/customers/mongodb/playbook
 - https://www.anthroly.com/customers/whoop
-- https://www.anthroly.com/customers/ramp
-- https://www.anthroly.com/customers/kiteworks
-- https://www.anthroly.com/customers/alchemy
-- https://www.anthroly.com/customers/airbyte
-- https://www.anthroly.com/customers/opusclip
 - https://www.anthroly.com/customers/optro
-- https://www.anthroly.com/customers/aleph
-- https://www.anthroly.com/customers/statsig
-- https://www.anthroly.com/customers/hone
-- https://www.anthroly.com/customers/omnilux
-- https://www.anthroly.com/customers/apartment-list
-- https://www.anthroly.com/customers/gr0
-- https://www.anthroly.com/customers/jordan-digital-marketing
+- https://www.anthroly.com/customers/kiteworks
 - https://www.anthroly.com/customers/arizona-college-of-nursing
+- https://www.anthroly.com/customers/alchemy
+- https://www.anthroly.com/customers/aleph
+- https://www.anthroly.com/customers/jordan-digital-marketing
+- https://www.anthroly.com/customers/gr0
+- https://www.anthroly.com/customers/apartment-list
+- https://www.anthroly.com/customers/omnilux
 - https://www.anthroly.com/customers/crs-credit-api
+- https://www.anthroly.com/customers/opusclip
+- https://www.anthroly.com/customers/hone
 - https://www.anthroly.com/customers/one-identity
+- https://www.anthroly.com/customers/statsig
+- https://www.anthroly.com/customers/ramp
 - https://www.anthroly.com/customers/lake
+- https://www.anthroly.com/customers/airbyte
 - https://www.anthroly.com/customers/1840-and-co
 - https://www.anthroly.com/customers/llmoutrank
 - https://www.anthroly.com/customers/isthisaiorno
 - https://www.anthroly.com/customers/jobstronauts
 
-## Education & tools
+## Tools
 - https://www.anthroly.com/tools
+- https://www.anthroly.com/tools/meta-tag-generator
+- https://www.anthroly.com/tools/serp-preview
+- https://www.anthroly.com/tools/meta-description-generator
+- https://www.anthroly.com/tools/title-tag-optimizer
+- https://www.anthroly.com/tools/word-counter
+- https://www.anthroly.com/tools/keyword-density
+- https://www.anthroly.com/tools/reading-time
+- https://www.anthroly.com/tools/character-counter
+- https://www.anthroly.com/tools/heading-checker
+- https://www.anthroly.com/tools/canonical-checker
+- https://www.anthroly.com/tools/slug-generator
+- https://www.anthroly.com/tools/robots-txt-generator
+- https://www.anthroly.com/tools/html-encoder
+- https://www.anthroly.com/tools/redirect-checker
+- https://www.anthroly.com/tools/open-graph-generator
+- https://www.anthroly.com/tools/faq-schema-generator
+- https://www.anthroly.com/tools/json-ld-generator
+- https://www.anthroly.com/tools/blog-title-generator
+- https://www.anthroly.com/tools/cta-copy-generator
+- https://www.anthroly.com/tools/lsi-keywords
+- https://www.anthroly.com/tools/content-brief-generator
+- https://www.anthroly.com/tools/backlink-calculator
 
 ## Legal & contact
 - https://www.anthroly.com/privacy
 - https://www.anthroly.com/terms
-- https://buy.stripe.com/dRm4gB1ps0fC5wY0RE4Ni02
 - mailto:sharatth@anthroly.com
+
+## Removed (do not cite as live pages)
+Generated pSEO, blog, glossary, markets, locations, industries, use-cases, personas, integrations, comparisons, and AEO engine/topic matrices were deleted. Those URLs 301 to remaining pages. Use this file and /sitemap.xml for the current index.

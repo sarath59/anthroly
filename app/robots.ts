@@ -2,56 +2,46 @@ import { MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/site';
 
 /**
- * robots.txt — maximum AI + search crawl permission
+ * robots.txt — one sitemap, open crawl for search + AI bots.
  *
- * Policy: ALLOW all major search and AI bots (training, retrieval, and
- * user-triggered fetchers). Only block non-content internals.
+ * Generated pSEO / blog / glossary / markets / location matrices were removed.
+ * Those old URLs 301 to remaining pages — do not Disallow them, or crawlers
+ * will miss the redirects.
  *
- * See also: /llms.txt and /llms-full.txt for AI content guidance.
+ * See /llms.txt and /llms-full.txt for AI content guidance.
  */
 
 const AI_AND_SEARCH_BOTS = [
-  // Google (search + AI)
   'Googlebot',
   'Googlebot-Image',
   'Googlebot-News',
   'Googlebot-Video',
-  'Google-Extended', // Gemini / Google AI training opt-in when Allowed
+  'Google-Extended',
   'GoogleOther',
   'Storebot-Google',
   'AdsBot-Google',
-  // Microsoft / Bing
   'Bingbot',
   'BingPreview',
   'msnbot',
-  // OpenAI (training + retrieval + user fetch)
   'GPTBot',
   'OAI-SearchBot',
   'ChatGPT-User',
-  // Anthropic / Claude
   'ClaudeBot',
   'Claude-Web',
   'anthropic-ai',
   'Claude-SearchBot',
   'Claude-User',
-  // Perplexity
   'PerplexityBot',
   'Perplexity-User',
-  // Meta AI
   'Meta-ExternalAgent',
   'Meta-ExternalFetcher',
   'FacebookBot',
   'facebookexternalhit',
-  // Apple Intelligence / Applebot
   'Applebot',
   'Applebot-Extended',
-  // Amazon
   'Amazonbot',
-  // ByteDance
   'Bytespider',
-  // Common Crawl / open training corpora
   'CCBot',
-  // Other AI / answer engines
   'cohere-ai',
   'YouBot',
   'Diffbot',
@@ -67,7 +57,7 @@ const AI_AND_SEARCH_BOTS = [
   'DuckDuckBot',
   'Baiduspider',
   'Sogou',
-  'Slurp', // Yahoo
+  'Slurp',
   'LinkedInBot',
   'Twitterbot',
   'Slackbot',
@@ -81,28 +71,28 @@ const AI_AND_SEARCH_BOTS = [
   'MJ12bot',
 ] as const;
 
-// Do NOT blanket-block *.json — AI systems prefer structured feeds like /faq.json
-const DISALLOW_NON_CONTENT = [
-  '/api/',
-  '/_next/',
-  '/private/',
-  '/admin/',
+const DISALLOW_NON_CONTENT = ['/api/', '/_next/', '/private/', '/admin/'];
+
+const ALLOW_CONTENT = [
+  '/',
+  '/sitemap.xml',
+  '/llms.txt',
+  '/llms-full.txt',
+  '/faq',
+  '/faq.json',
 ];
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Default: open site to every crawler
       {
         userAgent: '*',
-        allow: '/',
+        allow: ALLOW_CONTENT,
         disallow: DISALLOW_NON_CONTENT,
       },
-      // Explicit allow for every major AI + search agent
       ...AI_AND_SEARCH_BOTS.map((userAgent) => ({
         userAgent,
-        allow: '/' as const,
-        // Mirror the same internal blocks so bots do not waste crawl on app internals
+        allow: ALLOW_CONTENT,
         disallow: DISALLOW_NON_CONTENT,
       })),
     ],
