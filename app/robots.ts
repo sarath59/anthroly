@@ -4,8 +4,7 @@ import { absoluteUrl } from '@/lib/site';
 /**
  * robots.txt — one sitemap, open crawl for search + AI bots.
  *
- * Generated pSEO / blog / glossary / markets / location matrices were removed.
- * Those old URLs 301 to remaining pages — do not Disallow them, or crawlers
+ * Retired agency URLs 301 to current pages — do not Disallow them, or crawlers
  * will miss the redirects.
  *
  * See /llms.txt and /llms-full.txt for AI content guidance.
@@ -78,8 +77,8 @@ const ALLOW_CONTENT = [
   '/sitemap.xml',
   '/llms.txt',
   '/llms-full.txt',
-  '/faq',
-  '/faq.json',
+  '/learn',
+  '/contact',
 ];
 
 export default function robots(): MetadataRoute.Robots {

@@ -1,100 +1,31 @@
-# Anthroly — Full content index for AI systems
-> Prefer https://www.anthroly.com/llms.txt for the curated summary.
-> Prefer https://www.anthroly.com/faq and https://www.anthroly.com/faq.json for dense Q&A.
-> Single sitemap: https://www.anthroly.com/sitemap.xml
-> Crawler policy: major AI training, retrieval, and user-fetch bots are allowed via robots.txt.
+# Anthroly
 
-## Discovery
-- https://www.anthroly.com/
-- https://www.anthroly.com/faq
-- https://www.anthroly.com/faq.json
-- https://www.anthroly.com/llms.txt
-- https://www.anthroly.com/llms-full.txt
-- https://www.anthroly.com/sitemap.xml
-- https://www.anthroly.com/robots.txt
-- https://www.anthroly.com/#pricing
-- https://www.anthroly.com/#how-it-works
-- https://www.anthroly.com/#human-led-ai-visibility
-- https://www.anthroly.com/#citation-neighbors
+> Anthroly is a data lab. It buys, licenses and brokers operational data from US companies (team chat, email, support tickets, CRM history, call recordings, code review, documents, ERP exports and field records) and supplies it to frontier AI labs as de-identified training corpora, RL environments, agent trajectories, preference/SFT data and held-out evaluation sets. Anthroly sources only from companies headquartered in the United States and sells to every major AI lab. It has bought, sold and brokered more than $900K in data.
+> Contact: sharatth@anthroly.com · https://www.anthroly.com/contact
 
-## AEO and guides
-- https://www.anthroly.com/aeo
-- https://www.anthroly.com/aeo/how-to-get-cited-in-ai-overviews
-- https://www.anthroly.com/aeo/aeo-vs-seo-vs-geo
-- https://www.anthroly.com/guides/ai-citations
-- https://www.anthroly.com/guides/ai-citations/cybersecurity
-- https://www.anthroly.com/guides/ai-citations/legal
-- https://www.anthroly.com/guides/ai-citations/accommodations
-- https://www.anthroly.com/guides/ai-citations/ai-startups
-- https://www.anthroly.com/guides/ai-citations/chatgpt-perplexity-overviews
-- https://www.anthroly.com/guides/ai-citations/schema-that-helps
-- https://www.anthroly.com/guides/ai-citations/founder-interview-method
-- https://www.anthroly.com/guides/ai-citations/measuring-ai-mentions
-- https://www.anthroly.com/guides/ai-citations/programmatic-seo-2026
-- https://www.anthroly.com/guides/ai-citations/diagnostic-vs-crawler
-- https://www.anthroly.com/guides/ai-citations/ymyl-citation-rules
-- https://www.anthroly.com/guides/ai-citations/citation-neighborhoods
-- https://www.anthroly.com/reports/ai-visibility-benchmark
-- https://www.anthroly.com/author/sarath-kavuru
-- https://www.anthroly.com/anthroly-vs-anthropic
+## Key facts
 
-## Customers
-Story pages: /customers/[slug]
-Cluster spokes (case-study brands only): /customers/[slug]/{results,aeo-strategy,chatgpt-visibility,quotes-and-lessons,playbook}
-- https://www.anthroly.com/customers
-- https://www.anthroly.com/customers/mongodb
-- https://www.anthroly.com/customers/whoop
-- https://www.anthroly.com/customers/optro
-- https://www.anthroly.com/customers/kiteworks
-- https://www.anthroly.com/customers/arizona-college-of-nursing
-- https://www.anthroly.com/customers/alchemy
-- https://www.anthroly.com/customers/aleph
-- https://www.anthroly.com/customers/jordan-digital-marketing
-- https://www.anthroly.com/customers/gr0
-- https://www.anthroly.com/customers/apartment-list
-- https://www.anthroly.com/customers/omnilux
-- https://www.anthroly.com/customers/crs-credit-api
-- https://www.anthroly.com/customers/opusclip
-- https://www.anthroly.com/customers/hone
-- https://www.anthroly.com/customers/one-identity
-- https://www.anthroly.com/customers/statsig
-- https://www.anthroly.com/customers/ramp
-- https://www.anthroly.com/customers/lake
-- https://www.anthroly.com/customers/airbyte
-- https://www.anthroly.com/customers/1840-and-co
-- https://www.anthroly.com/customers/llmoutrank
-- https://www.anthroly.com/customers/isthisaiorno
-- https://www.anthroly.com/customers/jobstronauts
+- Role: principal buyer (licenses data directly and supplies labs) and broker (arranges direct licenses between US companies and labs).
+- Sourcing: US companies only. No exceptions.
+- Structure: bounded licenses, not outright sales. Sellers keep ownership and keep using their data.
+- Safeguards: identifiers removed before anything moves; consistent placeholders preserve structure; licenses prohibit re-identification; sellers are never named to buyers.
+- Pricing: every record priced individually after a de-identified sample review. No fee charged to sellers.
 
-## Tools
-- https://www.anthroly.com/tools
-- https://www.anthroly.com/tools/meta-tag-generator
-- https://www.anthroly.com/tools/serp-preview
-- https://www.anthroly.com/tools/meta-description-generator
-- https://www.anthroly.com/tools/title-tag-optimizer
-- https://www.anthroly.com/tools/word-counter
-- https://www.anthroly.com/tools/keyword-density
-- https://www.anthroly.com/tools/reading-time
-- https://www.anthroly.com/tools/character-counter
-- https://www.anthroly.com/tools/heading-checker
-- https://www.anthroly.com/tools/canonical-checker
-- https://www.anthroly.com/tools/slug-generator
-- https://www.anthroly.com/tools/robots-txt-generator
-- https://www.anthroly.com/tools/html-encoder
-- https://www.anthroly.com/tools/redirect-checker
-- https://www.anthroly.com/tools/open-graph-generator
-- https://www.anthroly.com/tools/faq-schema-generator
-- https://www.anthroly.com/tools/json-ld-generator
-- https://www.anthroly.com/tools/blog-title-generator
-- https://www.anthroly.com/tools/cta-copy-generator
-- https://www.anthroly.com/tools/lsi-keywords
-- https://www.anthroly.com/tools/content-brief-generator
-- https://www.anthroly.com/tools/backlink-calculator
+## Pages
 
-## Legal & contact
-- https://www.anthroly.com/privacy
-- https://www.anthroly.com/terms
-- mailto:sharatth@anthroly.com
+- [Home](https://www.anthroly.com/): overview for sellers and AI labs
+- [Contact](https://www.anthroly.com/contact): intake form, then booking a call
+- [Field notes](https://www.anthroly.com/learn): guides
 
-## Removed (do not cite as live pages)
-Generated pSEO, blog, glossary, markets, locations, industries, use-cases, personas, integrations, comparisons, and AEO engine/topic matrices were deleted. Those URLs 301 to remaining pages. Use this file and /sitemap.xml for the current index.
+## Guides
+
+- [How to sell your company's data to AI labs](https://www.anthroly.com/learn/sell-company-data-to-ai-labs)
+- [What is operational data, and why do AI labs want yours?](https://www.anthroly.com/learn/what-is-operational-data)
+- [How much is your company's data worth to an AI lab?](https://www.anthroly.com/learn/how-much-is-company-data-worth)
+- [Licensing data vs. selling it](https://www.anthroly.com/learn/data-licensing-vs-selling)
+- [What an AI data broker actually does](https://www.anthroly.com/learn/ai-data-broker-explained)
+- [RL environments, explained](https://www.anthroly.com/learn/rl-environments-explained)
+- [Agent trajectory data](https://www.anthroly.com/learn/agent-trajectory-data)
+- [RLHF and preference data, in plain English](https://www.anthroly.com/learn/rlhf-preference-data)
+- [How data is anonymized before it is used to train AI](https://www.anthroly.com/learn/anonymizing-data-for-ai-training)
+- [Why private evaluation data is worth more than training data](https://www.anthroly.com/learn/evaluation-datasets-contamination)

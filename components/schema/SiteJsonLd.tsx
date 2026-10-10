@@ -1,13 +1,8 @@
 import { combineSchemas, generateOrganizationSchema, generateWebSiteSchema } from '@/lib/schema';
-import { generatePersonSchema } from '@/lib/author';
 
-/** Sitewide Organization + WebSite + founder Person JSON-LD */
+/** Sitewide Organization + WebSite JSON-LD */
 export function SiteJsonLd() {
-  const json = combineSchemas(
-    generateOrganizationSchema(),
-    generateWebSiteSchema(),
-    generatePersonSchema()
-  );
+  const json = combineSchemas(generateOrganizationSchema(), generateWebSiteSchema());
 
   return (
     <script

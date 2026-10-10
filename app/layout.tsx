@@ -1,26 +1,55 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SITE_URL, absoluteUrl, DATAFAST_WEBSITE_ID } from "@/lib/site";
+import { SITE_URL, SITE_DESCRIPTION, absoluteUrl, DATAFAST_WEBSITE_ID } from "@/lib/site";
 import { SiteJsonLd } from "@/components/schema/SiteJsonLd";
 import { DataFastGoals } from "@/components/analytics/DataFastGoals";
 
-const inter = Inter({
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-serif",
+});
+
+const sans = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
-  preload: true,
-  fallback: ["system-ui", "arial"],
-  adjustFontFallback: true,
+  variable: "--font-sans",
 });
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
+});
+
+const TITLE = "Anthroly — The data lab for American operating data";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-  description: "Two AI agents we set up and run: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee to claim a slot. $1,000 go-live when you are happy. Then $500/month with daily updates. Unhappy? We refund the $1,000 go-live fee.",
-  keywords: ["AI outreach agent", "cold email", "lead generation", "backlink agent", "link building", "1000 emails a day", "AI SEO", "founder pipeline"],
+  title: {
+    default: TITLE,
+    template: "%s · Anthroly",
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "sell company data to AI labs",
+    "AI training data",
+    "data broker",
+    "data licensing",
+    "RL environments",
+    "reinforcement learning training data",
+    "agent trajectory data",
+    "RLHF data",
+    "operational data",
+    "evaluation datasets",
+  ],
   robots: {
     index: true,
     follow: true,
@@ -33,41 +62,21 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    // Absolute, query-free — tracking params like ?ref=producthunt must not create a second indexable URL
-    canonical: absoluteUrl('/'),
+    canonical: absoluteUrl("/"),
   },
   openGraph: {
-    title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee. $1,000 go-live when you are happy. Then $500/month. Unhappy? We refund the $1,000 go-live fee.",
-    url: absoluteUrl('/'),
-    siteName: 'Anthroly',
-    type: 'website',
-    images: [
-      {
-        url: absoluteUrl('/logo.png'),
-        width: 512,
-        height: 512,
-        alt: 'Anthroly — outreach and backlink AI agents',
-      },
-    ],
+    title: TITLE,
+    description: SITE_DESCRIPTION,
+    url: absoluteUrl("/"),
+    siteName: "Anthroly",
+    type: "website",
+    images: [{ url: absoluteUrl("/logo.png"), width: 512, height: 512, alt: "Anthroly" }],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: "Anthroly — 1,000 Emails/Day + 24/7 Backlink Agents",
-    description: "Two AI agents: 1,000 emails a day + 24/7 backlinks. Only 10 slots. $216 start fee. $1,000 go-live when you are happy. Then $500/month. Unhappy? We refund the $1,000 go-live fee.",
-    images: [absoluteUrl('/logo.png')],
-  },
-  icons: {
-    icon: [
-      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
-    ],
-    shortcut: '/logo.png',
-    apple: '/logo.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/logo.png',
-    },
+    card: "summary_large_image",
+    title: TITLE,
+    description: SITE_DESCRIPTION,
+    images: [absoluteUrl("/logo.png")],
   },
 };
 
@@ -77,12 +86,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://datafa.st" />
-        <link rel="dns-prefetch" href="https://img.logo.dev" />
+        <link rel="preconnect" href="https://img.logo.dev" />
       </head>
-      <body className="min-h-screen bg-black text-white antialiased">
+      <body className="min-h-screen">
         <SiteJsonLd />
         <Header />
         <main>{children}</main>

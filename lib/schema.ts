@@ -1,9 +1,8 @@
 /**
- * Schema.org structured data helpers for editorial pages.
+ * Schema.org structured data helpers.
  */
 
-import { SITE_URL, absoluteUrl, CONNECT_FEE_LABEL, DIAGNOSTIC_NAME, PACKAGE_SETUP, PACKAGE_RETAINER, SPRINT_NAME, SYSTEM_NAME } from './site';
-import { SITE_AUTHOR, generatePersonSchema } from './author';
+import { SITE_URL, SITE_DESCRIPTION, CONTACT_EMAIL, absoluteUrl } from './site';
 
 export interface FAQItem {
   question: string;
@@ -55,92 +54,30 @@ export function generateOrganizationSchema(): object {
       url: absoluteUrl('/logo.png'),
     },
     image: absoluteUrl('/logo.png'),
-    description:
-      'Anthroly sets up and runs two AI agents for clients: a lead-gen outreach agent that sends 1,000 personalized cold emails a day, and a 24/7 high-quality backlink agent. You stay the founder. They hunt.',
-    slogan: 'You stay the founder. They hunt.',
-    foundingDate: '2024',
-    email: 'sharatth@anthroly.com',
+    description: SITE_DESCRIPTION,
+    slogan: 'The data lab for American operating data.',
+    email: CONTACT_EMAIL,
     knowsAbout: [
-      'AI lead generation',
-      'cold email outreach',
-      'editorial link building',
-      'Answer Engine Optimization',
-      'Generative Engine Optimization',
-      'founder ghostwriting',
-      'LinkedIn ghostwriting',
-      'AI SEO',
-      'AI Overviews',
-      'ChatGPT SEO',
-      'Claude AEO',
-      'Perplexity citations',
-      'Link building',
-      'Content SEO',
-      'LLM SEO',
-      'AI brand visibility',
-      'Digital PR for AI citations',
-      'Entity SEO',
+      'AI training data',
+      'Data licensing',
+      'Data brokerage',
+      'Operational data',
+      'Reinforcement learning environments',
+      'RLHF preference data',
+      'Agent trajectory data',
+      'Model evaluation datasets',
+      'Data anonymization',
     ],
-    areaServed: [
-      { '@type': 'Country', name: 'Singapore' },
-      { '@type': 'Country', name: 'Australia' },
-      { '@type': 'Country', name: 'China' },
-      { '@type': 'Country', name: 'New Zealand' },
-      { '@type': 'Country', name: 'United States' },
-      { '@type': 'Place', name: 'Worldwide' },
-    ],
+    areaServed: { '@type': 'Country', name: 'United States' },
     sameAs: [
       'https://twitter.com/anthroly',
       'https://linkedin.com/company/anthroly',
-      'https://www.producthunt.com/products/anthroly',
     ],
-    founder: {
-      '@type': 'Person',
-      name: SITE_AUTHOR.name,
-      jobTitle: 'Founder',
-      email: SITE_AUTHOR.email,
-      url: SITE_AUTHOR.url,
-    },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: 'sharatth@anthroly.com',
-      url: absoluteUrl('/#pricing'),
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      lowPrice: '216',
-      highPrice: '1000',
-      offerCount: '3',
-      name: SYSTEM_NAME,
-      description: `${SYSTEM_NAME}: ${CONNECT_FEE_LABEL} to start, ${PACKAGE_SETUP} ${SPRINT_NAME} when you are happy (refundable), then ${PACKAGE_RETAINER}/month with daily updates.`,
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: SYSTEM_NAME,
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          name: DIAGNOSTIC_NAME,
-          price: '216',
-          priceCurrency: 'USD',
-          priceValidUntil: '2027-08-25',
-        },
-        {
-          '@type': 'Offer',
-          name: SPRINT_NAME,
-          price: '1000',
-          priceCurrency: 'USD',
-          priceValidUntil: '2027-08-25',
-        },
-        {
-          '@type': 'Offer',
-          name: 'Monthly retainer',
-          price: '500',
-          priceCurrency: 'USD',
-          priceValidUntil: '2027-08-25',
-        },
-      ],
+      email: CONTACT_EMAIL,
+      url: absoluteUrl('/contact'),
     },
   };
 }
@@ -152,8 +89,7 @@ export function generateWebSiteSchema(): object {
     '@id': `${SITE_URL}/#website`,
     name: 'Anthroly',
     url: SITE_URL,
-    description:
-      'Human-led SEO and AEO—backlinks, content, and AI-search visibility for Google and answer engines.',
+    description: SITE_DESCRIPTION,
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'en-US',
   };
@@ -170,85 +106,16 @@ export function generateArticleSchema(
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
-    description: description,
+    description,
     url: absoluteUrl(url),
-    datePublished: datePublished,
+    datePublished,
     dateModified: dateModified || datePublished,
-    author: {
-      '@type': 'Person',
-      name: SITE_AUTHOR.name,
-      jobTitle: SITE_AUTHOR.jobTitle,
-      url: SITE_AUTHOR.url,
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Anthroly',
-        url: SITE_URL,
-      },
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Anthroly',
-      logo: {
-        '@type': 'ImageObject',
-        url: absoluteUrl('/logo.png'),
-      },
-    },
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': absoluteUrl(url),
     },
-  };
-}
-
-export function generateHowToSchema(
-  name: string,
-  description: string,
-  steps: Array<string | { name: string; text: string }>,
-  extra?: { url?: string }
-): object {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name,
-    description,
-    ...(extra?.url ? { url: absoluteUrl(extra.url) } : {}),
-    step: steps.map((step, index) => {
-      if (typeof step === 'string') {
-        return {
-          '@type': 'HowToStep',
-          position: index + 1,
-          text: step,
-        };
-      }
-      return {
-        '@type': 'HowToStep',
-        position: index + 1,
-        name: step.name,
-        text: step.text,
-      };
-    }),
-  };
-}
-
-export function generateItemListSchema(
-  name: string,
-  items: { name: string; url: string; description: string }[]
-): object {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: name,
-    numberOfItems: items.length,
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Thing',
-        name: item.name,
-        url: absoluteUrl(item.url),
-        description: item.description,
-      },
-    })),
   };
 }
 
@@ -265,5 +132,3 @@ export function combineSchemas(...schemas: object[]): string {
     }),
   });
 }
-
-export { generatePersonSchema };

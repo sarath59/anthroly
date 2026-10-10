@@ -5,12 +5,9 @@
  */
 
 export const DATAFAST_GOALS = {
-  diagnostic: 'diagnostic',
-  diagnosticPaid: 'diagnostic_paid',
-  aeoReport: 'aeo_report',
-  tryAgent: 'try_agent',
-  citationNeighborhood: 'citation_neighborhood',
-  aiVisibilityAudit: 'ai_visibility_audit',
+  /** Intake form completed and handed off to Cal.com */
+  intakeSubmit: 'intake_submit',
+  bookCall: 'book_call',
   emailContact: 'email_contact',
   /** Interactive click (button, link, control) with from/to params */
   click: 'click',

@@ -11,33 +11,30 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
   async redirects() {
+    const toHome = [
+      '/markets', '/ai-seo-agency', '/for', '/compare', '/anthroly-vs-anthropic',
+      '/customers', '/industries', '/author', '/tools', '/integrations', '/pricing',
+    ];
+    const toLearn = ['/blog', '/glossary', '/resources', '/guides', '/aeo', '/reports', '/use-cases'];
+    const toContact = ['/diagnostic', '/book'];
+
     return [
-      { source: '/sitemap-core.xml', destination: '/sitemap.xml', permanent: true },
-      { source: '/sitemap-apac-twoway.xml', destination: '/sitemap.xml', permanent: true },
-      { source: '/sitemap-twoway.xml', destination: '/sitemap.xml', permanent: true },
-      { source: '/sitemap-threeway.xml', destination: '/sitemap.xml', permanent: true },
-      { source: '/sitemap-aeo.xml', destination: '/sitemap.xml', permanent: true },
-      { source: '/blog', destination: '/guides/ai-citations', permanent: true },
-      { source: '/blog/:path*', destination: '/guides/ai-citations', permanent: true },
-      { source: '/glossary', destination: '/faq', permanent: true },
-      { source: '/glossary/:path*', destination: '/faq', permanent: true },
-      { source: '/resources', destination: '/guides/ai-citations', permanent: true },
-      { source: '/markets', destination: '/', permanent: true },
-      { source: '/markets/:path*', destination: '/', permanent: true },
-      { source: '/ai-seo-agency', destination: '/', permanent: true },
-      { source: '/ai-seo-agency/:path*', destination: '/', permanent: true },
-      { source: '/industries', destination: '/customers', permanent: true },
-      { source: '/industries/:path*', destination: '/customers', permanent: true },
-      { source: '/use-cases', destination: '/faq', permanent: true },
-      { source: '/use-cases/:path*', destination: '/faq', permanent: true },
-      { source: '/for', destination: '/', permanent: true },
-      { source: '/for/:path*', destination: '/', permanent: true },
-      { source: '/integrations', destination: '/tools', permanent: true },
-      { source: '/integrations/:path*', destination: '/tools', permanent: true },
-      { source: '/compare', destination: '/anthroly-vs-anthropic', permanent: true },
-      { source: '/compare/:path*', destination: '/anthroly-vs-anthropic', permanent: true },
-      { source: '/aeo/engine/:path*', destination: '/aeo', permanent: true },
-      { source: '/aeo/topic/:path*', destination: '/aeo', permanent: true },
+      { source: '/sitemap-:name.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap/:id', destination: '/sitemap.xml', permanent: true },
+      { source: '/faq', destination: '/#faq', permanent: true },
+      { source: '/faq.json', destination: '/', permanent: true },
+      ...toHome.flatMap((p) => [
+        { source: p, destination: '/', permanent: true },
+        { source: `${p}/:path*`, destination: '/', permanent: true },
+      ]),
+      ...toLearn.flatMap((p) => [
+        { source: p, destination: '/learn', permanent: true },
+        { source: `${p}/:path*`, destination: '/learn', permanent: true },
+      ]),
+      ...toContact.flatMap((p) => [
+        { source: p, destination: '/contact', permanent: true },
+        { source: `${p}/:path*`, destination: '/contact', permanent: true },
+      ]),
     ];
   },
 };
