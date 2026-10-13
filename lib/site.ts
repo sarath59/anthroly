@@ -2,7 +2,7 @@
 export const SITE_URL = 'https://www.datarylabs.com';
 
 /** Public DataFast website ID (browser script + server-side bot tracking) */
-export const DATAFAST_WEBSITE_ID = 'dfid_64UKkRm4SuynXLuxGKg4u';
+export const DATAFAST_WEBSITE_ID = 'dfid_9eil87GXcuwX1vGQZ1ckJ';
 
 /** Absolute URL helper for canonicals, Open Graph, and JSON-LD */
 export function absoluteUrl(path: string = ''): string {

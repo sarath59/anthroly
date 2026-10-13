@@ -99,11 +99,10 @@ export default function RootLayout({
           {`window.datafast=window.datafast||function(){(window.datafast.q=window.datafast.q||[]).push(arguments);};`}
         </Script>
         <Script
-          defer
+          src="https://datafa.st/js/script.js"
           data-website-id={DATAFAST_WEBSITE_ID}
           data-domain="datarylabs.com"
-          src="https://datafa.st/js/script.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <DataFastGoals />
       </body>
