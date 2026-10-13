@@ -4,16 +4,16 @@ import { CONTACT_EMAIL, absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Terms of use',
-  description: 'Terms governing use of the Anthroly website.',
+  description: 'Terms governing use of the Datary Labs website.',
   alternates: { canonical: absoluteUrl('/terms') },
 };
 
 const BODY = `
-These terms govern your use of anthroly.com. By using the site, you agree to them. If you do not agree, please do not use the site.
+These terms govern your use of datarylabs.com. By using the site, you agree to them. If you do not agree, please do not use the site.
 
 ## What these terms cover
 
-These terms cover the website only. Any data license, purchase or brokerage engagement with Anthroly is governed by a separate written agreement, and that agreement controls if it conflicts with anything here.
+These terms cover the website only. Any data license, purchase or brokerage engagement with Datary Labs is governed by a separate written agreement, and that agreement controls if it conflicts with anything here.
 
 ## Information on the site
 
@@ -25,15 +25,15 @@ Nothing on this site is an offer to buy or license any particular data. Any offe
 
 ## Eligibility
 
-We license data only from companies headquartered in the United States. Submitting the intake form does not create any obligation on either side.
+We license data only from companies headquartered in the United States. Contacting us does not create any obligation on either side.
 
 ## Your submissions
 
-When you submit information through the site, you confirm it is accurate and that you are authorized to share it on behalf of your organization. Please do not send raw data, files or personal information about others through the intake form.
+When you send us information, you confirm it is accurate and that you are authorized to share it on behalf of your organization. Please do not send raw data, files or personal information about others in an initial email.
 
 ## Intellectual property
 
-The site and its content, including text, design and logos, belong to Anthroly or its licensors. Third-party names and logos are the property of their respective owners. You may share links to our guides, and quote brief passages with attribution.
+The site and its content, including text, design and logos, belong to Datary Labs or its licensors. Third-party names and logos are the property of their respective owners. You may share links to our guides, and quote brief passages with attribution.
 
 ## Acceptable use
 
@@ -41,7 +41,7 @@ Do not misuse the site, attempt to gain unauthorized access, interfere with its 
 
 ## Third-party services
 
-The site links to and uses third-party services, including Cal.com for scheduling. Their own terms and privacy policies apply to your use of them.
+The site links to and uses third-party services, such as analytics and logo providers. Their own terms and privacy policies apply to your use of them.
 
 ## Disclaimers
 
@@ -49,7 +49,7 @@ The site is provided "as is" without warranties of any kind, to the fullest exte
 
 ## Limitation of liability
 
-To the fullest extent permitted by law, Anthroly is not liable for indirect, incidental or consequential damages arising from your use of the site.
+To the fullest extent permitted by law, Datary Labs is not liable for indirect, incidental or consequential damages arising from your use of the site.
 
 ## Changes
 

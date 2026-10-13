@@ -96,7 +96,7 @@ Then ask how many of those you have, how far back they go and whether they cover
 
 > If it would take a new hire six months to learn how your business really works, the record of those six months is what a model is missing.
 
-If you run a US company and want a straight answer on whether your record is worth licensing, [tell us what you have](/contact?side=seller). If you want to understand the rest of the process first, start with [how to sell your company's data to AI labs](/learn/sell-company-data-to-ai-labs).
+If you run a US company and want a straight answer on whether your record is worth licensing, [tell us what you have](/contact). If you want to understand the rest of the process first, start with [how to sell your company's data to AI labs](/learn/sell-company-data-to-ai-labs).
 `,
   faq: [
     {

@@ -81,7 +81,6 @@ function regionFrom(el: Element | null): string {
 function conversionGoalForHref(href: string): string | null {
   const lower = href.toLowerCase();
   if (lower.startsWith('mailto:')) return DATAFAST_GOALS.emailContact;
-  if (lower.includes('cal.com')) return DATAFAST_GOALS.bookCall;
   return null;
 }
 
@@ -256,7 +255,7 @@ export function DataFastGoals() {
           page,
           from,
           to: to || href.slice(0, 255),
-          intent: conversion === DATAFAST_GOALS.bookCall ? 'book' : 'email',
+          intent: 'email',
         });
       }
     };

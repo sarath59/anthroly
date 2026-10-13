@@ -5,9 +5,6 @@
  */
 
 export const DATAFAST_GOALS = {
-  /** Intake form completed and handed off to Cal.com */
-  intakeSubmit: 'intake_submit',
-  bookCall: 'book_call',
   emailContact: 'email_contact',
   /** Interactive click (button, link, control) with from/to params */
   click: 'click',

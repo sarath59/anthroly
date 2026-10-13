@@ -10,7 +10,7 @@ export function PullQuote() {
               &ldquo;Finished work hides the reasoning. The record of how it got finished is the part the
               internet never saw, and the part <em className="text-signal">models are missing.</em>&rdquo;
             </p>
-            <footer className="eyebrow mt-10">The thesis behind Anthroly</footer>
+            <footer className="eyebrow mt-10">The thesis behind Datary Labs</footer>
           </blockquote>
         </Reveal>
       </div>

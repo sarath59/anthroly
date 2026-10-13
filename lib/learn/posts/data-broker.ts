@@ -54,7 +54,7 @@ A data lab buys or licenses the data itself, as the counterparty, then anonymize
 
 **Downside:** you are trusting one buyer's valuation, so it is worth understanding how they price.
 
-## Where Anthroly sits
+## Where Datary Labs sits
 
 We operate mostly as a principal: we license the record directly from the company that produced it, pay for it ourselves and supply the labs. For certain lab requests we broker a direct license between a US company and a specific lab, and stay in the middle to run diligence, anonymization and delivery.
 
@@ -86,7 +86,7 @@ A firm offer requires someone to have looked at a sample. An intermediary that q
 
 ### What do they source, and from where?
 
-Provenance matters enormously to AI labs. Ask where the intermediary sources data and whether it can document chain of title. Anthroly, for example, sources only from US companies, which keeps every record under one legal framework.
+Provenance matters enormously to AI labs. Ask where the intermediary sources data and whether it can document chain of title. Datary Labs, for example, sources only from US companies, which keeps every record under one legal framework.
 
 ### What does the license look like?
 
@@ -106,7 +106,7 @@ Ask to see a draft early. Scope, permitted use, exclusivity, term and confidenti
 
 The same logic runs in reverse. Labs work with data suppliers because building a direct sourcing operation across thousands of businesses is expensive and slow. What matters on the buy side is provenance, de-identification quality, contamination risk and how well the supplier can shape raw records into training signal. If that is the side you are on, see what we supply in the [labs section](/#labs) or read about [RL environments](/learn/rl-environments-explained).
 
-If you are a US company weighing your options, [tell us what you have](/contact?side=seller) and we will tell you plainly whether we are the right fit.
+If you are a US company weighing your options, [tell us what you have](/contact) and we will tell you plainly whether we are the right fit.
 `,
   faq: [
     {

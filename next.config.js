@@ -12,7 +12,7 @@ const nextConfig = {
   },
   async redirects() {
     const toHome = [
-      '/markets', '/ai-seo-agency', '/for', '/compare', '/anthroly-vs-anthropic',
+      '/markets', '/ai-seo-agency', '/for', '/compare',
       '/customers', '/industries', '/author', '/tools', '/integrations', '/pricing',
     ];
     const toLearn = ['/blog', '/glossary', '/resources', '/guides', '/aeo', '/reports', '/use-cases'];

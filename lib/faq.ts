@@ -2,7 +2,7 @@ import type { FAQItem } from './schema';
 
 export const HOME_FAQ: FAQItem[] = [
   {
-    question: 'Does Anthroly buy data, or broker it?',
+    question: 'Does Datary Labs buy data, or broker it?',
     answer:
       'Both. Most of the time we are the buyer: we license the data directly from the company that produced it, pay for it ourselves and supply the AI labs. For some lab requests we broker a direct license between a US company and a lab, and we stay in the middle to run diligence, anonymization and delivery. Either way, you deal with one team.',
   },
@@ -47,8 +47,8 @@ export const HOME_FAQ: FAQItem[] = [
       'De-identified raw corpora, RL environments with tools and verifiable rewards, long-horizon agent trajectories, SFT and preference data, and private held-out evaluation sets. Everything ships with provenance and a clean license.',
   },
   {
-    question: 'Can we talk before filling anything in?',
+    question: 'How do we get started?',
     answer:
-      'Yes. Answer a few short questions and book a call straight after. Someone on our team reads your answers before the call, so it is shorter and more useful.',
+      'Email us. Tell us your company, which systems you use and roughly how far back they go. Counts and dates are enough, so please do not send files. We read every message and reply personally.',
   },
 ];

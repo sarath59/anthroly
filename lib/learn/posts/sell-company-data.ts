@@ -76,7 +76,7 @@ Data marketplaces list your dataset and take a cut when someone eventually buys.
 
 ### License to a data lab
 
-A data lab like [Anthroly](/) buys as a principal or brokers a license directly, then handles the anonymization, packaging and delivery to the labs it already supplies. You deal with one counterparty, get a firm offer and get paid on a defined timeline. For most companies this is the shortest path. We explain the differences in more detail in [what an AI data broker does](/learn/ai-data-broker-explained).
+A data lab like [Datary Labs](/) buys as a principal or brokers a license directly, then handles the anonymization, packaging and delivery to the labs it already supplies. You deal with one counterparty, get a firm offer and get paid on a defined timeline. For most companies this is the shortest path. We explain the differences in more detail in [what an AI data broker does](/learn/ai-data-broker-explained).
 
 ## How pricing works
 
@@ -130,7 +130,7 @@ Selling data is not right for every company. If your customer contracts forbid i
 
 Done properly, though, licensing your operating record is one of the rare ways to turn something you have already produced into non-dilutive capital, with no new product, no new customers and no change to how you run the business.
 
-If you are a US company and want to know what your record is worth, [start here](/contact?side=seller).
+If you are a US company and want to know what your record is worth, [start here](/contact).
 `,
   faq: [
     {

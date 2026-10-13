@@ -11,7 +11,7 @@ const MASK: CSSProperties = {
   maskPosition: 'center',
 };
 
-/** The Anthroly mark, rendered in currentColor so it adapts to light and dark surfaces. */
+/** The Datary Labs mark, rendered in currentColor so it adapts to light and dark surfaces. */
 export function Mark({ className = '', label }: { className?: string; label?: string }) {
   return (
     <span

@@ -89,9 +89,9 @@ Because trajectories are reconstructed from real records, de-identification is e
 
 > Agents don't fail at the answer. They fail at step 23. Trajectories are how you teach step 23.
 
-## Working with Anthroly
+## Working with Datary Labs
 
-We reconstruct long-horizon trajectories from licensed, de-identified operating records sourced exclusively from US companies, and deliver them in the formats post-training teams use. If you are a lab looking for multi-day, multi-tool trajectories in domains that are thin on the open web, [request a sample pack](/contact?side=lab). If your company's systems are full of the messy middle, [we would like to hear from you](/contact?side=seller).
+We reconstruct long-horizon trajectories from licensed, de-identified operating records sourced exclusively from US companies, and deliver them in the formats post-training teams use. If you are a lab looking for multi-day, multi-tool trajectories in domains that are thin on the open web, [request a sample pack](/contact). If your company's systems are full of the messy middle, [we would like to hear from you](/contact).
 `,
   faq: [
     {

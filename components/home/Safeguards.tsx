@@ -24,7 +24,7 @@ const SAFEGUARDS = [
   },
   {
     title: 'Small circle of access',
-    body: 'Only a handful of named people at Anthroly ever see a company identity alongside its data. Everyone else works with de-identified records.',
+    body: 'Only a handful of named people at Datary Labs ever see a company identity alongside its data. Everyone else works with de-identified records.',
   },
 ];
 

@@ -88,13 +88,13 @@ The offer should be firm. If the price keeps moving after you have agreed scope,
 - **Understand the term and exclusivity.** A higher number for a broad exclusive license may be worth less than a slightly lower number that lets you license again in two years.
 - **Get the license right.** The structure matters as much as the price. See [licensing versus selling](/learn/data-licensing-vs-selling).
 
-## Where Anthroly fits
+## Where Datary Labs fits
 
 We price every record individually, after reading a de-identified sample. We do not publish rate cards, because there is no honest way to price an operating record without looking at it. What we can tell you is that the companies that surprise themselves are usually the ones that thought their data was too messy to be worth anything.
 
 > The record is worth what it would cost a lab to recreate it. For most businesses, the honest answer is that they couldn't.
 
-If you run a US company and want a real number, [start with a few questions](/contact?side=seller). For the full process, read [how to sell your company's data to AI labs](/learn/sell-company-data-to-ai-labs).
+If you run a US company and want a real number, [get in touch](/contact). For the full process, read [how to sell your company's data to AI labs](/learn/sell-company-data-to-ai-labs).
 `,
   faq: [
     {
