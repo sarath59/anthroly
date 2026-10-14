@@ -50,6 +50,7 @@ export const AI_LABS = [
 export const NAV_LINKS = [
   { href: '/#sell', label: 'Sell data' },
   { href: '/#labs', label: 'For AI labs' },
+  { href: '/expert-data', label: 'Expert data' },
   { href: '/#process', label: 'Process' },
   { href: '/learn', label: 'Learn' },
 ] as const;

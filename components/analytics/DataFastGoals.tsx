@@ -78,9 +78,15 @@ function regionFrom(el: Element | null): string {
   return 'page';
 }
 
-function conversionGoalForHref(href: string): string | null {
+function conversionForHref(href: string): { goal: string; intent: string } | null {
   const lower = href.toLowerCase();
-  if (lower.startsWith('mailto:')) return DATAFAST_GOALS.emailContact;
+  if (lower.startsWith('mailto:')) {
+    return {
+      goal: DATAFAST_GOALS.emailContact,
+      intent: lower.includes('join%20as%20an%20expert') ? 'expert_apply' : 'email',
+    };
+  }
+  if (lower.includes('cal.com/')) return { goal: DATAFAST_GOALS.bookPilot, intent: 'pilot' };
   return null;
 }
 
@@ -249,13 +255,13 @@ export function DataFastGoals() {
         });
       }
 
-      const conversion = href ? conversionGoalForHref(href) : null;
+      const conversion = href ? conversionForHref(href) : null;
       if (conversion) {
-        trackGoal(conversion, {
+        trackGoal(conversion.goal, {
           page,
           from,
           to: to || href.slice(0, 255),
-          intent: 'email',
+          intent: conversion.intent,
         });
       }
     };

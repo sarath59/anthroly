@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { ExpertCTAs } from '@/components/expert/ExpertCTAs';
 import { CONTACT_EMAIL, PARTNERSHIPS_CONTACT, TRANSACTED_LINE, absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -86,6 +88,19 @@ export default function ContactPage() {
                 </span>
               </a>
             ))}
+          </div>
+
+          <div className="mt-px flex flex-col items-start justify-between gap-8 rounded-[6px] bg-ink p-8 text-paper sm:p-12 lg:flex-row lg:items-center">
+            <div>
+              <span className="eyebrow !text-paper/50">Expert human data</span>
+              <p className="mt-4 max-w-xl font-serif text-[2rem] leading-tight">
+                Need vetted engineers, scientists, doctors or Indic-language specialists?{' '}
+                <Link href="/expert-data" className="text-signal underline decoration-signal/40 underline-offset-[6px] hover:decoration-signal">
+                  See how it works
+                </Link>
+              </p>
+            </div>
+            <ExpertCTAs dark className="shrink-0" />
           </div>
 
           <div className="mt-24 grid gap-8 lg:grid-cols-12">

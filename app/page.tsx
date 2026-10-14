@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { LabsWall } from "@/components/home/LabsWall";
+import { ExpertData } from "@/components/home/ExpertData";
 import { TwoSides } from "@/components/home/TwoSides";
 import { WhatWeBuy } from "@/components/home/WhatWeBuy";
 import { PullQuote } from "@/components/home/PullQuote";
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero />
       <LabsWall />
+      <ExpertData />
       <TwoSides />
       <WhatWeBuy />
       <PullQuote />

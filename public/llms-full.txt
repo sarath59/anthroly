@@ -12,9 +12,21 @@
 - Safeguards: identifiers removed before anything moves; consistent placeholders preserve structure; licenses prohibit re-identification; sellers are never named to buyers.
 - Pricing: every record priced individually after a de-identified sample review. No fee charged to sellers.
 
+## Expert human data
+
+- Expert human data for frontier AI: verified engineers, scientists, doctors and Indic-language specialists, ready in days.
+- Services: RL environments and tasks (coding repos with tests, enterprise workflows, each with an automatic grader); expert evals and benchmarks (hard prompts, grading rubrics, verified model failures); SFT data (expert-written ideal answers, multi-turn conversations); RLHF (preference ranking and grading of model outputs); Indic expert data (medicine, law and STEM in Indian languages).
+- Domains: software and coding, math and science, medicine, Indian languages.
+- Experts: 500 verified, 100 PhDs. Pilot team in 10 days; up to 100 experts within a week of scale-up. Vetting: ID and credential checks plus paid skills tests.
+- Quality: gold-answer checks, two layers of review, agreement scores, strict no-AI-tools rule, weekly quality reports.
+- Security: NDA and IP assignment for every expert, managed accounts with two-factor login, least-access permissions, no public file sharing.
+- Engagement: free or low-cost 1–2 week pilot, then a scoped team, then scale-up.
+- Request a pilot: https://cal.com/sarath-kavuru-0uizws/15min · Join as an expert: sharatth@anthroly.com
+
 ## Pages
 
 - [Home](https://www.anthroly.com/): overview for sellers and AI labs
+- [Expert human data](https://www.anthroly.com/expert-data): RL environments, evals, SFT, RLHF and Indic expert data
 - [Contact](https://www.anthroly.com/contact): email contact for sellers and AI labs
 - [Field notes](https://www.anthroly.com/learn): guides
 

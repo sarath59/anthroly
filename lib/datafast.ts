@@ -6,6 +6,8 @@
 
 export const DATAFAST_GOALS = {
   emailContact: 'email_contact',
+  /** Outbound click to the cal.com pilot booking page */
+  bookPilot: 'book_pilot',
   /** Interactive click (button, link, control) with from/to params */
   click: 'click',
   /** Section entered the viewport */

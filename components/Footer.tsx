@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { CONTACT_EMAIL, TRANSACTED_LINE } from '@/lib/site';
 import { ARTICLES } from '@/lib/learn/articles';
+import { EXPERT_APPLY_MAILTO, EXPERT_SERVICES, PILOT_BOOKING_URL } from '@/lib/expert-data';
 import { Mark } from './Mark';
 
 const COMPANY_LINKS = [
@@ -35,7 +36,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7">
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-4 lg:col-span-7">
             <div>
               <p className="eyebrow !text-paper/50">Company</p>
               <ul className="mt-6 space-y-3">
@@ -48,9 +49,45 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
+            <div>
+              <p className="eyebrow !text-paper/50">Expert data</p>
+              <ul className="mt-6 space-y-3">
+                <li>
+                  <Link href="/expert-data" className="text-[15px] text-paper/75 transition-colors hover:text-paper">
+                    Overview
+                  </Link>
+                </li>
+                {EXPERT_SERVICES.map((s) => (
+                  <li key={s.slug}>
+                    <Link
+                      href={`/expert-data#${s.slug}`}
+                      className="text-[15px] text-paper/75 transition-colors hover:text-paper"
+                    >
+                      {s.name}
+                    </Link>
+                  </li>
+                ))}
+                <li className="pt-2">
+                  <a
+                    href={PILOT_BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[15px] text-signal transition-colors hover:text-paper"
+                  >
+                    Request a pilot
+                    <ArrowUpRight size={14} />
+                  </a>
+                </li>
+                <li>
+                  <a href={EXPERT_APPLY_MAILTO} className="text-[15px] text-paper/75 transition-colors hover:text-paper">
+                    Join as an expert
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div className="col-span-2">
               <p className="eyebrow !text-paper/50">Field notes</p>
-              <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-1 xl:grid-cols-2">
                 {ARTICLES.map((article) => (
                   <li key={article.slug}>
                     <Link

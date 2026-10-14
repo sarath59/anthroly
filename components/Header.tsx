@@ -27,19 +27,22 @@ export const Header = () => {
       <nav className="page-x flex h-[68px] items-center justify-between">
         <Wordmark />
 
-        <div className="hidden items-center gap-9 md:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[14px] text-ink-soft transition-colors hover:text-ink"
+              className="flex items-center gap-1.5 text-[14px] text-ink-soft transition-colors hover:text-ink"
             >
               {link.label}
+              {link.href === '/expert-data' && (
+                <span className="h-1.5 w-1.5 -translate-y-1.5 rounded-full bg-signal" aria-hidden />
+              )}
             </Link>
           ))}
         </div>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-signal" />
             US sourced
@@ -51,7 +54,7 @@ export const Header = () => {
         </div>
 
         <button
-          className="-mr-2 p-2 md:hidden"
+          className="-mr-2 p-2 lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -61,7 +64,7 @@ export const Header = () => {
       </nav>
 
       {open && (
-        <div className="page-x border-t border-rule pb-8 pt-4 md:hidden">
+        <div className="page-x border-t border-rule pb-8 pt-4 lg:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
