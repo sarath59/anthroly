@@ -47,7 +47,7 @@ export function generateOrganizationSchema(): object {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
-    name: 'Datary Labs',
+    name: 'Anthroly',
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
@@ -70,8 +70,8 @@ export function generateOrganizationSchema(): object {
     ],
     areaServed: { '@type': 'Country', name: 'United States' },
     sameAs: [
-      'https://twitter.com/datarylabs',
-      'https://linkedin.com/company/datarylabs',
+      'https://twitter.com/anthroly',
+      'https://linkedin.com/company/anthroly',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -87,7 +87,7 @@ export function generateWebSiteSchema(): object {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
-    name: 'Datary Labs',
+    name: 'Anthroly',
     url: SITE_URL,
     description: SITE_DESCRIPTION,
     publisher: { '@id': `${SITE_URL}/#organization` },

@@ -103,7 +103,7 @@ An agent trained in that environment learns something close to what a good dispa
 
 > An RL environment is only as good as its picture of the real job. Real records are how you get that picture right.
 
-## How Datary Labs helps
+## How Anthroly helps
 
 We license operating records from US companies and build them into environments, trajectories and evaluations for AI labs. For labs, that means environments grounded in real workflows with verifiable rewards and no contamination. For companies, it means your record becomes the practice field for the next generation of agents, de-identified and under a bounded license.
 

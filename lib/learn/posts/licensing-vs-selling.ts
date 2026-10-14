@@ -99,7 +99,7 @@ Sometimes a data lab buys the license itself and supplies AI labs downstream. So
 
 If you are talking to anyone about monetizing your company's data, you almost certainly want a license, not a sale. Read the scope, permitted use, exclusivity and term clauses closely, insist that identifiers are removed before anything moves, and make sure you understand what happens when the term ends.
 
-At [Datary Labs](/), every deal is a bounded license. You keep the business, the data and the right to keep using it. If you are a US company and want to see what that looks like for your record, [start here](/contact).
+At [Anthroly](/), every deal is a bounded license. You keep the business, the data and the right to keep using it. If you are a US company and want to see what that looks like for your record, [start here](/contact).
 `,
   faq: [
     {

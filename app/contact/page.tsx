@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { CONTACT_EMAIL, TRANSACTED_LINE, absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Contact Datary Labs — sell data or source it',
+  title: 'Contact Anthroly — sell data or source it',
   description:
     'US companies: find out what your operating record is worth. AI labs: request RL environments, trajectories, evals and licensed corpora. Email us directly.',
   alternates: { canonical: absoluteUrl('/contact') },

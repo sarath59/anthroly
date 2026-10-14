@@ -29,13 +29,13 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-const TITLE = "Datary Labs — The data lab for American operating data";
+const TITLE = "Anthroly — The data lab for American operating data";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    template: "%s · Datary Labs",
+    template: "%s · Anthroly",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     title: TITLE,
     description: SITE_DESCRIPTION,
     url: absoluteUrl("/"),
-    siteName: "Datary Labs",
+    siteName: "Anthroly",
     type: "website",
-    images: [{ url: absoluteUrl("/logo.png"), width: 512, height: 512, alt: "Datary Labs" }],
+    images: [{ url: absoluteUrl("/logo.png"), width: 512, height: 512, alt: "Anthroly" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -101,7 +101,7 @@ export default function RootLayout({
         <Script
           src="https://datafa.st/js/script.js"
           data-website-id={DATAFAST_WEBSITE_ID}
-          data-domain="datarylabs.com"
+          data-domain="anthroly.com"
           strategy="afterInteractive"
         />
         <DataFastGoals />

@@ -20,7 +20,7 @@ export function Hero() {
         <div className="mt-14 grid gap-16 pb-24 lg:mt-20 lg:grid-cols-12 lg:pb-32">
           <div className="animate-rise [animation-delay:120ms] lg:col-span-5">
             <p className="text-[20px] leading-[1.6] text-ink-soft text-pretty">
-              Datary Labs is a data lab. We license operational data from US companies (the threads,
+              Anthroly is a data lab. We license operational data from US companies (the threads,
               tickets, calls and decisions behind a working business) and supply it to frontier AI
               labs as training corpora, RL environments and evaluations.
             </p>

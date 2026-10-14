@@ -1,6 +1,6 @@
-# Datary Labs
+# Anthroly
 
-Marketing site for Datary Labs, a data lab that buys, licenses and brokers operational data from US companies and supplies it to frontier AI labs.
+Marketing site for Anthroly, a data lab that buys, licenses and brokers operational data from US companies and supplies it to frontier AI labs.
 
 ## Stack
 
@@ -21,4 +21,4 @@ npm install
 npm run dev
 ```
 
-Contact: sharatth@datarylabs.com
+Contact: sharatth@anthroly.com

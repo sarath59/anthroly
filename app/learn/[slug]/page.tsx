@@ -86,7 +86,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               {article.dek}
             </p>
             <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint">
-              Datary Labs · {formatDate(article.updated)} · {article.readMinutes} min read
+              Anthroly · {formatDate(article.updated)} · {article.readMinutes} min read
             </p>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             ) : null}
 
             <div className="mt-20 rounded-[6px] bg-ink p-10 text-paper sm:p-12">
-              <p className="eyebrow !text-paper/50">Datary Labs</p>
+              <p className="eyebrow !text-paper/50">Anthroly</p>
               <p className="mt-5 font-serif text-[2.2rem] leading-[1.08]">
                 We buy operating data from US companies and supply every major AI lab.
               </p>

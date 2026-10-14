@@ -78,7 +78,7 @@ export function ForLabs() {
                 ))}
               </dl>
               <div className="flex items-center gap-2 border-t border-paper/15 px-5 py-3 text-paper/50">
-                <span className="text-signal">$</span> datary deliver --format=gym
+                <span className="text-signal">$</span> anthroly deliver --format=gym
                 <span className="inline-block h-3.5 w-1.5 animate-blink bg-signal" />
               </div>
             </div>

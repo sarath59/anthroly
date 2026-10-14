@@ -1,7 +1,7 @@
-# Datary Labs
+# Anthroly
 
-> Datary Labs is a data lab. It buys, licenses and brokers operational data from US companies (team chat, email, support tickets, CRM history, call recordings, code review, documents, ERP exports and field records) and supplies it to frontier AI labs as de-identified training corpora, RL environments, agent trajectories, preference/SFT data and held-out evaluation sets. Datary Labs sources only from companies headquartered in the United States and sells to every major AI lab. It has bought, sold and brokered more than $900K in data.
-> Contact: sharatth@datarylabs.com · https://www.datarylabs.com/contact
+> Anthroly is a data lab. It buys, licenses and brokers operational data from US companies (team chat, email, support tickets, CRM history, call recordings, code review, documents, ERP exports and field records) and supplies it to frontier AI labs as de-identified training corpora, RL environments, agent trajectories, preference/SFT data and held-out evaluation sets. Anthroly sources only from companies headquartered in the United States and sells to every major AI lab. It has bought, sold and brokered more than $900K in data.
+> Contact: sharatth@anthroly.com · https://www.anthroly.com/contact
 
 ## Key facts
 
@@ -13,19 +13,19 @@
 
 ## Pages
 
-- [Home](https://www.datarylabs.com/): overview for sellers and AI labs
-- [Contact](https://www.datarylabs.com/contact): email contact for sellers and AI labs
-- [Field notes](https://www.datarylabs.com/learn): guides
+- [Home](https://www.anthroly.com/): overview for sellers and AI labs
+- [Contact](https://www.anthroly.com/contact): email contact for sellers and AI labs
+- [Field notes](https://www.anthroly.com/learn): guides
 
 ## Guides
 
-- [How to sell your company's data to AI labs](https://www.datarylabs.com/learn/sell-company-data-to-ai-labs)
-- [What is operational data, and why do AI labs want yours?](https://www.datarylabs.com/learn/what-is-operational-data)
-- [How much is your company's data worth to an AI lab?](https://www.datarylabs.com/learn/how-much-is-company-data-worth)
-- [Licensing data vs. selling it](https://www.datarylabs.com/learn/data-licensing-vs-selling)
-- [What an AI data broker actually does](https://www.datarylabs.com/learn/ai-data-broker-explained)
-- [RL environments, explained](https://www.datarylabs.com/learn/rl-environments-explained)
-- [Agent trajectory data](https://www.datarylabs.com/learn/agent-trajectory-data)
-- [RLHF and preference data, in plain English](https://www.datarylabs.com/learn/rlhf-preference-data)
-- [How data is anonymized before it is used to train AI](https://www.datarylabs.com/learn/anonymizing-data-for-ai-training)
-- [Why private evaluation data is worth more than training data](https://www.datarylabs.com/learn/evaluation-datasets-contamination)
+- [How to sell your company's data to AI labs](https://www.anthroly.com/learn/sell-company-data-to-ai-labs)
+- [What is operational data, and why do AI labs want yours?](https://www.anthroly.com/learn/what-is-operational-data)
+- [How much is your company's data worth to an AI lab?](https://www.anthroly.com/learn/how-much-is-company-data-worth)
+- [Licensing data vs. selling it](https://www.anthroly.com/learn/data-licensing-vs-selling)
+- [What an AI data broker actually does](https://www.anthroly.com/learn/ai-data-broker-explained)
+- [RL environments, explained](https://www.anthroly.com/learn/rl-environments-explained)
+- [Agent trajectory data](https://www.anthroly.com/learn/agent-trajectory-data)
+- [RLHF and preference data, in plain English](https://www.anthroly.com/learn/rlhf-preference-data)
+- [How data is anonymized before it is used to train AI](https://www.anthroly.com/learn/anonymizing-data-for-ai-training)
+- [Why private evaluation data is worth more than training data](https://www.anthroly.com/learn/evaluation-datasets-contamination)

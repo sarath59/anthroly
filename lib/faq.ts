@@ -2,7 +2,7 @@ import type { FAQItem } from './schema';
 
 export const HOME_FAQ: FAQItem[] = [
   {
-    question: 'Does Datary Labs buy data, or broker it?',
+    question: 'Does Anthroly buy data, or broker it?',
     answer:
       'Both. Most of the time we are the buyer: we license the data directly from the company that produced it, pay for it ourselves and supply the AI labs. For some lab requests we broker a direct license between a US company and a lab, and we stay in the middle to run diligence, anonymization and delivery. Either way, you deal with one team.',
   },

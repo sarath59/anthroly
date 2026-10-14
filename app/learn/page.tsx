@@ -18,7 +18,7 @@ export default function LearnIndex() {
   const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Datary Labs field notes',
+    name: 'Anthroly field notes',
     itemListElement: ARTICLES.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,

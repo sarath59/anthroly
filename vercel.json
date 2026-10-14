@@ -8,8 +8,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "datarylabs.com" }],
-      "destination": "https://www.datarylabs.com/:path*",
+      "has": [{ "type": "host", "value": "anthroly.com" }],
+      "destination": "https://www.anthroly.com/:path*",
       "permanent": true
     }
   ]

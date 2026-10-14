@@ -99,7 +99,7 @@ Anyone who tells you their process carries zero risk is overselling. What you wa
 
 > The identities were never the valuable part. The work was. Good de-identification is how you hand over one without the other.
 
-## How Datary Labs handles it
+## How Anthroly handles it
 
 Identifiers are removed before anything moves. We use consistent placeholders so the work stays readable, and people review samples before pricing. Only a small number of named people ever see a company identity alongside its data, and every license we sign prohibits re-identification. For more on the deal structure around this, read [licensing versus selling data](/learn/data-licensing-vs-selling), or if you are ready, [start here](/contact).
 `,

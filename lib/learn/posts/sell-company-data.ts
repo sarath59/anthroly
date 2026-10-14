@@ -76,7 +76,7 @@ Data marketplaces list your dataset and take a cut when someone eventually buys.
 
 ### License to a data lab
 
-A data lab like [Datary Labs](/) buys as a principal or brokers a license directly, then handles the anonymization, packaging and delivery to the labs it already supplies. You deal with one counterparty, get a firm offer and get paid on a defined timeline. For most companies this is the shortest path. We explain the differences in more detail in [what an AI data broker does](/learn/ai-data-broker-explained).
+A data lab like [Anthroly](/) buys as a principal or brokers a license directly, then handles the anonymization, packaging and delivery to the labs it already supplies. You deal with one counterparty, get a firm offer and get paid on a defined timeline. For most companies this is the shortest path. We explain the differences in more detail in [what an AI data broker does](/learn/ai-data-broker-explained).
 
 ## How pricing works
 

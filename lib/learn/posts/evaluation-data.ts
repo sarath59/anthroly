@@ -81,7 +81,7 @@ A de-identified set of accounts payable disputes, along with how each was resolv
 
 > A benchmark the model has already seen tells you about its memory, not its ability.
 
-## How Datary Labs helps
+## How Anthroly helps
 
 We build held-out evaluation sets from licensed, de-identified US business records that have never been public, scored against what professionals actually did. Eval material is kept separate from training supply, and every item has documented provenance. If your team needs uncontaminated, real-work evaluations, [request a sample pack](/contact). For the training side of the same pipeline, read [RL environments explained](/learn/rl-environments-explained).
 `,

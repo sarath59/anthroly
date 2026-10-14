@@ -88,7 +88,7 @@ The offer should be firm. If the price keeps moving after you have agreed scope,
 - **Understand the term and exclusivity.** A higher number for a broad exclusive license may be worth less than a slightly lower number that lets you license again in two years.
 - **Get the license right.** The structure matters as much as the price. See [licensing versus selling](/learn/data-licensing-vs-selling).
 
-## Where Datary Labs fits
+## Where Anthroly fits
 
 We price every record individually, after reading a de-identified sample. We do not publish rate cards, because there is no honest way to price an operating record without looking at it. What we can tell you is that the companies that surprise themselves are usually the ones that thought their data was too messy to be worth anything.
 

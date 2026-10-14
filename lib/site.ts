@@ -1,8 +1,8 @@
 /** Canonical site origin — must match sitemap, robots, and redirects */
-export const SITE_URL = 'https://www.datarylabs.com';
+export const SITE_URL = 'https://www.anthroly.com';
 
 /** Public DataFast website ID (browser script + server-side bot tracking) */
-export const DATAFAST_WEBSITE_ID = 'dfid_9eil87GXcuwX1vGQZ1ckJ';
+export const DATAFAST_WEBSITE_ID = 'dfid_64UKkRm4SuynXLuxGKg4u';
 
 /** Absolute URL helper for canonicals, Open Graph, and JSON-LD */
 export function absoluteUrl(path: string = ''): string {
@@ -11,11 +11,11 @@ export function absoluteUrl(path: string = ''): string {
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
-export const CONTACT_EMAIL = 'sharatth@datarylabs.com';
-export const SITE_NAME = 'Datary Labs';
+export const CONTACT_EMAIL = 'sharatth@anthroly.com';
+export const SITE_NAME = 'Anthroly';
 export const TAGLINE = 'The data lab for American operating data';
 export const SITE_DESCRIPTION =
-  'Datary Labs buys, licenses, and brokers operational data from US companies and supplies it to frontier AI labs as training corpora, RL environments, agent trajectories, and evaluation sets. $900K+ in data transacted.';
+  'Anthroly buys, licenses, and brokers operational data from US companies and supplies it to frontier AI labs as training corpora, RL environments, agent trajectories, and evaluation sets. $900K+ in data transacted.';
 
 export const TRANSACTED_LABEL = '$900K+';
 export const TRANSACTED_LINE = '$900K+ in data bought, sold, and brokered';

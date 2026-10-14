@@ -4,12 +4,12 @@ import { CONTACT_EMAIL, absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Privacy policy',
-  description: 'How Datary Labs collects, uses and protects information from website visitors, data sellers and AI lab customers.',
+  description: 'How Anthroly collects, uses and protects information from website visitors, data sellers and AI lab customers.',
   alternates: { canonical: absoluteUrl('/privacy') },
 };
 
 const BODY = `
-This policy explains what information Datary Labs collects through this website and in the course of our business, how we use it, and the choices you have. It covers visitors to datarylabs.com, companies that license data to us, and AI labs that source data from us.
+This policy explains what information Anthroly collects through this website and in the course of our business, how we use it, and the choices you have. It covers visitors to anthroly.com, companies that license data to us, and AI labs that source data from us.
 
 ## Information you give us
 
@@ -21,7 +21,7 @@ We use privacy-friendly analytics (DataFast) to understand how the site is used:
 
 ## Data licensed to us by companies
 
-Operating records licensed to Datary Labs are governed by the license agreement signed with the company that produced them, not by this website policy. As a matter of practice, personal identifiers are removed or replaced before records leave the licensing company's systems or reach any downstream buyer, access to records alongside a company's identity is limited to a small number of named people, and every license prohibits re-identification.
+Operating records licensed to Anthroly are governed by the license agreement signed with the company that produced them, not by this website policy. As a matter of practice, personal identifiers are removed or replaced before records leave the licensing company's systems or reach any downstream buyer, access to records alongside a company's identity is limited to a small number of named people, and every license prohibits re-identification.
 
 ## How we use information
 

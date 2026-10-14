@@ -21,7 +21,7 @@ export const Footer = () => {
       <div className="page-x pb-10 pt-24">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Mark className="h-11 text-paper" label="Datary Labs" />
+            <Mark className="h-11 text-paper" label="Anthroly" />
             <p className="mt-6 font-serif text-[2.6rem] leading-[1.02] tracking-[-0.01em] sm:text-5xl">
               The record of how American work gets done,{' '}
               <em className="text-signal">licensed with care.</em>
@@ -71,12 +71,11 @@ export const Footer = () => {
           className="mt-24 flex select-none items-center gap-[3vw] text-paper/[0.07]"
         >
           <Mark className="h-[17vw]" />
-          <span className="font-serif text-[19vw] leading-[0.8] tracking-[-0.04em]">Datary</span>
-          <span className="self-end pb-[2vw] font-mono text-[2.4vw] uppercase tracking-[0.2em]">Labs</span>
+          <span className="font-serif text-[19vw] leading-[0.8] tracking-[-0.04em]">Anthroly</span>
         </div>
 
         <div className="mt-6 flex flex-col gap-4 border-t border-paper/15 pt-8 font-mono text-[11px] uppercase tracking-[0.14em] text-paper/45 md:flex-row md:items-center md:justify-between">
-          <span>© {year} Datary Labs · {TRANSACTED_LINE}</span>
+          <span>© {year} Anthroly · {TRANSACTED_LINE}</span>
           <span>Data sourced exclusively from US companies</span>
           <span className="flex gap-6">
             <Link href="/privacy" className="hover:text-paper">Privacy</Link>
