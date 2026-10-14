@@ -5,6 +5,7 @@ import {
 } from 'next/server';
 import { trackAICrawlerRequest } from '@datafast/ai-crawl';
 import { DATAFAST_WEBSITE_ID, SITE_URL } from '@/lib/site';
+import { GONE_HTML, isRetiredPath } from '@/lib/retired-paths';
 
 /** Marketing/tracking params that create duplicate URLs for Google */
 const TRACKING_PARAMS = new Set([
@@ -42,6 +43,17 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
     publicOrigin: SITE_URL,
     authToken: process.env.DATAFAST_BOT_TOKEN,
   });
+
+  if (isRetiredPath(request.nextUrl.pathname)) {
+    return new NextResponse(GONE_HTML, {
+      status: 410,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'x-robots-tag': 'noindex, noarchive',
+        'cache-control': 'public, max-age=3600',
+      },
+    });
+  }
 
   const { searchParams } = request.nextUrl;
   if (![...searchParams.keys()].some(isTrackingParam)) {

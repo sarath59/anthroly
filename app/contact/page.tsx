@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowUpRight } from 'lucide-react';
-import { CONTACT_EMAIL, TRANSACTED_LINE, absoluteUrl } from '@/lib/site';
+import { CONTACT_EMAIL, PARTNERSHIPS_CONTACT, TRANSACTED_LINE, absoluteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Contact Anthroly — sell data or source it',
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: absoluteUrl('/contact') },
 };
 
-function mailto(subject: string, body: string) {
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+function mailto(to: string, subject: string, body: string) {
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 const OPTIONS = [
@@ -19,6 +19,7 @@ const OPTIONS = [
     title: 'Sell your data',
     body: 'Tell us your company, which systems you use and roughly how far back they go. Counts and dates are enough. Please don’t send files.',
     href: mailto(
+      PARTNERSHIPS_CONTACT.email,
       'Selling data — [Company name]',
       'Company:\nWebsite:\nHeadquartered in the US (yes/no):\nSystems we use (Slack, email, tickets, CRM, calls, code...):\nHow far back the record goes:\n\nAnything else:\n'
     ),
@@ -28,9 +29,25 @@ const OPTIONS = [
     title: 'Source data',
     body: 'Tell us the capability gap, the domain and the format you need: RL environments, trajectories, evals, preference data or corpora.',
     href: mailto(
+      PARTNERSHIPS_CONTACT.email,
       'Data request — [Lab / team]',
       'Lab / team:\nWhat we need (RL environments, trajectories, evals, preference/SFT, corpora):\nDomain or capability gap:\nTimeline:\n\nAnything else:\n'
     ),
+  },
+];
+
+const DIRECTORY = [
+  {
+    who: PARTNERSHIPS_CONTACT.name,
+    role: PARTNERSHIPS_CONTACT.title,
+    covers: `${PARTNERSHIPS_CONTACT.scope}. Selling your data, sourcing data for a lab, press and partnerships.`,
+    email: PARTNERSHIPS_CONTACT.email,
+  },
+  {
+    who: 'General',
+    role: 'Everything else',
+    covers: 'Questions about Anthroly, legal and privacy requests, anything that does not fit above.',
+    email: CONTACT_EMAIL,
   },
 ];
 
@@ -52,15 +69,7 @@ export default function ContactPage() {
             personally.
           </p>
 
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="group mt-14 inline-flex items-center gap-4 border-b border-ink pb-2 font-serif text-[clamp(1.9rem,4.5vw,3.6rem)] leading-none transition-colors hover:border-signal hover:text-signal"
-          >
-            {CONTACT_EMAIL}
-            <ArrowUpRight className="h-[0.7em] w-[0.7em] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
-          </a>
-
-          <div className="mt-20 grid gap-px overflow-hidden rounded-[6px] border border-rule bg-rule md:grid-cols-2">
+          <div className="mt-16 grid gap-px overflow-hidden rounded-[6px] border border-rule bg-rule md:grid-cols-2">
             {OPTIONS.map((o) => (
               <a key={o.title} href={o.href} className="group flex flex-col bg-paper p-8 transition-colors duration-500 hover:bg-paper-card sm:p-12">
                 <div className="flex items-center justify-between">
@@ -69,11 +78,38 @@ export default function ContactPage() {
                 </div>
                 <h2 className="mt-10 font-serif text-[2.4rem] leading-none">{o.title}</h2>
                 <p className="mt-5 max-w-md text-[16px] leading-[1.65] text-ink-muted">{o.body}</p>
-                <span className="mt-10 text-[14px] font-medium underline decoration-ink/25 underline-offset-[6px] transition-colors group-hover:decoration-signal">
-                  Write to us
+                <span className="mt-10 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-rule pt-5 text-[14px]">
+                  <span className="font-medium underline decoration-ink/25 underline-offset-[6px] transition-colors group-hover:decoration-signal">
+                    Write to {PARTNERSHIPS_CONTACT.name}
+                  </span>
+                  <span className="font-mono text-[12px] text-ink-faint">{PARTNERSHIPS_CONTACT.email}</span>
                 </span>
               </a>
             ))}
+          </div>
+
+          <div className="mt-24 grid gap-8 lg:grid-cols-12">
+            <p className="eyebrow lg:col-span-3 lg:pt-2">Who to write to</p>
+            <ul className="border-t border-ink lg:col-span-9">
+              {DIRECTORY.map((d) => (
+                <li key={d.email} className="border-b border-rule">
+                  <a
+                    href={`mailto:${d.email}`}
+                    className="group grid gap-3 py-8 md:grid-cols-[1fr_1.4fr_auto] md:items-baseline md:gap-10"
+                  >
+                    <div>
+                      <p className="font-serif text-[2rem] leading-none">{d.who}</p>
+                      <p className="mt-2 text-[14px] font-medium text-ink-soft">{d.role}</p>
+                    </div>
+                    <p className="text-[15px] leading-[1.6] text-ink-muted">{d.covers}</p>
+                    <span className="flex items-center gap-2 font-mono text-[13px] text-ink transition-colors group-hover:text-signal">
+                      {d.email}
+                      <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <p className="mt-10 text-[14px] text-ink-muted">

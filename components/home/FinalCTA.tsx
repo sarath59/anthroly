@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { CONTACT_EMAIL } from '@/lib/site';
+import { PARTNERSHIPS_CONTACT } from '@/lib/site';
 import { Reveal } from './Reveal';
 import { Mark } from '../Mark';
 
@@ -31,8 +31,8 @@ export function FinalCTA() {
           </div>
           <p className="mt-10 font-mono text-[12px] text-ink-muted">
             or write to{' '}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-ink underline decoration-signal underline-offset-4">
-              {CONTACT_EMAIL}
+            <a href={`mailto:${PARTNERSHIPS_CONTACT.email}`} className="text-ink underline decoration-signal underline-offset-4">
+              {PARTNERSHIPS_CONTACT.email}
             </a>
           </p>
         </Reveal>

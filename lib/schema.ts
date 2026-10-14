@@ -2,7 +2,7 @@
  * Schema.org structured data helpers.
  */
 
-import { SITE_URL, SITE_DESCRIPTION, CONTACT_EMAIL, absoluteUrl } from './site';
+import { SITE_URL, SITE_DESCRIPTION, CONTACT_EMAIL, PARTNERSHIPS_CONTACT, absoluteUrl } from './site';
 
 export interface FAQItem {
   question: string;
@@ -76,7 +76,8 @@ export function generateOrganizationSchema(): object {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: CONTACT_EMAIL,
+      name: `${PARTNERSHIPS_CONTACT.name}, ${PARTNERSHIPS_CONTACT.title}`,
+      email: PARTNERSHIPS_CONTACT.email,
       url: absoluteUrl('/contact'),
     },
   };

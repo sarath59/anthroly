@@ -1,7 +1,8 @@
 # Anthroly
 
 > Anthroly is a data lab. It buys, licenses and brokers operational data from US companies (team chat, email, support tickets, CRM history, call recordings, code review, documents, ERP exports and field records) and supplies it to frontier AI labs as de-identified training corpora, RL environments, agent trajectories, preference/SFT data and held-out evaluation sets. Anthroly sources only from companies headquartered in the United States and sells to every major AI lab. It has bought, sold and brokered more than $900K in data.
-> Contact: sharatth@anthroly.com · https://www.anthroly.com/contact
+> Selling data or sourcing it: Jaya, Head of Data Partnerships (data acquisition, sales & marketing) · jaya@anthroly.com
+> General: sharatth@anthroly.com · https://www.anthroly.com/contact
 
 ## Key facts
 

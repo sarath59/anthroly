@@ -4,8 +4,8 @@ import { absoluteUrl } from '@/lib/site';
 /**
  * robots.txt — one sitemap, open crawl for search + AI bots.
  *
- * Retired agency URLs 301 to current pages — do not Disallow them, or crawlers
- * will miss the redirects.
+ * Retired agency URLs answer 410 Gone (see lib/retired-paths.ts) — do not
+ * Disallow them, or crawlers never see the 410 and keep the old snippets.
  *
  * See /llms.txt and /llms-full.txt for AI content guidance.
  */

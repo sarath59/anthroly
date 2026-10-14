@@ -12,6 +12,14 @@ export function absoluteUrl(path: string = ''): string {
 }
 
 export const CONTACT_EMAIL = 'sharatth@anthroly.com';
+
+/** Owns both sides of a deal: sourcing data from companies and selling to labs, plus marketing */
+export const PARTNERSHIPS_CONTACT = {
+  name: 'Jaya',
+  title: 'Head of Data Partnerships',
+  scope: 'Data acquisition, sales & marketing',
+  email: 'jaya@anthroly.com',
+} as const;
 export const SITE_NAME = 'Anthroly';
 export const TAGLINE = 'The data lab for American operating data';
 export const SITE_DESCRIPTION =
