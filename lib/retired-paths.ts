@@ -12,7 +12,6 @@ const RETIRED_PREFIXES = [
   '/guides',
   '/reports',
   '/diagnostic',
-  '/blog',
   '/glossary',
   '/resources',
   '/markets',

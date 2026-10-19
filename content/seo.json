@@ -1,0 +1,37 @@
+{
+  "defaultTitle": "Anthroly",
+  "titleTemplate": "%s · Anthroly",
+  "description": "Anthroly buys, licenses, and brokers operational data from US companies and supplies it to frontier AI labs as training corpora, RL environments, agent trajectories, and evaluation sets.",
+  "keywords": [
+    "AI training data",
+    "data licensing",
+    "data brokerage",
+    "RL environments",
+    "reinforcement learning",
+    "agent trajectories",
+    "evaluation datasets"
+  ],
+  "twitterHandle": "@anthroly",
+  "pages": {
+    "/": {
+      "title": "Anthroly — The data lab for American operating data",
+      "description": "Anthroly buys, licenses, and brokers operational data from US companies and supplies it to frontier AI labs as training corpora, RL environments, agent trajectories, and evaluation sets."
+    },
+    "/blog": {
+      "title": "Research Blog",
+      "description": "Research notes on data labeling, RL environments, reward design, and evaluation methodology from the Anthroly team."
+    },
+    "/learn": {
+      "title": "Field notes on AI training data, data licensing and RL",
+      "description": "Plain-English guides to selling company data to AI labs, data licensing, RL environments, agent trajectories, RLHF, anonymization and evaluation data."
+    },
+    "/expert-data": {
+      "title": "Expert Data Collection",
+      "description": "PhD-level data annotation and expert trajectory collection for frontier AI research."
+    },
+    "/contact": {
+      "title": "Contact Anthroly",
+      "description": "Get in touch to sell your company's data or source training data for your AI lab."
+    }
+  }
+}

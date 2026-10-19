@@ -28,6 +28,9 @@ export const SITE_DESCRIPTION =
 export const TRANSACTED_LABEL = '$900K+';
 export const TRANSACTED_LINE = '$900K+ in data bought, sold, and brokered';
 
+export const BLOG_DIR = 'content/blog';
+export const SEO_CONFIG_PATH = 'content/seo.json';
+
 const LOGO_DEV_KEY = 'pk_FajouHbYTb2g0kE67Vlytw';
 
 export function logoUrl(domain: string, size = 128): string {
