@@ -7,6 +7,7 @@ import { absoluteUrl, SITE_URL } from '@/lib/site';
 import { combineSchemas, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 
 export const dynamicParams = false;
+export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));

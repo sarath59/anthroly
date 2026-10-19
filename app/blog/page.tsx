@@ -5,6 +5,8 @@ import { getPostSummaries } from '@/lib/blog';
 import { absoluteUrl } from '@/lib/site';
 import { generateBreadcrumbSchema, combineSchemas } from '@/lib/schema';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Research Blog',
   description:
