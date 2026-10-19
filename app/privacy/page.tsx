@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: 'Privacy policy',
   description: 'How Anthroly collects, uses and protects information from website visitors, data sellers and AI lab customers.',
   alternates: { canonical: absoluteUrl('/privacy') },
+  openGraph: {
+    title: 'Privacy policy · Anthroly',
+    description: 'How Anthroly collects, uses and protects information from website visitors, data sellers and AI lab customers.',
+    url: absoluteUrl('/privacy'),
+    siteName: 'Anthroly',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy policy · Anthroly',
+    description: 'How Anthroly collects, uses and protects information from website visitors, data sellers and AI lab customers.',
+  },
 };
 
 const BODY = `

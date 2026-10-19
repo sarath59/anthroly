@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: 'Terms of use',
   description: 'Terms governing use of the Anthroly website.',
   alternates: { canonical: absoluteUrl('/terms') },
+  openGraph: {
+    title: 'Terms of use · Anthroly',
+    description: 'Terms governing use of the Anthroly website.',
+    url: absoluteUrl('/terms'),
+    siteName: 'Anthroly',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of use · Anthroly',
+    description: 'Terms governing use of the Anthroly website.',
+  },
 };
 
 const BODY = `
