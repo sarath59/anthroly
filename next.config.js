@@ -20,9 +20,11 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     outputFileTracingExcludes: {
-      '/api/content': [
-        'node_modules/@swc/**',
+      '*': [
+        'node_modules/@swc/core*/**',
+        'node_modules/@next/swc*/**',
         'node_modules/@esbuild/**',
+        'node_modules/typescript/**',
         'node_modules/webpack/**',
         'node_modules/terser/**',
         '.next/cache/**',

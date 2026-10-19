@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { getAllPosts, getPostBySlug, renderMarkdown, extractTableOfContents } from '@/lib/blog';
+import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { absoluteUrl, SITE_URL } from '@/lib/site';
 import { combineSchemas, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 
@@ -82,12 +82,11 @@ function generateBlogPostingSchema(post: NonNullable<ReturnType<typeof getPostBy
   };
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const html = await renderMarkdown(post.body);
-  const toc = extractTableOfContents(post.body);
+  const { html, toc } = post;
 
   const schemas = [
     generateBlogPostingSchema(post),

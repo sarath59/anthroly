@@ -8,6 +8,12 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface TocHeading {
+  id: string;
+  text: string;
+  level: number;
+}
+
 export interface PostFrontmatter {
   title: string;
   description: string;
@@ -25,6 +31,8 @@ export interface PostFrontmatter {
 export interface Post extends PostFrontmatter {
   slug: string;
   body: string;
+  html: string;
+  toc: TocHeading[];
 }
 
 export interface PostSummary {

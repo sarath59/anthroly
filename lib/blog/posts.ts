@@ -1,22 +1,35 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { BLOG_DIR } from '@/lib/site';
-import { parsePost } from './parse';
 import type { Post, PostSummary } from './types';
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-
-const dir = path.join(process.cwd(), BLOG_DIR);
 const showDrafts = process.env.NODE_ENV !== 'production' || process.env.SHOW_DRAFTS === 'true';
 
+let cachedPosts: Post[] | null = null;
+
 function readAll(): Post[] {
-  if (!fs.existsSync(dir)) return [];
-  return fs
+  if (cachedPosts) return cachedPosts;
+  
+  // Dynamic imports to avoid bundling heavy remark/rehype in the page
+  const fs = require('node:fs') as typeof import('node:fs');
+  const path = require('node:path') as typeof import('node:path');
+  const { parsePost } = require('./parse') as typeof import('./parse');
+  const { BLOG_DIR } = require('@/lib/site') as typeof import('@/lib/site');
+  
+  const dir = path.join(process.cwd(), BLOG_DIR);
+  if (!fs.existsSync(dir)) {
+    cachedPosts = [];
+    return cachedPosts;
+  }
+  
+  cachedPosts = fs
     .readdirSync(dir)
-    .filter((f) => /\.mdx?$/.test(f))
-    .map((f) => ({ f, slug: f.replace(/\.mdx?$/, '') }))
-    .filter(({ slug }) => SLUG_RE.test(slug))
-    .map(({ f, slug }) => parsePost(slug, fs.readFileSync(path.join(dir, f), 'utf8')));
+    .filter((f: string) => /\.mdx?$/.test(f))
+    .map((f: string) => ({ f, slug: f.replace(/\.mdx?$/, '') }))
+    .filter(({ slug }: { slug: string }) => SLUG_RE.test(slug))
+    .map(({ f, slug }: { f: string; slug: string }) => 
+      parsePost(slug, fs.readFileSync(path.join(dir, f), 'utf8'))
+    );
+  
+  return cachedPosts;
 }
 
 export function getAllPosts(): Post[] {
