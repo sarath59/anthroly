@@ -7,6 +7,16 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
+  transpilePackages: [
+    'remark',
+    'remark-gfm',
+    'remark-math',
+    'remark-rehype',
+    'rehype-katex',
+    'rehype-raw',
+    'rehype-sanitize',
+    'rehype-stringify',
+  ],
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
