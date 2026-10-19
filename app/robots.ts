@@ -78,6 +78,7 @@ const ALLOW_CONTENT = [
   '/llms.txt',
   '/llms-full.txt',
   '/learn',
+  '/blog',
   '/expert-data',
   '/contact',
 ];

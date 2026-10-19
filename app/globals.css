@@ -99,6 +99,77 @@
   .prose-editorial a {
     @apply text-ink underline decoration-signal decoration-1 underline-offset-4 transition-colors hover:text-signal;
   }
+
+  /* Research blog prose: code, math, tables, blockquotes */
+  .prose-research {
+    @apply text-[18px] leading-[1.75] text-ink-soft;
+  }
+  .prose-research h2 {
+    @apply mt-16 mb-5 scroll-mt-28 font-serif text-[2.1rem] leading-[1.1] tracking-[-0.01em] text-ink;
+  }
+  .prose-research h3 {
+    @apply mt-10 mb-3 scroll-mt-28 font-sans text-[1.15rem] font-semibold text-ink;
+  }
+  .prose-research p {
+    @apply mb-6;
+  }
+  .prose-research ul,
+  .prose-research ol {
+    @apply mb-7 space-y-3 pl-0;
+  }
+  .prose-research li {
+    @apply relative pl-7;
+  }
+  .prose-research ul > li::before {
+    content: "";
+    @apply absolute left-0 top-[0.8em] h-px w-4 bg-signal;
+  }
+  .prose-research ol {
+    counter-reset: item;
+  }
+  .prose-research ol > li {
+    counter-increment: item;
+  }
+  .prose-research ol > li::before {
+    content: counter(item, decimal-leading-zero);
+    @apply absolute left-0 top-[0.2em] font-mono text-[12px] text-signal;
+  }
+  .prose-research strong {
+    @apply font-semibold text-ink;
+  }
+  .prose-research a {
+    @apply text-ink underline decoration-signal decoration-1 underline-offset-4 transition-colors hover:text-signal;
+  }
+  .prose-research blockquote {
+    @apply my-12 border-l-2 border-signal pl-7 font-serif text-[1.85rem] leading-[1.25] text-ink not-italic;
+  }
+  .prose-research blockquote p {
+    @apply mb-0;
+  }
+  .prose-research pre {
+    @apply my-8 overflow-x-auto rounded-md bg-ink p-5 font-mono text-[14px] leading-relaxed text-paper;
+  }
+  .prose-research code {
+    @apply font-mono text-[0.9em];
+  }
+  .prose-research :not(pre) > code {
+    @apply rounded bg-ink/10 px-1.5 py-0.5;
+  }
+  .prose-research table {
+    @apply my-8 w-full text-left text-[15px];
+  }
+  .prose-research th {
+    @apply border-b border-ink pb-3 font-semibold text-ink;
+  }
+  .prose-research td {
+    @apply border-b border-rule py-3 text-ink-soft;
+  }
+  .prose-research .katex-display {
+    @apply my-8 overflow-x-auto;
+  }
+  .prose-research .katex {
+    @apply text-[1.1em];
+  }
 }
 
 @layer utilities {

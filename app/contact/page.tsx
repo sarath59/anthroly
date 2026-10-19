@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   description:
     'US companies: find out what your operating record is worth. AI labs: request RL environments, trajectories, evals and licensed corpora. Email us directly.',
   alternates: { canonical: absoluteUrl('/contact') },
+  openGraph: {
+    title: 'Contact Anthroly — sell data or source it',
+    description:
+      'US companies: find out what your operating record is worth. AI labs: request RL environments, trajectories, evals and licensed corpora.',
+    url: absoluteUrl('/contact'),
+    siteName: 'Anthroly',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Contact Anthroly — sell data or source it',
+    description:
+      'US companies: find out what your operating record is worth. AI labs: request RL environments, trajectories, evals and licensed corpora.',
+  },
 };
 
 function mailto(to: string, subject: string, body: string) {
