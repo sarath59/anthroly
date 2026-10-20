@@ -42,3 +42,8 @@
 - [RLHF and preference data, in plain English](https://www.anthroly.com/learn/rlhf-preference-data)
 - [How data is anonymized before it is used to train AI](https://www.anthroly.com/learn/anonymizing-data-for-ai-training)
 - [Why private evaluation data is worth more than training data](https://www.anthroly.com/learn/evaluation-datasets-contamination)
+
+## Blog
+
+- [How do you stop reward hacking in rubric-based RL?](https://www.anthroly.com/blog/reward-hacking-rubric-based-rl)
+- [What makes an RL environment training-grade?](https://www.anthroly.com/blog/what-makes-a-training-grade-rl-environment)

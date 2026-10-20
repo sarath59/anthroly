@@ -85,7 +85,7 @@ Preference training shapes behavior; it does not add knowledge the model lacks. 
 
 ## How Anthroly helps
 
-For labs, we supply expert preference and SFT data grounded in real US business workflows, including judgments derived from licensed, de-identified records of how professionals actually revised, reviewed and approved work. If that is what your post-training team needs, [request a sample pack](/contact). To understand the practice-based side of post-training, read [RL environments explained](/learn/rl-environments-explained).
+For labs, we supply expert preference and SFT data grounded in real US business workflows, including judgments derived from licensed, de-identified records of how professionals actually revised, reviewed and approved work. If that is what your post-training team needs, [request a sample pack](/contact). To understand the practice-based side of post-training, read [RL environments explained](/learn/rl-environments-explained). For recent research on reward hacking in rubric-based approaches, see [how to stop reward hacking in rubric-based RL](/blog/reward-hacking-rubric-based-rl).
 `,
   faq: [
     {
