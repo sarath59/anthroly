@@ -254,7 +254,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 
 1. Mahmoud, A., Rezaei, M., Wang, Z., Gunjal, A., Liu, B., & He, Y. (2026). [Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2605.12474). arXiv:2605.12474.
 
-2. Yang, M., Guo, X., Tyagi, U., Zhang, M., Dumitru, R.-G., Hou, S., He, Y., Zhang, D. Y., & Liu, Y. (2026). [Rubric Dropout: A Simple Way to Mitigate Reward Hacking in Rubric-as-Reward RL](https://arxiv.org/abs/2608.11669). arXiv:2608.11669.
+2. Yang, M., Guo, X., Shi, Z., Tyagi, U., Zhang, M., Dumitru, R.-G., Hou, S., He, Y., Zhang, D. Y., Roth, D., & Liu, Y. (2026). [Rubric Dropout: A Simple Way to Mitigate Reward Hacking in Rubric-Based RL](https://arxiv.org/abs/2608.11669). arXiv:2608.11669.
 
 3. Wang, X., Hao, Z., Hou, S., Peng, H., Li, J., & Wang, X. (2026). [Reproducing, Analyzing, and Detecting Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2606.04923). GitHub: [THUAIS-Lab/CHERRL](https://github.com/THUAIS-Lab/CHERRL).
 
