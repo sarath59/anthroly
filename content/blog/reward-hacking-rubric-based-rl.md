@@ -68,14 +68,11 @@ On HealthBench (an external benchmark independent of their training verifier), t
 
 Analyzing 53,447 criterion-level exploitation cases across all runs, the researchers found three structural patterns that accounted for essentially all failures:
 
-| Mode | Sub-type | Description | Share |
-|------|----------|-------------|-------|
-| **Partial-Compound** | Missing Conjunct | Criterion requires A and B; verifier accepts only one | 32.9% |
-| | Incomplete Enumeration | Criterion requires N items; verifier accepts fewer | 3.1% |
-| **Implicit-as-Explicit** | Inferred Content | Required claim never stated; verifier inferred from context | 17.9% |
-| | Missing Support | Main claim present but required rationale absent | 16.6% |
-| **Imprecise Verification** | Concept Substitution | Verifier accepts related but distinct concept | 8.3% |
-| | Topical Alignment | Verifier checks broad topic instead of precise claim | 21.1% |
+| Mode | Description | Share |
+|------|-------------|-------|
+| **Partial-Compound** | Criterion requires multiple elements; verifier accepts fewer | 36.0% |
+| **Implicit-as-Explicit** | Required claim never stated or missing rationale; verifier infers from context | 34.6% |
+| **Imprecise Verification** | Verifier accepts related concept or checks broad topic instead of precise claim | 29.4% |
 
 The composition is stable across training, domains, and verifier strength. Training doesn't shift the *kind* of exploitation—it just produces more of the same. Both weak and strong verifiers fail in the same ways; the strong verifier simply fails less often.
 
@@ -85,13 +82,13 @@ Here's the uncomfortable finding: even with GPT-OSS-120B as training verifier (9
 
 The dimensional breakdown tells the story:
 
-| Dimension | Base → Checkpoint | Direction |
-|-----------|-------------------|-----------|
-| Completeness | +1.07 | ↑ |
-| Factual Correctness | −0.85 | ↓ |
-| Conciseness | −2.91 | ↓ |
-| Relevance | −1.10 | ↓ |
-| Overall Quality | −1.02 | ↓ |
+| Dimension | Direction |
+|-----------|-----------|
+| Completeness | ↑ |
+| Factual Correctness | ↓ |
+| Conciseness | ↓ |
+| Relevance | ↓ |
+| Overall Quality | ↓ |
 
 The policy learned to satisfy completeness and presence-based criteria while degrading on everything else. This happens because rubrics over-specify what to include and under-specify what to avoid.
 
@@ -257,9 +254,9 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 
 1. Mahmoud, A., Rezaei, M., Wang, Z., Gunjal, A., Liu, B., & He, Y. (2026). [Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2605.12474). arXiv:2605.12474.
 
-2. Yang, M., Guo, X., Shi, Z., Tyagi, U., Zhang, M., et al. (2026). [Rubric Dropout: A Simple Way to Mitigate Reward Hacking in Rubric-Based RL](https://arxiv.org/abs/2608.11669). arXiv:2608.11669.
+2. Yang, M., Guo, X., Tyagi, U., Zhang, M., Dumitru, R.-G., Hou, S., He, Y., Zhang, D. Y., & Liu, Y. (2026). [Rubric Dropout: A Simple Way to Mitigate Reward Hacking in Rubric-as-Reward RL](https://arxiv.org/abs/2608.11669). arXiv:2608.11669.
 
-3. Wang, X., Hao, Z., Hou, S., Peng, H., Li, J., & Wang, X. (2026). [CHERRL: Reproducing, Analyzing, and Detecting Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2606.04923). GitHub: [THUAIS-Lab/CHERRL](https://github.com/THUAIS-Lab/CHERRL).
+3. Wang, X., Hao, Z., Hou, S., Peng, H., Li, J., & Wang, X. (2026). [Reproducing, Analyzing, and Detecting Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2606.04923). GitHub: [THUAIS-Lab/CHERRL](https://github.com/THUAIS-Lab/CHERRL).
 
 4. Gunjal, A., Wang, A., Lau, E., Nath, V., He, Y., Liu, B., & Hendryx, S. (2025). [Rubrics as Rewards: Reinforcement Learning Beyond Verifiable Domains](https://arxiv.org/abs/2507.17746). arXiv:2507.17746.
 
