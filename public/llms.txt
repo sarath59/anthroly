@@ -47,6 +47,8 @@
 
 - [How do you stop reward hacking in rubric-based RL?](https://www.anthroly.com/blog/reward-hacking-rubric-based-rl)
 - [What makes an RL environment training-grade?](https://www.anthroly.com/blog/what-makes-a-training-grade-rl-environment)
+- [How many expert labels does it take to fix noisy preference data?](https://www.anthroly.com/blog/how-many-expert-labels-fix-noisy-preference-data)
+- [Where should step-level rewards for AI agents come from?](https://www.anthroly.com/blog/step-level-rewards-for-ai-agents)
 
 ## Research resources
 

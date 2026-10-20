@@ -250,6 +250,12 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 
 ---
 
+## Related reading
+
+- [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
+
+---
+
 ## References
 
 1. Mahmoud, A., Rezaei, M., Wang, Z., Gunjal, A., Liu, B., & He, Y. (2026). [Reward Hacking in Rubric-Based Reinforcement Learning](https://arxiv.org/abs/2605.12474). arXiv:2605.12474.

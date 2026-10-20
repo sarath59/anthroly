@@ -41,9 +41,9 @@ Hugging Face [announced](https://huggingface.co/blog/rl-environments) a new home
 | Tag | Framework |
 |-----|-----------|
 | `harbor` | [Harbor](https://github.com/harbor-framework/harbor) |
-| `verifiers` | [Verifiers](https://github.com/verifiers-lib/verifiers) |
-| `openenv` | [OpenEnv](https://github.com/openenv-org/openenv) |
-| `nemo-gym` | [NeMo Gym](https://github.com/nvidia/nemo-gym) |
+| `verifiers` | [Verifiers](https://github.com/PrimeIntellect-ai/verifiers) |
+| `openenv` | [OpenEnv](https://github.com/huggingface/OpenEnv) |
+| `nemo-gym` | [NeMo Gym](https://github.com/NVIDIA-NeMo/Gym) |
 
 Each tag adds a generated snippet to "Use this dataset" with the right loading command. A dataset can carry multiple tags—they describe compatibility, not exclusivity.
 
@@ -228,19 +228,19 @@ Before training on an environment, audit:
 The Hub already has environments tagged for major frameworks:
 
 **Harbor**
-- [BeyondSWE](https://huggingface.co/datasets/harborframework/beyond-swe): BeyondSWE benchmark as Harbor task directories
-- [Terminal-Lego](https://huggingface.co/datasets/harborframework/terminal-lego): Tasks built from real StackOverflow issues, kept only after Docker round-trip verification
+- [BeyondSWE](https://huggingface.co/datasets/AweAI-Team/BeyondSWE-harbor): BeyondSWE benchmark as Harbor task directories
+- [Terminal-Lego](https://huggingface.co/datasets/Lego-X/Terminal-Lego-15k): Tasks built from real StackOverflow issues, kept only after Docker round-trip verification
 - [Terminal-Bench 2.1](https://huggingface.co/datasets/harborframework/terminal-bench-2.1): 89 terminal tasks
 
 **Verifiers**
-- [Reverse-Text-RL](https://huggingface.co/datasets/verifiers-lib/reverse-text-rl): Small reversal task for debugging RL training
-- [Multi-SWE-RL-Verified](https://huggingface.co/datasets/verifiers-lib/multi-swe-rl-verified): 2,232 validated tasks across C, Go, Java, JavaScript, Rust, TypeScript
-- [Scale-SWE-Verified](https://huggingface.co/datasets/scale-ai/scale-swe-verified): 17,202 Python issue-resolving tasks with clean reward signal
+- [Reverse-Text-RL](https://huggingface.co/datasets/PrimeIntellect/Reverse-Text-RL): Small reversal task for debugging RL training
+- [Multi-SWE-RL-Verified](https://huggingface.co/datasets/PrimeIntellect/Multi-SWE-RL-Verified): 2,232 validated tasks across C, Go, Java, JavaScript, Rust, TypeScript
+- [Scale-SWE-Verified](https://huggingface.co/datasets/PrimeIntellect/Scale-SWE-Verified): 17,202 Python issue-resolving tasks with clean reward signal
 
 **NeMo Gym**
-- [Workplace Assistant](https://huggingface.co/datasets/nvidia/workplace-assistant): Multi-step tool-use sandbox with 690 business tasks
-- [Structured Outputs](https://huggingface.co/datasets/nvidia/structured-outputs): Instruction following with structured outputs
-- [CFBench](https://huggingface.co/datasets/nvidia/cfbench): Multilingual constraint following
+- [Workplace Assistant](https://huggingface.co/datasets/nvidia/Nemotron-RL-agent-workplace_assistant): Multi-step tool-use sandbox with 690 business tasks
+- [Structured Outputs](https://huggingface.co/datasets/nvidia/Nemotron-RL-instruction_following-structured_outputs): Instruction following with structured outputs
+- [CFBench](https://huggingface.co/datasets/nvidia/Nemotron-RL-CFBench-v1): Multilingual constraint following
 
 ## The harder problem: domain-specific environments
 
@@ -286,6 +286,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [RL environments, explained](/learn/rl-environments-explained) — Plain-English introduction to what RL environments are and why they matter
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl) — The verification side of the same problem
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination) — The contamination problem in detail
+- [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
 
 ---
 
