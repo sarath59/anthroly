@@ -1,5 +1,7 @@
 import { getAllPosts } from '@/lib/blog';
 import { ARTICLES } from '@/lib/learn/articles';
+import { COMPARISONS } from '@/lib/resources/compare';
+import { GLOSSARY } from '@/lib/resources/glossary';
 import { SITE_NAME, SITE_DESCRIPTION, absoluteUrl } from '@/lib/site';
 
 export const dynamic = 'force-static';
@@ -35,6 +37,15 @@ export function GET() {
     '## Field Notes (Learn)',
     '',
     ...learnPages,
+    '',
+    '## Reference Resources',
+    '',
+    `- [Post-training glossary](${absoluteUrl('/research/glossary')}): ${GLOSSARY.length} direct definitions (RLVR, RLHF, reward hacking, rubric rewards, verifiers, inter-annotator agreement)`,
+    ...COMPARISONS.map((c) => `- [${c.title}](${absoluteUrl(`/research/compare/${c.slug}`)}): ${oneLine(c.description)}`),
+    `- [Eval sample size & label count calculator](${absoluteUrl('/research/eval-sample-size-calculator')}): Free browser tool for eval set sizing and Wilson confidence intervals`,
+    `- [Author: Sarath Kavuru](${absoluteUrl('/authors/sarath-kavuru')}): Author profile, articles and papers`,
+    `- [Anthroly research on Hugging Face](https://huggingface.co/datasets/sarathkavuru/anthroly-research): Papers and article mirrors`,
+    `- [Anthroly RL environment sample dataset](https://huggingface.co/datasets/sarathkavuru/anthroly-rl-env-sample): Synthetic example RL task specs with verifiable graders`,
     '',
     '## Research Blog',
     '',

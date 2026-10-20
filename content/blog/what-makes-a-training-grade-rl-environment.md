@@ -8,8 +8,8 @@ tags:
   - post-training
   - agent-training
 author:
-  name: Anthroly Research
-  credentials: 'Data lab for frontier AI post-training'
+  name: Sarath Kavuru
+  credentials: 'Anthroly'
 publishedAt: '2026-10-20T00:00:00.000Z'
 updatedAt: '2026-10-20T00:00:00.000Z'
 faq:

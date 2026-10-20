@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { absoluteUrl, SITE_URL } from '@/lib/site';
+import { AUTHOR, authorPersonSchema } from '@/lib/resources/author';
+import { ResourceNav } from '@/components/resources/PageHead';
 import { combineSchemas, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 
 export const dynamicParams = false;
@@ -66,11 +68,14 @@ function generateBlogPostingSchema(post: NonNullable<ReturnType<typeof getPostBy
     url: absoluteUrl(`/blog/${post.slug}`),
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
-    author: {
-      '@type': 'Person',
-      name: post.author.name,
-      ...(post.author.credentials ? { jobTitle: post.author.credentials } : {}),
-    },
+    author:
+      post.author.name === AUTHOR.name
+        ? authorPersonSchema()
+        : {
+            '@type': 'Person',
+            name: post.author.name,
+            ...(post.author.credentials ? { jobTitle: post.author.credentials } : {}),
+          },
     publisher: { '@id': `${SITE_URL}/#organization` },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -122,7 +127,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint">
               <span>
-                {post.author.name}
+                {post.author.name === AUTHOR.name ? (
+                  <Link href={AUTHOR.path} rel="author" className="underline underline-offset-4 hover:text-ink">
+                    {post.author.name}
+                  </Link>
+                ) : (
+                  post.author.name
+                )}
                 {post.author.credentials && `, ${post.author.credentials}`}
               </span>
               <span>·</span>
@@ -189,6 +200,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 </dl>
               </section>
             )}
+
+            <ResourceNav />
 
             <div className="mt-20 rounded-[6px] bg-ink p-10 text-paper sm:p-12">
               <p className="eyebrow !text-paper/50">Anthroly</p>

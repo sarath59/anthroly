@@ -47,3 +47,20 @@
 
 - [How do you stop reward hacking in rubric-based RL?](https://www.anthroly.com/blog/reward-hacking-rubric-based-rl)
 - [What makes an RL environment training-grade?](https://www.anthroly.com/blog/what-makes-a-training-grade-rl-environment)
+
+## Research resources
+
+- [Post-training glossary](https://www.anthroly.com/research/glossary): 33 direct definitions (RLVR, RLHF, reward hacking, rubric rewards, verifiers, GRPO, DPO, inter-annotator agreement) with primary sources
+- [Method comparisons](https://www.anthroly.com/research/compare)
+- [RLVR vs RLHF](https://www.anthroly.com/research/compare/rlvr-vs-rlhf)
+- [Rubric rewards vs reward models](https://www.anthroly.com/research/compare/rubric-rewards-vs-reward-models)
+- [Expert vs crowd annotation](https://www.anthroly.com/research/compare/expert-vs-crowd-annotation)
+- [Synthetic vs human preference data](https://www.anthroly.com/research/compare/synthetic-vs-human-preference-data)
+- [Process vs outcome rewards (PRM vs ORM)](https://www.anthroly.com/research/compare/process-vs-outcome-rewards)
+- [Eval sample size & label count calculator](https://www.anthroly.com/research/eval-sample-size-calculator): free browser tool; formulas stated on the page
+- [Author: Sarath Kavuru](https://www.anthroly.com/authors/sarath-kavuru)
+
+## Hugging Face
+
+- [Anthroly research papers and article mirrors](https://huggingface.co/datasets/sarathkavuru/anthroly-research)
+- [Anthroly RL environment sample (synthetic examples)](https://huggingface.co/datasets/sarathkavuru/anthroly-rl-env-sample)

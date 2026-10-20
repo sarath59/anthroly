@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
 import { ARTICLES } from '@/lib/learn/articles';
 import { getAllPosts } from '@/lib/blog';
+import { COMPARISONS } from '@/lib/resources/compare';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
@@ -30,5 +31,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }));
 
-  return [...core, ...articles, ...blogPosts];
+  const resources: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/research/glossary`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/research/compare`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.8 },
+    ...COMPARISONS.map((c) => ({
+      url: `${SITE_URL}/research/compare/${c.slug}`,
+      lastModified: new Date('2026-10-20'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    { url: `${SITE_URL}/research/eval-sample-size-calculator`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/authors/sarath-kavuru`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.6 },
+  ];
+
+  return [...core, ...articles, ...blogPosts, ...resources];
 }

@@ -72,7 +72,10 @@ export function generateOrganizationSchema(): object {
     sameAs: [
       'https://twitter.com/anthroly',
       'https://linkedin.com/company/anthroly',
+      'https://huggingface.co/datasets/sarathkavuru/anthroly-research',
+      'https://github.com/sarath59/anthroly',
     ],
+    legalName: 'Neural Netwrk LLC',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
