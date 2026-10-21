@@ -51,6 +51,8 @@
 - [Where should step-level rewards for AI agents come from?](https://www.anthroly.com/blog/step-level-rewards-for-ai-agents)
 - [LLM-as-a-Judge vs. Expert Graders: When Can You Trust an Automated Grader?](https://www.anthroly.com/blog/llm-as-a-judge-vs-expert-graders)
 - [How Are Software-Engineering RL Environments Built?](https://www.anthroly.com/blog/how-software-engineering-rl-environments-are-built)
+- [Does RL with Verifiable Rewards Teach Models New Reasoning, or Just Sharpen What They Already Know?](https://www.anthroly.com/blog/does-rlvr-teach-new-reasoning)
+- [How Do You Build an Agent Benchmark That Won't Be Contaminated or Saturated?](https://www.anthroly.com/blog/building-contamination-resistant-agent-benchmarks)
 
 ## Research resources
 
