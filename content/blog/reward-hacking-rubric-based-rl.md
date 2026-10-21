@@ -253,6 +253,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 ## Related reading
 
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
+- [LLM-as-a-Judge vs. Expert Graders: When Can You Trust an Automated Grader?](/blog/llm-as-a-judge-vs-expert-graders)
 
 ---
 

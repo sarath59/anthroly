@@ -287,6 +287,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl) — The verification side of the same problem
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination) — The contamination problem in detail
 - [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
+- [How Are Software-Engineering RL Environments Built?](/blog/how-software-engineering-rl-environments-are-built) — Lessons from SWE-bench, SWE-Gym, SWE-smith, and R2E-Gym
 
 ---
 

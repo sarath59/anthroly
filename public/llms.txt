@@ -49,6 +49,8 @@
 - [What makes an RL environment training-grade?](https://www.anthroly.com/blog/what-makes-a-training-grade-rl-environment)
 - [How many expert labels does it take to fix noisy preference data?](https://www.anthroly.com/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [Where should step-level rewards for AI agents come from?](https://www.anthroly.com/blog/step-level-rewards-for-ai-agents)
+- [LLM-as-a-Judge vs. Expert Graders: When Can You Trust an Automated Grader?](https://www.anthroly.com/blog/llm-as-a-judge-vs-expert-graders)
+- [How Are Software-Engineering RL Environments Built?](https://www.anthroly.com/blog/how-software-engineering-rl-environments-are-built)
 
 ## Research resources
 
