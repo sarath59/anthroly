@@ -65,6 +65,8 @@ export function linkLabel(href: string): string {
   const map: Record<string, string> = {
     '/blog/reward-hacking-rubric-based-rl': 'How do you stop reward hacking in rubric-based RL?',
     '/blog/what-makes-a-training-grade-rl-environment': 'What makes an RL environment training-grade?',
+    '/blog/how-to-evaluate-a-reward-model': 'How to evaluate a reward model before you train',
+    '/blog/annotator-disagreement-in-preference-data': 'When annotators disagree: preference disagreement as signal',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

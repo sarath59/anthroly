@@ -58,7 +58,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward model',
     definition:
       'A reward model is a neural network, usually initialized from a language model, trained to output a scalar score predicting which response humans would prefer. It stands in for human judgment during RL. Because it is an imperfect proxy, optimizing hard against it can raise reward model scores while true quality falls.',
-    related: ['/research/compare/rubric-rewards-vs-reward-models'],
+    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -74,7 +74,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward overoptimization',
     definition:
       'Reward overoptimization is the measured pattern where optimizing a policy against a proxy reward model first improves true quality and then degrades it as optimization continues. Gao et al. characterized how this gap scales with reward model size and with how far the policy drifts from its initialization, measured by KL divergence.',
-    related: [RH, '/research/compare/rubric-rewards-vs-reward-models'],
+    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -187,7 +187,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Preference data',
     definition:
       'Preference data consists of a prompt with two or more candidate responses and a label saying which is better, sometimes with a strength or rationale. It trains reward models for RLHF and is consumed directly by methods such as DPO. Label quality depends heavily on annotator expertise and guidelines.',
-    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data'],
+    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data'],
   },
   {
     slug: 'synthetic-data',
@@ -217,14 +217,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Inter-annotator agreement (IAA)',
     definition:
       'Inter-annotator agreement measures how consistently independent annotators assign the same labels to the same items. Raw percent agreement overstates reliability because some agreement happens by chance, so chance-corrected statistics such as Cohen’s kappa, Fleiss’ kappa, or Krippendorff’s alpha are standard for reporting label quality.',
-    related: ['/research/compare/expert-vs-crowd-annotation', '/research/eval-sample-size-calculator'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data'],
   },
   {
     slug: 'cohens-kappa',
     term: "Cohen's kappa",
     definition:
       "Cohen's kappa measures agreement between two raters on categorical labels, corrected for chance: κ = (pₒ − pₑ) / (1 − pₑ), where pₒ is observed agreement and pₑ is agreement expected by chance from each rater’s label frequencies. A value of 1 is perfect agreement and 0 is chance level.",
-    related: ['/research/compare/expert-vs-crowd-annotation'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/blog/annotator-disagreement-in-preference-data'],
     source: { label: "Wikipedia: Cohen's kappa", url: 'https://en.wikipedia.org/wiki/Cohen%27s_kappa' },
   },
   {
@@ -232,7 +232,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: "Krippendorff's alpha",
     definition:
       "Krippendorff's alpha is a chance-corrected reliability coefficient that works for any number of annotators, tolerates missing labels, and supports nominal, ordinal, interval, and ratio data. That flexibility makes it a common choice for annotation projects where not every item is labeled by every annotator.",
-    related: ['/research/compare/expert-vs-crowd-annotation'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/blog/annotator-disagreement-in-preference-data'],
     source: { label: "Wikipedia: Krippendorff's alpha", url: 'https://en.wikipedia.org/wiki/Krippendorff%27s_alpha' },
   },
   {

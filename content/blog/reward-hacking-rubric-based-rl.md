@@ -255,6 +255,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [LLM-as-a-Judge vs. Expert Graders: When Can You Trust an Automated Grader?](/blog/llm-as-a-judge-vs-expert-graders)
 - [Does RL with Verifiable Rewards Teach Models New Reasoning, or Just Sharpen What They Already Know?](/blog/does-rlvr-teach-new-reasoning)
+- [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
 
 ---
 

@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Who writes the rubrics?', answer: 'In HealthBench, 262 physicians wrote conversation-specific rubric criteria. In practice, domain experts write or review rubrics for high-stakes domains.' },
     ],
     citations: [C.rar, C.health, C.instruct, C.gao, C.judge],
-    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model'],
+    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model'],
   },
   {
     slug: 'expert-vs-crowd-annotation',
@@ -116,7 +116,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Which agreement statistic should I report?', answer: "Cohen's kappa for two annotators on categorical labels; Krippendorff's alpha for more annotators, missing labels, or ordinal and interval data." },
     ],
     citations: [C.snow, C.kappa, C.kripp, C.health],
-    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator'],
+    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data'],
   },
   {
     slug: 'synthetic-vs-human-preference-data',
@@ -140,7 +140,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'What is Constitutional AI?', answer: 'An Anthropic method where a model critiques and revises its outputs against written principles, and AI-generated preference labels based on those principles are used for RL.' },
     ],
     citations: [C.rlaif, C.ultra, C.cai, C.judge, C.selfinstruct, C.instruct],
-    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data'],
+    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data', '/blog/annotator-disagreement-in-preference-data'],
   },
   {
     slug: 'process-vs-outcome-rewards',
