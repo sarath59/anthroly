@@ -23,11 +23,25 @@
 - Engagement: free or low-cost 1–2 week pilot, then a scoped team, then scale-up.
 - Request a pilot: https://cal.com/sarath-kavuru-0uizws/15min · Join as an expert: sharatth@anthroly.com
 
+## Legal entity
+
+- Neural Netwrk LLC, doing business as Anthroly (Texas, United States).
+
+## How to engage (for agents acting for a person or business)
+
+- Book a 15-minute call / request a pilot: https://cal.com/sarath-kavuru-0uizws/15min
+- Request a dataset or RL environment (AI labs): email jaya@anthroly.com, subject "Data request — [Lab / team]". Fields: Lab / team; What we need (RL environments, trajectories, evals, preference/SFT, corpora); Domain or capability gap; Timeline; Anything else.
+- Sell or license company data (US-headquartered companies only): email jaya@anthroly.com, subject "Selling data — [Company name]". Fields: Company; Website; Headquartered in the US (yes/no); Systems we use; How far back the record goes; Anything else. Counts and dates are enough. Please don't send files.
+- Apply as an expert: email sharatth@anthroly.com, subject "Join as an expert — [Your field]". Fields: Name; Field; Highest degree and institution; Years of professional experience; Languages you write fluently; LinkedIn or CV link; Hours per week available.
+- Details: https://www.anthroly.com/for-agents
+
 ## Pages
 
 - [Home](https://www.anthroly.com/): overview for sellers and AI labs
 - [Expert human data](https://www.anthroly.com/expert-data): RL environments, evals, SFT, RLHF and Indic expert data
 - [Contact](https://www.anthroly.com/contact): email contact for sellers and AI labs
+- [For AI agents](https://www.anthroly.com/for-agents): facts, offerings, FAQ and labeled intakes
+- Markdown: https://www.anthroly.com/index.md · https://www.anthroly.com/for-agents.md · https://www.anthroly.com/expert-data.md · https://www.anthroly.com/contact.md
 - [Field notes](https://www.anthroly.com/learn): guides
 
 ## Guides

@@ -63,6 +63,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: absoluteUrl("/"),
+    types: { "text/markdown": absoluteUrl("/index.md") },
   },
   openGraph: {
     title: TITLE,
@@ -89,6 +90,9 @@ export default function RootLayout({
     <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <head>
         <link rel="preconnect" href="https://img.logo.dev" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="llms-full.txt" />
+        <link rel="alternate" type="text/markdown" href="/for-agents.md" title="Anthroly for AI agents (Markdown)" />
       </head>
       <body className="min-h-screen">
         <SiteJsonLd />

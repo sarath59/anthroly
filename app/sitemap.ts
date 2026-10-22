@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: new Date('2026-10-10'), changeFrequency: 'weekly', priority: 1.0 },
     { url: `${SITE_URL}/expert-data`, lastModified: new Date('2026-10-14'), changeFrequency: 'monthly', priority: 0.95 },
+    { url: `${SITE_URL}/for-agents`, lastModified: new Date('2026-10-22'), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${SITE_URL}/contact`, lastModified: new Date('2026-10-10'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/learn`, lastModified: new Date('2026-10-10'), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },

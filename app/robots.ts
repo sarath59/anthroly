@@ -7,7 +7,10 @@ import { absoluteUrl } from '@/lib/site';
  * Retired agency URLs answer 410 Gone (see lib/retired-paths.ts) — do not
  * Disallow them, or crawlers never see the 410 and keep the old snippets.
  *
- * See /llms.txt and /llms-full.txt for AI content guidance.
+ * See /llms.txt and /llms-full.txt for AI content guidance. Full-detail hub for
+ * agents: /for-agents (+ Markdown at /for-agents.md, /index.md, /expert-data.md,
+ * /contact.md). Next's MetadataRoute.Robots cannot emit comment lines, so the
+ * pointers are exposed as explicit Allow paths instead.
  */
 
 const AI_AND_SEARCH_BOTS = [
@@ -77,10 +80,17 @@ const ALLOW_CONTENT = [
   '/sitemap.xml',
   '/llms.txt',
   '/llms-full.txt',
+  '/for-agents',
   '/learn',
   '/blog',
   '/expert-data',
   '/contact',
+  '/index.md',
+  '/for-agents.md',
+  '/expert-data.md',
+  '/contact.md',
+  '/research',
+  '/authors',
 ];
 
 export default function robots(): MetadataRoute.Robots {

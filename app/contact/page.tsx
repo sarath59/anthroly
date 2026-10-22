@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Contact Anthroly — sell data or source it',
   description:
     'US companies: find out what your operating record is worth. AI labs: request RL environments, trajectories, evals and licensed corpora. Email us directly.',
-  alternates: { canonical: absoluteUrl('/contact') },
+  alternates: { canonical: absoluteUrl('/contact'), types: { 'text/markdown': absoluteUrl('/contact.md') } },
   openGraph: {
     title: 'Contact Anthroly — sell data or source it',
     description:

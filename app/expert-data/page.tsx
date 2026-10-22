@@ -26,7 +26,7 @@ import { Mark } from '@/components/Mark';
 export const metadata: Metadata = {
   title: 'Expert human data for frontier AI: RL environments, evals, SFT, RLHF',
   description: `${EXPERT_SUBHEAD} RL environments with automatic graders, expert evals, SFT, RLHF and Indic-language data in medicine, law and STEM. Start with a 1–2 week pilot.`,
-  alternates: { canonical: absoluteUrl('/expert-data') },
+  alternates: { canonical: absoluteUrl('/expert-data'), types: { 'text/markdown': absoluteUrl('/expert-data.md') } },
   openGraph: {
     title: `${EXPERT_HEADLINE} · Anthroly`,
     description: EXPERT_SUBHEAD,
