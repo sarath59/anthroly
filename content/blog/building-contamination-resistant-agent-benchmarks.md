@@ -269,6 +269,7 @@ If your team is building or using agent benchmarks and needs evaluation rigor th
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination)
 - [RL environments, explained](/learn/rl-environments-explained)
+- [How many eval items do you need? Error bars and power for LLM evals](/blog/how-many-eval-items-do-you-need)
 
 ---
 

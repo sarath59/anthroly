@@ -119,6 +119,7 @@ If your team is choosing between process reward approaches for an agent and need
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
 - [Agent trajectory data, explained](/learn/agent-trajectory-data)
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
+- [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
 
 ---
 

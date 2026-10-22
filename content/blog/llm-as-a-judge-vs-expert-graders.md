@@ -197,6 +197,8 @@ If your team is scaling evaluation with LLM judges and needs to know where they 
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
+- [How many eval items do you need? Error bars and power for LLM evals](/blog/how-many-eval-items-do-you-need)
+- [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
 
 ---
 
