@@ -285,6 +285,7 @@ If your post-training team needs training-grade environments for a domain that r
 
 - [RL environments, explained](/learn/rl-environments-explained) — Plain-English introduction to what RL environments are and why they matter
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl) — The verification side of the same problem
+- [Are LLM user simulators reliable for agent RL? The Sim2Real gap](/blog/are-llm-user-simulators-reliable-for-agent-rl)
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination) — The contamination problem in detail
 - [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
 - [How Are Software-Engineering RL Environments Built?](/blog/how-software-engineering-rl-environments-are-built) — Lessons from SWE-bench, SWE-Gym, SWE-smith, and R2E-Gym

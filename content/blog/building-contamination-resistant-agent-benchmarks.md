@@ -267,6 +267,7 @@ If your team is building or using agent benchmarks and needs evaluation rigor th
 
 - [How are software-engineering RL environments built?](/blog/how-software-engineering-rl-environments-are-built)
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
+- [Are LLM user simulators reliable for agent RL? The Sim2Real gap](/blog/are-llm-user-simulators-reliable-for-agent-rl)
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination)
 - [RL environments, explained](/learn/rl-environments-explained)
 - [How many eval items do you need? Error bars and power for LLM evals](/blog/how-many-eval-items-do-you-need)

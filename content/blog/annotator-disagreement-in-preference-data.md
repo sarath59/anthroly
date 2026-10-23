@@ -180,6 +180,7 @@ If your preference data has more disagreement than you can explain, or you need 
 - [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
+- [Synthetic data vs expert human data: when does AI-generated data work?](/blog/synthetic-data-vs-expert-human-data)
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
 - [Post-training glossary](/research/glossary)

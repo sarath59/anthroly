@@ -136,6 +136,7 @@ If you're deciding whether to buy volume or curate a few thousand expert example
 
 ## Related reading
 
+- [Synthetic data vs expert human data: how much real data do you still need?](/blog/synthetic-data-vs-expert-human-data)
 - [How reliable are verifiers in RLVR?](/blog/how-reliable-are-rlvr-verifiers)
 - [Does RL with verifiable rewards teach models new reasoning?](/blog/does-rlvr-teach-new-reasoning)
 - [How many eval items do you need?](/blog/how-many-eval-items-do-you-need)

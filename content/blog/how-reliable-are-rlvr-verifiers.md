@@ -172,6 +172,7 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [Does reward model accuracy predict RLHF results?](/blog/how-to-evaluate-a-reward-model)
+- [Synthetic data vs expert human data: how much real data prevents collapse?](/blog/synthetic-data-vs-expert-human-data)
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
 
 ---
