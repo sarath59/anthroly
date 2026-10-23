@@ -202,6 +202,8 @@ If your team is building reasoning models with RLVR and wants to understand whet
 - [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
 - [RLVR vs RLHF](/research/compare/rlvr-vs-rlhf)
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
+- [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
+- [How much data do you need to fine-tune a reasoning model?](/blog/how-much-data-to-fine-tune-a-reasoning-model)
 
 ---
 

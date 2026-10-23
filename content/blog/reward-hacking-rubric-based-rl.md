@@ -256,6 +256,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [LLM-as-a-Judge vs. Expert Graders: When Can You Trust an Automated Grader?](/blog/llm-as-a-judge-vs-expert-graders)
 - [Does RL with Verifiable Rewards Teach Models New Reasoning, or Just Sharpen What They Already Know?](/blog/does-rlvr-teach-new-reasoning)
 - [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
+- [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
 
 ---
 

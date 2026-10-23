@@ -289,6 +289,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
 - [How Are Software-Engineering RL Environments Built?](/blog/how-software-engineering-rl-environments-are-built) — Lessons from SWE-bench, SWE-Gym, SWE-smith, and R2E-Gym
 - [How Do You Build an Agent Benchmark That Won't Be Contaminated or Saturated?](/blog/building-contamination-resistant-agent-benchmarks)
+- [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
 
 ---
 

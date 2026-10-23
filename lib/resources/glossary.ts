@@ -34,7 +34,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLVR (reinforcement learning with verifiable rewards)',
     definition:
       'RLVR trains a language model with rewards computed by a programmatic check instead of a learned reward model, for example exact-match math answers, unit tests passing, or constraint satisfaction. The term was popularized by the Tülu 3 report. It reduces reward-model exploitation but only works where correctness can be checked automatically.',
-    related: [RH, '/research/compare/rlvr-vs-rlhf'],
+    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers'],
     source: { label: 'Lambert et al., Tülu 3 (arXiv:2411.15124)', url: 'https://arxiv.org/abs/2411.15124' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers'],
   },
   {
     slug: 'grader',
@@ -112,7 +112,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {

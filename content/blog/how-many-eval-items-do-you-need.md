@@ -294,6 +294,7 @@ If you're sizing a new benchmark or wondering whether your current one can actua
 - [How do you build an agent benchmark that won't be contaminated or saturated?](/blog/building-contamination-resistant-agent-benchmarks)
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
+- [How much data do you need to fine-tune a reasoning model?](/blog/how-much-data-to-fine-tune-a-reasoning-model)
 
 ---
 

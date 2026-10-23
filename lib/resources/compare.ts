@@ -68,7 +68,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Is RLVR immune to reward hacking?', answer: 'No. RLVR removes reward-model exploitation but a policy can still exploit verifier gaps, for example by satisfying weak tests without solving the task. Verifier quality bounds RLVR quality.' },
     ],
     citations: [C.tulu, C.r1, C.christiano, C.instruct, C.gao],
-    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf'],
+    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf', '/blog/how-reliable-are-rlvr-verifiers'],
   },
   {
     slug: 'rubric-rewards-vs-reward-models',
@@ -116,7 +116,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Which agreement statistic should I report?', answer: "Cohen's kappa for two annotators on categorical labels; Krippendorff's alpha for more annotators, missing labels, or ordinal and interval data." },
     ],
     citations: [C.snow, C.kappa, C.kripp, C.health],
-    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data'],
+    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-much-data-to-fine-tune-a-reasoning-model'],
   },
   {
     slug: 'synthetic-vs-human-preference-data',

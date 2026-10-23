@@ -67,6 +67,8 @@ export function linkLabel(href: string): string {
     '/blog/what-makes-a-training-grade-rl-environment': 'What makes an RL environment training-grade?',
     '/blog/how-to-evaluate-a-reward-model': 'How to evaluate a reward model before you train',
     '/blog/annotator-disagreement-in-preference-data': 'When annotators disagree: preference disagreement as signal',
+    '/blog/how-reliable-are-rlvr-verifiers': 'How reliable are verifiers in RLVR?',
+    '/blog/how-much-data-to-fine-tune-a-reasoning-model': 'How much data do you need to fine-tune a reasoning model?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',
