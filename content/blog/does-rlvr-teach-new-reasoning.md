@@ -204,6 +204,8 @@ If your team is building reasoning models with RLVR and wants to understand whet
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
 - [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
 - [How much data do you need to fine-tune a reasoning model?](/blog/how-much-data-to-fine-tune-a-reasoning-model)
+- [How do you choose training prompts for RLVR? Pass-rate filtering and difficulty curricula](/blog/how-to-choose-prompts-for-rlvr-training)
+- [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 
 ---
 

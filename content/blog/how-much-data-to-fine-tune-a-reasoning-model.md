@@ -143,6 +143,7 @@ If you're deciding whether to buy volume or curate a few thousand expert example
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
+- [How do you choose training prompts for RLVR? Pass-rate filtering and difficulty curricula](/blog/how-to-choose-prompts-for-rlvr-training)
 
 ---
 

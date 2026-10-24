@@ -34,7 +34,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLVR (reinforcement learning with verifiable rewards)',
     definition:
       'RLVR trains a language model with rewards computed by a programmatic check instead of a learned reward model, for example exact-match math answers, unit tests passing, or constraint satisfaction. The term was popularized by the Tülu 3 report. It reduces reward-model exploitation but only works where correctness can be checked automatically.',
-    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers'],
+    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training'],
     source: { label: 'Lambert et al., Tülu 3 (arXiv:2411.15124)', url: 'https://arxiv.org/abs/2411.15124' },
   },
   {
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
@@ -152,21 +152,21 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'KL penalty',
     definition:
       'A KL penalty adds the Kullback-Leibler divergence between the trained policy and a reference model to the RL objective, discouraging the policy from drifting far from its starting behavior. It limits reward hacking and preserves fluency, at the cost of slowing how much the policy can change per unit of reward.',
-    related: [RH],
+    related: [RH, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl'],
   },
   {
     slug: 'pass-at-k',
     term: 'pass@k',
     definition:
       'pass@k is the probability that at least one of k sampled attempts solves a task, typically estimated from n ≥ k samples with an unbiased combinatorial estimator. In RL environment design, per-task pass rates identify tasks that are always or never solved, which give no learning signal under group-relative methods.',
-    related: [ENV, '/research/eval-sample-size-calculator'],
+    related: [ENV, '/research/eval-sample-size-calculator', '/blog/how-to-choose-prompts-for-rlvr-training'],
   },
   {
     slug: 'pass-rate-calibration',
     term: 'Pass-rate calibration',
     definition:
       'Pass-rate calibration filters or reweights training tasks by how often the current model solves them, keeping tasks inside a learnable band rather than those solved every time or never. With group-relative advantages, tasks at 0% or 100% pass rate produce zero advantage and therefore no gradient.',
-    related: [ENV],
+    related: [ENV, '/blog/how-to-choose-prompts-for-rlvr-training'],
   },
   {
     slug: 'contamination',

@@ -71,6 +71,8 @@ export function linkLabel(href: string): string {
     '/blog/how-much-data-to-fine-tune-a-reasoning-model': 'How much data do you need to fine-tune a reasoning model?',
     '/blog/how-expert-written-benchmarks-are-built': 'How are expert-written benchmarks like GPQA and HLE built?',
     '/blog/how-to-evaluate-deep-research-agents': 'How do you evaluate deep research agents?',
+    '/blog/how-to-choose-prompts-for-rlvr-training': 'How do you choose training prompts for RLVR?',
+    '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl': 'GRPO vs PPO vs DAPO: which RL algorithm for reasoning?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

@@ -120,6 +120,7 @@ If your team is choosing between process reward approaches for an agent and need
 - [Agent trajectory data, explained](/learn/agent-trajectory-data)
 - [How many expert labels does it take to fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
+- [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 
 ---
 

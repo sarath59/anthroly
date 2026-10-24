@@ -174,6 +174,8 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [Does reward model accuracy predict RLHF results?](/blog/how-to-evaluate-a-reward-model)
 - [Synthetic data vs expert human data: how much real data prevents collapse?](/blog/synthetic-data-vs-expert-human-data)
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
+- [How do you choose training prompts for RLVR? Pass-rate filtering and difficulty curricula](/blog/how-to-choose-prompts-for-rlvr-training)
+- [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 
 ---
 

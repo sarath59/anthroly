@@ -291,6 +291,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How Are Software-Engineering RL Environments Built?](/blog/how-software-engineering-rl-environments-are-built) — Lessons from SWE-bench, SWE-Gym, SWE-smith, and R2E-Gym
 - [How Do You Build an Agent Benchmark That Won't Be Contaminated or Saturated?](/blog/building-contamination-resistant-agent-benchmarks)
 - [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
+- [How do you choose training prompts for RLVR? Pass-rate filtering and difficulty curricula](/blog/how-to-choose-prompts-for-rlvr-training)
 
 ---
 
