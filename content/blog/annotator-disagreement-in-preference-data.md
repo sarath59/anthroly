@@ -184,6 +184,7 @@ If your preference data has more disagreement than you can explain, or you need 
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
 - [Post-training glossary](/research/glossary)
+- [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
 
 ---
 

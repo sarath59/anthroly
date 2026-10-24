@@ -69,6 +69,8 @@ export function linkLabel(href: string): string {
     '/blog/annotator-disagreement-in-preference-data': 'When annotators disagree: preference disagreement as signal',
     '/blog/how-reliable-are-rlvr-verifiers': 'How reliable are verifiers in RLVR?',
     '/blog/how-much-data-to-fine-tune-a-reasoning-model': 'How much data do you need to fine-tune a reasoning model?',
+    '/blog/how-expert-written-benchmarks-are-built': 'How are expert-written benchmarks like GPQA and HLE built?',
+    '/blog/how-to-evaluate-deep-research-agents': 'How do you evaluate deep research agents?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

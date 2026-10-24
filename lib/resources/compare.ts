@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Who writes the rubrics?', answer: 'In HealthBench, 262 physicians wrote conversation-specific rubric criteria. In practice, domain experts write or review rubrics for high-stakes domains.' },
     ],
     citations: [C.rar, C.health, C.instruct, C.gao, C.judge],
-    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model'],
+    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents'],
   },
   {
     slug: 'expert-vs-crowd-annotation',
@@ -116,7 +116,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Which agreement statistic should I report?', answer: "Cohen's kappa for two annotators on categorical labels; Krippendorff's alpha for more annotators, missing labels, or ordinal and interval data." },
     ],
     citations: [C.snow, C.kappa, C.kripp, C.health],
-    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-much-data-to-fine-tune-a-reasoning-model'],
+    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-much-data-to-fine-tune-a-reasoning-model', '/blog/how-expert-written-benchmarks-are-built'],
   },
   {
     slug: 'synthetic-vs-human-preference-data',

@@ -295,6 +295,7 @@ If you're sizing a new benchmark or wondering whether your current one can actua
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
 - [How much data do you need to fine-tune a reasoning model?](/blog/how-much-data-to-fine-tune-a-reasoning-model)
+- [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
 
 ---
 

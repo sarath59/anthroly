@@ -257,6 +257,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [Does RL with Verifiable Rewards Teach Models New Reasoning, or Just Sharpen What They Already Know?](/blog/does-rlvr-teach-new-reasoning)
 - [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
 - [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
+- [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 
 ---
 

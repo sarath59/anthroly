@@ -202,6 +202,8 @@ If your team is scaling evaluation with LLM judges and needs to know where they 
 - [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
 - [When annotators disagree: is preference disagreement noise or signal?](/blog/annotator-disagreement-in-preference-data)
 - [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
+- [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
+- [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 
 ---
 

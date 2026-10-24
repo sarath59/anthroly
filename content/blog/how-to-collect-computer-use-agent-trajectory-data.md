@@ -210,6 +210,7 @@ If you're building a computer-use or tool-use agent and want to know how much of
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [How many eval items do you need?](/blog/how-many-eval-items-do-you-need)
 - [How do you build an agent benchmark that won't be contaminated or saturated?](/blog/building-contamination-resistant-agent-benchmarks)
+- [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 
 ---
 

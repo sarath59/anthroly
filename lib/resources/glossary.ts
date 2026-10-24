@@ -105,14 +105,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Grader',
     definition:
       'A grader converts an episode into a reward value. It may be a deterministic program, a rubric scored by a model judge, or a human. Graders differ from verifiers mainly in scope: a grader can award partial credit or weight several criteria, whereas a verifier usually returns a binary correct or incorrect decision.',
-    related: [ENV],
+    related: [ENV, '/blog/how-to-evaluate-deep-research-agents'],
   },
   {
     slug: 'llm-as-a-judge',
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {
@@ -173,14 +173,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Data contamination',
     definition:
       'Data contamination occurs when evaluation items, or close paraphrases of them, appear in a model’s pretraining or post-training data, inflating benchmark scores without real capability gains. Environment builders mitigate it by deduplicating training tasks against public benchmarks and holding out freshly written evaluation tasks.',
-    related: [ENV],
+    related: [ENV, '/blog/how-expert-written-benchmarks-are-built'],
   },
   {
     slug: 'agent-trajectory',
     term: 'Agent trajectory',
     definition:
       'An agent trajectory is the full recorded sequence of an agent’s observations, reasoning, tool calls, and environment responses while completing a task. Expert trajectories are used for supervised fine-tuning and as demonstrations, while model-generated trajectories with rewards are the raw material of RL updates.',
-    related: ['/learn/agent-trajectory-data', ENV],
+    related: ['/learn/agent-trajectory-data', ENV, '/blog/how-to-evaluate-deep-research-agents'],
   },
   {
     slug: 'preference-data',
@@ -202,7 +202,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Expert annotation',
     definition:
       'Expert annotation is labeling performed by people with verified domain credentials, such as physicians, lawyers, or PhD scientists, rather than general crowd workers. It costs more per label but is required where correctness depends on specialist knowledge, such as rubric writing for medical answers or grading graduate-level science.',
-    related: ['/expert-data', '/research/compare/expert-vs-crowd-annotation'],
+    related: ['/expert-data', '/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built'],
   },
   {
     slug: 'crowdsourced-annotation',
@@ -240,14 +240,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Gold set',
     definition:
       'A gold set is a collection of items with trusted reference labels, typically adjudicated by senior experts, used to measure annotator accuracy, calibrate model judges, and catch drift in labeling quality. Gold items are often mixed blindly into live annotation queues so performance is measured under normal working conditions.',
-    related: ['/research/compare/expert-vs-crowd-annotation'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built'],
   },
   {
     slug: 'evaluation-set',
     term: 'Evaluation set',
     definition:
       'An evaluation set is a held-out collection of tasks with reference answers or graders, used to measure model capability rather than to train it. Its size determines statistical precision: reported accuracy should carry a confidence interval, and small differences between models are often not significant on a few hundred items.',
-    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator'],
+    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built'],
     source: { label: 'Miller, Adding Error Bars to Evals (arXiv:2411.00640)', url: 'https://arxiv.org/abs/2411.00640' },
   },
   {
