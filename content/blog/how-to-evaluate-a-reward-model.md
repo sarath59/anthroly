@@ -208,6 +208,7 @@ If you're choosing between reward models, or trying to understand why a high-sco
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [Rubric rewards vs. reward models](/research/compare/rubric-rewards-vs-reward-models)
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
+- [Generative vs scalar reward models: should your reward model think before it scores?](/blog/generative-reward-models-vs-scalar-reward-models)
 
 ---
 

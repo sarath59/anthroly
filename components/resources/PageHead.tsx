@@ -73,6 +73,8 @@ export function linkLabel(href: string): string {
     '/blog/how-to-evaluate-deep-research-agents': 'How do you evaluate deep research agents?',
     '/blog/how-to-choose-prompts-for-rlvr-training': 'How do you choose training prompts for RLVR?',
     '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl': 'GRPO vs PPO vs DAPO: which RL algorithm for reasoning?',
+  '/blog/how-tool-use-rl-environments-are-built': 'How are tool-use RL environments built?',
+  '/blog/generative-reward-models-vs-scalar-reward-models': 'Generative vs scalar reward models',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

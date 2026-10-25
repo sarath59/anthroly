@@ -262,6 +262,7 @@ If your team is building SWE training environments and needs expert support for 
 - [RL environments, explained](/learn/rl-environments-explained)
 - [Why private evaluation data is worth more than training data](/learn/evaluation-datasets-contamination)
 - [How Do You Build an Agent Benchmark That Won't Be Contaminated or Saturated?](/blog/building-contamination-resistant-agent-benchmarks)
+- [How are tool-use RL environments built? Simulated APIs, real MCP servers, and state-based verifiers](/blog/how-tool-use-rl-environments-are-built)
 
 ---
 

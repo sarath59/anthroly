@@ -211,6 +211,7 @@ If you're building a computer-use or tool-use agent and want to know how much of
 - [How many eval items do you need?](/blog/how-many-eval-items-do-you-need)
 - [How do you build an agent benchmark that won't be contaminated or saturated?](/blog/building-contamination-resistant-agent-benchmarks)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
+- [How are tool-use RL environments built? Simulated APIs, real MCP servers, and state-based verifiers](/blog/how-tool-use-rl-environments-are-built)
 
 ---
 

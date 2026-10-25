@@ -20,7 +20,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RL environment',
     definition:
       'A reinforcement learning environment is a packaged task setting that gives a model observations, accepts its actions, and returns a reward. For language models it usually bundles a prompt or task, tools or a sandbox the model can act in, and a grader that scores the final state or answer so training can update the policy.',
-    related: [ENV],
+    related: [ENV, '/blog/how-tool-use-rl-environments-are-built'],
   },
   {
     slug: 'training-grade-environment',
@@ -50,7 +50,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLAIF (RL from AI feedback)',
     definition:
       'RLAIF replaces some or all human preference labels with judgments from another language model, which are then used to train a reward model or provide rewards directly. It cuts labeling cost and latency, but inherits the judging model’s biases, so teams typically audit a sample of AI labels against human or expert judgments.',
-    related: ['/research/compare/synthetic-vs-human-preference-data'],
+    related: ['/research/compare/synthetic-vs-human-preference-data', '/blog/generative-reward-models-vs-scalar-reward-models'],
     source: { label: 'Lee et al. (arXiv:2309.00267)', url: 'https://arxiv.org/abs/2309.00267' },
   },
   {
@@ -58,7 +58,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward model',
     definition:
       'A reward model is a neural network, usually initialized from a language model, trained to output a scalar score predicting which response humans would prefer. It stands in for human judgment during RL. Because it is an imperfect proxy, optimizing hard against it can raise reward model scores while true quality falls.',
-    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model'],
+    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/generative-reward-models-vs-scalar-reward-models'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built'],
   },
   {
     slug: 'grader',
@@ -112,7 +112,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {
@@ -180,7 +180,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Agent trajectory',
     definition:
       'An agent trajectory is the full recorded sequence of an agent’s observations, reasoning, tool calls, and environment responses while completing a task. Expert trajectories are used for supervised fine-tuning and as demonstrations, while model-generated trajectories with rewards are the raw material of RL updates.',
-    related: ['/learn/agent-trajectory-data', ENV, '/blog/how-to-evaluate-deep-research-agents'],
+    related: ['/learn/agent-trajectory-data', ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-tool-use-rl-environments-are-built'],
   },
   {
     slug: 'preference-data',

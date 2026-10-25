@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Who writes the rubrics?', answer: 'In HealthBench, 262 physicians wrote conversation-specific rubric criteria. In practice, domain experts write or review rubrics for high-stakes domains.' },
     ],
     citations: [C.rar, C.health, C.instruct, C.gao, C.judge],
-    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents'],
+    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models'],
   },
   {
     slug: 'expert-vs-crowd-annotation',
