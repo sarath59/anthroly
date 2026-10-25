@@ -193,6 +193,7 @@ If your RLVR runs are plateauing because the pool is saturated or the hard tail 
 - [How much data do you need to fine-tune a reasoning model?](/blog/how-much-data-to-fine-tune-a-reasoning-model)
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
+- [Why does entropy collapse in RL for reasoning models?](/blog/why-does-entropy-collapse-in-rl-for-reasoning-models)
 
 ---
 

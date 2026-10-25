@@ -156,6 +156,7 @@ If your team is correcting an LLM judge or a vendor pool and wants a clean set y
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [Does reward model accuracy predict RLHF results? How to evaluate a reward model](/blog/how-to-evaluate-a-reward-model)
 - [When annotators disagree: is preference disagreement noise or signal?](/blog/annotator-disagreement-in-preference-data)
+- [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 
 ---
 

@@ -185,6 +185,7 @@ If your preference data has more disagreement than you can explain, or you need 
 - [RLHF preference data, explained](/learn/rlhf-preference-data)
 - [Post-training glossary](/research/glossary)
 - [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
+- [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 
 ---
 

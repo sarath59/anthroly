@@ -173,6 +173,8 @@ If you are choosing an RL recipe and want the data side to stop being the bottle
 - [Where should step-level rewards for AI agents come from?](/blog/step-level-rewards-for-ai-agents)
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
+- [Why does entropy collapse in RL for reasoning models?](/blog/why-does-entropy-collapse-in-rl-for-reasoning-models)
+- [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 
 ---
 

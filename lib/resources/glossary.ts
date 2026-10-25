@@ -42,7 +42,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLHF (reinforcement learning from human feedback)',
     definition:
       'RLHF fine-tunes a model with reinforcement learning against a reward model trained on human preference comparisons. Annotators rank or compare model outputs, a reward model learns to predict those preferences, and the policy is optimized to score highly, usually with a KL penalty that keeps it close to the starting model.',
-    related: ['/research/compare/rlvr-vs-rlhf'],
+    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
     source: { label: 'Ouyang et al. (arXiv:2203.02155)', url: 'https://arxiv.org/abs/2203.02155' },
   },
   {
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training'],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
@@ -144,7 +144,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'DPO (direct preference optimization)',
     definition:
       'DPO trains a language model directly on preference pairs with a classification-style loss, skipping the separate reward model and RL loop used in RLHF. Rafailov et al. showed the optimal RLHF policy can be expressed in closed form, so preferences can be fit directly while keeping an implicit KL constraint.',
-    related: ['/research/compare/rlvr-vs-rlhf'],
+    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
     source: { label: 'Rafailov et al. (arXiv:2305.18290)', url: 'https://arxiv.org/abs/2305.18290' },
   },
   {
@@ -152,14 +152,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'KL penalty',
     definition:
       'A KL penalty adds the Kullback-Leibler divergence between the trained policy and a reference model to the RL objective, discouraging the policy from drifting far from its starting behavior. It limits reward hacking and preserves fluency, at the cost of slowing how much the policy can change per unit of reward.',
-    related: [RH, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl'],
+    related: [RH, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models'],
   },
   {
     slug: 'pass-at-k',
     term: 'pass@k',
     definition:
       'pass@k is the probability that at least one of k sampled attempts solves a task, typically estimated from n ≥ k samples with an unbiased combinatorial estimator. In RL environment design, per-task pass rates identify tasks that are always or never solved, which give no learning signal under group-relative methods.',
-    related: [ENV, '/research/eval-sample-size-calculator', '/blog/how-to-choose-prompts-for-rlvr-training'],
+    related: [ENV, '/research/eval-sample-size-calculator', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models'],
   },
   {
     slug: 'pass-rate-calibration',
@@ -187,7 +187,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Preference data',
     definition:
       'Preference data consists of a prompt with two or more candidate responses and a label saying which is better, sometimes with a strength or rationale. It trains reward models for RLHF and is consumed directly by methods such as DPO. Label quality depends heavily on annotator expertise and guidelines.',
-    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data'],
+    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
   },
   {
     slug: 'synthetic-data',
