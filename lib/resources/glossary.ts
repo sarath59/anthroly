@@ -50,7 +50,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLAIF (RL from AI feedback)',
     definition:
       'RLAIF replaces some or all human preference labels with judgments from another language model, which are then used to train a reward model or provide rewards directly. It cuts labeling cost and latency, but inherits the judging model’s biases, so teams typically audit a sample of AI labels against human or expert judgments.',
-    related: ['/research/compare/synthetic-vs-human-preference-data', '/blog/generative-reward-models-vs-scalar-reward-models'],
+    related: ['/research/compare/synthetic-vs-human-preference-data', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
     source: { label: 'Lee et al. (arXiv:2309.00267)', url: 'https://arxiv.org/abs/2309.00267' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -74,7 +74,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward overoptimization',
     definition:
       'Reward overoptimization is the measured pattern where optimizing a policy against a proxy reward model first improves true quality and then degrades it as optimization continues. Gao et al. characterized how this gap scales with reward model size and with how far the policy drifts from its initialization, measured by KL divergence.',
-    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model'],
+    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -112,7 +112,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models'],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
@@ -144,7 +144,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'DPO (direct preference optimization)',
     definition:
       'DPO trains a language model directly on preference pairs with a classification-style loss, skipping the separate reward model and RL loop used in RLHF. Rafailov et al. showed the optimal RLHF policy can be expressed in closed form, so preferences can be fit directly while keeping an implicit KL constraint.',
-    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
+    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
     source: { label: 'Rafailov et al. (arXiv:2305.18290)', url: 'https://arxiv.org/abs/2305.18290' },
   },
   {
@@ -263,7 +263,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Constitutional AI',
     definition:
       'Constitutional AI is Anthropic’s method for training a harmless assistant using a written list of principles. The model critiques and revises its own outputs against the principles for supervised learning, then an AI model labels preferences according to them for RL, reducing the need for human harmlessness labels.',
-    related: ['/research/compare/synthetic-vs-human-preference-data'],
+    related: ['/research/compare/synthetic-vs-human-preference-data', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
     source: { label: 'Bai et al. (arXiv:2212.08073)', url: 'https://arxiv.org/abs/2212.08073' },
   },
 ];

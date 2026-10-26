@@ -175,6 +175,7 @@ If you are choosing an RL recipe and want the data side to stop being the bottle
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
 - [Why does entropy collapse in RL for reasoning models?](/blog/why-does-entropy-collapse-in-rl-for-reasoning-models)
 - [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
+- [Why does RLHF make models verbose? Length bias in reward models, DPO and GRPO](/blog/why-does-rlhf-make-models-verbose-length-bias)
 
 ---
 

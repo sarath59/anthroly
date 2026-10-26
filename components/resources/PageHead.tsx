@@ -79,6 +79,8 @@ export function linkLabel(href: string): string {
     '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough': 'DPO vs PPO and GRPO: when is offline preference optimization enough?',
     '/blog/how-to-quality-control-expert-data-labeling': 'How do you quality-control expert data labeling?',
     '/blog/how-to-benchmark-ai-agents-on-ml-research': 'How do you benchmark AI agents on ML research?',
+    '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels': 'RLAIF vs RLHF: can AI feedback replace human preference labels?',
+    '/blog/why-does-rlhf-make-models-verbose-length-bias': 'Why does RLHF make models verbose?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

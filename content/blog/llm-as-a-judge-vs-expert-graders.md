@@ -205,6 +205,7 @@ If your team is scaling evaluation with LLM judges and needs to know where they 
 - [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [Generative vs scalar reward models: should your reward model think before it scores?](/blog/generative-reward-models-vs-scalar-reward-models)
+- [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
 
 ---
 

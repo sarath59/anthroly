@@ -158,6 +158,7 @@ If your team is correcting an LLM judge or a vendor pool and wants a clean set y
 - [When annotators disagree: is preference disagreement noise or signal?](/blog/annotator-disagreement-in-preference-data)
 - [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [How do you quality-control expert data labeling? Gold items, audits and label-error detection](/blog/how-to-quality-control-expert-data-labeling)
+- [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
 
 ---
 

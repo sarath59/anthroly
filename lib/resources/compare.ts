@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Who writes the rubrics?', answer: 'In HealthBench, 262 physicians wrote conversation-specific rubric criteria. In practice, domain experts write or review rubrics for high-stakes domains.' },
     ],
     citations: [C.rar, C.health, C.instruct, C.gao, C.judge],
-    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models'],
+    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
   },
   {
     slug: 'expert-vs-crowd-annotation',
@@ -140,7 +140,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'What is Constitutional AI?', answer: 'An Anthropic method where a model critiques and revises its outputs against written principles, and AI-generated preference labels based on those principles are used for RL.' },
     ],
     citations: [C.rlaif, C.ultra, C.cai, C.judge, C.selfinstruct, C.instruct],
-    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data', '/blog/annotator-disagreement-in-preference-data'],
+    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data', '/blog/annotator-disagreement-in-preference-data', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
   },
   {
     slug: 'process-vs-outcome-rewards',

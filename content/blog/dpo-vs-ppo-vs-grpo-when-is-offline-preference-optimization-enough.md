@@ -138,6 +138,7 @@ If you are deciding between DPO and an RL pipeline and want the comparison to be
 - [When annotators disagree: preference disagreement as signal](/blog/annotator-disagreement-in-preference-data)
 - [How to evaluate a reward model before you train](/blog/how-to-evaluate-a-reward-model)
 - [RLVR vs RLHF](/research/compare/rlvr-vs-rlhf)
+- [Why does RLHF make models verbose? Length bias in reward models, DPO and GRPO](/blog/why-does-rlhf-make-models-verbose-length-bias)
 
 ---
 
