@@ -116,7 +116,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Which agreement statistic should I report?', answer: "Cohen's kappa for two annotators on categorical labels; Krippendorff's alpha for more annotators, missing labels, or ordinal and interval data." },
     ],
     citations: [C.snow, C.kappa, C.kripp, C.health],
-    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-much-data-to-fine-tune-a-reasoning-model', '/blog/how-expert-written-benchmarks-are-built'],
+    related: ['/expert-data', '/research/glossary#inter-annotator-agreement', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-much-data-to-fine-tune-a-reasoning-model', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-quality-control-expert-data-labeling'],
   },
   {
     slug: 'synthetic-vs-human-preference-data',

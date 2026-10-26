@@ -209,6 +209,7 @@ If you are building or training a research agent and want an evaluation you can 
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
 - [Rubric rewards vs. reward models](/research/compare/rubric-rewards-vs-reward-models)
+- [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
 
 ---
 

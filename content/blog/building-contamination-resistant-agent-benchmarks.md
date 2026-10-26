@@ -273,6 +273,7 @@ If your team is building or using agent benchmarks and needs evaluation rigor th
 - [How many eval items do you need? Error bars and power for LLM evals](/blog/how-many-eval-items-do-you-need)
 - [How are expert-written benchmarks like GPQA and Humanity's Last Exam built?](/blog/how-expert-written-benchmarks-are-built)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
+- [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
 
 ---
 

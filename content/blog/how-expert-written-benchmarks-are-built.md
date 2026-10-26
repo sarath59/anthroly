@@ -208,6 +208,8 @@ If you are building an internal eval or want to know how much of your benchmark 
 - [When annotators disagree: noise or signal?](/blog/annotator-disagreement-in-preference-data)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
+- [How do you quality-control expert data labeling? Gold items, audits and label-error detection](/blog/how-to-quality-control-expert-data-labeling)
+- [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
 
 ---
 

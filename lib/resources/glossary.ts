@@ -112,7 +112,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {
@@ -173,7 +173,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Data contamination',
     definition:
       'Data contamination occurs when evaluation items, or close paraphrases of them, appear in a model’s pretraining or post-training data, inflating benchmark scores without real capability gains. Environment builders mitigate it by deduplicating training tasks against public benchmarks and holding out freshly written evaluation tasks.',
-    related: [ENV, '/blog/how-expert-written-benchmarks-are-built'],
+    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
   },
   {
     slug: 'agent-trajectory',
@@ -202,7 +202,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Expert annotation',
     definition:
       'Expert annotation is labeling performed by people with verified domain credentials, such as physicians, lawyers, or PhD scientists, rather than general crowd workers. It costs more per label but is required where correctness depends on specialist knowledge, such as rubric writing for medical answers or grading graduate-level science.',
-    related: ['/expert-data', '/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built'],
+    related: ['/expert-data', '/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-quality-control-expert-data-labeling'],
   },
   {
     slug: 'crowdsourced-annotation',
@@ -217,7 +217,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Inter-annotator agreement (IAA)',
     definition:
       'Inter-annotator agreement measures how consistently independent annotators assign the same labels to the same items. Raw percent agreement overstates reliability because some agreement happens by chance, so chance-corrected statistics such as Cohen’s kappa, Fleiss’ kappa, or Krippendorff’s alpha are standard for reporting label quality.',
-    related: ['/research/compare/expert-vs-crowd-annotation', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/research/eval-sample-size-calculator', '/blog/annotator-disagreement-in-preference-data', '/blog/how-to-quality-control-expert-data-labeling'],
   },
   {
     slug: 'cohens-kappa',
@@ -240,14 +240,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Gold set',
     definition:
       'A gold set is a collection of items with trusted reference labels, typically adjudicated by senior experts, used to measure annotator accuracy, calibrate model judges, and catch drift in labeling quality. Gold items are often mixed blindly into live annotation queues so performance is measured under normal working conditions.',
-    related: ['/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built'],
+    related: ['/research/compare/expert-vs-crowd-annotation', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-quality-control-expert-data-labeling'],
   },
   {
     slug: 'evaluation-set',
     term: 'Evaluation set',
     definition:
       'An evaluation set is a held-out collection of tasks with reference answers or graders, used to measure model capability rather than to train it. Its size determines statistical precision: reported accuracy should carry a confidence interval, and small differences between models are often not significant on a few hundred items.',
-    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built'],
+    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
     source: { label: 'Miller, Adding Error Bars to Evals (arXiv:2411.00640)', url: 'https://arxiv.org/abs/2411.00640' },
   },
   {
@@ -255,7 +255,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Confidence interval for eval accuracy',
     definition:
       'A confidence interval for eval accuracy gives a range likely to contain a model’s true success rate. With n independent items and observed accuracy p, the normal approximation is p ± z·√(p(1−p)/n); the Wilson score interval behaves better near 0% or 100% or with small n.',
-    related: ['/research/eval-sample-size-calculator'],
+    related: ['/research/eval-sample-size-calculator', '/blog/how-to-quality-control-expert-data-labeling'],
     source: { label: 'Wikipedia: Binomial proportion confidence interval', url: 'https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval' },
   },
   {
