@@ -34,7 +34,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLVR (reinforcement learning with verifiable rewards)',
     definition:
       'RLVR trains a language model with rewards computed by a programmatic check instead of a learned reward model, for example exact-match math answers, unit tests passing, or constraint satisfaction. The term was popularized by the Tülu 3 report. It reduces reward-model exploitation but only works where correctness can be checked automatically.',
-    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training'],
+    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/how-are-theorem-proving-rl-environments-built'],
     source: { label: 'Lambert et al., Tülu 3 (arXiv:2411.15124)', url: 'https://arxiv.org/abs/2411.15124' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built'],
   },
   {
     slug: 'grader',
@@ -120,7 +120,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Outcome reward (ORM)',
     definition:
       'An outcome reward scores only the final answer or end state of an episode, ignoring the intermediate steps. Outcome reward models are cheap to label and hard to argue with, but a correct final answer can follow flawed reasoning, and sparse outcome signals make credit assignment harder on long, multi-step tasks.',
-    related: ['/research/compare/process-vs-outcome-rewards'],
+    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
     source: { label: 'Uesato et al. (arXiv:2211.14275)', url: 'https://arxiv.org/abs/2211.14275' },
   },
   {
@@ -128,7 +128,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Process reward (PRM)',
     definition:
       'A process reward scores each intermediate step of a solution rather than only the final answer. Lightman et al. trained process reward models on PRM800K, roughly 800,000 human step-level labels, and found process supervision outperformed outcome supervision for selecting correct solutions on the MATH benchmark.',
-    related: ['/research/compare/process-vs-outcome-rewards'],
+    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
     source: { label: "Lightman et al., Let's Verify Step by Step (arXiv:2305.20050)", url: 'https://arxiv.org/abs/2305.20050' },
   },
   {
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
@@ -173,14 +173,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Data contamination',
     definition:
       'Data contamination occurs when evaluation items, or close paraphrases of them, appear in a model’s pretraining or post-training data, inflating benchmark scores without real capability gains. Environment builders mitigate it by deduplicating training tasks against public benchmarks and holding out freshly written evaluation tasks.',
-    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
+    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-are-theorem-proving-rl-environments-built'],
   },
   {
     slug: 'agent-trajectory',
     term: 'Agent trajectory',
     definition:
       'An agent trajectory is the full recorded sequence of an agent’s observations, reasoning, tool calls, and environment responses while completing a task. Expert trajectories are used for supervised fine-tuning and as demonstrations, while model-generated trajectories with rewards are the raw material of RL updates.',
-    related: ['/learn/agent-trajectory-data', ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-tool-use-rl-environments-are-built'],
+    related: ['/learn/agent-trajectory-data', ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-tool-use-rl-environments-are-built', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
   },
   {
     slug: 'preference-data',

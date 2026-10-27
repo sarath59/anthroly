@@ -164,6 +164,7 @@ If your RL runs are flattening early and you want to know whether the problem is
 - [How reliable are verifiers in RLVR?](/blog/how-reliable-are-rlvr-verifiers)
 - [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [Glossary: pass@k](/research/glossary#pass-at-k)
+- [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 
 ---
 

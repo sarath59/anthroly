@@ -83,6 +83,8 @@ export function linkLabel(href: string): string {
     '/blog/why-does-rlhf-make-models-verbose-length-bias': 'Why does RLHF make models verbose?',
     '/blog/how-many-rl-environments-do-you-need-to-train-an-agent': 'How many RL environments do you need to train an agent?',
     '/blog/how-to-prevent-reward-model-overoptimization': 'How do you prevent reward model overoptimization?',
+    '/blog/how-are-theorem-proving-rl-environments-built': 'How are theorem-proving RL environments built?',
+    '/blog/why-is-multi-turn-rl-for-llm-agents-unstable': 'Why is multi-turn RL for LLM agents unstable?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

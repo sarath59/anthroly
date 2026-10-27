@@ -210,6 +210,7 @@ If you are building an internal eval or want to know how much of your benchmark 
 - [Expert vs. crowd annotation](/research/compare/expert-vs-crowd-annotation)
 - [How do you quality-control expert data labeling? Gold items, audits and label-error detection](/blog/how-to-quality-control-expert-data-labeling)
 - [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
+- [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
 
 ---
 

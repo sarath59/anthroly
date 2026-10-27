@@ -68,7 +68,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Is RLVR immune to reward hacking?', answer: 'No. RLVR removes reward-model exploitation but a policy can still exploit verifier gaps, for example by satisfying weak tests without solving the task. Verifier quality bounds RLVR quality.' },
     ],
     citations: [C.tulu, C.r1, C.christiano, C.instruct, C.gao],
-    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent'],
+    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-theorem-proving-rl-environments-built'],
   },
   {
     slug: 'rubric-rewards-vs-reward-models',
@@ -164,6 +164,6 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Did DeepSeek-R1 use a process reward model?', answer: 'The DeepSeek-R1 report describes rule-based accuracy and format rewards for reasoning RL and reports that it did not adopt a neural process reward model, citing reward hacking and annotation cost.' },
     ],
     citations: [C.lightman, C.uesato, C.r1, C.grpo, C.skalse],
-    related: [ENV, '/research/glossary#process-reward', '/research/glossary#outcome-reward'],
+    related: [ENV, '/research/glossary#process-reward', '/research/glossary#outcome-reward', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
   },
 ];

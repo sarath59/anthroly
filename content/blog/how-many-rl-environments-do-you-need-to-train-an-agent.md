@@ -229,6 +229,7 @@ If you are deciding whether your next quarter should buy more environments, more
 - [How do you build an agent benchmark that won't be contaminated or saturated?](/blog/building-contamination-resistant-agent-benchmarks)
 - [How do you choose training prompts for RLVR?](/blog/how-to-choose-prompts-for-rlvr-training)
 - [Glossary: RL environment](/research/glossary#reinforcement-learning-environment)
+- [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 
 ---
 
