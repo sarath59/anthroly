@@ -20,14 +20,14 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RL environment',
     definition:
       'A reinforcement learning environment is a packaged task setting that gives a model observations, accepts its actions, and returns a reward. For language models it usually bundles a prompt or task, tools or a sandbox the model can act in, and a grader that scores the final state or answer so training can update the policy.',
-    related: [ENV, '/blog/how-tool-use-rl-environments-are-built'],
+    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent'],
   },
   {
     slug: 'training-grade-environment',
     term: 'Training-grade environment',
     definition:
       'A training-grade environment is an RL environment fit to produce useful gradient signal, not just a score. It has tasks in a learnable difficulty band for the target model, graders with low false-positive and false-negative rates, reproducible execution, and no overlap with the evaluation sets used to report results.',
-    related: [ENV],
+    related: [ENV, '/blog/how-many-rl-environments-do-you-need-to-train-an-agent'],
   },
   {
     slug: 'rlvr',
@@ -58,7 +58,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward model',
     definition:
       'A reward model is a neural network, usually initialized from a language model, trained to output a scalar score predicting which response humans would prefer. It stands in for human judgment during RL. Because it is an imperfect proxy, optimizing hard against it can raise reward model scores while true quality falls.',
-    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/generative-reward-models-vs-scalar-reward-models'],
+    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-prevent-reward-model-overoptimization'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -74,7 +74,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward overoptimization',
     definition:
       'Reward overoptimization is the measured pattern where optimizing a policy against a proxy reward model first improves true quality and then degrades it as optimization continues. Gao et al. characterized how this gap scales with reward model size and with how far the policy drifts from its initialization, measured by KL divergence.',
-    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
+    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -82,7 +82,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: "Goodhart's law",
     definition:
       "Goodhart's law is the observation that when a measure becomes a target, it stops being a good measure. In post-training it explains why rewards, benchmarks, and rubric scores drift away from the qualities they were meant to track once a model is optimized directly against them, and why held-out evaluation remains necessary.",
-    related: [RH],
+    related: [RH, '/blog/how-to-prevent-reward-model-overoptimization'],
     source: { label: "Wikipedia: Goodhart's law", url: 'https://en.wikipedia.org/wiki/Goodhart%27s_law' },
   },
   {
@@ -144,7 +144,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'DPO (direct preference optimization)',
     definition:
       'DPO trains a language model directly on preference pairs with a classification-style loss, skipping the separate reward model and RL loop used in RLHF. Rafailov et al. showed the optimal RLHF policy can be expressed in closed form, so preferences can be fit directly while keeping an implicit KL constraint.',
-    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
+    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization'],
     source: { label: 'Rafailov et al. (arXiv:2305.18290)', url: 'https://arxiv.org/abs/2305.18290' },
   },
   {
@@ -152,7 +152,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'KL penalty',
     definition:
       'A KL penalty adds the Kullback-Leibler divergence between the trained policy and a reference model to the RL objective, discouraging the policy from drifting far from its starting behavior. It limits reward hacking and preserves fluency, at the cost of slowing how much the policy can change per unit of reward.',
-    related: [RH, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models'],
+    related: [RH, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/how-to-prevent-reward-model-overoptimization'],
   },
   {
     slug: 'pass-at-k',

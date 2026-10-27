@@ -293,6 +293,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How reliable are verifiers in RLVR? False negatives and master keys](/blog/how-reliable-are-rlvr-verifiers)
 - [How do you choose training prompts for RLVR? Pass-rate filtering and difficulty curricula](/blog/how-to-choose-prompts-for-rlvr-training)
 - [How are tool-use RL environments built? Simulated APIs, real MCP servers, and state-based verifiers](/blog/how-tool-use-rl-environments-are-built)
+- [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 
 ---
 

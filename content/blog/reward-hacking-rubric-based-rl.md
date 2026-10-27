@@ -260,6 +260,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 - [Generative vs scalar reward models: should your reward model think before it scores?](/blog/generative-reward-models-vs-scalar-reward-models)
+- [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
 
 ---
 

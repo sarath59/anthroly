@@ -81,6 +81,8 @@ export function linkLabel(href: string): string {
     '/blog/how-to-benchmark-ai-agents-on-ml-research': 'How do you benchmark AI agents on ML research?',
     '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels': 'RLAIF vs RLHF: can AI feedback replace human preference labels?',
     '/blog/why-does-rlhf-make-models-verbose-length-bias': 'Why does RLHF make models verbose?',
+    '/blog/how-many-rl-environments-do-you-need-to-train-an-agent': 'How many RL environments do you need to train an agent?',
+    '/blog/how-to-prevent-reward-model-overoptimization': 'How do you prevent reward model overoptimization?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

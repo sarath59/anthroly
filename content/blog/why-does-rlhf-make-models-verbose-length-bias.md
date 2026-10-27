@@ -191,6 +191,7 @@ If verbosity is creeping into your post-training runs, [book 15 minutes with us]
 - [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
 - [Glossary: reward hacking](/research/glossary#reward-hacking)
 - [Rubric rewards vs reward models](/research/compare/rubric-rewards-vs-reward-models)
+- [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
 
 ---
 

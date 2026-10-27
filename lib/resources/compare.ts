@@ -68,7 +68,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Is RLVR immune to reward hacking?', answer: 'No. RLVR removes reward-model exploitation but a policy can still exploit verifier gaps, for example by satisfying weak tests without solving the task. Verifier quality bounds RLVR quality.' },
     ],
     citations: [C.tulu, C.r1, C.christiano, C.instruct, C.gao],
-    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
+    related: [RH, ENV, '/research/glossary#rlvr', '/research/glossary#rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent'],
   },
   {
     slug: 'rubric-rewards-vs-reward-models',
@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Who writes the rubrics?', answer: 'In HealthBench, 262 physicians wrote conversation-specific rubric criteria. In practice, domain experts write or review rubrics for high-stakes domains.' },
     ],
     citations: [C.rar, C.health, C.instruct, C.gao, C.judge],
-    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/why-does-rlhf-make-models-verbose-length-bias'],
+    related: [RH, '/research/glossary#rubric-based-reward', '/research/glossary#reward-model', '/blog/how-to-evaluate-a-reward-model', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization'],
   },
   {
     slug: 'expert-vs-crowd-annotation',
