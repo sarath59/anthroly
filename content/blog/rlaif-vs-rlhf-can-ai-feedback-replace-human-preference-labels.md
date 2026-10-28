@@ -188,6 +188,7 @@ If you are deciding how much of your preference pipeline to hand to an AI labele
 - [Why does RLHF make models verbose?](/blog/why-does-rlhf-make-models-verbose-length-bias)
 - [Glossary: RLAIF](/research/glossary#rlaif)
 - [Synthetic vs human preference data](/research/compare/synthetic-vs-human-preference-data)
+- [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
 
 ---
 

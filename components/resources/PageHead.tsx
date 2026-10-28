@@ -85,6 +85,8 @@ export function linkLabel(href: string): string {
     '/blog/how-to-prevent-reward-model-overoptimization': 'How do you prevent reward model overoptimization?',
     '/blog/how-are-theorem-proving-rl-environments-built': 'How are theorem-proving RL environments built?',
     '/blog/why-is-multi-turn-rl-for-llm-agents-unstable': 'Why is multi-turn RL for LLM agents unstable?',
+    '/blog/which-agent-trajectories-should-you-fine-tune-on': 'Which agent trajectories should you fine-tune on?',
+    '/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance': 'How do AI labs audit training data licensing and provenance?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

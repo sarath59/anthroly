@@ -122,6 +122,7 @@ If your team is choosing between process reward approaches for an agent and need
 - [How do you collect training data for computer-use agents?](/blog/how-to-collect-computer-use-agent-trajectory-data)
 - [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 - [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
+- [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
 
 ---
 

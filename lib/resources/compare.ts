@@ -140,7 +140,7 @@ export const COMPARISONS: Comparison[] = [
       { question: 'What is Constitutional AI?', answer: 'An Anthropic method where a model critiques and revises its outputs against written principles, and AI-generated preference labels based on those principles are used for RL.' },
     ],
     citations: [C.rlaif, C.ultra, C.cai, C.judge, C.selfinstruct, C.instruct],
-    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data', '/blog/annotator-disagreement-in-preference-data', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
+    related: ['/learn/rlhf-preference-data', '/research/glossary#rlaif', '/research/glossary#synthetic-data', '/blog/annotator-disagreement-in-preference-data', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels', '/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance'],
   },
   {
     slug: 'process-vs-outcome-rewards',
@@ -164,6 +164,6 @@ export const COMPARISONS: Comparison[] = [
       { question: 'Did DeepSeek-R1 use a process reward model?', answer: 'The DeepSeek-R1 report describes rule-based accuracy and format rewards for reasoning RL and reports that it did not adopt a neural process reward model, citing reward hacking and annotation cost.' },
     ],
     citations: [C.lightman, C.uesato, C.r1, C.grpo, C.skalse],
-    related: [ENV, '/research/glossary#process-reward', '/research/glossary#outcome-reward', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
+    related: [ENV, '/research/glossary#process-reward', '/research/glossary#outcome-reward', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/which-agent-trajectories-should-you-fine-tune-on'],
   },
 ];

@@ -163,6 +163,8 @@ If you want a second set of expert eyes on a dataset or an eval before it shapes
 - [How do you benchmark AI agents on ML research?](/blog/how-to-benchmark-ai-agents-on-ml-research)
 - [Glossary: gold set](/research/glossary#gold-set)
 - [Expert vs crowd annotation](/research/compare/expert-vs-crowd-annotation)
+- [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
+- [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
 
 ---
 
