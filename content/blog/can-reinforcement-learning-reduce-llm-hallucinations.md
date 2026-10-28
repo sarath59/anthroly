@@ -112,6 +112,7 @@ R(y \mid x) = \frac{F}{T + 1} + \lambda \log(1 + F) + \mu \cdot \mathbf{1}(y \te
 $$
 
 where $F$ is the number of supported claims and $T$ the total claims.
+
 3. **Being right about the wrong thing.** The same paper describes a factual, detailed answer that ignored the question. Precision and detail can both be maxed by reciting a related encyclopedia article, which is why relevance needs its own term.
 4. **Hedging instead of abstaining.** In long-form answers a model can wrap every claim in qualifiers. If the claim extractor drops hedged claims, they vanish from the precision denominator and hedging becomes free. Graders need an explicit rule for what a hedge counts as.
 5. **Mismatched thresholds.** A policy trained against one implicit confidence threshold and evaluated against another will look either reckless or timid. If the reward is ternary with a -1 penalty, the implied threshold is $t = 0.5$; state it in the eval too.
