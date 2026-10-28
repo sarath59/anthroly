@@ -262,6 +262,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [Generative vs scalar reward models: should your reward model think before it scores?](/blog/generative-reward-models-vs-scalar-reward-models)
 - [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
 - [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
+- [Can reinforcement learning reduce LLM hallucinations? Abstention rewards and calibration](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
 
 ---
 

@@ -20,7 +20,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RL environment',
     definition:
       'A reinforcement learning environment is a packaged task setting that gives a model observations, accepts its actions, and returns a reward. For language models it usually bundles a prompt or task, tools or a sandbox the model can act in, and a grader that scores the final state or answer so training can update the policy.',
-    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent'],
+    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-web-and-computer-use-rl-environments-built'],
   },
   {
     slug: 'training-grade-environment',
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations'],
   },
   {
     slug: 'grader',

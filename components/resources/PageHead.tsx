@@ -87,6 +87,8 @@ export function linkLabel(href: string): string {
     '/blog/why-is-multi-turn-rl-for-llm-agents-unstable': 'Why is multi-turn RL for LLM agents unstable?',
     '/blog/which-agent-trajectories-should-you-fine-tune-on': 'Which agent trajectories should you fine-tune on?',
     '/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance': 'How do AI labs audit training data licensing and provenance?',
+    '/blog/can-reinforcement-learning-reduce-llm-hallucinations': 'Can reinforcement learning reduce LLM hallucinations?',
+    '/blog/how-are-web-and-computer-use-rl-environments-built': 'How are web and computer-use RL environments built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',
