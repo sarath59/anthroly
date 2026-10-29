@@ -186,6 +186,7 @@ If you are scaling tool-use RL and want environments you can trust, [book 15 min
 - [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 - [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
+- [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 
 ---
 

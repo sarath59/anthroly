@@ -295,6 +295,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How are tool-use RL environments built? Simulated APIs, real MCP servers, and state-based verifiers](/blog/how-tool-use-rl-environments-are-built)
 - [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
+- [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 
 ---
 

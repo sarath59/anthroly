@@ -265,6 +265,7 @@ If your team is building SWE training environments and needs expert support for 
 - [How are tool-use RL environments built? Simulated APIs, real MCP servers, and state-based verifiers](/blog/how-tool-use-rl-environments-are-built)
 - [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 - [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
+- [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 
 ---
 

@@ -89,6 +89,8 @@ export function linkLabel(href: string): string {
     '/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance': 'How do AI labs audit training data licensing and provenance?',
     '/blog/can-reinforcement-learning-reduce-llm-hallucinations': 'Can reinforcement learning reduce LLM hallucinations?',
     '/blog/how-are-web-and-computer-use-rl-environments-built': 'How are web and computer-use RL environments built?',
+    '/blog/how-are-text-to-sql-rl-environments-built': 'How are text-to-SQL RL environments built?',
+    '/blog/how-to-evaluate-ai-on-real-professional-work': 'How do you evaluate AI on real professional work?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

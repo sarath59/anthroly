@@ -178,6 +178,7 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [GRPO vs PPO vs DAPO: which RL algorithm should you use to train a reasoning model?](/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl)
 - [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
 - [Can reinforcement learning reduce LLM hallucinations? Abstention rewards and calibration](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
+- [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 
 ---
 

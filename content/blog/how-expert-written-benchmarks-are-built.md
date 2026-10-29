@@ -212,6 +212,7 @@ If you are building an internal eval or want to know how much of your benchmark 
 - [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
 - [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
 - [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
+- [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
 
 ---
 

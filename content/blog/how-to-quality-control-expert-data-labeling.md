@@ -165,6 +165,8 @@ If you want a second set of expert eyes on a dataset or an eval before it shapes
 - [Expert vs crowd annotation](/research/compare/expert-vs-crowd-annotation)
 - [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
 - [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
+- [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
+- [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
 
 ---
 

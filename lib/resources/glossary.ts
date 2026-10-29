@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built'],
   },
   {
     slug: 'grader',
@@ -247,7 +247,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Evaluation set',
     definition:
       'An evaluation set is a held-out collection of tasks with reference answers or graders, used to measure model capability rather than to train it. Its size determines statistical precision: reported accuracy should carry a confidence interval, and small differences between models are often not significant on a few hundred items.',
-    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research'],
+    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-to-evaluate-ai-on-real-professional-work'],
     source: { label: 'Miller, Adding Error Bars to Evals (arXiv:2411.00640)', url: 'https://arxiv.org/abs/2411.00640' },
   },
   {
