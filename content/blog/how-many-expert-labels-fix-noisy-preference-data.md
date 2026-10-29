@@ -159,6 +159,7 @@ If your team is correcting an LLM judge or a vendor pool and wants a clean set y
 - [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [How do you quality-control expert data labeling? Gold items, audits and label-error detection](/blog/how-to-quality-control-expert-data-labeling)
 - [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
+- [How do you build multilingual preference data for RLHF?](/blog/how-to-build-multilingual-preference-data-for-rlhf)
 
 ---
 

@@ -189,6 +189,7 @@ If you are deciding how much of your preference pipeline to hand to an AI labele
 - [Glossary: RLAIF](/research/glossary#rlaif)
 - [Synthetic vs human preference data](/research/compare/synthetic-vs-human-preference-data)
 - [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
+- [How do you build multilingual preference data for RLHF?](/blog/how-to-build-multilingual-preference-data-for-rlhf)
 
 ---
 

@@ -211,6 +211,7 @@ If you're choosing between reward models, or trying to understand why a high-sco
 - [Generative vs scalar reward models: should your reward model think before it scores?](/blog/generative-reward-models-vs-scalar-reward-models)
 - [Why does RLHF make models verbose? Length bias in reward models, DPO and GRPO](/blog/why-does-rlhf-make-models-verbose-length-bias)
 - [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
+- [How do you build multilingual preference data for RLHF?](/blog/how-to-build-multilingual-preference-data-for-rlhf)
 
 ---
 

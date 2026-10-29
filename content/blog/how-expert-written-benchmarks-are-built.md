@@ -213,6 +213,7 @@ If you are building an internal eval or want to know how much of your benchmark 
 - [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
 - [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
 - [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
+- [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 
 ---
 

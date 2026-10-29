@@ -91,6 +91,8 @@ export function linkLabel(href: string): string {
     '/blog/how-are-web-and-computer-use-rl-environments-built': 'How are web and computer-use RL environments built?',
     '/blog/how-are-text-to-sql-rl-environments-built': 'How are text-to-SQL RL environments built?',
     '/blog/how-to-evaluate-ai-on-real-professional-work': 'How do you evaluate AI on real professional work?',
+    '/blog/how-are-chemistry-and-biology-rl-environments-built': 'How are chemistry and biology RL environments built?',
+    '/blog/how-to-build-multilingual-preference-data-for-rlhf': 'How do you build multilingual preference data for RLHF?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

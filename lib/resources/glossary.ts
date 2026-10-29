@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built'],
   },
   {
     slug: 'grader',
@@ -187,7 +187,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Preference data',
     definition:
       'Preference data consists of a prompt with two or more candidate responses and a label saying which is better, sometimes with a strength or rationale. It trains reward models for RLHF and is consumed directly by methods such as DPO. Label quality depends heavily on annotator expertise and guidelines.',
-    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
+    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-to-build-multilingual-preference-data-for-rlhf'],
   },
   {
     slug: 'synthetic-data',

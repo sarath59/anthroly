@@ -248,6 +248,7 @@ If you are building a formal-math RL environment or trying to work out how much 
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [Glossary: Verifier](/research/glossary#verifier)
+- [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 
 ---
 

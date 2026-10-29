@@ -296,6 +296,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
+- [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 
 ---
 
