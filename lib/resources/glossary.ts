@@ -105,7 +105,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Grader',
     definition:
       'A grader converts an episode into a reward value. It may be a deterministic program, a rubric scored by a model judge, or a human. Graders differ from verifiers mainly in scope: a grader can award partial credit or weight several criteria, whereas a verifier usually returns a binary correct or incorrect decision.',
-    related: [ENV, '/blog/how-to-evaluate-deep-research-agents'],
+    related: [ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-are-ai-red-teaming-datasets-built'],
   },
   {
     slug: 'llm-as-a-judge',
@@ -247,7 +247,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Evaluation set',
     definition:
       'An evaluation set is a held-out collection of tasks with reference answers or graders, used to measure model capability rather than to train it. Its size determines statistical precision: reported accuracy should carry a confidence interval, and small differences between models are often not significant on a few hundred items.',
-    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-to-evaluate-ai-on-real-professional-work'],
+    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-to-evaluate-ai-on-real-professional-work', '/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack'],
     source: { label: 'Miller, Adding Error Bars to Evals (arXiv:2411.00640)', url: 'https://arxiv.org/abs/2411.00640' },
   },
   {

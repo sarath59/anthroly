@@ -187,6 +187,7 @@ If you are scaling tool-use RL and want environments you can trust, [book 15 min
 - [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
+- [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
 
 ---
 

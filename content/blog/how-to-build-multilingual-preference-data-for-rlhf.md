@@ -143,6 +143,7 @@ If you are extending preference data or reward models beyond English and want to
 - [How many expert labels fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [DPO vs PPO vs GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [Generative vs scalar reward models](/blog/generative-reward-models-vs-scalar-reward-models)
+- [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
 
 ---
 

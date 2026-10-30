@@ -93,6 +93,8 @@ export function linkLabel(href: string): string {
     '/blog/how-to-evaluate-ai-on-real-professional-work': 'How do you evaluate AI on real professional work?',
     '/blog/how-are-chemistry-and-biology-rl-environments-built': 'How are chemistry and biology RL environments built?',
     '/blog/how-to-build-multilingual-preference-data-for-rlhf': 'How do you build multilingual preference data for RLHF?',
+    '/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack': 'How do you evaluate long-context LLMs beyond needle-in-a-haystack?',
+    '/blog/how-are-ai-red-teaming-datasets-built': 'How are AI red-teaming datasets built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',
