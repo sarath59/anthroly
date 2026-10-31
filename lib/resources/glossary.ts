@@ -105,7 +105,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Grader',
     definition:
       'A grader converts an episode into a reward value. It may be a deterministic program, a rubric scored by a model judge, or a human. Graders differ from verifiers mainly in scope: a grader can award partial credit or weight several criteria, whereas a verifier usually returns a binary correct or incorrect decision.',
-    related: [ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-are-ai-red-teaming-datasets-built'],
+    related: [ENV, '/blog/how-to-evaluate-deep-research-agents', '/blog/how-are-ai-red-teaming-datasets-built', '/blog/how-are-legal-ai-benchmarks-built'],
   },
   {
     slug: 'llm-as-a-judge',
@@ -173,7 +173,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Data contamination',
     definition:
       'Data contamination occurs when evaluation items, or close paraphrases of them, appear in a model’s pretraining or post-training data, inflating benchmark scores without real capability gains. Environment builders mitigate it by deduplicating training tasks against public benchmarks and holding out freshly written evaluation tasks.',
-    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-are-theorem-proving-rl-environments-built'],
+    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-to-train-llms-to-forecast-with-reinforcement-learning'],
   },
   {
     slug: 'agent-trajectory',

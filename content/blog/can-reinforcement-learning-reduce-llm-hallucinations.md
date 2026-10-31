@@ -153,6 +153,7 @@ If you are tuning a reasoning model and want it to stop guessing without becomin
 - [How are expert-written benchmarks built?](/blog/how-expert-written-benchmarks-are-built)
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [Glossary: Verifier](/research/glossary#verifier)
+- [How are legal AI benchmarks built? LegalBench, attorney rubrics and legal agent environments](/blog/how-are-legal-ai-benchmarks-built)
 
 ---
 

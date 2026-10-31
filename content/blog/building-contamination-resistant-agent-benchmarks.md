@@ -276,6 +276,7 @@ If your team is building or using agent benchmarks and needs evaluation rigor th
 - [How do you benchmark AI agents on ML research? MLE-bench, PaperBench, RE-Bench](/blog/how-to-benchmark-ai-agents-on-ml-research)
 - [How do AI labs audit training data licensing and provenance?](/blog/how-do-ai-labs-audit-training-data-licensing-and-provenance)
 - [How do you evaluate long-context LLMs beyond needle-in-a-haystack?](/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack)
+- [How do you train LLMs to forecast? RL on real-world outcomes and leakage-free evaluation](/blog/how-to-train-llms-to-forecast-with-reinforcement-learning)
 
 ---
 

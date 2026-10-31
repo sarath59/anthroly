@@ -97,6 +97,8 @@ export function linkLabel(href: string): string {
     '/blog/how-are-ai-red-teaming-datasets-built': 'How are AI red-teaming datasets built?',
     '/blog/can-llms-improve-without-human-data-self-play-rl': 'Can LLMs improve without human data?',
     '/blog/how-are-medical-ai-benchmarks-built': 'How are medical AI benchmarks built?',
+    '/blog/how-to-train-llms-to-forecast-with-reinforcement-learning': 'How do you train LLMs to forecast?',
+    '/blog/how-are-legal-ai-benchmarks-built': 'How are legal AI benchmarks built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

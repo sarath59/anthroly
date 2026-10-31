@@ -124,6 +124,7 @@ If you are building an eval or reward signal for real professional work and want
 - [How do you quality-control expert data labeling?](/blog/how-to-quality-control-expert-data-labeling)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [How are medical AI benchmarks built? Physician rubrics, EHR agents and sequential diagnosis](/blog/how-are-medical-ai-benchmarks-built)
+- [How are legal AI benchmarks built? LegalBench, attorney rubrics and legal agent environments](/blog/how-are-legal-ai-benchmarks-built)
 
 ---
 
