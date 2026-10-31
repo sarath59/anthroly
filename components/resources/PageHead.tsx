@@ -95,6 +95,8 @@ export function linkLabel(href: string): string {
     '/blog/how-to-build-multilingual-preference-data-for-rlhf': 'How do you build multilingual preference data for RLHF?',
     '/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack': 'How do you evaluate long-context LLMs beyond needle-in-a-haystack?',
     '/blog/how-are-ai-red-teaming-datasets-built': 'How are AI red-teaming datasets built?',
+    '/blog/can-llms-improve-without-human-data-self-play-rl': 'Can LLMs improve without human data?',
+    '/blog/how-are-medical-ai-benchmarks-built': 'How are medical AI benchmarks built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

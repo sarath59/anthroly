@@ -180,6 +180,7 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [Can reinforcement learning reduce LLM hallucinations? Abstention rewards and calibration](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
+- [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 
 ---
 

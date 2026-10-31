@@ -195,6 +195,7 @@ If your RLVR runs are plateauing because the pool is saturated or the hard tail 
 - [RLVR vs. RLHF](/research/compare/rlvr-vs-rlhf)
 - [Why does entropy collapse in RL for reasoning models?](/blog/why-does-entropy-collapse-in-rl-for-reasoning-models)
 - [How are theorem-proving RL environments built? Lean verifiers, autoformalization, and misformalized statements](/blog/how-are-theorem-proving-rl-environments-built)
+- [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 
 ---
 

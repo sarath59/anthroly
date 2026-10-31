@@ -165,6 +165,7 @@ If your RL runs are flattening early and you want to know whether the problem is
 - [DPO vs PPO and GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [Glossary: pass@k](/research/glossary#pass-at-k)
 - [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
+- [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 
 ---
 

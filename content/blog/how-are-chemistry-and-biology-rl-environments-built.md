@@ -160,6 +160,7 @@ If you are extending RL into chemistry, biology or medicine and want a second op
 - [How are theorem-proving RL environments built?](/blog/how-are-theorem-proving-rl-environments-built)
 - [Can reinforcement learning reduce LLM hallucinations?](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
 - [How do you quality-control expert data labeling?](/blog/how-to-quality-control-expert-data-labeling)
+- [How are medical AI benchmarks built? Physician rubrics, EHR agents and sequential diagnosis](/blog/how-are-medical-ai-benchmarks-built)
 
 ---
 

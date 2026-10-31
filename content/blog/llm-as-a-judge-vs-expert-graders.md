@@ -209,6 +209,7 @@ If your team is scaling evaluation with LLM judges and needs to know where they 
 - [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
 - [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
+- [How are medical AI benchmarks built? Physician rubrics, EHR agents and sequential diagnosis](/blog/how-are-medical-ai-benchmarks-built)
 
 ---
 
