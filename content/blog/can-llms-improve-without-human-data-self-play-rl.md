@@ -167,6 +167,7 @@ If you are running label-free or self-play RL and want an expert audit of what y
 - [Synthetic data vs expert human data](/blog/synthetic-data-vs-expert-human-data)
 - [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
 - [How do you train LLMs to forecast? RL on real-world outcomes and leakage-free evaluation](/blog/how-to-train-llms-to-forecast-with-reinforcement-learning)
+- [How are prompt-injection benchmarks for AI agents built? AgentDojo, adaptive attacks and adversarial RL](/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built)
 
 ---
 

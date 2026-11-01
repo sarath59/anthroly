@@ -173,6 +173,7 @@ If you are building or auditing a medical evaluation or a clinical RL environmen
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 - [How to quality-control expert data labeling](/blog/how-to-quality-control-expert-data-labeling)
 - [How are legal AI benchmarks built? LegalBench, attorney rubrics and legal agent environments](/blog/how-are-legal-ai-benchmarks-built)
+- [How are financial AI benchmarks built? FinQA, FinanceBench and analyst-written rubrics](/blog/how-are-financial-ai-benchmarks-built)
 
 ---
 

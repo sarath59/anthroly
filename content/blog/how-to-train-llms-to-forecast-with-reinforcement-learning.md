@@ -182,6 +182,7 @@ If you are building a forecasting environment or an outcome-based RL pipeline, [
 - [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [Can reinforcement learning reduce LLM hallucinations?](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
+- [How are financial AI benchmarks built? FinQA, FinanceBench and analyst-written rubrics](/blog/how-are-financial-ai-benchmarks-built)
 
 ---
 

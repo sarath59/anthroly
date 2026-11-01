@@ -99,6 +99,8 @@ export function linkLabel(href: string): string {
     '/blog/how-are-medical-ai-benchmarks-built': 'How are medical AI benchmarks built?',
     '/blog/how-to-train-llms-to-forecast-with-reinforcement-learning': 'How do you train LLMs to forecast?',
     '/blog/how-are-legal-ai-benchmarks-built': 'How are legal AI benchmarks built?',
+    '/blog/how-are-financial-ai-benchmarks-built': 'How are financial AI benchmarks built?',
+    '/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built': 'How are prompt-injection benchmarks built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

@@ -20,7 +20,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RL environment',
     definition:
       'A reinforcement learning environment is a packaged task setting that gives a model observations, accepts its actions, and returns a reward. For language models it usually bundles a prompt or task, tools or a sandbox the model can act in, and a grader that scores the final state or answer so training can update the policy.',
-    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-web-and-computer-use-rl-environments-built'],
+    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-web-and-computer-use-rl-environments-built', '/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built'],
   },
   {
     slug: 'training-grade-environment',
@@ -90,7 +90,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Rubric-based reward',
     definition:
       'A rubric-based reward scores a response against an explicit checklist of criteria, often written per prompt by domain experts, with a language model judge deciding whether each criterion is met. It extends RL beyond verifiable domains such as math into medicine or science, but rewards only what the rubric actually specifies.',
-    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-are-medical-ai-benchmarks-built'],
+    related: [RH, '/research/compare/rubric-rewards-vs-reward-models', '/blog/how-are-medical-ai-benchmarks-built', '/blog/how-are-financial-ai-benchmarks-built'],
     source: { label: 'Gunjal et al., Rubrics as Rewards (arXiv:2507.17746)', url: 'https://arxiv.org/abs/2507.17746' },
   },
   {

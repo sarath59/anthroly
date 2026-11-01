@@ -177,6 +177,7 @@ If you are building or auditing a legal evaluation or a legal agent RL environme
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [Can reinforcement learning reduce LLM hallucinations?](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
+- [How are financial AI benchmarks built? FinQA, FinanceBench and analyst-written rubrics](/blog/how-are-financial-ai-benchmarks-built)
 
 ---
 

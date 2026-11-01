@@ -138,6 +138,7 @@ If you are scaling RL for a computer-use agent and want to know how much of your
 - [Why is multi-turn RL for LLM agents unstable?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [Glossary: Reinforcement learning environment](/research/glossary#reinforcement-learning-environment)
+- [How are prompt-injection benchmarks for AI agents built? AgentDojo, adaptive attacks and adversarial RL](/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built)
 
 ---
 

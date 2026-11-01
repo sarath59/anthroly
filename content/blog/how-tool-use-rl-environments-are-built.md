@@ -188,6 +188,7 @@ If you are scaling tool-use RL and want environments you can trust, [book 15 min
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
+- [How are prompt-injection benchmarks for AI agents built? AgentDojo, adaptive attacks and adversarial RL](/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built)
 
 ---
 
