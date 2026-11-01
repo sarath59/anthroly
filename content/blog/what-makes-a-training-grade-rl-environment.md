@@ -297,6 +297,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How are web and computer-use RL environments built? VM snapshots, state checkers, and VLM judges](/blog/how-are-web-and-computer-use-rl-environments-built)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
+- [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 
 ---
 

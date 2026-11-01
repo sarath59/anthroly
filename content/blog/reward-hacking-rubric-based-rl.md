@@ -265,6 +265,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [Can reinforcement learning reduce LLM hallucinations? Abstention rewards and calibration](/blog/can-reinforcement-learning-reduce-llm-hallucinations)
 - [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
+- [How is training data for deep research agents built? Synthetic hard questions and citation-aware rewards](/blog/how-is-training-data-for-deep-research-agents-built)
 
 ---
 

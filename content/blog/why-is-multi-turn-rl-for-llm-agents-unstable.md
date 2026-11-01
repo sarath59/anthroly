@@ -240,6 +240,7 @@ If your agent RL runs keep collapsing or you are designing environments for long
 - [How many RL environments do you need to train a general agent?](/blog/how-many-rl-environments-do-you-need-to-train-an-agent)
 - [Process vs. outcome rewards](/research/compare/process-vs-outcome-rewards)
 - [Glossary: Agent trajectory](/research/glossary#agent-trajectory)
+- [How is training data for deep research agents built? Synthetic hard questions and citation-aware rewards](/blog/how-is-training-data-for-deep-research-agents-built)
 
 ---
 

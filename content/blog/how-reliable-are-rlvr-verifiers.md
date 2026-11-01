@@ -182,6 +182,7 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 - [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 - [How do you train LLMs to forecast? RL on real-world outcomes and leakage-free evaluation](/blog/how-to-train-llms-to-forecast-with-reinforcement-learning)
+- [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 
 ---
 

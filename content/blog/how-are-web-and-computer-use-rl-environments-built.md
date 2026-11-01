@@ -139,6 +139,7 @@ If you are scaling RL for a computer-use agent and want to know how much of your
 - [How do you evaluate deep research and browsing agents?](/blog/how-to-evaluate-deep-research-agents)
 - [Glossary: Reinforcement learning environment](/research/glossary#reinforcement-learning-environment)
 - [How are prompt-injection benchmarks for AI agents built? AgentDojo, adaptive attacks and adversarial RL](/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built)
+- [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 
 ---
 
