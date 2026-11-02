@@ -249,6 +249,7 @@ If you are building a formal-math RL environment or trying to work out how much 
 - [How do you stop reward hacking in rubric-based RL?](/blog/reward-hacking-rubric-based-rl)
 - [Glossary: Verifier](/research/glossary#verifier)
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
+- [How are Verilog and RTL hardware design RL environments built?](/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built)
 
 ---
 

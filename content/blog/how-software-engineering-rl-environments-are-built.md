@@ -267,6 +267,7 @@ If your team is building SWE training environments and needs expert support for 
 - [Which agent trajectories should you fine-tune on? Outcome filtering, step masking, and failed runs](/blog/which-agent-trajectories-should-you-fine-tune-on)
 - [How are text-to-SQL RL environments built?](/blog/how-are-text-to-sql-rl-environments-built)
 - [How are cybersecurity RL environments and CTF benchmarks built?](/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built)
+- [How are Verilog and RTL hardware design RL environments built?](/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built)
 
 ---
 

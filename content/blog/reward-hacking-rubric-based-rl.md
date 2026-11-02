@@ -266,6 +266,7 @@ If your post-training team is wrestling with reward hacking in rubric-based RL, 
 - [How do you evaluate AI on real professional work?](/blog/how-to-evaluate-ai-on-real-professional-work)
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
 - [How is training data for deep research agents built? Synthetic hard questions and citation-aware rewards](/blog/how-is-training-data-for-deep-research-agents-built)
+- [How are instruction-following benchmarks and rewards built?](/blog/how-are-instruction-following-benchmarks-and-rewards-built)
 
 ---
 

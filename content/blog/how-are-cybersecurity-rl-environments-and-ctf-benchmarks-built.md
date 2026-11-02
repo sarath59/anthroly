@@ -161,6 +161,7 @@ If you are building cyber evaluations or RL environments and want an expert audi
 - [How reliable are RLVR verifiers?](/blog/how-reliable-are-rlvr-verifiers)
 - [What makes a training-grade RL environment?](/blog/what-makes-a-training-grade-rl-environment)
 - [Building contamination-resistant agent benchmarks](/blog/building-contamination-resistant-agent-benchmarks)
+- [How are Verilog and RTL hardware design RL environments built?](/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built)
 
 ---
 
