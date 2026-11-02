@@ -163,6 +163,7 @@ If you are building or auditing a red-teaming set and want expert-graded harm an
 - [RLAIF vs RLHF: can AI feedback replace human preference labels?](/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels)
 - [How tool-use RL environments are built](/blog/how-tool-use-rl-environments-are-built)
 - [How are prompt-injection benchmarks for AI agents built? AgentDojo, adaptive attacks and adversarial RL](/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built)
+- [How are cybersecurity RL environments and CTF benchmarks built?](/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built)
 
 ---
 

@@ -133,6 +133,7 @@ If you are building or auditing a research-agent eval, [book 15 minutes with us]
 - [LLM-as-a-judge vs expert graders](/blog/llm-as-a-judge-vs-expert-graders)
 - [How do you quality-control expert data labeling?](/blog/how-to-quality-control-expert-data-labeling)
 - [Glossary: contamination](/research/glossary#contamination)
+- [How are data analysis agent benchmarks built?](/blog/how-are-data-analysis-agent-benchmarks-built)
 
 ---
 

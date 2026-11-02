@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built', '/blog/how-are-data-analysis-agent-benchmarks-built'],
   },
   {
     slug: 'grader',
@@ -173,7 +173,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Data contamination',
     definition:
       'Data contamination occurs when evaluation items, or close paraphrases of them, appear in a model’s pretraining or post-training data, inflating benchmark scores without real capability gains. Environment builders mitigate it by deduplicating training tasks against public benchmarks and holding out freshly written evaluation tasks.',
-    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-to-train-llms-to-forecast-with-reinforcement-learning'],
+    related: [ENV, '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-to-train-llms-to-forecast-with-reinforcement-learning', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built'],
   },
   {
     slug: 'agent-trajectory',
@@ -247,7 +247,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Evaluation set',
     definition:
       'An evaluation set is a held-out collection of tasks with reference answers or graders, used to measure model capability rather than to train it. Its size determines statistical precision: reported accuracy should carry a confidence interval, and small differences between models are often not significant on a few hundred items.',
-    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-to-evaluate-ai-on-real-professional-work', '/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack'],
+    related: ['/learn/evaluation-datasets-contamination', '/research/eval-sample-size-calculator', '/blog/how-expert-written-benchmarks-are-built', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/how-to-evaluate-ai-on-real-professional-work', '/blog/how-to-evaluate-long-context-llms-beyond-needle-in-a-haystack', '/blog/how-are-data-analysis-agent-benchmarks-built'],
     source: { label: 'Miller, Adding Error Bars to Evals (arXiv:2411.00640)', url: 'https://arxiv.org/abs/2411.00640' },
   },
   {

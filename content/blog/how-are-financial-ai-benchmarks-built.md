@@ -182,6 +182,7 @@ If you are building or auditing a finance evaluation or a finance agent RL envir
 - [How do you train LLMs to forecast with reinforcement learning?](/blog/how-to-train-llms-to-forecast-with-reinforcement-learning)
 - [How do you evaluate deep research agents?](/blog/how-to-evaluate-deep-research-agents)
 - [LLM-as-a-judge vs. expert graders](/blog/llm-as-a-judge-vs-expert-graders)
+- [How are data analysis agent benchmarks built?](/blog/how-are-data-analysis-agent-benchmarks-built)
 
 ---
 

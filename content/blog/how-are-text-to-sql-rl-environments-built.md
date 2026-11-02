@@ -161,6 +161,7 @@ If you are training a data or analytics agent and want to know how much of your 
 - [How do you choose prompts for RLVR training?](/blog/how-to-choose-prompts-for-rlvr-training)
 - [How do you quality-control expert data labeling?](/blog/how-to-quality-control-expert-data-labeling)
 - [What makes an RL environment training-grade?](/blog/what-makes-a-training-grade-rl-environment)
+- [How are data analysis agent benchmarks built?](/blog/how-are-data-analysis-agent-benchmarks-built)
 
 ---
 

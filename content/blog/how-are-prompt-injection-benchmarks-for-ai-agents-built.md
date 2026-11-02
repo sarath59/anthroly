@@ -177,6 +177,7 @@ If you are building an agent security evaluation or training a model to resist p
 - [Can LLMs improve without human data? Self-play RL](/blog/can-llms-improve-without-human-data-self-play-rl)
 - [What makes a training-grade RL environment?](/blog/what-makes-a-training-grade-rl-environment)
 - [How do you build contamination-resistant agent benchmarks?](/blog/building-contamination-resistant-agent-benchmarks)
+- [How are cybersecurity RL environments and CTF benchmarks built?](/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built)
 
 ---
 
