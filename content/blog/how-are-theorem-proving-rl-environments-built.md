@@ -250,6 +250,7 @@ If you are building a formal-math RL environment or trying to work out how much 
 - [Glossary: Verifier](/research/glossary#verifier)
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 - [How are Verilog and RTL hardware design RL environments built?](/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built)
+- [How are math proof benchmarks and proof graders built?](/blog/how-are-math-proof-benchmarks-and-proof-graders-built)
 
 ---
 

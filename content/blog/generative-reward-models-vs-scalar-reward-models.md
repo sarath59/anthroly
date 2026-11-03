@@ -179,6 +179,7 @@ If you are choosing between a scalar and a generative reward model and want the 
 - [How are tool-use RL environments built?](/blog/how-tool-use-rl-environments-are-built)
 - [Rubric rewards vs. reward models](/research/compare/rubric-rewards-vs-reward-models)
 - [How are speech and audio language model benchmarks built?](/blog/how-are-speech-and-audio-language-model-benchmarks-built)
+- [How are creative writing benchmarks and reward models built?](/blog/how-are-creative-writing-benchmarks-and-reward-models-built)
 
 ---
 

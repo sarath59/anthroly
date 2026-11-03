@@ -109,6 +109,8 @@ export function linkLabel(href: string): string {
     '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built': 'How are Verilog RL environments built?',
     '/blog/how-are-game-environments-for-llm-agent-rl-built': 'How are game environments for agent RL built?',
     '/blog/how-are-speech-and-audio-language-model-benchmarks-built': 'How are audio language model benchmarks built?',
+    '/blog/how-are-math-proof-benchmarks-and-proof-graders-built': 'How are math proof graders built?',
+    '/blog/how-are-creative-writing-benchmarks-and-reward-models-built': 'How are creative writing reward models built?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',

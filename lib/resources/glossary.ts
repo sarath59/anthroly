@@ -58,7 +58,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward model',
     definition:
       'A reward model is a neural network, usually initialized from a language model, trained to output a scalar score predicting which response humans would prefer. It stands in for human judgment during RL. Because it is an imperfect proxy, optimizing hard against it can raise reward model scores while true quality falls.',
-    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-prevent-reward-model-overoptimization'],
+    related: ['/research/compare/rubric-rewards-vs-reward-models', '/blog/how-to-evaluate-a-reward-model', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-creative-writing-benchmarks-and-reward-models-built'],
     source: { label: 'Gao et al. (arXiv:2210.10760)', url: 'https://arxiv.org/abs/2210.10760' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built', '/blog/how-are-data-analysis-agent-benchmarks-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built', '/blog/how-are-data-analysis-agent-benchmarks-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built', '/blog/how-are-math-proof-benchmarks-and-proof-graders-built'],
   },
   {
     slug: 'grader',
@@ -128,7 +128,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Process reward (PRM)',
     definition:
       'A process reward scores each intermediate step of a solution rather than only the final answer. Lightman et al. trained process reward models on PRM800K, roughly 800,000 human step-level labels, and found process supervision outperformed outcome supervision for selecting correct solutions on the MATH benchmark.',
-    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
+    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/how-are-math-proof-benchmarks-and-proof-graders-built'],
     source: { label: "Lightman et al., Let's Verify Step by Step (arXiv:2305.20050)", url: 'https://arxiv.org/abs/2305.20050' },
   },
   {
@@ -187,7 +187,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Preference data',
     definition:
       'Preference data consists of a prompt with two or more candidate responses and a label saying which is better, sometimes with a strength or rationale. It trains reward models for RLHF and is consumed directly by methods such as DPO. Label quality depends heavily on annotator expertise and guidelines.',
-    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-to-build-multilingual-preference-data-for-rlhf'],
+    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-to-build-multilingual-preference-data-for-rlhf', '/blog/how-are-creative-writing-benchmarks-and-reward-models-built'],
   },
   {
     slug: 'synthetic-data',

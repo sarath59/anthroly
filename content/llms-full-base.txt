@@ -43,7 +43,7 @@
 - [For AI agents](https://www.anthroly.com/for-agents): facts, offerings, FAQ and labeled intakes
 - Markdown: https://www.anthroly.com/index.md · https://www.anthroly.com/for-agents.md · https://www.anthroly.com/expert-data.md · https://www.anthroly.com/contact.md
 - [Field notes](https://www.anthroly.com/learn): guides
-- [Research blog](https://www.anthroly.com/blog): research posts on RL environments, verifiers, reward design, evals and expert data, including domain benchmarks (medical, legal, financial), agent security, cybersecurity CTF environments, data analysis agent benchmarks, instruction-following rewards, Verilog/RTL hardware design environments, game and text-game environments for agent RL, speech and audio language model benchmarks, deep research agent training data and multimodal RL datasets; full post index in https://www.anthroly.com/llms.txt
+- [Research blog](https://www.anthroly.com/blog): research posts on RL environments, verifiers, reward design, evals and expert data, including domain benchmarks (medical, legal, financial), agent security, cybersecurity CTF environments, data analysis agent benchmarks, instruction-following rewards, Verilog/RTL hardware design environments, game and text-game environments for agent RL, speech and audio language model benchmarks, natural-language math proof benchmarks and proof graders, creative writing benchmarks and writing reward models, deep research agent training data and multimodal RL datasets; full post index in https://www.anthroly.com/llms.txt
 
 ## Guides
 

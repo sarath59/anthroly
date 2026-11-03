@@ -193,6 +193,7 @@ If verbosity is creeping into your post-training runs, [book 15 minutes with us]
 - [Rubric rewards vs reward models](/research/compare/rubric-rewards-vs-reward-models)
 - [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
 - [How are instruction-following benchmarks and rewards built?](/blog/how-are-instruction-following-benchmarks-and-rewards-built)
+- [How are creative writing benchmarks and reward models built?](/blog/how-are-creative-writing-benchmarks-and-reward-models-built)
 
 ---
 
