@@ -299,6 +299,7 @@ If your post-training team needs training-grade environments for a domain that r
 - [How are chemistry and biology RL environments built?](/blog/how-are-chemistry-and-biology-rl-environments-built)
 - [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 - [How are Verilog and RTL hardware design RL environments built?](/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built)
+- [How are game environments for LLM agent RL built?](/blog/how-are-game-environments-for-llm-agent-rl-built)
 
 ---
 

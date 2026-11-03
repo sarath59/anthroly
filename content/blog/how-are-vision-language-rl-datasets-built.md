@@ -139,6 +139,7 @@ If you are building multimodal RL data or a visual reasoning eval and want a sec
 - [How are medical AI benchmarks built?](/blog/how-are-medical-ai-benchmarks-built)
 - [What makes a training-grade RL environment?](/blog/what-makes-a-training-grade-rl-environment)
 - [Does RLVR teach new reasoning?](/blog/does-rlvr-teach-new-reasoning)
+- [How are speech and audio language model benchmarks built?](/blog/how-are-speech-and-audio-language-model-benchmarks-built)
 
 ---
 

@@ -144,6 +144,7 @@ If you are extending preference data or reward models beyond English and want to
 - [DPO vs PPO vs GRPO: when is offline preference optimization enough?](/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough)
 - [Generative vs scalar reward models](/blog/generative-reward-models-vs-scalar-reward-models)
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
+- [How are speech and audio language model benchmarks built?](/blog/how-are-speech-and-audio-language-model-benchmarks-built)
 
 ---
 

@@ -20,7 +20,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RL environment',
     definition:
       'A reinforcement learning environment is a packaged task setting that gives a model observations, accepts its actions, and returns a reward. For language models it usually bundles a prompt or task, tools or a sandbox the model can act in, and a grader that scores the final state or answer so training can update the policy.',
-    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-web-and-computer-use-rl-environments-built', '/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built'],
+    related: [ENV, '/blog/how-tool-use-rl-environments-are-built', '/blog/how-many-rl-environments-do-you-need-to-train-an-agent', '/blog/how-are-web-and-computer-use-rl-environments-built', '/blog/how-are-prompt-injection-benchmarks-for-ai-agents-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built', '/blog/how-are-game-environments-for-llm-agent-rl-built'],
   },
   {
     slug: 'training-grade-environment',
@@ -34,7 +34,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLVR (reinforcement learning with verifiable rewards)',
     definition:
       'RLVR trains a language model with rewards computed by a programmatic check instead of a learned reward model, for example exact-match math answers, unit tests passing, or constraint satisfaction. The term was popularized by the Tülu 3 report. It reduces reward-model exploitation but only works where correctness can be checked automatically.',
-    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-vision-language-rl-datasets-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built'],
+    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-vision-language-rl-datasets-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-speech-and-audio-language-model-benchmarks-built'],
     source: { label: 'Lambert et al., Tülu 3 (arXiv:2411.15124)', url: 'https://arxiv.org/abs/2411.15124' },
   },
   {
@@ -112,7 +112,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'LLM-as-a-judge',
     definition:
       'LLM-as-a-judge uses a strong language model to grade or compare other models’ outputs in place of human raters. Zheng et al. found GPT-4 judgments agreed with human preferences at rates comparable to human-human agreement, but also documented position, verbosity, and self-enhancement biases that must be controlled.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-evaluate-deep-research-agents', '/blog/generative-reward-models-vs-scalar-reward-models', '/blog/how-to-benchmark-ai-agents-on-ml-research', '/blog/rlaif-vs-rlhf-can-ai-feedback-replace-human-preference-labels', '/blog/how-are-speech-and-audio-language-model-benchmarks-built'],
     source: { label: 'Zheng et al. (arXiv:2306.05685)', url: 'https://arxiv.org/abs/2306.05685' },
   },
   {
@@ -120,7 +120,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Outcome reward (ORM)',
     definition:
       'An outcome reward scores only the final answer or end state of an episode, ignoring the intermediate steps. Outcome reward models are cheap to label and hard to argue with, but a correct final answer can follow flawed reasoning, and sparse outcome signals make credit assignment harder on long, multi-step tasks.',
-    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/how-is-training-data-for-deep-research-agents-built'],
+    related: ['/research/compare/process-vs-outcome-rewards', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/how-is-training-data-for-deep-research-agents-built', '/blog/how-are-game-environments-for-llm-agent-rl-built'],
     source: { label: 'Uesato et al. (arXiv:2211.14275)', url: 'https://arxiv.org/abs/2211.14275' },
   },
   {

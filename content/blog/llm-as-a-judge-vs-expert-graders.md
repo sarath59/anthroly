@@ -211,6 +211,7 @@ If your team is scaling evaluation with LLM judges and needs to know where they 
 - [How are AI red-teaming datasets built?](/blog/how-are-ai-red-teaming-datasets-built)
 - [How are medical AI benchmarks built? Physician rubrics, EHR agents and sequential diagnosis](/blog/how-are-medical-ai-benchmarks-built)
 - [How are legal AI benchmarks built? LegalBench, attorney rubrics and legal agent environments](/blog/how-are-legal-ai-benchmarks-built)
+- [How are speech and audio language model benchmarks built?](/blog/how-are-speech-and-audio-language-model-benchmarks-built)
 
 ---
 
