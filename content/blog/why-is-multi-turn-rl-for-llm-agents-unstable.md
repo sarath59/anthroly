@@ -242,6 +242,7 @@ If your agent RL runs keep collapsing or you are designing environments for long
 - [Glossary: Agent trajectory](/research/glossary#agent-trajectory)
 - [How is training data for deep research agents built? Synthetic hard questions and citation-aware rewards](/blog/how-is-training-data-for-deep-research-agents-built)
 - [How are game environments for LLM agent RL built?](/blog/how-are-game-environments-for-llm-agent-rl-built)
+- [Why does training-inference mismatch destabilize LLM RL?](/blog/why-does-training-inference-mismatch-destabilize-llm-rl)
 
 ---
 

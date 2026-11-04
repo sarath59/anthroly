@@ -185,6 +185,7 @@ If your RLVR curves look fine but you are not sure the checker is right, [book 1
 - [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 - [How are instruction-following benchmarks and rewards built?](/blog/how-are-instruction-following-benchmarks-and-rewards-built)
 - [How are math proof benchmarks and proof graders built?](/blog/how-are-math-proof-benchmarks-and-proof-graders-built)
+- [How are unit tests generated for code RL rewards?](/blog/how-are-unit-tests-generated-for-code-rl-rewards)
 
 ---
 

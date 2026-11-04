@@ -212,6 +212,7 @@ If your team is building reasoning models with RLVR and wants to understand whet
 - [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 - [How are vision-language RL datasets built? Verifiable visual rewards and shortcut filtering](/blog/how-are-vision-language-rl-datasets-built)
 - [How are math proof benchmarks and proof graders built?](/blog/how-are-math-proof-benchmarks-and-proof-graders-built)
+- [Why does training-inference mismatch destabilize LLM RL?](/blog/why-does-training-inference-mismatch-destabilize-llm-rl)
 
 ---
 

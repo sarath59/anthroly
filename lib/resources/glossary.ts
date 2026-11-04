@@ -34,7 +34,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLVR (reinforcement learning with verifiable rewards)',
     definition:
       'RLVR trains a language model with rewards computed by a programmatic check instead of a learned reward model, for example exact-match math answers, unit tests passing, or constraint satisfaction. The term was popularized by the Tülu 3 report. It reduces reward-model exploitation but only works where correctness can be checked automatically.',
-    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-vision-language-rl-datasets-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-speech-and-audio-language-model-benchmarks-built'],
+    related: [RH, '/research/compare/rlvr-vs-rlhf', '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-vision-language-rl-datasets-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-speech-and-audio-language-model-benchmarks-built', '/blog/how-are-unit-tests-generated-for-code-rl-rewards'],
     source: { label: 'Lambert et al., Tülu 3 (arXiv:2411.15124)', url: 'https://arxiv.org/abs/2411.15124' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-unit-tests-generated-for-code-rl-rewards'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -98,7 +98,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Verifier',
     definition:
       'A verifier is the component that decides whether a model’s output or final environment state is correct, for example a unit-test harness, a symbolic math checker, a regex, or a model-based judge. Its false-positive rate bounds how much a policy can exploit it, so verifiers need their own adversarial testing.',
-    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built', '/blog/how-are-data-analysis-agent-benchmarks-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built', '/blog/how-are-math-proof-benchmarks-and-proof-graders-built'],
+    related: [ENV, RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/how-tool-use-rl-environments-are-built', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/can-reinforcement-learning-reduce-llm-hallucinations', '/blog/how-are-text-to-sql-rl-environments-built', '/blog/how-are-chemistry-and-biology-rl-environments-built', '/blog/how-are-data-analysis-agent-benchmarks-built', '/blog/how-are-verilog-and-rtl-hardware-design-rl-environments-built', '/blog/how-are-math-proof-benchmarks-and-proof-graders-built', '/blog/how-are-unit-tests-generated-for-code-rl-rewards'],
   },
   {
     slug: 'grader',
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable'],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/why-does-training-inference-mismatch-destabilize-llm-rl'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
