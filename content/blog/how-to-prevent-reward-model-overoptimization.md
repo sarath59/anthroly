@@ -248,6 +248,7 @@ If you are planning an RLHF run and want a gold signal you can stop on, [book 15
 - [How many expert labels fix noisy preference data?](/blog/how-many-expert-labels-fix-noisy-preference-data)
 - [Generative vs scalar reward models](/blog/generative-reward-models-vs-scalar-reward-models)
 - [Glossary: reward overoptimization](/research/glossary#reward-overoptimization)
+- [How are sycophancy benchmarks and training data built?](/blog/how-are-sycophancy-benchmarks-and-training-data-built)
 
 ---
 

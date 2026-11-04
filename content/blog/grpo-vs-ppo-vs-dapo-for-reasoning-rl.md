@@ -179,6 +179,7 @@ If you are choosing an RL recipe and want the data side to stop being the bottle
 - [Why is multi-turn RL for LLM agents unstable, and how do you assign credit across turns?](/blog/why-is-multi-turn-rl-for-llm-agents-unstable)
 - [How do you train LLMs to forecast? RL on real-world outcomes and leakage-free evaluation](/blog/how-to-train-llms-to-forecast-with-reinforcement-learning)
 - [Why does training-inference mismatch destabilize LLM RL?](/blog/why-does-training-inference-mismatch-destabilize-llm-rl)
+- [How do you stop reasoning models from overthinking?](/blog/how-to-stop-reasoning-models-from-overthinking)
 
 ---
 

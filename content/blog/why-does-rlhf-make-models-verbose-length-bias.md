@@ -194,6 +194,8 @@ If verbosity is creeping into your post-training runs, [book 15 minutes with us]
 - [How do you prevent reward model overoptimization in RLHF?](/blog/how-to-prevent-reward-model-overoptimization)
 - [How are instruction-following benchmarks and rewards built?](/blog/how-are-instruction-following-benchmarks-and-rewards-built)
 - [How are creative writing benchmarks and reward models built?](/blog/how-are-creative-writing-benchmarks-and-reward-models-built)
+- [How are sycophancy benchmarks and training data built?](/blog/how-are-sycophancy-benchmarks-and-training-data-built)
+- [How do you stop reasoning models from overthinking?](/blog/how-to-stop-reasoning-models-from-overthinking)
 
 ---
 

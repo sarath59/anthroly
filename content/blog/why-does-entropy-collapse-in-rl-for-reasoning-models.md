@@ -168,6 +168,7 @@ If your RL runs are flattening early and you want to know whether the problem is
 - [Can LLMs improve without human data? What self-play and label-free RL actually show](/blog/can-llms-improve-without-human-data-self-play-rl)
 - [How are creative writing benchmarks and reward models built?](/blog/how-are-creative-writing-benchmarks-and-reward-models-built)
 - [Why does training-inference mismatch destabilize LLM RL?](/blog/why-does-training-inference-mismatch-destabilize-llm-rl)
+- [How do you stop reasoning models from overthinking?](/blog/how-to-stop-reasoning-models-from-overthinking)
 
 ---
 

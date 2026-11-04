@@ -189,6 +189,7 @@ If your preference data has more disagreement than you can explain, or you need 
 - [How do you quality-control expert data labeling? Gold items, audits and label-error detection](/blog/how-to-quality-control-expert-data-labeling)
 - [How do you build multilingual preference data for RLHF?](/blog/how-to-build-multilingual-preference-data-for-rlhf)
 - [How are creative writing benchmarks and reward models built?](/blog/how-are-creative-writing-benchmarks-and-reward-models-built)
+- [How are sycophancy benchmarks and training data built?](/blog/how-are-sycophancy-benchmarks-and-training-data-built)
 
 ---
 

@@ -42,7 +42,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'RLHF (reinforcement learning from human feedback)',
     definition:
       'RLHF fine-tunes a model with reinforcement learning against a reward model trained on human preference comparisons. Annotators rank or compare model outputs, a reward model learns to predict those preferences, and the policy is optimized to score highly, usually with a KL penalty that keeps it close to the starting model.',
-    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough'],
+    related: ['/research/compare/rlvr-vs-rlhf', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-are-sycophancy-benchmarks-and-training-data-built'],
     source: { label: 'Ouyang et al. (arXiv:2203.02155)', url: 'https://arxiv.org/abs/2203.02155' },
   },
   {
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Reward hacking',
     definition:
       'Reward hacking is when a policy finds behavior that scores highly under the specified reward without doing the intended task, such as editing tests so they pass or padding answers to satisfy a judge. It is a symptom of a gap between the measurable reward and the designer’s actual objective, and worsens with optimization pressure.',
-    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-unit-tests-generated-for-code-rl-rewards'],
+    related: [RH, '/blog/how-reliable-are-rlvr-verifiers', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/how-to-prevent-reward-model-overoptimization', '/blog/how-are-theorem-proving-rl-environments-built', '/blog/how-are-cybersecurity-rl-environments-and-ctf-benchmarks-built', '/blog/how-are-instruction-following-benchmarks-and-rewards-built', '/blog/how-are-unit-tests-generated-for-code-rl-rewards', '/blog/how-are-sycophancy-benchmarks-and-training-data-built'],
     source: { label: 'Skalse et al. (arXiv:2209.13085)', url: 'https://arxiv.org/abs/2209.13085' },
   },
   {
@@ -136,7 +136,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'GRPO (group relative policy optimization)',
     definition:
       'GRPO is a policy-gradient method that samples a group of responses per prompt and uses each response’s reward relative to the group mean as its advantage, removing the separate value network PPO requires. Introduced in DeepSeekMath, it became a common choice for RLVR training of reasoning models.',
-    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/why-does-training-inference-mismatch-destabilize-llm-rl'],
+    related: [ENV, '/blog/grpo-vs-ppo-vs-dapo-for-reasoning-rl', '/blog/how-to-choose-prompts-for-rlvr-training', '/blog/why-does-entropy-collapse-in-rl-for-reasoning-models', '/blog/why-does-rlhf-make-models-verbose-length-bias', '/blog/why-is-multi-turn-rl-for-llm-agents-unstable', '/blog/why-does-training-inference-mismatch-destabilize-llm-rl', '/blog/how-to-stop-reasoning-models-from-overthinking'],
     source: { label: 'Shao et al., DeepSeekMath (arXiv:2402.03300)', url: 'https://arxiv.org/abs/2402.03300' },
   },
   {
@@ -187,7 +187,7 @@ export const GLOSSARY: GlossaryTerm[] = [
     term: 'Preference data',
     definition:
       'Preference data consists of a prompt with two or more candidate responses and a label saying which is better, sometimes with a strength or rationale. It trains reward models for RLHF and is consumed directly by methods such as DPO. Label quality depends heavily on annotator expertise and guidelines.',
-    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-to-build-multilingual-preference-data-for-rlhf', '/blog/how-are-creative-writing-benchmarks-and-reward-models-built'],
+    related: ['/learn/rlhf-preference-data', '/research/compare/synthetic-vs-human-preference-data', '/blog/annotator-disagreement-in-preference-data', '/blog/dpo-vs-ppo-vs-grpo-when-is-offline-preference-optimization-enough', '/blog/how-to-build-multilingual-preference-data-for-rlhf', '/blog/how-are-creative-writing-benchmarks-and-reward-models-built', '/blog/how-are-sycophancy-benchmarks-and-training-data-built'],
   },
   {
     slug: 'synthetic-data',

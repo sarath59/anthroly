@@ -199,6 +199,7 @@ If your RLVR runs are plateauing because the pool is saturated or the hard tail 
 - [How is training data for deep research agents built? Synthetic hard questions and citation-aware rewards](/blog/how-is-training-data-for-deep-research-agents-built)
 - [How are instruction-following benchmarks and rewards built?](/blog/how-are-instruction-following-benchmarks-and-rewards-built)
 - [How are unit tests generated for code RL rewards?](/blog/how-are-unit-tests-generated-for-code-rl-rewards)
+- [How do you stop reasoning models from overthinking?](/blog/how-to-stop-reasoning-models-from-overthinking)
 
 ---
 

@@ -113,6 +113,8 @@ export function linkLabel(href: string): string {
     '/blog/how-are-creative-writing-benchmarks-and-reward-models-built': 'How are creative writing reward models built?',
     '/blog/why-does-training-inference-mismatch-destabilize-llm-rl': 'Why does training-inference mismatch destabilize RL?',
     '/blog/how-are-unit-tests-generated-for-code-rl-rewards': 'How are unit tests for code RL generated?',
+    '/blog/how-are-sycophancy-benchmarks-and-training-data-built': 'How are sycophancy benchmarks built?',
+    '/blog/how-to-stop-reasoning-models-from-overthinking': 'How do you stop reasoning models overthinking?',
     '/expert-data': 'Expert data at Anthroly',
     '/research/eval-sample-size-calculator': 'Eval sample size calculator',
     '/learn/agent-trajectory-data': 'Agent trajectory data',
